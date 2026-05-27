@@ -1,3 +1,5 @@
 tools/
 .venv/
 rom/
+__pycache__/
+*.pyc*
