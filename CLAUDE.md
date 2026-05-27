@@ -56,6 +56,19 @@ Python 环境已经使用 `uv venv` 初始化。
 - 所有修改后的 ROM 都必须打包成新的 ROM 文件，例如 `rom/narutorpg3_chs.nds` 或任务专用测试文件名。
 - 解包目录、回包命令、输出 ROM 名称和验证结果需要记录回 `plan/`。
 
+### DeSmuME MCP 模拟器调试
+
+仓库内可以使用 `tools/desmume.exe --mcp` 从命令行启动模拟器和 MCP 服务。
+
+相关流程已经做成项目 skill：`.claude/skills/desmume-mcp-workflow/SKILL.md`。需要启动模拟器、加载 ROM、读取内存/寄存器、设置断点或通过 MCP 验证汉化 ROM 时，优先按这个 skill 的流程执行。
+
+关键约定：
+
+- DeSmuME MCP 是 HTTP JSON-RPC 服务，地址为 `http://127.0.0.1:8765/`。
+- 通过 HTTP `POST /` 调用 `tools/list` 和 `tools/call`。
+- 优先加载新打包 ROM 或任务专用测试 ROM；`rom/origin.nds` 只作为原版参考。
+- 调试使用过的 ROM、断点、地址、寄存器/内存观察结果需要记录回 `plan/`；新的逆向发现写入 `hack/`。
+
 ## 汉化总体节奏
 
 ### 1. 先解决中文字库和字模承载方案

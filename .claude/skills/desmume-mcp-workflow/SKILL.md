@@ -1,85 +1,132 @@
 ---
 name: desmume-mcp-workflow
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: Use this project skill when launching tools/desmume.exe with --mcp, connecting to its HTTP MCP server, loading an NDS ROM for emulator verification, or using DeSmuME MCP tools for memory/register/breakpoint debugging.
 ---
 
-# Desmume Mcp Workflow
+# DeSmuME MCP Workflow
 
-## Overview
+## Core Facts
 
-[TODO: 1-2 sentences explaining what this skill enables]
+- Use the repository-local emulator at `tools/desmume.exe`.
+- Start MCP mode with `tools/desmume.exe --mcp`.
+- MCP is HTTP JSON-RPC, not stdio. The server listens on `http://127.0.0.1:8765/`.
+- Send JSON-RPC requests with HTTP `POST /` and `Content-Type: application/json`.
+- Prefer loading rebuilt/test ROMs. Treat `rom/origin.nds` as immutable reference material.
+- Record emulator validation commands, loaded ROM path, breakpoints, and findings in `plan/`; write reverse-engineering discoveries to `hack/`.
 
-## Structuring This Skill
+## Start Emulator And MCP
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+For an interactive emulator window:
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+```powershell
+.\tools\desmume.exe --mcp
+```
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+For a hidden temporary server used only to list MCP tools:
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+```powershell
+.\.venv\Scripts\python.exe .claude\skills\desmume-mcp-workflow\scripts\list_mcp_tools.py --start
+```
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+If DeSmuME is already running in MCP mode, list tools from the existing server:
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+```powershell
+.\.venv\Scripts\python.exe .claude\skills\desmume-mcp-workflow\scripts\list_mcp_tools.py
+```
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+## HTTP JSON-RPC Shape
 
-## [TODO: Replace with the first main section based on chosen structure]
+List tools:
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+```json
+{"jsonrpc":"2.0","id":1,"method":"tools/list"}
+```
 
-## Resources (optional)
+Call a tool:
 
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
+```json
+{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"nds_get_state","arguments":{}}}
+```
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+Use the bundled helper for tool calls:
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+```powershell
+.\.venv\Scripts\python.exe .claude\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_get_state --arguments '{}'
+```
 
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+Load a ROM through MCP. Prefer rebuilt ROMs such as `rom/narutorpg3_chs.nds` or task-specific test ROMs:
 
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
+```powershell
+.\.venv\Scripts\python.exe .claude\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_load_rom --arguments '{"path":"D:\\repos\\nds-narutorpg3-chs\\rom\\narutorpg3_chs.nds"}'
+```
 
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
+## MCP Tools
 
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
+### Execution Control
 
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
+- `nds_pause`: Pause NDS emulation and break into debugger.
+- `nds_resume`: Resume NDS emulation.
+- `nds_step`: Single-step one instruction on both CPUs.
+- `nds_reset`: Reset the NDS console.
+- `nds_get_state`: Return running state, ARM9 PC, ARM7 PC, and ROM state.
 
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
+### ROM Control
 
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
+- `nds_load_rom`: Load a ROM file. Arguments: `path`.
+- `nds_reload_rom`: Reload the last loaded ROM path.
+- `nds_get_rom_info`: Return loaded ROM title and game code.
 
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
+### Memory And Registers
 
----
+- `nds_read_memory`: Read NDS memory. Arguments: `proc`, `address`, `size`.
+- `nds_write_memory`: Write bytes to NDS memory. Arguments: `proc`, `address`, `value`.
+- `nds_get_registers`: Get ARM registers for one CPU. Arguments: `proc`.
 
-**Not every skill requires all three types of resources.**
+CPU selector:
+
+- `proc: 0` means ARM9.
+- `proc: 1` means ARM7.
+
+Address and value conventions:
+
+- `address` is a hex string such as `"02086870"` or `"0x02086870"`.
+- `size` is an integer byte count.
+- `value` is an even-length hex byte string such as `"AABBCCDD"`.
+
+Examples:
+
+```powershell
+.\.venv\Scripts\python.exe .claude\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_get_registers --arguments '{"proc":0}'
+.\.venv\Scripts\python.exe .claude\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_read_memory --arguments '{"proc":0,"address":"02086870","size":32}'
+```
+
+### Breakpoints
+
+- `nds_set_breakpoint`: Set a breakpoint. Arguments: `type`, `address`, optional `proc` for execute breakpoints.
+- `nds_clear_breakpoint`: Clear one breakpoint. Arguments match `nds_set_breakpoint`.
+- `nds_clear_all_breakpoints`: Clear all execute/read/write breakpoints.
+- `nds_list_breakpoints`: List execute ARM9/ARM7, read, and write breakpoints.
+
+Breakpoint type values:
+
+- `execute`
+- `read`
+- `write`
+
+Examples:
+
+```powershell
+.\.venv\Scripts\python.exe .claude\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_set_breakpoint --arguments '{"type":"execute","proc":0,"address":"02086870"}'
+.\.venv\Scripts\python.exe .claude\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_list_breakpoints --arguments '{}'
+```
+
+## Debugging Workflow
+
+1. Check `plan/` for an existing debugging or verification plan.
+2. Start `tools/desmume.exe --mcp`.
+3. Load the rebuilt/test ROM through `nds_load_rom`.
+4. Use `nds_get_state` and `nds_get_rom_info` to confirm the emulator state.
+5. Set breakpoints before running risky checks.
+6. Use `nds_pause`, `nds_step`, `nds_get_registers`, and `nds_read_memory` to inspect behavior.
+7. Use `nds_write_memory` only for temporary emulator-memory experiments; do not treat it as ROM patching.
+8. Record addresses, observations, breakpoint results, and next steps in the active `plan/` file.
