@@ -1,16 +1,16 @@
 current_plan:
-  id: project-guidance
-  title: 完善项目协作说明
-  document: plan/project-guidance.md
+  id: codex-adaptation
+  title: 适配 Codex 项目入口
+  document: plan/codex-adaptation.md
   status: done
 current_stage:
-  id: plan-state-rework
-  name: 计划入口重构
+  id: codex-entry-copy
+  name: 复制并适配 Codex 入口
   status: done
 stage_cache:
-  dir: plan/cache/project-guidance
+  dir: plan/cache/codex-adaptation
   documents:
-    - plan/cache/project-guidance/plan-state-rework.md
+    - plan/cache/codex-adaptation/codex-entry-copy.md
 updated_at: "2026-05-27"
 notes:
   - 新对话先读本文件，再读取 current_plan.document。
