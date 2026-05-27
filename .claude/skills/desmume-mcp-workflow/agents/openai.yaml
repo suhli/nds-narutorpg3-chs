@@ -1,0 +1,4 @@
+interface:
+  display_name: "DeSmuME MCP Workflow"
+  short_description: "Launch DeSmuME MCP for ROM debugging"
+  default_prompt: "Use DeSmuME MCP to start the emulator and debug an NDS ROM."
