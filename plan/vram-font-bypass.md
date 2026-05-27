@@ -14,8 +14,11 @@
 - 已知 NitroFS 读取函数：`FUN_overlay_0__0207f80c`。
 - 当前字体 tile VRAM 映射地址：`0x06880000`。
 - 字体系统全局结构体：`DAT_020B73E0`。
-- `DAT_020B73E0 + 0x24` 指向 `font_1x1.tbl`。
-- `DAT_020B73E0 + 0x2C` 指向 `font_1x2.tbl`。
+- `DAT_020B73E0 + 0x20` 指向 `font_1x1.tbl`，运行时值为 `0x0688E6C0`。
+- `DAT_020B73E0 + 0x24` 是 `font_1x1.tbl` 项计数，运行时值为 `0xE0`。
+- `DAT_020B73E0 + 0x28` 指向 `font_1x2.tbl`，运行时值为 `0x0688EA40`。
+- `DAT_020B73E0 + 0x2C` 是 `font_1x2.tbl` 项计数，运行时值为 `0x32B`。
+- 运行时已确认 `.tbl` 也在 VRAM 字体区域，不是普通 RAM 驻留表。
 - 当前理解的绘制链路：读取文本编码 -> 查 `tbl` 得到 tile index -> 从 VRAM tile 区读取字形 -> 绘制。
 - ROM 解包/打包按 `.codex/skills/ndstool-rom-workflow/SKILL.md`。
 - 模拟器和运行时调试按 `.codex/skills/desmume-mcp-workflow/SKILL.md`。
@@ -93,13 +96,13 @@
 
 ### 1. 静态复核字体加载和绘制链路
 
-状态：待开始。
+状态：已完成。
 
 目标：
 
 - 从已知入口 `FUN_overlay_0__02086870` 反推调用者和后续绘制函数。
 - 确认 `.chr`、`.tbl`、`.plt` 的加载地址、大小和使用位置。
-- 找到实际从 `DAT_020B73E0 + 0x24/+0x2C` 读取 `tbl` 的函数。
+- 找到实际从 `DAT_020B73E0 + 0x20/+0x28` 读取 `tbl`，并从 `+0x24/+0x2C` 读取项计数的函数。
 
 产物：
 
@@ -108,7 +111,7 @@
 
 ### 2. 运行时确认关键地址和数据流
 
-状态：待开始。
+状态：进行中。
 
 目标：
 
