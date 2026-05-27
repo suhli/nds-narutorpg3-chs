@@ -4,8 +4,8 @@ current_plan:
   document: plan/vram-font-bypass.md
   status: in_progress
 current_stage:
-  id: runtime-observation
-  name: 运行时确认关键地址和数据流
+  id: verification-result
+  name: 模拟器验证和方案判定
   status: in_progress
 stage_cache:
   dir: plan/cache/vram-font-bypass
@@ -13,9 +13,14 @@ stage_cache:
     - plan/cache/vram-font-bypass/plan-draft.md
     - plan/cache/vram-font-bypass/static-render-chain.md
     - plan/cache/vram-font-bypass/runtime-observation.md
+    - plan/cache/vram-font-bypass/desmume-mcp-update.md
+    - plan/cache/vram-font-bypass/minimal-patch-design.md
+    - plan/cache/vram-font-bypass/test-rom-build.md
+    - plan/cache/vram-font-bypass/verification-result.md
 updated_at: "2026-05-27"
 notes:
   - 新对话先读本文件，再读取 current_plan.document。
   - 具体计划使用 Markdown 文档组织，state 只做恢复入口和当前进度指针。
-  - 静态链路已完成，运行时已确认字体初始化入口和 DAT_020B73E0 字段。
-  - 当前阻塞点是正文/菜单字体绘制断点需要输入推进或 MCP 输入能力。
+  - 静态链路和运行时链路均已完成；0208913C -> 0208671C -> 02089190 已动态确认。
+  - 第一版 ARM9 空洞 hook 已验证：02089190 跳到 0207411C，R0 从 06881C00 替换到 0207413C 后进入 020087BC。
+  - 当前继续做方案判定和下一版动态缓存设计；不要使用 overlay 尾部追加方案，它会踩 overlay_0000 BSS。
