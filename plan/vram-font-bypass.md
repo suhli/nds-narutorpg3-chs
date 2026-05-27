@@ -22,6 +22,7 @@
 - 当前理解的绘制链路：读取文本编码 -> 查 `tbl` 得到 tile index -> 从 VRAM tile 区读取字形 -> 绘制。
 - ROM 解包/打包按 `.codex/skills/ndstool-rom-workflow/SKILL.md`。
 - 模拟器和运行时调试按 `.codex/skills/desmume-mcp-workflow/SKILL.md`。
+- 2026-05-27 已验证新版 DeSmuME MCP 支持按键、触摸、释放全部和截图工具，可用于推进正文/菜单运行时断点。
 
 ## 目标
 
@@ -118,11 +119,13 @@
 - 用 DeSmuME MCP 加载测试 ROM 或原版 ROM进行只读调试。
 - 在 `0207F80C`、`02086870`、`0208689C`、`DAT_020B73E0` 相关位置设置断点或读取内存。
 - 确认文本出现时 ARM9 PC、寄存器、`tbl` 指针、VRAM tile 地址的关系。
+- 使用 MCP 输入工具推进到正文/菜单界面，并用截图记录关键可见状态。
 
 产物：
 
 - `hack/字体运行时观察.md`
 - 阶段缓存：`plan/cache/vram-font-bypass/runtime-observation.md`
+- MCP 更新缓存：`plan/cache/vram-font-bypass/desmume-mcp-update.md`
 
 ### 3. 设计最小可验证 patch
 

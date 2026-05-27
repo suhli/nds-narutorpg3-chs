@@ -11,6 +11,7 @@ description: Use this project skill when launching tools/desmume.exe with --mcp,
 - Start MCP mode with `tools/desmume.exe --mcp`.
 - MCP is HTTP JSON-RPC, not stdio. The server listens on `http://127.0.0.1:8765/`.
 - Send JSON-RPC requests with HTTP `POST /` and `Content-Type: application/json`.
+- The current MCP build exposes execution, ROM, memory/register, breakpoint, screenshot, and input tools.
 - Prefer loading rebuilt/test ROMs. Treat `rom/origin.nds` as immutable reference material.
 - Record emulator validation commands, loaded ROM path, breakpoints, and findings in `plan/`; write reverse-engineering discoveries to `hack/`.
 
@@ -76,6 +77,38 @@ Load a ROM through MCP. Prefer rebuilt ROMs such as `rom/narutorpg3_chs.nds` or 
 - `nds_reload_rom`: Reload the last loaded ROM path.
 - `nds_get_rom_info`: Return loaded ROM title and game code.
 
+### Screenshot And Input
+
+- `nds_screenshot`: Capture the display. Arguments: optional `screen` and optional `path`.
+- `nds_input_key`: Press or release a DS button. Arguments: `button`, optional `pressed`.
+- `nds_input_touch`: Press or release touch input on the bottom screen. Arguments: `x`, `y`, optional `touch`.
+- `nds_input_release_all`: Release all DS buttons and touch input.
+
+Screenshot conventions:
+
+- `screen` can be `both`, `main`, or `touch`; default is `both`.
+- Prefer passing `path` and saving screenshots under the active `plan/cache/<plan-id>/` directory to avoid large inline image responses.
+- `screen: both` saves a 256x384 image with main and touch screens stacked vertically.
+
+Input conventions:
+
+- `button` values: `A`, `B`, `X`, `Y`, `start`, `select`, `up`, `down`, `left`, `right`, `L`, `R`, `debug`, `lid`.
+- `pressed: true` presses a button; `pressed: false` releases it. If omitted, press is the default.
+- For touch input, `x` is 0-255 and `y` is 0-191 in native bottom-screen pixels.
+- `touch: true` presses; `touch: false` releases. If omitted, press is the default.
+- Always release inputs after a press, either with a matching release call or `nds_input_release_all`.
+
+Examples:
+
+```powershell
+.\.venv\Scripts\python.exe .codex\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_input_key --arguments '{"button":"A","pressed":true}'
+.\.venv\Scripts\python.exe .codex\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_input_key --arguments '{"button":"A","pressed":false}'
+.\.venv\Scripts\python.exe .codex\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_input_touch --arguments '{"x":128,"y":96,"touch":true}'
+.\.venv\Scripts\python.exe .codex\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_input_touch --arguments '{"x":128,"y":96,"touch":false}'
+.\.venv\Scripts\python.exe .codex\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_input_release_all --arguments '{}'
+.\.venv\Scripts\python.exe .codex\skills\desmume-mcp-workflow\scripts\call_mcp_tool.py --tool nds_screenshot --arguments '{"screen":"both","path":"D:\\repos\\nds-narutorpg3-chs\\plan\\cache\\vram-font-bypass\\screen.bmp"}'
+```
+
 ### Memory And Registers
 
 - `nds_read_memory`: Read NDS memory. Arguments: `proc`, `address`, `size`.
@@ -127,6 +160,8 @@ Examples:
 3. Load the rebuilt/test ROM through `nds_load_rom`.
 4. Use `nds_get_state` and `nds_get_rom_info` to confirm the emulator state.
 5. Set breakpoints before running risky checks.
-6. Use `nds_pause`, `nds_step`, `nds_get_registers`, and `nds_read_memory` to inspect behavior.
-7. Use `nds_write_memory` only for temporary emulator-memory experiments; do not treat it as ROM patching.
-8. Record addresses, observations, breakpoint results, and next steps in the active `plan/` file.
+6. Use `nds_input_key`, `nds_input_touch`, and `nds_input_release_all` to advance menus or dialogue when runtime checks need interaction.
+7. Use `nds_screenshot` with a cache-path output to record visible state before and after interactions.
+8. Use `nds_pause`, `nds_step`, `nds_get_registers`, and `nds_read_memory` to inspect behavior.
+9. Use `nds_write_memory` only for temporary emulator-memory experiments; do not treat it as ROM patching.
+10. Record addresses, observations, breakpoint results, screenshots, and next steps in the active `plan/` file.

@@ -13,9 +13,10 @@ stage_cache:
     - plan/cache/vram-font-bypass/plan-draft.md
     - plan/cache/vram-font-bypass/static-render-chain.md
     - plan/cache/vram-font-bypass/runtime-observation.md
+    - plan/cache/vram-font-bypass/desmume-mcp-update.md
 updated_at: "2026-05-27"
 notes:
   - 新对话先读本文件，再读取 current_plan.document。
   - 具体计划使用 Markdown 文档组织，state 只做恢复入口和当前进度指针。
   - 静态链路已完成，运行时已确认字体初始化入口和 DAT_020B73E0 字段。
-  - 当前阻塞点是正文/菜单字体绘制断点需要输入推进或 MCP 输入能力。
+  - 新版 DeSmuME MCP 已验证按键、触摸、释放全部和截图能力，正文/菜单字体绘制断点可继续用输入推进。
