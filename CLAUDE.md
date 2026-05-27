@@ -13,26 +13,34 @@
 
 ### 计划状态管理
 
-进行任何计划前，必须先检查 `plan/` 目录，确认是否已经存在相同目标或相同范围的计划。
+进行任何计划前，必须先读取 `plan/state.yaml` 或 `plan/state.json`。优先使用 `plan/state.yaml`。
+
+`state` 是新对话恢复上下文的唯一入口，必须能直接告诉后续执行者：
+
+- 当前进行中的 plan 对应的 `.md` 计划文档地址。
+- 目前进行到哪个阶段。
+- 当前阶段缓存文档的目录和具体文件地址。
 
 执行规则：
 
-- 如果已有相关计划，优先读取并延续原计划，不要重复创建平行计划。
-- 如果没有相关计划，需要在 `plan/` 下新建当前计划 state 文件。
-- 计划 state 使用 JSON 或 YAML 格式，优先使用 YAML，便于人工维护。
-- 计划执行过程中需要持续更新 state；执行完成后也要回写最终状态。
+- 如果 `state` 指向已有相关计划，优先读取并延续原计划，不要重复创建平行计划。
+- 如果 `state` 不存在，需要先创建 `plan/state.yaml`。
+- 具体计划用 `.md` 组织，放在 `plan/` 下；计划文档必须包含背景、必要上下文、目标、阶段、决策和产物。
+- 阶段缓存文档放在 `plan/cache/<plan-id>/` 下，用 `.md` 记录阶段中间结论、命令结果摘要、验证记录或待继续的上下文。
+- 计划执行过程中需要持续更新 `state`；执行完成后也要回写最终状态。
+- 不要把每个计划都做成一个独立 state YAML；`state.yaml` 是统一入口，具体计划正文是 `.md`。
 
-建议字段：
+建议 `state.yaml` 字段：
 
-- `id`：计划唯一标识。
-- `title`：计划标题。
-- `status`：当前状态，例如 `pending`、`in_progress`、`blocked`、`done`。
-- `scope`：计划范围。
-- `created_at` / `updated_at`：创建和更新时间。
-- `steps`：阶段步骤，每步包含 `name`、`status`、`notes`。
-- `decisions`：已经确认的关键决策。
-- `artifacts`：产物文件路径。
-- `next_actions`：下一步动作。
+- `current_plan.id`：当前计划唯一标识。
+- `current_plan.document`：当前计划 `.md` 文档地址。
+- `current_plan.status`：当前计划状态，例如 `pending`、`in_progress`、`blocked`、`done`。
+- `current_stage.id`：当前阶段标识。
+- `current_stage.name`：当前阶段名称。
+- `current_stage.status`：当前阶段状态。
+- `stage_cache.dir`：当前阶段缓存目录。
+- `stage_cache.documents`：当前阶段缓存文档地址列表。
+- `updated_at`：更新时间。
 
 ### Python 环境
 
