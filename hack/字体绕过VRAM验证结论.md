@@ -1,7 +1,7 @@
 # 字体绕过 VRAM 验证结论
 
 更新时间：2026-05-27
-状态：第一版 hook 验证通过
+状态：第二版按字符码 hook 核心验证通过，稳定性待复核
 
 ## 1. 验证问题
 
@@ -109,8 +109,52 @@ LR=0x02089194
 
 ## 6. 下一步
 
-- 让 hook 不只按源地址匹配，而是能识别当前字符编码。
+- 第二版已经让 hook 能按当前字符码匹配：`0x82CD -> 0x02074180`。
 - 设计 glyph cache 结构：字符码、mode、源数据地址、缓存槽。
 - 决定中文 glyph 数据存放在 ROM 文件、ARM9 扩展区还是独立 overlay/NitroFS 文件。
 - 继续验证 1x1 mode。
 
+## 7. 第二版验证补充
+
+新增测试 ROM：
+
+```text
+rom/test_vram_font_char_hook_probe.nds
+```
+
+新增脚本：
+
+```text
+tools/patch_vram_font_char_hook_probe.py
+```
+
+关键证据：
+
+```text
+i=4 current=0x82CD R0=0x02074180
+PC=0x020087BC
+R1=0x02292B40
+R2=0x00000040
+```
+
+这证明后续可以走：
+
+```text
+当前字符码 -> 查自定义映射 -> 返回/替换 glyph 源地址
+```
+
+稳定性风险：
+
+```text
+放行后 ARM9_PC=0x0208AA44，ARM7_PC=0x00000020。
+```
+
+no-op 复核结论：
+
+```text
+保存字符 hook 稳定。
+copy hook 框架稳定。
+不稳定点集中在 0x82CD 命中后替换到自定义 glyph 数据。
+```
+
+因此下一步优先做“0x82CD 替换到原 glyph 副本”的版本。

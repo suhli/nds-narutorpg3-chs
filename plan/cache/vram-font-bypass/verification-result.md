@@ -13,6 +13,9 @@
 - hook 入口 `0x0207411C` 成功命中。
 - 原复制函数 `0x020087BC` 入口成功命中。
 - 已确认 hook 将 `R0` 从原 VRAM glyph 地址替换为 ARM9 自定义 glyph 地址。
+- 使用 DeSmuME MCP 加载 `rom/test_vram_font_char_hook_probe.nds`。
+- 已确认 `0208914C` 可保存当前字符码。
+- 已确认 `02089190` hook 可按当前字符码 `0x82CD` 将 `R0` 替换为 `0x02074180`。
 
 ## 关键证据
 
@@ -44,14 +47,55 @@ LR=0x02089194
 
 ## 未完成
 
-- 视觉变化不明显，因为第一版匹配的是 `0x8140` 对应的 glyph，可能是空白/间隔字符。
+- 第二版按字符码替换到自定义 glyph 后，放行运行出现停机状态：`ARM9_PC=0x0208AA44`，`ARM7_PC=0x00000020`。
 - 还没有验证 1x1 mode。
 - 还没有实现字符码到中文 glyph 的动态映射。
 - 还没有设计缓存淘汰和同屏复用策略。
 
 ## 下一步
 
-- 把 hook 输入从“按原源地址匹配”升级为“按当前字符编码匹配”。
-- 需要在 `0208913C` 或 `0208671C` 周边保存当前字符码，供 `02089190` hook 使用。
+- 优先做 no-op 版本验证稳定性：保存当前字符码，但不替换 `R0`。
+- 再做“按字符码匹配但替换为原 glyph 数据副本”的版本，排除自定义 glyph 格式风险。
 - 设计中文 glyph 数据文件格式和加载位置。
 
+## 第二版补充证据
+
+```text
+i=4 current=0x82CD R0=0x02074180
+
+PC=0x020087BC
+R0=0x02074180
+R1=0x02292B40
+R2=0x00000040
+LR=0x02089194
+current_char=0x000082CD
+```
+
+## 稳定性复核补充
+
+保存字符码 no-op：
+
+```text
+rom/test_vram_font_save_char_noop_probe.nds
+0207411C 命中，R1=0x8140
+放行后 current_char=0x82E9
+running=1
+```
+
+copy hook no-op：
+
+```text
+rom/test_vram_font_copy_noop_probe.nds
+02074140 命中，current_char=0x8140
+R0=0x06881C00
+放行后 current_char=0x82E9
+running=1
+```
+
+判定：
+
+```text
+保存字符 hook 稳定。
+copy hook 框架稳定。
+风险集中在命中字符后替换为自定义 glyph 数据这一步。
+```
