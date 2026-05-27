@@ -1,17 +1,18 @@
 current_plan:
-  id: codex-adaptation
-  title: 适配 Codex 项目入口
-  document: plan/codex-adaptation.md
-  status: done
+  id: vram-font-bypass
+  title: 绕过 VRAM 全量字体加载方案
+  document: plan/vram-font-bypass.md
+  status: in_progress
 current_stage:
-  id: codex-entry-copy
-  name: 复制并适配 Codex 入口
-  status: done
+  id: static-render-chain
+  name: 静态复核字体加载和绘制链路
+  status: pending
 stage_cache:
-  dir: plan/cache/codex-adaptation
+  dir: plan/cache/vram-font-bypass
   documents:
-    - plan/cache/codex-adaptation/codex-entry-copy.md
+    - plan/cache/vram-font-bypass/plan-draft.md
 updated_at: "2026-05-27"
 notes:
   - 新对话先读本文件，再读取 current_plan.document。
   - 具体计划使用 Markdown 文档组织，state 只做恢复入口和当前进度指针。
+  - 下一步先做静态链路复核，不直接 patch ROM。
