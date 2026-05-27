@@ -11,6 +11,29 @@
 
 ## 工具和技能
 
+### 计划状态管理
+
+进行任何计划前，必须先检查 `plan/` 目录，确认是否已经存在相同目标或相同范围的计划。
+
+执行规则：
+
+- 如果已有相关计划，优先读取并延续原计划，不要重复创建平行计划。
+- 如果没有相关计划，需要在 `plan/` 下新建当前计划 state 文件。
+- 计划 state 使用 JSON 或 YAML 格式，优先使用 YAML，便于人工维护。
+- 计划执行过程中需要持续更新 state；执行完成后也要回写最终状态。
+
+建议字段：
+
+- `id`：计划唯一标识。
+- `title`：计划标题。
+- `status`：当前状态，例如 `pending`、`in_progress`、`blocked`、`done`。
+- `scope`：计划范围。
+- `created_at` / `updated_at`：创建和更新时间。
+- `steps`：阶段步骤，每步包含 `name`、`status`、`notes`。
+- `decisions`：已经确认的关键决策。
+- `artifacts`：产物文件路径。
+- `next_actions`：下一步动作。
+
 ### Python 环境
 
 Python 环境已经使用 `uv venv` 初始化。

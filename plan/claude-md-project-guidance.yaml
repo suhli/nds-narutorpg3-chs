@@ -1,0 +1,34 @@
+id: claude-md-project-guidance
+title: 完善项目协作说明
+status: done
+scope:
+  - 完善 CLAUDE.md 中的汉化总体节奏
+  - 补充 ndstool ROM 解包和打包规则
+  - 补充 Python uv 虚拟环境和依赖安装规则
+  - 补充计划状态管理规则
+created_at: "2026-05-27"
+updated_at: "2026-05-27"
+steps:
+  - name: 检查已有计划
+    status: done
+    notes: plan/ 目录当前没有已有计划文件。
+  - name: 更新 CLAUDE.md
+    status: done
+    notes: 已补充汉化节奏、工具技能、ROM 保护和计划 state 规则。
+  - name: 创建 ndstool skill
+    status: done
+    notes: 已创建 .claude/skills/ndstool-rom-workflow/SKILL.md。
+  - name: 回写当前计划 state
+    status: done
+    notes: 本文件用于记录当前说明完善工作的状态。
+decisions:
+  - rom/origin.nds 只能作为原版输入读取，不能覆盖或原地 patch。
+  - 修改后的 ROM 必须打包成新的 ROM 文件。
+  - Python 依赖安装优先使用 uv add 或 uv pip。
+  - 后续计划开始前必须先检查 plan/ 是否已有相关计划。
+artifacts:
+  - CLAUDE.md
+  - .claude/skills/ndstool-rom-workflow/SKILL.md
+  - plan/claude-md-project-guidance.yaml
+next_actions:
+  - 后续实际逆向或汉化任务开始前，先检查并延续相关 plan state。
