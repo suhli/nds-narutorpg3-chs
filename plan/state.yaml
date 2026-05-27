@@ -6,13 +6,14 @@ current_plan:
 current_stage:
   id: static-render-chain
   name: 静态复核字体加载和绘制链路
-  status: pending
+  status: in_progress
 stage_cache:
   dir: plan/cache/vram-font-bypass
   documents:
     - plan/cache/vram-font-bypass/plan-draft.md
+    - plan/cache/vram-font-bypass/static-render-chain.md
 updated_at: "2026-05-27"
 notes:
   - 新对话先读本文件，再读取 current_plan.document。
   - 具体计划使用 Markdown 文档组织，state 只做恢复入口和当前进度指针。
-  - 下一步先做静态链路复核，不直接 patch ROM。
+  - 正在做静态链路复核，不直接 patch ROM。
