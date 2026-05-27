@@ -92,3 +92,26 @@ slot {
 2. 将 `match-char` 从单值扩展为小表查找，例如 `0x82CD`、`0x82DF`。
 3. 先不接 NitroFS 文件读取，只把两个 glyph 放在 ARM9 空洞，证明多字符选择逻辑。
 4. 通过 DeSmuME MCP 验证两个不同字符都能在 `020087BC` 前把 `R0` 替换到不同 glyph 地址。
+
+## 2026-05-27 多字符 probe 进展
+
+已新增：
+
+```text
+tools/patch_vram_font_multi_char_hook_probe.py
+rom/test_vram_font_multi_char_hook_probe.nds
+rom/test_vram_font_multi_char_8140_probe.nds
+```
+
+默认 `0x82CD/0x82DF` 版本已完成构建和静态检查；本轮输入路径未稳定触发这两个字符。
+
+运行时已验证 `0x8140 -> 0x020741A0`：
+
+```text
+020087BC:
+current_char=00008140
+R0=0x020741A0
+R1=0x02292A40
+```
+
+结论：两项小表 hook 的第一项分流机制成立。下一步需要找到第二个可稳定触发的字符路径，或者把小表改为运行中已知连续出现的两个字符继续验证第二项。
