@@ -196,3 +196,16 @@
 ## 当前入口
 
 当前计划从“静态复核字体加载和绘制链路”开始。下一步不要直接 patch ROM，先补齐 `hack/字体绘制链路.md` 和阶段缓存。
+
+## 2026-05-27 进度更新
+
+阶段 5 的稳定性复核已经修正此前判断：`running=0 ARM9_PC=0x02089210 / ARM7_PC=0x00000020` 可以通过 `nds_resume` 继续运行，不能作为 glyph 替换崩溃证据。
+
+已经确认：
+
+- `0208914C` 保存当前字符码稳定。
+- `02089190` copy hook 框架稳定。
+- `0x82CD -> 0x02074180` 的按字符替换可进入 `020087BC`。
+- `02074180` 中放原 glyph 副本或 test-pattern glyph 均可作为 RAM glyph 源。
+
+当前决策：方案 A（动态 glyph 缓存）进入正式设计。下一阶段产物见 `plan/cache/vram-font-bypass/dynamic-cache-design.md`。

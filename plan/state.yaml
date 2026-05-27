@@ -4,8 +4,8 @@ current_plan:
   document: plan/vram-font-bypass.md
   status: in_progress
 current_stage:
-  id: verification-result
-  name: 模拟器验证和方案判定
+  id: dynamic-cache-design
+  name: 动态 glyph 缓存正式设计
   status: in_progress
 stage_cache:
   dir: plan/cache/vram-font-bypass
@@ -18,12 +18,16 @@ stage_cache:
     - plan/cache/vram-font-bypass/test-rom-build.md
     - plan/cache/vram-font-bypass/verification-result.md
     - plan/cache/vram-font-bypass/char-hook-probe.md
+    - plan/cache/vram-font-bypass/stability-recheck.md
+    - plan/cache/vram-font-bypass/dynamic-cache-design.md
 updated_at: "2026-05-27"
 notes:
-  - 新对话先读本文件，再读取 current_plan.document。
-  - 具体计划使用 Markdown 文档组织，state 只做恢复入口和当前进度指针。
+  - 新对话先读取本文件，再读取 current_plan.document 和 current_stage 对应缓存文档。
+  - 具体计划使用 Markdown 文档组织；state.yaml 只作为统一恢复入口和当前进度指针。
   - 静态链路和运行时链路均已完成；0208913C -> 0208671C -> 02089190 已动态确认。
-  - 第一版 ARM9 空洞 hook 已验证：02089190 跳到 0207411C，R0 从 06881C00 替换到 0207413C 后进入 020087BC。
-  - 第二版已验证按字符码替换：current_char=82CD 时 R0 被替换到 02074180。
-  - no-op 复核显示保存字符 hook 和 copy hook 框架稳定；当前风险集中在替换为自定义 glyph 数据后放行停机。
-  - 下一步做 82CD 替换到原 glyph 副本的版本；不要使用 overlay 尾部追加方案，它会踩 overlay_0000 BSS。
+  - 第一版 ARM9 空洞 hook 已验证：02089190 跳到 0207411C，R0 可从 06881C00 替换到 ARM9 RAM glyph 后进入 020087BC。
+  - 第二版已验证按字符码替换：current_char=82CD 时 R0 可替换到 02074180。
+  - no-op 复核显示保存字符 hook 和 copy hook 框架稳定。
+  - 原 glyph 副本和 test-pattern 复核显示此前 running=0 不是崩溃证据，可 resume 继续运行。
+  - 方案 A（动态 glyph 缓存）进入正式设计；下一步做多字符小表和多 glyph 源地址验证。
+  - 不要使用 overlay_0000 尾部追加方案，它会踩 overlay_0000 BSS。

@@ -99,3 +99,13 @@ running=1
 copy hook 框架稳定。
 风险集中在命中字符后替换为自定义 glyph 数据这一步。
 ```
+
+## 2026-05-27 复核修正
+
+此前记录的 `running=0 ARM9_PC=0x02089210 / ARM7_PC=0x00000020` 复核后不是崩溃证据。执行 `nds_resume` 后可继续运行到：
+
+```text
+running=1 ARM9_PC=0x0200821C ARM7_PC=0x038042B0
+```
+
+`rom/test_vram_font_original_glyph_copy_probe.nds` 中，`0x02074180` 的原 glyph 副本与 `0x06882280` 一致；`rom/test_vram_font_char_hook_probe.nds` 的 test-pattern 版本也能在清除断点后继续运行。阶段结论修正为：动态 glyph 缓存路线可进入正式设计。
