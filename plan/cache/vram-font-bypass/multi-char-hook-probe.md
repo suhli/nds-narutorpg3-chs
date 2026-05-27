@@ -121,13 +121,35 @@ running=1 ARM9_PC=0x0200821C ARM7_PC=0x038042B0
 plan/cache/vram-font-bypass/screens/multi-char-8140-verified.bmp
 ```
 
-## 限制
+## 2026-05-27 复核更新
 
-本轮输入路径没有触发默认版本里的 `0x82CD/0x82DF` 两个字符，因此默认双字符版本只完成静态检查和 ROM 构建。运行时断点已验证 `0x8140` 这一项；下一轮需要找到稳定触发 `0x82CD/0x82DF` 的 UI/文本路径，或改用已知会连续出现的两个字符继续复核第二项。
+已新增 `tools/sample_vram_font_chars_mcp.py`，并用 no-op ROM 采到稳定序列：
+
+```text
+0x8140, 0x8140, 0x8140, 0x8140, 0x82CD, 0x82B6, 0x82DF
+```
+
+随后使用默认双字符 ROM 完成两个分支运行时验证：
+
+```text
+0x82CD -> R0=0x020741A0
+0x82DF -> R0=0x020741E0
+```
+
+详细记录见：
+
+```text
+plan/cache/vram-font-bypass/runtime-char-sampling.md
+plan/cache/vram-font-bypass/runtime-char-samples.json
+plan/cache/vram-font-bypass/multi-char-verify-samples.json
+```
+
+## 当前限制
+
+本轮仍是硬编码双比较，不是真正的表驱动循环。下一步应把 `02074140` 的两项比较改为读取映射表并循环查找，先把表放在 ARM9 空洞内验证。
 
 ## 下一步
 
-- 找到能稳定触发第二个字符的文本路径。
 - 把两项硬编码比较改为循环查表。
 - 确认查表代码预算和寄存器保存策略。
 - 设计中文 glyph 文件预加载到 RAM 的流程，避免在绘制路径中同步读 NitroFS。

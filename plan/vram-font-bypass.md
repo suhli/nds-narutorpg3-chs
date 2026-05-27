@@ -209,3 +209,20 @@
 - `02074180` 中放原 glyph 副本或 test-pattern glyph 均可作为 RAM glyph 源。
 
 当前决策：方案 A（动态 glyph 缓存）进入正式设计。下一阶段产物见 `plan/cache/vram-font-bypass/dynamic-cache-design.md`。
+
+## 2026-05-27 追加进度
+
+已完成：
+
+- `tools/sample_vram_font_chars_mcp.py`：可复现采样 `020087BC` 命中时的 `current_char/R0/R1/R2`。
+- `tools/patch_vram_font_table_hook_probe.py`：表驱动查找 hook 原型。
+- `rom/test_vram_font_table_hook_probe.nds`：表驱动测试 ROM。
+
+关键验证：
+
+```text
+0x82CD -> R0=0x02074200
+0x82DF -> R0=0x02074240
+```
+
+当前下一步：设计 glyph 数据和映射表的 RAM 预加载方案，避免最终实现继续依赖 ARM9 空洞内的测试数据。

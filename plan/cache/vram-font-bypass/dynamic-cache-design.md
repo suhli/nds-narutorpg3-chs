@@ -103,9 +103,7 @@ rom/test_vram_font_multi_char_hook_probe.nds
 rom/test_vram_font_multi_char_8140_probe.nds
 ```
 
-默认 `0x82CD/0x82DF` 版本已完成构建和静态检查；本轮输入路径未稳定触发这两个字符。
-
-运行时已验证 `0x8140 -> 0x020741A0`：
+默认 `0x82CD/0x82DF` 版本已完成构建和运行时验证。此前先用 `0x8140 -> 0x020741A0` 验证了第一项：
 
 ```text
 020087BC:
@@ -114,4 +112,39 @@ R0=0x020741A0
 R1=0x02292A40
 ```
 
-结论：两项小表 hook 的第一项分流机制成立。下一步需要找到第二个可稳定触发的字符路径，或者把小表改为运行中已知连续出现的两个字符继续验证第二项。
+随后通过 `tools/sample_vram_font_chars_mcp.py` 采样确认 `0x82CD/0x82DF` 在当前路径稳定出现，并完成默认双字符 ROM 验证：
+
+```text
+0x82CD -> R0=0x020741A0
+0x82DF -> R0=0x020741E0
+```
+
+结论：两项小表 hook 的两个分支均成立。
+
+## 2026-05-27 表驱动原型
+
+已新增：
+
+```text
+tools/patch_vram_font_table_hook_probe.py
+rom/test_vram_font_table_hook_probe.nds
+```
+
+`02074140` 已从硬编码双比较改为遍历表：
+
+```text
+lookup_table:
+0x82CD -> 0x02074200
+0x82DF -> 0x02074240
+```
+
+MCP 验证：
+
+```text
+0x82CD -> R0=0x02074200
+0x82DF -> R0=0x02074240
+```
+
+详细记录见 `plan/cache/vram-font-bypass/table-lookup-probe.md`。
+
+下一步进入 glyph 数据来源设计：先把中文 glyph 和映射表预加载到普通 RAM，再让查表 hook 指向 RAM 表。
