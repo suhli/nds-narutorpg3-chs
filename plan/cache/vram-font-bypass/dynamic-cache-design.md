@@ -406,6 +406,20 @@ resident_1x2_chunk_id = 1
 0x82A2, R2=0x40 -> R0=0x02283120  fallback
 ```
 
-待补：
-- 1x1 的 `chunk_id=0/resident_slot=0` 正例本轮没有稳定复现。
+1x1 补充验证：
+
+```text
+tools/patch_vram_font_chunk_table_probe.py --char-1x1-extra-chunk-id 0
+rom/test_vram_font_chunk_table_1x1_probe.nds
+plan/cache/vram-font-bypass/chunk-table-1x1-samples.json
+```
+
+补充样本：
+
+```text
+0x82BD, R2=0x20 -> R0=0x02283040  resident_1x1=0, chunk_id=0, resident hit
+```
+
+结论：
+- 单 resident slot 的 resident/fallback 分支已覆盖 1x1 与 1x2。
 - 后续不能继续无规划扩展当前 copy hook；需要移动代码区或先做查找逻辑瘦身。

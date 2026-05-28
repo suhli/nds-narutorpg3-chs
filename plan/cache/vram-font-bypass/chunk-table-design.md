@@ -166,6 +166,66 @@ MCP 样本：
 结论：
 - `entry.chunk_id == resident_slot.chunk_id` 的 resident 命中路径已在 1x2 上验证。
 - `entry.chunk_id != resident_slot.chunk_id` 的 fallback 路径已在 1x2 上验证。
-- 本轮没有稳定复现到 1x1 的 `chunk_id=0/resident_slot=0` 正例；不要把 1x1 resident-slot 视为已完成。
+- 首轮没有稳定复现到 1x1 的 `chunk_id=0/resident_slot=0` 正例，因此追加了专用 1x1 probe。
 
-下一步应补一个更短路径或专用文本触发的 1x1 resident-slot probe，然后再考虑多 slot 或真实缺页加载。
+## 2026-05-28 1x1 resident-slot 补充验证
+
+已扩展：
+
+```text
+tools/patch_vram_font_chunk_table_probe.py
+```
+
+新增可配置参数：
+
+```text
+--shared-1x1-chunk-id
+--char-1x1-extra-chunk-id
+--shared-1x2-chunk-id
+--char-1x2-a-chunk-id
+--char-1x2-b-chunk-id
+```
+
+新增专用 ROM：
+
+```text
+rom/test_vram_font_chunk_table_1x1_probe.nds
+```
+
+构建目录：
+
+```text
+rom/unpacked/vram_font_chunk_table_1x1_probe
+```
+
+构建参数：
+
+```text
+--char-1x1-extra-chunk-id 0
+```
+
+这会把稳定出现在 1x1 路径的 `0x82BD` 设置为 `chunk_id=0`，与 `resident_1x1_chunk_id=0` 匹配。
+
+ROM 头信息检查通过：
+
+```text
+rom/test_vram_font_chunk_table_1x1_probe.nds
+title=NARUTORPG3
+code=ANTJ
+Header CRC OK
+Banner CRC OK
+```
+
+MCP 样本：
+
+```text
+0x82CD, R2=0x40 -> R0=0x022831A0  chunk_id=1, resident_1x2=1, resident hit
+0x82DF, R2=0x40 -> R0=0x02283120  chunk_id=0, resident_1x2=1, fallback
+0x82A2, R2=0x40 -> R0=0x02283120  chunk_id=0, resident_1x2=1, fallback
+0x82BD, R2=0x20 -> R0=0x02283040  chunk_id=0, resident_1x1=0, resident hit
+```
+
+结论：
+- 单 resident slot 的命中/未命中分支已覆盖 1x1 与 1x2。
+- 当前 copy hook 仍然正好用满 `0x02074140..0x02074200`，下一步不应继续往这里追加复杂逻辑。
+- 下一阶段可转向 hook 瘦身、移动代码区、多 resident slot，或先设计绘制热路径外的 chunk miss 调度。

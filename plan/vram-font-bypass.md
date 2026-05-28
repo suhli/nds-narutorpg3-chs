@@ -448,5 +448,29 @@ resident_1x2_chunk_id=1
 ```
 
 未完成：
-- 1x1 resident-slot 正例需要补专用 probe 或更稳定的触发路径。
 - 多 slot 和真实缺页加载仍未进入实现。
+
+## 2026-05-28 1x1 resident-slot 补充验证
+
+新增专用 ROM：
+
+```text
+rom/test_vram_font_chunk_table_1x1_probe.nds
+plan/cache/vram-font-bypass/chunk-table-1x1-samples.json
+```
+
+构建参数：
+
+```text
+tools/patch_vram_font_chunk_table_probe.py --char-1x1-extra-chunk-id 0
+```
+
+关键运行时样本：
+
+```text
+0x82BD, R2=0x20 -> R0=02283040  resident hit
+```
+
+当前判断更新：
+- 单 resident slot 的命中/未命中分支已覆盖 1x1 与 1x2。
+- 当前 copy hook 已用满 `0x02074140..0x02074200`，下一步应先做 hook 瘦身或迁移代码区，再推进多 slot/二分查找/缺页调度。

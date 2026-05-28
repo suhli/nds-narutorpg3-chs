@@ -333,3 +333,33 @@ copy_hook_size=0xC0
 ```
 
 因此后续不能继续把复杂分页逻辑直接追加到当前 copy hook 中。1x1 resident-slot 正例仍需补采样验证。
+
+## 14. 1x1 resident-slot 补充验证结论
+
+新增 ROM：
+
+```text
+rom/test_vram_font_chunk_table_1x1_probe.nds
+```
+
+构建参数：
+
+```text
+--char-1x1-extra-chunk-id 0
+```
+
+关键样本：
+
+```text
+0x82BD, R2=0x20 -> R0=0x02283040  resident hit
+```
+
+至此，单 resident slot 的基本分支已经覆盖：
+
+```text
+1x2 resident hit: 0x82CD -> 0x022831A0
+1x2 fallback:    0x82DF -> 0x02283120
+1x1 resident hit: 0x82BD -> 0x02283040
+```
+
+下一步重点不应是继续往当前 copy hook 追加逻辑，而是解决 hook 空间、查找效率和缺页调度位置。

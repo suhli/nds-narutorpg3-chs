@@ -32,7 +32,8 @@ stage_cache:
     - plan/cache/vram-font-bypass/chunk-table-design.md
 updated_at: "2026-05-28"
 notes:
-  - resident-slot probe 已完成 1x2 运行时验证：resident_1x2_chunk_id=1 时 82CD 命中 resident，82DF/82A2 走 fallback；1x1 resident 正例待补。
+  - 1x1 resident-slot 正例已补充验证：test_vram_font_chunk_table_1x1_probe.nds 中 82BD/R2=0x20 命中 02283040。
+  - resident-slot probe 已完成 1x2 运行时验证：resident_1x2_chunk_id=1 时 82CD 命中 resident，82DF/82A2 走 fallback。
   - chunk table probe 暴露新限制：copy_hook_size=0xC0，02074140..02074200 已用满，后续复杂逻辑需迁移或瘦身。
   - chunk table 设计草案已补充：02089190 copy hook 暂不做 NitroFS 缺页加载，先验证 resident slot + fallback 快速决策。
   - chunk_id fallback 原型已完成运行时验证：chunk_id=1 可稳定命中 chunk_base+0x20 fallback，chunk_id=0 仍按 glyph_offset 命中 resident glyph。
