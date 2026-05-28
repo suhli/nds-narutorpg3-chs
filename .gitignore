@@ -3,3 +3,4 @@ tools/
 rom/
 __pycache__/
 *.pyc*
+*.ttf

@@ -23,6 +23,7 @@ stage_cache:
     - plan/cache/vram-font-bypass/multi-char-hook-probe.md
     - plan/cache/vram-font-bypass/runtime-char-sampling.md
     - plan/cache/vram-font-bypass/table-lookup-probe.md
+    - plan/cache/vram-font-bypass/file-preload-probe.md
 updated_at: "2026-05-27"
 notes:
   - 新对话先读取本文件，再读取 current_plan.document 和 current_stage 对应缓存文档。
@@ -35,5 +36,6 @@ notes:
   - 字符采样工具已新增：tools/sample_vram_font_chars_mcp.py。
   - 多字符小表 probe 已完成双项运行时验证：82CD -> 020741A0，82DF -> 020741E0。
   - 表驱动查找原型已完成运行时验证：82CD -> 02074200，82DF -> 02074240。
-  - 方案 A（动态 glyph 缓存）继续推进；下一步做 glyph 数据来源和 RAM 预加载方案。
+  - NitroFS 文件预加载到 RAM 已验证：font/chs_probe.bin -> 02282F40，82CD -> 02282F60，82DF -> 02282FA0。
+  - 方案 A（动态 glyph 缓存）继续推进；下一步把 probe 文件结构升级为正式 map/glyph 格式，并确认 1x1 路径。
   - 不要使用 overlay_0000 尾部追加方案，它会踩 overlay_0000 BSS。

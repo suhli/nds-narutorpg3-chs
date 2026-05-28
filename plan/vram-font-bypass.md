@@ -226,3 +226,23 @@
 ```
 
 当前下一步：设计 glyph 数据和映射表的 RAM 预加载方案，避免最终实现继续依赖 ARM9 空洞内的测试数据。
+
+## 2026-05-27 RAM 预加载验证
+
+已完成 NitroFS 文件预加载原型：
+
+```text
+tools/patch_vram_font_file_preload_probe.py
+rom/test_vram_font_file_preload_probe.nds
+font/chs_probe.bin
+```
+
+运行时验证：
+
+```text
+font/chs_probe.bin -> RAM 0x02282F40
+0x82CD -> R0=0x02282F60
+0x82DF -> R0=0x02282FA0
+```
+
+当前结论：动态字体方案已具备“ROM 文件 -> 普通 RAM -> 绘制 hook”的最小闭环。下一步正式化中文 glyph 文件格式，并验证 1x1 字体路径。

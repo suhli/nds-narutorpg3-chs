@@ -148,3 +148,28 @@ MCP 验证：
 详细记录见 `plan/cache/vram-font-bypass/table-lookup-probe.md`。
 
 下一步进入 glyph 数据来源设计：先把中文 glyph 和映射表预加载到普通 RAM，再让查表 hook 指向 RAM 表。
+
+## 2026-05-27 文件预加载原型
+
+已新增：
+
+```text
+tools/patch_vram_font_file_preload_probe.py
+rom/test_vram_font_file_preload_probe.nds
+font/chs_probe.bin
+```
+
+`font/chs_probe.bin` 被加入 NitroFS，并在 `020869E0` 字体初始化尾部通过原文件加载函数 `0207F80C` 加载到普通 RAM。
+
+运行时验证：
+
+```text
+chs_data_ptr  = 0x02282F40
+chs_data_size = 0x000000A0
+0x82CD -> R0=0x02282F60
+0x82DF -> R0=0x02282FA0
+```
+
+详细记录见 `plan/cache/vram-font-bypass/file-preload-probe.md`。
+
+结论：自定义 glyph 数据源已经从 ARM9 空洞迁移到 NitroFS 文件和普通 RAM。下一步应正式化文件格式，并补 1x1 路径验证。
