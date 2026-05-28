@@ -474,3 +474,39 @@ tools/patch_vram_font_chunk_table_probe.py --char-1x1-extra-chunk-id 0
 当前判断更新：
 - 单 resident slot 的命中/未命中分支已覆盖 1x1 与 1x2。
 - 当前 copy hook 已用满 `0x02074140..0x02074200`，下一步应先做 hook 瘦身或迁移代码区，再推进多 slot/二分查找/缺页调度。
+
+## 2026-05-28 hook 瘦身与同空洞迁移验证
+
+新增阶段缓存与测试 ROM：
+
+```text
+plan/cache/vram-font-bypass/hook-slim-relocate-probe.md
+tools/patch_vram_font_chunk_table_slim_moved_probe.py
+rom/test_vram_font_chunk_table_slim_moved_probe.nds
+plan/cache/vram-font-bypass/chunk-table-slim-moved-samples.json
+```
+
+本次把 copy hook 压缩为只使用一个 `vars_base` literal，并把 load hook 从 `0x02074200` 后移到 `0x02074220`。这是在 `0x0207411C` 主空洞内部重排，不是远端代码洞迁移。
+
+静态结果：
+
+```text
+copy_hook_size = 0xA0
+copy_budget    = 0xE0
+copy_margin    = 0x40
+load_hook_addr = 0x02074220
+load_hook_size = 0x11C
+```
+
+运行时关键样本：
+
+```text
+0x82CD, R2=0x40 -> R0=0x022831A0  1x2 resident hit
+0x82DF, R2=0x40 -> R0=0x02283120  1x2 fallback
+0x82BD, R2=0x20 -> R0=0x02283040  1x1 resident hit
+```
+
+当前判断更新：
+- hook 瘦身和局部迁移没有破坏现有 resident/fallback 路径。
+- copy hook 现在有 `0x40` 字节余量，可用于极小的多 slot 或 miss flag 验证。
+- 复杂 chunk miss 加载、二分查找或完整调度逻辑仍不应塞进逐字 copy hook。

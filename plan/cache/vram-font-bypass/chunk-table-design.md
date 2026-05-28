@@ -229,3 +229,36 @@ MCP 样本：
 - 单 resident slot 的命中/未命中分支已覆盖 1x1 与 1x2。
 - 当前 copy hook 仍然正好用满 `0x02074140..0x02074200`，下一步不应继续往这里追加复杂逻辑。
 - 下一阶段可转向 hook 瘦身、移动代码区、多 resident slot，或先设计绘制热路径外的 chunk miss 调度。
+
+## 2026-05-28 hook 瘦身与 load hook 后移
+
+新增 probe：
+
+```text
+tools/patch_vram_font_chunk_table_slim_moved_probe.py
+rom/test_vram_font_chunk_table_slim_moved_probe.nds
+plan/cache/vram-font-bypass/hook-slim-relocate-probe.md
+plan/cache/vram-font-bypass/chunk-table-slim-moved-samples.json
+```
+
+布局变化：
+
+```text
+copy hook: 0x02074140, size 0xA0
+load hook: 0x02074220, size 0x11C
+copy budget: 0xE0
+copy margin: 0x40
+```
+
+验证样本：
+
+```text
+0x82CD, R2=0x40 -> R0=0x022831A0  resident hit
+0x82DF, R2=0x40 -> R0=0x02283120  fallback
+0x82BD, R2=0x20 -> R0=0x02283040  resident hit
+```
+
+判断：
+- `0x0207411C` 主空洞内部重排可行。
+- copy hook 已释放出 `0x40` 字节余量，可承载很小的状态记录或 slot 扩展。
+- 若要加入二分查找、缺页加载或更复杂 chunk table，仍应迁移到独立代码区或改为热路径外调度。

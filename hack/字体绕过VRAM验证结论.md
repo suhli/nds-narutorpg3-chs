@@ -363,3 +363,32 @@ rom/test_vram_font_chunk_table_1x1_probe.nds
 ```
 
 下一步重点不应是继续往当前 copy hook 追加逻辑，而是解决 hook 空间、查找效率和缺页调度位置。
+
+## 15. hook 瘦身与同空洞迁移验证结论
+
+新增 ROM：
+
+```text
+rom/test_vram_font_chunk_table_slim_moved_probe.nds
+```
+
+该版本将 copy hook 的变量读取压缩为单一 `vars_base` literal，并把 load hook 从 `0x02074200` 后移到 `0x02074220`。
+
+静态结果：
+
+```text
+copy_hook_size=0xA0
+copy_budget=0xE0
+copy_margin=0x40
+load_hook_addr=0x02074220
+```
+
+关键样本：
+
+```text
+0x82CD, R2=0x40 -> R0=0x022831A0
+0x82DF, R2=0x40 -> R0=0x02283120
+0x82BD, R2=0x20 -> R0=0x02283040
+```
+
+这证明 hook 瘦身与主空洞内部代码重排不会破坏 resident/fallback 决策。当前可用余量只有 `0x40`，适合继续验证极小状态逻辑；真实缺页加载和复杂查找仍应放到逐字 copy hook 之外。
