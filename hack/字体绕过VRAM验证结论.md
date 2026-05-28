@@ -243,3 +243,37 @@ R2=0x40 -> 1x2 map/chunk
 split-map 是动态 glyph 缓存正式格式的早期主线。
 下一步应补正式 header/magic/version，并继续设计 glyph chunk 分页或分块加载。
 ```
+
+## 11. formal v0 格式验证结论
+
+已验证带 header 的正式格式：
+
+```text
+map   "CHMP", header_size=0x20, entry_size=0x10
+chunk "CHCK", header_size=0x20, compression=0
+```
+
+运行时加载：
+
+```text
+1x1 map   -> 0x02282F80 size 0x40
+1x1 chunk -> 0x02282FE0 size 0x60
+1x2 map   -> 0x02283060 size 0x50
+1x2 chunk -> 0x022830E0 size 0xE0
+```
+
+关键样本：
+
+```text
+0x82A2, R2=0x40 -> R0=0x02283100
+0x82A2, R2=0x20 -> R0=0x02283000
+```
+
+这证明正式 header 不破坏当前 `02089190` copy hook 路线。当前 `glyph_offset` 从 chunk 文件起点计算，因此第一枚 glyph 的 offset 是 `0x20`。
+
+当前判断：
+
+```text
+formal v0 可作为动态字体文件基础。
+下一步应设计 chunk_id、chunk table、缺字 fallback 和查找性能优化。
+```

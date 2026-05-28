@@ -276,3 +276,50 @@ MCP 采样确认同一个字符码可按 `R2` 分流：
 - 两套 map/chunk 的早期实现路线成立。
 - `R2=0x20/0x40` 足以在 `02089190` copy hook 处区分 1x1/1x2。
 - 下一步应把 split-map 原型提升为正式格式草案，补 magic/version/header/entry flags，并设计 glyph chunk 分页或分块加载策略。
+
+## 2026-05-28 formal v0 格式验证
+
+已新增：
+
+```text
+tools/patch_vram_font_formal_format_probe.py
+rom/test_vram_font_formal_format_probe.nds
+plan/cache/vram-font-bypass/formal-format-design.md
+```
+
+formal v0 文件格式已固定为：
+
+```text
+map   magic="CHMP", header_size=0x20, entry_size=0x10
+chunk magic="CHCK", header_size=0x20, compression=0
+```
+
+map entry：
+
+```text
+u32 char_code
+u32 glyph_offset      ; offset from chunk file start
+u16 advance
+u16 flags
+u16 chunk_id
+u16 reserved
+```
+
+MCP 采样确认 header-aware hook 可用：
+
+```text
+1x1 map/chunk -> 02282F80 / 02282FE0
+1x2 map/chunk -> 02283060 / 022830E0
+
+0x82A2, R2=0x40 -> R0=0x02283100  (1x2 chunk + 0x20)
+0x82A2, R2=0x20 -> R0=0x02283000  (1x1 chunk + 0x20)
+0x82CD, R2=0x40 -> R0=0x02283140
+0x82DF, R2=0x40 -> R0=0x02283180
+0x82BD, R2=0x20 -> R0=0x02283020
+```
+
+结论：
+
+- split-map 已升级为带 magic/version/header/entry flags 的 formal v0。
+- 当前 ARM9 hook 只读取 `entry_count/char_code/glyph_offset`，其余字段作为正式契约保留。
+- 下一步转入 chunk 分页/分块设计：明确 `chunk_id`、chunk table、缺字 fallback、线性查找到排序/二分查找的迁移条件。

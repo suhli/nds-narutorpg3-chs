@@ -341,3 +341,36 @@ font/chs_1x2.chunk
 - `R2` 分流方案成立，可在 `02089190` copy hook 处区分 1x1/1x2。
 - split-map 比单文件 `chs_probe.bin` 更接近正式实现，后续以两套 map/chunk 为早期主线。
 - 下一步进入正式格式草案：补 magic/version/header/entry flags，并设计 glyph chunk 分页或分块加载。
+
+## 2026-05-28 formal v0 格式验证
+
+已新增正式格式测试：
+
+```text
+tools/patch_vram_font_formal_format_probe.py
+rom/test_vram_font_formal_format_probe.nds
+plan/cache/vram-font-bypass/formal-format-design.md
+```
+
+当前格式：
+
+```text
+map   = "CHMP" + 0x20-byte header + 0x10-byte entries
+chunk = "CHCK" + 0x20-byte header + glyph data
+```
+
+关键验证结果：
+
+```text
+1x1 map/chunk -> 02282F80 / 02282FE0
+1x2 map/chunk -> 02283060 / 022830E0
+
+0x82A2, R2=0x40 -> R0=02283100
+0x82A2, R2=0x20 -> R0=02283000
+```
+
+当前决策更新：
+
+- formal v0 已验证，可作为后续动态字体文件格式基础。
+- `glyph_offset` 从 chunk 文件起点计算，第一枚 glyph offset 为 `0x20`。
+- 下一步进入 chunk 分页/分块设计，重点是 `chunk_id`、chunk table、缺字 fallback 和查找性能。

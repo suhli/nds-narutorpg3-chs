@@ -27,6 +27,7 @@ stage_cache:
     - plan/cache/vram-font-bypass/preload-size-pressure.md
     - plan/cache/vram-font-bypass/1x1-path-probe.md
     - plan/cache/vram-font-bypass/split-map-probe.md
+    - plan/cache/vram-font-bypass/formal-format-design.md
 updated_at: "2026-05-28"
 notes:
   - 新对话先读取本文件，再读取 current_plan.document 和 current_stage 对应缓存文档。
@@ -46,4 +47,6 @@ notes:
   - 正式 map 不要只按 char_code 命中，需要包含 mode/glyph_size 或拆成 1x1/1x2 两套 map。
   - split-map 原型已完成运行时验证：82A2 在 R2=0x40 时命中 1x2 chunk 02283060，在 R2=0x20 时命中 1x1 chunk 02282FC0。
   - 下一步把 split-map 原型升级为正式格式草案，补 magic/version/header/entry flags，并设计 glyph chunk 分页或分块加载。
+  - formal v0 已完成运行时验证：map 使用 CHMP，chunk 使用 CHCK，header_size=0x20，entry_size=0x10；82A2 在 R2=0x40 时命中 02283100，在 R2=0x20 时命中 02283000。
+  - 下一步围绕 chunk_id、chunk table、缺字 fallback 和 map 查找性能设计分页/分块方案。
   - 不要使用 overlay_0000 尾部追加方案，它会踩 overlay_0000 BSS。
