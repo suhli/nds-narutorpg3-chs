@@ -505,3 +505,131 @@ slot1 id   = 0 after first chunk0 miss
 ```
 
 结论：双 slot 原型已验证。chunk0 可以装入 slot1，slot0 的 chunk1 同时保留；这解决了单 slot 原型中 chunk0/chunk1 来回覆盖的问题。当前 probe 只接管 1x2 路径。
+
+## 20. dual-mode 1x1/1x2 验证结论
+
+新增 ROM：
+```text
+rom/test_vram_font_chunk_table_dual_mode_probe.nds
+```
+
+该版本把 copy hook 改为同时分流：
+
+```text
+R2=0x20 -> 1x1 map/chunk
+R2=0x40 -> 1x2 map/chunk + dual-slot resident
+```
+
+关键样本：
+```text
+0x8140, R2=0x40 -> R0=0x02284B60, data=84488448 84488448
+0x8140, R2=0x20 -> R0=0x02283040, data=41144114 41144114
+0x82BD, R2=0x20 -> R0=0x02283060, data=62266226 62266226
+0x82DF, R2=0x40 -> miss=00000001 000082DF 00000000 00000040 00000000 00000001 FFFFFFFF 00000001
+0x82A2, R2=0x40 -> R0=0x02284C40, data=73377337 73377337, slot0=1, slot1=0
+0x82C6, R2=0x40 -> R0=0x02284BA0, data=95599559 95599559, slot0=1, slot1=0
+```
+
+结论：dual-mode 原型已验证。`0x8140` 在 1x1 和 1x2 下命中不同 glyph，证明两种字体不会再因为只按字符码查表而互相 fallback/missing；同时 1x2 双 slot 换页行为继续成立。当前剩余风险是 1x1 仍只有单 resident chunk，正式方案需要决定是否为 `miss_mode=0x20` 也实现换页或多 slot。
+
+## 21. dual-mode 1x1 page copy 验证结论
+
+新增 ROM：
+```text
+rom/test_vram_font_chunk_table_dual_mode_1x1_copy_probe.nds
+```
+
+关键样本：
+```text
+0x8140, R2=0x20 -> R0=0x02283040, data=A66AA66A A66AA66A, miss=00000001 00008140 00000001 00000020
+0x8140, R2=0x20 -> R0=0x02283060, data=41144114 41144114, resident_1x1=1
+0x82A2, R2=0x40 -> R0=0x02284C40, data=73377337 73377337
+0x82C6, R2=0x40 -> R0=0x02284BA0, data=95599559 95599559
+```
+
+结论：1x1 缺页链路已验证。`miss_mode=0x20` 可由 `0x0208913C` consumer 消费并拷入 1x1 resident page；后续同字符命中目标 glyph。同时 1x2 dual-slot 行为仍保持。当前 1x1 分支已支持 `chunk_id=0/1` 两页选择；如果继续扩展更多 chunk，需要通用 source page 表或更大的 consumer 代码区。
+
+## 22. 集成构建与冒烟结论
+
+新增集成入口：
+```text
+tools/build_vram_font_dynamic_cache_rom.py
+tools/run_vram_font_integrated_smoke.py
+```
+
+构建 ROM：
+```text
+rom/narutorpg3_chs_dynamic_font_v0.nds
+Header CRC OK
+Banner CRC OK
+```
+
+整体验收结果：
+```text
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```
+
+结论：后续默认不再推进单点 probe；先构建集成 ROM 并跑一次整体验收，失败后再按失败项拆分定位。
+
+## 23. 构建入口容错验证结论
+
+`tools/build_vram_font_dynamic_cache_rom.py --force` 已验证可在旧解包目录不可删或输出 ROM 被占用时继续构建。本次实际降级到：
+
+```text
+rom/narutorpg3_chs_dynamic_font_v0_build_20260528_231808.nds
+rom/unpacked/narutorpg3_chs_dynamic_font_v0_build_20260528_231808
+```
+
+ROM 检查：
+
+```text
+Header CRC OK
+Banner CRC OK
+```
+
+整体验收结果：
+
+```text
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```
+
+结论：当前集成 v0 不再受旧 work 目录清理失败阻塞；只要使用脚本打印的实际 ROM 路径，构建和冒烟链路可连续执行。
+
+## 24. font-dir 格式校验结论
+
+`tools/build_vram_font_dynamic_cache_rom.py` 已加入 v0 字体文件校验。当前接受：
+
+```text
+1x1: CHMP map + CHP1 chunk pack, glyph_size=0x20, page_size=0x80, resident_slots=1
+1x2: CHMP map + CHP2 chunk pack, glyph_size=0x40, page_size=0xE0, resident_slots=2
+```
+
+校验会阻止重复 `char_code`、越界 `chunk_id` 和越界 `glyph_offset`。
+
+验证产物：
+
+```text
+rom/narutorpg3_chs_dynamic_font_v0_validate.nds
+plan/cache/vram-font-bypass/integrated-smoke-validated-format-samples.json
+```
+
+整体验收结果仍通过：
+
+```text
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```

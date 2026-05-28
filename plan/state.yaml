@@ -35,8 +35,18 @@ stage_cache:
     - plan/cache/vram-font-bypass/chunk-table-miss-consumer-probe.md
     - plan/cache/vram-font-bypass/chunk-table-resident-copy-probe.md
     - plan/cache/vram-font-bypass/chunk-table-dual-slot-probe.md
+    - plan/cache/vram-font-bypass/chunk-table-dual-mode-probe.md
+    - plan/cache/vram-font-bypass/chunk-table-dual-mode-1x1-copy-probe.md
+    - plan/cache/vram-font-bypass/integrated-build-and-smoke.md
 updated_at: "2026-05-28"
 notes:
+  - 外部 --font-dir 构建路径已正向验证：使用 rom/unpacked/narutorpg3_chs_dynamic_font_v0_validate/data/font 作为输入，输出 rom/narutorpg3_chs_dynamic_font_v0_fontdir.nds，格式校验显示 1x1/1x2 source_pages=2，ndstool -i 为 Header CRC OK / Banner CRC OK。
+  - --font-dir 输入已加入 v0 字体合同校验：CHMP/CHP1/CHP2 header、glyph/page/entry size、resident_slots、chunk_id 范围、glyph_offset 范围和重复 char_code；验证产物 rom/narutorpg3_chs_dynamic_font_v0_validate.nds 通过 Header CRC/Banner CRC 与集成冒烟，样本为 plan/cache/vram-font-bypass/integrated-smoke-validated-format-samples.json。
+  - 集成构建入口已补容错：默认 --force 删除旧 work/output 失败时自动使用 _build_<timestamp> 后缀继续构建；本次实际产物 rom/narutorpg3_chs_dynamic_font_v0_build_20260528_231808.nds，ndstool -i 为 Header CRC OK / Banner CRC OK，集成冒烟通过并写入 plan/cache/vram-font-bypass/integrated-smoke-force-fallback-samples.json。
+  - build_latest 已构建：默认 --force 清理旧 rom/unpacked/narutorpg3_chs_dynamic_font_v0 时 a_char/000.n 被 Windows 拒绝删除；本次改用 rom/unpacked/narutorpg3_chs_dynamic_font_v0_build_latest 和 rom/narutorpg3_chs_dynamic_font_v0_build_latest.nds，ndstool -i 显示 Header CRC OK / Banner CRC OK。
+  - 执行策略已切换为集成优先：停止继续新增单点 probe；新增 build_vram_font_dynamic_cache_rom.py 输出 rom/narutorpg3_chs_dynamic_font_v0.nds，新增 run_vram_font_integrated_smoke.py 一次性检查 1x1 miss/resident、1x2 shared/slot0/slot1 和 final running；本轮集成冒烟通过。
+  - dual-mode 1x1 page copy 原型已验证：consumer 从 020743E4 拆成 trampoline，body 放到 020718D8/size 0xFC；8140/R2=0x20 首次 miss 返回 02283040/data A66AA66A 并记录 miss=1/8140/1/0x20，consumer 后 resident_1x1=1，后续命中 02283060/data 41144114；1x2 的 82A2/82C6 dual-slot 命中仍保持。
+  - dual-mode 1x1/1x2 原型已验证：copy hook 同时接管 R2=0x20/0x40；同一字符 0x8140 在 1x2 命中 02284B60/data 84488448，在 1x1 命中 02283040/data 41144114，82BD/R2=0x20 命中 02283060/data 62266226；1x2 dual-slot 行为仍保留，82DF miss 后 82A2 命中 slot1，82C6 命中 slot0。
   - dual-slot 1x2 原型已验证：copy 主体迁到 02073D64，02074140 只留 trampoline；82DF miss 后 consumer 把 chunk0 装入 slot1=0，slot0=1 保留，后续 82A2 命中 02283260，82C6 仍命中 slot0 的 022831C0，单 slot 抖动被消除。
   - resident copy v2 原型已验证：固定 ARM9 resident buffer 会被运行时污染；改为把 resident page 放进 1x2 chunk heap 后，0208913C consumer 可把目标 page 拷入 02283120，82DF miss 后 82A2 命中 page0 图样 73377337；当前单 slot 会在 chunk 0/1 间抖动。
   - chunk miss consumer 原型已验证：0208913C 入口可消费上一轮 miss，更新 020743D4/020743D8 resident slot id；82DF 首次 miss 后 resident_1x2 从 1 翻到 0，后续 82A2 命中 02283160。

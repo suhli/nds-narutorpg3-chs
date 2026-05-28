@@ -626,3 +626,96 @@ MCP 样本：
 - 双 slot 已验证可以保留 chunk1，同时把 chunk0 装入 slot1。
 - 这证明正式缓存不必每次 miss 都覆盖唯一 resident page；最小多 slot 策略能直接消除当前样本中的单 slot 抖动。
 - 当前 probe 为控制尺寸只接管 `R2=0x40`；后续正式化时需要把 1x1 路径、替换策略和更大的代码区规划一起处理。
+
+## 2026-05-28 dual-mode 1x1/1x2 原型
+
+新增：
+```text
+tools/patch_vram_font_chunk_table_dual_mode_probe.py
+rom/test_vram_font_chunk_table_dual_mode_probe.nds
+plan/cache/vram-font-bypass/chunk-table-dual-mode-probe.md
+plan/cache/vram-font-bypass/chunk-table-dual-mode-long-samples.json
+```
+
+该版本把 dual-slot 的 1x2 缓存策略和 1x1 split-map 分流合并到同一个 copy hook：
+
+```text
+R2=0x20 -> chs_1x1.map/chunk, resident_1x1_chunk_id
+R2=0x40 -> chs_1x2.map/chunk, resident_1x2_slot0/slot1
+copy_hook = 0x02073D64 size=0xE8
+consume_hook = 0x020743E4 size=0xB8
+```
+
+MCP 样本：
+
+```text
+0x8140, R2=0x40 -> R0=0x02284B60, data=84488448 84488448
+0x8140, R2=0x20 -> R0=0x02283040, data=41144114 41144114
+0x82BD, R2=0x20 -> R0=0x02283060, data=62266226 62266226
+0x82DF, R2=0x40 -> miss=1/82DF/0/0x40
+0x82A2, R2=0x40 -> R0=0x02284C40, data=73377337 73377337, slot0=1, slot1=0
+0x82C6, R2=0x40 -> R0=0x02284BA0, data=95599559 95599559, slot0=1, slot1=0
+```
+
+结论：
+- `R2=0x20/0x40` 的 mode 隔离在 chunk table 阶段继续成立。
+- 同一字符码 `0x8140` 在 1x1/1x2 中命中不同 RAM glyph，说明两种字体不会再互相 fallback/missing 或读错对方图样。
+- 1x2 dual-slot 行为在 dual-mode 版本中保持成立。
+- 当前 1x1 仍是单 resident chunk 常驻策略；后续若 1x1 也需要分页，需要让 consumer 处理 `miss_mode=0x20`。
+
+## 2026-05-28 dual-mode 1x1 page copy 原型
+
+新增：
+```text
+tools/patch_vram_font_chunk_table_dual_mode_1x1_copy_probe.py
+rom/test_vram_font_chunk_table_dual_mode_1x1_copy_probe.nds
+plan/cache/vram-font-bypass/chunk-table-dual-mode-1x1-copy-probe.md
+plan/cache/vram-font-bypass/chunk-table-dual-mode-1x1-copy-long-samples.json
+```
+
+由于 `0x020743E4` 后的扩展空洞已满，本轮把 consumer 拆为：
+
+```text
+0x020743E4  consume trampoline, size=0x8
+0x020718D8  consume body, size=0xFC
+```
+
+MCP 样本：
+
+```text
+0x8140, R2=0x20 -> R0=0x02283040, data=A66AA66A A66AA66A, miss=1/8140/1/0x20
+0x8140, R2=0x20 -> R0=0x02283060, data=41144114 41144114, resident_1x1=1
+0x82A2, R2=0x40 -> R0=0x02284C40, data=73377337 73377337
+0x82C6, R2=0x40 -> R0=0x02284BA0, data=95599559 95599559
+```
+
+结论：
+- `miss_mode=0x20` 已验证可由 consumer 消费并真实拷贝 1x1 page。
+- 1x1 和 1x2 不仅能分流查表，也都具备独立 miss -> resident 更新链路。
+- 当前 1x1 consumer 已支持 `chunk_id=0/1` 两页选择；正式版若要支持更多 page，仍需迁移到更大代码区或改为通用 source page 表。
+
+## 2026-05-28 集成构建与冒烟检查
+
+新增集成入口：
+```text
+tools/build_vram_font_dynamic_cache_rom.py
+tools/run_vram_font_integrated_smoke.py
+plan/cache/vram-font-bypass/integrated-build-and-smoke.md
+```
+
+默认构建：
+```text
+rom/narutorpg3_chs_dynamic_font_v0.nds
+```
+
+集成冒烟一次性通过：
+```text
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```
+
+后续策略改为：不再继续新增单点 probe；默认先跑集成构建与集成冒烟，失败后再按失败项拆分排查。

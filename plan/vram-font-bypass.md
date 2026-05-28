@@ -690,3 +690,172 @@ slot1 page    = 0x02283200
 - 双 slot 可以消除上一版在 chunk0/chunk1 间来回失效的抖动。
 - `82DF` miss 后 chunk0 被装入 slot1，slot0 的 chunk1 仍保留并可被 `82C6` 命中。
 - 当前 probe 只接管 `R2=0x40` 的 1x2 路径；正式版还需要把 1x1、多 chunk 替换策略和代码区布局一起纳入设计。
+
+## 2026-05-28 chunk table dual-mode 原型验证
+
+新增产物：
+```text
+tools/patch_vram_font_chunk_table_dual_mode_probe.py
+rom/test_vram_font_chunk_table_dual_mode_probe.nds
+plan/cache/vram-font-bypass/chunk-table-dual-mode-probe.md
+plan/cache/vram-font-bypass/chunk-table-dual-mode-samples.json
+plan/cache/vram-font-bypass/chunk-table-dual-mode-long-samples.json
+```
+
+本次把 copy hook 升级为同时处理 1x1 与 1x2：
+
+```text
+R2=0x20 -> chs_1x1.map/chunk
+R2=0x40 -> chs_1x2.map/chunk + dual-slot resident
+copy_hook=0x02073D64 size=0xE8
+consume_hook=0x020743E4 size=0xB8
+```
+
+关键样本：
+
+```text
+0x8140, R2=0x40 -> R0=0x02284B60, data=84488448 84488448
+0x8140, R2=0x20 -> R0=0x02283040, data=41144114 41144114
+0x82BD, R2=0x20 -> R0=0x02283060, data=62266226 62266226
+0x82DF, R2=0x40 -> miss=1/82DF/0/0x40
+0x82A2, R2=0x40 -> R0=0x02284C40, data=73377337 73377337
+0x82C6, R2=0x40 -> R0=0x02284BA0, data=95599559 95599559
+```
+
+当前判断更新：
+- `0x8140` 同字符码在 `R2=0x40` 与 `R2=0x20` 下命中不同 glyph，说明 1x1/1x2 的 map/chunk 已隔离，不再互相 fallback/missing。
+- 1x2 的 dual-slot 行为仍成立：`82DF` miss 后 `82A2` 命中 slot1，`82C6` 仍命中 slot0。
+- 下一步需要把 1x1 的 miss consumer 策略也明确下来：若 1x1 字库会跨多个 chunk，就补 `miss_mode=0x20` 的 page copy 或多 slot；若只保留常用 1x1 常驻，则要把限制写入正式格式。
+
+## 2026-05-28 dual-mode 1x1 page copy 验证
+
+新增产物：
+```text
+tools/patch_vram_font_chunk_table_dual_mode_1x1_copy_probe.py
+rom/test_vram_font_chunk_table_dual_mode_1x1_copy_probe.nds
+plan/cache/vram-font-bypass/chunk-table-dual-mode-1x1-copy-probe.md
+plan/cache/vram-font-bypass/chunk-table-dual-mode-1x1-copy-long-samples.json
+```
+
+代码区调整：
+
+```text
+0x020743E4  consume trampoline, size=0x8
+0x020718D8  consume body, size=0xFC
+```
+
+关键样本：
+
+```text
+0x8140, R2=0x20 -> R0=0x02283040, data=A66AA66A A66AA66A, miss=1/8140/1/0x20
+0x8140, R2=0x20 -> R0=0x02283060, data=41144114 41144114, resident_1x1=1
+0x82A2, R2=0x40 -> R0=0x02284C40, data=73377337 73377337
+0x82C6, R2=0x40 -> R0=0x02284BA0, data=95599559 95599559
+```
+
+当前判断更新：
+- 1x1 的 `miss_mode=0x20` 已经能在 consumer 层触发真实 page copy；两种字体现在都有独立的 miss -> resident 更新验证链路。
+- 1x1 page copy 已在当前代码预算内支持 `chunk_id=0/1` 两页选择。正式版若要支持更多 page，需要把 `chunk_id` 到 source page 的选择升级为通用表或迁移到更大的代码区。
+
+## 2026-05-28 集成构建与冒烟检查
+
+根据当前执行策略，后续停止继续新增单点 probe，改为先跑集成构建与集成冒烟，只有失败时再拆分排查。
+
+新增入口：
+
+```text
+tools/build_vram_font_dynamic_cache_rom.py
+tools/run_vram_font_integrated_smoke.py
+plan/cache/vram-font-bypass/integrated-build-and-smoke.md
+```
+
+构建产物：
+
+```text
+rom/narutorpg3_chs_dynamic_font_v0.nds
+rom/unpacked/narutorpg3_chs_dynamic_font_v0
+```
+
+构建结果：
+
+```text
+copy_hook=0x02073D64 size=0xEC
+consume_trampoline=0x020743E4 size=0x8
+consume_body=0x020718D8 size=0xFC
+Header CRC OK
+Banner CRC OK
+```
+
+集成冒烟结果：
+
+```text
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```
+
+当前 v0 边界：
+- 1x1 支持两个 source page；1x2 支持两个 source page 与两个 resident slot。
+- `--font-dir` 可替换默认样本 map/chunk，但传入文件必须遵守当前 `CHP1/CHP2 + CHMP` 格式。
+- 扩展到更多 chunk 前，应先把 source page 选择升级为通用表或迁移更大的 consumer 代码区。
+
+## 2026-05-28 集成构建入口容错
+
+默认 `--force` 构建复核时，旧解包目录中的 `data/a_char/000.n` 仍被 Windows 拒绝删除，默认 ROM 文件也处于占用状态。`tools/build_vram_font_dynamic_cache_rom.py` 已改为删除失败时自动使用 `_build_<timestamp>` 后缀的新 work/output 路径继续构建，避免构建流程卡死在旧目录清理。
+
+本次实际产物：
+
+```text
+rom/narutorpg3_chs_dynamic_font_v0_build_20260528_231808.nds
+rom/unpacked/narutorpg3_chs_dynamic_font_v0_build_20260528_231808
+```
+
+验证结果：
+
+```text
+Header CRC OK
+Banner CRC OK
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```
+
+后续构建完成后，以脚本打印的 `output=` 路径作为冒烟输入；默认输出未被占用时仍会使用 `rom/narutorpg3_chs_dynamic_font_v0.nds`。
+
+## 2026-05-28 font-dir 格式校验
+
+`tools/build_vram_font_dynamic_cache_rom.py` 已加入 `--font-dir` 输入校验，当前 v0 合同为：
+
+```text
+1x1 map:   CHMP / glyph_size=0x20 / entry_size=0x10
+1x1 chunk: CHP1 / page_size=0x80 / resident_slots=1
+1x2 map:   CHMP / glyph_size=0x40 / entry_size=0x10
+1x2 chunk: CHP2 / page_size=0xE0 / resident_slots=2
+```
+
+构建时会拒绝错误 magic、错误 header/entry/page size、重复 char_code、越界 chunk_id 和越界 glyph_offset。
+
+验证产物：
+
+```text
+rom/narutorpg3_chs_dynamic_font_v0_validate.nds
+plan/cache/vram-font-bypass/integrated-smoke-validated-format-samples.json
+```
+
+验证结果：
+
+```text
+1x1_font_format=ok source_pages=2
+1x2_font_format=ok source_pages=2
+Header CRC OK
+Banner CRC OK
+final state running
+```
+
+当前判断：`--font-dir` 已从“只复制四个文件”提升为“构建阶段校验 v0 字体合同”；后续接真实中文字模生成器时，应先产出这四个文件再交给该构建入口。
