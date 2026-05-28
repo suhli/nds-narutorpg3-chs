@@ -501,3 +501,86 @@ MCP 样本：
 - resident slot 不匹配时可以稳定记录 miss 状态，同时继续 fallback。
 - 当前只清 `miss_flag`，其余 miss 字段可能保留旧值；后续读取方必须以 `miss_flag==1` 为有效条件。
 - 下一步应设计 miss 消费点：绘制前预扫、文本块切换点，或专门的 chunk 加载调度点。
+
+## 2026-05-28 chunk miss consumer 原型
+
+新增：
+
+```text
+tools/patch_vram_font_chunk_table_miss_consumer_probe.py
+rom/test_vram_font_chunk_table_miss_consumer_probe.nds
+plan/cache/vram-font-bypass/chunk-table-miss-consumer-probe.md
+plan/cache/vram-font-bypass/chunk-table-miss-consumer-samples.json
+```
+
+本次在 `0x0208913C` 绘制入口增加 consumer hook，消费上一轮 copy hook 记录的 miss，并更新 resident slot id：
+
+```text
+0x020743D4  resident_1x1_chunk_id
+0x020743D8  resident_1x2_chunk_id
+```
+
+静态结果：
+
+```text
+copy_hook_size = 0xC0
+copy_budget    = 0xE0
+consume_hook   = 0x02073D64 size=0x50
+```
+
+MCP 样本：
+
+```text
+0x82DF, R2=0x40 -> R0=0x02283120, miss=1/82DF/0/0x40, resident_1x2=1
+next entry consumes miss -> resident_1x2=0, miss_flag=0
+0x82A2, R2=0x40 -> R0=0x02283160, resident hit under resident_1x2=0
+```
+
+结论：
+- `0x0208913C` 可以作为 copy hook 外的 miss 消费点。
+- 单 slot 的 miss 消费会让 resident slot id 翻转，证明 producer/consumer 接口成立。
+- 该原型还没有真实加载 chunk 数据，只是验证调度点和状态传递；下一步应把消费动作替换为加载/搬运目标 chunk。
+
+## 2026-05-28 resident copy v2 原型
+
+新增：
+
+```text
+tools/patch_vram_font_chunk_table_resident_copy_probe.py
+rom/test_vram_font_chunk_table_resident_copy_v2_probe.nds
+plan/cache/vram-font-bypass/chunk-table-resident-copy-probe.md
+plan/cache/vram-font-bypass/chunk-table-resident-copy-v2-samples.json
+```
+
+v1 使用固定 ARM9 空洞作为 resident buffer，MCP 样本显示进入文本前该地址已被运行时数据污染。v2 改为让 `chs_1x2.chunk` 自带 resident page：
+
+```text
+0x000  CHPK header
+0x020  resident page
+0x100  source page 0
+0x1E0  source page 1
+```
+
+静态结果：
+
+```text
+copy_hook_size    = 0xCC
+copy_budget       = 0xE0
+consume_hook      = 0x02073D64 size=0x90
+1x2_chunk size    = 0x2C0
+```
+
+MCP 样本：
+
+```text
+1x2_chunk_ptr = 0x02283100
+resident page = 0x02283120
+0x82DF -> R0=0x02283140, data=C77CC77C C77CC77C, miss=1/82DF/0/0x40
+next entry -> resident_1x2=0, miss_flag=0
+0x82A2 -> R0=0x02283180, data=73377337 73377337
+```
+
+结论：
+- `0x0208913C` consumer 可以执行真实 page copy，不只是更新 resident slot id。
+- resident buffer 放在 chunk heap 内更稳定，不依赖静态空洞是否运行时安全。
+- 当前单 slot 会在 `82DF/82A2` 与 `82CD` 所属 chunk 之间来回失效，后续缓存设计至少需要双 slot 或更高层预扫。

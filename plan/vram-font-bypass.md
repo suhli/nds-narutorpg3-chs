@@ -552,3 +552,91 @@ copy_margin    = 0x20
 - copy hook 已能作为 chunk miss 生产者，把缺页所需的 `char/mode/chunk_id` 记录到 RAM。
 - 只清 `miss_flag`，不清旧 `miss_char/miss_chunk_id/miss_mode`；读取方必须以 `miss_flag==1` 为有效条件。
 - 下一步应找 miss 消费点或预扫调度点，避免在逐字 copy hook 中同步读 NitroFS。
+
+## 2026-05-28 chunk miss consumer 原型验证
+
+新增阶段缓存与测试 ROM：
+
+```text
+plan/cache/vram-font-bypass/chunk-table-miss-consumer-probe.md
+tools/patch_vram_font_chunk_table_miss_consumer_probe.py
+rom/test_vram_font_chunk_table_miss_consumer_probe.nds
+plan/cache/vram-font-bypass/chunk-table-miss-consumer-samples.json
+```
+
+本次在 `0x0208913C` 绘制入口增加 consumer hook：
+
+```text
+0x0208913C -> 0x02073D64
+consume_hook_size = 0x50
+```
+
+consumer 读取上一轮 copy hook 记录的 miss，并更新 resident slot id：
+
+```text
+0x020743D4  resident_1x1_chunk_id
+0x020743D8  resident_1x2_chunk_id
+```
+
+运行时关键样本：
+
+```text
+0x82CD, R2=0x40 -> R0=0x022831A0, resident_1x2=1
+0x82DF, R2=0x40 -> R0=0x02283120, miss=1/82DF/0/0x40, resident_1x2=1
+next entry -> miss_flag=0, resident_1x2=0
+0x82A2, R2=0x40 -> R0=0x02283160, resident hit
+```
+
+当前判断更新：
+- miss producer/consumer 的最小接口成立。
+- `0x0208913C` 比 `0x02089190` 更适合作为 miss 消费或加载调度入口。
+- 当前只翻转 resident slot id，没有真实搬运 chunk；下一步应把 consumer 动作替换为 chunk 加载/搬运，并设计单 slot 失效后的恢复策略。
+
+## 2026-05-28 chunk resident copy v2 验证
+
+新增阶段缓存与测试 ROM：
+
+```text
+plan/cache/vram-font-bypass/chunk-table-resident-copy-probe.md
+tools/patch_vram_font_chunk_table_resident_copy_probe.py
+rom/test_vram_font_chunk_table_resident_copy_v2_probe.nds
+plan/cache/vram-font-bypass/chunk-table-resident-copy-v2-samples.json
+```
+
+v1 把 resident buffer 放在固定 ARM9 空洞，运行时发现该区域会被其他数据污染；v2 改为把 resident page 放入 `chs_1x2.chunk` 自己的 heap buffer：
+
+```text
+chs_1x2.chunk:
+  0x000  CHPK header
+  0x020  resident page
+  0x100  source page 0
+  0x1E0  source page 1
+total size = 0x2C0
+```
+
+静态结果：
+
+```text
+0x0208913C -> 0x02073D64
+copy_hook_size    = 0xCC
+copy_budget       = 0xE0
+consume_hook_size = 0x90
+load_hook         = 0x02074220 size=0x11C
+```
+
+运行时关键样本：
+
+```text
+1x2_chunk_ptr = 0x02283100
+resident page = 0x02283120
+0x82CD -> R0=0x022831C0, data=95599559 95599559, resident_1x2=1
+0x82DF -> R0=0x02283140, data=C77CC77C C77CC77C, miss=1/82DF/0/0x40
+next entry -> miss_flag=0, resident_1x2=0
+0x82A2 -> R0=0x02283180, data=73377337 73377337
+0x82CD -> R0=0x02283140, data=B66BB66B B66BB66B, miss=1/82CD/1/0x40
+```
+
+当前判断更新：
+- consumer 能在 `0x0208913C` 层完成目标 page 到 heap 内 resident page 的搬运。
+- copy hook 后续读取 resident page，能看到真实换页后的 glyph 数据。
+- 单 1x2 resident slot 会在 chunk 0/1 之间抖动；下一步应验证双 slot 或文本块入口预扫策略。

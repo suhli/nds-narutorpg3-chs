@@ -420,3 +420,60 @@ rom/test_vram_font_chunk_table_miss_flag_probe.nds
 ```
 
 结论：copy hook 能稳定产出最小 miss 状态，且不破坏 resident/fallback R0。当前 hook size 为 `0xC0`，仍在后移 load hook 后的 `0xE0` 预算内；后续重点应转向 miss 消费点和 chunk 加载调度。
+
+## 17. chunk miss consumer 验证结论
+
+新增 ROM：
+
+```text
+rom/test_vram_font_chunk_table_miss_consumer_probe.nds
+```
+
+该版本在 `0x0208913C` 绘制入口消费上一轮 miss：
+
+```text
+0x0208913C -> 0x02073D64
+```
+
+新增状态：
+
+```text
+0x020743D4  resident_1x1_chunk_id
+0x020743D8  resident_1x2_chunk_id
+```
+
+关键样本：
+
+```text
+0x82DF -> R0=0x02283120, miss=00000001 000082DF 00000000 00000040 00000000 00000001
+next entry -> miss=00000000 000082DF 00000000 00000040 00000000 00000000
+0x82A2 -> R0=0x02283160
+```
+
+结论：`0208913C` 可以作为逐字 copy hook 外的 miss 消费点。当前验证的是 resident slot id 翻转，不是实际 chunk 数据换页；真实实现需要在该层补加载/搬运和单 slot 失效策略。
+
+## 18. resident copy v2 验证结论
+
+新增 ROM：
+
+```text
+rom/test_vram_font_chunk_table_resident_copy_v2_probe.nds
+```
+
+v1 的固定 ARM9 resident buffer 会被运行时数据污染；v2 把 resident page 改到 `chs_1x2.chunk` 的 heap buffer 内：
+
+```text
+1x2_chunk_ptr = 0x02283100
+resident page = 0x02283120
+```
+
+关键样本：
+
+```text
+0x82CD -> R0=0x022831C0, data=95599559 95599559, resident_1x2=1
+0x82DF -> R0=0x02283140, data=C77CC77C C77CC77C, miss=00000001 000082DF 00000000 00000040 00000000 00000001
+next entry -> miss=00000000 000082DF 00000000 00000040 00000000 00000000
+0x82A2 -> R0=0x02283180, data=73377337 73377337
+```
+
+结论：`0208913C` consumer 已能真实搬运 1x2 page，copy hook 后续会命中 heap 内 resident page。当前限制是单 slot 会抖动：切到 chunk 0 后，`82CD/chunk_id=1` 会重新 miss。下一步应验证多 slot 或文本块预扫策略。

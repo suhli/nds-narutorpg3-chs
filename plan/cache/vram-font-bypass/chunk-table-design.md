@@ -296,3 +296,97 @@ miss 状态记录在变量区末尾：
 - copy hook 可作为 miss 生产者，但不应承担 miss 消费和 NitroFS 加载。
 - miss 字段为后续 chunk loader 提供最小接口：mode、char、chunk_id。
 - 该版本 copy hook size 回到 `0xC0`，在后移后的 `0xE0` budget 内还剩 `0x20`。
+
+## 2026-05-28 miss consumer 原型
+
+新增 probe：
+
+```text
+tools/patch_vram_font_chunk_table_miss_consumer_probe.py
+rom/test_vram_font_chunk_table_miss_consumer_probe.nds
+plan/cache/vram-font-bypass/chunk-table-miss-consumer-probe.md
+plan/cache/vram-font-bypass/chunk-table-miss-consumer-samples.json
+```
+
+新增入口 hook：
+
+```text
+0x0208913C -> 0x02073D64
+consume_hook_size = 0x50
+```
+
+变量区扩展：
+
+```text
+0x020743D4  resident_1x1_chunk_id
+0x020743D8  resident_1x2_chunk_id
+```
+
+验证样本：
+
+```text
+0x82DF -> R0=0x02283120, miss_flag=1, miss_chunk_id=0, resident_1x2=1
+next entry -> miss_flag=0, resident_1x2=0
+0x82A2 -> R0=0x02283160, resident hit
+```
+
+判断：
+- `0208913C` 是可用的 miss 消费点，位置高于 `02089190` copy hook。
+- 该消费点可先更新 resident slot，再由后续 copy hook 正常命中。
+- 当前只是 slot id 原型；真实实现还需补 chunk 数据换入和失败恢复。
+
+## 2026-05-28 resident copy v2 原型
+
+新增 probe：
+
+```text
+tools/patch_vram_font_chunk_table_resident_copy_probe.py
+rom/test_vram_font_chunk_table_resident_copy_v2_probe.nds
+plan/cache/vram-font-bypass/chunk-table-resident-copy-probe.md
+plan/cache/vram-font-bypass/chunk-table-resident-copy-v2-samples.json
+```
+
+v2 的 `chs_1x2.chunk` pack：
+
+```text
+0x000  CHPK header
+0x020  resident page
+0x100  source page 0
+0x1E0  source page 1
+total  0x2C0
+```
+
+copy hook 仍只做快速查表和 R0 决策；1x2 命中路径从 `chunk_ptr + 0x20` 读 resident page。consumer 在 `0x0208913C` 读取 miss 后，在同一 heap buffer 内搬运：
+
+```text
+dst = chunk_ptr + 0x20
+src = chunk_ptr + 0x100  ; chunk 0
+src = chunk_ptr + 0x1E0  ; chunk 1
+size = 0xE0
+```
+
+静态结果：
+
+```text
+copy_hook_size    = 0xCC
+copy_budget       = 0xE0
+consume_hook_size = 0x90
+vars_end          = 0x020743DC
+```
+
+验证样本：
+
+```text
+1x2_chunk_ptr = 0x02283100
+resident page = 0x02283120
+82CD -> R0=022831C0, data=95599559, resident_1x2=1
+82DF -> R0=02283140, data=C77CC77C, miss_chunk_id=0
+consumer -> resident_1x2=0
+82A2 -> R0=02283180, data=73377337
+82CD -> R0=02283140, data=B66BB66B, miss_chunk_id=1
+```
+
+判断：
+- chunk table 的 resident page 可以和源 page 放在同一个 heap buffer，避免固定 RAM 空洞污染。
+- 单 slot 缓存策略已经暴露抖动问题，正式格式需要支持多 resident slot、预扫，或更高层调度。
+- copy hook size `0xCC` 仍在 `0xE0` budget 内，但只剩 `0x14`，后续复杂逻辑不应继续塞进 copy hook。
