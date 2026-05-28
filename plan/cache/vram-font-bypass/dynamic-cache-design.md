@@ -232,3 +232,47 @@ RAM 文件替换 probe 确认：
 新增约束：
 
 当前 probe 只按 `char_code` 查表，导致 `0x82A2` 在 1x2 和 1x1 样本中都会被替换。正式格式必须把 `mode` 或 `glyph_size` 纳入 key，或者拆成 1x1/1x2 两套 map。下一步设计优先选“两套 map”，减少 hook 代码复杂度。
+
+## 2026-05-28 split-map 原型验证
+
+已新增：
+
+```text
+tools/patch_vram_font_split_map_probe.py
+rom/test_vram_font_split_map_probe_v2.nds
+plan/cache/vram-font-bypass/split-map-probe.md
+```
+
+当前原型把自定义字体数据拆成四个 NitroFS 文件：
+
+```text
+font/chs_1x1.map
+font/chs_1x1.chunk
+font/chs_1x2.map
+font/chs_1x2.chunk
+```
+
+运行时加载指针：
+
+```text
+1x1 map   -> 0x02282F80 size 0x14
+1x1 chunk -> 0x02282FC0 size 0x40
+1x2 map   -> 0x02283020 size 0x1C
+1x2 chunk -> 0x02283060 size 0xC0
+```
+
+MCP 采样确认同一个字符码可按 `R2` 分流：
+
+```text
+0x82A2, R2=0x40 -> R0=0x02283060  (1x2 chunk)
+0x82A2, R2=0x20 -> R0=0x02282FC0  (1x1 chunk)
+0x82CD, R2=0x40 -> R0=0x022830A0
+0x82DF, R2=0x40 -> R0=0x022830E0
+0x82BD, R2=0x20 -> R0=0x02282FE0
+```
+
+结论：
+
+- 两套 map/chunk 的早期实现路线成立。
+- `R2=0x20/0x40` 足以在 `02089190` copy hook 处区分 1x1/1x2。
+- 下一步应把 split-map 原型提升为正式格式草案，补 magic/version/header/entry flags，并设计 glyph chunk 分页或分块加载策略。

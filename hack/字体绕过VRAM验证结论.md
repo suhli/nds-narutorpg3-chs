@@ -209,3 +209,37 @@ current_char=0x82A2 R0=0x02282F60 R2=0x20
 1x1 可以用同一个 copy hook 替换 R0。
 正式 map 需要区分 1x1/1x2，不能只按 char_code 查找。
 ```
+
+## 10. split-map 验证结论
+
+已验证：
+
+```text
+font/chs_1x1.map
+font/chs_1x1.chunk
+font/chs_1x2.map
+font/chs_1x2.chunk
+```
+
+可以在字体初始化阶段加载到普通 RAM，并由 `02089190` copy hook 按 `R2` 选择对应 map/chunk：
+
+```text
+R2=0x20 -> 1x1 map/chunk
+R2=0x40 -> 1x2 map/chunk
+```
+
+关键样本：
+
+```text
+0x82A2, R2=0x40 -> R0=0x02283060
+0x82A2, R2=0x20 -> R0=0x02282FC0
+```
+
+这证明同一字符码可以在 1x1/1x2 中命中不同 glyph，不会再被单一 `char_code -> glyph_offset` 表污染。
+
+当前判断：
+
+```text
+split-map 是动态 glyph 缓存正式格式的早期主线。
+下一步应补正式 header/magic/version，并继续设计 glyph chunk 分页或分块加载。
+```

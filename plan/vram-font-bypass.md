@@ -306,3 +306,38 @@ plan/cache/vram-font-bypass/1x1-path-probe.md
 - 1x1 与 1x2 复用 `02089190 -> 020087BC`，copy hook 可同时服务两条路径。
 - 正式 map 不能只按 `char_code` 命中；同一字符在 1x1/1x2 中可能需要不同 glyph。
 - 下一步正式文件格式优先拆成 `chs_1x1.map/chunk` 与 `chs_1x2.map/chunk`，减少早期 hook 的 mode 分支复杂度。
+
+## 2026-05-28 split-map 原型验证
+
+已新增 split-map 测试脚本与 v2 ROM：
+
+```text
+tools/patch_vram_font_split_map_probe.py
+rom/test_vram_font_split_map_probe_v2.nds
+plan/cache/vram-font-bypass/split-map-probe.md
+```
+
+已验证四文件结构：
+
+```text
+font/chs_1x1.map
+font/chs_1x1.chunk
+font/chs_1x2.map
+font/chs_1x2.chunk
+```
+
+关键运行时结果：
+
+```text
+1x1 map/chunk -> 02282F80 / 02282FC0
+1x2 map/chunk -> 02283020 / 02283060
+
+0x82A2, R2=0x40 -> R0=02283060
+0x82A2, R2=0x20 -> R0=02282FC0
+```
+
+当前决策更新：
+
+- `R2` 分流方案成立，可在 `02089190` copy hook 处区分 1x1/1x2。
+- split-map 比单文件 `chs_probe.bin` 更接近正式实现，后续以两套 map/chunk 为早期主线。
+- 下一步进入正式格式草案：补 magic/version/header/entry flags，并设计 glyph chunk 分页或分块加载。
