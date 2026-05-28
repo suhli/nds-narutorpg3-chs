@@ -1,0 +1,14 @@
+{
+  "files_scanned": 595,
+  "candidate_count": 6174,
+  "by_category": {
+    "message": 3976,
+    "param": 2198
+  },
+  "by_source_kind": {
+    "message:m": 3139,
+    "message:msg": 837,
+    "param:dat": 2198
+  },
+  "boundary_confidence": "candidate"
+}

@@ -1,83 +1,21 @@
 current_plan:
-  id: vram-font-bypass
-  title: 绕过 VRAM 全量字体加载方案
-  document: plan/vram-font-bypass.md
+  id: text-dump-translation
+  title: 文本 dump 与翻译基线
+  document: plan/text-dump-translation.md
   status: in_progress
 current_stage:
-  id: dynamic-cache-design
-  name: 动态 glyph 缓存正式设计
+  id: encoding-control-model
+  name: 编码、控制符和边界建模
   status: in_progress
 stage_cache:
-  dir: plan/cache/vram-font-bypass
+  dir: plan/cache/text-dump-translation
   documents:
-    - plan/cache/vram-font-bypass/plan-draft.md
-    - plan/cache/vram-font-bypass/static-render-chain.md
-    - plan/cache/vram-font-bypass/runtime-observation.md
-    - plan/cache/vram-font-bypass/desmume-mcp-update.md
-    - plan/cache/vram-font-bypass/minimal-patch-design.md
-    - plan/cache/vram-font-bypass/test-rom-build.md
-    - plan/cache/vram-font-bypass/verification-result.md
-    - plan/cache/vram-font-bypass/char-hook-probe.md
-    - plan/cache/vram-font-bypass/stability-recheck.md
-    - plan/cache/vram-font-bypass/dynamic-cache-design.md
-    - plan/cache/vram-font-bypass/multi-char-hook-probe.md
-    - plan/cache/vram-font-bypass/runtime-char-sampling.md
-    - plan/cache/vram-font-bypass/table-lookup-probe.md
-    - plan/cache/vram-font-bypass/file-preload-probe.md
-    - plan/cache/vram-font-bypass/preload-size-pressure.md
-    - plan/cache/vram-font-bypass/1x1-path-probe.md
-    - plan/cache/vram-font-bypass/split-map-probe.md
-    - plan/cache/vram-font-bypass/formal-format-design.md
-    - plan/cache/vram-font-bypass/chunk-fallback-design.md
-    - plan/cache/vram-font-bypass/chunk-table-design.md
-    - plan/cache/vram-font-bypass/hook-slim-relocate-probe.md
-    - plan/cache/vram-font-bypass/chunk-table-miss-flag-probe.md
-    - plan/cache/vram-font-bypass/chunk-table-miss-consumer-probe.md
-    - plan/cache/vram-font-bypass/chunk-table-resident-copy-probe.md
-    - plan/cache/vram-font-bypass/chunk-table-dual-slot-probe.md
-    - plan/cache/vram-font-bypass/chunk-table-dual-mode-probe.md
-    - plan/cache/vram-font-bypass/chunk-table-dual-mode-1x1-copy-probe.md
-    - plan/cache/vram-font-bypass/integrated-build-and-smoke.md
-    - plan/cache/vram-font-bypass/generated-font-build.md
-updated_at: "2026-05-28"
+    - plan/cache/text-dump-translation/text-source-inventory.md
+    - plan/cache/text-dump-translation/encoding-control-codes.md
+    - plan/cache/text-dump-translation/dump-results.md
+updated_at: "2026-05-29"
 notes:
-  - run_vram_font_integrated_smoke.py 新增 --font-dir 后已做旧 probe 回归：rom/narutorpg3_chs_dynamic_font_v0_validate.nds 在默认 hardcoded 期望下仍通过，样本为 plan/cache/vram-font-bypass/integrated-smoke-regression-after-fontgen-samples.json。
-  - 真实字体文件生成器已接入：tools/build_vram_font_files.py 可从 TTF + manifest 生成 chs_1x1.map/chunk 与 chs_1x2.map/chunk；本轮使用 generated-font-smoke-manifest.txt 生成 plan/cache/vram-font-bypass/generated-font-smoke，构建 rom/narutorpg3_chs_dynamic_font_v0_generated_font.nds，并通过 --font-dir 集成冒烟，样本为 plan/cache/vram-font-bypass/integrated-smoke-generated-font-samples.json。
-  - 外部 --font-dir 构建路径已正向验证：使用 rom/unpacked/narutorpg3_chs_dynamic_font_v0_validate/data/font 作为输入，输出 rom/narutorpg3_chs_dynamic_font_v0_fontdir.nds，格式校验显示 1x1/1x2 source_pages=2，ndstool -i 为 Header CRC OK / Banner CRC OK。
-  - --font-dir 输入已加入 v0 字体合同校验：CHMP/CHP1/CHP2 header、glyph/page/entry size、resident_slots、chunk_id 范围、glyph_offset 范围和重复 char_code；验证产物 rom/narutorpg3_chs_dynamic_font_v0_validate.nds 通过 Header CRC/Banner CRC 与集成冒烟，样本为 plan/cache/vram-font-bypass/integrated-smoke-validated-format-samples.json。
-  - 集成构建入口已补容错：默认 --force 删除旧 work/output 失败时自动使用 _build_<timestamp> 后缀继续构建；本次实际产物 rom/narutorpg3_chs_dynamic_font_v0_build_20260528_231808.nds，ndstool -i 为 Header CRC OK / Banner CRC OK，集成冒烟通过并写入 plan/cache/vram-font-bypass/integrated-smoke-force-fallback-samples.json。
-  - build_latest 已构建：默认 --force 清理旧 rom/unpacked/narutorpg3_chs_dynamic_font_v0 时 a_char/000.n 被 Windows 拒绝删除；本次改用 rom/unpacked/narutorpg3_chs_dynamic_font_v0_build_latest 和 rom/narutorpg3_chs_dynamic_font_v0_build_latest.nds，ndstool -i 显示 Header CRC OK / Banner CRC OK。
-  - 执行策略已切换为集成优先：停止继续新增单点 probe；新增 build_vram_font_dynamic_cache_rom.py 输出 rom/narutorpg3_chs_dynamic_font_v0.nds，新增 run_vram_font_integrated_smoke.py 一次性检查 1x1 miss/resident、1x2 shared/slot0/slot1 和 final running；本轮集成冒烟通过。
-  - dual-mode 1x1 page copy 原型已验证：consumer 从 020743E4 拆成 trampoline，body 放到 020718D8/size 0xFC；8140/R2=0x20 首次 miss 返回 02283040/data A66AA66A 并记录 miss=1/8140/1/0x20，consumer 后 resident_1x1=1，后续命中 02283060/data 41144114；1x2 的 82A2/82C6 dual-slot 命中仍保持。
-  - dual-mode 1x1/1x2 原型已验证：copy hook 同时接管 R2=0x20/0x40；同一字符 0x8140 在 1x2 命中 02284B60/data 84488448，在 1x1 命中 02283040/data 41144114，82BD/R2=0x20 命中 02283060/data 62266226；1x2 dual-slot 行为仍保留，82DF miss 后 82A2 命中 slot1，82C6 命中 slot0。
-  - dual-slot 1x2 原型已验证：copy 主体迁到 02073D64，02074140 只留 trampoline；82DF miss 后 consumer 把 chunk0 装入 slot1=0，slot0=1 保留，后续 82A2 命中 02283260，82C6 仍命中 slot0 的 022831C0，单 slot 抖动被消除。
-  - resident copy v2 原型已验证：固定 ARM9 resident buffer 会被运行时污染；改为把 resident page 放进 1x2 chunk heap 后，0208913C consumer 可把目标 page 拷入 02283120，82DF miss 后 82A2 命中 page0 图样 73377337；当前单 slot 会在 chunk 0/1 间抖动。
-  - chunk miss consumer 原型已验证：0208913C 入口可消费上一轮 miss，更新 020743D4/020743D8 resident slot id；82DF 首次 miss 后 resident_1x2 从 1 翻到 0，后续 82A2 命中 02283160。
-  - chunk miss flag 原型已验证：020743C4..020743D0 记录 miss_flag/char/chunk_id/mode；82DF 与 82A2 的 1x2 fallback 会置 miss_flag=1，82CD/82BD resident hit 保持 miss_flag=0。
-  - hook 瘦身与同空洞迁移已验证：copy_hook_size 从 0xC0 降到 0xA0，load hook 后移到 02074220，copy 区间获得 0x40 余量；82CD/82DF/82BD 样本保持预期 resident/fallback。
-  - 1x1 resident-slot 正例已补充验证：test_vram_font_chunk_table_1x1_probe.nds 中 82BD/R2=0x20 命中 02283040。
-  - resident-slot probe 已完成 1x2 运行时验证：resident_1x2_chunk_id=1 时 82CD 命中 resident，82DF/82A2 走 fallback。
-  - chunk table probe 暴露新限制：copy_hook_size=0xC0，02074140..02074200 已用满，后续复杂逻辑需迁移或瘦身。
-  - chunk table 设计草案已补充：02089190 copy hook 暂不做 NitroFS 缺页加载，先验证 resident slot + fallback 快速决策。
-  - chunk_id fallback 原型已完成运行时验证：chunk_id=1 可稳定命中 chunk_base+0x20 fallback，chunk_id=0 仍按 glyph_offset 命中 resident glyph。
-  - 下一步围绕 chunk table、按页加载、加载失败 fallback 和 map 查找优化继续推进。
-  - 新对话先读取本文件，再读取 current_plan.document 和 current_stage 对应缓存文档。
-  - 具体计划使用 Markdown 文档组织；state.yaml 只作为统一恢复入口和当前进度指针。
-  - 静态链路和运行时链路均已完成；0208913C -> 0208671C -> 02089190 已动态确认。
-  - 第一版 ARM9 空洞 hook 已验证：02089190 跳到 0207411C，R0 可从 06881C00 替换到 ARM9 RAM glyph 后进入 020087BC。
-  - 第二版已验证按字符码替换：current_char=82CD 时 R0 可替换到 02074180。
-  - no-op 复核显示保存字符 hook 和 copy hook 框架稳定。
-  - 原 glyph 副本和 test-pattern 复核显示此前 running=0 不是崩溃证据，可 resume 继续运行。
-  - 字符采样工具已新增：tools/sample_vram_font_chars_mcp.py。
-  - 多字符小表 probe 已完成双项运行时验证：82CD -> 020741A0，82DF -> 020741E0。
-  - 表驱动查找原型已完成运行时验证：82CD -> 02074200，82DF -> 02074240。
-  - NitroFS 文件预加载到 RAM 已验证：font/chs_probe.bin -> 02282F40，82CD -> 02282F60，82DF -> 02282FA0。
-  - RAM 预加载压力测试已完成：1008K 仍可进入绘制采样，1024K 文本流程失稳，1392K 起 chs_data_ptr=0。
-  - 1x1 路径已验证：R2=0x20，源基址 06880000，复用 02089190 -> 020087BC，RAM glyph 替换成功。
-  - 方案 A（动态 glyph 缓存）继续推进；下一步把 probe 文件结构升级为 chs_1x1.map/chunk + chs_1x2.map/chunk。
-  - 正式 map 不要只按 char_code 命中，需要包含 mode/glyph_size 或拆成 1x1/1x2 两套 map。
-  - split-map 原型已完成运行时验证：82A2 在 R2=0x40 时命中 1x2 chunk 02283060，在 R2=0x20 时命中 1x1 chunk 02282FC0。
-  - 下一步把 split-map 原型升级为正式格式草案，补 magic/version/header/entry flags，并设计 glyph chunk 分页或分块加载。
-  - formal v0 已完成运行时验证：map 使用 CHMP，chunk 使用 CHCK，header_size=0x20，entry_size=0x10；82A2 在 R2=0x40 时命中 02283100，在 R2=0x20 时命中 02283000。
-  - 下一步围绕 chunk_id、chunk table、缺字 fallback 和 map 查找性能设计分页/分块方案。
-  - 不要使用 overlay_0000 尾部追加方案，它会踩 overlay_0000 BSS。
+  - 字体 v0 作为本计划前置完成条件保留：TTF -> font-dir -> ROM -> 模拟器冒烟闭环已通过，证据见 plan/cache/vram-font-bypass/generated-font-build.md 和 plan/cache/vram-font-bypass/integrated-build-and-smoke.md。
+  - 本计划只处理文本 dump、编码/控制符/边界识别和翻译表建立；码表生成、字模生成、原文码表替换、文本回写和 ROM 验证留给后续独立 plan。
+  - 第一阶段从 rom/unpacked/origin/data/text 的 msg/script/param/cutin2script 盘点开始，未确认边界和控制符的来源不进入正式翻译基线。
+  - 初始候选 dump 已生成：text/original/jp_dump.tsv 与 text/translation/zh_translation.tsv；当前 6174 条候选，需继续收敛控制符和 param 边界后冻结翻译基线。
