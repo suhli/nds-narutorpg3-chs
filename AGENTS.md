@@ -42,6 +42,18 @@
 - `stage_cache.documents`：当前阶段缓存文档地址列表。
 - `updated_at`：更新时间。
 
+### 计划生成与评审 subagent
+
+需要新增或实质性重写 plan 时，主线应把计划生成交给 `plan-writer` subagent，以减少主线上下文负担；生成后必须再运行 `plan-reviewer` subagent，审查通过后才能开始按新计划执行。
+
+- Codex 侧 plan 生成 subagent 说明：`.codex/subagents/plan-writer.md`。
+- Codex 侧 subagent 说明：`.codex/subagents/plan-reviewer.md`。
+- 流程：主线先读取 `state` 和必要入口上下文，然后调用 `plan-writer` 产出 plan 草案与 `state.yaml` 更新草案。
+- 生成草案后，把用户原始请求、plan 草案、生成前读取到的 `state`、上一份 active plan 和相关 cache 文档交给 `plan-reviewer`。
+- `plan-writer` 和 `plan-reviewer` 默认只返回草案或意见，不直接改文件；主执行者负责最终落盘 plan、更新 `state` 和进入执行阶段。
+- `plan-reviewer` 只返回意见，不直接改文件；主执行者根据 verdict 决定是否接受、修订或暂停。
+- verdict 为 `revise` 或 `block` 时，先处理评审意见，再更新 `state` 或进入执行阶段。
+
 ### Python 环境
 
 Python 环境已经使用 `uv venv` 初始化。
