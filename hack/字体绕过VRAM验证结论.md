@@ -477,3 +477,31 @@ next entry -> miss=00000000 000082DF 00000000 00000040 00000000 00000000
 ```
 
 结论：`0208913C` consumer 已能真实搬运 1x2 page，copy hook 后续会命中 heap 内 resident page。当前限制是单 slot 会抖动：切到 chunk 0 后，`82CD/chunk_id=1` 会重新 miss。下一步应验证多 slot 或文本块预扫策略。
+
+## 19. dual-slot 1x2 验证结论
+
+新增 ROM：
+
+```text
+rom/test_vram_font_chunk_table_dual_slot_v2_probe.nds
+```
+
+该版本使用两个 1x2 resident slot：
+
+```text
+slot0 page = 0x02283120
+slot1 page = 0x02283200
+slot0 id   = 1
+slot1 id   = 0 after first chunk0 miss
+```
+
+关键样本：
+
+```text
+0x82CD -> R0=0x022831C0, data=95599559 95599559, slot0=1, slot1=FFFFFFFF
+0x82DF -> R0=0x02283140, data=C77CC77C C77CC77C, miss=00000001 000082DF 00000000 00000040 00000000 00000001 FFFFFFFF 00000001
+0x82A2 -> R0=0x02283260, data=73377337 73377337, slot0=1, slot1=0
+0x82C6 -> R0=0x022831C0, data=95599559 95599559, slot0=1, slot1=0
+```
+
+结论：双 slot 原型已验证。chunk0 可以装入 slot1，slot0 的 chunk1 同时保留；这解决了单 slot 原型中 chunk0/chunk1 来回覆盖的问题。当前 probe 只接管 1x2 路径。

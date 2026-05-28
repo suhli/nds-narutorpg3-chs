@@ -390,3 +390,56 @@ consumer -> resident_1x2=0
 - chunk table 的 resident page 可以和源 page 放在同一个 heap buffer，避免固定 RAM 空洞污染。
 - 单 slot 缓存策略已经暴露抖动问题，正式格式需要支持多 resident slot、预扫，或更高层调度。
 - copy hook size `0xCC` 仍在 `0xE0` budget 内，但只剩 `0x14`，后续复杂逻辑不应继续塞进 copy hook。
+
+## 2026-05-28 dual-slot 1x2 原型
+
+新增 probe：
+
+```text
+tools/patch_vram_font_chunk_table_dual_slot_probe.py
+rom/test_vram_font_chunk_table_dual_slot_v2_probe.nds
+plan/cache/vram-font-bypass/chunk-table-dual-slot-probe.md
+plan/cache/vram-font-bypass/chunk-table-dual-slot-v2-samples.json
+```
+
+`chs_1x2.chunk` dual-slot pack：
+
+```text
+0x000  CHP2 header
+0x020  resident slot0
+0x100  resident slot1
+0x1E0  source page0
+0x2C0  source page1
+total  0x3A0
+```
+
+变量区：
+
+```text
+0x020743D8  resident_1x2_slot0_chunk_id
+0x020743DC  resident_1x2_slot1_chunk_id
+0x020743E0  resident_1x2_next_slot
+```
+
+代码区：
+
+```text
+0x02074140  copy trampoline, size=0x4
+0x02073D64  copy hook body, size=0xCC
+0x020743E4  consume hook, size=0xB8
+```
+
+验证样本：
+
+```text
+82CD -> R0=022831C0, data=95599559, slot0=1, slot1=FFFFFFFF
+82DF -> R0=02283140, data=C77CC77C, miss_chunk_id=0
+consumer -> slot0=1, slot1=0, next=0
+82A2 -> R0=02283260, data=73377337
+82C6 -> R0=022831C0, data=95599559
+```
+
+判断：
+- 双 slot 能保留旧 chunk，同时加载新 chunk，已解决双 chunk 样本中的单 slot 抖动。
+- copy 主体迁到 `0x02073D64` 后，原 copy patch 点只需 trampoline；这是后续复杂查找/缓存逻辑更现实的代码布局。
+- 该 probe 暂时只接管 1x2，正式 chunk table 仍需把 1x1 slot 与更多 chunk 的替换策略补齐。

@@ -34,8 +34,10 @@ stage_cache:
     - plan/cache/vram-font-bypass/chunk-table-miss-flag-probe.md
     - plan/cache/vram-font-bypass/chunk-table-miss-consumer-probe.md
     - plan/cache/vram-font-bypass/chunk-table-resident-copy-probe.md
+    - plan/cache/vram-font-bypass/chunk-table-dual-slot-probe.md
 updated_at: "2026-05-28"
 notes:
+  - dual-slot 1x2 原型已验证：copy 主体迁到 02073D64，02074140 只留 trampoline；82DF miss 后 consumer 把 chunk0 装入 slot1=0，slot0=1 保留，后续 82A2 命中 02283260，82C6 仍命中 slot0 的 022831C0，单 slot 抖动被消除。
   - resident copy v2 原型已验证：固定 ARM9 resident buffer 会被运行时污染；改为把 resident page 放进 1x2 chunk heap 后，0208913C consumer 可把目标 page 拷入 02283120，82DF miss 后 82A2 命中 page0 图样 73377337；当前单 slot 会在 chunk 0/1 间抖动。
   - chunk miss consumer 原型已验证：0208913C 入口可消费上一轮 miss，更新 020743D4/020743D8 resident slot id；82DF 首次 miss 后 resident_1x2 从 1 翻到 0，后续 82A2 命中 02283160。
   - chunk miss flag 原型已验证：020743C4..020743D0 记录 miss_flag/char/chunk_id/mode；82DF 与 82A2 的 1x2 fallback 会置 miss_flag=1，82CD/82BD resident hit 保持 miss_flag=0。

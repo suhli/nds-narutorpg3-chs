@@ -640,3 +640,53 @@ next entry -> miss_flag=0, resident_1x2=0
 - consumer 能在 `0x0208913C` 层完成目标 page 到 heap 内 resident page 的搬运。
 - copy hook 后续读取 resident page，能看到真实换页后的 glyph 数据。
 - 单 1x2 resident slot 会在 chunk 0/1 之间抖动；下一步应验证双 slot 或文本块入口预扫策略。
+
+## 2026-05-28 chunk table 双 slot 原型验证
+
+新增阶段缓存与测试 ROM：
+
+```text
+plan/cache/vram-font-bypass/chunk-table-dual-slot-probe.md
+tools/patch_vram_font_chunk_table_dual_slot_probe.py
+rom/test_vram_font_chunk_table_dual_slot_v2_probe.nds
+plan/cache/vram-font-bypass/chunk-table-dual-slot-v2-samples.json
+```
+
+本次把 1x2 resident 扩展为两个 slot：
+
+```text
+0x000  CHP2 header
+0x020  resident slot0, initial page1
+0x100  resident slot1, initially empty
+0x1E0  source page0
+0x2C0  source page1
+total  0x3A0
+```
+
+copy hook 主体已超出原 `0x02074140..0x02074220` 热路径预算，因此迁到远端空洞：
+
+```text
+0x02074140  copy trampoline, size=0x4
+0x02073D64  copy hook body, size=0xCC
+0x020743E4  consume hook, size=0xB8
+0x020743D8  resident_1x2_slot0_chunk_id
+0x020743DC  resident_1x2_slot1_chunk_id
+0x020743E0  resident_1x2_next_slot
+```
+
+运行时关键样本：
+
+```text
+1x2_chunk_ptr = 0x02283100
+slot0 page    = 0x02283120
+slot1 page    = 0x02283200
+0x82CD -> R0=0x022831C0, data=95599559 95599559, slot0=1, slot1=FFFFFFFF
+0x82DF -> R0=0x02283140, data=C77CC77C C77CC77C, miss=1/82DF/0/0x40
+0x82A2 -> R0=0x02283260, data=73377337 73377337, slot0=1, slot1=0
+0x82C6 -> R0=0x022831C0, data=95599559 95599559, slot0=1, slot1=0
+```
+
+当前判断更新：
+- 双 slot 可以消除上一版在 chunk0/chunk1 间来回失效的抖动。
+- `82DF` miss 后 chunk0 被装入 slot1，slot0 的 chunk1 仍保留并可被 `82C6` 命中。
+- 当前 probe 只接管 `R2=0x40` 的 1x2 路径；正式版还需要把 1x1、多 chunk 替换策略和代码区布局一起纳入设计。

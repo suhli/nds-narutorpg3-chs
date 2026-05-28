@@ -584,3 +584,45 @@ next entry -> resident_1x2=0, miss_flag=0
 - `0x0208913C` consumer 可以执行真实 page copy，不只是更新 resident slot id。
 - resident buffer 放在 chunk heap 内更稳定，不依赖静态空洞是否运行时安全。
 - 当前单 slot 会在 `82DF/82A2` 与 `82CD` 所属 chunk 之间来回失效，后续缓存设计至少需要双 slot 或更高层预扫。
+
+## 2026-05-28 dual-slot 1x2 原型
+
+新增：
+
+```text
+tools/patch_vram_font_chunk_table_dual_slot_probe.py
+rom/test_vram_font_chunk_table_dual_slot_v2_probe.nds
+plan/cache/vram-font-bypass/chunk-table-dual-slot-probe.md
+plan/cache/vram-font-bypass/chunk-table-dual-slot-v2-samples.json
+```
+
+本次验证 1x2 双 resident slot。slot0 初始放 chunk1，slot1 初始无效；遇到 chunk0 miss 时，consumer 把 chunk0 装入 slot1：
+
+```text
+slot0 page = chunk_ptr + 0x20
+slot1 page = chunk_ptr + 0x100
+source0    = chunk_ptr + 0x1E0
+source1    = chunk_ptr + 0x2C0
+```
+
+代码区布局：
+
+```text
+0x02074140  copy trampoline, size=0x4
+0x02073D64  copy hook body, size=0xCC
+0x020743E4  consume hook, size=0xB8
+```
+
+MCP 样本：
+
+```text
+0x82CD -> R0=0x022831C0, data=95599559 95599559, slot0=1, slot1=FFFFFFFF
+0x82DF -> R0=0x02283140, data=C77CC77C C77CC77C, miss=1/82DF/0/0x40
+0x82A2 -> R0=0x02283260, data=73377337 73377337, slot0=1, slot1=0
+0x82C6 -> R0=0x022831C0, data=95599559 95599559, slot0=1, slot1=0
+```
+
+结论：
+- 双 slot 已验证可以保留 chunk1，同时把 chunk0 装入 slot1。
+- 这证明正式缓存不必每次 miss 都覆盖唯一 resident page；最小多 slot 策略能直接消除当前样本中的单 slot 抖动。
+- 当前 probe 为控制尺寸只接管 `R2=0x40`；后续正式化时需要把 1x1 路径、替换策略和更大的代码区规划一起处理。
