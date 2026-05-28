@@ -510,3 +510,45 @@ load_hook_size = 0x11C
 - hook 瘦身和局部迁移没有破坏现有 resident/fallback 路径。
 - copy hook 现在有 `0x40` 字节余量，可用于极小的多 slot 或 miss flag 验证。
 - 复杂 chunk miss 加载、二分查找或完整调度逻辑仍不应塞进逐字 copy hook。
+
+## 2026-05-28 chunk miss flag 原型验证
+
+新增阶段缓存与测试 ROM：
+
+```text
+plan/cache/vram-font-bypass/chunk-table-miss-flag-probe.md
+tools/patch_vram_font_chunk_table_miss_flag_probe.py
+rom/test_vram_font_chunk_table_miss_flag_probe.nds
+plan/cache/vram-font-bypass/chunk-table-miss-flag-samples.json
+```
+
+本次不做真实缺页加载，只在 resident slot 不匹配时记录最小 miss 状态：
+
+```text
+0x020743C4  miss_flag
+0x020743C8  miss_char
+0x020743CC  miss_chunk_id
+0x020743D0  miss_mode
+```
+
+静态结果：
+
+```text
+copy_hook_size = 0xC0
+copy_budget    = 0xE0
+copy_margin    = 0x20
+```
+
+运行时关键样本：
+
+```text
+0x82CD, R2=0x40 -> R0=0x022831A0, miss_flag=0
+0x82DF, R2=0x40 -> R0=0x02283120, miss=1/82DF/0/0x40
+0x82A2, R2=0x40 -> R0=0x02283120, miss=1/82A2/0/0x40
+0x82BD, R2=0x20 -> R0=0x02283040, miss_flag=0
+```
+
+当前判断更新：
+- copy hook 已能作为 chunk miss 生产者，把缺页所需的 `char/mode/chunk_id` 记录到 RAM。
+- 只清 `miss_flag`，不清旧 `miss_char/miss_chunk_id/miss_mode`；读取方必须以 `miss_flag==1` 为有效条件。
+- 下一步应找 miss 消费点或预扫调度点，避免在逐字 copy hook 中同步读 NitroFS。

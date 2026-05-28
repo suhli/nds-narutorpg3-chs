@@ -262,3 +262,37 @@ copy margin: 0x40
 - `0x0207411C` 主空洞内部重排可行。
 - copy hook 已释放出 `0x40` 字节余量，可承载很小的状态记录或 slot 扩展。
 - 若要加入二分查找、缺页加载或更复杂 chunk table，仍应迁移到独立代码区或改为热路径外调度。
+
+## 2026-05-28 miss flag 原型
+
+新增 probe：
+
+```text
+tools/patch_vram_font_chunk_table_miss_flag_probe.py
+rom/test_vram_font_chunk_table_miss_flag_probe.nds
+plan/cache/vram-font-bypass/chunk-table-miss-flag-probe.md
+plan/cache/vram-font-bypass/chunk-table-miss-flag-samples.json
+```
+
+miss 状态记录在变量区末尾：
+
+```text
+0x020743C4  miss_flag
+0x020743C8  miss_char
+0x020743CC  miss_chunk_id
+0x020743D0  miss_mode
+```
+
+验证样本：
+
+```text
+0x82DF, R2=0x40 -> R0=0x02283120, miss=00000001 000082DF 00000000 00000040
+0x82A2, R2=0x40 -> R0=0x02283120, miss=00000001 000082A2 00000000 00000040
+0x82CD, R2=0x40 -> R0=0x022831A0, miss_flag=0
+0x82BD, R2=0x20 -> R0=0x02283040, miss_flag=0
+```
+
+判断：
+- copy hook 可作为 miss 生产者，但不应承担 miss 消费和 NitroFS 加载。
+- miss 字段为后续 chunk loader 提供最小接口：mode、char、chunk_id。
+- 该版本 copy hook size 回到 `0xC0`，在后移后的 `0xE0` budget 内还剩 `0x20`。

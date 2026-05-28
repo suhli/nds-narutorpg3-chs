@@ -392,3 +392,31 @@ load_hook_addr=0x02074220
 ```
 
 这证明 hook 瘦身与主空洞内部代码重排不会破坏 resident/fallback 决策。当前可用余量只有 `0x40`，适合继续验证极小状态逻辑；真实缺页加载和复杂查找仍应放到逐字 copy hook 之外。
+
+## 16. chunk miss flag 验证结论
+
+新增 ROM：
+
+```text
+rom/test_vram_font_chunk_table_miss_flag_probe.nds
+```
+
+该版本在 resident slot 不匹配时继续返回 fallback glyph，并把 miss 信息写到：
+
+```text
+0x020743C4  miss_flag
+0x020743C8  miss_char
+0x020743CC  miss_chunk_id
+0x020743D0  miss_mode
+```
+
+关键样本：
+
+```text
+0x82DF, R2=0x40 -> R0=0x02283120, miss=00000001 000082DF 00000000 00000040
+0x82A2, R2=0x40 -> R0=0x02283120, miss=00000001 000082A2 00000000 00000040
+0x82CD, R2=0x40 -> R0=0x022831A0, miss_flag=0
+0x82BD, R2=0x20 -> R0=0x02283040, miss_flag=0
+```
+
+结论：copy hook 能稳定产出最小 miss 状态，且不破坏 resident/fallback R0。当前 hook size 为 `0xC0`，仍在后移 load hook 后的 `0xE0` 预算内；后续重点应转向 miss 消费点和 chunk 加载调度。

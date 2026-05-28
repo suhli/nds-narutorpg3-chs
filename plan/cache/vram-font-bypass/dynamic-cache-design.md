@@ -459,3 +459,45 @@ MCP 样本确认 resident/fallback 行为未破坏：
 - 当前已经完成一次可运行的 hook 瘦身与代码区重排。
 - 这只是 `0x0207411C` 主空洞内的局部迁移，不是迁到远端新洞。
 - 后续可利用 `0x40` 余量验证极小多 slot 或 miss flag；真实缺页加载仍应放到 copy hook 外。
+
+## 2026-05-28 chunk miss flag 原型
+
+新增：
+
+```text
+tools/patch_vram_font_chunk_table_miss_flag_probe.py
+rom/test_vram_font_chunk_table_miss_flag_probe.nds
+plan/cache/vram-font-bypass/chunk-table-miss-flag-probe.md
+plan/cache/vram-font-bypass/chunk-table-miss-flag-samples.json
+```
+
+变量布局：
+
+```text
+0x020743C4  miss_flag
+0x020743C8  miss_char
+0x020743CC  miss_chunk_id
+0x020743D0  miss_mode
+```
+
+静态结果：
+
+```text
+copy_hook_size = 0xC0
+copy_budget    = 0xE0
+copy_margin    = 0x20
+```
+
+MCP 样本：
+
+```text
+0x82CD, R2=0x40 -> R0=0x022831A0, miss_flag=0
+0x82DF, R2=0x40 -> R0=0x02283120, miss=1/82DF/0/0x40
+0x82A2, R2=0x40 -> R0=0x02283120, miss=1/82A2/0/0x40
+0x82BD, R2=0x20 -> R0=0x02283040, miss_flag=0
+```
+
+结论：
+- resident slot 不匹配时可以稳定记录 miss 状态，同时继续 fallback。
+- 当前只清 `miss_flag`，其余 miss 字段可能保留旧值；后续读取方必须以 `miss_flag==1` 为有效条件。
+- 下一步应设计 miss 消费点：绘制前预扫、文本块切换点，或专门的 chunk 加载调度点。

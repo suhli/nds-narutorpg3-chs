@@ -31,8 +31,10 @@ stage_cache:
     - plan/cache/vram-font-bypass/chunk-fallback-design.md
     - plan/cache/vram-font-bypass/chunk-table-design.md
     - plan/cache/vram-font-bypass/hook-slim-relocate-probe.md
+    - plan/cache/vram-font-bypass/chunk-table-miss-flag-probe.md
 updated_at: "2026-05-28"
 notes:
+  - chunk miss flag 原型已验证：020743C4..020743D0 记录 miss_flag/char/chunk_id/mode；82DF 与 82A2 的 1x2 fallback 会置 miss_flag=1，82CD/82BD resident hit 保持 miss_flag=0。
   - hook 瘦身与同空洞迁移已验证：copy_hook_size 从 0xC0 降到 0xA0，load hook 后移到 02074220，copy 区间获得 0x40 余量；82CD/82DF/82BD 样本保持预期 resident/fallback。
   - 1x1 resident-slot 正例已补充验证：test_vram_font_chunk_table_1x1_probe.nds 中 82BD/R2=0x20 命中 02283040。
   - resident-slot probe 已完成 1x2 运行时验证：resident_1x2_chunk_id=1 时 82CD 命中 resident，82DF/82A2 走 fallback。
