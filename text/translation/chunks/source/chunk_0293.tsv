@@ -1,0 +1,4 @@
+id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
+zh_txt_75c569e4_000A65_0000	txt_75c569e4_000A65_0000	param	param/equip_data.dat	0xA65	0	8c c4 6f	呼o			todo_candidate_boundary	unknown	yes		candidate dump; confirm boundary/control codes before baseline freeze	3	0	q川	驎驎驎驎驎驎
+zh_txt_75c569e4_000AFA_0001	txt_75c569e4_000AFA_0001	param	param/equip_data.dat	0xAFA	1	fb fb fb fb fb fb fb fb fb fb fb fb	驎驎驎驎驎驎			todo_candidate_boundary	unknown	yes		candidate dump; confirm boundary/control codes before baseline freeze	12	1	呼o	齎o
+zh_txt_75c569e4_000BED_0002	txt_75c569e4_000BED_0002	param	param/equip_data.dat	0xBED	2	e6 d8 6f	齎o			todo_candidate_boundary	unknown	yes		candidate dump; confirm boundary/control codes before baseline freeze	3	2	驎驎驎驎驎驎	k祥
