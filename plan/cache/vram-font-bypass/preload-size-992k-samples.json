@@ -1,0 +1,88 @@
+{
+  "rom": "D:\\repos\\nds-narutorpg3-chs\\rom\\test_vram_font_preload_sweep_992k.nds",
+  "breakpoint": "0x020087BC",
+  "current_char_address": "0x02074288",
+  "input_events": [
+    {
+      "button": "start",
+      "elapsed": 1.022
+    },
+    {
+      "button": "A",
+      "elapsed": 2.015
+    },
+    {
+      "button": "A",
+      "elapsed": 3.002
+    }
+  ],
+  "samples": [
+    {
+      "index": 0,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x0238AA60",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 1,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x0238AAA0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 2,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x0238AAE0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 3,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x0238AB20",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 4,
+      "current_char": "0x000082CD",
+      "r0": "0x02286B80",
+      "r1": "0x0238AB60",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 5,
+      "current_char": "0x000082B6",
+      "r0": "0x06882B80",
+      "r1": "0x0238ABA0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 6,
+      "current_char": "0x000082DF",
+      "r0": "0x02286BC0",
+      "r1": "0x0238ABE0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    }
+  ],
+  "stray_pauses": [
+    "running=0 ARM9_PC=0x02006A4C ARM7_PC=0x00000020"
+  ],
+  "final_state": "running=1 ARM9_PC=0x0200821C ARM7_PC=0x038042B0"
+}

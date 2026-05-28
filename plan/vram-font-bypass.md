@@ -246,3 +246,33 @@ font/chs_probe.bin -> RAM 0x02282F40
 ```
 
 当前结论：动态字体方案已具备“ROM 文件 -> 普通 RAM -> 绘制 hook”的最小闭环。下一步正式化中文 glyph 文件格式，并验证 1x1 字体路径。
+
+## 2026-05-28 RAM 容量压力验证
+
+已新增压力测试脚本：
+
+```text
+tools/run_font_preload_size_sweep.py
+```
+
+阶段缓存：
+
+```text
+plan/cache/vram-font-bypass/preload-size-pressure.md
+```
+
+关键结果：
+
+```text
+512K/896K/960K/992K/1008K 可进入文本绘制采样。
+1008K: 82CD -> 02286B80, 82DF -> 02286BC0。
+1024K: 分配后文本流程失稳，未取得正常绘制样本。
+1392K+: chs_data_ptr=0，连续 RAM 分配失败。
+```
+
+当前决策更新：
+
+- 字库文件不能按“完整中文字模整包常驻 RAM”设计。
+- 正式格式应拆为常驻 map/header 和可分页/分块加载的 glyph 数据。
+- 映射表本身容量压力较小，先压垮 RAM 的是 `0x40 bytes/glyph` 的 1x2 glyph 数据。
+- 单个常驻 chs 数据块按保守线控制在 `896K` 以内；超过 1MB 的数据必须分块、按需加载或压缩后分段展开。

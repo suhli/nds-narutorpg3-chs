@@ -158,3 +158,28 @@ copy hook 框架稳定。
 ```
 
 `0x82CD 替换到原 glyph 副本` 的版本已经复核：RAM 副本与原 VRAM glyph 一致，清除断点后可继续运行。因此下一步进入动态 glyph 缓存设计。
+
+## 8. RAM 预加载压力结论
+
+新增脚本：
+
+```text
+tools/run_font_preload_size_sweep.py
+```
+
+已经验证 `font/chs_probe.bin` 扩大后的加载行为：
+
+```text
+1008K 以内仍可取得文本绘制采样。
+1024K 开始在文本流程失稳。
+1392K 起 chs_data_ptr=0，整文件连续分配失败。
+```
+
+因此“字库放普通 RAM”也不能理解为“完整中文字模整包常驻 RAM”。可行方向应是：
+
+```text
+map/header 常驻
+glyph 数据分页或分块
+绘制时按需准备 glyph
+VRAM 只保留当前画面缓存
+```

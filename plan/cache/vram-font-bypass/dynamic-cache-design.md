@@ -173,3 +173,30 @@ chs_data_size = 0x000000A0
 详细记录见 `plan/cache/vram-font-bypass/file-preload-probe.md`。
 
 结论：自定义 glyph 数据源已经从 ARM9 空洞迁移到 NitroFS 文件和普通 RAM。下一步应正式化文件格式，并补 1x1 路径验证。
+
+## 2026-05-28 RAM 预加载容量压力测试
+
+已新增：
+
+```text
+tools/run_font_preload_size_sweep.py
+plan/cache/vram-font-bypass/preload-size-pressure.md
+```
+
+关键结论：
+
+```text
+512K/896K/960K/992K/1008K 均可进入文本绘制采样。
+1008K 样本仍能命中：82CD -> 02286B80, 82DF -> 02286BC0。
+1024K 样本分配后推进到文本流程失稳，未命中正常绘制样本。
+1392K 起 chs_data_ptr=0，说明连续 RAM 分配失败。
+```
+
+方案判断：
+
+- `0207F80C` 更像是整文件连续加载，不会自动分页。
+- 不能把完整中文字模设计成接近或超过 1MB 的常驻 RAM 文件。
+- 正式方案应拆为常驻 map/header + glyph page/chunk + VRAM 当前画面缓存。
+- 保守设计线：单个常驻 chs 数据块不要超过 `896K`；`1008K` 只作为压力边界样本。
+
+下一步仍是正式化文件格式，但格式应优先支持分页或分块 glyph 数据，而不是单一大文件常驻。

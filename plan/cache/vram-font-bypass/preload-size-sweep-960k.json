@@ -1,0 +1,37 @@
+[
+  {
+    "size": 983040,
+    "label": "960k",
+    "work": "D:\\repos\\nds-narutorpg3-chs\\rom\\unpacked\\vram_font_preload_sweep_960k",
+    "rom": "D:\\repos\\nds-narutorpg3-chs\\rom\\test_vram_font_preload_sweep_960k.nds",
+    "ndstool_info": "Nintendo DS rom tool 2.3.1 - Jan  8 2024\nby Rafael Vuijk, Dave Murphy, Alexei Karpenko\nHeader information:\n0x00\tGame title               \tNARUTORPG3\n0x0C\tGame code                \tANTJ (NTR-ANTJ-JPN)\n0x10\tMaker code               \tDA (TOMY)\n0x12\tUnit code                \t0x00\n0x13\tDevice type              \t0x00\n0x14\tDevice capacity          \t0x09 (512 Mbit)\n0x15\treserved 1               \t00000000000000\n0x1E\tROM version              \t0x00\n0x1F\treserved 2               \t0x00\n0x20\tARM9 ROM offset          \t0x4000\n0x24\tARM9 entry address       \t0x2000800\n0x28\tARM9 RAM address         \t0x2000000\n0x2C\tARM9 code size           \t0x7A798\n0x30\tARM7 ROM offset          \t0x7EA00\n0x34\tARM7 entry address       \t0x2380000\n0x38\tARM7 RAM address         \t0x2380000\n0x3C\tARM7 code size           \t0x2869C\n0x40\tFile name table offset   \t0xA7200\n0x44\tFile name table size     \t0x8061\n0x48\tFAT offset               \t0xAF400\n0x4C\tFAT size                 \t0x8D58\n0x50\tARM9 overlay offset      \t0x7E800\n0x54\tARM9 overlay size        \t0xC0\n0x58\tARM7 overlay offset      \t0x0\n0x5C\tARM7 overlay size        \t0x0\n0x60\tROM control info 1       \t0x00586000\n0x64\tROM control info 2       \t0x001808F8\n0x68\tIcon/title offset        \t0xB8200\n0x6C\tSecure area CRC          \t0x7B48 (INVALID, decrypted)\n0x6E\tROM control info 3       \t0x051E\n0x70\tARM9 ?                   \t0x2000A58\n0x74\tARM7 ?                   \t0x2380158\n0x78\tMagic 1                  \t0x00000000\n0x7C\tMagic 2                  \t0x00000000\n0x80\tApplication end offset   \t0x03BAAC94\n0x84\tROM header size          \t0x00004000\n0x15C\tLogo CRC                 \t0xCF56 (OK)\n0x15E\tHeader CRC               \t0xE164 (OK)\n\nBanner CRC:                     \t0x032C (OK)\nEnglish banner text, line 1:    \tNARUTO -___- \nEnglish banner text, line 2:    \t___RPG3\nEnglish banner text, line 3:    \t______\n\nARM9 footer found.\n\nSecurity data CRC (0x1000-0x2FFF)  0x6FFF\nSegment3 CRC (0x3000-0x3FFF)       0x0000 (INVALID)",
+    "mcp": {
+      "mcp_ok": true,
+      "chs_data_ptr": "0x02286B60",
+      "chs_data_size": 983040,
+      "current_char": "0x00000000",
+      "expected_size": 983040,
+      "size_matches": true,
+      "header_words": [
+        "0x00000002",
+        "0x000082CD",
+        "0x00000020",
+        "0x000082DF",
+        "0x00000060",
+        "0x00000000",
+        "0x00000000",
+        "0x00000000"
+      ],
+      "glyph_a_words": [
+        "0x33333333",
+        "0x11111111",
+        "0x33333333",
+        "0x11111111"
+      ],
+      "ptr_text": "02286B60 000F0000 00000000 ",
+      "header_text": "00000002 000082CD 00000020 000082DF 00000060 00000000 00000000 00000000 ",
+      "glyph_a_text": "33333333 11111111 33333333 11111111 ",
+      "final_state": "running=1 ARM9_PC=0x0200821C ARM7_PC=0x038042B0"
+    }
+  }
+]

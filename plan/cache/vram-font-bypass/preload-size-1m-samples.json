@@ -1,0 +1,41 @@
+{
+  "rom": "D:\\repos\\nds-narutorpg3-chs\\rom\\test_vram_font_preload_sweep_1m.nds",
+  "breakpoint": "0x020087BC",
+  "current_char_address": "0x02074288",
+  "input_events": [
+    {
+      "button": "start",
+      "elapsed": 1.046
+    },
+    {
+      "button": "A",
+      "elapsed": 2.043
+    },
+    {
+      "button": "A",
+      "elapsed": 3.009
+    },
+    {
+      "button": "A",
+      "elapsed": 4.051
+    },
+    {
+      "button": "A",
+      "elapsed": 5.034
+    },
+    {
+      "button": "A",
+      "elapsed": 6.015
+    }
+  ],
+  "samples": [],
+  "stray_pauses": [
+    "running=0 ARM9_PC=0x01FF805C ARM7_PC=0x03804A28",
+    "running=0 ARM9_PC=0x01FF8060 ARM7_PC=0x03804A2C",
+    "running=0 ARM9_PC=0x01FF806C ARM7_PC=0x03804528",
+    "running=0 ARM9_PC=0x00F7005C ARM7_PC=0x037FC324",
+    "running=0 ARM9_PC=0x00F70060 ARM7_PC=0x037FC324",
+    "running=0 ARM9_PC=0x00F7006C ARM7_PC=0x037FC328"
+  ],
+  "final_state": "running=1 ARM9_PC=0xFFEE8000 ARM7_PC=0x037FE9DC"
+}
