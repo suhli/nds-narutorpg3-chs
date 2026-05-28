@@ -633,3 +633,53 @@ plan/cache/vram-font-bypass/integrated-smoke-validated-format-samples.json
 1x1 resident ok idx=76 r0=0x02283060
 final state running
 ```
+
+## 25. 真实 TTF 字模生成验证结论
+
+新增：
+
+```text
+tools/build_vram_font_files.py
+```
+
+该工具已能从 TTF 和字符编码 manifest 生成当前 v0 所需的四个文件：
+
+```text
+chs_1x1.map
+chs_1x1.chunk
+chs_1x2.map
+chs_1x2.chunk
+```
+
+本轮使用：
+
+```text
+plan/cache/vram-font-bypass/generated-font-smoke-manifest.txt
+assets/fusion-pixel-8px-monospaced-zh_hans.ttf
+assets/FashionBitmap16_0.092.ttf
+```
+
+生成产物：
+
+```text
+plan/cache/vram-font-bypass/generated-font-smoke/
+```
+
+构建 ROM：
+
+```text
+rom/narutorpg3_chs_dynamic_font_v0_generated_font.nds
+```
+
+整体验收结果：
+
+```text
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```
+
+结论：当前方案已从手写测试 glyph 推进到真实字体渲染 glyph。下一步主要缺口不再是 glyph 承载，而是文本编码/字符分配表和真实汉化文本字符集输入。

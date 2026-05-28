@@ -263,3 +263,54 @@ final state running
 ```
 
 当前结论：当前集成构建入口已能在构建阶段拒绝不符合 v0 合同的字体文件，避免无效 `--font-dir` 进入模拟器阶段才暴露。
+
+## 2026-05-28 generated font 集成冒烟
+
+新增真实字体文件生成入口：
+
+```text
+tools/build_vram_font_files.py
+```
+
+生成命令：
+
+```text
+.\.venv\Scripts\python.exe -B tools\build_vram_font_files.py --manifest plan\cache\vram-font-bypass\generated-font-smoke-manifest.txt --output-dir plan\cache\vram-font-bypass\generated-font-smoke
+```
+
+生成结果：
+
+```text
+entries=4
+1x1_source_pages=2
+1x2_source_pages=2
+chs_1x1.map size=0x60
+chs_1x1.chunk size=0x1A0
+chs_1x2.map size=0x60
+chs_1x2.chunk size=0x3A0
+```
+
+构建命令：
+
+```text
+.\.venv\Scripts\python.exe -B tools\build_vram_font_dynamic_cache_rom.py --font-dir plan\cache\vram-font-bypass\generated-font-smoke --work rom/unpacked/narutorpg3_chs_dynamic_font_v0_generated_font --output rom/narutorpg3_chs_dynamic_font_v0_generated_font.nds
+```
+
+冒烟命令：
+
+```text
+.\.venv\Scripts\python.exe -B tools\run_vram_font_integrated_smoke.py --rom rom\narutorpg3_chs_dynamic_font_v0_generated_font.nds --font-dir plan\cache\vram-font-bypass\generated-font-smoke --output plan\cache\vram-font-bypass\integrated-smoke-generated-font-samples.json
+```
+
+冒烟结果：
+
+```text
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```
+
+当前结论：当前链路已从 probe 花纹推进到真实 TTF 渲染字模；`run_vram_font_integrated_smoke.py --font-dir` 会从生成文件计算期望 glyph 数据。

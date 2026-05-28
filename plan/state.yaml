@@ -38,8 +38,11 @@ stage_cache:
     - plan/cache/vram-font-bypass/chunk-table-dual-mode-probe.md
     - plan/cache/vram-font-bypass/chunk-table-dual-mode-1x1-copy-probe.md
     - plan/cache/vram-font-bypass/integrated-build-and-smoke.md
+    - plan/cache/vram-font-bypass/generated-font-build.md
 updated_at: "2026-05-28"
 notes:
+  - run_vram_font_integrated_smoke.py 新增 --font-dir 后已做旧 probe 回归：rom/narutorpg3_chs_dynamic_font_v0_validate.nds 在默认 hardcoded 期望下仍通过，样本为 plan/cache/vram-font-bypass/integrated-smoke-regression-after-fontgen-samples.json。
+  - 真实字体文件生成器已接入：tools/build_vram_font_files.py 可从 TTF + manifest 生成 chs_1x1.map/chunk 与 chs_1x2.map/chunk；本轮使用 generated-font-smoke-manifest.txt 生成 plan/cache/vram-font-bypass/generated-font-smoke，构建 rom/narutorpg3_chs_dynamic_font_v0_generated_font.nds，并通过 --font-dir 集成冒烟，样本为 plan/cache/vram-font-bypass/integrated-smoke-generated-font-samples.json。
   - 外部 --font-dir 构建路径已正向验证：使用 rom/unpacked/narutorpg3_chs_dynamic_font_v0_validate/data/font 作为输入，输出 rom/narutorpg3_chs_dynamic_font_v0_fontdir.nds，格式校验显示 1x1/1x2 source_pages=2，ndstool -i 为 Header CRC OK / Banner CRC OK。
   - --font-dir 输入已加入 v0 字体合同校验：CHMP/CHP1/CHP2 header、glyph/page/entry size、resident_slots、chunk_id 范围、glyph_offset 范围和重复 char_code；验证产物 rom/narutorpg3_chs_dynamic_font_v0_validate.nds 通过 Header CRC/Banner CRC 与集成冒烟，样本为 plan/cache/vram-font-bypass/integrated-smoke-validated-format-samples.json。
   - 集成构建入口已补容错：默认 --force 删除旧 work/output 失败时自动使用 _build_<timestamp> 后缀继续构建；本次实际产物 rom/narutorpg3_chs_dynamic_font_v0_build_20260528_231808.nds，ndstool -i 为 Header CRC OK / Banner CRC OK，集成冒烟通过并写入 plan/cache/vram-font-bypass/integrated-smoke-force-fallback-samples.json。

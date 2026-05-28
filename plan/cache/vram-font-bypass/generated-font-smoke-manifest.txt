@@ -1,0 +1,8 @@
+# code char [modes]
+# Keep this order for the integrated smoke path:
+# - 0x82A2/0x82DF land in source page 0
+# - 0x8140/0x82C6 land in source page 1
+0x82A2 新
+0x82DF 游
+0x8140 戏
+0x82C6 字

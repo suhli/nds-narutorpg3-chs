@@ -1,0 +1,45 @@
+{
+  "entry_count": 4,
+  "entries": [
+    {
+      "code": "0x82A2",
+      "char": "新",
+      "modes": [
+        "1x1",
+        "1x2"
+      ]
+    },
+    {
+      "code": "0x82DF",
+      "char": "游",
+      "modes": [
+        "1x1",
+        "1x2"
+      ]
+    },
+    {
+      "code": "0x8140",
+      "char": "戏",
+      "modes": [
+        "1x1",
+        "1x2"
+      ]
+    },
+    {
+      "code": "0x82C6",
+      "char": "字",
+      "modes": [
+        "1x1",
+        "1x2"
+      ]
+    }
+  ],
+  "1x1_source_pages": 2,
+  "1x2_source_pages": 2,
+  "files": {
+    "chs_1x1.map": 96,
+    "chs_1x1.chunk": 416,
+    "chs_1x2.map": 96,
+    "chs_1x2.chunk": 928
+  }
+}

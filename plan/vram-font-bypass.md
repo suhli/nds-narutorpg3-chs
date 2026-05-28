@@ -859,3 +859,64 @@ final state running
 ```
 
 当前判断：`--font-dir` 已从“只复制四个文件”提升为“构建阶段校验 v0 字体合同”；后续接真实中文字模生成器时，应先产出这四个文件再交给该构建入口。
+
+## 2026-05-28 真实字体文件生成器
+
+新增入口：
+
+```text
+tools/build_vram_font_files.py
+```
+
+该工具从 TTF 和字符编码 manifest 生成：
+
+```text
+chs_1x1.map
+chs_1x1.chunk
+chs_1x2.map
+chs_1x2.chunk
+```
+
+默认使用：
+
+```text
+assets/fusion-pixel-8px-monospaced-zh_hans.ttf
+assets/FashionBitmap16_0.092.ttf
+```
+
+本轮验证 manifest：
+
+```text
+plan/cache/vram-font-bypass/generated-font-smoke-manifest.txt
+```
+
+生成产物：
+
+```text
+plan/cache/vram-font-bypass/generated-font-smoke/
+```
+
+集成 ROM：
+
+```text
+rom/narutorpg3_chs_dynamic_font_v0_generated_font.nds
+```
+
+集成冒烟：
+
+```text
+tools/run_vram_font_integrated_smoke.py --font-dir plan/cache/vram-font-bypass/generated-font-smoke
+```
+
+结果：
+
+```text
+1x2 shared ok idx=0 r0=0x02284B60
+1x2 slot1 ok idx=18 r0=0x02284C40
+1x2 slot0 ok idx=20 r0=0x02284BA0
+1x1 miss ok idx=28 r0=0x02283040
+1x1 resident ok idx=76 r0=0x02283060
+final state running
+```
+
+当前判断：动态字体 v0 已具备 `TTF -> font-dir -> ROM -> 模拟器冒烟` 的完整闭环。下一步应接入文本编码/字符分配表，让 manifest 由实际汉化字符集生成，而不是手写 smoke 样本。
