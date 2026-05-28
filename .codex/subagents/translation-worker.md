@@ -37,7 +37,10 @@ Do not update `plan/`, `plan/state.yaml`, or any `plan/cache/` file during trans
 - Follow common Mainland China Naruto translation habits.
 - Keep names, jutsu, locations, UI terms, and recurring battle terms consistent through `text/translation/glossary.tsv`.
 - Before translating a chunk, inspect adjacent rows in that chunk. If consecutive rows form one dialogue, tutorial, menu flow, or sentence, translate them together for context.
+- Translate the actual content of each row. Do not replace a multi-sentence row with a broad summary such as "battle tutorial starts" unless the source itself is that broad.
+- You may compress wording only to satisfy byte alignment, but must retain the actionable meaning of each sentence or menu instruction.
 - Preserve every `{CTRL_xxxx}` token in the same order as the source row.
+- Do not empty out text that appears between control tokens. In particular, if the source contains `{CTRL_0103}{CTRL_0002}<term>{CTRL_0103}{CTRL_0000}`, the translation must contain the translated term between the same token pair.
 - `CTRL_0003` appears as the row terminator field and should not be inserted into the translated sentence unless it already appears inside `jp_text`.
 - Ignore Japanese ruby/furigana glosses. Common pattern: a kanji term followed by parentheses containing kana. Translate the kanji term only; do not translate or preserve the kana reading in the Chinese output.
 - Do not invent missing context. Mark uncertain cases in `translator_note`.
@@ -53,6 +56,7 @@ For `zh_text`, output a string whose UTF-8 byte length is exactly `source_byte_l
 - If the Chinese translation is shorter, pad the end with ASCII spaces.
 - If it is too long, shorten the translation while preserving meaning and all `{CTRL_xxxx}` tokens.
 - Do not drop control tokens to fit the budget.
+- Do not drop translated words between control tokens to fit the budget.
 - If exact alignment is impossible, leave the best translation, set `status=needs_fit`, and explain in `translator_note`.
 - Never satisfy byte alignment by replacing Chinese text with ASCII `?`.
 
