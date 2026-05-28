@@ -1,0 +1,295 @@
+{
+  "rom": "D:\\repos\\nds-narutorpg3-chs\\rom\\test_vram_font_chunk_table_probe.nds",
+  "breakpoint": "0x020087BC",
+  "current_char_address": "0x020743C0",
+  "input_events": [
+    {
+      "button": "start",
+      "elapsed": 1.03
+    },
+    {
+      "button": "A",
+      "elapsed": 2.025
+    },
+    {
+      "button": "A",
+      "elapsed": 3.037
+    },
+    {
+      "button": "A",
+      "elapsed": 4.011
+    },
+    {
+      "button": "A",
+      "elapsed": 5.043
+    },
+    {
+      "button": "A",
+      "elapsed": 6.011
+    }
+  ],
+  "samples": [
+    {
+      "index": 0,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x02292A80",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 1,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x02292AC0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 2,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x02292B00",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x037FD8CC"
+    },
+    {
+      "index": 3,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x02292B40",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 4,
+      "current_char": "0x000082CD",
+      "r0": "0x022831A0",
+      "r1": "0x02292B80",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 5,
+      "current_char": "0x000082B6",
+      "r0": "0x06882B80",
+      "r1": "0x02292BC0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 6,
+      "current_char": "0x000082DF",
+      "r0": "0x02283120",
+      "r1": "0x02292C00",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 7,
+      "current_char": "0x000082A9",
+      "r0": "0x06881D80",
+      "r1": "0x02292C40",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 8,
+      "current_char": "0x000082E7",
+      "r0": "0x068825C0",
+      "r1": "0x02292C80",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 9,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x02292CC0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 10,
+      "current_char": "0x00008276",
+      "r0": "0x068849C0",
+      "r1": "0x02292D00",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 11,
+      "current_char": "0x00008289",
+      "r0": "0x0688D6C0",
+      "r1": "0x02292D40",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 12,
+      "current_char": "0x0000815B",
+      "r0": "0x06884B80",
+      "r1": "0x02292D80",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 13,
+      "current_char": "0x00008265",
+      "r0": "0x06884580",
+      "r1": "0x02292DC0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 14,
+      "current_char": "0x00008289",
+      "r0": "0x0688D6C0",
+      "r1": "0x02292E00",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 15,
+      "current_char": "0x000082B9",
+      "r0": "0x06881F80",
+      "r1": "0x02292E40",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 16,
+      "current_char": "0x000082C1",
+      "r0": "0x06882900",
+      "r1": "0x02292E80",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 17,
+      "current_char": "0x000082C4",
+      "r0": "0x068820C0",
+      "r1": "0x02292EC0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 18,
+      "current_char": "0x000082A2",
+      "r0": "0x02283120",
+      "r1": "0x02292F00",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 19,
+      "current_char": "0x00008140",
+      "r0": "0x06881C00",
+      "r1": "0x02292F40",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 20,
+      "current_char": "0x000082C6",
+      "r0": "0x06882100",
+      "r1": "0x02292F80",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 21,
+      "current_char": "0x000082E0",
+      "r0": "0x068824C0",
+      "r1": "0x02292FC0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 22,
+      "current_char": "0x000082BE",
+      "r0": "0x06882C80",
+      "r1": "0x02293000",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x037FDD50"
+    },
+    {
+      "index": 23,
+      "current_char": "0x000082BF",
+      "r0": "0x06882040",
+      "r1": "0x02293040",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x037FC358"
+    },
+    {
+      "index": 24,
+      "current_char": "0x000082C9",
+      "r0": "0x06882180",
+      "r1": "0x02293080",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x037FE0AC"
+    },
+    {
+      "index": 25,
+      "current_char": "0x000082AD",
+      "r0": "0x06881E00",
+      "r1": "0x022930C0",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038053C4"
+    },
+    {
+      "index": 26,
+      "current_char": "0x000082CE",
+      "r0": "0x06882DC0",
+      "r1": "0x02293100",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    },
+    {
+      "index": 27,
+      "current_char": "0x000082E9",
+      "r0": "0x06882640",
+      "r1": "0x02293140",
+      "r2": "0x00000040",
+      "lr": "0x02089194",
+      "state": "running=0 ARM9_PC=0x020087BC ARM7_PC=0x038042B0"
+    }
+  ],
+  "stray_pauses": [
+    "running=0 ARM9_PC=0x020866D0 ARM7_PC=0x00000020",
+    "running=0 ARM9_PC=0x020087C0 ARM7_PC=0x037FD8D0",
+    "running=0 ARM9_PC=0x020866DC ARM7_PC=0x00000020",
+    "running=0 ARM9_PC=0x020087C0 ARM7_PC=0x037FDD54",
+    "running=0 ARM9_PC=0x020087C0 ARM7_PC=0x037FC3E8",
+    "running=0 ARM9_PC=0x020087C0 ARM7_PC=0x037FE0B0",
+    "running=0 ARM9_PC=0x0200821C ARM7_PC=0x00000020"
+  ],
+  "final_state": "running=1 ARM9_PC=0x0200821C ARM7_PC=0x038042B0"
+}

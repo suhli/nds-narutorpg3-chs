@@ -277,3 +277,59 @@ chunk "CHCK", header_size=0x20, compression=0
 formal v0 可作为动态字体文件基础。
 下一步应设计 chunk_id、chunk table、缺字 fallback 和查找性能优化。
 ```
+
+## 12. chunk_id fallback 验证结论
+
+已验证 formal v0 entry 的 `chunk_id` 字段可以进入运行时决策。
+
+新增 ROM：
+
+```text
+rom/test_vram_font_chunk_fallback_probe.nds
+```
+
+当前 hook 规则：
+
+```text
+chunk_id == 0 -> chunk_base + glyph_offset
+chunk_id != 0 -> chunk_base + 0x20
+```
+
+关键样本：
+
+```text
+0x82CD, R2=0x40 -> R0=0x02283120  fallback
+0x82BD, R2=0x20 -> R0=0x02283000  fallback
+0x82A2, R2=0x40 -> R0=0x02283160  resident
+0x82A2, R2=0x20 -> R0=0x02283020  resident
+0x82DF, R2=0x40 -> R0=0x022831A0  resident
+```
+
+这说明缺页或未驻留 chunk 的临时行为可以由自定义 fallback glyph 接管，不必落回原 VRAM 日文字形。后续需要把 fallback 前的路径补成真实 chunk table 和按页加载。
+
+## 13. resident-slot 验证结论
+
+已验证 1x2 路径可以用 resident slot 判断 `chunk_id` 是否驻留。
+
+新增 ROM：
+
+```text
+rom/test_vram_font_chunk_table_probe.nds
+```
+
+关键样本：
+
+```text
+resident_1x2_chunk_id=1
+0x82CD, R2=0x40 -> R0=0x022831A0  resident hit
+0x82DF, R2=0x40 -> R0=0x02283120  fallback
+```
+
+新的约束也已经明确：
+
+```text
+copy_hook_size=0xC0
+0x02074140..0x02074200 已用满
+```
+
+因此后续不能继续把复杂分页逻辑直接追加到当前 copy hook 中。1x1 resident-slot 正例仍需补采样验证。

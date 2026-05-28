@@ -374,3 +374,79 @@ chunk = "CHCK" + 0x20-byte header + glyph data
 - formal v0 已验证，可作为后续动态字体文件格式基础。
 - `glyph_offset` 从 chunk 文件起点计算，第一枚 glyph offset 为 `0x20`。
 - 下一步进入 chunk 分页/分块设计，重点是 `chunk_id`、chunk table、缺字 fallback 和查找性能。
+
+## 2026-05-28 chunk_id fallback 原型验证
+
+已新增测试 ROM 与阶段缓存：
+
+```text
+tools/patch_vram_font_chunk_fallback_probe.py
+rom/test_vram_font_chunk_fallback_probe.nds
+plan/cache/vram-font-bypass/chunk-fallback-design.md
+```
+
+本次验证在 formal v0 entry 的 `chunk_id` 字段上增加最小分支：
+
+```text
+chunk_id == 0 -> 使用 entry.glyph_offset
+chunk_id != 0 -> 使用 chunk_base + 0x20 fallback glyph
+```
+
+关键运行时样本：
+
+```text
+0x82CD, R2=0x40 -> R0=02283120  fallback
+0x82BD, R2=0x20 -> R0=02283000  fallback
+0x82A2, R2=0x40 -> R0=02283160  resident
+0x82A2, R2=0x20 -> R0=02283020  resident
+```
+
+当前决策更新：
+- formal v0 继续作为文件格式基础。
+- `chunk_id != 0` 可先落到显式 fallback glyph，后续再替换为真实 chunk table + 按页加载。
+- 下一步重点转为 chunk table 格式、chunk resident 状态、加载失败恢复和 map 查找优化。
+
+## 2026-05-28 chunk table 设计草案
+
+新增阶段缓存：
+
+```text
+plan/cache/vram-font-bypass/chunk-table-design.md
+```
+
+当前设计判断：
+- `02089190` copy hook 暂不承担 NitroFS 缺页加载，只做 `char_code -> chunk_id/glyph_offset -> resident/fallback` 的快速决策。
+- 先验证单 resident slot：`entry.chunk_id == resident_slot.chunk_id` 时命中 resident chunk，否则命中 fallback glyph。
+- 真实按页加载应放到绘制前预扫、专门调度点或更高层缓存管理里，避免逐字绘制时同步读文件。
+
+## 2026-05-28 resident-slot probe 结果
+
+新增测试 ROM：
+
+```text
+tools/patch_vram_font_chunk_table_probe.py
+rom/test_vram_font_chunk_table_probe.nds
+plan/cache/vram-font-bypass/chunk-table-samples.json
+```
+
+关键限制：
+
+```text
+copy_hook_size = 0xC0
+COPY_HOOK_ADDR=0x02074140
+LOAD_HOOK_ADDR=0x02074200
+```
+
+当前 copy hook 区间已经用满，后续复杂逻辑不能继续硬塞。
+
+已验证：
+
+```text
+resident_1x2_chunk_id=1
+0x82CD, R2=0x40 -> R0=022831A0  resident hit
+0x82DF, R2=0x40 -> R0=02283120  fallback
+```
+
+未完成：
+- 1x1 resident-slot 正例需要补专用 probe 或更稳定的触发路径。
+- 多 slot 和真实缺页加载仍未进入实现。

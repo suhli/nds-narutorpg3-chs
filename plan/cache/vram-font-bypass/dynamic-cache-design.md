@@ -323,3 +323,89 @@ MCP 采样确认 header-aware hook 可用：
 - split-map 已升级为带 magic/version/header/entry flags 的 formal v0。
 - 当前 ARM9 hook 只读取 `entry_count/char_code/glyph_offset`，其余字段作为正式契约保留。
 - 下一步转入 chunk 分页/分块设计：明确 `chunk_id`、chunk table、缺字 fallback、线性查找到排序/二分查找的迁移条件。
+
+## 2026-05-28 chunk_id fallback 原型验证
+
+已新增：
+
+```text
+tools/patch_vram_font_chunk_fallback_probe.py
+rom/test_vram_font_chunk_fallback_probe.nds
+plan/cache/vram-font-bypass/chunk-fallback-design.md
+plan/cache/vram-font-bypass/chunk-fallback-samples.json
+```
+
+当前原型在 formal v0 的 `chunk_id` 字段上增加最小运行时分支：
+
+```text
+chunk_id == 0 -> R0 = chunk_base + glyph_offset
+chunk_id != 0 -> R0 = chunk_base + 0x20
+```
+
+其中 `0x20` 是 chunk header 大小，也作为当前 chunk 内的 fallback glyph offset。
+
+MCP 采样确认：
+
+```text
+0x82CD, R2=0x40 -> R0=0x02283120  fallback, chunk_id=1
+0x82BD, R2=0x20 -> R0=0x02283000  fallback, chunk_id=1
+0x82A2, R2=0x40 -> R0=0x02283160  resident, chunk_id=0
+0x82A2, R2=0x20 -> R0=0x02283020  resident, chunk_id=0
+0x82DF, R2=0x40 -> R0=0x022831A0  resident, chunk_id=0
+```
+
+结论：
+- `chunk_id` 可以进入当前 copy hook 的运行时决策。
+- 未驻留 chunk 不必落回原日文字形，可以稳定转向显式 fallback glyph。
+- 下一步应补正式 chunk table、按页加载和失败 fallback 规则。
+
+## 2026-05-28 chunk table 设计草案
+
+阶段缓存：
+
+```text
+plan/cache/vram-font-bypass/chunk-table-design.md
+```
+
+当前设计判断：
+- 不把 NitroFS 加载塞进 `02089190` copy hook；该位置先只负责快速查表和 fallback。
+- 先为 1x1/1x2 各验证一个 resident slot：`entry.chunk_id == resident_slot.chunk_id` 时使用 resident chunk，否则 fallback。
+- 真实 chunk 加载后续放到绘制前预扫、专门调度点或更高层缓存管理里验证。
+
+下一次 runtime probe 应覆盖：
+
+```text
+chunk_id=0, resident_slot=0 -> resident glyph
+chunk_id=1, resident_slot=0 -> fallback glyph
+chunk_id=1, resident_slot=1 -> resident glyph
+```
+
+## 2026-05-28 resident-slot probe 结果
+
+已新增：
+
+```text
+tools/patch_vram_font_chunk_table_probe.py
+rom/test_vram_font_chunk_table_probe.nds
+plan/cache/vram-font-bypass/chunk-table-samples.json
+```
+
+静态限制：
+
+```text
+copy_hook_size = 0xC0
+0x02074140..0x02074200 已用满
+```
+
+MCP 已验证 1x2 resident-slot 分支：
+
+```text
+resident_1x2_chunk_id = 1
+0x82CD, R2=0x40 -> R0=0x022831A0  resident hit
+0x82DF, R2=0x40 -> R0=0x02283120  fallback
+0x82A2, R2=0x40 -> R0=0x02283120  fallback
+```
+
+待补：
+- 1x1 的 `chunk_id=0/resident_slot=0` 正例本轮没有稳定复现。
+- 后续不能继续无规划扩展当前 copy hook；需要移动代码区或先做查找逻辑瘦身。

@@ -28,8 +28,15 @@ stage_cache:
     - plan/cache/vram-font-bypass/1x1-path-probe.md
     - plan/cache/vram-font-bypass/split-map-probe.md
     - plan/cache/vram-font-bypass/formal-format-design.md
+    - plan/cache/vram-font-bypass/chunk-fallback-design.md
+    - plan/cache/vram-font-bypass/chunk-table-design.md
 updated_at: "2026-05-28"
 notes:
+  - resident-slot probe 已完成 1x2 运行时验证：resident_1x2_chunk_id=1 时 82CD 命中 resident，82DF/82A2 走 fallback；1x1 resident 正例待补。
+  - chunk table probe 暴露新限制：copy_hook_size=0xC0，02074140..02074200 已用满，后续复杂逻辑需迁移或瘦身。
+  - chunk table 设计草案已补充：02089190 copy hook 暂不做 NitroFS 缺页加载，先验证 resident slot + fallback 快速决策。
+  - chunk_id fallback 原型已完成运行时验证：chunk_id=1 可稳定命中 chunk_base+0x20 fallback，chunk_id=0 仍按 glyph_offset 命中 resident glyph。
+  - 下一步围绕 chunk table、按页加载、加载失败 fallback 和 map 查找优化继续推进。
   - 新对话先读取本文件，再读取 current_plan.document 和 current_stage 对应缓存文档。
   - 具体计划使用 Markdown 文档组织；state.yaml 只作为统一恢复入口和当前进度指针。
   - 静态链路和运行时链路均已完成；0208913C -> 0208671C -> 02089190 已动态确认。
