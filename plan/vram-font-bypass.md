@@ -276,3 +276,33 @@ plan/cache/vram-font-bypass/preload-size-pressure.md
 - 正式格式应拆为常驻 map/header 和可分页/分块加载的 glyph 数据。
 - 映射表本身容量压力较小，先压垮 RAM 的是 `0x40 bytes/glyph` 的 1x2 glyph 数据。
 - 单个常驻 chs 数据块按保守线控制在 `896K` 以内；超过 1MB 的数据必须分块、按需加载或压缩后分段展开。
+
+## 2026-05-28 1x1 路径验证
+
+已完成 1x1 字体路径采样和 RAM glyph 替换验证。
+
+新增测试 ROM：
+
+```text
+rom/test_vram_font_file_preload_1x1_probe.nds
+```
+
+阶段缓存：
+
+```text
+plan/cache/vram-font-bypass/1x1-path-probe.md
+```
+
+关键结果：
+
+```text
+1x1 基线：R0=06880000, R2=0x20, LR=02089194
+1x1 替换：82BD -> R0=02282FA0, R2=0x20
+1x1 替换：82A2 -> R0=02282F60, R2=0x20
+```
+
+当前决策更新：
+
+- 1x1 与 1x2 复用 `02089190 -> 020087BC`，copy hook 可同时服务两条路径。
+- 正式 map 不能只按 `char_code` 命中；同一字符在 1x1/1x2 中可能需要不同 glyph。
+- 下一步正式文件格式优先拆成 `chs_1x1.map/chunk` 与 `chs_1x2.map/chunk`，减少早期 hook 的 mode 分支复杂度。

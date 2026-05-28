@@ -200,3 +200,35 @@ plan/cache/vram-font-bypass/preload-size-pressure.md
 - 保守设计线：单个常驻 chs 数据块不要超过 `896K`；`1008K` 只作为压力边界样本。
 
 下一步仍是正式化文件格式，但格式应优先支持分页或分块 glyph 数据，而不是单一大文件常驻。
+
+## 2026-05-28 1x1 路径验证
+
+已新增：
+
+```text
+rom/test_vram_font_file_preload_1x1_probe.nds
+plan/cache/vram-font-bypass/1x1-path-probe.md
+```
+
+no-op 采样确认 1x1 样本：
+
+```text
+current_char=0x8140 R0=0x06880000 R1=0x06894000 R2=0x20 LR=0x02089194
+```
+
+RAM 文件替换 probe 确认：
+
+```text
+0x82BD, R2=0x20 -> R0=0x02282FA0
+0x82A2, R2=0x20 -> R0=0x02282F60
+```
+
+结论：
+
+- 1x1 和 1x2 复用 `02089190 -> 020087BC`。
+- 1x1 复制大小为 `0x20`，glyph 源基址为 `0x06880000`。
+- 现有 copy hook 也可以服务 1x1，只要给出正确 RAM glyph 地址。
+
+新增约束：
+
+当前 probe 只按 `char_code` 查表，导致 `0x82A2` 在 1x2 和 1x1 样本中都会被替换。正式格式必须把 `mode` 或 `glyph_size` 纳入 key，或者拆成 1x1/1x2 两套 map。下一步设计优先选“两套 map”，减少 hook 代码复杂度。

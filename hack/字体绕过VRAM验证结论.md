@@ -183,3 +183,29 @@ glyph 数据分页或分块
 绘制时按需准备 glyph
 VRAM 只保留当前画面缓存
 ```
+
+## 9. 1x1 路径结论
+
+已验证 1x1 字体也走同一个复制入口：
+
+```text
+02089190 -> 020087BC
+```
+
+关键样本：
+
+```text
+baseline:
+current_char=0x8140 R0=0x06880000 R2=0x20
+
+RAM glyph:
+current_char=0x82BD R0=0x02282FA0 R2=0x20
+current_char=0x82A2 R0=0x02282F60 R2=0x20
+```
+
+结论：
+
+```text
+1x1 可以用同一个 copy hook 替换 R0。
+正式 map 需要区分 1x1/1x2，不能只按 char_code 查找。
+```
