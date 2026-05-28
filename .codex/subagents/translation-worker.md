@@ -41,6 +41,8 @@ Do not update `plan/`, `plan/state.yaml`, or any `plan/cache/` file during trans
 - `CTRL_0003` appears as the row terminator field and should not be inserted into the translated sentence unless it already appears inside `jp_text`.
 - Ignore Japanese ruby/furigana glosses. Common pattern: a kanji term followed by parentheses containing kana. Translate the kanji term only; do not translate or preserve the kana reading in the Chinese output.
 - Do not invent missing context. Mark uncertain cases in `translator_note`.
+- Do not use ASCII `?` as a placeholder for Chinese or any unknown character. If a real question mark is needed, use Chinese punctuation `？`.
+- `zh_text` must contain real Simplified Chinese text for translatable Japanese rows, not mojibake, romanization, or placeholder symbols.
 
 ## Byte Alignment
 
@@ -52,6 +54,7 @@ For `zh_text`, output a string whose UTF-8 byte length is exactly `source_byte_l
 - If it is too long, shorten the translation while preserving meaning and all `{CTRL_xxxx}` tokens.
 - Do not drop control tokens to fit the budget.
 - If exact alignment is impossible, leave the best translation, set `status=needs_fit`, and explain in `translator_note`.
+- Never satisfy byte alignment by replacing Chinese text with ASCII `?`.
 
 ## Glossary
 
