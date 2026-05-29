@@ -1,0 +1,1004 @@
+{
+  "rows": 63,
+  "checked_translated_rows": 63,
+  "issue_count": 137,
+  "control_issue_count": 0,
+  "byte_length_issue_count": 0,
+  "text_quality_issue_count": 137,
+  "control_issues": [],
+  "byte_length_issues": [],
+  "text_quality_issues": [
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00001A_0000",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1A",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00001A_0000",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1A",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000080_0001",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x80",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000080_0001",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x80",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0000F6_0002",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xF6",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0000F6_0002",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xF6",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000118_0003",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x118",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000118_0003",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x118",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000118_0003",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x118",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "ナズナ",
+      "zh_payload": "???"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00014E_0004",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x14E",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00014E_0004",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x14E",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0001A2_0005",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1A2",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0001A2_0005",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1A2",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0001A2_0005",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1A2",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "カナメ石",
+      "zh_payload": "??"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00023A_0006",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x23A",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00023A_0006",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x23A",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00023A_0006",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x23A",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "霊獣",
+      "zh_payload": "??"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000262_0007",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x262",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000262_0007",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x262",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000262_0007",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x262",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "霊獣",
+      "zh_payload": "??"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000294_0008",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x294",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000294_0008",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x294",
+      "reason": "suspicious_ascii_wrapped_control_token"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000294_0008",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x294",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000294_0008",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x294",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "霊獣",
+      "zh_payload": "??"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0002FC_0009",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x2FC",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0002FC_0009",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x2FC",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00033A_0010",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x33A",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00033A_0010",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x33A",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000374_0011",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x374",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000374_0011",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x374",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000374_0011",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x374",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "霊獣",
+      "zh_payload": "??"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0003B8_0012",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x3B8",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0003B8_0012",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x3B8",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000418_0013",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x418",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000418_0013",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x418",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000448_0014",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x448",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000448_0014",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x448",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00048A_0015",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x48A",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00048A_0015",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x48A",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00048A_0015",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x48A",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "邪念（じゃねん）",
+      "zh_payload": "??"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0004E6_0016",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x4E6",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0004E6_0016",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x4E6",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00054C_0017",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x54C",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00054C_0017",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x54C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00054C_0017",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x54C",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "霊獣",
+      "zh_payload": "??"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0005BE_0018",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x5BE",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0005BE_0018",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x5BE",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000608_0019",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x608",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000608_0019",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x608",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000658_0020",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x658",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000658_0020",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x658",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000658_0020",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x658",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "“ひとびとに　おおきな　わざわいが　おこる”",
+      "zh_payload": "???????????"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0006CC_0021",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x6CC",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0006CC_0021",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x6CC",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0006F0_0022",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x6F0",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0006F0_0022",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x6F0",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00076E_0023",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x76E",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00076E_0023",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x76E",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0007B4_0024",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x7B4",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0007B4_0024",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x7B4",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000824_0025",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x824",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000824_0025",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x824",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00087A_0026",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x87A",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00087A_0026",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x87A",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0008DC_0027",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x8DC",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0008DC_0027",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x8DC",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000928_0028",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x928",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000928_0028",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x928",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000994_0029",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x994",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000994_0029",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x994",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0009C2_0030",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x9C2",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0009C2_0030",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x9C2",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000A1A_0031",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xA1A",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000A1A_0031",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xA1A",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000A98_0032",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xA98",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000A98_0032",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xA98",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000AE8_0033",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xAE8",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000AE8_0033",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xAE8",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000B3A_0034",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xB3A",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000B64_0035",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xB64",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000B64_0035",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xB64",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000BAE_0036",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xBAE",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000BAE_0036",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xBAE",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000C0C_0037",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xC0C",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000C0C_0037",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xC0C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000C34_0038",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xC34",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000C34_0038",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xC34",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000C62_0039",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xC62",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000C62_0039",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xC62",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000CA6_0040",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xCA6",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000CA6_0040",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xCA6",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000CE0_0041",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xCE0",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000CE0_0041",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xCE0",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000D44_0042",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xD44",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000D44_0042",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xD44",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000DAE_0043",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xDAE",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000DAE_0043",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xDAE",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000DDE_0044",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xDDE",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000DDE_0044",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xDDE",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000DFE_0045",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xDFE",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000DFE_0045",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xDFE",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000E34_0046",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xE34",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000E34_0046",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xE34",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000E52_0047",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xE52",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000E52_0047",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xE52",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000E8E_0048",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xE8E",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000E8E_0048",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xE8E",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000ECC_0049",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xECC",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000ECC_0049",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xECC",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000F2C_0050",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xF2C",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000F2C_0050",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xF2C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000F70_0051",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xF70",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000F70_0051",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xF70",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000FBC_0052",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xFBC",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000FBC_0052",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xFBC",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000FF8_0053",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xFF8",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_000FF8_0053",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0xFF8",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001036_0054",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1036",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001036_0054",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1036",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001036_0054",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1036",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "しのび札（ふだ）",
+      "zh_payload": "???"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00108E_0055",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x108E",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_00108E_0055",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x108E",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0010FE_0056",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x10FE",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0010FE_0056",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x10FE",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001138_0057",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1138",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001138_0057",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1138",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001138_0057",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1138",
+      "reason": "empty_translated_highlight_payload",
+      "highlight_index": 0,
+      "jp_payload": "にんりょく",
+      "zh_payload": "??"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001186_0058",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1186",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001186_0058",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1186",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0011EE_0059",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x11EE",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0011EE_0059",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x11EE",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001262_0060",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1262",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001262_0060",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1262",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0012A2_0061",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x12A2",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_0012A2_0061",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x12A2",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001300_0062",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1300",
+      "reason": "ascii_question_mark_placeholder"
+    },
+    {
+      "id": "",
+      "jp_id_ref": "txt_3240d855_001300_0062",
+      "source_file": "msg/fld/evt/003.m",
+      "offset": "0x1300",
+      "reason": "translated_text_has_no_cjk"
+    }
+  ]
+}

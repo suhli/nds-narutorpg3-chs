@@ -1,12 +1,12 @@
 {
   "totals": {
     "chunks": 325,
-    "translated_chunks": 162,
+    "translated_chunks": 168,
     "validated_chunks": 162,
     "rows": 6174,
-    "translated_rows": 2024,
-    "aligned_rows": 2024,
-    "issue_count": 0
+    "translated_rows": 2191,
+    "aligned_rows": 2191,
+    "issue_count": 364
   },
   "entries": [
     {
@@ -1631,63 +1631,63 @@
     },
     {
       "chunk_id": "chunk_0163",
-      "status": "missing",
+      "status": "needs_fix",
       "rows": 63,
-      "translated_rows": 0,
-      "aligned_rows": 0,
-      "issue_count": null,
-      "translated_path": "",
-      "report_path": ""
+      "translated_rows": 63,
+      "aligned_rows": 63,
+      "issue_count": 137,
+      "translated_path": "text/translation/chunks/translated/chunk_0163.tsv",
+      "report_path": "text/translation/chunks/reports/chunk_0163-control-code-check.json"
     },
     {
       "chunk_id": "chunk_0164",
-      "status": "missing",
+      "status": "needs_fix",
       "rows": 31,
-      "translated_rows": 0,
-      "aligned_rows": 0,
-      "issue_count": null,
-      "translated_path": "",
-      "report_path": ""
+      "translated_rows": 31,
+      "aligned_rows": 31,
+      "issue_count": 68,
+      "translated_path": "text/translation/chunks/translated/chunk_0164.tsv",
+      "report_path": "text/translation/chunks/reports/chunk_0164-control-code-check.json"
     },
     {
       "chunk_id": "chunk_0165",
-      "status": "missing",
+      "status": "needs_fix",
       "rows": 4,
-      "translated_rows": 0,
-      "aligned_rows": 0,
-      "issue_count": null,
-      "translated_path": "",
-      "report_path": ""
+      "translated_rows": 4,
+      "aligned_rows": 4,
+      "issue_count": 8,
+      "translated_path": "text/translation/chunks/translated/chunk_0165.tsv",
+      "report_path": "text/translation/chunks/reports/chunk_0165-control-code-check.json"
     },
     {
       "chunk_id": "chunk_0166",
-      "status": "missing",
+      "status": "needs_fix",
       "rows": 30,
-      "translated_rows": 0,
-      "aligned_rows": 0,
-      "issue_count": null,
-      "translated_path": "",
-      "report_path": ""
+      "translated_rows": 30,
+      "aligned_rows": 30,
+      "issue_count": 70,
+      "translated_path": "text/translation/chunks/translated/chunk_0166.tsv",
+      "report_path": "text/translation/chunks/reports/chunk_0166-control-code-check.json"
     },
     {
       "chunk_id": "chunk_0167",
-      "status": "missing",
+      "status": "needs_fix",
       "rows": 36,
-      "translated_rows": 0,
-      "aligned_rows": 0,
-      "issue_count": null,
-      "translated_path": "",
-      "report_path": ""
+      "translated_rows": 36,
+      "aligned_rows": 36,
+      "issue_count": 75,
+      "translated_path": "text/translation/chunks/translated/chunk_0167.tsv",
+      "report_path": "text/translation/chunks/reports/chunk_0167-control-code-check.json"
     },
     {
       "chunk_id": "chunk_0168",
-      "status": "missing",
+      "status": "needs_fix",
       "rows": 3,
-      "translated_rows": 0,
-      "aligned_rows": 0,
-      "issue_count": null,
-      "translated_path": "",
-      "report_path": ""
+      "translated_rows": 3,
+      "aligned_rows": 3,
+      "issue_count": 6,
+      "translated_path": "text/translation/chunks/translated/chunk_0168.tsv",
+      "report_path": "text/translation/chunks/reports/chunk_0168-control-code-check.json"
     },
     {
       "chunk_id": "chunk_0169",
