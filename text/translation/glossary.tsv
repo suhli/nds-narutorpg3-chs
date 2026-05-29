@@ -19,3 +19,31 @@ jp_term	zh_cn_term	category	notes	source_ids
 バトル	战斗	ui	UI term	
 ターン	回合	ui	Battle term	
 ダメージ	伤害	term	Battle term	
+しのび札	忍识札	item	Local card item term used in script text	
+忍しき札	忍识札	item	Variant source spelling for same card item	
+短冊街	短册街	place	Place name; ignore kana reading in source	
+水晶の渓谷	水晶溪谷	place	Place name; ignore kana reading in source	
+砂隠れ	砂隐	place	Mainland Naruto convention	
+口よせペット	通灵宠物	term	Summon pet field ability term	
+ガマ竜	蛤蟆龙	character	Mainland Naruto convention for Gamatatsu	
+ガマ吉	蛤蟆吉	character	Mainland Naruto convention for Gamakichi	
+自来也	自来也	character	Mainland Naruto convention	
+封印	封印	term	Mainland Naruto convention	
+霊獣	灵兽	term	Story term	
+邪気	邪气	term	Story term	
+破邪の谷	破邪之谷	place	Story place name; ignore kana reading in source	
+しゅんしん巻物	瞬身卷轴	item	Field teleport scroll item	
+赤丸	赤丸	character	Mainland Naruto convention	
+兵糧丸	兵粮丸	item	Mainland Naruto convention	
+ナズナ	娜兹娜	character	Story character transliteration	
+ヒノキ	桧木	character	Story character name	
+かがみ	镜子	item	Story key item	
+うずまきナルト	漩涡鸣人	character	Mainland Naruto full-name convention	
+春野サクラ	春野樱	character	Mainland Naruto full-name convention	
+はたけカカシ	旗木卡卡西	character	Mainland Naruto full-name convention	
+綱手	纲手	character	Mainland Naruto convention	
+担当上忍	担当上忍	term	Naruto rank/role term	
+木ノ葉マーク	木叶标记	ui	Save/recovery field marker	
+セレクトボタン	SELECT键	ui	Button name; keep Latin label for screen control	
+セーブ	保存	ui	Save command	
+スタミナ	体力	term	Field/battle resource term	
