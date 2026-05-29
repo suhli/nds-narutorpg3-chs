@@ -46,4 +46,34 @@ jp_term	zh_cn_term	category	notes	source_ids
 木ノ葉マーク	木叶标记	ui	Save/recovery field marker	
 セレクトボタン	SELECT键	ui	Button name; keep Latin label for screen control	
 セーブ	保存	ui	Save command	
-スタミナ	体力	term	Field/battle resource term	
+スタミナ	体力	term	Field/battle resource term
+カナメ石	要石	object	chunk_0163-0172	灵兽封印相关道具。
+破邪のかがみ	破邪镜	object	chunk_0163-0172	用于削弱邪气、封印灵兽的镜子。
+にんりょく	忍力	system	chunk_0163-0172	角色/战斗能力用语。
+バトル口よせ	战斗通灵	system	chunk_0163-0172	教程中的战斗通灵术语。
+奈良シカマル	奈良鹿丸	character	chunk_0163-0172	木叶角色名。
+山中いの	山中井野	character	chunk_0163-0172	木叶角色名。
+秋道チョウジ	秋道丁次	character	chunk_0163-0172	木叶角色名。
+ゲンショウ	玄翔	character	chunk_0163-0172	剧情人物名。
+ロッカク	六角	character	chunk_0163-0172	剧情人物名。
+肉弾戦車	肉弹战车	jutsu	chunk_0163-0172	丁次忍术。
+影真似の術	影子模仿术	jutsu	chunk_0163-0172	鹿丸忍术。
+フォーマンセル	四人小队	system	chunk_0163-0172	小队编制教程术语。
+せんぱつメンバー	首发成员	system	chunk_0163-0172	队伍编成教程术语。
+ひかえメンバー	后备成员	system	chunk_0163-0172	队伍编成教程术语。
+チームワーク	团队合作	system	chunk_0163-0172	队伍协作教程术语。
+硫黄谷	硫黄谷	place	chunk_0163-0172	地图地名。
+木ノ葉の森	木叶森林	place	chunk_0163-0172	地图地名。
+こうそくいどうマップ	高速移动地图	system	chunk_0163-0172	地图教程术语。
+白	白	character	chunk_0173-0184	波之国幻影角色。
+桃地再不斬	桃地再不斩	character	chunk_0173-0184	雾隐鬼人，再不斩全名。
+波の国	波之国	place	chunk_0173-0184	剧情地点。
+キバ	牙	character	chunk_0173-0184	木叶角色，犬冢牙简称。
+シノ	志乃	character	chunk_0173-0184	木叶角色，油女志乃简称。
+ヒナタ	雏田	character	chunk_0173-0184	木叶角色，日向雏田简称。
+カツユ	蛞蝓	summon	chunk_0173-0184	纲手通灵兽。
+ミニカツユ	小蛞蝓	summon	chunk_0173-0184	场地通灵宠物。
+どくのぬま	毒沼	system	chunk_0173-0184	场地伤害地形。
+四肢操身の術	四肢操身之术	jutsu	chunk_0173-0184	敌方操纵术。
+忍法 炎虎爆殺	忍法 炎虎爆杀	jutsu	chunk_0173-0184	敌方忍术。
+チャクラのなわ	查克拉绳索	system	chunk_0173-0184	束缚雏田的术式表现。
