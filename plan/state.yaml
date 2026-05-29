@@ -4,8 +4,8 @@ current_plan:
   document: plan/text-dump-translation.md
   status: in_progress
 current_stage:
-  id: encoding-control-model
-  name: 编码、控制符和边界建模
+  id: translation-baseline
+  name: 翻译表分块与基线翻译
   status: in_progress
 stage_cache:
   dir: plan/cache/text-dump-translation
@@ -13,9 +13,12 @@ stage_cache:
     - plan/cache/text-dump-translation/text-source-inventory.md
     - plan/cache/text-dump-translation/encoding-control-codes.md
     - plan/cache/text-dump-translation/dump-results.md
+    - plan/cache/text-dump-translation/translation-baseline.md
 updated_at: "2026-05-29"
 notes:
   - 字体 v0 作为本计划前置完成条件保留：TTF -> font-dir -> ROM -> 模拟器冒烟闭环已通过，证据见 plan/cache/vram-font-bypass/generated-font-build.md 和 plan/cache/vram-font-bypass/integrated-build-and-smoke.md。
   - 本计划只处理文本 dump、编码/控制符/边界识别和翻译表建立；码表生成、字模生成、原文码表替换、文本回写和 ROM 验证留给后续独立 plan。
   - 第一阶段从 rom/unpacked/origin/data/text 的 msg/script/param/cutin2script 盘点开始，未确认边界和控制符的来源不进入正式翻译基线。
   - 初始候选 dump 已生成：text/original/jp_dump.tsv 与 text/translation/zh_translation.tsv；当前 6174 条候选，需继续收敛控制符和 param 边界后冻结翻译基线。
+  - 当前已进入分块翻译：text/translation/chunks/index.json 将 6174 条候选切为 325 个 chunk；先翻译、校验并复核分块产物，再合并回正式翻译表。
+  - 当前分块翻译进度：chunk_0001 至 chunk_0030 已完成并通过校验，进度见 text/translation/chunks/progress.json 和 plan/cache/text-dump-translation/translation-baseline.md。

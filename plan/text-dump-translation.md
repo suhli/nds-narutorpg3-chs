@@ -252,7 +252,7 @@ plan/cache/text-dump-translation/dump-results.md
 
 ### 4. 翻译表建立与控制符校验
 
-状态：待开始。
+状态：进行中。已建立 chunk 分块、翻译 worker 规则和本地增强校验；先按 chunk 产出译文，再合并回正式翻译表。
 
 目标：
 
@@ -265,6 +265,11 @@ plan/cache/text-dump-translation/dump-results.md
 
 ```text
 text/translation/zh_translation.tsv
+text/translation/chunks/index.json
+text/translation/chunks/source/
+text/translation/chunks/translated/
+text/translation/chunks/reports/
+text/translation/chunks/progress.json
 tools/check_translation_table.py
 text/reports/control-code-check.json
 plan/cache/text-dump-translation/translation-baseline.md
@@ -277,6 +282,14 @@ plan/cache/text-dump-translation/translation-baseline.md
 - 可从译文表统计中文字符集，但本阶段不实际生成码表。
 - 长文本、动态变量文本、菜单窄列文本有风险标记。
 - 未确认来源只进入 TODO/疑似清单，不进入正式翻译基线。
+
+当前执行规则：
+
+- 分块翻译不得更新后续码表、字模或 ROM 回写产物。
+- 每个 chunk 译文必须保留 `{CTRL_xxxx}` 控制符顺序；`zh_text` 序列化长度必须等于 `source_byte_len`，其中控制符 token 按原始 2 字节控制字计，其余译文按 UTF-8 字节计。
+- 结构校验通过后还要做语义抽检：不能把多句教程或对白压缩成摘要，源文中的人名、称呼、条件和操作对象需要保留。
+- 字节对齐不足时只在句尾补 ASCII 空格；不得使用 ASCII `?`、乱码、罗马音或空高亮 span 占位。
+- 遇到“汉字术语 + 括号假名注音”时，只翻译术语，忽略注音。
 
 ### 5. 冻结 handoff 给后续码表/回写计划
 

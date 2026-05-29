@@ -1,0 +1,21 @@
+{
+  "rows": 1,
+  "checked_translated_rows": 1,
+  "issue_count": 1,
+  "control_issue_count": 0,
+  "byte_length_issue_count": 1,
+  "text_quality_issue_count": 0,
+  "control_issues": [],
+  "byte_length_issues": [
+    {
+      "id": "zh_txt_687921f6_00000C_0000",
+      "jp_id_ref": "txt_687921f6_00000C_0000",
+      "source_file": "msg/btl/023.m",
+      "offset": "0xC",
+      "expected_utf8_bytes": 146,
+      "actual_utf8_bytes": 236,
+      "delta": 90
+    }
+  ],
+  "text_quality_issues": []
+}
