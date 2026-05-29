@@ -49,6 +49,26 @@ chunk_0027
 chunk_0028
 chunk_0029
 chunk_0030
+chunk_0031
+chunk_0032
+chunk_0033
+chunk_0034
+chunk_0035
+chunk_0036
+chunk_0037
+chunk_0038
+chunk_0039
+chunk_0040
+chunk_0041
+chunk_0042
+chunk_0043
+chunk_0044
+chunk_0045
+chunk_0046
+chunk_0047
+chunk_0048
+chunk_0049
+chunk_0050
 ```
 
 进度汇总入口：
@@ -61,10 +81,10 @@ text/translation/chunks/progress.json
 
 ```text
 chunks=325
-translated=30
-validated=30
+translated=50
+validated=50
 issues=0
-translated_rows=163
+translated_rows=316
 ```
 
 ## 质量门槛
@@ -105,7 +125,7 @@ chunk_0009
 chunk_0010
 ```
 
-`chunk_0006`、`chunk_0007`、`chunk_0008` 已由主线重写并通过校验；`chunk_0009` 制作人员表与 `chunk_0010` 结尾提示也已完成并通过校验。`chunk_0011` 到 `chunk_0030` 已继续完成，其中 `chunk_0011` 到 `chunk_0019`、`chunk_0021`、`chunk_0023`、`chunk_0025` 为短系统文本，`chunk_0020` 到 `chunk_0030` 为电影支线对白。
+`chunk_0006`、`chunk_0007`、`chunk_0008` 已由主线重写并通过校验；`chunk_0009` 制作人员表与 `chunk_0010` 结尾提示也已完成并通过校验。`chunk_0011` 到 `chunk_0030` 已继续完成，其中 `chunk_0011` 到 `chunk_0019`、`chunk_0021`、`chunk_0023`、`chunk_0025` 为短系统文本，`chunk_0020` 到 `chunk_0030` 为电影支线对白。`chunk_0031` 到 `chunk_0050` 继续覆盖电影支线对白、短系统文本和少量候选边界截断行；截断行已保留控制符并在 `translator_note` 标注。
 
 本轮修正：
 
@@ -115,7 +135,7 @@ chunk_0010
 
 ## 下一步
 
-1. 从 `chunk_0031` 继续向后翻译。
+1. 从 `chunk_0051` 继续向后翻译。
 2. 每批完成后跑 `tools/check_translation_table.py` 校验每个 chunk。
 3. 跑 `tools/summarize_translation_chunks.py` 更新 `progress.json`。
 4. 当前小批次稳定后，再合并回 `text/translation/zh_translation.tsv`。
