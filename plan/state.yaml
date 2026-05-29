@@ -21,4 +21,4 @@ notes:
   - 第一阶段从 rom/unpacked/origin/data/text 的 msg/script/param/cutin2script 盘点开始，未确认边界和控制符的来源不进入正式翻译基线。
   - 初始候选 dump 已生成：text/original/jp_dump.tsv 与 text/translation/zh_translation.tsv；当前 6174 条候选，需继续收敛控制符和 param 边界后冻结翻译基线。
   - 当前已进入分块翻译：text/translation/chunks/index.json 将 6174 条候选切为 325 个 chunk；先翻译、校验并复核分块产物，再合并回正式翻译表。
-  - 当前分块翻译进度：chunk_0001 至 chunk_0135 已完成并通过校验，进度见 text/translation/chunks/progress.json 和 plan/cache/text-dump-translation/translation-baseline.md；下一步从 chunk_0136 继续。
+  - 当前分块翻译进度：chunk_0001 至 chunk_0136 已完成并通过校验，进度见 text/translation/chunks/progress.json 和 plan/cache/text-dump-translation/translation-baseline.md；下一步从 chunk_0137 继续。
