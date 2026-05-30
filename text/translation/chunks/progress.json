@@ -2,10 +2,10 @@
   "totals": {
     "chunks": 325,
     "translated_chunks": 162,
-    "validated_chunks": 161,
+    "validated_chunks": 162,
     "rows": 6174,
-    "translated_rows": 2004,
-    "aligned_rows": 2004,
+    "translated_rows": 2024,
+    "aligned_rows": 2024,
     "issue_count": 0
   },
   "entries": [
@@ -1621,10 +1621,10 @@
     },
     {
       "chunk_id": "chunk_0162",
-      "status": "needs_fix",
+      "status": "validated",
       "rows": 25,
-      "translated_rows": 5,
-      "aligned_rows": 5,
+      "translated_rows": 25,
+      "aligned_rows": 25,
       "issue_count": 0,
       "translated_path": "text/translation/chunks/translated/chunk_0162.tsv",
       "report_path": "text/translation/chunks/reports/chunk_0162-control-code-check.json"
