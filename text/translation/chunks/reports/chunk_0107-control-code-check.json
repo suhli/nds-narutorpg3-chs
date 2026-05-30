@@ -1,12 +1,19 @@
 {
-  "rows": 0,
-  "checked_translated_rows": 0,
-  "issue_count": 0,
+  "rows": 6,
+  "checked_translated_rows": 6,
+  "issue_count": 1,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
-  "text_quality_issue_count": 0,
+  "text_quality_issue_count": 1,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [],
-  "reset": true
+  "text_quality_issues": [
+    {
+      "id": "zh_txt_0828091f_0000C6_0005",
+      "jp_id_ref": "txt_0828091f_0000C6_0005",
+      "source_file": "msg/fld/005.m",
+      "offset": "0xC6",
+      "reason": "translated_text_has_no_cjk"
+    }
+  ]
 }
