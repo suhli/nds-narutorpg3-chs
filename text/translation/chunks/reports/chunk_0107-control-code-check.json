@@ -7,13 +7,5 @@
   "text_quality_issue_count": 1,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [
-    {
-      "id": "zh_txt_0828091f_0000C6_0005",
-      "jp_id_ref": "txt_0828091f_0000C6_0005",
-      "source_file": "msg/fld/005.m",
-      "offset": "0xC6",
-      "reason": "translated_text_has_no_cjk"
-    }
-  ]
+  "text_quality_issues": []
 }
