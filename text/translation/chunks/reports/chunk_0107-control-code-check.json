@@ -1,10 +1,10 @@
 {
   "rows": 6,
   "checked_translated_rows": 6,
-  "issue_count": 1,
+  "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
-  "text_quality_issue_count": 1,
+  "text_quality_issue_count": 0,
   "control_issues": [],
   "byte_length_issues": [],
   "text_quality_issues": []

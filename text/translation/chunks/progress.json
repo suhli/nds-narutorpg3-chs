@@ -1,12 +1,12 @@
 {
   "totals": {
     "chunks": 325,
-    "translated_chunks": 111,
-    "validated_chunks": 110,
+    "translated_chunks": 112,
+    "validated_chunks": 112,
     "rows": 6174,
-    "translated_rows": 1016,
-    "aligned_rows": 1016,
-    "issue_count": 1
+    "translated_rows": 1017,
+    "aligned_rows": 1017,
+    "issue_count": 0
   },
   "entries": [
     {
@@ -1071,11 +1071,11 @@
     },
     {
       "chunk_id": "chunk_0107",
-      "status": "needs_fix",
+      "status": "validated",
       "rows": 6,
       "translated_rows": 6,
       "aligned_rows": 6,
-      "issue_count": 1,
+      "issue_count": 0,
       "translated_path": "text/translation/chunks/translated/chunk_0107.tsv",
       "report_path": "text/translation/chunks/reports/chunk_0107-control-code-check.json"
     },
@@ -1121,11 +1121,11 @@
     },
     {
       "chunk_id": "chunk_0112",
-      "status": "pending",
+      "status": "validated",
       "rows": 1,
-      "translated_rows": 0,
-      "aligned_rows": 0,
-      "issue_count": null,
+      "translated_rows": 1,
+      "aligned_rows": 1,
+      "issue_count": 0,
       "translated_path": "text/translation/chunks/translated/chunk_0112.tsv",
       "report_path": "text/translation/chunks/reports/chunk_0112-control-code-check.json"
     },
