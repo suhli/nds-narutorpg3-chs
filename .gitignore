@@ -4,3 +4,4 @@ rom/
 __pycache__/
 *.pyc*
 *.ttf
+.env
