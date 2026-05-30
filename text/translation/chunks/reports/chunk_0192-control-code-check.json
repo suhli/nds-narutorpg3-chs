@@ -1,11 +1,12 @@
 {
-  "rows": 48,
-  "checked_translated_rows": 48,
+  "rows": 0,
+  "checked_translated_rows": 0,
   "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
   "text_quality_issue_count": 0,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": []
+  "text_quality_issues": [],
+  "reset": true
 }

@@ -1,4 +1,4 @@
 id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
-zh_txt_8ab67b95_000008_0000	txt_8ab67b95_000008_0000	message	msg/eiga/014.m	0x8	0	82 b9 82 a2 82 b1 82 a4 03 00	せいこう			todo_candidate_boundary	unknown	yes		candidate dump; confirm boundary/control codes before baseline freeze	10	0	「・・・たんじゅんだってばよ」	せいこう
-zh_txt_8ab67b95_000014_0001	txt_8ab67b95_000014_0001	message	msg/eiga/014.m	0x14	1	82 b9 82 a2 82 b1 82 a4 03 00	せいこう			todo_candidate_boundary	unknown	yes		candidate dump; confirm boundary/control codes before baseline freeze	10	1	せいこう	せいこう
-zh_txt_8ab67b95_000020_0002	txt_8ab67b95_000020_0002	message	msg/eiga/014.m	0x20	2	82 b9 82 a2 82 b1 82 a4 03 00	せいこう			todo_candidate_boundary	unknown	yes		candidate dump; confirm boundary/control codes before baseline freeze	10	2	せいこう	「・・・フン　えいがなんて{CTRL_0001}どこが　たのしいんだ・・・」
+zh_txt_8ab67b95_000008_0000	txt_8ab67b95_000008_0000	message	msg/eiga/014.m	0x8	0	82 b9 82 a2 82 b1 82 a4 03 00	せいこう			pending_translation	unknown	yes			10	0	「・・・たんじゅんだってばよ」	せいこう
+zh_txt_8ab67b95_000014_0001	txt_8ab67b95_000014_0001	message	msg/eiga/014.m	0x14	1	82 b9 82 a2 82 b1 82 a4 03 00	せいこう			pending_translation	unknown	yes			10	1	せいこう	せいこう
+zh_txt_8ab67b95_000020_0002	txt_8ab67b95_000020_0002	message	msg/eiga/014.m	0x20	2	82 b9 82 a2 82 b1 82 a4 03 00	せいこう			pending_translation	unknown	yes			10	2	せいこう	「・・・フン　えいがなんて{CTRL_0001}どこが　たのしいんだ・・・」

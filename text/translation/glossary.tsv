@@ -77,3 +77,14 @@ jp_term	zh_cn_term	category	notes	source_ids
 四肢操身の術	四肢操身之术	jutsu	chunk_0173-0184	敌方操纵术。
 忍法 炎虎爆殺	忍法 炎虎爆杀	jutsu	chunk_0173-0184	敌方忍术。
 チャクラのなわ	查克拉绳索	system	chunk_0173-0184	束缚雏田的术式表现。
+白眼	白眼	jutsu	chunk_0185-0196	日向一族瞳术。
+トントン	豚豚	summon	chunk_0185-0196	纲手的小猪通灵宠物。
+口よせペット・トントン	通灵宠物·豚豚	system	chunk_0185-0196	通灵宠物习得提示。
+砂隠れの里	砂隐村	place	chunk_0185-0196	风之国忍村。
+テマリ	手鞠	character	chunk_0185-0196	砂隐角色。
+ネジ	宁次	character	chunk_0185-0196	木叶角色，日向宁次简称。
+リー	小李	character	chunk_0185-0196	木叶角色，洛克李简称。
+死のさばく	死亡沙漠	place	chunk_0185-0196	砂隐附近区域。
+八卦掌回天	八卦掌回天	jutsu	chunk_0185-0196	宁次防御术。
+中忍しけん	中忍考试	event	chunk_0185-0196	剧情地点/回忆场景。
+本選会場	本选会场	place	chunk_0185-0196	中忍考试决赛场地。

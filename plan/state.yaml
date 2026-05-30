@@ -14,11 +14,12 @@ stage_cache:
     - plan/cache/text-dump-translation/encoding-control-codes.md
     - plan/cache/text-dump-translation/dump-results.md
     - plan/cache/text-dump-translation/translation-baseline.md
-updated_at: "2026-05-29"
+updated_at: "2026-05-30"
 notes:
   - 字体 v0 作为本计划前置完成条件保留：TTF -> font-dir -> ROM -> 模拟器冒烟闭环已通过，证据见 plan/cache/vram-font-bypass/generated-font-build.md 和 plan/cache/vram-font-bypass/integrated-build-and-smoke.md。
   - 本计划只处理文本 dump、编码/控制符/边界识别和翻译表建立；码表生成、字模生成、原文码表替换、文本回写和 ROM 验证留给后续独立 plan。
   - 第一阶段从 rom/unpacked/origin/data/text 的 msg/script/param/cutin2script 盘点开始，未确认边界和控制符的来源不进入正式翻译基线。
   - 初始候选 dump 已生成：text/original/jp_dump.tsv 与 text/translation/zh_translation.tsv；当前 6174 条候选，需继续收敛控制符和 param 边界后冻结翻译基线。
   - 当前已进入分块翻译：text/translation/chunks/index.json 将 6174 条候选切为 325 个 chunk；先翻译、校验并复核分块产物，再合并回正式翻译表。
-  - 当前分块翻译进度：chunk_0001 至 chunk_0184 已完成并通过校验，进度见 text/translation/chunks/progress.json 和 plan/cache/text-dump-translation/translation-baseline.md；下一步从 chunk_0185 继续。
+  - 既有 chunk 译文已按用户要求全部废弃并清空；text/translation/chunks/progress.json 当前为 chunks=325、translated=0、validated=0、issues=0。
+  - 新增 OpenAI 兼容接口批量翻译脚本 tools/batch_translate_chunks_openai.py；下一步从 chunk_0001 开始用脚本小批量翻译并自动校验。
