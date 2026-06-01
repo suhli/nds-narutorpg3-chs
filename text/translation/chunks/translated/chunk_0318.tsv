@@ -1,0 +1,81 @@
+id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
+zh_txt_d2bb7093_009B00_0160	txt_d2bb7093_009B00_0160	param	param/mo_s/mo_s_param.dat	0x9B00	160	82 b6 82 e7 82 a2 82 e2	じらいや	自来  		translated_aligned	ok	yes			8	0	サスケ	ツナデ
+zh_txt_d2bb7093_009BF8_0161	txt_d2bb7093_009BF8_0161	param	param/mo_s/mo_s_param.dat	0x9BF8	161	83 63 83 69 83 66	ツナデ	纲手		translated_aligned	tight	yes			6	1	じらいや	オロチまる
+zh_txt_d2bb7093_009CF0_0162	txt_d2bb7093_009CF0_0162	param	param/mo_s/mo_s_param.dat	0x9CF0	162	83 49 83 8d 83 60 82 dc 82 e9	オロチまる	大蛇丸 		translated_aligned	tight	yes			10	2	ツナデ	ナルト
+zh_txt_d2bb7093_009DE8_0163	txt_d2bb7093_009DE8_0163	param	param/mo_s/mo_s_param.dat	0x9DE8	163	83 69 83 8b 83 67	ナルト	鸣人		translated_aligned	tight	yes			6	3	オロチまる	サスケ
+zh_txt_d2bb7093_009EE0_0164	txt_d2bb7093_009EE0_0164	param	param/mo_s/mo_s_param.dat	0x9EE0	164	83 54 83 58 83 50	サスケ	佐助		translated_aligned	tight	yes			6	4	ナルト	サスケ
+zh_txt_d2bb7093_009FD8_0165	txt_d2bb7093_009FD8_0165	param	param/mo_s/mo_s_param.dat	0x9FD8	165	83 54 83 58 83 50	サスケ	佐助		translated_aligned	tight	yes			6	5	サスケ	いの
+zh_txt_d2bb7093_00A0D0_0166	txt_d2bb7093_00A0D0_0166	param	param/mo_s/mo_s_param.dat	0xA0D0	166	82 a2 82 cc	いの	井 		translated_aligned	tight	yes			4	6	サスケ	ジロウボウ
+zh_txt_d2bb7093_00A1C8_0167	txt_d2bb7093_00A1C8_0167	param	param/mo_s/mo_s_param.dat	0xA1C8	167	83 57 83 8d 83 45 83 7b 83 45	ジロウボウ	次郎坊 		translated_aligned	tight	yes			10	7	いの	タユヤ
+zh_txt_d2bb7093_00A2C0_0168	txt_d2bb7093_00A2C0_0168	param	param/mo_s/mo_s_param.dat	0xA2C0	168	83 5e 83 86 83 84	タユヤ	多由		translated_aligned	tight	yes			6	8	ジロウボウ	サクラ
+zh_txt_d2bb7093_00A3B8_0169	txt_d2bb7093_00A3B8_0169	param	param/mo_s/mo_s_param.dat	0xA3B8	169	83 54 83 4e 83 89	サクラ	小樱		translated_aligned	tight	yes			6	9	タユヤ	サコン
+zh_txt_d2bb7093_00A4B0_0170	txt_d2bb7093_00A4B0_0170	param	param/mo_s/mo_s_param.dat	0xA4B0	170	83 54 83 52 83 93	サコン	左近		translated_aligned	tight	yes			6	10	サクラ	ウコン
+zh_txt_d2bb7093_00A5A8_0171	txt_d2bb7093_00A5A8_0171	param	param/mo_s/mo_s_param.dat	0xA5A8	171	83 45 83 52 83 93	ウコン	右近		translated_aligned	tight	yes			6	11	サコン	カンクロウ
+zh_txt_d2bb7093_00A6A0_0172	txt_d2bb7093_00A6A0_0172	param	param/mo_s/mo_s_param.dat	0xA6A0	172	83 4a 83 93 83 4e 83 8d 83 45	カンクロウ	勘九郎 		translated_aligned	tight	yes			10	12	ウコン	ネジ
+zh_txt_d2bb7093_00A798_0173	txt_d2bb7093_00A798_0173	param	param/mo_s/mo_s_param.dat	0xA798	173	83 6c 83 57	ネジ	宁 		translated_aligned	tight	yes			4	13	カンクロウ	キドウマル
+zh_txt_d2bb7093_00A890_0174	txt_d2bb7093_00A890_0174	param	param/mo_s/mo_s_param.dat	0xA890	174	83 4c 83 68 83 45 83 7d 83 8b	キドウマル	鬼童丸 		translated_aligned	tight	yes			10	14	ネジ	キミマロ
+zh_txt_d2bb7093_00A988_0175	txt_d2bb7093_00A988_0175	param	param/mo_s/mo_s_param.dat	0xA988	175	83 4c 83 7e 83 7d 83 8d	キミマロ	君麻  		translated_aligned	ok	yes			8	15	キドウマル	テマリ
+zh_txt_d2bb7093_00AA80_0176	txt_d2bb7093_00AA80_0176	param	param/mo_s/mo_s_param.dat	0xAA80	176	83 65 83 7d 83 8a	テマリ	手鞠		translated_aligned	tight	yes			6	16	キミマロ	キミマロ
+zh_txt_d2bb7093_00AB78_0177	txt_d2bb7093_00AB78_0177	param	param/mo_s/mo_s_param.dat	0xAB78	177	83 4c 83 7e 83 7d 83 8d	キミマロ	君麻  		translated_aligned	ok	yes			8	17	テマリ	オロチまる
+zh_txt_d2bb7093_00AC70_0178	txt_d2bb7093_00AC70_0178	param	param/mo_s/mo_s_param.dat	0xAC70	178	83 49 83 8d 83 60 82 dc 82 e9	オロチまる	大蛇丸 		translated_aligned	tight	yes			10	18	キミマロ	さんだいめほかげ
+zh_txt_d2bb7093_00AD68_0179	txt_d2bb7093_00AD68_0179	param	param/mo_s/mo_s_param.dat	0xAD68	179	82 b3 82 f1 82 be 82 a2 82 df 82 d9 82 a9 82 b0	さんだいめほかげ	三代目火影 		translated_aligned	tight	yes			16	19	オロチまる	ロッカク
+zh_txt_d2bb7093_00AE60_0180	txt_d2bb7093_00AE60_0180	param	param/mo_s/mo_s_param.dat	0xAE60	180	83 8d 83 62 83 4a 83 4e	ロッカク	六角  		translated_aligned	ok	yes			8	20	さんだいめほかげ	ジャコウ
+zh_txt_d2bb7093_00AF58_0181	txt_d2bb7093_00AF58_0181	param	param/mo_s/mo_s_param.dat	0xAF58	181	83 57 83 83 83 52 83 45	ジャコウ	麝香  		translated_aligned	ok	yes			8	21	ロッカク	ゲンショウ
+zh_txt_d2bb7093_00B050_0182	txt_d2bb7093_00B050_0182	param	param/mo_s/mo_s_param.dat	0xB050	182	83 51 83 93 83 56 83 87 83 45	ゲンショウ	幻象    		translated_aligned	ok	yes			10	22	ジャコウ	イタチ
+zh_txt_d2bb7093_00B148_0183	txt_d2bb7093_00B148_0183	param	param/mo_s/mo_s_param.dat	0xB148	183	83 43 83 5e 83 60	イタチ	鼬   		translated_aligned	ok	yes			6	23	ゲンショウ	キサメ
+zh_txt_d2bb7093_00B240_0184	txt_d2bb7093_00B240_0184	param	param/mo_s/mo_s_param.dat	0xB240	184	83 4c 83 54 83 81	キサメ	鬼鲛		translated_aligned	tight	yes			6	24	イタチ	ミズキ
+zh_txt_d2bb7093_00B338_0185	txt_d2bb7093_00B338_0185	param	param/mo_s/mo_s_param.dat	0xB338	185	83 7e 83 59 83 4c	ミズキ	水木		translated_aligned	tight	yes			6	25	キサメ	カカシ
+zh_txt_d2bb7093_00B430_0186	txt_d2bb7093_00B430_0186	param	param/mo_s/mo_s_param.dat	0xB430	186	83 4a 83 4a 83 56	カカシ	卡卡		translated_aligned	tight	yes			6	26	ミズキ	アスマ
+zh_txt_d2bb7093_00B528_0187	txt_d2bb7093_00B528_0187	param	param/mo_s/mo_s_param.dat	0xB528	187	83 41 83 58 83 7d	アスマ	阿玛		translated_aligned	tight	yes			6	27	カカシ	くれない
+zh_txt_d2bb7093_00B620_0188	txt_d2bb7093_00B620_0188	param	param/mo_s/mo_s_param.dat	0xB620	188	82 ad 82 ea 82 c8 82 a2	くれない	红     		translated_aligned	ok	yes			8	28	アスマ	ナルト
+zh_txt_d2bb7093_00B718_0189	txt_d2bb7093_00B718_0189	param	param/mo_s/mo_s_param.dat	0xB718	189	83 69 83 8b 83 67	ナルト	鸣人		translated_aligned	tight	yes			6	29	くれない	サスケ
+zh_txt_d2bb7093_00B810_0190	txt_d2bb7093_00B810_0190	param	param/mo_s/mo_s_param.dat	0xB810	190	83 54 83 58 83 50	サスケ	佐助		translated_aligned	tight	yes			6	30	ナルト	カカシ
+zh_txt_d2bb7093_00B908_0191	txt_d2bb7093_00B908_0191	param	param/mo_s/mo_s_param.dat	0xB908	191	83 4a 83 4a 83 56	カカシ	卡卡		translated_aligned	tight	yes			6	31	サスケ	カカシ
+zh_txt_d2bb7093_00BA00_0192	txt_d2bb7093_00BA00_0192	param	param/mo_s/mo_s_param.dat	0xBA00	192	83 4a 83 4a 83 56	カカシ	卡卡		translated_aligned	tight	yes			6	32	カカシ	イタチ
+zh_txt_d2bb7093_00BAF8_0193	txt_d2bb7093_00BAF8_0193	param	param/mo_s/mo_s_param.dat	0xBAF8	193	83 43 83 5e 83 60	イタチ	鼬   		translated_aligned	ok	yes			6	33	カカシ	サスケ
+zh_txt_d2bb7093_00BBF0_0194	txt_d2bb7093_00BBF0_0194	param	param/mo_s/mo_s_param.dat	0xBBF0	194	83 54 83 58 83 50	サスケ	佐助		translated_aligned	tight	yes			6	34	イタチ	ナルト
+zh_txt_d2bb7093_00BCE8_0195	txt_d2bb7093_00BCE8_0195	param	param/mo_s/mo_s_param.dat	0xBCE8	195	83 69 83 8b 83 67	ナルト	鸣人		translated_aligned	tight	yes			6	35	サスケ	イルカ
+zh_txt_d2bb7093_00BDE0_0196	txt_d2bb7093_00BDE0_0196	param	param/mo_s/mo_s_param.dat	0xBDE0	196	83 43 83 8b 83 4a	イルカ	伊留		translated_aligned	tight	yes			6	36	ナルト	アンコ
+zh_txt_d2bb7093_00BED8_0197	txt_d2bb7093_00BED8_0197	param	param/mo_s/mo_s_param.dat	0xBED8	197	83 41 83 93 83 52	アンコ	红豆		translated_aligned	tight	yes			6	37	イルカ	シズネ
+zh_txt_d2bb7093_00BFD0_0198	txt_d2bb7093_00BFD0_0198	param	param/mo_s/mo_s_param.dat	0xBFD0	198	83 56 83 59 83 6c	シズネ	静音		translated_aligned	tight	yes			6	38	アンコ	くれない
+zh_txt_d2bb7093_00C0C8_0199	txt_d2bb7093_00C0C8_0199	param	param/mo_s/mo_s_param.dat	0xC0C8	199	82 ad 82 ea 82 c8 82 a2	くれない	红     		translated_aligned	ok	yes			8	39	シズネ	アスマ
+zh_txt_d2bb7093_00C1C0_0200	txt_d2bb7093_00C1C0_0200	param	param/mo_s/mo_s_param.dat	0xC1C0	200	83 41 83 58 83 7d	アスマ	阿斯		translated_aligned	tight	yes			6	40	くれない	あんぶ
+zh_txt_d2bb7093_00C2B8_0201	txt_d2bb7093_00C2B8_0201	param	param/mo_s/mo_s_param.dat	0xC2B8	201	82 a0 82 f1 82 d4	あんぶ	暗部		translated_aligned	tight	yes			6	41	アスマ	ガイ
+zh_txt_d2bb7093_00C3B0_0202	txt_d2bb7093_00C3B0_0202	param	param/mo_s/mo_s_param.dat	0xC3B0	202	83 4b 83 43	ガイ	凯 		translated_aligned	tight	yes			4	42	あんぶ	カカシ
+zh_txt_d2bb7093_00C4A8_0203	txt_d2bb7093_00C4A8_0203	param	param/mo_s/mo_s_param.dat	0xC4A8	203	83 4a 83 4a 83 56	カカシ	卡卡		translated_aligned	tight	yes			6	43	ガイ	ツナデ
+zh_txt_d2bb7093_00C5A0_0204	txt_d2bb7093_00C5A0_0204	param	param/mo_s/mo_s_param.dat	0xC5A0	204	83 63 83 69 83 66	ツナデ	纲手		translated_aligned	tight	yes			6	44	カカシ	じらいや
+zh_txt_d2bb7093_00C698_0205	txt_d2bb7093_00C698_0205	param	param/mo_s/mo_s_param.dat	0xC698	205	82 b6 82 e7 82 a2 82 e2	じらいや	自来  		translated_aligned	ok	yes			8	45	ツナデ	さんだいめほかげ
+zh_txt_d2bb7093_00C790_0206	txt_d2bb7093_00C790_0206	param	param/mo_s/mo_s_param.dat	0xC790	206	82 b3 82 f1 82 be 82 a2 82 df 82 d9 82 a9 82 b0	さんだいめほかげ	三代火影    		translated_aligned	ok	yes			16	46	じらいや	ミズキ
+zh_txt_d2bb7093_00C888_0207	txt_d2bb7093_00C888_0207	param	param/mo_s/mo_s_param.dat	0xC888	207	83 7e 83 59 83 4c	ミズキ	水木		translated_aligned	tight	yes			6	47	さんだいめほかげ	カブト
+zh_txt_d2bb7093_00C980_0208	txt_d2bb7093_00C980_0208	param	param/mo_s/mo_s_param.dat	0xC980	208	83 4a 83 75 83 67	カブト	兜   		translated_aligned	ok	yes			6	48	ミズキ	ジロウボウ
+zh_txt_d2bb7093_00CA78_0209	txt_d2bb7093_00CA78_0209	param	param/mo_s/mo_s_param.dat	0xCA78	209	83 57 83 8d 83 45 83 7b 83 45	ジロウボウ	次郎坊 		translated_aligned	tight	yes			10	49	カブト	キドウマル
+zh_txt_d2bb7093_00CB70_0210	txt_d2bb7093_00CB70_0210	param	param/mo_s/mo_s_param.dat	0xCB70	210	83 4c 83 68 83 45 83 7d 83 8b	キドウマル	鬼童丸 		translated_aligned	tight	yes			10	50	ジロウボウ	タユヤ
+zh_txt_d2bb7093_00CC68_0211	txt_d2bb7093_00CC68_0211	param	param/mo_s/mo_s_param.dat	0xCC68	211	83 5e 83 86 83 84	タユヤ	多由		translated_aligned	tight	yes			6	51	キドウマル	サコン
+zh_txt_d2bb7093_00CD60_0212	txt_d2bb7093_00CD60_0212	param	param/mo_s/mo_s_param.dat	0xCD60	212	83 54 83 52 83 93	サコン	左近		translated_aligned	tight	yes			6	52	タユヤ	ウコン
+zh_txt_d2bb7093_00CE58_0213	txt_d2bb7093_00CE58_0213	param	param/mo_s/mo_s_param.dat	0xCE58	213	83 45 83 52 83 93	ウコン	右近		translated_aligned	tight	yes			6	53	サコン	キミマロ
+zh_txt_d2bb7093_00CF50_0214	txt_d2bb7093_00CF50_0214	param	param/mo_s/mo_s_param.dat	0xCF50	214	83 4c 83 7e 83 7d 83 8d	キミマロ	君麻  		translated_aligned	ok	yes			8	54	ウコン	ジャコウ
+zh_txt_d2bb7093_00D048_0215	txt_d2bb7093_00D048_0215	param	param/mo_s/mo_s_param.dat	0xD048	215	83 57 83 83 83 52 83 45	ジャコウ	蛇光  		translated_aligned	ok	yes			8	55	キミマロ	ロッカク
+zh_txt_d2bb7093_00D140_0216	txt_d2bb7093_00D140_0216	param	param/mo_s/mo_s_param.dat	0xD140	216	83 8d 83 62 83 4a 83 4e	ロッカク	六角  		translated_aligned	ok	yes			8	56	ジャコウ	ザブザ
+zh_txt_d2bb7093_00D238_0217	txt_d2bb7093_00D238_0217	param	param/mo_s/mo_s_param.dat	0xD238	217	83 55 83 75 83 55	ザブザ	再不		translated_aligned	tight	yes			6	57	ロッカク	ハク
+zh_txt_d2bb7093_00D330_0218	txt_d2bb7093_00D330_0218	param	param/mo_s/mo_s_param.dat	0xD330	218	83 6e 83 4e	ハク	白 		translated_aligned	tight	yes			4	58	ザブザ	ゲンショウ
+zh_txt_d2bb7093_00D428_0219	txt_d2bb7093_00D428_0219	param	param/mo_s/mo_s_param.dat	0xD428	219	83 51 83 93 83 56 83 87 83 45	ゲンショウ	玄正    		translated_aligned	ok	yes			10	59	ハク	イタチ
+zh_txt_d2bb7093_00D520_0220	txt_d2bb7093_00D520_0220	param	param/mo_s/mo_s_param.dat	0xD520	220	83 43 83 5e 83 60	イタチ	鼬   		translated_aligned	ok	yes			6	60	ゲンショウ	キサメ
+zh_txt_d2bb7093_00D618_0221	txt_d2bb7093_00D618_0221	param	param/mo_s/mo_s_param.dat	0xD618	221	83 4c 83 54 83 81	キサメ	鬼鲛		translated_aligned	tight	yes			6	61	イタチ	サスケ
+zh_txt_d2bb7093_00D710_0222	txt_d2bb7093_00D710_0222	param	param/mo_s/mo_s_param.dat	0xD710	222	83 54 83 58 83 50	サスケ	佐助		translated_aligned	tight	yes			6	62	キサメ	オロチまる
+zh_txt_d2bb7093_00D808_0223	txt_d2bb7093_00D808_0223	param	param/mo_s/mo_s_param.dat	0xD808	223	83 49 83 8d 83 60 82 dc 82 e9	オロチまる	大蛇丸 		translated_aligned	tight	yes			10	63	サスケ	ぶつりさん
+zh_txt_d2bb7093_00D900_0224	txt_d2bb7093_00D900_0224	param	param/mo_s/mo_s_param.dat	0xD900	224	82 d4 82 c2 82 e8 82 b3 82 f1	ぶつりさん	物攻兵 		translated_aligned	tight	yes			10	64	オロチまる	ひぶつりさん
+zh_txt_d2bb7093_00D9F8_0225	txt_d2bb7093_00D9F8_0225	param	param/mo_s/mo_s_param.dat	0xD9F8	225	82 d0 82 d4 82 c2 82 e8 82 b3 82 f1	ひぶつりさん	特殊兵   		translated_aligned	ok	yes			12	65	ぶつりさん	がまんくん
+zh_txt_d2bb7093_00DAF0_0226	txt_d2bb7093_00DAF0_0226	param	param/mo_s/mo_s_param.dat	0xDAF0	226	82 aa 82 dc 82 f1 82 ad 82 f1	がまんくん	蛤蟆君 		translated_aligned	tight	yes			10	66	ひぶつりさん	じらいや
+zh_txt_d2bb7093_00DBE8_0227	txt_d2bb7093_00DBE8_0227	param	param/mo_s/mo_s_param.dat	0xDBE8	227	82 b6 82 e7 82 a2 82 e2	じらいや	自来  		translated_aligned	ok	yes			8	67	がまんくん	ツナデ
+zh_txt_d2bb7093_00DCE0_0228	txt_d2bb7093_00DCE0_0228	param	param/mo_s/mo_s_param.dat	0xDCE0	228	83 63 83 69 83 66	ツナデ	纲手		translated_aligned	tight	yes			6	68	じらいや	しのびコウモリ
+zh_txt_d2bb7093_00DDD8_0229	txt_d2bb7093_00DDD8_0229	param	param/mo_s/mo_s_param.dat	0xDDD8	229	82 b5 82 cc 82 d1 83 52 83 45 83 82 83 8a	しのびコウモリ	忍者蝙蝠  		translated_aligned	tight	yes			14	69	ツナデ	ナルト
+zh_txt_d2bb7093_00DED0_0230	txt_d2bb7093_00DED0_0230	param	param/mo_s/mo_s_param.dat	0xDED0	230	83 69 83 8b 83 67	ナルト	鸣人		translated_aligned	tight	yes			6	70	しのびコウモリ	サクラ
+zh_txt_d2bb7093_00DFC8_0231	txt_d2bb7093_00DFC8_0231	param	param/mo_s/mo_s_param.dat	0xDFC8	231	83 54 83 4e 83 89	サクラ	小樱		translated_aligned	tight	yes			6	71	ナルト	シカマル
+zh_txt_d2bb7093_00E0C0_0232	txt_d2bb7093_00E0C0_0232	param	param/mo_s/mo_s_param.dat	0xE0C0	232	83 56 83 4a 83 7d 83 8b	シカマル	鹿丸  		translated_aligned	ok	yes			8	72	サクラ	むのてした
+zh_txt_d2bb7093_00E1B8_0233	txt_d2bb7093_00E1B8_0233	param	param/mo_s/mo_s_param.dat	0xE1B8	233	82 de 82 cc 82 c4 82 b5 82 bd	むのてした	梦手下 		translated_aligned	tight	yes			10	73	シカマル	モヤにん
+zh_txt_d2bb7093_00E2B0_0234	txt_d2bb7093_00E2B0_0234	param	param/mo_s/mo_s_param.dat	0xE2B0	234	83 82 83 84 82 c9 82 f1	モヤにん	雾忍  		translated_aligned	ok	yes			8	74	むのてした	モヤにん・アニキ
+zh_txt_d2bb7093_00E3A8_0235	txt_d2bb7093_00E3A8_0235	param	param/mo_s/mo_s_param.dat	0xE3A8	235	83 82 83 84 82 c9 82 f1 81 45 83 41 83 6a 83 4c	モヤにん・アニキ	雾忍·大哥  		translated_aligned	tight	yes			16	75	モヤにん	モヤにん
+zh_txt_d2bb7093_00E4A0_0236	txt_d2bb7093_00E4A0_0236	param	param/mo_s/mo_s_param.dat	0xE4A0	236	83 82 83 84 82 c9 82 f1	モヤにん	雾忍  		translated_aligned	ok	yes			8	76	モヤにん・アニキ	カカシ
+zh_txt_d2bb7093_00E598_0237	txt_d2bb7093_00E598_0237	param	param/mo_s/mo_s_param.dat	0xE598	237	83 4a 83 4a 83 56	カカシ	卡卡		translated_aligned	tight	yes			6	77	モヤにん	オロチまる
+zh_txt_d2bb7093_00E690_0238	txt_d2bb7093_00E690_0238	param	param/mo_s/mo_s_param.dat	0xE690	238	83 49 83 8d 83 60 82 dc 82 e9	オロチまる	大蛇丸 		translated_aligned	tight	yes			10	78	カカシ	イタチ
+zh_txt_d2bb7093_00E788_0239	txt_d2bb7093_00E788_0239	param	param/mo_s/mo_s_param.dat	0xE788	239	83 43 83 5e 83 60	イタチ	鼬   		translated_aligned	ok	yes			6	79	オロチまる	キサメ

@@ -17,12 +17,12 @@ zh_txt_4994e4ab_0029F0_0334	txt_4994e4ab_0029F0_0334	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_002A1C_0335	txt_4994e4ab_002A1C_0335	param	param/jyutu_data.dat	0x2A1C	335	8c fb 82 e6 82 b9 81 45 83 4a 83 63 83 86	口よせ・カツユ	通灵·蛞蝓		translated_aligned	tight	yes			14	15	口よせ・カツユ	そうぞうさいせい
 zh_txt_4994e4ab_002A48_0336	txt_4994e4ab_002A48_0336	param	param/jyutu_data.dat	0x2A48	336	82 bb 82 a4 82 bc 82 a4 82 b3 82 a2 82 b9 82 a2	そうぞうさいせい	创造再生    		translated_aligned	ok	yes			16	16	口よせ・カツユ	風とん・大とっぱ
 zh_txt_4994e4ab_002A74_0337	txt_4994e4ab_002A74_0337	param	param/jyutu_data.dat	0x2A74	337	95 97 82 c6 82 f1 81 45 91 e5 82 c6 82 c1 82 cf	風とん・大とっぱ	风遁大突破 		translated_aligned	tight	yes			16	17	そうぞうさいせい	鄕y
-zh_txt_4994e4ab_002A9C_0338	txt_4994e4ab_002A9C_0338	param	param/jyutu_data.dat	0x2A9C	338	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	18	風とん・大とっぱ	くさなぎのけん
+zh_txt_4994e4ab_002A9C_0338	txt_4994e4ab_002A9C_0338	param	param/jyutu_data.dat	0x2A9C	338	fb b8 79	鄕y	风		translated_aligned	tight	yes			3	18	風とん・大とっぱ	くさなぎのけん
 zh_txt_4994e4ab_002AA0_0339	txt_4994e4ab_002AA0_0339	param	param/jyutu_data.dat	0x2AA0	339	82 ad 82 b3 82 c8 82 ac 82 cc 82 af 82 f1	くさなぎのけん	草薙之剑  		translated_aligned	tight	yes			14	19	鄕y	口よせ・マンダ
 zh_txt_4994e4ab_002ACC_0340	txt_4994e4ab_002ACC_0340	param	param/jyutu_data.dat	0x2ACC	340	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ	通灵·万蛇		translated_aligned	tight	yes			14	20	くさなぎのけん	口よせ・マンダ
 zh_txt_4994e4ab_002AF8_0341	txt_4994e4ab_002AF8_0341	param	param/jyutu_data.dat	0x2AF8	341	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ	通灵·万蛇		translated_aligned	tight	yes			14	21	口よせ・マンダ	口よせ・マンダ
 zh_txt_4994e4ab_002B24_0342	txt_4994e4ab_002B24_0342	param	param/jyutu_data.dat	0x2B24	342	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ	通灵·万蛇		translated_aligned	tight	yes			14	22	口よせ・マンダ	口よせ・マンダ
-zh_txt_4994e4ab_002B50_0343	txt_4994e4ab_002B50_0343	param	param/jyutu_data.dat	0x2B50	343	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ	              		translated_aligned	ok	yes			14	23	口よせ・マンダ	虻y
+zh_txt_4994e4ab_002B50_0343	txt_4994e4ab_002B50_0343	param	param/jyutu_data.dat	0x2B50	343	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ	通灵万蛇  		translated_aligned	tight	yes			14	23	口よせ・マンダ	虻y
 zh_txt_4994e4ab_002B78_0344	txt_4994e4ab_002B78_0344	param	param/jyutu_data.dat	0x2B78	344	88 b8 79	虻y	虻		translated_aligned	tight	yes			3	24	口よせ・マンダ	口よせ・えどてんせい
 zh_txt_4994e4ab_002B7C_0345	txt_4994e4ab_002B7C_0345	param	param/jyutu_data.dat	0x2B7C	345	8c fb 82 e6 82 b9 81 45 82 a6 82 c7 82 c4 82 f1 82 b9 82 a2	口よせ・えどてんせい	召唤·秽土转生		translated_aligned	tight	yes			20	25	虻y	さっき
 zh_txt_4994e4ab_002BA8_0346	txt_4994e4ab_002BA8_0346	param	param/jyutu_data.dat	0x2BA8	346	82 b3 82 c1 82 ab	さっき	杀气		translated_aligned	tight	yes			6	26	口よせ・えどてんせい	水とん・水りゅう弾
@@ -35,17 +35,17 @@ zh_txt_4994e4ab_002C58_0352	txt_4994e4ab_002C58_0352	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_002C80_0353	txt_4994e4ab_002C80_0353	param	param/jyutu_data.dat	0x2C80	353	9a b8 79	垪y	垪		translated_aligned	tight	yes			3	33	口よせ・パックン	口よせ・パックン
 zh_txt_4994e4ab_002C84_0354	txt_4994e4ab_002C84_0354	param	param/jyutu_data.dat	0x2C84	354	8c fb 82 e6 82 b9 81 45 83 70 83 62 83 4e 83 93	口よせ・パックン	召唤·帕克  		translated_aligned	tight	yes			16	34	垪y	口よせ・パックン
 zh_txt_4994e4ab_002CB0_0355	txt_4994e4ab_002CB0_0355	param	param/jyutu_data.dat	0x2CB0	355	8c fb 82 e6 82 b9 81 45 83 70 83 62 83 4e 83 93	口よせ・パックン	稳             		translated_aligned	ok	yes			16	35	口よせ・パックン	穏y
-zh_txt_4994e4ab_002CD8_0356	txt_4994e4ab_002CD8_0356	param	param/jyutu_data.dat	0x2CD8	356	89 b8 79	穏y	   		translated_aligned	ok	yes			3	36	口よせ・パックン	口よせ・八忍犬
+zh_txt_4994e4ab_002CD8_0356	txt_4994e4ab_002CD8_0356	param	param/jyutu_data.dat	0x2CD8	356	89 b8 79	穏y	稳		translated_aligned	tight	yes			3	36	口よせ・パックン	口よせ・八忍犬
 zh_txt_4994e4ab_002CDC_0357	txt_4994e4ab_002CDC_0357	param	param/jyutu_data.dat	0x2CDC	357	8c fb 82 e6 82 b9 81 45 94 aa 94 45 8c a2	口よせ・八忍犬	通灵·忍犬		translated_aligned	tight	yes			14	37	穏y	嶌y
-zh_txt_4994e4ab_002D04_0358	txt_4994e4ab_002D04_0358	param	param/jyutu_data.dat	0x2D04	358	9b b8 79	嶌y	   		translated_aligned	ok	yes			3	38	口よせ・八忍犬	口よせ・八忍犬
+zh_txt_4994e4ab_002D04_0358	txt_4994e4ab_002D04_0358	param	param/jyutu_data.dat	0x2D04	358	9b b8 79	嶌y	岛		translated_aligned	tight	yes			3	38	口よせ・八忍犬	口よせ・八忍犬
 zh_txt_4994e4ab_002D08_0359	txt_4994e4ab_002D08_0359	param	param/jyutu_data.dat	0x2D08	359	8c fb 82 e6 82 b9 81 45 94 aa 94 45 8c a2	口よせ・八忍犬	通灵·忍犬		translated_aligned	tight	yes			14	39	嶌y	口よせ・八忍犬
 zh_txt_4994e4ab_002D34_0360	txt_4994e4ab_002D34_0360	param	param/jyutu_data.dat	0x2D34	360	8c fb 82 e6 82 b9 81 45 94 aa 94 45 8c a2	口よせ・八忍犬	通灵·忍犬		translated_aligned	tight	yes			14	40	口よせ・八忍犬	敢y
-zh_txt_4994e4ab_002D5C_0361	txt_4994e4ab_002D5C_0361	param	param/jyutu_data.dat	0x2D5C	361	8a b8 79	敢y	   		translated_aligned	ok	yes			3	41	口よせ・八忍犬	らいきり
+zh_txt_4994e4ab_002D5C_0361	txt_4994e4ab_002D5C_0361	param	param/jyutu_data.dat	0x2D5C	361	8a b8 79	敢y	敢		translated_aligned	tight	yes			3	41	口よせ・八忍犬	らいきり
 zh_txt_4994e4ab_002D60_0362	txt_4994e4ab_002D60_0362	param	param/jyutu_data.dat	0x2D60	362	82 e7 82 a2 82 ab 82 e8	らいきり	雷切  		translated_aligned	ok	yes			8	42	敢y	水とん・水がだん
 zh_txt_4994e4ab_002D8C_0363	txt_4994e4ab_002D8C_0363	param	param/jyutu_data.dat	0x2D8C	363	90 85 82 c6 82 f1 81 45 90 85 82 aa 82 be 82 f1	水とん・水がだん	水遁水牙弹 		translated_aligned	tight	yes			16	43	らいきり	鄕y
-zh_txt_4994e4ab_002DB4_0364	txt_4994e4ab_002DB4_0364	param	param/jyutu_data.dat	0x2DB4	364	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	44	水とん・水がだん	しゅりけん攻撃
+zh_txt_4994e4ab_002DB4_0364	txt_4994e4ab_002DB4_0364	param	param/jyutu_data.dat	0x2DB4	364	fb b8 79	鄕y	乡		translated_aligned	tight	yes			3	44	水とん・水がだん	しゅりけん攻撃
 zh_txt_4994e4ab_002DB8_0365	txt_4994e4ab_002DB8_0365	param	param/jyutu_data.dat	0x2DB8	365	82 b5 82 e3 82 e8 82 af 82 f1 8d 55 8c 82	しゅりけん攻撃	手里剑击  		translated_aligned	tight	yes			14	45	鄕y	鄕:
-zh_txt_4994e4ab_002DE0_0366	txt_4994e4ab_002DE0_0366	param	param/jyutu_data.dat	0x2DE0	366	fb b8 3a	鄕:	   		translated_aligned	ok	yes			3	46	しゅりけん攻撃	かげ分身ばくは
+zh_txt_4994e4ab_002DE0_0366	txt_4994e4ab_002DE0_0366	param	param/jyutu_data.dat	0x2DE0	366	fb b8 3a	鄕:	乡		translated_aligned	tight	yes			3	46	しゅりけん攻撃	かげ分身ばくは
 zh_txt_4994e4ab_002DE4_0367	txt_4994e4ab_002DE4_0367	param	param/jyutu_data.dat	0x2DE4	367	82 a9 82 b0 95 aa 90 67 82 ce 82 ad 82 cd	かげ分身ばくは	影分身爆  		translated_aligned	tight	yes			14	47	鄕:	鄕=
 zh_txt_4994e4ab_002E0C_0368	txt_4994e4ab_002E0C_0368	param	param/jyutu_data.dat	0x2E0C	368	fb b8 3d	鄕=	   		translated_aligned	ok	yes			3	48	かげ分身ばくは	つくよみ
 zh_txt_4994e4ab_002E10_0369	txt_4994e4ab_002E10_0369	param	param/jyutu_data.dat	0x2E10	369	82 c2 82 ad 82 e6 82 dd	つくよみ	月读  		translated_aligned	ok	yes			8	49	鄕=	あまてらす

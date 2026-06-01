@@ -1,10 +1,10 @@
 {
   "rows": 80,
   "checked_translated_rows": 80,
-  "issue_count": 40,
+  "issue_count": 16,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
-  "text_quality_issue_count": 40,
+  "text_quality_issue_count": 16,
   "control_issues": [],
   "byte_length_issues": [],
   "text_quality_issues": [
@@ -51,132 +51,6 @@
       "reason": "translated_text_has_no_cjk"
     },
     {
-      "id": "zh_txt_4994e4ab_003B48_0493",
-      "jp_id_ref": "txt_4994e4ab_003B48_0493",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3B48",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003B74_0495",
-      "jp_id_ref": "txt_4994e4ab_003B74_0495",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3B74",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003BA0_0497",
-      "jp_id_ref": "txt_4994e4ab_003BA0_0497",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3BA0",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003BCC_0499",
-      "jp_id_ref": "txt_4994e4ab_003BCC_0499",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3BCC",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003BF8_0501",
-      "jp_id_ref": "txt_4994e4ab_003BF8_0501",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3BF8",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003C24_0503",
-      "jp_id_ref": "txt_4994e4ab_003C24_0503",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3C24",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003C50_0505",
-      "jp_id_ref": "txt_4994e4ab_003C50_0505",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3C50",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003C7C_0507",
-      "jp_id_ref": "txt_4994e4ab_003C7C_0507",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3C7C",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003CA8_0509",
-      "jp_id_ref": "txt_4994e4ab_003CA8_0509",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3CA8",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003CD4_0511",
-      "jp_id_ref": "txt_4994e4ab_003CD4_0511",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3CD4",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003D00_0513",
-      "jp_id_ref": "txt_4994e4ab_003D00_0513",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3D00",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003D2C_0515",
-      "jp_id_ref": "txt_4994e4ab_003D2C_0515",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3D2C",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003D58_0517",
-      "jp_id_ref": "txt_4994e4ab_003D58_0517",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3D58",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003D84_0519",
-      "jp_id_ref": "txt_4994e4ab_003D84_0519",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3D84",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003DB0_0521",
-      "jp_id_ref": "txt_4994e4ab_003DB0_0521",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3DB0",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003DDC_0523",
-      "jp_id_ref": "txt_4994e4ab_003DDC_0523",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3DDC",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003E08_0525",
-      "jp_id_ref": "txt_4994e4ab_003E08_0525",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3E08",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003E34_0527",
-      "jp_id_ref": "txt_4994e4ab_003E34_0527",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3E34",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
       "id": "zh_txt_4994e4ab_003E60_0529",
       "jp_id_ref": "txt_4994e4ab_003E60_0529",
       "source_file": "param/jyutu_data.dat",
@@ -216,48 +90,6 @@
       "jp_id_ref": "txt_4994e4ab_003F3C_0539",
       "source_file": "param/jyutu_data.dat",
       "offset": "0x3F3C",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003F68_0541",
-      "jp_id_ref": "txt_4994e4ab_003F68_0541",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3F68",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003F94_0543",
-      "jp_id_ref": "txt_4994e4ab_003F94_0543",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3F94",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003FC0_0545",
-      "jp_id_ref": "txt_4994e4ab_003FC0_0545",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3FC0",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003FEC_0547",
-      "jp_id_ref": "txt_4994e4ab_003FEC_0547",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3FEC",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_004018_0549",
-      "jp_id_ref": "txt_4994e4ab_004018_0549",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x4018",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_004044_0551",
-      "jp_id_ref": "txt_4994e4ab_004044_0551",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x4044",
       "reason": "translated_text_has_no_cjk"
     },
     {

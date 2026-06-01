@@ -1,0 +1,68 @@
+{
+  "rows": 49,
+  "checked_translated_rows": 49,
+  "issue_count": 8,
+  "control_issue_count": 0,
+  "byte_length_issue_count": 0,
+  "text_quality_issue_count": 8,
+  "control_issues": [],
+  "byte_length_issues": [],
+  "text_quality_issues": [
+    {
+      "id": "zh_txt_4994e4ab_004B9C_0644",
+      "jp_id_ref": "txt_4994e4ab_004B9C_0644",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x4B9C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_004C20_0648",
+      "jp_id_ref": "txt_4994e4ab_004C20_0648",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x4C20",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_004C4C_0650",
+      "jp_id_ref": "txt_4994e4ab_004C4C_0650",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x4C4C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_004EB4_0676",
+      "jp_id_ref": "txt_4994e4ab_004EB4_0676",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x4EB4",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_004EE0_0678",
+      "jp_id_ref": "txt_4994e4ab_004EE0_0678",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x4EE0",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_004F0C_0680",
+      "jp_id_ref": "txt_4994e4ab_004F0C_0680",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x4F0C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_004FBC_0685",
+      "jp_id_ref": "txt_4994e4ab_004FBC_0685",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x4FBC",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_004FE8_0687",
+      "jp_id_ref": "txt_4994e4ab_004FE8_0687",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x4FE8",
+      "reason": "translated_text_has_no_cjk"
+    }
+  ]
+}

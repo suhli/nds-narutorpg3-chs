@@ -1,0 +1,8 @@
+id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
+zh_txt_c79bed54_000DD4_0080	txt_c79bed54_000DD4_0080	param	param/map_data_tbl.dat	0xDD4	80	82 b1 82 cc 82 cd 82 aa 82 ad 82 ea 82 cc 82 b3 82 c6	このはがくれのさと	木叶隐村      		translated_aligned	ok	yes			18	0	まち	このはがくれのさと
+zh_txt_c79bed54_000E00_0081	txt_c79bed54_000E00_0081	param	param/map_data_tbl.dat	0xE00	81	82 b1 82 cc 82 cd 82 aa 82 ad 82 ea 82 cc 82 b3 82 c6	このはがくれのさと	木叶隐村      		translated_aligned	ok	yes			18	1	このはがくれのさと	はじゃのたに
+zh_txt_c79bed54_000E2C_0082	txt_c79bed54_000E2C_0082	param	param/map_data_tbl.dat	0xE2C	82	82 cd 82 b6 82 e1 82 cc 82 bd 82 c9	はじゃのたに	破邪之谷		translated_aligned	tight	yes			12	2	このはがくれのさと	へんきょうのかざん
+zh_txt_c79bed54_000E58_0083	txt_c79bed54_000E58_0083	param	param/map_data_tbl.dat	0xE58	83	82 d6 82 f1 82 ab 82 e5 82 a4 82 cc 82 a9 82 b4 82 f1	へんきょうのかざん	边境火山      		translated_aligned	ok	yes			18	3	はじゃのたに	いおうのたに
+zh_txt_c79bed54_000E84_0084	txt_c79bed54_000E84_0084	param	param/map_data_tbl.dat	0xE84	84	82 a2 82 a8 82 a4 82 cc 82 bd 82 c9	いおうのたに	硫磺之谷		translated_aligned	tight	yes			12	4	へんきょうのかざん	はじゃのたに
+zh_txt_c79bed54_000EB0_0085	txt_c79bed54_000EB0_0085	param	param/map_data_tbl.dat	0xEB0	85	82 cd 82 b6 82 e1 82 cc 82 bd 82 c9	はじゃのたに	破邪之谷		translated_aligned	tight	yes			12	5	いおうのたに	はじゃのたに
+zh_txt_c79bed54_000EDC_0086	txt_c79bed54_000EDC_0086	param	param/map_data_tbl.dat	0xEDC	86	82 cd 82 b6 82 e1 82 cc 82 bd 82 c9	はじゃのたに	破邪之谷		translated_aligned	tight	yes			12	6	はじゃのたに	オロチ

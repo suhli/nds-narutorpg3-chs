@@ -1,40 +1,40 @@
 id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
 zh_txt_4994e4ab_000000_0000	txt_4994e4ab_000000_0000	param	param/jyutu_data.dat	0x0	0	89 ce 82 c6 82 f1 82 cc 8f 70	火とんの術	火遁术 		translated_aligned	tight	yes			10	0	そうびなし	鄕y
-zh_txt_4994e4ab_000028_0001	txt_4994e4ab_000028_0001	param	param/jyutu_data.dat	0x28	1	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	1	火とんの術	大火とんの術
+zh_txt_4994e4ab_000028_0001	txt_4994e4ab_000028_0001	param	param/jyutu_data.dat	0x28	1	fb b8 79	鄕y	遁		translated_aligned	tight	yes			3	1	火とんの術	大火とんの術
 zh_txt_4994e4ab_00002C_0002	txt_4994e4ab_00002C_0002	param	param/jyutu_data.dat	0x2C	2	91 e5 89 ce 82 c6 82 f1 82 cc 8f 70	大火とんの術	大火遁术		translated_aligned	tight	yes			12	2	鄕y	鄕y
-zh_txt_4994e4ab_000054_0003	txt_4994e4ab_000054_0003	param	param/jyutu_data.dat	0x54	3	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	3	大火とんの術	ちょう大火とんの術
+zh_txt_4994e4ab_000054_0003	txt_4994e4ab_000054_0003	param	param/jyutu_data.dat	0x54	3	fb b8 79	鄕y	遁		translated_aligned	tight	yes			3	3	大火とんの術	ちょう大火とんの術
 zh_txt_4994e4ab_000058_0004	txt_4994e4ab_000058_0004	param	param/jyutu_data.dat	0x58	4	82 bf 82 e5 82 a4 91 e5 89 ce 82 c6 82 f1 82 cc 8f 70	ちょう大火とんの術	超大火遁术   		translated_aligned	ok	yes			18	4	鄕y	鄕y
-zh_txt_4994e4ab_000080_0005	txt_4994e4ab_000080_0005	param	param/jyutu_data.dat	0x80	5	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	5	ちょう大火とんの術	水とんの術
+zh_txt_4994e4ab_000080_0005	txt_4994e4ab_000080_0005	param	param/jyutu_data.dat	0x80	5	fb b8 79	鄕y	遁		translated_aligned	tight	yes			3	5	ちょう大火とんの術	水とんの術
 zh_txt_4994e4ab_000084_0006	txt_4994e4ab_000084_0006	param	param/jyutu_data.dat	0x84	6	90 85 82 c6 82 f1 82 cc 8f 70	水とんの術	水遁术 		translated_aligned	tight	yes			10	6	鄕y	鄕y
-zh_txt_4994e4ab_0000AC_0007	txt_4994e4ab_0000AC_0007	param	param/jyutu_data.dat	0xAC	7	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	7	水とんの術	大水とんの術
+zh_txt_4994e4ab_0000AC_0007	txt_4994e4ab_0000AC_0007	param	param/jyutu_data.dat	0xAC	7	fb b8 79	鄕y	遁		translated_aligned	tight	yes			3	7	水とんの術	大水とんの術
 zh_txt_4994e4ab_0000B0_0008	txt_4994e4ab_0000B0_0008	param	param/jyutu_data.dat	0xB0	8	91 e5 90 85 82 c6 82 f1 82 cc 8f 70	大水とんの術	大水遁术		translated_aligned	tight	yes			12	8	鄕y	鄕y
-zh_txt_4994e4ab_0000D8_0009	txt_4994e4ab_0000D8_0009	param	param/jyutu_data.dat	0xD8	9	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	9	大水とんの術	ちょう大水とんの術
+zh_txt_4994e4ab_0000D8_0009	txt_4994e4ab_0000D8_0009	param	param/jyutu_data.dat	0xD8	9	fb b8 79	鄕y	遁		translated_aligned	tight	yes			3	9	大水とんの術	ちょう大水とんの術
 zh_txt_4994e4ab_0000DC_0010	txt_4994e4ab_0000DC_0010	param	param/jyutu_data.dat	0xDC	10	82 bf 82 e5 82 a4 91 e5 90 85 82 c6 82 f1 82 cc 8f 70	ちょう大水とんの術	超大水遁术   		translated_aligned	ok	yes			18	10	鄕y	鄕y
-zh_txt_4994e4ab_000104_0011	txt_4994e4ab_000104_0011	param	param/jyutu_data.dat	0x104	11	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	11	ちょう大水とんの術	雷とんの術
+zh_txt_4994e4ab_000104_0011	txt_4994e4ab_000104_0011	param	param/jyutu_data.dat	0x104	11	fb b8 79	鄕y	遁		translated_aligned	tight	yes			3	11	ちょう大水とんの術	雷とんの術
 zh_txt_4994e4ab_000108_0012	txt_4994e4ab_000108_0012	param	param/jyutu_data.dat	0x108	12	97 8b 82 c6 82 f1 82 cc 8f 70	雷とんの術	雷遁术 		translated_aligned	tight	yes			10	12	鄕y	鄕y
-zh_txt_4994e4ab_000130_0013	txt_4994e4ab_000130_0013	param	param/jyutu_data.dat	0x130	13	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	13	雷とんの術	大雷とんの術
+zh_txt_4994e4ab_000130_0013	txt_4994e4ab_000130_0013	param	param/jyutu_data.dat	0x130	13	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	13	雷とんの術	大雷とんの術
 zh_txt_4994e4ab_000134_0014	txt_4994e4ab_000134_0014	param	param/jyutu_data.dat	0x134	14	91 e5 97 8b 82 c6 82 f1 82 cc 8f 70	大雷とんの術	大雷遁术		translated_aligned	tight	yes			12	14	鄕y	鄕y
-zh_txt_4994e4ab_00015C_0015	txt_4994e4ab_00015C_0015	param	param/jyutu_data.dat	0x15C	15	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	15	大雷とんの術	ちょう大雷とんの術
+zh_txt_4994e4ab_00015C_0015	txt_4994e4ab_00015C_0015	param	param/jyutu_data.dat	0x15C	15	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	15	大雷とんの術	ちょう大雷とんの術
 zh_txt_4994e4ab_000160_0016	txt_4994e4ab_000160_0016	param	param/jyutu_data.dat	0x160	16	82 bf 82 e5 82 a4 91 e5 97 8b 82 c6 82 f1 82 cc 8f 70	ちょう大雷とんの術	超大雷遁之术		translated_aligned	tight	yes			18	16	鄕y	鄕y
-zh_txt_4994e4ab_000188_0017	txt_4994e4ab_000188_0017	param	param/jyutu_data.dat	0x188	17	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	17	ちょう大雷とんの術	風とんの術
+zh_txt_4994e4ab_000188_0017	txt_4994e4ab_000188_0017	param	param/jyutu_data.dat	0x188	17	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	17	ちょう大雷とんの術	風とんの術
 zh_txt_4994e4ab_00018C_0018	txt_4994e4ab_00018C_0018	param	param/jyutu_data.dat	0x18C	18	95 97 82 c6 82 f1 82 cc 8f 70	風とんの術	风遁术 		translated_aligned	tight	yes			10	18	鄕y	鄕y
-zh_txt_4994e4ab_0001B4_0019	txt_4994e4ab_0001B4_0019	param	param/jyutu_data.dat	0x1B4	19	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	19	風とんの術	大風とんの術
+zh_txt_4994e4ab_0001B4_0019	txt_4994e4ab_0001B4_0019	param	param/jyutu_data.dat	0x1B4	19	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	19	風とんの術	大風とんの術
 zh_txt_4994e4ab_0001B8_0020	txt_4994e4ab_0001B8_0020	param	param/jyutu_data.dat	0x1B8	20	91 e5 95 97 82 c6 82 f1 82 cc 8f 70	大風とんの術	大风遁术		translated_aligned	tight	yes			12	20	鄕y	鄕y
-zh_txt_4994e4ab_0001E0_0021	txt_4994e4ab_0001E0_0021	param	param/jyutu_data.dat	0x1E0	21	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	21	大風とんの術	ちょう大風とんの術
+zh_txt_4994e4ab_0001E0_0021	txt_4994e4ab_0001E0_0021	param	param/jyutu_data.dat	0x1E0	21	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	21	大風とんの術	ちょう大風とんの術
 zh_txt_4994e4ab_0001E4_0022	txt_4994e4ab_0001E4_0022	param	param/jyutu_data.dat	0x1E4	22	82 bf 82 e5 82 a4 91 e5 95 97 82 c6 82 f1 82 cc 8f 70	ちょう大風とんの術	超大风遁之术		translated_aligned	tight	yes			18	22	鄕y	鄕y
-zh_txt_4994e4ab_00020C_0023	txt_4994e4ab_00020C_0023	param	param/jyutu_data.dat	0x20C	23	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	23	ちょう大風とんの術	おうきゅう手あて
+zh_txt_4994e4ab_00020C_0023	txt_4994e4ab_00020C_0023	param	param/jyutu_data.dat	0x20C	23	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	23	ちょう大風とんの術	おうきゅう手あて
 zh_txt_4994e4ab_000210_0024	txt_4994e4ab_000210_0024	param	param/jyutu_data.dat	0x210	24	82 a8 82 a4 82 ab 82 e3 82 a4 8e e8 82 a0 82 c4	おうきゅう手あて	应急手当    		translated_aligned	ok	yes			16	24	鄕y	鄕y
-zh_txt_4994e4ab_000238_0025	txt_4994e4ab_000238_0025	param	param/jyutu_data.dat	0x238	25	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	25	おうきゅう手あて	手あて
+zh_txt_4994e4ab_000238_0025	txt_4994e4ab_000238_0025	param	param/jyutu_data.dat	0x238	25	fb b8 79	鄕y	...		translated_aligned	tight	yes			3	25	おうきゅう手あて	手あて
 zh_txt_4994e4ab_00023C_0026	txt_4994e4ab_00023C_0026	param	param/jyutu_data.dat	0x23C	26	8e e8 82 a0 82 c4	手あて	手当		translated_aligned	tight	yes			6	26	鄕y	鄕y
-zh_txt_4994e4ab_000264_0027	txt_4994e4ab_000264_0027	param	param/jyutu_data.dat	0x264	27	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	27	手あて	ちりょう
+zh_txt_4994e4ab_000264_0027	txt_4994e4ab_000264_0027	param	param/jyutu_data.dat	0x264	27	fb b8 79	鄕y	...		translated_aligned	tight	yes			3	27	手あて	ちりょう
 zh_txt_4994e4ab_000268_0028	txt_4994e4ab_000268_0028	param	param/jyutu_data.dat	0x268	28	82 bf 82 e8 82 e5 82 a4	ちりょう	治疗  		translated_aligned	ok	yes			8	28	鄕y	鄕y
-zh_txt_4994e4ab_000290_0029	txt_4994e4ab_000290_0029	param	param/jyutu_data.dat	0x290	29	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	29	ちりょう	ちゆ
+zh_txt_4994e4ab_000290_0029	txt_4994e4ab_000290_0029	param	param/jyutu_data.dat	0x290	29	fb b8 79	鄕y	...		translated_aligned	tight	yes			3	29	ちりょう	ちゆ
 zh_txt_4994e4ab_000294_0030	txt_4994e4ab_000294_0030	param	param/jyutu_data.dat	0x294	30	82 bf 82 e4	ちゆ	愈 		translated_aligned	tight	yes			4	30	鄕y	鄕y
-zh_txt_4994e4ab_0002BC_0031	txt_4994e4ab_0002BC_0031	param	param/jyutu_data.dat	0x2BC	31	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	31	ちゆ	みょうしゅふっかつ・臨
+zh_txt_4994e4ab_0002BC_0031	txt_4994e4ab_0002BC_0031	param	param/jyutu_data.dat	0x2BC	31	fb b8 79	鄕y	...		translated_aligned	tight	yes			3	31	ちゆ	みょうしゅふっかつ・臨
 zh_txt_4994e4ab_0002C0_0032	txt_4994e4ab_0002C0_0032	param	param/jyutu_data.dat	0x2C0	32	82 dd 82 e5 82 a4 82 b5 82 e3 82 d3 82 c1 82 a9 82 c2 81 45 97 d5	みょうしゅふっかつ・臨	妙手复活·临     		translated_aligned	ok	yes			22	32	鄕y	鄕y
-zh_txt_4994e4ab_0002E8_0033	txt_4994e4ab_0002E8_0033	param	param/jyutu_data.dat	0x2E8	33	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	33	みょうしゅふっかつ・臨	みょうしゅふっかつ・兵
+zh_txt_4994e4ab_0002E8_0033	txt_4994e4ab_0002E8_0033	param	param/jyutu_data.dat	0x2E8	33	fb b8 79	鄕y	...		translated_aligned	tight	yes			3	33	みょうしゅふっかつ・臨	みょうしゅふっかつ・兵
 zh_txt_4994e4ab_0002EC_0034	txt_4994e4ab_0002EC_0034	param	param/jyutu_data.dat	0x2EC	34	82 dd 82 e5 82 a4 82 b5 82 e3 82 d3 82 c1 82 a9 82 c2 81 45 95 ba	みょうしゅふっかつ・兵	妙手复活·兵     		translated_aligned	ok	yes			22	34	鄕y	鄕y
-zh_txt_4994e4ab_000314_0035	txt_4994e4ab_000314_0035	param	param/jyutu_data.dat	0x314	35	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	35	みょうしゅふっかつ・兵	解・どく
+zh_txt_4994e4ab_000314_0035	txt_4994e4ab_000314_0035	param	param/jyutu_data.dat	0x314	35	fb b8 79	鄕y	...		translated_aligned	tight	yes			3	35	みょうしゅふっかつ・兵	解・どく
 zh_txt_4994e4ab_000318_0036	txt_4994e4ab_000318_0036	param	param/jyutu_data.dat	0x318	36	89 f0 81 45 82 c7 82 ad	解・どく	解毒  		translated_aligned	ok	yes			8	36	鄕y	鄕y
 zh_txt_4994e4ab_000340_0037	txt_4994e4ab_000340_0037	param	param/jyutu_data.dat	0x340	37	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	37	解・どく	解・げんじゅつ
 zh_txt_4994e4ab_000344_0038	txt_4994e4ab_000344_0038	param	param/jyutu_data.dat	0x344	38	89 f0 81 45 82 b0 82 f1 82 b6 82 e3 82 c2	解・げんじゅつ	解幻术     		translated_aligned	ok	yes			14	38	鄕y	鄕y
@@ -48,25 +48,25 @@ zh_txt_4994e4ab_0003F0_0045	txt_4994e4ab_0003F0_0045	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_0003F4_0046	txt_4994e4ab_0003F4_0046	param	param/jyutu_data.dat	0x3F4	46	82 a8 82 a4 82 a6 82 f1 82 cc 8f 70	おうえんの術	支援之术		translated_aligned	tight	yes			12	46	鄕y	鄕y
 zh_txt_4994e4ab_00041C_0047	txt_4994e4ab_00041C_0047	param	param/jyutu_data.dat	0x41C	47	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	47	おうえんの術	かげぶよう
 zh_txt_4994e4ab_000420_0048	txt_4994e4ab_000420_0048	param	param/jyutu_data.dat	0x420	48	82 a9 82 b0 82 d4 82 e6 82 a4	かげぶよう	影舞叶 		translated_aligned	tight	yes			10	48	鄕y	鄕y
-zh_txt_4994e4ab_000448_0049	txt_4994e4ab_000448_0049	param	param/jyutu_data.dat	0x448	49	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	49	かげぶよう	やみよせの術
+zh_txt_4994e4ab_000448_0049	txt_4994e4ab_000448_0049	param	param/jyutu_data.dat	0x448	49	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	49	かげぶよう	やみよせの術
 zh_txt_4994e4ab_00044C_0050	txt_4994e4ab_00044C_0050	param	param/jyutu_data.dat	0x44C	50	82 e2 82 dd 82 e6 82 b9 82 cc 8f 70	やみよせの術	暗寄之术		translated_aligned	tight	yes			12	50	鄕y	鄕y
-zh_txt_4994e4ab_000474_0051	txt_4994e4ab_000474_0051	param	param/jyutu_data.dat	0x474	51	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	51	やみよせの術	ねはんしょうじゃの術
+zh_txt_4994e4ab_000474_0051	txt_4994e4ab_000474_0051	param	param/jyutu_data.dat	0x474	51	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	51	やみよせの術	ねはんしょうじゃの術
 zh_txt_4994e4ab_000478_0052	txt_4994e4ab_000478_0052	param	param/jyutu_data.dat	0x478	52	82 cb 82 cd 82 f1 82 b5 82 e5 82 a4 82 b6 82 e1 82 cc 8f 70	ねはんしょうじゃの術	涅槃精舍之术  		translated_aligned	tight	yes			20	52	鄕y	鄕y
-zh_txt_4994e4ab_0004A0_0053	txt_4994e4ab_0004A0_0053	param	param/jyutu_data.dat	0x4A0	53	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	53	ねはんしょうじゃの術	こもりうたの術
+zh_txt_4994e4ab_0004A0_0053	txt_4994e4ab_0004A0_0053	param	param/jyutu_data.dat	0x4A0	53	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	53	ねはんしょうじゃの術	こもりうたの術
 zh_txt_4994e4ab_0004A4_0054	txt_4994e4ab_0004A4_0054	param	param/jyutu_data.dat	0x4A4	54	82 b1 82 e0 82 e8 82 a4 82 bd 82 cc 8f 70	こもりうたの術	摇篮曲术  		translated_aligned	tight	yes			14	54	鄕y	鄕y
-zh_txt_4994e4ab_0004CC_0055	txt_4994e4ab_0004CC_0055	param	param/jyutu_data.dat	0x4CC	55	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	55	こもりうたの術	変わり身の術
+zh_txt_4994e4ab_0004CC_0055	txt_4994e4ab_0004CC_0055	param	param/jyutu_data.dat	0x4CC	55	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	55	こもりうたの術	変わり身の術
 zh_txt_4994e4ab_0004D0_0056	txt_4994e4ab_0004D0_0056	param	param/jyutu_data.dat	0x4D0	56	95 cf 82 ed 82 e8 90 67 82 cc 8f 70	変わり身の術	替身之术		translated_aligned	tight	yes			12	56	鄕y	鄕y
-zh_txt_4994e4ab_0004F8_0057	txt_4994e4ab_0004F8_0057	param	param/jyutu_data.dat	0x4F8	57	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	57	変わり身の術	しゅんしんの術
+zh_txt_4994e4ab_0004F8_0057	txt_4994e4ab_0004F8_0057	param	param/jyutu_data.dat	0x4F8	57	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	57	変わり身の術	しゅんしんの術
 zh_txt_4994e4ab_0004FC_0058	txt_4994e4ab_0004FC_0058	param	param/jyutu_data.dat	0x4FC	58	82 b5 82 e3 82 f1 82 b5 82 f1 82 cc 8f 70	しゅんしんの術	瞬身之术  		translated_aligned	tight	yes			14	58	鄕y	鄕y
-zh_txt_4994e4ab_000524_0059	txt_4994e4ab_000524_0059	param	param/jyutu_data.dat	0x524	59	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	59	しゅんしんの術	クナイどくぬき
+zh_txt_4994e4ab_000524_0059	txt_4994e4ab_000524_0059	param	param/jyutu_data.dat	0x524	59	fb b8 79	鄕y	术		translated_aligned	tight	yes			3	59	しゅんしんの術	クナイどくぬき
 zh_txt_4994e4ab_000528_0060	txt_4994e4ab_000528_0060	param	param/jyutu_data.dat	0x528	60	83 4e 83 69 83 43 82 c7 82 ad 82 ca 82 ab	クナイどくぬき	苦无·解毒		translated_aligned	tight	yes			14	60	鄕y	鄕y
-zh_txt_4994e4ab_000550_0061	txt_4994e4ab_000550_0061	param	param/jyutu_data.dat	0x550	61	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	61	クナイどくぬき	どこんじょう
+zh_txt_4994e4ab_000550_0061	txt_4994e4ab_000550_0061	param	param/jyutu_data.dat	0x550	61	fb b8 79	鄕y	　		translated_aligned	tight	yes			3	61	クナイどくぬき	どこんじょう
 zh_txt_4994e4ab_000554_0062	txt_4994e4ab_000554_0062	param	param/jyutu_data.dat	0x554	62	82 c7 82 b1 82 f1 82 b6 82 e5 82 a4	どこんじょう	骨气      		translated_aligned	ok	yes			12	62	鄕y	鄕y
-zh_txt_4994e4ab_00057C_0063	txt_4994e4ab_00057C_0063	param	param/jyutu_data.dat	0x57C	63	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	63	どこんじょう	オナラ
+zh_txt_4994e4ab_00057C_0063	txt_4994e4ab_00057C_0063	param	param/jyutu_data.dat	0x57C	63	fb b8 79	鄕y	　		translated_aligned	tight	yes			3	63	どこんじょう	オナラ
 zh_txt_4994e4ab_000580_0064	txt_4994e4ab_000580_0064	param	param/jyutu_data.dat	0x580	64	83 49 83 69 83 89	オナラ	屁   		translated_aligned	ok	yes			6	64	鄕y	鄕y
-zh_txt_4994e4ab_0005A8_0065	txt_4994e4ab_0005A8_0065	param	param/jyutu_data.dat	0x5A8	65	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	65	オナラ	水ふうせんばくだん
+zh_txt_4994e4ab_0005A8_0065	txt_4994e4ab_0005A8_0065	param	param/jyutu_data.dat	0x5A8	65	fb b8 79	鄕y	　		translated_aligned	tight	yes			3	65	オナラ	水ふうせんばくだん
 zh_txt_4994e4ab_0005AC_0066	txt_4994e4ab_0005AC_0066	param	param/jyutu_data.dat	0x5AC	66	90 85 82 d3 82 a4 82 b9 82 f1 82 ce 82 ad 82 be 82 f1	水ふうせんばくだん	水气球炸弹   		translated_aligned	ok	yes			18	66	鄕y	鄕y
-zh_txt_4994e4ab_0005D4_0067	txt_4994e4ab_0005D4_0067	param	param/jyutu_data.dat	0x5D4	67	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	67	水ふうせんばくだん	おいろけの術
+zh_txt_4994e4ab_0005D4_0067	txt_4994e4ab_0005D4_0067	param	param/jyutu_data.dat	0x5D4	67	fb b8 79	鄕y	　		translated_aligned	tight	yes			3	67	水ふうせんばくだん	おいろけの術
 zh_txt_4994e4ab_0005D8_0068	txt_4994e4ab_0005D8_0068	param	param/jyutu_data.dat	0x5D8	68	82 a8 82 a2 82 eb 82 af 82 cc 8f 70	おいろけの術	色诱术   		translated_aligned	ok	yes			12	68	鄕y	ハーレムの術
 zh_txt_4994e4ab_000604_0069	txt_4994e4ab_000604_0069	param	param/jyutu_data.dat	0x604	69	83 6e 81 5b 83 8c 83 80 82 cc 8f 70	ハーレムの術	后宫术   		translated_aligned	ok	yes			12	69	おいろけの術	かげ分身の術
 zh_txt_4994e4ab_000630_0070	txt_4994e4ab_000630_0070	param	param/jyutu_data.dat	0x630	70	82 a9 82 b0 95 aa 90 67 82 cc 8f 70	かげ分身の術	影分身术		translated_aligned	tight	yes			12	70	ハーレムの術	かげ分身の術

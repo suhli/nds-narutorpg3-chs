@@ -1,33 +1,110 @@
 {
-  "rows": 12,
-  "checked_translated_rows": 0,
-  "issue_count": 1,
+  "rows": 80,
+  "checked_translated_rows": 80,
+  "issue_count": 14,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
-  "text_quality_issue_count": 0,
-  "translation_failure_count": 1,
+  "text_quality_issue_count": 14,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [],
-  "translation_failures": [
+  "text_quality_issues": [
     {
-      "chunk_id": "chunk_0307",
-      "translated_path": "text/translation/chunks/translated/chunk_0307.tsv",
-      "row_ids": [
-        "zh_txt_4994e4ab_001CE0_0240",
-        "zh_txt_4994e4ab_001D0C_0241",
-        "zh_txt_4994e4ab_001D34_0242",
-        "zh_txt_4994e4ab_001D38_0243",
-        "zh_txt_4994e4ab_001D64_0244",
-        "zh_txt_4994e4ab_001D90_0245",
-        "zh_txt_4994e4ab_001DBC_0246",
-        "zh_txt_4994e4ab_001DE8_0247",
-        "zh_txt_4994e4ab_001E14_0248",
-        "zh_txt_4994e4ab_001E40_0249",
-        "zh_txt_4994e4ab_001E6C_0250",
-        "zh_txt_4994e4ab_001E98_0251"
-      ],
-      "error": "translation failed after retries:\nunexpected id: zh_txt_4994e4ab_001EC4_0252\nzh_txt_4994e4ab_001E98_0251: too long 21>20"
+      "id": "zh_txt_4994e4ab_001D34_0242",
+      "jp_id_ref": "txt_4994e4ab_001D34_0242",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x1D34",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_001EEC_0253",
+      "jp_id_ref": "txt_4994e4ab_001EEC_0253",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x1EEC",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_002020_0261",
+      "jp_id_ref": "txt_4994e4ab_002020_0261",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x2020",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_0021AC_0271",
+      "jp_id_ref": "txt_4994e4ab_0021AC_0271",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x21AC",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_00225C_0276",
+      "jp_id_ref": "txt_4994e4ab_00225C_0276",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x225C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_0022E0_0280",
+      "jp_id_ref": "txt_4994e4ab_0022E0_0280",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x22E0",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_00230C_0282",
+      "jp_id_ref": "txt_4994e4ab_00230C_0282",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x230C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_002338_0284",
+      "jp_id_ref": "txt_4994e4ab_002338_0284",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x2338",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_0024F0_0295",
+      "jp_id_ref": "txt_4994e4ab_0024F0_0295",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x24F0",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_00251C_0297",
+      "jp_id_ref": "txt_4994e4ab_00251C_0297",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x251C",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_002548_0299",
+      "jp_id_ref": "txt_4994e4ab_002548_0299",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x2548",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_002758_0314",
+      "jp_id_ref": "txt_4994e4ab_002758_0314",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x2758",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_002784_0316",
+      "jp_id_ref": "txt_4994e4ab_002784_0316",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x2784",
+      "reason": "translated_text_has_no_cjk"
+    },
+    {
+      "id": "zh_txt_4994e4ab_0027B0_0318",
+      "jp_id_ref": "txt_4994e4ab_0027B0_0318",
+      "source_file": "param/jyutu_data.dat",
+      "offset": "0x27B0",
+      "reason": "translated_text_has_no_cjk"
     }
   ]
 }
