@@ -1,0 +1,81 @@
+id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
+zh_txt_876c4bf1_0041D0_0400	txt_876c4bf1_0041D0_0400	param	param/item_data.dat	0x41D0	400	82 a0 82 f1 82 d4 82 cc 82 b5 82 cc 82 d1 82 aa 82 bd 82 c8	あんぶのしのびがたな	暗部忍刀        		translated_aligned	ok	yes			20	0	暗部の忍刀	三忍の忍刀
+zh_txt_876c4bf1_0041F4_0401	txt_876c4bf1_0041F4_0401	param	param/item_data.dat	0x41F4	401	8e 4f 94 45 82 cc 94 45 93 81	三忍の忍刀	三忍刀 		translated_aligned	tight	yes			10	1	あんぶのしのびがたな	さんにんのしのびがたな
+zh_txt_876c4bf1_004224_0402	txt_876c4bf1_004224_0402	param	param/item_data.dat	0x4224	402	82 b3 82 f1 82 c9 82 f1 82 cc 82 b5 82 cc 82 d1 82 aa 82 bd 82 c8	さんにんのしのびがたな	三忍忍刀          		translated_aligned	ok	yes			22	2	三忍の忍刀	白光のチャクラ刀
+zh_txt_876c4bf1_004248_0403	txt_876c4bf1_004248_0403	param	param/item_data.dat	0x4248	403	94 92 8c f5 82 cc 83 60 83 83 83 4e 83 89 93 81	白光のチャクラ刀	查克拉光刀 		translated_aligned	tight	yes			16	3	さんにんのしのびがたな	はっこうのチャクラとう
+zh_txt_876c4bf1_004278_0404	txt_876c4bf1_004278_0404	param	param/item_data.dat	0x4278	404	82 cd 82 c1 82 b1 82 a4 82 cc 83 60 83 83 83 4e 83 89 82 c6 82 a4	はっこうのチャクラとう	查克拉光刀       		translated_aligned	ok	yes			22	4	白光のチャクラ刀	霧がくれの忍刀
+zh_txt_876c4bf1_00429C_0405	txt_876c4bf1_00429C_0405	param	param/item_data.dat	0x429C	405	96 b6 82 aa 82 ad 82 ea 82 cc 94 45 93 81	霧がくれの忍刀	雾隐忍刀  		translated_aligned	tight	yes			14	5	はっこうのチャクラとう	きりがくれのしのびがたな
+zh_txt_876c4bf1_0042CC_0406	txt_876c4bf1_0042CC_0406	param	param/item_data.dat	0x42CC	406	82 ab 82 e8 82 aa 82 ad 82 ea 82 cc 82 b5 82 cc 82 d1 82 aa 82 bd 82 c8	きりがくれのしのびがたな	雾隐忍刀            		translated_aligned	ok	yes			24	6	霧がくれの忍刀	くさなぎの剣
+zh_txt_876c4bf1_0042F0_0407	txt_876c4bf1_0042F0_0407	param	param/item_data.dat	0x42F0	407	82 ad 82 b3 82 c8 82 ac 82 cc 8c 95	くさなぎの剣	草薙剑   		translated_aligned	ok	yes			12	7	きりがくれのしのびがたな	くさなぎのけん
+zh_txt_876c4bf1_004320_0408	txt_876c4bf1_004320_0408	param	param/item_data.dat	0x4320	408	82 ad 82 b3 82 c8 82 ac 82 cc 82 af 82 f1	くさなぎのけん	草薙剑     		translated_aligned	ok	yes			14	8	くさなぎの剣	火影の忍刀
+zh_txt_876c4bf1_004344_0409	txt_876c4bf1_004344_0409	param	param/item_data.dat	0x4344	409	89 ce 89 65 82 cc 94 45 93 81	火影の忍刀	火影刀 		translated_aligned	tight	yes			10	9	くさなぎのけん	ほかげのしのびがたな
+zh_txt_876c4bf1_004374_0410	txt_876c4bf1_004374_0410	param	param/item_data.dat	0x4374	410	82 d9 82 a9 82 b0 82 cc 82 b5 82 cc 82 d1 82 aa 82 bd 82 c8	ほかげのしのびがたな	火影忍刀        		translated_aligned	ok	yes			20	10	火影の忍刀	雷神の剣
+zh_txt_876c4bf1_004398_0411	txt_876c4bf1_004398_0411	param	param/item_data.dat	0x4398	411	97 8b 90 5f 82 cc 8c 95	雷神の剣	雷剑  		translated_aligned	ok	yes			8	11	ほかげのしのびがたな	らいじんのけん
+zh_txt_876c4bf1_0043C8_0412	txt_876c4bf1_0043C8_0412	param	param/item_data.dat	0x43C8	412	82 e7 82 a2 82 b6 82 f1 82 cc 82 af 82 f1	らいじんのけん	雷神之剑  		translated_aligned	tight	yes			14	12	雷神の剣	ガマのドス
+zh_txt_876c4bf1_0043EC_0413	txt_876c4bf1_0043EC_0413	param	param/item_data.dat	0x43EC	413	83 4b 83 7d 82 cc 83 68 83 58	ガマのドス	蛤蟆刀 		translated_aligned	tight	yes			10	13	らいじんのけん	ガマのドス
+zh_txt_876c4bf1_00441C_0414	txt_876c4bf1_00441C_0414	param	param/item_data.dat	0x441C	414	83 4b 83 7d 82 cc 83 68 83 58	ガマのドス	蛤蟆刀 		translated_aligned	tight	yes			10	14	ガマのドス	四代目の忍刀
+zh_txt_876c4bf1_004440_0415	txt_876c4bf1_004440_0415	param	param/item_data.dat	0x4440	415	8e 6c 91 e3 96 da 82 cc 94 45 93 81	四代目の忍刀	四代忍刀		translated_aligned	tight	yes			12	15	ガマのドス	よんだいめのしのびがたな
+zh_txt_876c4bf1_004470_0416	txt_876c4bf1_004470_0416	param	param/item_data.dat	0x4470	416	82 e6 82 f1 82 be 82 a2 82 df 82 cc 82 b5 82 cc 82 d1 82 aa 82 bd 82 c8	よんだいめのしのびがたな	四代忍刀            		translated_aligned	ok	yes			24	16	四代目の忍刀	せんす
+zh_txt_876c4bf1_004494_0417	txt_876c4bf1_004494_0417	param	param/item_data.dat	0x4494	417	82 b9 82 f1 82 b7	せんす	扇子		translated_aligned	tight	yes			6	17	よんだいめのしのびがたな	せんす
+zh_txt_876c4bf1_0044C4_0418	txt_876c4bf1_0044C4_0418	param	param/item_data.dat	0x44C4	418	82 b9 82 f1 82 b7	せんす	扇子		translated_aligned	tight	yes			6	18	せんす	てっせん
+zh_txt_876c4bf1_0044E8_0419	txt_876c4bf1_0044E8_0419	param	param/item_data.dat	0x44E8	419	82 c4 82 c1 82 b9 82 f1	てっせん	铁扇  		translated_aligned	ok	yes			8	19	せんす	てっせん
+zh_txt_876c4bf1_004518_0420	txt_876c4bf1_004518_0420	param	param/item_data.dat	0x4518	420	82 c4 82 c1 82 b9 82 f1	てっせん	铁扇  		translated_aligned	ok	yes			8	20	てっせん	にんぷうせん
+zh_txt_876c4bf1_00453C_0421	txt_876c4bf1_00453C_0421	param	param/item_data.dat	0x453C	421	82 c9 82 f1 82 d5 82 a4 82 b9 82 f1	にんぷうせん	忍风仙   		translated_aligned	ok	yes			12	21	てっせん	にんぷうせん
+zh_txt_876c4bf1_00456C_0422	txt_876c4bf1_00456C_0422	param	param/item_data.dat	0x456C	422	82 c9 82 f1 82 d5 82 a4 82 b9 82 f1	にんぷうせん	忍风仙   		translated_aligned	ok	yes			12	22	にんぷうせん	きょうてんせん
+zh_txt_876c4bf1_004590_0423	txt_876c4bf1_004590_0423	param	param/item_data.dat	0x4590	423	82 ab 82 e5 82 a4 82 c4 82 f1 82 b9 82 f1	きょうてんせん	狂天仙     		translated_aligned	ok	yes			14	23	にんぷうせん	きょうてんせん
+zh_txt_876c4bf1_0045C0_0424	txt_876c4bf1_0045C0_0424	param	param/item_data.dat	0x45C0	424	82 ab 82 e5 82 a4 82 c4 82 f1 82 b9 82 f1	きょうてんせん	强转扇     		translated_aligned	ok	yes			14	24	きょうてんせん	龍りんせん
+zh_txt_876c4bf1_0045E4_0425	txt_876c4bf1_0045E4_0425	param	param/item_data.dat	0x45E4	425	97 b4 82 e8 82 f1 82 b9 82 f1	龍りんせん	龙鳞扇 		translated_aligned	tight	yes			10	25	きょうてんせん	りゅうりんせん
+zh_txt_876c4bf1_004614_0426	txt_876c4bf1_004614_0426	param	param/item_data.dat	0x4614	426	82 e8 82 e3 82 a4 82 e8 82 f1 82 b9 82 f1	りゅうりんせん	龙鳞扇     		translated_aligned	ok	yes			14	26	龍りんせん	扇・みつぼし
+zh_txt_876c4bf1_004638_0427	txt_876c4bf1_004638_0427	param	param/item_data.dat	0x4638	427	90 ee 81 45 82 dd 82 c2 82 da 82 b5	扇・みつぼし	三星扇   		translated_aligned	ok	yes			12	27	りゅうりんせん	おうぎ・みつぼし
+zh_txt_876c4bf1_004668_0428	txt_876c4bf1_004668_0428	param	param/item_data.dat	0x4668	428	82 a8 82 a4 82 ac 81 45 82 dd 82 c2 82 da 82 b5	おうぎ・みつぼし	三星扇       		translated_aligned	ok	yes			16	28	扇・みつぼし	三忍のせんす
+zh_txt_876c4bf1_00468C_0429	txt_876c4bf1_00468C_0429	param	param/item_data.dat	0x468C	429	8e 4f 94 45 82 cc 82 b9 82 f1 82 b7	三忍のせんす	三忍之扇		translated_aligned	tight	yes			12	29	おうぎ・みつぼし	さんにんのせんす
+zh_txt_876c4bf1_0046BC_0430	txt_876c4bf1_0046BC_0430	param	param/item_data.dat	0x46BC	430	82 b3 82 f1 82 c9 82 f1 82 cc 82 b9 82 f1 82 b7	さんにんのせんす	三忍之扇    		translated_aligned	ok	yes			16	30	三忍のせんす	風神のせんす
+zh_txt_876c4bf1_0046E0_0431	txt_876c4bf1_0046E0_0431	param	param/item_data.dat	0x46E0	431	95 97 90 5f 82 cc 82 b9 82 f1 82 b7	風神のせんす	风神之扇		translated_aligned	tight	yes			12	31	さんにんのせんす	ふうじんのせんす
+zh_txt_876c4bf1_004710_0432	txt_876c4bf1_004710_0432	param	param/item_data.dat	0x4710	432	82 d3 82 a4 82 b6 82 f1 82 cc 82 b9 82 f1 82 b7	ふうじんのせんす	风神之扇    		translated_aligned	ok	yes			16	32	風神のせんす	手裏剣
+zh_txt_876c4bf1_004734_0433	txt_876c4bf1_004734_0433	param	param/item_data.dat	0x4734	433	8e e8 97 a0 8c 95	手裏剣	手剑		translated_aligned	tight	yes			6	33	ふうじんのせんす	しゅりけん
+zh_txt_876c4bf1_004764_0434	txt_876c4bf1_004764_0434	param	param/item_data.dat	0x4764	434	82 b5 82 e3 82 e8 82 af 82 f1	しゅりけん	手里剑 		translated_aligned	tight	yes			10	34	手裏剣	六方手裏剣
+zh_txt_876c4bf1_004788_0435	txt_876c4bf1_004788_0435	param	param/item_data.dat	0x4788	435	98 5a 95 fb 8e e8 97 a0 8c 95	六方手裏剣	六方剑 		translated_aligned	tight	yes			10	35	しゅりけん	ろっぽうしゅりけん
+zh_txt_876c4bf1_0047B8_0436	txt_876c4bf1_0047B8_0436	param	param/item_data.dat	0x47B8	436	82 eb 82 c1 82 db 82 a4 82 b5 82 e3 82 e8 82 af 82 f1	ろっぽうしゅりけん	六方手里剑   		translated_aligned	ok	yes			18	36	六方手裏剣	八方手裏剣
+zh_txt_876c4bf1_0047DC_0437	txt_876c4bf1_0047DC_0437	param	param/item_data.dat	0x47DC	437	94 aa 95 fb 8e e8 97 a0 8c 95	八方手裏剣	八方剑 		translated_aligned	tight	yes			10	37	ろっぽうしゅりけん	はっぽうしゅりけん
+zh_txt_876c4bf1_00480C_0438	txt_876c4bf1_00480C_0438	param	param/item_data.dat	0x480C	438	82 cd 82 c1 82 db 82 a4 82 b5 82 e3 82 e8 82 af 82 f1	はっぽうしゅりけん	八方手里剑   		translated_aligned	ok	yes			18	38	八方手裏剣	三忍の手裏剣
+zh_txt_876c4bf1_004830_0439	txt_876c4bf1_004830_0439	param	param/item_data.dat	0x4830	439	8e 4f 94 45 82 cc 8e e8 97 a0 8c 95	三忍の手裏剣	三忍手剑		translated_aligned	tight	yes			12	39	はっぽうしゅりけん	さんにんのしゅりけん
+zh_txt_876c4bf1_004860_0440	txt_876c4bf1_004860_0440	param	param/item_data.dat	0x4860	440	82 b3 82 f1 82 c9 82 f1 82 cc 82 b5 82 e3 82 e8 82 af 82 f1	さんにんのしゅりけん	三忍手里剑     		translated_aligned	ok	yes			20	40	三忍の手裏剣	龍りん手裏剣
+zh_txt_876c4bf1_004884_0441	txt_876c4bf1_004884_0441	param	param/item_data.dat	0x4884	441	97 b4 82 e8 82 f1 8e e8 97 a0 8c 95	龍りん手裏剣	龙鳞手剑		translated_aligned	tight	yes			12	41	さんにんのしゅりけん	りゅうりんしゅりけん
+zh_txt_876c4bf1_0048B4_0442	txt_876c4bf1_0048B4_0442	param	param/item_data.dat	0x48B4	442	82 e8 82 e3 82 a4 82 e8 82 f1 82 b5 82 e3 82 e8 82 af 82 f1	りゅうりんしゅりけん	龙鳞手里剑     		translated_aligned	ok	yes			20	42	龍りん手裏剣	八光手裏剣
+zh_txt_876c4bf1_0048D8_0443	txt_876c4bf1_0048D8_0443	param	param/item_data.dat	0x48D8	443	94 aa 8c f5 8e e8 97 a0 8c 95	八光手裏剣	八光剑 		translated_aligned	tight	yes			10	43	りゅうりんしゅりけん	はちみつしゅりけん
+zh_txt_876c4bf1_004908_0444	txt_876c4bf1_004908_0444	param	param/item_data.dat	0x4908	444	82 cd 82 bf 82 dd 82 c2 82 b5 82 e3 82 e8 82 af 82 f1	はちみつしゅりけん	蜂蜜手里剑   		translated_aligned	ok	yes			18	44	八光手裏剣	火影の手裏剣
+zh_txt_876c4bf1_00492C_0445	txt_876c4bf1_00492C_0445	param	param/item_data.dat	0x492C	445	89 ce 89 65 82 cc 8e e8 97 a0 8c 95	火影の手裏剣	火影手剑		translated_aligned	tight	yes			12	45	はちみつしゅりけん	ほかげのしゅりけん
+zh_txt_876c4bf1_00495C_0446	txt_876c4bf1_00495C_0446	param	param/item_data.dat	0x495C	446	82 d9 82 a9 82 b0 82 cc 82 b5 82 e3 82 e8 82 af 82 f1	ほかげのしゅりけん	火影手里剑   		translated_aligned	ok	yes			18	46	火影の手裏剣	クナイ
+zh_txt_876c4bf1_004980_0447	txt_876c4bf1_004980_0447	param	param/item_data.dat	0x4980	447	83 4e 83 69 83 43	クナイ	苦无		translated_aligned	tight	yes			6	47	ほかげのしゅりけん	クナイ
+zh_txt_876c4bf1_0049B0_0448	txt_876c4bf1_0049B0_0448	param	param/item_data.dat	0x49B0	448	83 4e 83 69 83 43	クナイ	苦无		translated_aligned	tight	yes			6	48	クナイ	両刃クナイ
+zh_txt_876c4bf1_0049D4_0449	txt_876c4bf1_0049D4_0449	param	param/item_data.dat	0x49D4	449	97 bc 90 6e 83 4e 83 69 83 43	両刃クナイ	双刃苦 		translated_aligned	tight	yes			10	49	クナイ	りょうばクナイ
+zh_txt_876c4bf1_004A04_0450	txt_876c4bf1_004A04_0450	param	param/item_data.dat	0x4A04	450	82 e8 82 e5 82 a4 82 ce 83 4e 83 69 83 43	りょうばクナイ	双刃苦     		translated_aligned	ok	yes			14	50	両刃クナイ	三日月クナイ
+zh_txt_876c4bf1_004A28_0451	txt_876c4bf1_004A28_0451	param	param/item_data.dat	0x4A28	451	8e 4f 93 fa 8c 8e 83 4e 83 69 83 43	三日月クナイ	月牙苦无		translated_aligned	tight	yes			12	51	りょうばクナイ	みかづきクナイ
+zh_txt_876c4bf1_004A58_0452	txt_876c4bf1_004A58_0452	param	param/item_data.dat	0x4A58	452	82 dd 82 a9 82 c3 82 ab 83 4e 83 69 83 43	みかづきクナイ	月牙苦无  		translated_aligned	tight	yes			14	52	三日月クナイ	暗部のクナイ
+zh_txt_876c4bf1_004A7C_0453	txt_876c4bf1_004A7C_0453	param	param/item_data.dat	0x4A7C	453	88 c3 95 94 82 cc 83 4e 83 69 83 43	暗部のクナイ	暗部苦无		translated_aligned	tight	yes			12	53	みかづきクナイ	あんぶのクナイ
+zh_txt_876c4bf1_004AAC_0454	txt_876c4bf1_004AAC_0454	param	param/item_data.dat	0x4AAC	454	82 a0 82 f1 82 d4 82 cc 83 4e 83 69 83 43	あんぶのクナイ	暗部苦无  		translated_aligned	tight	yes			14	54	暗部のクナイ	三忍のクナイ
+zh_txt_876c4bf1_004AD0_0455	txt_876c4bf1_004AD0_0455	param	param/item_data.dat	0x4AD0	455	8e 4f 94 45 82 cc 83 4e 83 69 83 43	三忍のクナイ	三忍苦无		translated_aligned	tight	yes			12	55	あんぶのクナイ	さんにんのクナイ
+zh_txt_876c4bf1_004B00_0456	txt_876c4bf1_004B00_0456	param	param/item_data.dat	0x4B00	456	82 b3 82 f1 82 c9 82 f1 82 cc 83 4e 83 69 83 43	さんにんのクナイ	三忍苦无    		translated_aligned	ok	yes			16	56	三忍のクナイ	術しきクナイ
+zh_txt_876c4bf1_004B24_0457	txt_876c4bf1_004B24_0457	param	param/item_data.dat	0x4B24	457	8f 70 82 b5 82 ab 83 4e 83 69 83 43	術しきクナイ	术式苦无		translated_aligned	tight	yes			12	57	さんにんのクナイ	じゅつしきクナイ
+zh_txt_876c4bf1_004B54_0458	txt_876c4bf1_004B54_0458	param	param/item_data.dat	0x4B54	458	82 b6 82 e3 82 c2 82 b5 82 ab 83 4e 83 69 83 43	じゅつしきクナイ	术式苦无    		translated_aligned	ok	yes			16	58	術しきクナイ	火影のクナイ
+zh_txt_876c4bf1_004B78_0459	txt_876c4bf1_004B78_0459	param	param/item_data.dat	0x4B78	459	89 ce 89 65 82 cc 83 4e 83 69 83 43	火影のクナイ	火影苦无		translated_aligned	tight	yes			12	59	じゅつしきクナイ	ほかげのクナイ
+zh_txt_876c4bf1_004BA8_0460	txt_876c4bf1_004BA8_0460	param	param/item_data.dat	0x4BA8	460	82 d9 82 a9 82 b0 82 cc 83 4e 83 69 83 43	ほかげのクナイ	火影苦无  		translated_aligned	tight	yes			14	60	火影のクナイ	千本
+zh_txt_876c4bf1_004BCC_0461	txt_876c4bf1_004BCC_0461	param	param/item_data.dat	0x4BCC	461	90 e7 96 7b	千本	针 		translated_aligned	tight	yes			4	61	ほかげのクナイ	せんぼん
+zh_txt_876c4bf1_004BFC_0462	txt_876c4bf1_004BFC_0462	param	param/item_data.dat	0x4BFC	462	82 b9 82 f1 82 da 82 f1	せんぼん	千本  		translated_aligned	ok	yes			8	62	千本	羽針
+zh_txt_876c4bf1_004C20_0463	txt_876c4bf1_004C20_0463	param	param/item_data.dat	0x4C20	463	89 48 90 6a	羽針	羽 		translated_aligned	tight	yes			4	63	せんぼん	はねばり
+zh_txt_876c4bf1_004C50_0464	txt_876c4bf1_004C50_0464	param	param/item_data.dat	0x4C50	464	82 cd 82 cb 82 ce 82 e8	はねばり	羽针  		translated_aligned	ok	yes			8	64	羽針	ねじり千本
+zh_txt_876c4bf1_004C74_0465	txt_876c4bf1_004C74_0465	param	param/item_data.dat	0x4C74	465	82 cb 82 b6 82 e8 90 e7 96 7b	ねじり千本	扭千本 		translated_aligned	tight	yes			10	65	はねばり	ねじりせんぼん
+zh_txt_876c4bf1_004CA4_0466	txt_876c4bf1_004CA4_0466	param	param/item_data.dat	0x4CA4	466	82 cb 82 b6 82 e8 82 b9 82 f1 82 da 82 f1	ねじりせんぼん	螺旋千本  		translated_aligned	tight	yes			14	66	ねじり千本	はくぎんの千本
+zh_txt_876c4bf1_004CC8_0467	txt_876c4bf1_004CC8_0467	param	param/item_data.dat	0x4CC8	467	82 cd 82 ad 82 ac 82 f1 82 cc 90 e7 96 7b	はくぎんの千本	白银千本  		translated_aligned	tight	yes			14	67	ねじりせんぼん	はくぎんのせんぼん
+zh_txt_876c4bf1_004CF8_0468	txt_876c4bf1_004CF8_0468	param	param/item_data.dat	0x4CF8	468	82 cd 82 ad 82 ac 82 f1 82 cc 82 b9 82 f1 82 da 82 f1	はくぎんのせんぼん	白银的千本   		translated_aligned	ok	yes			18	68	はくぎんの千本	しこみ針弾
+zh_txt_876c4bf1_004D1C_0469	txt_876c4bf1_004D1C_0469	param	param/item_data.dat	0x4D1C	469	82 b5 82 b1 82 dd 90 6a 92 65	しこみ針弾	机关针 		translated_aligned	tight	yes			10	69	はくぎんのせんぼん	しこみしんだん
+zh_txt_876c4bf1_004D4C_0470	txt_876c4bf1_004D4C_0470	param	param/item_data.dat	0x4D4C	470	82 b5 82 b1 82 dd 82 b5 82 f1 82 be 82 f1	しこみしんだん	机关针弹  		translated_aligned	tight	yes			14	70	しこみ針弾	三忍の千本
+zh_txt_876c4bf1_004D70_0471	txt_876c4bf1_004D70_0471	param	param/item_data.dat	0x4D70	471	8e 4f 94 45 82 cc 90 e7 96 7b	三忍の千本	三忍针 		translated_aligned	tight	yes			10	71	しこみしんだん	さんにんのせんぼん
+zh_txt_876c4bf1_004DA0_0472	txt_876c4bf1_004DA0_0472	param	param/item_data.dat	0x4DA0	472	82 b3 82 f1 82 c9 82 f1 82 cc 82 b9 82 f1 82 da 82 f1	さんにんのせんぼん	三忍针         		translated_aligned	ok	yes			18	72	三忍の千本	火影の千本
+zh_txt_876c4bf1_004DC4_0473	txt_876c4bf1_004DC4_0473	param	param/item_data.dat	0x4DC4	473	89 ce 89 65 82 cc 90 e7 96 7b	火影の千本	火影针 		translated_aligned	tight	yes			10	73	さんにんのせんぼん	ほかげのせんぼん
+zh_txt_876c4bf1_004DF4_0474	txt_876c4bf1_004DF4_0474	param	param/item_data.dat	0x4DF4	474	82 d9 82 a9 82 b0 82 cc 82 b9 82 f1 82 da 82 f1	ほかげのせんぼん	火影针       		translated_aligned	ok	yes			16	74	火影の千本	アイアンナックル
+zh_txt_876c4bf1_004E18_0475	txt_876c4bf1_004E18_0475	param	param/item_data.dat	0x4E18	475	83 41 83 43 83 41 83 93 83 69 83 62 83 4e 83 8b	アイアンナックル	铁指节       		translated_aligned	ok	yes			16	75	ほかげのせんぼん	アイアンナックル
+zh_txt_876c4bf1_004E48_0476	txt_876c4bf1_004E48_0476	param	param/item_data.dat	0x4E48	476	83 41 83 43 83 41 83 93 83 69 83 62 83 4e 83 8b	アイアンナックル	铁指节       		translated_aligned	ok	yes			16	76	アイアンナックル	チャクラナックル
+zh_txt_876c4bf1_004E6C_0477	txt_876c4bf1_004E6C_0477	param	param/item_data.dat	0x4E6C	477	83 60 83 83 83 4e 83 89 83 69 83 62 83 4e 83 8b	チャクラナックル	查克拉指节 		translated_aligned	tight	yes			16	77	アイアンナックル	チャクラナックル
+zh_txt_876c4bf1_004E9C_0478	txt_876c4bf1_004E9C_0478	param	param/item_data.dat	0x4E9C	478	83 60 83 83 83 4e 83 89 83 69 83 62 83 4e 83 8b	チャクラナックル	查克拉指节 		translated_aligned	tight	yes			16	78	チャクラナックル	ごうりきナックル
+zh_txt_876c4bf1_004EC0_0479	txt_876c4bf1_004EC0_0479	param	param/item_data.dat	0x4EC0	479	82 b2 82 a4 82 e8 82 ab 83 69 83 62 83 4e 83 8b	ごうりきナックル	强力指节    		translated_aligned	ok	yes			16	79	チャクラナックル	ごうりきナックル

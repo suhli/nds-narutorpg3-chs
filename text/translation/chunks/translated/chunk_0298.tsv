@@ -1,0 +1,81 @@
+id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
+zh_txt_876c4bf1_002790_0240	txt_876c4bf1_002790_0240	param	param/item_data.dat	0x2790	240	82 c6 82 e2 82 dc 82 cc 82 c4 82 aa 82 bd	とやまのてがた	富山票据  		translated_aligned	tight	yes			14	0	とやまの手形	いしかわの手形
+zh_txt_876c4bf1_0027B4_0241	txt_876c4bf1_0027B4_0241	param	param/item_data.dat	0x27B4	241	82 a2 82 b5 82 a9 82 ed 82 cc 8e e8 8c 60	いしかわの手形	石川票据  		translated_aligned	tight	yes			14	1	とやまのてがた	いしかわのてがた
+zh_txt_876c4bf1_0027E4_0242	txt_876c4bf1_0027E4_0242	param	param/item_data.dat	0x27E4	242	82 a2 82 b5 82 a9 82 ed 82 cc 82 c4 82 aa 82 bd	いしかわのてがた	石川票据    		translated_aligned	ok	yes			16	2	いしかわの手形	ふくいの手形
+zh_txt_876c4bf1_002808_0243	txt_876c4bf1_002808_0243	param	param/item_data.dat	0x2808	243	82 d3 82 ad 82 a2 82 cc 8e e8 8c 60	ふくいの手形	福井票据		translated_aligned	tight	yes			12	3	いしかわのてがた	ふくいのてがた
+zh_txt_876c4bf1_002838_0244	txt_876c4bf1_002838_0244	param	param/item_data.dat	0x2838	244	82 d3 82 ad 82 a2 82 cc 82 c4 82 aa 82 bd	ふくいのてがた	福井票据  		translated_aligned	tight	yes			14	4	ふくいの手形	やまなしの手形
+zh_txt_876c4bf1_00285C_0245	txt_876c4bf1_00285C_0245	param	param/item_data.dat	0x285C	245	82 e2 82 dc 82 c8 82 b5 82 cc 8e e8 8c 60	やまなしの手形	山梨票据  		translated_aligned	tight	yes			14	5	ふくいのてがた	やまなしのてがた
+zh_txt_876c4bf1_00288C_0246	txt_876c4bf1_00288C_0246	param	param/item_data.dat	0x288C	246	82 e2 82 dc 82 c8 82 b5 82 cc 82 c4 82 aa 82 bd	やまなしのてがた	山梨票据    		translated_aligned	ok	yes			16	6	やまなしの手形	ながのの手形
+zh_txt_876c4bf1_0028B0_0247	txt_876c4bf1_0028B0_0247	param	param/item_data.dat	0x28B0	247	82 c8 82 aa 82 cc 82 cc 8e e8 8c 60	ながのの手形	长野票据		translated_aligned	tight	yes			12	7	やまなしのてがた	ながののてがた
+zh_txt_876c4bf1_0028E0_0248	txt_876c4bf1_0028E0_0248	param	param/item_data.dat	0x28E0	248	82 c8 82 aa 82 cc 82 cc 82 c4 82 aa 82 bd	ながののてがた	长野票据  		translated_aligned	tight	yes			14	8	ながのの手形	ぎふの手形
+zh_txt_876c4bf1_002904_0249	txt_876c4bf1_002904_0249	param	param/item_data.dat	0x2904	249	82 ac 82 d3 82 cc 8e e8 8c 60	ぎふの手形	岐阜票 		translated_aligned	tight	yes			10	9	ながののてがた	ぎふのてがた
+zh_txt_876c4bf1_002934_0250	txt_876c4bf1_002934_0250	param	param/item_data.dat	0x2934	250	82 ac 82 d3 82 cc 82 c4 82 aa 82 bd	ぎふのてがた	岐阜票   		translated_aligned	ok	yes			12	10	ぎふの手形	しずおかの手形
+zh_txt_876c4bf1_002958_0251	txt_876c4bf1_002958_0251	param	param/item_data.dat	0x2958	251	82 b5 82 b8 82 a8 82 a9 82 cc 8e e8 8c 60	しずおかの手形	静冈票据  		translated_aligned	tight	yes			14	11	ぎふのてがた	しずおかのてがた
+zh_txt_876c4bf1_002988_0252	txt_876c4bf1_002988_0252	param	param/item_data.dat	0x2988	252	82 b5 82 b8 82 a8 82 a9 82 cc 82 c4 82 aa 82 bd	しずおかのてがた	静冈票       		translated_aligned	ok	yes			16	12	しずおかの手形	あいちの手形
+zh_txt_876c4bf1_0029AC_0253	txt_876c4bf1_0029AC_0253	param	param/item_data.dat	0x29AC	253	82 a0 82 a2 82 bf 82 cc 8e e8 8c 60	あいちの手形	爱知票   		translated_aligned	ok	yes			12	13	しずおかのてがた	あいちのてがた
+zh_txt_876c4bf1_0029DC_0254	txt_876c4bf1_0029DC_0254	param	param/item_data.dat	0x29DC	254	82 a0 82 a2 82 bf 82 cc 82 c4 82 aa 82 bd	あいちのてがた	爱知票     		translated_aligned	ok	yes			14	14	あいちの手形	みえの手形
+zh_txt_876c4bf1_002A00_0255	txt_876c4bf1_002A00_0255	param	param/item_data.dat	0x2A00	255	82 dd 82 a6 82 cc 8e e8 8c 60	みえの手形	三重票 		translated_aligned	tight	yes			10	15	あいちのてがた	みえのてがた
+zh_txt_876c4bf1_002A30_0256	txt_876c4bf1_002A30_0256	param	param/item_data.dat	0x2A30	256	82 dd 82 a6 82 cc 82 c4 82 aa 82 bd	みえのてがた	三重票   		translated_aligned	ok	yes			12	16	みえの手形	しがの手形
+zh_txt_876c4bf1_002A54_0257	txt_876c4bf1_002A54_0257	param	param/item_data.dat	0x2A54	257	82 b5 82 aa 82 cc 8e e8 8c 60	しがの手形	滋贺票 		translated_aligned	tight	yes			10	17	みえのてがた	しがのてがた
+zh_txt_876c4bf1_002A84_0258	txt_876c4bf1_002A84_0258	param	param/item_data.dat	0x2A84	258	82 b5 82 aa 82 cc 82 c4 82 aa 82 bd	しがのてがた	滋贺票   		translated_aligned	ok	yes			12	18	しがの手形	きょうとの手形
+zh_txt_876c4bf1_002AA8_0259	txt_876c4bf1_002AA8_0259	param	param/item_data.dat	0x2AA8	259	82 ab 82 e5 82 a4 82 c6 82 cc 8e e8 8c 60	きょうとの手形	京都票     		translated_aligned	ok	yes			14	19	しがのてがた	きょうとのてがた
+zh_txt_876c4bf1_002AD8_0260	txt_876c4bf1_002AD8_0260	param	param/item_data.dat	0x2AD8	260	82 ab 82 e5 82 a4 82 c6 82 cc 82 c4 82 aa 82 bd	きょうとのてがた	京都票       		translated_aligned	ok	yes			16	20	きょうとの手形	おおさかの手形
+zh_txt_876c4bf1_002AFC_0261	txt_876c4bf1_002AFC_0261	param	param/item_data.dat	0x2AFC	261	82 a8 82 a8 82 b3 82 a9 82 cc 8e e8 8c 60	おおさかの手形	大阪票     		translated_aligned	ok	yes			14	21	きょうとのてがた	おおさかのてがた
+zh_txt_876c4bf1_002B2C_0262	txt_876c4bf1_002B2C_0262	param	param/item_data.dat	0x2B2C	262	82 a8 82 a8 82 b3 82 a9 82 cc 82 c4 82 aa 82 bd	おおさかのてがた	大阪票       		translated_aligned	ok	yes			16	22	おおさかの手形	ひょうごの手形
+zh_txt_876c4bf1_002B50_0263	txt_876c4bf1_002B50_0263	param	param/item_data.dat	0x2B50	263	82 d0 82 e5 82 a4 82 b2 82 cc 8e e8 8c 60	ひょうごの手形	兵库票     		translated_aligned	ok	yes			14	23	おおさかのてがた	ひょうごのてがた
+zh_txt_876c4bf1_002B80_0264	txt_876c4bf1_002B80_0264	param	param/item_data.dat	0x2B80	264	82 d0 82 e5 82 a4 82 b2 82 cc 82 c4 82 aa 82 bd	ひょうごのてがた	兵库印       		translated_aligned	ok	yes			16	24	ひょうごの手形	ならの手形
+zh_txt_876c4bf1_002BA4_0265	txt_876c4bf1_002BA4_0265	param	param/item_data.dat	0x2BA4	265	82 c8 82 e7 82 cc 8e e8 8c 60	ならの手形	奈良印 		translated_aligned	tight	yes			10	25	ひょうごのてがた	ならのてがた
+zh_txt_876c4bf1_002BD4_0266	txt_876c4bf1_002BD4_0266	param	param/item_data.dat	0x2BD4	266	82 c8 82 e7 82 cc 82 c4 82 aa 82 bd	ならのてがた	奈良印   		translated_aligned	ok	yes			12	26	ならの手形	わかやまの手形
+zh_txt_876c4bf1_002BF8_0267	txt_876c4bf1_002BF8_0267	param	param/item_data.dat	0x2BF8	267	82 ed 82 a9 82 e2 82 dc 82 cc 8e e8 8c 60	わかやまの手形	和歌山印  		translated_aligned	tight	yes			14	27	ならのてがた	わかやまのてがた
+zh_txt_876c4bf1_002C28_0268	txt_876c4bf1_002C28_0268	param	param/item_data.dat	0x2C28	268	82 ed 82 a9 82 e2 82 dc 82 cc 82 c4 82 aa 82 bd	わかやまのてがた	和歌山印    		translated_aligned	ok	yes			16	28	わかやまの手形	とっとりの手形
+zh_txt_876c4bf1_002C4C_0269	txt_876c4bf1_002C4C_0269	param	param/item_data.dat	0x2C4C	269	82 c6 82 c1 82 c6 82 e8 82 cc 8e e8 8c 60	とっとりの手形	鸟取印     		translated_aligned	ok	yes			14	29	わかやまのてがた	とっとりのてがた
+zh_txt_876c4bf1_002C7C_0270	txt_876c4bf1_002C7C_0270	param	param/item_data.dat	0x2C7C	270	82 c6 82 c1 82 c6 82 e8 82 cc 82 c4 82 aa 82 bd	とっとりのてがた	鸟取印       		translated_aligned	ok	yes			16	30	とっとりの手形	しまねの手形
+zh_txt_876c4bf1_002CA0_0271	txt_876c4bf1_002CA0_0271	param	param/item_data.dat	0x2CA0	271	82 b5 82 dc 82 cb 82 cc 8e e8 8c 60	しまねの手形	岛根印   		translated_aligned	ok	yes			12	31	とっとりのてがた	しまねのてがた
+zh_txt_876c4bf1_002CD0_0272	txt_876c4bf1_002CD0_0272	param	param/item_data.dat	0x2CD0	272	82 b5 82 dc 82 cb 82 cc 82 c4 82 aa 82 bd	しまねのてがた	岛根印     		translated_aligned	ok	yes			14	32	しまねの手形	おかやまの手形
+zh_txt_876c4bf1_002CF4_0273	txt_876c4bf1_002CF4_0273	param	param/item_data.dat	0x2CF4	273	82 a8 82 a9 82 e2 82 dc 82 cc 8e e8 8c 60	おかやまの手形	冈山印     		translated_aligned	ok	yes			14	33	しまねのてがた	おかやまのてがた
+zh_txt_876c4bf1_002D24_0274	txt_876c4bf1_002D24_0274	param	param/item_data.dat	0x2D24	274	82 a8 82 a9 82 e2 82 dc 82 cc 82 c4 82 aa 82 bd	おかやまのてがた	冈山印       		translated_aligned	ok	yes			16	34	おかやまの手形	ひろしまの手形
+zh_txt_876c4bf1_002D48_0275	txt_876c4bf1_002D48_0275	param	param/item_data.dat	0x2D48	275	82 d0 82 eb 82 b5 82 dc 82 cc 8e e8 8c 60	ひろしまの手形	广岛印     		translated_aligned	ok	yes			14	35	おかやまのてがた	ひろしまのてがた
+zh_txt_876c4bf1_002D78_0276	txt_876c4bf1_002D78_0276	param	param/item_data.dat	0x2D78	276	82 d0 82 eb 82 b5 82 dc 82 cc 82 c4 82 aa 82 bd	ひろしまのてがた	广岛手形    		translated_aligned	ok	yes			16	36	ひろしまの手形	やまぐちの手形
+zh_txt_876c4bf1_002D9C_0277	txt_876c4bf1_002D9C_0277	param	param/item_data.dat	0x2D9C	277	82 e2 82 dc 82 ae 82 bf 82 cc 8e e8 8c 60	やまぐちの手形	山口手形  		translated_aligned	tight	yes			14	37	ひろしまのてがた	やまぐちのてがた
+zh_txt_876c4bf1_002DCC_0278	txt_876c4bf1_002DCC_0278	param	param/item_data.dat	0x2DCC	278	82 e2 82 dc 82 ae 82 bf 82 cc 82 c4 82 aa 82 bd	やまぐちのてがた	山口手形    		translated_aligned	ok	yes			16	38	やまぐちの手形	とくしまの手形
+zh_txt_876c4bf1_002DF0_0279	txt_876c4bf1_002DF0_0279	param	param/item_data.dat	0x2DF0	279	82 c6 82 ad 82 b5 82 dc 82 cc 8e e8 8c 60	とくしまの手形	德岛手形  		translated_aligned	tight	yes			14	39	やまぐちのてがた	とくしまのてがた
+zh_txt_876c4bf1_002E20_0280	txt_876c4bf1_002E20_0280	param	param/item_data.dat	0x2E20	280	82 c6 82 ad 82 b5 82 dc 82 cc 82 c4 82 aa 82 bd	とくしまのてがた	德岛手形    		translated_aligned	ok	yes			16	40	とくしまの手形	かがわの手形
+zh_txt_876c4bf1_002E44_0281	txt_876c4bf1_002E44_0281	param	param/item_data.dat	0x2E44	281	82 a9 82 aa 82 ed 82 cc 8e e8 8c 60	かがわの手形	香川手形		translated_aligned	tight	yes			12	41	とくしまのてがた	かがわのてがた
+zh_txt_876c4bf1_002E74_0282	txt_876c4bf1_002E74_0282	param	param/item_data.dat	0x2E74	282	82 a9 82 aa 82 ed 82 cc 82 c4 82 aa 82 bd	かがわのてがた	香川手形  		translated_aligned	tight	yes			14	42	かがわの手形	えひめの手形
+zh_txt_876c4bf1_002E98_0283	txt_876c4bf1_002E98_0283	param	param/item_data.dat	0x2E98	283	82 a6 82 d0 82 df 82 cc 8e e8 8c 60	えひめの手形	爱媛手形		translated_aligned	tight	yes			12	43	かがわのてがた	えひめのてがた
+zh_txt_876c4bf1_002EC8_0284	txt_876c4bf1_002EC8_0284	param	param/item_data.dat	0x2EC8	284	82 a6 82 d0 82 df 82 cc 82 c4 82 aa 82 bd	えひめのてがた	爱媛手形  		translated_aligned	tight	yes			14	44	えひめの手形	こうちの手形
+zh_txt_876c4bf1_002EEC_0285	txt_876c4bf1_002EEC_0285	param	param/item_data.dat	0x2EEC	285	82 b1 82 a4 82 bf 82 cc 8e e8 8c 60	こうちの手形	高知手形		translated_aligned	tight	yes			12	45	えひめのてがた	こうちのてがた
+zh_txt_876c4bf1_002F1C_0286	txt_876c4bf1_002F1C_0286	param	param/item_data.dat	0x2F1C	286	82 b1 82 a4 82 bf 82 cc 82 c4 82 aa 82 bd	こうちのてがた	高知手形  		translated_aligned	tight	yes			14	46	こうちの手形	ふくおかの手形
+zh_txt_876c4bf1_002F40_0287	txt_876c4bf1_002F40_0287	param	param/item_data.dat	0x2F40	287	82 d3 82 ad 82 a8 82 a9 82 cc 8e e8 8c 60	ふくおかの手形	福冈手形  		translated_aligned	tight	yes			14	47	こうちのてがた	ふくおかのてがた
+zh_txt_876c4bf1_002F70_0288	txt_876c4bf1_002F70_0288	param	param/item_data.dat	0x2F70	288	82 d3 82 ad 82 a8 82 a9 82 cc 82 c4 82 aa 82 bd	ふくおかのてがた	福冈的手形 		translated_aligned	tight	yes			16	48	ふくおかの手形	さがの手形
+zh_txt_876c4bf1_002F94_0289	txt_876c4bf1_002F94_0289	param	param/item_data.dat	0x2F94	289	82 b3 82 aa 82 cc 8e e8 8c 60	さがの手形	佐贺印 		translated_aligned	tight	yes			10	49	ふくおかのてがた	さがのてがた
+zh_txt_876c4bf1_002FC4_0290	txt_876c4bf1_002FC4_0290	param	param/item_data.dat	0x2FC4	290	82 b3 82 aa 82 cc 82 c4 82 aa 82 bd	さがのてがた	佐贺印   		translated_aligned	ok	yes			12	50	さがの手形	ながさきの手形
+zh_txt_876c4bf1_002FE8_0291	txt_876c4bf1_002FE8_0291	param	param/item_data.dat	0x2FE8	291	82 c8 82 aa 82 b3 82 ab 82 cc 8e e8 8c 60	ながさきの手形	长崎手形  		translated_aligned	tight	yes			14	51	さがのてがた	ながさきのてがた
+zh_txt_876c4bf1_003018_0292	txt_876c4bf1_003018_0292	param	param/item_data.dat	0x3018	292	82 c8 82 aa 82 b3 82 ab 82 cc 82 c4 82 aa 82 bd	ながさきのてがた	长崎手形    		translated_aligned	ok	yes			16	52	ながさきの手形	くまもとの手形
+zh_txt_876c4bf1_00303C_0293	txt_876c4bf1_00303C_0293	param	param/item_data.dat	0x303C	293	82 ad 82 dc 82 e0 82 c6 82 cc 8e e8 8c 60	くまもとの手形	熊本手形  		translated_aligned	tight	yes			14	53	ながさきのてがた	くまもとのてがた
+zh_txt_876c4bf1_00306C_0294	txt_876c4bf1_00306C_0294	param	param/item_data.dat	0x306C	294	82 ad 82 dc 82 e0 82 c6 82 cc 82 c4 82 aa 82 bd	くまもとのてがた	熊本手形    		translated_aligned	ok	yes			16	54	くまもとの手形	おおいたの手形
+zh_txt_876c4bf1_003090_0295	txt_876c4bf1_003090_0295	param	param/item_data.dat	0x3090	295	82 a8 82 a8 82 a2 82 bd 82 cc 8e e8 8c 60	おおいたの手形	大分手形  		translated_aligned	tight	yes			14	55	くまもとのてがた	おおいたのてがた
+zh_txt_876c4bf1_0030C0_0296	txt_876c4bf1_0030C0_0296	param	param/item_data.dat	0x30C0	296	82 a8 82 a8 82 a2 82 bd 82 cc 82 c4 82 aa 82 bd	おおいたのてがた	大分手形    		translated_aligned	ok	yes			16	56	おおいたの手形	みやざきの手形
+zh_txt_876c4bf1_0030E4_0297	txt_876c4bf1_0030E4_0297	param	param/item_data.dat	0x30E4	297	82 dd 82 e2 82 b4 82 ab 82 cc 8e e8 8c 60	みやざきの手形	宫崎手形  		translated_aligned	tight	yes			14	57	おおいたのてがた	みやざきのてがた
+zh_txt_876c4bf1_003114_0298	txt_876c4bf1_003114_0298	param	param/item_data.dat	0x3114	298	82 dd 82 e2 82 b4 82 ab 82 cc 82 c4 82 aa 82 bd	みやざきのてがた	宫崎手形    		translated_aligned	ok	yes			16	58	みやざきの手形	かごしまの手形
+zh_txt_876c4bf1_003138_0299	txt_876c4bf1_003138_0299	param	param/item_data.dat	0x3138	299	82 a9 82 b2 82 b5 82 dc 82 cc 8e e8 8c 60	かごしまの手形	鹿儿手形  		translated_aligned	tight	yes			14	59	みやざきのてがた	かごしまのてがた
+zh_txt_876c4bf1_003168_0300	txt_876c4bf1_003168_0300	param	param/item_data.dat	0x3168	300	82 a9 82 b2 82 b5 82 dc 82 cc 82 c4 82 aa 82 bd	かごしまのてがた	鹿儿岛手形 		translated_aligned	tight	yes			16	60	かごしまの手形	おきなわの手形
+zh_txt_876c4bf1_00318C_0301	txt_876c4bf1_00318C_0301	param	param/item_data.dat	0x318C	301	82 a8 82 ab 82 c8 82 ed 82 cc 8e e8 8c 60	おきなわの手形	冲绳手形  		translated_aligned	tight	yes			14	61	かごしまのてがた	おきなわのてがた
+zh_txt_876c4bf1_0031BC_0302	txt_876c4bf1_0031BC_0302	param	param/item_data.dat	0x31BC	302	82 a8 82 ab 82 c8 82 ed 82 cc 82 c4 82 aa 82 bd	おきなわのてがた	冲绳手形    		translated_aligned	ok	yes			16	62	おきなわの手形	がいこくの手形
+zh_txt_876c4bf1_0031E0_0303	txt_876c4bf1_0031E0_0303	param	param/item_data.dat	0x31E0	303	82 aa 82 a2 82 b1 82 ad 82 cc 8e e8 8c 60	がいこくの手形	外国手形  		translated_aligned	tight	yes			14	63	おきなわのてがた	がいこくのてがた
+zh_txt_876c4bf1_003210_0304	txt_876c4bf1_003210_0304	param	param/item_data.dat	0x3210	304	82 aa 82 a2 82 b1 82 ad 82 cc 82 c4 82 aa 82 bd	がいこくのてがた	外国手形    		translated_aligned	ok	yes			16	64	がいこくの手形	わりびきけん
+zh_txt_876c4bf1_003234_0305	txt_876c4bf1_003234_0305	param	param/item_data.dat	0x3234	305	82 ed 82 e8 82 d1 82 ab 82 af 82 f1	わりびきけん	折扣券   		translated_aligned	ok	yes			12	65	がいこくのてがた	わりびきけん
+zh_txt_876c4bf1_003264_0306	txt_876c4bf1_003264_0306	param	param/item_data.dat	0x3264	306	82 ed 82 e8 82 d1 82 ab 82 af 82 f1	わりびきけん	折扣券   		translated_aligned	ok	yes			12	66	わりびきけん	かくれみの
+zh_txt_876c4bf1_003288_0307	txt_876c4bf1_003288_0307	param	param/item_data.dat	0x3288	307	82 a9 82 ad 82 ea 82 dd 82 cc	かくれみの	隐身衣 		translated_aligned	tight	yes			10	67	わりびきけん	かくれみの
+zh_txt_876c4bf1_0032B8_0308	txt_876c4bf1_0032B8_0308	param	param/item_data.dat	0x32B8	308	82 a9 82 ad 82 ea 82 dd 82 cc	かくれみの	隐身衣 		translated_aligned	tight	yes			10	68	かくれみの	忍ぶえ
+zh_txt_876c4bf1_0032DC_0309	txt_876c4bf1_0032DC_0309	param	param/item_data.dat	0x32DC	309	94 45 82 d4 82 a6	忍ぶえ	忍笛		translated_aligned	tight	yes			6	69	かくれみの	しのびぶえ
+zh_txt_876c4bf1_00330C_0310	txt_876c4bf1_00330C_0310	param	param/item_data.dat	0x330C	310	82 b5 82 cc 82 d1 82 d4 82 a6	しのびぶえ	忍笛    		translated_aligned	ok	yes			10	70	忍ぶえ	サスケの忍しき札
+zh_txt_876c4bf1_003330_0311	txt_876c4bf1_003330_0311	param	param/item_data.dat	0x3330	311	83 54 83 58 83 50 82 cc 94 45 82 b5 82 ab 8e 44	サスケの忍しき札	佐助忍识札 		translated_aligned	tight	yes			16	71	しのびぶえ	サスケのにんしきふだ
+zh_txt_876c4bf1_003360_0312	txt_876c4bf1_003360_0312	param	param/item_data.dat	0x3360	312	83 54 83 58 83 50 82 cc 82 c9 82 f1 82 b5 82 ab 82 d3 82 be	サスケのにんしきふだ	佐助的忍识札  		translated_aligned	tight	yes			20	72	サスケの忍しき札	我愛羅の忍しき札
+zh_txt_876c4bf1_003384_0313	txt_876c4bf1_003384_0313	param	param/item_data.dat	0x3384	313	89 e4 88 a4 97 85 82 cc 94 45 82 b5 82 ab 8e 44	我愛羅の忍しき札	我爱罗忍札 		translated_aligned	tight	yes			16	73	サスケのにんしきふだ	ガアラのにんしきふだ
+zh_txt_876c4bf1_0033B4_0314	txt_876c4bf1_0033B4_0314	param	param/item_data.dat	0x33B4	314	83 4b 83 41 83 89 82 cc 82 c9 82 f1 82 b5 82 ab 82 d3 82 be	ガアラのにんしきふだ	我爱罗忍识札  		translated_aligned	tight	yes			20	74	我愛羅の忍しき札	テマリの忍しき札
+zh_txt_876c4bf1_0033D8_0315	txt_876c4bf1_0033D8_0315	param	param/item_data.dat	0x33D8	315	83 65 83 7d 83 8a 82 cc 94 45 82 b5 82 ab 8e 44	テマリの忍しき札	手鞠忍札    		translated_aligned	ok	yes			16	75	ガアラのにんしきふだ	テマリのにんしきふだ
+zh_txt_876c4bf1_003408_0316	txt_876c4bf1_003408_0316	param	param/item_data.dat	0x3408	316	83 65 83 7d 83 8a 82 cc 82 c9 82 f1 82 b5 82 ab 82 d3 82 be	テマリのにんしきふだ	手鞠忍识札     		translated_aligned	ok	yes			20	76	テマリの忍しき札	カンクロウの忍しき札
+zh_txt_876c4bf1_00342C_0317	txt_876c4bf1_00342C_0317	param	param/item_data.dat	0x342C	317	83 4a 83 93 83 4e 83 8d 83 45 82 cc 94 45 82 b5 82 ab 8e 44	カンクロウの忍しき札	勘九郎忍识札  		translated_aligned	tight	yes			20	77	テマリのにんしきふだ	カンクロウのにんしきふだ
+zh_txt_876c4bf1_00345C_0318	txt_876c4bf1_00345C_0318	param	param/item_data.dat	0x345C	318	83 4a 83 93 83 4e 83 8d 83 45 82 cc 82 c9 82 f1 82 b5 82 ab 82 d3 82 be	カンクロウのにんしきふだ	勘九郎的忍识札   		translated_aligned	tight	yes			24	78	カンクロウの忍しき札	自来也の忍しき札
+zh_txt_876c4bf1_003480_0319	txt_876c4bf1_003480_0319	param	param/item_data.dat	0x3480	319	8e a9 97 88 96 e7 82 cc 94 45 82 b5 82 ab 8e 44	自来也の忍しき札	自来也忍札 		translated_aligned	tight	yes			16	79	カンクロウのにんしきふだ	じらいやのにんしきふだ

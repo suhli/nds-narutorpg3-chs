@@ -1,12 +1,28 @@
 {
-  "rows": 0,
+  "rows": 7,
   "checked_translated_rows": 0,
-  "issue_count": 0,
+  "issue_count": 1,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
   "text_quality_issue_count": 0,
+  "translation_failure_count": 1,
   "control_issues": [],
   "byte_length_issues": [],
   "text_quality_issues": [],
-  "reset": true
+  "translation_failures": [
+    {
+      "chunk_id": "chunk_0191",
+      "translated_path": "text/translation/chunks/translated/chunk_0191.tsv",
+      "row_ids": [
+        "zh_txt_b7969276_000010_0000",
+        "zh_txt_b7969276_000054_0001",
+        "zh_txt_b7969276_0000A2_0002",
+        "zh_txt_b7969276_00014E_0003",
+        "zh_txt_b7969276_000190_0004",
+        "zh_txt_b7969276_000204_0005",
+        "zh_txt_b7969276_00026E_0006"
+      ],
+      "error": "translation failed after retries:\nzh_txt_b7969276_000010_0000: visible control prefix residue\nzh_txt_b7969276_000054_0001: visible control prefix residue\nzh_txt_b7969276_0000A2_0002: control token mismatch expected=['{CTRL_0000}', '{CTRL_0200}', '{CTRL_0002}', '{CTRL_4000}', '{CTRL_8100}', '{CTRL_0001}', '{CTRL_0001}'] actual=['{CTRL_0000}', '{CTRL_0200}', '{CTRL_0002}', '{CTRL_4000}', '{CTRL_8100}', '{CTRL_0001}']\nzh_txt_b7969276_0000A2_0002: visible control prefix residue\nzh_txt_b7969276_00014E_0003: visible control prefix residue\nzh_txt_b7969276_000190_0004: visible control prefix residue\nzh_txt_b7969276_000204_0005: visible control prefix residue\nzh_txt_b7969276_00026E_0006: visible control prefix residue"
+    }
+  ]
 }
