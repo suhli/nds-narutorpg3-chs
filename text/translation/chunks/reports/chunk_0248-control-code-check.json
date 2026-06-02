@@ -1,33 +1,11 @@
 {
-  "rows": 12,
-  "checked_translated_rows": 0,
-  "issue_count": 1,
+  "rows": 35,
+  "checked_translated_rows": 35,
+  "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
   "text_quality_issue_count": 0,
-  "translation_failure_count": 1,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [],
-  "translation_failures": [
-    {
-      "chunk_id": "chunk_0248",
-      "translated_path": "text/translation/chunks/translated/chunk_0248.tsv",
-      "row_ids": [
-        "zh_txt_82b31339_000378_0012",
-        "zh_txt_82b31339_0003D2_0013",
-        "zh_txt_82b31339_0003F6_0014",
-        "zh_txt_82b31339_00041E_0015",
-        "zh_txt_82b31339_000466_0016",
-        "zh_txt_82b31339_00048C_0017",
-        "zh_txt_82b31339_0004C8_0018",
-        "zh_txt_82b31339_0004F2_0019",
-        "zh_txt_82b31339_000524_0020",
-        "zh_txt_82b31339_000572_0021",
-        "zh_txt_82b31339_0005C0_0022",
-        "zh_txt_82b31339_0005F6_0023"
-      ],
-      "error": "translation failed after retries:\nzh_txt_82b31339_0003D2_0013: too long 18>16\nzh_txt_82b31339_0004C8_0018: too long 36>32\nzh_txt_82b31339_0004F2_0019: visible control prefix residue\nzh_txt_82b31339_0005C0_0022: visible control prefix residue\nzh_txt_82b31339_0005F6_0023: visible control prefix residue"
-    }
-  ]
+  "text_quality_issues": []
 }

@@ -1,31 +1,11 @@
 {
-  "rows": 10,
-  "checked_translated_rows": 0,
-  "issue_count": 1,
+  "rows": 22,
+  "checked_translated_rows": 22,
+  "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
   "text_quality_issue_count": 0,
-  "translation_failure_count": 1,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [],
-  "translation_failures": [
-    {
-      "chunk_id": "chunk_0219",
-      "translated_path": "text/translation/chunks/translated/chunk_0219.tsv",
-      "row_ids": [
-        "zh_txt_97bca2d5_000368_0012",
-        "zh_txt_97bca2d5_00038C_0013",
-        "zh_txt_97bca2d5_0003F2_0014",
-        "zh_txt_97bca2d5_000418_0015",
-        "zh_txt_97bca2d5_00043A_0016",
-        "zh_txt_97bca2d5_000460_0017",
-        "zh_txt_97bca2d5_00049E_0018",
-        "zh_txt_97bca2d5_00050E_0019",
-        "zh_txt_97bca2d5_000572_0020",
-        "zh_txt_97bca2d5_00059E_0021"
-      ],
-      "error": "translation failed after retries:\nzh_txt_97bca2d5_000572_0020: too long 25>24"
-    }
-  ]
+  "text_quality_issues": []
 }

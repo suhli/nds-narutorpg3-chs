@@ -1,33 +1,11 @@
 {
-  "rows": 12,
-  "checked_translated_rows": 0,
-  "issue_count": 1,
+  "rows": 25,
+  "checked_translated_rows": 25,
+  "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
   "text_quality_issue_count": 0,
-  "translation_failure_count": 1,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [],
-  "translation_failures": [
-    {
-      "chunk_id": "chunk_0240",
-      "translated_path": "text/translation/chunks/translated/chunk_0240.tsv",
-      "row_ids": [
-        "zh_txt_cb31088b_000328_0012",
-        "zh_txt_cb31088b_00035E_0013",
-        "zh_txt_cb31088b_00039C_0014",
-        "zh_txt_cb31088b_0003D8_0015",
-        "zh_txt_cb31088b_000442_0016",
-        "zh_txt_cb31088b_000474_0017",
-        "zh_txt_cb31088b_0004D4_0018",
-        "zh_txt_cb31088b_000512_0019",
-        "zh_txt_cb31088b_000554_0020",
-        "zh_txt_cb31088b_000588_0021",
-        "zh_txt_cb31088b_0005C2_0022",
-        "zh_txt_cb31088b_0005FC_0023"
-      ],
-      "error": "translation failed after retries:\nzh_txt_cb31088b_000512_0019: too long 54>44"
-    }
-  ]
+  "text_quality_issues": []
 }

@@ -1,33 +1,11 @@
 {
-  "rows": 12,
-  "checked_translated_rows": 0,
-  "issue_count": 1,
+  "rows": 13,
+  "checked_translated_rows": 13,
+  "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
   "text_quality_issue_count": 0,
-  "translation_failure_count": 1,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [],
-  "translation_failures": [
-    {
-      "chunk_id": "chunk_0195",
-      "translated_path": "text/translation/chunks/translated/chunk_0195.tsv",
-      "row_ids": [
-        "zh_txt_e5fda45d_00001A_0000",
-        "zh_txt_e5fda45d_000068_0001",
-        "zh_txt_e5fda45d_000094_0002",
-        "zh_txt_e5fda45d_0000CA_0003",
-        "zh_txt_e5fda45d_0000EC_0004",
-        "zh_txt_e5fda45d_00014C_0005",
-        "zh_txt_e5fda45d_000184_0006",
-        "zh_txt_e5fda45d_0001BE_0007",
-        "zh_txt_e5fda45d_000234_0008",
-        "zh_txt_e5fda45d_000278_0009",
-        "zh_txt_e5fda45d_00029C_0010",
-        "zh_txt_e5fda45d_0002C0_0011"
-      ],
-      "error": "translation failed after retries:\nunexpected id: zh_txt_e5fda45d_0002E4_0012\nzh_txt_e5fda45d_00001A_0000: too long 65>58\nzh_txt_e5fda45d_00014C_0005: too long 39>34"
-    }
-  ]
+  "text_quality_issues": []
 }

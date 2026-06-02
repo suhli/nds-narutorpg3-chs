@@ -3975,94 +3975,6 @@ zh_txt_7edda24f_0004E8_0002	txt_7edda24f_0004E8_0002	message	msg/wifi/vs_msg.msg
 zh_txt_7edda24f_000550_0003	txt_7edda24f_000550_0003	message	msg/wifi/vs_msg.msg	0x550	3	82 d0 82 ab 82 c2 82 c3 82 ab 81 40 83 4c 83 83 83 89 81 45 8e e8 8c 60 82 b1 82 a4 82 a9 82 f1 82 f0 81 40 82 a8 82 b1 82 c8 82 a2 82 dc 82 b7 82 a9 81 48 00 00 82 b1 82 a4 82 a9 82 f1 82 b7 82 e9 81 40 82 b5 82 cc 82 d1 8e 44 82 f0 81 40 82 a6 82 e7 82 f1 82 c5 82 ad 82 be 82 b3 82 a2 00 00 82 b1 82 cc 81 40 82 b5 82 cc 82 d1 8e 44 82 c5 81 40 82 e6 82 eb 82 b5 82 a2 82 c5 82 b7 82 a9 81 48 00 00 82 b1 82 cc 82 b6 82 e5 82 a4 82 af 82 f1 82 c5 81 40 82 b5 82 cc 82 d1 8e 44 82 b1 82 a4 82 a9 82 f1 82 f0 01 00 82 a8 82 b1 82 c8 82 a2 82 dc 82 b7 82 a9 81 48 00 00 82 b5 82 cc 82 d1 8e 44 82 cc 82 b1 82 a4 82 a9 82 f1 82 f0 81 40 82 e2 82 df 82 dc 82 b5 82 bd 03 00	ひきつづき　キャラ・手形こうかんを　おこないますか？{CTRL_0000}こうかんする　しのび札を　えらんでください{CTRL_0000}この　しのび札で　よろしいですか？{CTRL_0000}このじょうけんで　しのび札こうかんを{CTRL_0001}おこないますか？{CTRL_0000}しのび札のこうかんを　やめました		CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0001 CTRL_0000	pending_translation	unknown	yes		
 zh_txt_7edda24f_000632_0004	txt_7edda24f_000632_0004	message	msg/wifi/vs_msg.msg	0x632	4	82 b5 82 cc 82 d1 8e 44 82 b1 82 a4 82 a9 82 f1 82 bf 82 e3 82 a4 81 45 81 45 81 45 01 00 82 b5 82 ce 82 e7 82 ad 81 40 82 a8 82 dc 82 bf 82 ad 82 be 82 b3 82 a2 00 00 82 b5 82 cc 82 d1 8e 44 82 cc 82 b1 82 a4 82 a9 82 f1 82 c9 81 40 82 b9 82 a2 82 b1 82 a4 82 b5 82 dc 82 b5 82 bd 03 00	しのび札こうかんちゅう・・・{CTRL_0001}しばらく　おまちください{CTRL_0000}しのび札のこうかんに　せいこうしました		CTRL_0001 CTRL_0000	pending_translation	unknown	yes		
 zh_txt_7edda24f_000694_0005	txt_7edda24f_000694_0005	message	msg/wifi/vs_msg.msg	0x694	5	82 d0 82 ab 82 c2 82 c3 82 ab 81 40 82 b5 82 cc 82 d1 8e 44 82 cc 82 b1 82 a4 82 a9 82 f1 82 f0 81 40 82 a8 82 b1 82 c8 82 a2 82 dc 82 b7 82 a9 81 48 00 00 83 8f 83 43 83 84 83 8c 83 58 82 c2 82 a4 82 b5 82 f1 82 f0 81 40 82 b5 82 e3 82 a4 82 e8 82 e5 82 a4 82 b5 82 dc 82 b7 82 a9 81 48 00 00 82 b1 82 a4 82 a9 82 f1 82 f0 81 40 82 bf 82 e3 82 a4 82 b5 82 b5 82 c4 01 00 83 8f 83 43 83 84 83 8c 83 58 82 c2 82 a4 82 b5 82 f1 82 f0 81 40 82 b5 82 e3 82 a4 82 e8 82 e5 82 a4 82 b5 82 dc 82 b7 82 a9 81 48 00 00 82 b6 82 d4 82 f1 83 8b 81 5b 83 8b 00 00 83 81 83 93 83 6f 81 5b 82 b9 82 c1 82 c4 82 a2 00 00 82 af 82 c1 82 c4 82 a2 00 00 82 c2 82 a4 82 b5 82 f1 82 bd 82 a2 82 b9 82 f1 81 40 82 b6 82 e3 82 f1 82 d1 82 bf 82 e3 82 a4 00 00 81 40 81 40 81 40 81 40 81 40 82 b6 82 e3 82 f1 82 d1 82 a9 82 f1 82 e8 82 e5 82 a4 81 49 00 00 82 b1 82 b7 82 a4 81 40 81 40 81 40 00 00 82 c9 82 f1 82 e8 82 e5 82 ad 81 40 00 00 81 40 82 b6 82 d4 82 f1 00 00 81 40 82 a0 82 a2 82 c4 00 00 82 a0 82 a2 82 c4 82 cc 81 40 82 d6 82 f1 82 b6 82 f0 81 40 82 dc 82 c1 82 c4 82 a2 82 dc 82 b7 81 45 81 45 81 45 00 00 82 a0 82 a2 82 c4 82 aa 81 40 82 b1 82 a4 82 a9 82 f1 82 f0 81 40 82 bf 82 e3 82 a4 82 b5 82 b5 82 dc 82 b5 82 bd 01 00 82 c2 82 a4 82 b5 82 f1 82 f0 81 40 82 b5 82 e3 82 a4 82 e8 82 e5 82 a4 82 b5 82 dc 82 b7 00 00 82 c9 82 f1 82 b6 82 e3 82 c2 82 af 82 a2 82 b5 82 cc 82 d1 8e 44 00 00 83 58 83 65 81 5b 83 5e 83 58 82 af 82 a2 82 b5 82 cc 82 d1 8e 44 00 00 82 bd 82 a2 82 b9 82 a2 82 af 82 a2 82 b5 82 cc 82 d1 8e 44 00 00 82 c6 82 ad 82 b5 82 e3 82 af 82 a2 82 b5 82 cc 82 d1 8e 44 00 00 82 b1 82 a4 82 a9 82 f1 82 b7 82 e9 83 4c 83 83 83 89 81 45 8e e8 8c 60 00 00 82 b1 82 a4 82 a9 82 f1 82 b7 82 e9 82 b5 82 cc 82 d1 8e 44 81 40 81 40 00 00 82 b1 82 a4 82 a9 82 f1 82 f0 81 40 82 bf 82 e3 82 a4 82 b5 82 b5 82 dc 82 b5 82 bd 01 00 82 c2 82 a4 82 b5 82 f1 82 f0 81 40 82 b5 82 e3 82 a4 82 e8 82 e5 82 a4 82 b5 82 dc 82 b7 00 00 83 5a 81 5b 83 75 82 b5 82 c4 82 a2 82 dc 82 b7 01 00 82 c5 82 f1 82 b0 82 f1 82 f0 82 ab 82 e7 82 c8 82 a2 82 c5 82 ad 82 be 82 b3 82 a2 81 45 81 45 81 45 00 00 00 00	ひきつづき　しのび札のこうかんを　おこないますか？{CTRL_0000}ワイヤレスつうしんを　しゅうりょうしますか？{CTRL_0000}こうかんを　ちゅうしして{CTRL_0001}ワイヤレスつうしんを　しゅうりょうしますか？{CTRL_0000}じぶんルール{CTRL_0000}メンバーせってい{CTRL_0000}けってい{CTRL_0000}つうしんたいせん　じゅんびちゅう{CTRL_0000}　　　　　じゅんびかんりょう！{CTRL_0000}こすう　　　{CTRL_0000}にんりょく　{CTRL_0000}　じぶん{CTRL_0000}　あいて{CTRL_0000}あいての　へんじを　まっています・・・{CTRL_0000}あいてが　こうかんを　ちゅうししました{CTRL_0001}つうしんを　しゅうりょうします{CTRL_0000}にんじゅつけいしのび札{CTRL_0000}ステータスけいしのび札{CTRL_0000}たいせいけいしのび札{CTRL_0000}とくしゅけいしのび札{CTRL_0000}こうかんするキャラ・手形{CTRL_0000}こうかんするしのび札　　{CTRL_0000}こうかんを　ちゅうししました{CTRL_0001}つうしんを　しゅうりょうします{CTRL_0000}セーブしています{CTRL_0001}でんげんをきらないでください・・・		CTRL_0000 CTRL_0000 CTRL_0001 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0001 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0000 CTRL_0001 CTRL_0000 CTRL_0001	pending_translation	unknown	yes		
-zh_txt_21b4b5ce_001220_0000	txt_21b4b5ce_001220_0000	param	param/btlcmd/btlcmd.dat	0x1220	0	22 90 5c	"""申"			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_00126C_0001	txt_21b4b5ce_00126C_0001	param	param/btlcmd/btlcmd.dat	0x126C	1	22 90 4c	"""伸"			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0012B8_0002	txt_21b4b5ce_0012B8_0002	param	param/btlcmd/btlcmd.dat	0x12B8	2	22 90 ac	"""成"			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_001694_0003	txt_21b4b5ce_001694_0003	param	param/btlcmd/btlcmd.dat	0x1694	3	65 90 f9	e旋			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_001BEC_0004	txt_21b4b5ce_001BEC_0004	param	param/btlcmd/btlcmd.dat	0x1BEC	4	65 90 73	e尽			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002014_0005	txt_21b4b5ce_002014_0005	param	param/btlcmd/btlcmd.dat	0x2014	5	60 90 ac	`成			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002060_0006	txt_21b4b5ce_002060_0006	param	param/btlcmd/btlcmd.dat	0x2060	6	60 90 4c	`伸			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0020AC_0007	txt_21b4b5ce_0020AC_0007	param	param/btlcmd/btlcmd.dat	0x20AC	7	40 90 4c	@伸			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0020F8_0008	txt_21b4b5ce_0020F8_0008	param	param/btlcmd/btlcmd.dat	0x20F8	8	40 90 ec	@川			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002144_0009	txt_21b4b5ce_002144_0009	param	param/btlcmd/btlcmd.dat	0x2144	9	30 90 ec	0川			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002190_0010	txt_21b4b5ce_002190_0010	param	param/btlcmd/btlcmd.dat	0x2190	10	30 90 8c	0酔			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002228_0011	txt_21b4b5ce_002228_0011	param	param/btlcmd/btlcmd.dat	0x2228	11	35 90 d6	5蹟			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002274_0012	txt_21b4b5ce_002274_0012	param	param/btlcmd/btlcmd.dat	0x2274	12	35 90 a9	5姓			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0027CC_0013	txt_21b4b5ce_0027CC_0013	param	param/btlcmd/btlcmd.dat	0x27CC	13	65 90 f9	e旋			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002AC4_0014	txt_21b4b5ce_002AC4_0014	param	param/btlcmd/btlcmd.dat	0x2AC4	14	95 90 28	武(			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002C40_0015	txt_21b4b5ce_002C40_0015	param	param/btlcmd/btlcmd.dat	0x2C40	15	75 90 f3	u浅			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_002CD8_0016	txt_21b4b5ce_002CD8_0016	param	param/btlcmd/btlcmd.dat	0x2CD8	16	25 90 f9	%旋			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_00314C_0017	txt_21b4b5ce_00314C_0017	param	param/btlcmd/btlcmd.dat	0x314C	17	45 90 d0	E籍			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_003198_0018	txt_21b4b5ce_003198_0018	param	param/btlcmd/btlcmd.dat	0x3198	18	35 90 e3	5舌			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0031E4_0019	txt_21b4b5ce_0031E4_0019	param	param/btlcmd/btlcmd.dat	0x31E4	19	55 90 b3	U正			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_003820_0020	txt_21b4b5ce_003820_0020	param	param/btlcmd/btlcmd.dat	0x3820	20	35 90 f7	5煎			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0038B8_0021	txt_21b4b5ce_0038B8_0021	param	param/btlcmd/btlcmd.dat	0x38B8	21	55 90 47	U触			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_003C94_0022	txt_21b4b5ce_003C94_0022	param	param/btlcmd/btlcmd.dat	0x3C94	22	45 90 ba	E声			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_003EF4_0023	txt_21b4b5ce_003EF4_0023	param	param/btlcmd/btlcmd.dat	0x3EF4	23	65 90 98	e据			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004070_0024	txt_21b4b5ce_004070_0024	param	param/btlcmd/btlcmd.dat	0x4070	24	65 90 48	e食			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0040BC_0025	txt_21b4b5ce_0040BC_0025	param	param/btlcmd/btlcmd.dat	0x40BC	25	65 90 68	e辛			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004108_0026	txt_21b4b5ce_004108_0026	param	param/btlcmd/btlcmd.dat	0x4108	26	65 90 78	e靭			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_00431C_0027	txt_21b4b5ce_00431C_0027	param	param/btlcmd/btlcmd.dat	0x431C	27	65 90 58	e森			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004530_0028	txt_21b4b5ce_004530_0028	param	param/btlcmd/btlcmd.dat	0x4530	28	35 90 50	5娠			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004660_0029	txt_21b4b5ce_004660_0029	param	param/btlcmd/btlcmd.dat	0x4660	29	63 90 d8	c切			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0047DC_0030	txt_21b4b5ce_0047DC_0030	param	param/btlcmd/btlcmd.dat	0x47DC	30	71 90 fc	q線			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004958_0031	txt_21b4b5ce_004958_0031	param	param/btlcmd/btlcmd.dat	0x4958	31	35 90 a9	5姓			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0049A4_0032	txt_21b4b5ce_0049A4_0032	param	param/btlcmd/btlcmd.dat	0x49A4	32	61 90 cc	a昔			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004BB8_0033	txt_21b4b5ce_004BB8_0033	param	param/btlcmd/btlcmd.dat	0x4BB8	33	71 90 ac	q成			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004D34_0034	txt_21b4b5ce_004D34_0034	param	param/btlcmd/btlcmd.dat	0x4D34	34	45 90 48	E食			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004DCC_0035	txt_21b4b5ce_004DCC_0035	param	param/btlcmd/btlcmd.dat	0x4DCC	35	35 90 c3	5静			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004EB0_0036	txt_21b4b5ce_004EB0_0036	param	param/btlcmd/btlcmd.dat	0x4EB0	36	65 90 88	e粋			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_004F48_0037	txt_21b4b5ce_004F48_0037	param	param/btlcmd/btlcmd.dat	0x4F48	37	70 90 b8	p精			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_005110_0038	txt_21b4b5ce_005110_0038	param	param/btlcmd/btlcmd.dat	0x5110	38	45 90 c3	E静			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_00515C_0039	txt_21b4b5ce_00515C_0039	param	param/btlcmd/btlcmd.dat	0x515C	39	61 90 88	a粋			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0051A8_0040	txt_21b4b5ce_0051A8_0040	param	param/btlcmd/btlcmd.dat	0x51A8	40	35 90 c8	5席			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0054EC_0041	txt_21b4b5ce_0054EC_0041	param	param/btlcmd/btlcmd.dat	0x54EC	41	45 90 4a	E辱			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0056B4_0042	txt_21b4b5ce_0056B4_0042	param	param/btlcmd/btlcmd.dat	0x56B4	42	63 90 e8	c占			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_005C58_0043	txt_21b4b5ce_005C58_0043	param	param/btlcmd/btlcmd.dat	0x5C58	43	95 90 42	武B			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_005CA4_0044	txt_21b4b5ce_005CA4_0044	param	param/btlcmd/btlcmd.dat	0x5CA4	44	95 90 62	武b			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0060CC_0045	txt_21b4b5ce_0060CC_0045	param	param/btlcmd/btlcmd.dat	0x60CC	45	22 90 85	"""水"			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0064A8_0046	txt_21b4b5ce_0064A8_0046	param	param/btlcmd/btlcmd.dat	0x64A8	46	35 90 a1	5寸			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_006884_0047	txt_21b4b5ce_006884_0047	param	param/btlcmd/btlcmd.dat	0x6884	47	35 90 48	5食			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_006BC8_0048	txt_21b4b5ce_006BC8_0048	param	param/btlcmd/btlcmd.dat	0x6BC8	48	95 90 52	武R			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_006D90_0049	txt_21b4b5ce_006D90_0049	param	param/btlcmd/btlcmd.dat	0x6D90	49	35 90 62	5臣			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_006E74_0050	txt_21b4b5ce_006E74_0050	param	param/btlcmd/btlcmd.dat	0x6E74	50	65 90 e8	e占			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0070D4_0051	txt_21b4b5ce_0070D4_0051	param	param/btlcmd/btlcmd.dat	0x70D4	51	45 90 82	E垂			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_007250_0052	txt_21b4b5ce_007250_0052	param	param/btlcmd/btlcmd.dat	0x7250	52	75 90 c9	u惜			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_00729C_0053	txt_21b4b5ce_00729C_0053	param	param/btlcmd/btlcmd.dat	0x729C	53	75 90 c9	u惜			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0072E8_0054	txt_21b4b5ce_0072E8_0054	param	param/btlcmd/btlcmd.dat	0x72E8	54	75 90 89	u翠			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_007418_0055	txt_21b4b5ce_007418_0055	param	param/btlcmd/btlcmd.dat	0x7418	55	75 90 68	u辛			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_007464_0056	txt_21b4b5ce_007464_0056	param	param/btlcmd/btlcmd.dat	0x7464	56	75 90 e8	u占			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_00762C_0057	txt_21b4b5ce_00762C_0057	param	param/btlcmd/btlcmd.dat	0x762C	57	75 90 63	u芯			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0076C4_0058	txt_21b4b5ce_0076C4_0058	param	param/btlcmd/btlcmd.dat	0x76C4	58	45 90 83	E帥			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_007710_0059	txt_21b4b5ce_007710_0059	param	param/btlcmd/btlcmd.dat	0x7710	59	35 90 a9	5姓			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_0077F4_0060	txt_21b4b5ce_0077F4_0060	param	param/btlcmd/btlcmd.dat	0x77F4	60	65 90 a8	e勢			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_007AEC_0061	txt_21b4b5ce_007AEC_0061	param	param/btlcmd/btlcmd.dat	0x7AEC	61	65 90 a0	e摺			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_007CB4_0062	txt_21b4b5ce_007CB4_0062	param	param/btlcmd/btlcmd.dat	0x7CB4	62	35 90 ab	5性			pending_translation	unknown	yes		
-zh_txt_21b4b5ce_007FF8_0063	txt_21b4b5ce_007FF8_0063	param	param/btlcmd/btlcmd.dat	0x7FF8	63	71 90 ec	q川			pending_translation	unknown	yes		
-zh_txt_75c569e4_000A65_0000	txt_75c569e4_000A65_0000	param	param/equip_data.dat	0xA65	0	8c c4 6f	呼o			pending_translation	unknown	yes		
-zh_txt_75c569e4_000AFA_0001	txt_75c569e4_000AFA_0001	param	param/equip_data.dat	0xAFA	1	fb fb fb fb fb fb fb fb fb fb fb fb	驎驎驎驎驎驎			pending_translation	unknown	yes		
-zh_txt_75c569e4_000BED_0002	txt_75c569e4_000BED_0002	param	param/equip_data.dat	0xBED	2	e6 d8 6f	齎o			pending_translation	unknown	yes		
-zh_txt_14831cd9_000145_0000	txt_14831cd9_000145_0000	param	param/init_save_data.dat	0x145	0	6b 8f cb	k祥			pending_translation	unknown	yes		
-zh_txt_14831cd9_0001A8_0001	txt_14831cd9_0001A8_0001	param	param/init_save_data.dat	0x1A8	1	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_0001B7_0002	txt_14831cd9_0001B7_0002	param	param/init_save_data.dat	0x1B7	2	57 55 97 72	WU羊			pending_translation	unknown	yes		
-zh_txt_14831cd9_0001C4_0003	txt_14831cd9_0001C4_0003	param	param/init_save_data.dat	0x1C4	3	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_0001D3_0004	txt_14831cd9_0001D3_0004	param	param/init_save_data.dat	0x1D3	4	29 55 60 72	)U`r			pending_translation	unknown	yes		
-zh_txt_14831cd9_0001E0_0005	txt_14831cd9_0001E0_0005	param	param/init_save_data.dat	0x1E0	5	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_0001EE_0006	txt_14831cd9_0001EE_0006	param	param/init_save_data.dat	0x1EE	6	54 6d 55 58 72	TmUXr			pending_translation	unknown	yes		
-zh_txt_14831cd9_000234_0007	txt_14831cd9_000234_0007	param	param/init_save_data.dat	0x234	7	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_000250_0008	txt_14831cd9_000250_0008	param	param/init_save_data.dat	0x250	8	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_00026C_0009	txt_14831cd9_00026C_0009	param	param/init_save_data.dat	0x26C	9	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_000288_0010	txt_14831cd9_000288_0010	param	param/init_save_data.dat	0x288	10	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_0002A4_0011	txt_14831cd9_0002A4_0011	param	param/init_save_data.dat	0x2A4	11	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_0002C0_0012	txt_14831cd9_0002C0_0012	param	param/init_save_data.dat	0x2C0	12	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_0002DC_0013	txt_14831cd9_0002DC_0013	param	param/init_save_data.dat	0x2DC	13	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_0002E9_0014	txt_14831cd9_0002E9_0014	param	param/init_save_data.dat	0x2E9	14	24 5b 54 29 71 72	$[T)qr			pending_translation	unknown	yes		
-zh_txt_14831cd9_0002F8_0015	txt_14831cd9_0002F8_0015	param	param/init_save_data.dat	0x2F8	15	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_000306_0016	txt_14831cd9_000306_0016	param	param/init_save_data.dat	0x306	16	5f 52 59 72 70	_RYrp			pending_translation	unknown	yes		
-zh_txt_14831cd9_000314_0017	txt_14831cd9_000314_0017	param	param/init_save_data.dat	0x314	17	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_000321_0018	txt_14831cd9_000321_0018	param	param/init_save_data.dat	0x321	18	24 5c 54 49 76 72	$\TIvr			pending_translation	unknown	yes		
-zh_txt_14831cd9_000330_0019	txt_14831cd9_000330_0019	param	param/init_save_data.dat	0x330	19	9b ec 40	幗@			pending_translation	unknown	yes		
-zh_txt_14831cd9_00033D_0020	txt_14831cd9_00033D_0020	param	param/init_save_data.dat	0x33D	20	2b 90 6d 72	+仁r			pending_translation	unknown	yes		
 zh_txt_876c4bf1_000000_0000	txt_876c4bf1_000000_0000	param	param/item_data.dat	0x0	0	95 ba 97 c6 8a db 81 69 82 d0 82 e5 82 a4 82 eb 82 a4 82 aa 82 f1 81 6a	兵糧丸（ひょうろうがん）			pending_translation	unknown	yes		
 zh_txt_876c4bf1_000030_0001	txt_876c4bf1_000030_0001	param	param/item_data.dat	0x30	1	82 d0 82 e5 82 a4 82 eb 82 a4 82 aa 82 f1	ひょうろうがん			pending_translation	unknown	yes		
 zh_txt_876c4bf1_000054_0002	txt_876c4bf1_000054_0002	param	param/item_data.dat	0x54	2	82 a2 82 e8 82 e5 82 a4 94 c7 82 cc 95 ba 97 c6 8a db	いりょう班の兵糧丸			pending_translation	unknown	yes		
@@ -4723,85 +4635,49 @@ zh_txt_876c4bf1_006BD0_0656	txt_876c4bf1_006BD0_0656	param	param/item_data.dat	0
 zh_txt_876c4bf1_006BF4_0657	txt_876c4bf1_006BF4_0657	param	param/item_data.dat	0x6BF4	657	82 bb 82 a4 82 d1 82 c8 82 b5	そうびなし			pending_translation	unknown	yes		
 zh_txt_876c4bf1_006C24_0658	txt_876c4bf1_006C24_0658	param	param/item_data.dat	0x6C24	658	82 bb 82 a4 82 d1 82 c8 82 b5	そうびなし			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000000_0000	txt_4994e4ab_000000_0000	param	param/jyutu_data.dat	0x0	0	89 ce 82 c6 82 f1 82 cc 8f 70	火とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000028_0001	txt_4994e4ab_000028_0001	param	param/jyutu_data.dat	0x28	1	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00002C_0002	txt_4994e4ab_00002C_0002	param	param/jyutu_data.dat	0x2C	2	91 e5 89 ce 82 c6 82 f1 82 cc 8f 70	大火とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000054_0003	txt_4994e4ab_000054_0003	param	param/jyutu_data.dat	0x54	3	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000058_0004	txt_4994e4ab_000058_0004	param	param/jyutu_data.dat	0x58	4	82 bf 82 e5 82 a4 91 e5 89 ce 82 c6 82 f1 82 cc 8f 70	ちょう大火とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000080_0005	txt_4994e4ab_000080_0005	param	param/jyutu_data.dat	0x80	5	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000084_0006	txt_4994e4ab_000084_0006	param	param/jyutu_data.dat	0x84	6	90 85 82 c6 82 f1 82 cc 8f 70	水とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0000AC_0007	txt_4994e4ab_0000AC_0007	param	param/jyutu_data.dat	0xAC	7	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0000B0_0008	txt_4994e4ab_0000B0_0008	param	param/jyutu_data.dat	0xB0	8	91 e5 90 85 82 c6 82 f1 82 cc 8f 70	大水とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0000D8_0009	txt_4994e4ab_0000D8_0009	param	param/jyutu_data.dat	0xD8	9	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0000DC_0010	txt_4994e4ab_0000DC_0010	param	param/jyutu_data.dat	0xDC	10	82 bf 82 e5 82 a4 91 e5 90 85 82 c6 82 f1 82 cc 8f 70	ちょう大水とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000104_0011	txt_4994e4ab_000104_0011	param	param/jyutu_data.dat	0x104	11	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000108_0012	txt_4994e4ab_000108_0012	param	param/jyutu_data.dat	0x108	12	97 8b 82 c6 82 f1 82 cc 8f 70	雷とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000130_0013	txt_4994e4ab_000130_0013	param	param/jyutu_data.dat	0x130	13	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000134_0014	txt_4994e4ab_000134_0014	param	param/jyutu_data.dat	0x134	14	91 e5 97 8b 82 c6 82 f1 82 cc 8f 70	大雷とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00015C_0015	txt_4994e4ab_00015C_0015	param	param/jyutu_data.dat	0x15C	15	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000160_0016	txt_4994e4ab_000160_0016	param	param/jyutu_data.dat	0x160	16	82 bf 82 e5 82 a4 91 e5 97 8b 82 c6 82 f1 82 cc 8f 70	ちょう大雷とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000188_0017	txt_4994e4ab_000188_0017	param	param/jyutu_data.dat	0x188	17	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00018C_0018	txt_4994e4ab_00018C_0018	param	param/jyutu_data.dat	0x18C	18	95 97 82 c6 82 f1 82 cc 8f 70	風とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0001B4_0019	txt_4994e4ab_0001B4_0019	param	param/jyutu_data.dat	0x1B4	19	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0001B8_0020	txt_4994e4ab_0001B8_0020	param	param/jyutu_data.dat	0x1B8	20	91 e5 95 97 82 c6 82 f1 82 cc 8f 70	大風とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0001E0_0021	txt_4994e4ab_0001E0_0021	param	param/jyutu_data.dat	0x1E0	21	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0001E4_0022	txt_4994e4ab_0001E4_0022	param	param/jyutu_data.dat	0x1E4	22	82 bf 82 e5 82 a4 91 e5 95 97 82 c6 82 f1 82 cc 8f 70	ちょう大風とんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00020C_0023	txt_4994e4ab_00020C_0023	param	param/jyutu_data.dat	0x20C	23	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000210_0024	txt_4994e4ab_000210_0024	param	param/jyutu_data.dat	0x210	24	82 a8 82 a4 82 ab 82 e3 82 a4 8e e8 82 a0 82 c4	おうきゅう手あて			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000238_0025	txt_4994e4ab_000238_0025	param	param/jyutu_data.dat	0x238	25	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00023C_0026	txt_4994e4ab_00023C_0026	param	param/jyutu_data.dat	0x23C	26	8e e8 82 a0 82 c4	手あて			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000264_0027	txt_4994e4ab_000264_0027	param	param/jyutu_data.dat	0x264	27	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000268_0028	txt_4994e4ab_000268_0028	param	param/jyutu_data.dat	0x268	28	82 bf 82 e8 82 e5 82 a4	ちりょう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000290_0029	txt_4994e4ab_000290_0029	param	param/jyutu_data.dat	0x290	29	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000294_0030	txt_4994e4ab_000294_0030	param	param/jyutu_data.dat	0x294	30	82 bf 82 e4	ちゆ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0002BC_0031	txt_4994e4ab_0002BC_0031	param	param/jyutu_data.dat	0x2BC	31	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0002C0_0032	txt_4994e4ab_0002C0_0032	param	param/jyutu_data.dat	0x2C0	32	82 dd 82 e5 82 a4 82 b5 82 e3 82 d3 82 c1 82 a9 82 c2 81 45 97 d5	みょうしゅふっかつ・臨			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0002E8_0033	txt_4994e4ab_0002E8_0033	param	param/jyutu_data.dat	0x2E8	33	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0002EC_0034	txt_4994e4ab_0002EC_0034	param	param/jyutu_data.dat	0x2EC	34	82 dd 82 e5 82 a4 82 b5 82 e3 82 d3 82 c1 82 a9 82 c2 81 45 95 ba	みょうしゅふっかつ・兵			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000314_0035	txt_4994e4ab_000314_0035	param	param/jyutu_data.dat	0x314	35	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000318_0036	txt_4994e4ab_000318_0036	param	param/jyutu_data.dat	0x318	36	89 f0 81 45 82 c7 82 ad	解・どく			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000340_0037	txt_4994e4ab_000340_0037	param	param/jyutu_data.dat	0x340	37	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000344_0038	txt_4994e4ab_000344_0038	param	param/jyutu_data.dat	0x344	38	89 f0 81 45 82 b0 82 f1 82 b6 82 e3 82 c2	解・げんじゅつ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00036C_0039	txt_4994e4ab_00036C_0039	param	param/jyutu_data.dat	0x36C	39	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000370_0040	txt_4994e4ab_000370_0040	param	param/jyutu_data.dat	0x370	40	89 f0 81 45 8f 70 82 d3 82 a4 82 b6	解・術ふうじ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000398_0041	txt_4994e4ab_000398_0041	param	param/jyutu_data.dat	0x398	41	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00039C_0042	txt_4994e4ab_00039C_0042	param	param/jyutu_data.dat	0x39C	42	89 f0 81 45 82 e6 82 eb 82 b8	解・よろず			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0003C4_0043	txt_4994e4ab_0003C4_0043	param	param/jyutu_data.dat	0x3C4	43	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0003C8_0044	txt_4994e4ab_0003C8_0044	param	param/jyutu_data.dat	0x3C8	44	96 d8 83 6d 97 74 82 cc 82 bd 82 c4	木ノ葉のたて			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0003F0_0045	txt_4994e4ab_0003F0_0045	param	param/jyutu_data.dat	0x3F0	45	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0003F4_0046	txt_4994e4ab_0003F4_0046	param	param/jyutu_data.dat	0x3F4	46	82 a8 82 a4 82 a6 82 f1 82 cc 8f 70	おうえんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00041C_0047	txt_4994e4ab_00041C_0047	param	param/jyutu_data.dat	0x41C	47	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000420_0048	txt_4994e4ab_000420_0048	param	param/jyutu_data.dat	0x420	48	82 a9 82 b0 82 d4 82 e6 82 a4	かげぶよう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000448_0049	txt_4994e4ab_000448_0049	param	param/jyutu_data.dat	0x448	49	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00044C_0050	txt_4994e4ab_00044C_0050	param	param/jyutu_data.dat	0x44C	50	82 e2 82 dd 82 e6 82 b9 82 cc 8f 70	やみよせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000474_0051	txt_4994e4ab_000474_0051	param	param/jyutu_data.dat	0x474	51	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000478_0052	txt_4994e4ab_000478_0052	param	param/jyutu_data.dat	0x478	52	82 cb 82 cd 82 f1 82 b5 82 e5 82 a4 82 b6 82 e1 82 cc 8f 70	ねはんしょうじゃの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0004A0_0053	txt_4994e4ab_0004A0_0053	param	param/jyutu_data.dat	0x4A0	53	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0004A4_0054	txt_4994e4ab_0004A4_0054	param	param/jyutu_data.dat	0x4A4	54	82 b1 82 e0 82 e8 82 a4 82 bd 82 cc 8f 70	こもりうたの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0004CC_0055	txt_4994e4ab_0004CC_0055	param	param/jyutu_data.dat	0x4CC	55	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0004D0_0056	txt_4994e4ab_0004D0_0056	param	param/jyutu_data.dat	0x4D0	56	95 cf 82 ed 82 e8 90 67 82 cc 8f 70	変わり身の術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0004F8_0057	txt_4994e4ab_0004F8_0057	param	param/jyutu_data.dat	0x4F8	57	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0004FC_0058	txt_4994e4ab_0004FC_0058	param	param/jyutu_data.dat	0x4FC	58	82 b5 82 e3 82 f1 82 b5 82 f1 82 cc 8f 70	しゅんしんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000524_0059	txt_4994e4ab_000524_0059	param	param/jyutu_data.dat	0x524	59	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000528_0060	txt_4994e4ab_000528_0060	param	param/jyutu_data.dat	0x528	60	83 4e 83 69 83 43 82 c7 82 ad 82 ca 82 ab	クナイどくぬき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000550_0061	txt_4994e4ab_000550_0061	param	param/jyutu_data.dat	0x550	61	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000554_0062	txt_4994e4ab_000554_0062	param	param/jyutu_data.dat	0x554	62	82 c7 82 b1 82 f1 82 b6 82 e5 82 a4	どこんじょう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00057C_0063	txt_4994e4ab_00057C_0063	param	param/jyutu_data.dat	0x57C	63	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000580_0064	txt_4994e4ab_000580_0064	param	param/jyutu_data.dat	0x580	64	83 49 83 69 83 89	オナラ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0005A8_0065	txt_4994e4ab_0005A8_0065	param	param/jyutu_data.dat	0x5A8	65	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0005AC_0066	txt_4994e4ab_0005AC_0066	param	param/jyutu_data.dat	0x5AC	66	90 85 82 d3 82 a4 82 b9 82 f1 82 ce 82 ad 82 be 82 f1	水ふうせんばくだん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0005D4_0067	txt_4994e4ab_0005D4_0067	param	param/jyutu_data.dat	0x5D4	67	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0005D8_0068	txt_4994e4ab_0005D8_0068	param	param/jyutu_data.dat	0x5D8	68	82 a8 82 a2 82 eb 82 af 82 cc 8f 70	おいろけの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000604_0069	txt_4994e4ab_000604_0069	param	param/jyutu_data.dat	0x604	69	83 6e 81 5b 83 8c 83 80 82 cc 8f 70	ハーレムの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000630_0070	txt_4994e4ab_000630_0070	param	param/jyutu_data.dat	0x630	70	82 a9 82 b0 95 aa 90 67 82 cc 8f 70	かげ分身の術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00065C_0071	txt_4994e4ab_00065C_0071	param	param/jyutu_data.dat	0x65C	71	82 a9 82 b0 95 aa 90 67 82 cc 8f 70	かげ分身の術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000684_0072	txt_4994e4ab_000684_0072	param	param/jyutu_data.dat	0x684	72	97 b8 79	虜y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000688_0073	txt_4994e4ab_000688_0073	param	param/jyutu_data.dat	0x688	73	82 a9 82 b0 95 aa 90 67 82 cc 8f 70	かげ分身の術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0006B4_0074	txt_4994e4ab_0006B4_0074	param	param/jyutu_data.dat	0x6B4	74	82 a9 82 b0 95 aa 90 67 82 cc 8f 70	かげ分身の術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0006E0_0075	txt_4994e4ab_0006E0_0075	param	param/jyutu_data.dat	0x6E0	75	82 a9 82 b0 95 aa 90 67 82 cc 8f 70	かげ分身の術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00070C_0076	txt_4994e4ab_00070C_0076	param	param/jyutu_data.dat	0x70C	76	82 a9 82 b0 95 aa 90 67 82 cc 8f 70	かげ分身の術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000738_0077	txt_4994e4ab_000738_0077	param	param/jyutu_data.dat	0x738	77	82 a4 82 b8 82 dc 82 ab 83 69 83 8b 83 67 98 41 92 65	うずまきナルト連弾			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000764_0078	txt_4994e4ab_000764_0078	param	param/jyutu_data.dat	0x764	78	82 ab 82 ce 82 ad 8e 44 82 c2 82 a2 82 b0 82 ab 82 cc 8f 70	きばく札ついげきの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00078C_0079	txt_4994e4ab_00078C_0079	param	param/jyutu_data.dat	0x78C	79	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000790_0080	txt_4994e4ab_000790_0080	param	param/jyutu_data.dat	0x790	80	82 a4 82 b8 82 dc 82 ab 83 69 83 8b 83 67 93 f1 90 e7 98 41 92 65	うずまきナルト二千連弾			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0007BC_0081	txt_4994e4ab_0007BC_0081	param	param/jyutu_data.dat	0x7BC	81	8e 6c 95 fb 94 aa 95 fb 82 b5 82 e3 82 e8 82 af 82 f1 82 cc 8f 70	四方八方しゅりけんの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0007E8_0082	txt_4994e4ab_0007E8_0082	param	param/jyutu_data.dat	0x7E8	82	8c fb 82 e6 82 b9 81 45 83 4b 83 7d 8b 67	口よせ・ガマ吉			pending_translation	unknown	yes		
@@ -4850,57 +4726,37 @@ zh_txt_4994e4ab_000F20_0124	txt_4994e4ab_000F20_0124	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_000F4C_0125	txt_4994e4ab_000F4C_0125	param	param/jyutu_data.dat	0xF4C	125	89 ce 82 c6 82 f1 81 45 82 e8 82 e3 82 a4 82 a9 82 cc 8f 70	火とん・りゅうかの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000F78_0126	txt_4994e4ab_000F78_0126	param	param/jyutu_data.dat	0xF78	126	82 bb 82 a4 82 d3 82 a4 82 b5 82 e1 8e 4f 82 cc 82 bd 82 bf	そうふうしゃ三のたち			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000FA4_0127	txt_4994e4ab_000FA4_0127	param	param/jyutu_data.dat	0xFA4	127	82 a9 82 b0 82 b5 82 e3 82 e8 82 af 82 f1 82 cc 8f 70	かげしゅりけんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_000FCC_0128	txt_4994e4ab_000FCC_0128	param	param/jyutu_data.dat	0xFCC	128	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000FD0_0129	txt_4994e4ab_000FD0_0129	param	param/jyutu_data.dat	0xFD0	129	82 bf 82 c7 82 e8	ちどり			pending_translation	unknown	yes		
 zh_txt_4994e4ab_000FFC_0130	txt_4994e4ab_000FFC_0130	param	param/jyutu_data.dat	0xFFC	130	82 bf 82 c7 82 e8	ちどり			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001028_0131	txt_4994e4ab_001028_0131	param	param/jyutu_data.dat	0x1028	131	82 bf 82 c7 82 e8	ちどり			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001054_0132	txt_4994e4ab_001054_0132	param	param/jyutu_data.dat	0x1054	132	88 c3 8d 95 82 bf 82 c7 82 e8	暗黒ちどり			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001080_0133	txt_4994e4ab_001080_0133	param	param/jyutu_data.dat	0x1080	133	82 cd 82 e9 82 a9 82 b7 82 dd 82 cc 8f 70	はるかすみの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0010A8_0134	txt_4994e4ab_0010A8_0134	param	param/jyutu_data.dat	0x10A8	134	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0010AC_0135	txt_4994e4ab_0010AC_0135	param	param/jyutu_data.dat	0x10AC	135	82 c6 82 a4 82 b1 82 f1 82 bf 82 e3 82 a4 82 c9 82 e3 82 a4	とうこんちゅうにゅう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0010D4_0136	txt_4994e4ab_0010D4_0136	param	param/jyutu_data.dat	0x10D4	136	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0010D8_0137	txt_4994e4ab_0010D8_0137	param	param/jyutu_data.dat	0x10D8	137	82 cd 82 e9 82 a2 82 bf 82 ce 82 f1 82 cc 8f 70	はるいちばんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001100_0138	txt_4994e4ab_001100_0138	param	param/jyutu_data.dat	0x1100	138	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001104_0139	txt_4994e4ab_001104_0139	param	param/jyutu_data.dat	0x1104	139	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 88 eb 82 cc 8a aa	しょうせん術・壱の巻			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00112C_0140	txt_4994e4ab_00112C_0140	param	param/jyutu_data.dat	0x112C	140	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001130_0141	txt_4994e4ab_001130_0141	param	param/jyutu_data.dat	0x1130	141	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 93 f3 82 cc 8a aa	しょうせん術・弐の巻			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001158_0142	txt_4994e4ab_001158_0142	param	param/jyutu_data.dat	0x1158	142	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00115C_0143	txt_4994e4ab_00115C_0143	param	param/jyutu_data.dat	0x115C	143	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 8e 51 82 cc 8a aa	しょうせん術・参の巻			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001184_0144	txt_4994e4ab_001184_0144	param	param/jyutu_data.dat	0x1184	144	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001188_0145	txt_4994e4ab_001188_0145	param	param/jyutu_data.dat	0x1188	145	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 8e 6c 82 cc 8a aa	しょうせん術・四の巻			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0011B0_0146	txt_4994e4ab_0011B0_0146	param	param/jyutu_data.dat	0x11B0	146	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0011B4_0147	txt_4994e4ab_0011B4_0147	param	param/jyutu_data.dat	0x11B4	147	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 88 eb 82 cc 8a aa	しょうせんりん術・壱の巻			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0011DC_0148	txt_4994e4ab_0011DC_0148	param	param/jyutu_data.dat	0x11DC	148	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0011E0_0149	txt_4994e4ab_0011E0_0149	param	param/jyutu_data.dat	0x11E0	149	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 93 f3 82 cc 8a aa	しょうせんりん術・弐の巻			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001208_0150	txt_4994e4ab_001208_0150	param	param/jyutu_data.dat	0x1208	150	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00120C_0151	txt_4994e4ab_00120C_0151	param	param/jyutu_data.dat	0x120C	151	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 8e 51 82 cc 8a aa	しょうせんりん術・参の巻			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001234_0152	txt_4994e4ab_001234_0152	param	param/jyutu_data.dat	0x1234	152	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001238_0153	txt_4994e4ab_001238_0153	param	param/jyutu_data.dat	0x1238	153	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 8e 6c 82 cc 8a aa	しょうせんりん術・四の巻			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001260_0154	txt_4994e4ab_001260_0154	param	param/jyutu_data.dat	0x1260	154	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001264_0155	txt_4994e4ab_001264_0155	param	param/jyutu_data.dat	0x1264	155	83 75 81 5b 83 72 81 5b 83 67 83 89 83 62 83 76	ブービートラップ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00128C_0156	txt_4994e4ab_00128C_0156	param	param/jyutu_data.dat	0x128C	156	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001290_0157	txt_4994e4ab_001290_0157	param	param/jyutu_data.dat	0x1290	157	82 a4 82 bf 82 c8 82 e9 83 54 83 4e 83 89	うちなるサクラ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0012BC_0158	txt_4994e4ab_0012BC_0158	param	param/jyutu_data.dat	0x12BC	158	82 b5 82 e1 81 5b 82 f1 82 c8 82 eb 81 5b 83 52 83 93 83 7b	しゃーんなろーコンボ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0012E8_0159	txt_4994e4ab_0012E8_0159	param	param/jyutu_data.dat	0x12E8	159	82 a8 82 a8 82 a2 82 c8 82 e9 83 54 83 4e 83 89	おおいなるサクラ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001314_0160	txt_4994e4ab_001314_0160	param	param/jyutu_data.dat	0x1314	160	83 54 83 4e 83 89 82 d3 82 d4 82 ab 82 cc 8f 70	サクラふぶきの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001340_0161	txt_4994e4ab_001340_0161	param	param/jyutu_data.dat	0x1340	161	82 a0 82 f1 82 bf 82 e3 82 a4 82 d0 82 e2 82 ad 82 cc 8f 70	あんちゅうひやくの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001368_0162	txt_4994e4ab_001368_0162	param	param/jyutu_data.dat	0x1368	162	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00136C_0163	txt_4994e4ab_00136C_0163	param	param/jyutu_data.dat	0x136C	163	82 a9 82 c1 82 b3 82 c2 82 b6 82 b4 82 a2 82 cc 8f 70	かっさつじざいの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001394_0164	txt_4994e4ab_001394_0164	param	param/jyutu_data.dat	0x1394	164	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001398_0165	txt_4994e4ab_001398_0165	param	param/jyutu_data.dat	0x1398	165	82 bf 82 ab 82 e3 82 a4 82 ed 82 e8 83 70 83 93 83 60	ちきゅうわりパンチ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0013C4_0166	txt_4994e4ab_0013C4_0166	param	param/jyutu_data.dat	0x13C4	166	8c fb 82 e6 82 b9 81 45 83 7e 83 6a 83 4a 83 63 83 86	口よせ・ミニカツユ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0013F0_0167	txt_4994e4ab_0013F0_0167	param	param/jyutu_data.dat	0x13F0	167	8c fb 82 e6 82 b9 81 45 83 7e 83 6a 83 4a 83 63 83 86	口よせ・ミニカツユ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00141C_0168	txt_4994e4ab_00141C_0168	param	param/jyutu_data.dat	0x141C	168	8c fb 82 e6 82 b9 81 45 83 7e 83 6a 83 4a 83 63 83 86	口よせ・ミニカツユ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001448_0169	txt_4994e4ab_001448_0169	param	param/jyutu_data.dat	0x1448	169	82 ab 82 ce 82 ad 83 4e 83 69 83 43 82 cc 8f 70	きばくクナイの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001470_0170	txt_4994e4ab_001470_0170	param	param/jyutu_data.dat	0x1470	170	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001474_0171	txt_4994e4ab_001474_0171	param	param/jyutu_data.dat	0x1474	171	82 cd 82 c1 82 db 82 a4 83 4e 83 69 83 43 82 cc 8f 70	はっぽうクナイの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00149C_0172	txt_4994e4ab_00149C_0172	param	param/jyutu_data.dat	0x149C	172	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0014A0_0173	txt_4994e4ab_0014A0_0173	param	param/jyutu_data.dat	0x14A0	173	82 a9 82 b0 82 c2 82 c2 82 dd 82 cc 8f 70	かげつつみの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0014C8_0174	txt_4994e4ab_0014C8_0174	param	param/jyutu_data.dat	0x14C8	174	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0014CC_0175	txt_4994e4ab_0014CC_0175	param	param/jyutu_data.dat	0x14CC	175	82 d0 82 c2 82 b6 82 ae 82 e0 82 cc 8f 70	ひつじぐもの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0014F4_0176	txt_4994e4ab_0014F4_0176	param	param/jyutu_data.dat	0x14F4	176	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0014F8_0177	txt_4994e4ab_0014F8_0177	param	param/jyutu_data.dat	0x14F8	177	82 b5 82 cc 82 d1 82 68 82 70 82 cc 82 af 82 a2	しのびＩＱのけい			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001520_0178	txt_4994e4ab_001520_0178	param	param/jyutu_data.dat	0x1520	178	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001524_0179	txt_4994e4ab_001524_0179	param	param/jyutu_data.dat	0x1524	179	82 a9 82 b0 82 dc 82 cb 82 cc 8f 70	かげまねの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001550_0180	txt_4994e4ab_001550_0180	param	param/jyutu_data.dat	0x1550	180	82 a9 82 b0 82 dc 82 cb 82 cc 8f 70	かげまねの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00157C_0181	txt_4994e4ab_00157C_0181	param	param/jyutu_data.dat	0x157C	181	82 a9 82 b0 82 dc 82 cb 82 cc 8f 70	かげまねの術			pending_translation	unknown	yes		
@@ -4908,47 +4764,33 @@ zh_txt_4994e4ab_0015A8_0182	txt_4994e4ab_0015A8_0182	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_0015D4_0183	txt_4994e4ab_0015D4_0183	param	param/jyutu_data.dat	0x15D4	183	82 a9 82 b0 82 ad 82 d1 82 b5 82 ce 82 e8 82 cc 8f 70	かげくびしばりの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001600_0184	txt_4994e4ab_001600_0184	param	param/jyutu_data.dat	0x1600	184	82 a9 82 b0 82 c8 82 e7 82 ad 82 cc 8f 70	かげならくの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00162C_0185	txt_4994e4ab_00162C_0185	param	param/jyutu_data.dat	0x162C	185	83 4b 83 8b 82 61 83 7c 83 65 81 5b 83 67	ガルＢポテート			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001654_0186	txt_4994e4ab_001654_0186	param	param/jyutu_data.dat	0x1654	186	fb b8 32	鄕2			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001658_0187	txt_4994e4ab_001658_0187	param	param/jyutu_data.dat	0x1658	187	82 c9 82 ad 82 be 82 f1 82 b9 82 f1 82 b5 82 e1	にくだんせんしゃ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001684_0188	txt_4994e4ab_001684_0188	param	param/jyutu_data.dat	0x1684	188	82 c9 82 ad 82 be 82 f1 82 cd 82 e8 82 b9 82 f1 82 b5 82 e1	にくだんはりせんしゃ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0016B0_0189	txt_4994e4ab_0016B0_0189	param	param/jyutu_data.dat	0x16B0	189	82 d4 82 d4 82 f1 82 ce 82 a2 82 a9 82 cc 8f 70	ぶぶんばいかの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0016DC_0190	txt_4994e4ab_0016DC_0190	param	param/jyutu_data.dat	0x16DC	190	82 bf 82 e5 82 a4 82 ce 82 a2 82 a9 82 cc 8f 70	ちょうばいかの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001708_0191	txt_4994e4ab_001708_0191	param	param/jyutu_data.dat	0x1708	191	82 bf 82 e5 82 a4 82 be 82 f1 82 ce 82 ad 82 b0 82 ab	ちょうだんばくげき			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001734_0192	txt_4994e4ab_001734_0192	param	param/jyutu_data.dat	0x1734	192	83 7b 83 62 83 52 83 7b 83 52 82 e6 81 5b 81 49	ボッコボコよー！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00175C_0193	txt_4994e4ab_00175C_0193	param	param/jyutu_data.dat	0x175C	193	fb b8 3f	鄕?			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001760_0194	txt_4994e4ab_001760_0194	param	param/jyutu_data.dat	0x1760	194	82 b5 82 cc 82 d1 82 ce 82 c8 81 45 82 c6 82 e8 82 a9 82 d4 82 c6	しのびばな・とりかぶと			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00178C_0195	txt_4994e4ab_00178C_0195	param	param/jyutu_data.dat	0x178C	195	82 b5 82 cc 82 d1 82 ce 82 c8 81 45 82 a0 82 ab 82 b4 82 ad 82 e7	しのびばな・あきざくら			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0017B8_0196	txt_4994e4ab_0017B8_0196	param	param/jyutu_data.dat	0x17B8	196	82 b5 82 cc 82 d1 82 ce 82 c8 81 45 83 49 83 57 83 4d 83 5c 83 45	しのびばな・オジギソウ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0017E0_0197	txt_4994e4ab_0017E0_0197	param	param/jyutu_data.dat	0x17E0	197	fb b8 45	鄕E			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0017E4_0198	txt_4994e4ab_0017E4_0198	param	param/jyutu_data.dat	0x17E4	198	82 a0 82 a2 82 cc 83 6f 83 89 82 a2 82 c1 82 db 82 f1	あいのバラいっぽん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00180C_0199	txt_4994e4ab_00180C_0199	param	param/jyutu_data.dat	0x180C	199	fb b8 40	鄕@			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001810_0200	txt_4994e4ab_001810_0200	param	param/jyutu_data.dat	0x1810	200	82 b5 82 f1 82 c4 82 f1 82 b5 82 f1 82 cc 8f 70	しんてんしんの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00183C_0201	txt_4994e4ab_00183C_0201	param	param/jyutu_data.dat	0x183C	201	82 b5 82 f1 82 e7 82 f1 82 b5 82 f1 82 cc 8f 70	しんらんしんの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001868_0202	txt_4994e4ab_001868_0202	param	param/jyutu_data.dat	0x1868	202	82 b6 82 e3 82 a4 82 b6 82 f1 82 a9 82 a6 82 f1 82 d9 82 a4 82 b5 82 e1	じゅうじんかえんほうしゃ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001890_0203	txt_4994e4ab_001890_0203	param	param/jyutu_data.dat	0x1890	203	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001894_0204	txt_4994e4ab_001894_0204	param	param/jyutu_data.dat	0x1894	204	82 b6 82 e3 82 a4 82 b6 82 f1 82 a9 82 a6 82 f1 82 ea 82 f1 82 b5 82 e1	じゅうじんかえんれんしゃ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0018BC_0205	txt_4994e4ab_0018BC_0205	param	param/jyutu_data.dat	0x18BC	205	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0018C0_0206	txt_4994e4ab_0018C0_0206	param	param/jyutu_data.dat	0x18C0	206	82 b6 82 e3 82 a4 82 b6 82 f1 82 ab 82 e3 82 a4 82 a9 82 ad	じゅうじんきゅうかく			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0018E8_0207	txt_4994e4ab_0018E8_0207	param	param/jyutu_data.dat	0x18E8	207	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0018EC_0208	txt_4994e4ab_0018EC_0208	param	param/jyutu_data.dat	0x18EC	208	90 d4 8a db 83 4c 83 59 82 c8 82 df	赤丸キズなめ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001914_0209	txt_4994e4ab_001914_0209	param	param/jyutu_data.dat	0x1914	209	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001918_0210	txt_4994e4ab_001918_0210	param	param/jyutu_data.dat	0x1918	210	90 d4 8a db 82 cc 82 e4 82 a4 82 ab	赤丸のゆうき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001940_0211	txt_4994e4ab_001940_0211	param	param/jyutu_data.dat	0x1940	211	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001944_0212	txt_4994e4ab_001944_0212	param	param/jyutu_data.dat	0x1944	212	8e 6c 82 ab 82 e1 82 ad 82 cc 8f 70	四きゃくの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00196C_0213	txt_4994e4ab_00196C_0213	param	param/jyutu_data.dat	0x196C	213	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001970_0214	txt_4994e4ab_001970_0214	param	param/jyutu_data.dat	0x1970	214	83 5f 83 43 83 69 83 7e 83 62 83 4e 83 7d 81 5b 83 4c 83 93 83 4f	ダイナミックマーキング			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001998_0215	txt_4994e4ab_001998_0215	param	param/jyutu_data.dat	0x1998	215	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00199C_0216	txt_4994e4ab_00199C_0216	param	param/jyutu_data.dat	0x199C	216	82 c2 82 a4 82 aa	つうが			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0019C8_0217	txt_4994e4ab_0019C8_0217	param	param/jyutu_data.dat	0x19C8	217	82 c2 82 a4 82 aa	つうが			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0019F4_0218	txt_4994e4ab_0019F4_0218	param	param/jyutu_data.dat	0x19F4	218	82 c2 82 a4 82 aa	つうが			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001A20_0219	txt_4994e4ab_001A20_0219	param	param/jyutu_data.dat	0x1A20	219	82 aa 82 c2 82 a4 82 aa	がつうが			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001A4C_0220	txt_4994e4ab_001A4C_0220	param	param/jyutu_data.dat	0x1A4C	220	82 aa 82 eb 82 a4 82 aa	がろうが			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001A78_0221	txt_4994e4ab_001A78_0221	param	param/jyutu_data.dat	0x1A78	221	e5 b3 82 a9 82 ba 82 cc 8f 70	蟲かぜの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001AA0_0222	txt_4994e4ab_001AA0_0222	param	param/jyutu_data.dat	0x1AA0	222	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001AA4_0223	txt_4994e4ab_001AA4_0223	param	param/jyutu_data.dat	0x1AA4	223	82 b0 82 c7 82 ad e5 b3	げどく蟲			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001ACC_0224	txt_4994e4ab_001ACC_0224	param	param/jyutu_data.dat	0x1ACC	224	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001AD0_0225	txt_4994e4ab_001AD0_0225	param	param/jyutu_data.dat	0x1AD0	225	e5 b3 82 c2 82 c2 82 dd 82 cc 8f 70	蟲つつみの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001AF8_0226	txt_4994e4ab_001AF8_0226	param	param/jyutu_data.dat	0x1AF8	226	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001AFC_0227	txt_4994e4ab_001AFC_0227	param	param/jyutu_data.dat	0x1AFC	227	82 ab 82 a9 82 a2 e5 b3 81 45 82 c7 82 ad	きかい蟲・どく			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001B28_0228	txt_4994e4ab_001B28_0228	param	param/jyutu_data.dat	0x1B28	228	82 ab 82 a9 82 a2 e5 b3 81 45 82 a9 82 c8 82 b5 82 ce 82 e8	きかい蟲・かなしばり			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001B54_0229	txt_4994e4ab_001B54_0229	param	param/jyutu_data.dat	0x1B54	229	82 ab 82 a9 82 a2 e5 b3 81 45 8f 70 82 d3 82 a4 82 b6	きかい蟲・術ふうじ			pending_translation	unknown	yes		
@@ -4956,15 +4798,12 @@ zh_txt_4994e4ab_001B80_0230	txt_4994e4ab_001B80_0230	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_001BAC_0231	txt_4994e4ab_001BAC_0231	param	param/jyutu_data.dat	0x1BAC	231	82 ab 82 a9 82 a2 e5 b3 81 45 82 ab 82 e3 82 a4 82 af 82 c2	きかい蟲・きゅうけつ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001BD8_0232	txt_4994e4ab_001BD8_0232	param	param/jyutu_data.dat	0x1BD8	232	82 ab 82 a9 82 a2 e5 b3 81 45 82 ab 82 e3 82 a4 82 af 82 c2	きかい蟲・きゅうけつ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001C04_0233	txt_4994e4ab_001C04_0233	param	param/jyutu_data.dat	0x1C04	233	90 85 82 b9 82 f1 82 da 82 f1 82 cc 8f 70	水せんぼんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001C2C_0234	txt_4994e4ab_001C2C_0234	param	param/jyutu_data.dat	0x1C2C	234	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001C30_0235	txt_4994e4ab_001C30_0235	param	param/jyutu_data.dat	0x1C30	235	82 aa 81 45 81 45 81 45 82 aa 82 f1 82 ce 82 c1 82 c4 81 49	が・・・がんばって！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001C58_0236	txt_4994e4ab_001C58_0236	param	param/jyutu_data.dat	0x1C58	236	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001C5C_0237	txt_4994e4ab_001C5C_0237	param	param/jyutu_data.dat	0x1C5C	237	82 d1 82 e1 82 ad 82 aa 82 f1	びゃくがん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001C88_0238	txt_4994e4ab_001C88_0238	param	param/jyutu_data.dat	0x1C88	238	82 d1 82 e1 82 ad 82 aa 82 f1	びゃくがん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001CB4_0239	txt_4994e4ab_001CB4_0239	param	param/jyutu_data.dat	0x1CB4	239	82 d1 82 e1 82 ad 82 aa 82 f1	びゃくがん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001CE0_0240	txt_4994e4ab_001CE0_0240	param	param/jyutu_data.dat	0x1CE0	240	82 d1 82 e1 82 ad 82 aa 82 f1	びゃくがん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001D0C_0241	txt_4994e4ab_001D0C_0241	param	param/jyutu_data.dat	0x1D0C	241	82 b6 82 e3 82 a4 82 af 82 f1	じゅうけん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001D34_0242	txt_4994e4ab_001D34_0242	param	param/jyutu_data.dat	0x1D34	242	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001D38_0243	txt_4994e4ab_001D38_0243	param	param/jyutu_data.dat	0x1D38	243	82 cd 82 c1 82 af 82 bb 82 a4 82 b5 82 e5 82 a4 82 cd	はっけそうしょうは			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001D64_0244	txt_4994e4ab_001D64_0244	param	param/jyutu_data.dat	0x1D64	244	82 b5 82 e3 82 b2 82 cd 82 c1 82 af 98 5a 8f 5c 8e 6c 82 b5 82 e5 82 a4	しゅごはっけ六十四しょう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001D90_0245	txt_4994e4ab_001D90_0245	param	param/jyutu_data.dat	0x1D90	245	82 d0 82 c5 82 f1 82 cc 82 ab 82 b8 82 ae 82 b7 82 e8	ひでんのきずぐすり			pending_translation	unknown	yes		
@@ -4975,7 +4814,6 @@ zh_txt_4994e4ab_001E40_0249	txt_4994e4ab_001E40_0249	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_001E6C_0250	txt_4994e4ab_001E6C_0250	param	param/jyutu_data.dat	0x1E6C	250	82 cd 82 c1 82 af 98 5a 8f 5c 8e 6c 82 b5 82 e5 82 a4	はっけ六十四しょう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001E98_0251	txt_4994e4ab_001E98_0251	param	param/jyutu_data.dat	0x1E98	251	82 cd 82 c1 82 af 95 53 93 f1 8f 5c 94 aa 82 b5 82 e5 82 a4	はっけ百二十八しょう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001EC4_0252	txt_4994e4ab_001EC4_0252	param	param/jyutu_data.dat	0x1EC4	252	83 69 83 43 83 58 83 4b 83 43 82 cc 83 7c 81 5b 83 59	ナイスガイのポーズ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_001EEC_0253	txt_4994e4ab_001EEC_0253	param	param/jyutu_data.dat	0x1EEC	253	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001EF0_0254	txt_4994e4ab_001EF0_0254	param	param/jyutu_data.dat	0x1EF0	254	96 d8 83 6d 97 74 82 ea 82 c1 82 d5 82 a4	木ノ葉れっぷう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001F1C_0255	txt_4994e4ab_001F1C_0255	param	param/jyutu_data.dat	0x1F1C	255	96 d8 83 6d 97 74 82 b9 82 f1 82 d5 82 a4	木ノ葉せんぷう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001F48_0256	txt_4994e4ab_001F48_0256	param	param/jyutu_data.dat	0x1F48	256	96 d8 83 6d 97 74 82 b9 82 f1 82 d5 82 a4	木ノ葉せんぷう			pending_translation	unknown	yes		
@@ -4983,7 +4821,6 @@ zh_txt_4994e4ab_001F74_0257	txt_4994e4ab_001F74_0257	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_001FA0_0258	txt_4994e4ab_001FA0_0258	param	param/jyutu_data.dat	0x1FA0	258	96 d8 83 6d 97 74 82 be 82 a2 82 b9 82 f1 82 d5 82 a4	木ノ葉だいせんぷう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001FCC_0259	txt_4994e4ab_001FCC_0259	param	param/jyutu_data.dat	0x1FCC	259	94 aa 96 e5 82 c6 82 f1 82 b1 82 a4	八門とんこう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_001FF8_0260	txt_4994e4ab_001FF8_0260	param	param/jyutu_data.dat	0x1FF8	260	94 aa 96 e5 82 c6 82 f1 82 b1 82 a4	八門とんこう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002020_0261	txt_4994e4ab_002020_0261	param	param/jyutu_data.dat	0x2020	261	9c b8 29	愃)			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002024_0262	txt_4994e4ab_002024_0262	param	param/jyutu_data.dat	0x2024	262	94 aa 96 e5 82 c6 82 f1 82 b1 82 a4	八門とんこう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002050_0263	txt_4994e4ab_002050_0263	param	param/jyutu_data.dat	0x2050	263	94 aa 96 e5 82 c6 82 f1 82 b1 82 a4	八門とんこう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00207C_0264	txt_4994e4ab_00207C_0264	param	param/jyutu_data.dat	0x207C	264	82 a8 82 e0 82 c4 82 ea 82 f1 82 b0	おもてれんげ			pending_translation	unknown	yes		
@@ -4993,20 +4830,15 @@ zh_txt_4994e4ab_002100_0267	txt_4994e4ab_002100_0267	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_00212C_0268	txt_4994e4ab_00212C_0268	param	param/jyutu_data.dat	0x212C	268	82 a4 82 e7 82 ea 82 f1 82 b0	うられんげ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002158_0269	txt_4994e4ab_002158_0269	param	param/jyutu_data.dat	0x2158	269	82 a4 82 e7 82 ea 82 f1 82 b0	うられんげ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002184_0270	txt_4994e4ab_002184_0270	param	param/jyutu_data.dat	0x2184	270	82 b5 82 c1 82 a9 82 e8 82 b5 82 c8 82 b3 82 a2 82 e6 81 5b 81 49	しっかりしなさいよー！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0021AC_0271	txt_4994e4ab_0021AC_0271	param	param/jyutu_data.dat	0x21AC	271	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0021B0_0272	txt_4994e4ab_0021B0_0272	param	param/jyutu_data.dat	0x21B0	272	82 b5 82 b1 82 dd 82 ab 82 ce 82 ad 8b ca	しこみきばく玉			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0021DC_0273	txt_4994e4ab_0021DC_0273	param	param/jyutu_data.dat	0x21DC	273	82 a0 82 f1 82 ab 98 41 92 65	あんき連弾			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002208_0274	txt_4994e4ab_002208_0274	param	param/jyutu_data.dat	0x2208	274	82 a0 82 f1 82 ab 98 41 92 65	あんき連弾			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002234_0275	txt_4994e4ab_002234_0275	param	param/jyutu_data.dat	0x2234	275	82 a0 82 f1 82 ab 98 41 92 65	あんき連弾			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00225C_0276	txt_4994e4ab_00225C_0276	param	param/jyutu_data.dat	0x225C	276	82 b8 79	ずy			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002260_0277	txt_4994e4ab_002260_0277	param	param/jyutu_data.dat	0x2260	277	82 bb 82 a4 82 b5 82 e5 82 a4 82 e8 82 e3 82 a4	そうしょうりゅう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00228C_0278	txt_4994e4ab_00228C_0278	param	param/jyutu_data.dat	0x228C	278	95 90 8b ef 82 bd 82 a2 82 c4 82 f1	武具たいてん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0022B8_0279	txt_4994e4ab_0022B8_0279	param	param/jyutu_data.dat	0x22B8	279	82 b7 82 c8 82 a0 82 e7 82 b5 82 cc 8f 70	すなあらしの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0022E0_0280	txt_4994e4ab_0022E0_0280	param	param/jyutu_data.dat	0x22E0	280	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0022E4_0281	txt_4994e4ab_0022E4_0281	param	param/jyutu_data.dat	0x22E4	281	82 be 82 a2 82 52 82 cc 96 da 82 a9 82 a2 82 aa 82 f1	だい３の目かいがん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00230C_0282	txt_4994e4ab_00230C_0282	param	param/jyutu_data.dat	0x230C	282	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002310_0283	txt_4994e4ab_002310_0283	param	param/jyutu_data.dat	0x2310	283	82 b7 82 c8 82 cc 82 bd 82 c4	すなのたて			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002338_0284	txt_4994e4ab_002338_0284	param	param/jyutu_data.dat	0x2338	284	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00233C_0285	txt_4994e4ab_00233C_0285	param	param/jyutu_data.dat	0x233C	285	82 b3 82 ce 82 ad 82 bb 82 a4 82 bb 82 a4	さばくそうそう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002368_0286	txt_4994e4ab_002368_0286	param	param/jyutu_data.dat	0x2368	286	82 b3 82 ce 82 ad 82 bb 82 a4 82 bb 82 a4	さばくそうそう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002394_0287	txt_4994e4ab_002394_0287	param	param/jyutu_data.dat	0x2394	287	82 b3 82 ce 82 ad 82 bb 82 a4 82 bb 82 a4	さばくそうそう			pending_translation	unknown	yes		
@@ -5017,32 +4849,23 @@ zh_txt_4994e4ab_002444_0291	txt_4994e4ab_002444_0291	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_002470_0292	txt_4994e4ab_002470_0292	param	param/jyutu_data.dat	0x2470	292	82 b5 82 e3 82 a9 82 ad 82 cc 82 bd 82 c4	しゅかくのたて			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00249C_0293	txt_4994e4ab_00249C_0293	param	param/jyutu_data.dat	0x249C	293	82 bd 82 ca 82 ab 82 cb 82 a2 82 e8 82 cc 8f 70	たぬきねいりの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0024C8_0294	txt_4994e4ab_0024C8_0294	param	param/jyutu_data.dat	0x24C8	294	83 6e 83 8a 83 5a 83 93 82 b5 82 c1 82 bd	ハリセンしった			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0024F0_0295	txt_4994e4ab_0024F0_0295	param	param/jyutu_data.dat	0x24F0	295	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0024F4_0296	txt_4994e4ab_0024F4_0296	param	param/jyutu_data.dat	0x24F4	296	82 a8 82 a4 82 ac 82 da 82 a4 82 ac 82 e5	おうぎぼうぎょ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00251C_0297	txt_4994e4ab_00251C_0297	param	param/jyutu_data.dat	0x251C	297	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002520_0298	txt_4994e4ab_002520_0298	param	param/jyutu_data.dat	0x2520	298	82 be 82 a2 82 c6 82 c1 82 d5 82 a4	だいとっぷう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002548_0299	txt_4994e4ab_002548_0299	param	param/jyutu_data.dat	0x2548	299	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00254C_0300	txt_4994e4ab_00254C_0300	param	param/jyutu_data.dat	0x254C	300	91 e5 83 4a 83 7d 83 43 83 5e 83 60 82 cc 8f 70	大カマイタチの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002578_0301	txt_4994e4ab_002578_0301	param	param/jyutu_data.dat	0x2578	301	8c fb 82 e6 82 b9 81 45 83 4a 83 7d 83 5e 83 8a	口よせ・カマタリ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0025A4_0302	txt_4994e4ab_0025A4_0302	param	param/jyutu_data.dat	0x25A4	302	8c fb 82 e6 82 b9 81 45 83 4a 83 7d 83 5e 83 8a	口よせ・カマタリ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0025D0_0303	txt_4994e4ab_0025D0_0303	param	param/jyutu_data.dat	0x25D0	303	8c fb 82 e6 82 b9 81 45 83 4a 83 7d 83 5e 83 8a	口よせ・カマタリ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0025FC_0304	txt_4994e4ab_0025FC_0304	param	param/jyutu_data.dat	0x25FC	304	82 ad 82 ae 82 c2 82 c6 82 c1 82 d5 82 a4	くぐつとっぷう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002624_0305	txt_4994e4ab_002624_0305	param	param/jyutu_data.dat	0x2624	305	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002628_0306	txt_4994e4ab_002628_0306	param	param/jyutu_data.dat	0x2628	306	82 b7 82 c8 82 ad 82 ae 82 c2 82 cc 8f 70	すなくぐつの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002650_0307	txt_4994e4ab_002650_0307	param	param/jyutu_data.dat	0x2650	307	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002654_0308	txt_4994e4ab_002654_0308	param	param/jyutu_data.dat	0x2654	308	82 ad 82 ae 82 c2 82 a6 82 f1 82 dc 82 ad	くぐつえんまく			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002680_0309	txt_4994e4ab_002680_0309	param	param/jyutu_data.dat	0x2680	309	82 ad 82 ae 82 c2 82 cb 82 de 82 e8 82 b1 82 a4	くぐつねむりこう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0026AC_0310	txt_4994e4ab_0026AC_0310	param	param/jyutu_data.dat	0x26AC	310	82 ad 82 ae 82 c2 82 cc 8f 70 81 45 82 c7 82 ad 82 af 82 de 82 e8	くぐつの術・どくけむり			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0026D8_0311	txt_4994e4ab_0026D8_0311	param	param/jyutu_data.dat	0x26D8	311	82 ad 82 ae 82 c2 82 b5 82 ce 82 e8 82 cc 8f 70	くぐつしばりの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002704_0312	txt_4994e4ab_002704_0312	param	param/jyutu_data.dat	0x2704	312	8c fb 82 e6 82 b9 81 45 83 4e 83 8d 83 41 83 8a	口よせ・クロアリ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002730_0313	txt_4994e4ab_002730_0313	param	param/jyutu_data.dat	0x2730	313	83 4b 83 7d 82 cc 82 a0 82 d4 82 e7 82 bf 82 e4	ガマのあぶらちゆ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002758_0314	txt_4994e4ab_002758_0314	param	param/jyutu_data.dat	0x2758	314	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00275C_0315	txt_4994e4ab_00275C_0315	param	param/jyutu_data.dat	0x275C	315	83 4b 83 7d 82 cc 82 b1 82 c4	ガマのこて			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002784_0316	txt_4994e4ab_002784_0316	param	param/jyutu_data.dat	0x2784	316	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002788_0317	txt_4994e4ab_002788_0317	param	param/jyutu_data.dat	0x2788	317	83 4b 83 7d 82 cc 82 c8 82 df 82 dc 82 ed 82 b5	ガマのなめまわし			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0027B0_0318	txt_4994e4ab_0027B0_0318	param	param/jyutu_data.dat	0x27B0	318	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0027B4_0319	txt_4994e4ab_0027B4_0319	param	param/jyutu_data.dat	0x27B4	319	83 4b 83 7d 82 cc 82 aa 82 c1 82 b5 82 e5 82 a4	ガマのがっしょう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0027DC_0320	txt_4994e4ab_0027DC_0320	param	param/jyutu_data.dat	0x27DC	320	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0027E0_0321	txt_4994e4ab_0027E0_0321	param	param/jyutu_data.dat	0x27E0	321	8c fb 82 e6 82 b9 81 45 82 e2 82 bd 82 a2 82 ad 82 b8 82 b5 82 cc 8f 70	口よせ・やたいくずしの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00280C_0322	txt_4994e4ab_00280C_0322	param	param/jyutu_data.dat	0x280C	322	8c fb 82 e6 82 b9 81 45 82 e2 82 bd 82 a2 82 ad 82 b8 82 b5 82 cc 8f 70	口よせ・やたいくずしの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002838_0323	txt_4994e4ab_002838_0323	param	param/jyutu_data.dat	0x2838	323	8c fb 82 e6 82 b9 81 45 82 e2 82 bd 82 a2 82 ad 82 b8 82 b5 82 cc 8f 70	口よせ・やたいくずしの術			pending_translation	unknown	yes		
@@ -5050,7 +4873,6 @@ zh_txt_4994e4ab_002864_0324	txt_4994e4ab_002864_0324	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_002890_0325	txt_4994e4ab_002890_0325	param	param/jyutu_data.dat	0x2890	325	93 79 82 c6 82 f1 81 45 82 e6 82 dd 82 ca 82 dc	土とん・よみぬま			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0028BC_0326	txt_4994e4ab_0028BC_0326	param	param/jyutu_data.dat	0x28BC	326	89 ce 82 c6 82 f1 81 45 82 aa 82 dc 82 e4 82 a6 82 f1 82 be 82 f1	火とん・がまゆえんだん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0028E8_0327	txt_4994e4ab_0028E8_0327	param	param/jyutu_data.dat	0x28E8	327	82 aa 82 f1 82 ce 82 e8 82 c8 82 c1 81 49 81 49	がんばりなっ！！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002910_0328	txt_4994e4ab_002910_0328	param	param/jyutu_data.dat	0x2910	328	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002914_0329	txt_4994e4ab_002914_0329	param	param/jyutu_data.dat	0x2914	329	82 ba 82 c1 82 bd 82 a2 82 d0 82 c6 82 e8 82 dd 83 70 83 93 83 60	ぜったいひとりみパンチ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002940_0330	txt_4994e4ab_002940_0330	param	param/jyutu_data.dat	0x2940	330	82 c2 82 a4 82 c4 82 f1 82 ab 82 e1 82 ad	つうてんきゃく			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00296C_0331	txt_4994e4ab_00296C_0331	param	param/jyutu_data.dat	0x296C	331	82 e7 82 f1 82 b5 82 f1 82 b5 82 e5 82 a4	らんしんしょう			pending_translation	unknown	yes		
@@ -5060,289 +4882,175 @@ zh_txt_4994e4ab_0029F0_0334	txt_4994e4ab_0029F0_0334	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_002A1C_0335	txt_4994e4ab_002A1C_0335	param	param/jyutu_data.dat	0x2A1C	335	8c fb 82 e6 82 b9 81 45 83 4a 83 63 83 86	口よせ・カツユ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002A48_0336	txt_4994e4ab_002A48_0336	param	param/jyutu_data.dat	0x2A48	336	82 bb 82 a4 82 bc 82 a4 82 b3 82 a2 82 b9 82 a2	そうぞうさいせい			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002A74_0337	txt_4994e4ab_002A74_0337	param	param/jyutu_data.dat	0x2A74	337	95 97 82 c6 82 f1 81 45 91 e5 82 c6 82 c1 82 cf	風とん・大とっぱ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002A9C_0338	txt_4994e4ab_002A9C_0338	param	param/jyutu_data.dat	0x2A9C	338	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002AA0_0339	txt_4994e4ab_002AA0_0339	param	param/jyutu_data.dat	0x2AA0	339	82 ad 82 b3 82 c8 82 ac 82 cc 82 af 82 f1	くさなぎのけん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002ACC_0340	txt_4994e4ab_002ACC_0340	param	param/jyutu_data.dat	0x2ACC	340	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002AF8_0341	txt_4994e4ab_002AF8_0341	param	param/jyutu_data.dat	0x2AF8	341	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002B24_0342	txt_4994e4ab_002B24_0342	param	param/jyutu_data.dat	0x2B24	342	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002B50_0343	txt_4994e4ab_002B50_0343	param	param/jyutu_data.dat	0x2B50	343	8c fb 82 e6 82 b9 81 45 83 7d 83 93 83 5f	口よせ・マンダ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002B78_0344	txt_4994e4ab_002B78_0344	param	param/jyutu_data.dat	0x2B78	344	88 b8 79	虻y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002B7C_0345	txt_4994e4ab_002B7C_0345	param	param/jyutu_data.dat	0x2B7C	345	8c fb 82 e6 82 b9 81 45 82 a6 82 c7 82 c4 82 f1 82 b9 82 a2	口よせ・えどてんせい			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002BA8_0346	txt_4994e4ab_002BA8_0346	param	param/jyutu_data.dat	0x2BA8	346	82 b3 82 c1 82 ab	さっき			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002BD4_0347	txt_4994e4ab_002BD4_0347	param	param/jyutu_data.dat	0x2BD4	347	90 85 82 c6 82 f1 81 45 90 85 82 e8 82 e3 82 a4 92 65	水とん・水りゅう弾			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002BFC_0348	txt_4994e4ab_002BFC_0348	param	param/jyutu_data.dat	0x2BFC	348	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002C00_0349	txt_4994e4ab_002C00_0349	param	param/jyutu_data.dat	0x2C00	349	90 85 82 c6 82 f1 81 45 90 85 82 b6 82 f1 82 d6 82 ab	水とん・水じんへき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002C28_0350	txt_4994e4ab_002C28_0350	param	param/jyutu_data.dat	0x2C28	350	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002C2C_0351	txt_4994e4ab_002C2C_0351	param	param/jyutu_data.dat	0x2C2C	351	82 b9 82 f1 82 cb 82 f1 82 b2 82 eb 82 b5	せんねんごろし			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002C58_0352	txt_4994e4ab_002C58_0352	param	param/jyutu_data.dat	0x2C58	352	8c fb 82 e6 82 b9 81 45 83 70 83 62 83 4e 83 93	口よせ・パックン			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002C80_0353	txt_4994e4ab_002C80_0353	param	param/jyutu_data.dat	0x2C80	353	9a b8 79	垪y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002C84_0354	txt_4994e4ab_002C84_0354	param	param/jyutu_data.dat	0x2C84	354	8c fb 82 e6 82 b9 81 45 83 70 83 62 83 4e 83 93	口よせ・パックン			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002CB0_0355	txt_4994e4ab_002CB0_0355	param	param/jyutu_data.dat	0x2CB0	355	8c fb 82 e6 82 b9 81 45 83 70 83 62 83 4e 83 93	口よせ・パックン			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002CD8_0356	txt_4994e4ab_002CD8_0356	param	param/jyutu_data.dat	0x2CD8	356	89 b8 79	穏y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002CDC_0357	txt_4994e4ab_002CDC_0357	param	param/jyutu_data.dat	0x2CDC	357	8c fb 82 e6 82 b9 81 45 94 aa 94 45 8c a2	口よせ・八忍犬			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002D04_0358	txt_4994e4ab_002D04_0358	param	param/jyutu_data.dat	0x2D04	358	9b b8 79	嶌y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002D08_0359	txt_4994e4ab_002D08_0359	param	param/jyutu_data.dat	0x2D08	359	8c fb 82 e6 82 b9 81 45 94 aa 94 45 8c a2	口よせ・八忍犬			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002D34_0360	txt_4994e4ab_002D34_0360	param	param/jyutu_data.dat	0x2D34	360	8c fb 82 e6 82 b9 81 45 94 aa 94 45 8c a2	口よせ・八忍犬			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002D5C_0361	txt_4994e4ab_002D5C_0361	param	param/jyutu_data.dat	0x2D5C	361	8a b8 79	敢y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002D60_0362	txt_4994e4ab_002D60_0362	param	param/jyutu_data.dat	0x2D60	362	82 e7 82 a2 82 ab 82 e8	らいきり			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002D8C_0363	txt_4994e4ab_002D8C_0363	param	param/jyutu_data.dat	0x2D8C	363	90 85 82 c6 82 f1 81 45 90 85 82 aa 82 be 82 f1	水とん・水がだん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002DB4_0364	txt_4994e4ab_002DB4_0364	param	param/jyutu_data.dat	0x2DB4	364	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002DB8_0365	txt_4994e4ab_002DB8_0365	param	param/jyutu_data.dat	0x2DB8	365	82 b5 82 e3 82 e8 82 af 82 f1 8d 55 8c 82	しゅりけん攻撃			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002DE0_0366	txt_4994e4ab_002DE0_0366	param	param/jyutu_data.dat	0x2DE0	366	fb b8 3a	鄕:			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002DE4_0367	txt_4994e4ab_002DE4_0367	param	param/jyutu_data.dat	0x2DE4	367	82 a9 82 b0 95 aa 90 67 82 ce 82 ad 82 cd	かげ分身ばくは			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002E0C_0368	txt_4994e4ab_002E0C_0368	param	param/jyutu_data.dat	0x2E0C	368	fb b8 3d	鄕=			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002E10_0369	txt_4994e4ab_002E10_0369	param	param/jyutu_data.dat	0x2E10	369	82 c2 82 ad 82 e6 82 dd	つくよみ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002E3C_0370	txt_4994e4ab_002E3C_0370	param	param/jyutu_data.dat	0x2E3C	370	82 a0 82 dc 82 c4 82 e7 82 b7	あまてらす			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002E68_0371	txt_4994e4ab_002E68_0371	param	param/jyutu_data.dat	0x2E68	371	90 85 82 eb 82 a4 82 cc 8f 70	水ろうの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002E90_0372	txt_4994e4ab_002E90_0372	param	param/jyutu_data.dat	0x2E90	372	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002E94_0373	txt_4994e4ab_002E94_0373	param	param/jyutu_data.dat	0x2E94	373	83 54 83 81 83 6e 83 5f	サメハダ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002EC0_0374	txt_4994e4ab_002EC0_0374	param	param/jyutu_data.dat	0x2EC0	374	90 85 82 c6 82 f1 81 45 90 85 82 b1 82 a4 92 65 82 cc 8f 70	水とん・水こう弾の術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002EEC_0375	txt_4994e4ab_002EEC_0375	param	param/jyutu_data.dat	0x2EEC	375	90 85 82 c6 82 f1 81 45 91 e5 82 ce 82 ad 82 d3	水とん・大ばくふ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002F18_0376	txt_4994e4ab_002F18_0376	param	param/jyutu_data.dat	0x2F18	376	82 ab 82 e8 82 aa 82 ad 82 ea 82 cc 8f 70	きりがくれの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002F44_0377	txt_4994e4ab_002F44_0377	param	param/jyutu_data.dat	0x2F44	377	82 cd 82 e8 82 bf 82 e8 82 e5 82 a4	はりちりょう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_002F6C_0378	txt_4994e4ab_002F6C_0378	param	param/jyutu_data.dat	0x2F6C	378	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002F70_0379	txt_4994e4ab_002F70_0379	param	param/jyutu_data.dat	0x2F70	379	82 b9 82 f1 82 b3 82 c2 82 b7 82 a2 82 b5 82 e5 82 a4	せんさつすいしょう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002F9C_0380	txt_4994e4ab_002F9C_0380	param	param/jyutu_data.dat	0x2F9C	380	82 dc 82 ab 82 e5 82 a4 82 d0 82 e5 82 a4 82 b5 82 e5 82 a4	まきょうひょうしょう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002FC8_0381	txt_4994e4ab_002FC8_0381	param	param/jyutu_data.dat	0x2FC8	381	82 dc 82 ab 82 e5 82 a4 82 d0 82 e5 82 a4 82 b5 82 e5 82 a4	まきょうひょうしょう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_002FF4_0382	txt_4994e4ab_002FF4_0382	param	param/jyutu_data.dat	0x2FF4	382	82 dc 82 ab 82 e5 82 a4 82 d0 82 e5 82 a4 82 b5 82 e5 82 a4	まきょうひょうしょう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00301C_0383	txt_4994e4ab_00301C_0383	param	param/jyutu_data.dat	0x301C	383	8b b8 79	矯y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003020_0384	txt_4994e4ab_003020_0384	param	param/jyutu_data.dat	0x3020	384	82 a0 82 b5 82 dd 82 b9 82 f1 82 db 82 a4	あしみせんぽう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003048_0385	txt_4994e4ab_003048_0385	param	param/jyutu_data.dat	0x3048	385	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00304C_0386	txt_4994e4ab_00304C_0386	param	param/jyutu_data.dat	0x304C	386	83 5f 83 43 83 69 83 7e 83 62 83 4e 83 47 83 93 83 67 83 8a 81 5b	ダイナミックエントリー			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003074_0387	txt_4994e4ab_003074_0387	param	param/jyutu_data.dat	0x3074	387	fb b8 27	鄕'			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003078_0388	txt_4994e4ab_003078_0388	param	param/jyutu_data.dat	0x3078	388	8c fb 82 e6 82 b9 81 45 82 c9 82 f1 82 aa 82 df	口よせ・にんがめ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0030A4_0389	txt_4994e4ab_0030A4_0389	param	param/jyutu_data.dat	0x30A4	389	8c fb 82 e6 82 b9 81 45 82 c9 82 f1 82 aa 82 df	口よせ・にんがめ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0030CC_0390	txt_4994e4ab_0030CC_0390	param	param/jyutu_data.dat	0x30CC	390	9f b8 79	涅y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0030D0_0391	txt_4994e4ab_0030D0_0391	param	param/jyutu_data.dat	0x30D0	391	8c fb 82 e6 82 b9 81 45 82 c9 82 f1 82 aa 82 df	口よせ・にんがめ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0030FC_0392	txt_4994e4ab_0030FC_0392	param	param/jyutu_data.dat	0x30FC	392	8c fb 82 e6 82 b9 81 45 82 c9 82 f1 82 aa 82 df	口よせ・にんがめ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003124_0393	txt_4994e4ab_003124_0393	param	param/jyutu_data.dat	0x3124	393	8c b8 79	減y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003128_0394	txt_4994e4ab_003128_0394	param	param/jyutu_data.dat	0x3128	394	96 d8 83 6d 97 74 82 b2 82 a4 82 e8 82 ab 82 b9 82 f1 82 d5 82 a4	木ノ葉ごうりきせんぷう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003154_0395	txt_4994e4ab_003154_0395	param	param/jyutu_data.dat	0x3154	395	82 af 82 c1 82 a9 82 a2 82 d9 82 a4 82 b6 82 f1	けっかいほうじん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003180_0396	txt_4994e4ab_003180_0396	param	param/jyutu_data.dat	0x3180	396	82 b5 82 e3 82 e8 82 af 82 f1 82 a9 82 b0 82 d4 82 f1 82 b5 82 f1	しゅりけんかげぶんしん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0031AC_0397	txt_4994e4ab_0031AC_0397	param	param/jyutu_data.dat	0x31AC	397	82 b5 82 e3 82 e8 82 af 82 f1 82 a9 82 b0 82 d4 82 f1 82 b5 82 f1	しゅりけんかげぶんしん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0031D8_0398	txt_4994e4ab_0031D8_0398	param	param/jyutu_data.dat	0x31D8	398	82 b5 82 e3 82 e8 82 af 82 f1 82 a9 82 b0 82 d4 82 f1 82 b5 82 f1	しゅりけんかげぶんしん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003200_0399	txt_4994e4ab_003200_0399	param	param/jyutu_data.dat	0x3200	399	8d b8 79	査y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003204_0400	txt_4994e4ab_003204_0400	param	param/jyutu_data.dat	0x3204	400	89 ce 82 c6 82 f1 81 45 82 a9 82 e8 82 e3 82 a4 82 a6 82 f1 82 be 82 f1	火とん・かりゅうえんだん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003230_0401	txt_4994e4ab_003230_0401	param	param/jyutu_data.dat	0x3230	401	89 ce 82 c6 82 f1 81 45 82 a9 82 e8 82 e3 82 a4 82 a6 82 f1 82 be 82 f1	火とん・かりゅうえんだん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00325C_0402	txt_4994e4ab_00325C_0402	param	param/jyutu_data.dat	0x325C	402	89 ce 82 c6 82 f1 81 45 82 a9 82 e8 82 e3 82 a4 82 a6 82 f1 82 be 82 f1	火とん・かりゅうえんだん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003284_0403	txt_4994e4ab_003284_0403	param	param/jyutu_data.dat	0x3284	403	8e b8 79	失y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003288_0404	txt_4994e4ab_003288_0404	param	param/jyutu_data.dat	0x3288	404	93 79 82 c6 82 f1 81 45 82 c7 82 e8 82 e3 82 a4 82 d6 82 ab	土とん・どりゅうへき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0032B0_0405	txt_4994e4ab_0032B0_0405	param	param/jyutu_data.dat	0x32B0	405	fb b8 5b	鄕[			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0032B4_0406	txt_4994e4ab_0032B4_0406	param	param/jyutu_data.dat	0x32B4	406	8c fb 82 e6 82 b9 81 45 82 a6 82 f1 82 dc	口よせ・えんま			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0032E0_0407	txt_4994e4ab_0032E0_0407	param	param/jyutu_data.dat	0x32E0	407	8c fb 82 e6 82 b9 81 45 82 a6 82 f1 82 dc	口よせ・えんま			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00330C_0408	txt_4994e4ab_00330C_0408	param	param/jyutu_data.dat	0x330C	408	8c fb 82 e6 82 b9 81 45 82 a6 82 f1 82 dc	口よせ・えんま			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003334_0409	txt_4994e4ab_003334_0409	param	param/jyutu_data.dat	0x3334	409	8f b8 79	昇y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003338_0410	txt_4994e4ab_003338_0410	param	param/jyutu_data.dat	0x3338	410	90 85 82 c4 82 c1 82 db 82 a4	水てっぽう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003360_0411	txt_4994e4ab_003360_0411	param	param/jyutu_data.dat	0x3360	411	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003364_0412	txt_4994e4ab_003364_0412	param	param/jyutu_data.dat	0x3364	412	83 4a 83 47 83 8b 83 57 83 83 83 93 83 76	カエルジャンプ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00338C_0413	txt_4994e4ab_00338C_0413	param	param/jyutu_data.dat	0x338C	413	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003390_0414	txt_4994e4ab_003390_0414	param	param/jyutu_data.dat	0x3390	414	83 4b 83 7d 82 cc 82 d9 82 cc 82 a8	ガマのほのお			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0033B8_0415	txt_4994e4ab_0033B8_0415	param	param/jyutu_data.dat	0x33B8	415	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0033BC_0416	txt_4994e4ab_0033BC_0416	param	param/jyutu_data.dat	0x33BC	416	90 e3 82 cc 83 80 83 60	舌のムチ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0033E4_0417	txt_4994e4ab_0033E4_0417	param	param/jyutu_data.dat	0x33E4	417	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0033E8_0418	txt_4994e4ab_0033E8_0418	param	param/jyutu_data.dat	0x33E8	418	90 85 82 c6 82 f1 81 45 82 c4 82 c1 82 db 82 a4 82 be 82 dc	水とん・てっぽうだま			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003410_0419	txt_4994e4ab_003410_0419	param	param/jyutu_data.dat	0x3410	419	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003414_0420	txt_4994e4ab_003414_0420	param	param/jyutu_data.dat	0x3414	420	82 aa 82 dc 83 68 83 58 82 b4 82 f1	がまドスざん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003440_0421	txt_4994e4ab_003440_0421	param	param/jyutu_data.dat	0x3440	421	82 cb 82 f1 82 b3 82 f1	ねんさん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003468_0422	txt_4994e4ab_003468_0422	param	param/jyutu_data.dat	0x3468	422	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00346C_0423	txt_4994e4ab_00346C_0423	param	param/jyutu_data.dat	0x346C	423	83 4a 83 63 83 86 82 be 82 a2 82 d4 82 f1 82 ea 82 c2	カツユだいぶんれつ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003494_0424	txt_4994e4ab_003494_0424	param	param/jyutu_data.dat	0x3494	424	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003498_0425	txt_4994e4ab_003498_0425	param	param/jyutu_data.dat	0x3498	425	82 ba 82 c1 82 b5 82 cb 82 f1 82 b3 82 f1	ぜっしねんさん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0034C4_0426	txt_4994e4ab_0034C4_0426	param	param/jyutu_data.dat	0x34C4	426	82 a9 82 dd 82 c2 82 ab	かみつき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0034EC_0427	txt_4994e4ab_0034EC_0427	param	param/jyutu_data.dat	0x34EC	427	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0034F0_0428	txt_4994e4ab_0034F0_0428	param	param/jyutu_data.dat	0x34F0	428	82 b5 82 df 82 c2 82 af	しめつけ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003518_0429	txt_4994e4ab_003518_0429	param	param/jyutu_data.dat	0x3518	429	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00351C_0430	txt_4994e4ab_00351C_0430	param	param/jyutu_data.dat	0x351C	430	83 4a 83 7d 82 b1 82 a4 82 b0 82 ab	カマこうげき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003544_0431	txt_4994e4ab_003544_0431	param	param/jyutu_data.dat	0x3544	431	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003548_0432	txt_4994e4ab_003548_0432	param	param/jyutu_data.dat	0x3548	432	82 ab 82 e8 82 ab 82 e8 82 dc 82 a2	きりきりまい			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003574_0433	txt_4994e4ab_003574_0433	param	param/jyutu_data.dat	0x3574	433	82 a9 82 dd 82 c2 82 ab	かみつき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00359C_0434	txt_4994e4ab_00359C_0434	param	param/jyutu_data.dat	0x359C	434	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0035A0_0435	txt_4994e4ab_0035A0_0435	param	param/jyutu_data.dat	0x35A0	435	93 79 82 c6 82 f1 81 45 82 c2 82 a2 82 aa 82 cc 8f 70	土とん・ついがの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0035CC_0436	txt_4994e4ab_0035CC_0436	param	param/jyutu_data.dat	0x35CC	436	82 c6 82 d1 82 a9 82 a9 82 e8	とびかかり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0035F4_0437	txt_4994e4ab_0035F4_0437	param	param/jyutu_data.dat	0x35F4	437	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0035F8_0438	txt_4994e4ab_0035F8_0438	param	param/jyutu_data.dat	0x35F8	438	83 4a 83 89 83 4e 83 8a 82 b3 82 f1 82 be 82 f1 82 cd	カラクリさんだんは			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003624_0439	txt_4994e4ab_003624_0439	param	param/jyutu_data.dat	0x3624	439	82 ad 82 eb 82 d0 82 ac 82 ab 82 ab 82 a2 82 c1 82 cf 82 c2	くろひぎききいっぱつ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003650_0440	txt_4994e4ab_003650_0440	param	param/jyutu_data.dat	0x3650	440	82 a9 82 a2 82 c4 82 f1 82 bd 82 a2 82 a0 82 bd 82 e8	かいてんたいあたり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003678_0441	txt_4994e4ab_003678_0441	param	param/jyutu_data.dat	0x3678	441	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00367C_0442	txt_4994e4ab_00367C_0442	param	param/jyutu_data.dat	0x367C	442	82 b1 82 f1 82 b2 82 a4 82 c9 82 e5 82 a2	こんごうにょい			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0036A8_0443	txt_4994e4ab_0036A8_0443	param	param/jyutu_data.dat	0x36A8	443	82 b1 82 f1 82 b2 82 a4 82 eb 82 a4 82 d6 82 ab	こんごうろうへき			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0036D4_0444	txt_4994e4ab_0036D4_0444	param	param/jyutu_data.dat	0x36D4	444	82 de 82 b0 82 f1 82 b3 82 b6 82 f1 91 e5 82 c6 82 c1 82 cf	むげんさじん大とっぱ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003700_0445	txt_4994e4ab_003700_0445	param	param/jyutu_data.dat	0x3700	445	95 97 82 c6 82 f1 81 45 82 ea 82 f1 82 ad 82 a4 82 be 82 f1	風とん・れんくうだん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00372C_0446	txt_4994e4ab_00372C_0446	param	param/jyutu_data.dat	0x372C	446	8c fb 82 e6 82 b9 81 45 82 a2 82 ed 83 4b 83 7d	口よせ・いわガマ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003754_0447	txt_4994e4ab_003754_0447	param	param/jyutu_data.dat	0x3754	447	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003758_0448	txt_4994e4ab_003758_0448	param	param/jyutu_data.dat	0x3758	448	8c fb 82 e6 82 b9 81 45 82 ad 82 eb 83 4b 83 7d	口よせ・くろガマ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003780_0449	txt_4994e4ab_003780_0449	param	param/jyutu_data.dat	0x3780	449	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003784_0450	txt_4994e4ab_003784_0450	param	param/jyutu_data.dat	0x3784	450	82 ab 82 a9 82 a2 e5 b3 81 45 82 df 82 b7	きかい蟲・めす			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0037AC_0451	txt_4994e4ab_0037AC_0451	param	param/jyutu_data.dat	0x37AC	451	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0037B0_0452	txt_4994e4ab_0037B0_0452	param	param/jyutu_data.dat	0x37B0	452	82 b5 82 e3 82 a9 82 ad 82 cc 8d bb	しゅかくの砂			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0037D8_0453	txt_4994e4ab_0037D8_0453	param	param/jyutu_data.dat	0x37D8	453	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0037DC_0454	txt_4994e4ab_0037DC_0454	param	param/jyutu_data.dat	0x37DC	454	82 b5 82 df 82 c2 82 af	しめつけ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003804_0455	txt_4994e4ab_003804_0455	param	param/jyutu_data.dat	0x3804	455	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003808_0456	txt_4994e4ab_003808_0456	param	param/jyutu_data.dat	0x3808	456	82 dc 82 e9 82 cc 82 dd	まるのみ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003830_0457	txt_4994e4ab_003830_0457	param	param/jyutu_data.dat	0x3830	457	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003834_0458	txt_4994e4ab_003834_0458	param	param/jyutu_data.dat	0x3834	458	82 c7 82 ad 82 b1 82 a4 82 b0 82 ab	どくこうげき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00385C_0459	txt_4994e4ab_00385C_0459	param	param/jyutu_data.dat	0x385C	459	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003860_0460	txt_4994e4ab_003860_0460	param	param/jyutu_data.dat	0x3860	460	82 bf 82 e5 82 a4 82 a8 82 f1 82 cf	ちょうおんぱ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003888_0461	txt_4994e4ab_003888_0461	param	param/jyutu_data.dat	0x3888	461	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00388C_0462	txt_4994e4ab_00388C_0462	param	param/jyutu_data.dat	0x388C	462	82 ab 82 e3 82 a4 82 af 82 c2	きゅうけつ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0038B4_0463	txt_4994e4ab_0038B4_0463	param	param/jyutu_data.dat	0x38B4	463	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0038B8_0464	txt_4994e4ab_0038B8_0464	param	param/jyutu_data.dat	0x38B8	464	91 e5 82 ab 82 e3 82 a4 82 af 82 c2	大きゅうけつ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0038E0_0465	txt_4994e4ab_0038E0_0465	param	param/jyutu_data.dat	0x38E0	465	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0038E4_0466	txt_4994e4ab_0038E4_0466	param	param/jyutu_data.dat	0x38E4	466	82 bf 82 e5 82 a4 82 ab 82 e3 82 a4 82 af 82 c2	ちょうきゅうけつ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00390C_0467	txt_4994e4ab_00390C_0467	param	param/jyutu_data.dat	0x390C	467	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003910_0468	txt_4994e4ab_003910_0468	param	param/jyutu_data.dat	0x3910	468	82 bd 82 bd 82 ab 82 c2 82 af 82 e9	たたきつける			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003938_0469	txt_4994e4ab_003938_0469	param	param/jyutu_data.dat	0x3938	469	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00393C_0470	txt_4994e4ab_00393C_0470	param	param/jyutu_data.dat	0x393C	470	83 4e 83 82 82 cc 82 a2 82 c6	クモのいと			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003964_0471	txt_4994e4ab_003964_0471	param	param/jyutu_data.dat	0x3964	471	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003968_0472	txt_4994e4ab_003968_0472	param	param/jyutu_data.dat	0x3968	472	82 d9 82 a4 82 b1 82 a4	ほうこう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003990_0473	txt_4994e4ab_003990_0473	param	param/jyutu_data.dat	0x3990	473	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003994_0474	txt_4994e4ab_003994_0474	param	param/jyutu_data.dat	0x3994	474	82 c6 82 a8 82 da 82 a6	とおぼえ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0039BC_0475	txt_4994e4ab_0039BC_0475	param	param/jyutu_data.dat	0x39BC	475	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0039C0_0476	txt_4994e4ab_0039C0_0476	param	param/jyutu_data.dat	0x39C0	476	81 49 81 49	！！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0039E8_0477	txt_4994e4ab_0039E8_0477	param	param/jyutu_data.dat	0x39E8	477	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0039EC_0478	txt_4994e4ab_0039EC_0478	param	param/jyutu_data.dat	0x39EC	478	82 b3 82 f1 82 a9 82 ad 82 c6 82 d1 83 4c 83 62 83 4e	さんかくとびキック			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003A14_0479	txt_4994e4ab_003A14_0479	param	param/jyutu_data.dat	0x3A14	479	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003A18_0480	txt_4994e4ab_003A18_0480	param	param/jyutu_data.dat	0x3A18	480	82 b1 82 a4 82 e7 82 da 82 a4 82 ac 82 e5	こうらぼうぎょ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003A40_0481	txt_4994e4ab_003A40_0481	param	param/jyutu_data.dat	0x3A40	481	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003A44_0482	txt_4994e4ab_003A44_0482	param	param/jyutu_data.dat	0x3A44	482	82 cd 82 cb 82 b9 82 f1 82 da 82 f1	はねせんぼん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003A6C_0483	txt_4994e4ab_003A6C_0483	param	param/jyutu_data.dat	0x3A6C	483	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003A70_0484	txt_4994e4ab_003A70_0484	param	param/jyutu_data.dat	0x3A70	484	83 60 83 83 83 4e 83 89 82 cc 82 c2 82 ce 82 b3	チャクラのつばさ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003A98_0485	txt_4994e4ab_003A98_0485	param	param/jyutu_data.dat	0x3A98	485	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003A9C_0486	txt_4994e4ab_003A9C_0486	param	param/jyutu_data.dat	0x3A9C	486	82 cb 82 b1 83 70 83 93 83 60	ねこパンチ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003AC4_0487	txt_4994e4ab_003AC4_0487	param	param/jyutu_data.dat	0x3AC4	487	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003AC8_0488	txt_4994e4ab_003AC8_0488	param	param/jyutu_data.dat	0x3AC8	488	82 b1 82 ce 82 f1 82 c8 82 b0	こばんなげ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003AF0_0489	txt_4994e4ab_003AF0_0489	param	param/jyutu_data.dat	0x3AF0	489	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003AF4_0490	txt_4994e4ab_003AF4_0490	param	param/jyutu_data.dat	0x3AF4	490	82 d0 82 c5 82 f1 82 cc 83 4c 83 59 82 ae 82 b7 82 e8	ひでんのキズぐすり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003B1C_0491	txt_4994e4ab_003B1C_0491	param	param/jyutu_data.dat	0x3B1C	491	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003B20_0492	txt_4994e4ab_003B20_0492	param	param/jyutu_data.dat	0x3B20	492	82 c7 82 ad 82 ce 82 e8	どくばり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003B48_0493	txt_4994e4ab_003B48_0493	param	param/jyutu_data.dat	0x3B48	493	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003B4C_0494	txt_4994e4ab_003B4C_0494	param	param/jyutu_data.dat	0x3B4C	494	82 b5 82 d1 82 ea 82 ce 82 e8	しびればり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003B74_0495	txt_4994e4ab_003B74_0495	param	param/jyutu_data.dat	0x3B74	495	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003B78_0496	txt_4994e4ab_003B78_0496	param	param/jyutu_data.dat	0x3B78	496	82 a2 82 bf 82 b0 82 ab 82 ce 82 e8	いちげきばり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003BA0_0497	txt_4994e4ab_003BA0_0497	param	param/jyutu_data.dat	0x3BA0	497	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003BA4_0498	txt_4994e4ab_003BA4_0498	param	param/jyutu_data.dat	0x3BA4	498	82 b5 82 b1 82 dd 82 aa 82 bd 82 c8	しこみがたな			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003BCC_0499	txt_4994e4ab_003BCC_0499	param	param/jyutu_data.dat	0x3BCC	499	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003BD0_0500	txt_4994e4ab_003BD0_0500	param	param/jyutu_data.dat	0x3BD0	500	82 c7 82 ad 82 af 82 de 82 e8	どくけむり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003BF8_0501	txt_4994e4ab_003BF8_0501	param	param/jyutu_data.dat	0x3BF8	501	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003BFC_0502	txt_4994e4ab_003BFC_0502	param	param/jyutu_data.dat	0x3BFC	502	82 b3 82 a2 82 dd 82 f1 83 4b 83 58	さいみんガス			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003C24_0503	txt_4994e4ab_003C24_0503	param	param/jyutu_data.dat	0x3C24	503	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003C28_0504	txt_4994e4ab_003C28_0504	param	param/jyutu_data.dat	0x3C28	504	82 dd 82 cb 82 a4 82 bf	みねうち			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003C50_0505	txt_4994e4ab_003C50_0505	param	param/jyutu_data.dat	0x3C50	505	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003C54_0506	txt_4994e4ab_003C54_0506	param	param/jyutu_data.dat	0x3C54	506	82 a2 82 a0 82 a2	いあい			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003C7C_0507	txt_4994e4ab_003C7C_0507	param	param/jyutu_data.dat	0x3C7C	507	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003C80_0508	txt_4994e4ab_003C80_0508	param	param/jyutu_data.dat	0x3C80	508	82 c9 82 c6 82 a4 82 e8 82 e3 82 a4	にとうりゅう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003CA8_0509	txt_4994e4ab_003CA8_0509	param	param/jyutu_data.dat	0x3CA8	509	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003CAC_0510	txt_4994e4ab_003CAC_0510	param	param/jyutu_data.dat	0x3CAC	510	82 e7 82 f1 82 ac 82 e8	らんぎり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003CD4_0511	txt_4994e4ab_003CD4_0511	param	param/jyutu_data.dat	0x3CD4	511	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003CD8_0512	txt_4994e4ab_003CD8_0512	param	param/jyutu_data.dat	0x3CD8	512	82 a2 82 c8 82 b8 82 dc 82 ac 82 e8	いなずまぎり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003D00_0513	txt_4994e4ab_003D00_0513	param	param/jyutu_data.dat	0x3D00	513	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003D04_0514	txt_4994e4ab_003D04_0514	param	param/jyutu_data.dat	0x3D04	514	82 b5 82 f1 82 aa 82 f1	しんがん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003D2C_0515	txt_4994e4ab_003D2C_0515	param	param/jyutu_data.dat	0x3D2C	515	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003D30_0516	txt_4994e4ab_003D30_0516	param	param/jyutu_data.dat	0x3D30	516	82 a9 82 ad 82 b2 82 b5 82 eb 81 49	かくごしろ！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003D58_0517	txt_4994e4ab_003D58_0517	param	param/jyutu_data.dat	0x3D58	517	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003D5C_0518	txt_4994e4ab_003D5C_0518	param	param/jyutu_data.dat	0x3D5C	518	83 49 83 6d 82 e0 82 a4 82 be	オノもうだ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003D84_0519	txt_4994e4ab_003D84_0519	param	param/jyutu_data.dat	0x3D84	519	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003D88_0520	txt_4994e4ab_003D88_0520	param	param/jyutu_data.dat	0x3D88	520	82 c5 82 a0 82 a6 81 5b 81 49	であえー！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003DB0_0521	txt_4994e4ab_003DB0_0521	param	param/jyutu_data.dat	0x3DB0	521	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003DB4_0522	txt_4994e4ab_003DB4_0522	param	param/jyutu_data.dat	0x3DB4	522	82 c5 82 a0 82 a6 81 5b 81 49 81 49	であえー！！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003DDC_0523	txt_4994e4ab_003DDC_0523	param	param/jyutu_data.dat	0x3DDC	523	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003DE0_0524	txt_4994e4ab_003DE0_0524	param	param/jyutu_data.dat	0x3DE0	524	82 c2 82 ab	つき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003E08_0525	txt_4994e4ab_003E08_0525	param	param/jyutu_data.dat	0x3E08	525	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003E0C_0526	txt_4994e4ab_003E0C_0526	param	param/jyutu_data.dat	0x3E0C	526	82 b5 82 e3 82 e8 82 af 82 f1 8d 55 8c 82	しゅりけん攻撃			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003E34_0527	txt_4994e4ab_003E34_0527	param	param/jyutu_data.dat	0x3E34	527	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003E38_0528	txt_4994e4ab_003E38_0528	param	param/jyutu_data.dat	0x3E38	528	82 e4 82 a4 82 ed 82 ad	ゆうわく			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003E60_0529	txt_4994e4ab_003E60_0529	param	param/jyutu_data.dat	0x3E60	529	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003E64_0530	txt_4994e4ab_003E64_0530	param	param/jyutu_data.dat	0x3E64	530	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003E8C_0531	txt_4994e4ab_003E8C_0531	param	param/jyutu_data.dat	0x3E8C	531	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003E90_0532	txt_4994e4ab_003E90_0532	param	param/jyutu_data.dat	0x3E90	532	82 dc 82 b0 82 f1 82 d4 82 f1 82 b5 82 f1 82 cc 8f 70	まげんぶんしんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003EB8_0533	txt_4994e4ab_003EB8_0533	param	param/jyutu_data.dat	0x3EB8	533	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003EBC_0534	txt_4994e4ab_003EBC_0534	param	param/jyutu_data.dat	0x3EBC	534	82 a9 82 c2 81 49 81 49	かつ！！			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003EE4_0535	txt_4994e4ab_003EE4_0535	param	param/jyutu_data.dat	0x3EE4	535	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003EE8_0536	txt_4994e4ab_003EE8_0536	param	param/jyutu_data.dat	0x3EE8	536	82 df 82 a2 82 bb 82 a4	めいそう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003F10_0537	txt_4994e4ab_003F10_0537	param	param/jyutu_data.dat	0x3F10	537	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003F14_0538	txt_4994e4ab_003F14_0538	param	param/jyutu_data.dat	0x3F14	538	82 ad 82 eb 83 4b 83 7d 83 68 83 58 82 b4 82 f1	くろガマドスざん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003F3C_0539	txt_4994e4ab_003F3C_0539	param	param/jyutu_data.dat	0x3F3C	539	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003F40_0540	txt_4994e4ab_003F40_0540	param	param/jyutu_data.dat	0x3F40	540	82 d3 82 ab 82 e5 82 a4 82 ed 82 a8 82 f1 82 cc 8f 70	ふきょうわおんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003F68_0541	txt_4994e4ab_003F68_0541	param	param/jyutu_data.dat	0x3F68	541	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003F6C_0542	txt_4994e4ab_003F6C_0542	param	param/jyutu_data.dat	0x3F6C	542	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003F94_0543	txt_4994e4ab_003F94_0543	param	param/jyutu_data.dat	0x3F94	543	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003F98_0544	txt_4994e4ab_003F98_0544	param	param/jyutu_data.dat	0x3F98	544	83 4a 83 7d 83 43 83 5e 83 60 82 cc 8f 70	カマイタチの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003FC0_0545	txt_4994e4ab_003FC0_0545	param	param/jyutu_data.dat	0x3FC0	545	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003FC4_0546	txt_4994e4ab_003FC4_0546	param	param/jyutu_data.dat	0x3FC4	546	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_003FEC_0547	txt_4994e4ab_003FEC_0547	param	param/jyutu_data.dat	0x3FEC	547	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_003FF0_0548	txt_4994e4ab_003FF0_0548	param	param/jyutu_data.dat	0x3FF0	548	82 b6 82 e5 82 a4 82 eb 82 b9 82 f1 82 da 82 f1 82 cc 8f 70	じょうろせんぼんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004018_0549	txt_4994e4ab_004018_0549	param	param/jyutu_data.dat	0x4018	549	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00401C_0550	txt_4994e4ab_00401C_0550	param	param/jyutu_data.dat	0x401C	550	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004044_0551	txt_4994e4ab_004044_0551	param	param/jyutu_data.dat	0x4044	551	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004048_0552	txt_4994e4ab_004048_0552	param	param/jyutu_data.dat	0x4048	552	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004070_0553	txt_4994e4ab_004070_0553	param	param/jyutu_data.dat	0x4070	553	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004074_0554	txt_4994e4ab_004074_0554	param	param/jyutu_data.dat	0x4074	554	82 ad 82 ae 82 c2 82 cc 8f 70	くぐつの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00409C_0555	txt_4994e4ab_00409C_0555	param	param/jyutu_data.dat	0x409C	555	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0040A0_0556	txt_4994e4ab_0040A0_0556	param	param/jyutu_data.dat	0x40A0	556	89 b9 82 ad 82 ae 82 c2 82 cc 8f 70	音くぐつの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0040C8_0557	txt_4994e4ab_0040C8_0557	param	param/jyutu_data.dat	0x40C8	557	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0040CC_0558	txt_4994e4ab_0040CC_0558	param	param/jyutu_data.dat	0x40CC	558	82 bb 82 a4 82 b5 82 e3 82 a4 82 cd	そうしゅうは			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0040F4_0559	txt_4994e4ab_0040F4_0559	param	param/jyutu_data.dat	0x40F4	559	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0040F8_0560	txt_4994e4ab_0040F8_0560	param	param/jyutu_data.dat	0x40F8	560	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004120_0561	txt_4994e4ab_004120_0561	param	param/jyutu_data.dat	0x4120	561	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004124_0562	txt_4994e4ab_004124_0562	param	param/jyutu_data.dat	0x4124	562	93 79 82 c6 82 f1 81 45 82 a2 82 ed 82 be 82 f1 82 b2 82 cc 8f 70	土とん・いわだんごの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_00414C_0563	txt_4994e4ab_00414C_0563	param	param/jyutu_data.dat	0x414C	563	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004150_0564	txt_4994e4ab_004150_0564	param	param/jyutu_data.dat	0x4150	564	93 79 82 c6 82 f1 81 45 82 c2 82 bf 82 ed 82 e8 82 cc 8f 70	土とん・つちわりの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004178_0565	txt_4994e4ab_004178_0565	param	param/jyutu_data.dat	0x4178	565	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00417C_0566	txt_4994e4ab_00417C_0566	param	param/jyutu_data.dat	0x417C	566	93 79 82 c6 82 f1 81 45 82 c2 82 bf 82 a9 82 d7 82 cc 8f 70	土とん・つちかべの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0041A4_0567	txt_4994e4ab_0041A4_0567	param	param/jyutu_data.dat	0x41A4	567	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0041A8_0568	txt_4994e4ab_0041A8_0568	param	param/jyutu_data.dat	0x41A8	568	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0041D0_0569	txt_4994e4ab_0041D0_0569	param	param/jyutu_data.dat	0x41D0	569	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0041D4_0570	txt_4994e4ab_0041D4_0570	param	param/jyutu_data.dat	0x41D4	570	82 dc 82 b7 82 a2 82 ae 82 b7 82 e8	ますいぐすり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0041FC_0571	txt_4994e4ab_0041FC_0571	param	param/jyutu_data.dat	0x41FC	571	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004200_0572	txt_4994e4ab_004200_0572	param	param/jyutu_data.dat	0x4200	572	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004228_0573	txt_4994e4ab_004228_0573	param	param/jyutu_data.dat	0x4228	573	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00422C_0574	txt_4994e4ab_00422C_0574	param	param/jyutu_data.dat	0x422C	574	83 82 83 84 82 cc 83 7c 81 5b 83 59	モヤのポーズ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004254_0575	txt_4994e4ab_004254_0575	param	param/jyutu_data.dat	0x4254	575	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004258_0576	txt_4994e4ab_004258_0576	param	param/jyutu_data.dat	0x4258	576	83 82 83 84 83 41 83 5e 83 62 83 4e	モヤアタック			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004280_0577	txt_4994e4ab_004280_0577	param	param/jyutu_data.dat	0x4280	577	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004284_0578	txt_4994e4ab_004284_0578	param	param/jyutu_data.dat	0x4284	578	83 54 83 43 83 8c 83 93 83 67 83 4c 83 8a 83 93 83 4f	サイレントキリング			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0042AC_0579	txt_4994e4ab_0042AC_0579	param	param/jyutu_data.dat	0x42AC	579	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0042B0_0580	txt_4994e4ab_0042B0_0580	param	param/jyutu_data.dat	0x42B0	580	82 a0 82 f1 82 ab	あんき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0042D8_0581	txt_4994e4ab_0042D8_0581	param	param/jyutu_data.dat	0x42D8	581	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0042DC_0582	txt_4994e4ab_0042DC_0582	param	param/jyutu_data.dat	0x42DC	582	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004304_0583	txt_4994e4ab_004304_0583	param	param/jyutu_data.dat	0x4304	583	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004308_0584	txt_4994e4ab_004308_0584	param	param/jyutu_data.dat	0x4308	584	82 c7 82 ad 82 ac 82 e8	どくぎり			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004330_0585	txt_4994e4ab_004330_0585	param	param/jyutu_data.dat	0x4330	585	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004334_0586	txt_4994e4ab_004334_0586	param	param/jyutu_data.dat	0x4334	586	82 b5 82 b1 82 dd 82 b5 82 f1 82 be 82 f1	しこみしんだん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004360_0587	txt_4994e4ab_004360_0587	param	param/jyutu_data.dat	0x4360	587	82 b9 82 f1 82 a6 82 a2 82 b6 82 e1 82 b5 82 e3	せんえいじゃしゅ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00438C_0588	txt_4994e4ab_00438C_0588	param	param/jyutu_data.dat	0x438C	588	82 dd 82 be 82 ea 82 be 82 f1 82 b2 82 ae 82 b5	みだれだんごぐし			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0043B4_0589	txt_4994e4ab_0043B4_0589	param	param/jyutu_data.dat	0x43B4	589	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0043B8_0590	txt_4994e4ab_0043B8_0590	param	param/jyutu_data.dat	0x43B8	590	82 af 82 f1 82 c6 82 a4 82 ea 82 f1 82 be 82 f1	けんとうれんだん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0043E0_0591	txt_4994e4ab_0043E0_0591	param	param/jyutu_data.dat	0x43E0	591	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0043E4_0592	txt_4994e4ab_0043E4_0592	param	param/jyutu_data.dat	0x43E4	592	82 d0 82 a6 82 f1	ひえん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004410_0593	txt_4994e4ab_004410_0593	param	param/jyutu_data.dat	0x4410	593	82 dc 82 b0 82 f1 81 45 82 b6 82 e3 82 ce 82 ad 82 b3 82 c2	まげん・じゅばくさつ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00443C_0594	txt_4994e4ab_00443C_0594	param	param/jyutu_data.dat	0x443C	594	82 d3 82 a4 82 dc 82 b5 82 e3 82 e8 82 af 82 f1	ふうましゅりけん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004468_0595	txt_4994e4ab_004468_0595	param	param/jyutu_data.dat	0x4468	595	82 a8 82 eb 82 bf 82 dc 82 e9 82 cc 82 d0 82 e2 82 ad	おろちまるのひやく			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004490_0596	txt_4994e4ab_004490_0596	param	param/jyutu_data.dat	0x4490	596	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004494_0597	txt_4994e4ab_004494_0597	param	param/jyutu_data.dat	0x4494	597	93 79 82 c6 82 f1 81 45 93 79 82 e8 82 e5 82 a4 82 be 82 f1 82 b2	土とん・土りょうだんご			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0044C0_0598	txt_4994e4ab_0044C0_0598	param	param/jyutu_data.dat	0x44C0	598	82 c9 82 f1 82 db 82 a4 81 45 83 4e 83 82 83 5c 83 45 83 4a 83 43	にんぽう・クモソウカイ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0044E8_0599	txt_4994e4ab_0044E8_0599	param	param/jyutu_data.dat	0x44E8	599	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0044EC_0600	txt_4994e4ab_0044EC_0600	param	param/jyutu_data.dat	0x44EC	600	82 c9 82 f1 82 db 82 a4 81 45 83 4e 83 82 82 cb 82 f1 82 ab 82 f1	にんぽう・クモねんきん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004514_0601	txt_4994e4ab_004514_0601	param	param/jyutu_data.dat	0x4514	601	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004518_0602	txt_4994e4ab_004518_0602	param	param/jyutu_data.dat	0x4518	602	83 4e 83 82 82 b9 82 f1 82 ab 82 e3 82 a4 81 45 82 b7 82 b4 82 ad	クモせんきゅう・すざく			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004544_0603	txt_4994e4ab_004544_0603	param	param/jyutu_data.dat	0x4544	603	82 bd 82 ea 82 f1 82 af 82 f1	たれんけん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004570_0604	txt_4994e4ab_004570_0604	param	param/jyutu_data.dat	0x4570	604	82 ab 82 b9 82 a2 82 ab 82 a9 82 a2 82 cc 8f 70	きせいきかいの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00459C_0605	txt_4994e4ab_00459C_0605	param	param/jyutu_data.dat	0x459C	605	8c fb 82 e6 82 b9 81 45 82 b5 82 cc 82 b9 82 f1 82 e8 82 c2	口よせ・しのせんりつ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0045C4_0606	txt_4994e4ab_0045C4_0606	param	param/jyutu_data.dat	0x45C4	606	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0045C8_0607	txt_4994e4ab_0045C8_0607	param	param/jyutu_data.dat	0x45C8	607	82 dc 82 ab 82 e5 82 a4 82 cc 82 e7 82 f1	まきょうのらん			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0045F4_0608	txt_4994e4ab_0045F4_0608	param	param/jyutu_data.dat	0x45F4	608	82 de 82 b0 82 f1 82 a8 82 f1 82 b3	むげんおんさ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004620_0609	txt_4994e4ab_004620_0609	param	param/jyutu_data.dat	0x4620	609	83 65 83 56 83 5a 83 93 83 5f 83 93	テシセンダン			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004648_0610	txt_4994e4ab_004648_0610	param	param/jyutu_data.dat	0x4648	610	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_00464C_0611	txt_4994e4ab_00464C_0611	param	param/jyutu_data.dat	0x464C	611	82 c4 82 c1 82 b9 82 f1 82 a9 82 cc 82 dc 82 a2	てっせんかのまい			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004678_0612	txt_4994e4ab_004678_0612	param	param/jyutu_data.dat	0x4678	612	82 b3 82 ed 82 e7 82 d1 82 cc 82 dc 82 a2	さわらびのまい			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0046A4_0613	txt_4994e4ab_0046A4_0613	param	param/jyutu_data.dat	0x46A4	613	82 b3 82 ed 82 e7 82 d1 82 cc 82 dc 82 a2	さわらびのまい			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0046D0_0614	txt_4994e4ab_0046D0_0614	param	param/jyutu_data.dat	0x46D0	614	82 b3 82 ed 82 e7 82 d1 82 cc 82 dc 82 a2	さわらびのまい			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0046F8_0615	txt_4994e4ab_0046F8_0615	param	param/jyutu_data.dat	0x46F8	615	90 b8 79	精y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0046FC_0616	txt_4994e4ab_0046FC_0616	param	param/jyutu_data.dat	0x46FC	616	83 60 83 83 83 4e 83 89 82 cc 83 81 83 58	チャクラのメス			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004728_0617	txt_4994e4ab_004728_0617	param	param/jyutu_data.dat	0x4728	617	83 60 83 83 83 4e 83 89 82 cc 83 81 83 58	チャクラのメス			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004754_0618	txt_4994e4ab_004754_0618	param	param/jyutu_data.dat	0x4754	618	83 60 83 83 83 4e 83 89 82 cc 83 81 83 58	チャクラのメス			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004780_0619	txt_4994e4ab_004780_0619	param	param/jyutu_data.dat	0x4780	619	83 60 83 83 83 4e 83 89 82 cc 83 81 83 58	チャクラのメス			pending_translation	unknown	yes		
-zh_txt_4994e4ab_0047A8_0620	txt_4994e4ab_0047A8_0620	param	param/jyutu_data.dat	0x47A8	620	91 b8 79	尊y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0047AC_0621	txt_4994e4ab_0047AC_0621	param	param/jyutu_data.dat	0x47AC	621	82 b5 82 b1 82 f1 82 cc 8f 70	しこんの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_0047D8_0622	txt_4994e4ab_0047D8_0622	param	param/jyutu_data.dat	0x47D8	622	82 e7 82 b9 82 f1 82 bf 82 c7 82 e8	らせんちどり			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004804_0623	txt_4994e4ab_004804_0623	param	param/jyutu_data.dat	0x4804	623	82 b5 82 c4 82 a2 82 e7 82 b9 82 f1 8a db	していらせん丸			pending_translation	unknown	yes		
@@ -5366,50 +5074,31 @@ zh_txt_4994e4ab_004AF0_0640	txt_4994e4ab_004AF0_0640	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_004B1C_0641	txt_4994e4ab_004B1C_0641	param	param/jyutu_data.dat	0x4B1C	641	82 dc 82 ab 82 e5 82 a4 82 ab 82 e8 82 b6 82 b2 82 ad	まきょうきりじごく			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004B48_0642	txt_4994e4ab_004B48_0642	param	param/jyutu_data.dat	0x4B48	642	82 b0 82 ab 82 e8 82 e3 82 a4 82 b5 82 e5 82 a4	げきりゅうしょう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004B74_0643	txt_4994e4ab_004B74_0643	param	param/jyutu_data.dat	0x4B74	643	82 b2 82 a4 82 e8 82 ab 82 ea 82 f1 82 be 82 f1	ごうりきれんだん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004B9C_0644	txt_4994e4ab_004B9C_0644	param	param/jyutu_data.dat	0x4B9C	644	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004BA0_0645	txt_4994e4ab_004BA0_0645	param	param/jyutu_data.dat	0x4BA0	645	89 ce 82 c6 82 f1 81 45 82 a6 82 f1 82 b1 82 ce 82 ad 82 b3 82 c2	火とん・えんこばくさつ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004BCC_0646	txt_4994e4ab_004BCC_0646	param	param/jyutu_data.dat	0x4BCC	646	82 bb 82 a4 82 df 82 c2 82 cc 8c fb	そうめつの口			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004BF8_0647	txt_4994e4ab_004BF8_0647	param	param/jyutu_data.dat	0x4BF8	647	82 bd 82 bd 82 ab 82 c2 82 af 82 e9	たたきつける			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004C20_0648	txt_4994e4ab_004C20_0648	param	param/jyutu_data.dat	0x4C20	648	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004C24_0649	txt_4994e4ab_004C24_0649	param	param/jyutu_data.dat	0x4C24	649	82 b6 82 e1 82 ab	じゃき			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004C4C_0650	txt_4994e4ab_004C4C_0650	param	param/jyutu_data.dat	0x4C4C	650	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004C50_0651	txt_4994e4ab_004C50_0651	param	param/jyutu_data.dat	0x4C50	651	82 c4 82 f1 82 d8 82 f1 82 bf 82 a2	てんぺんちい			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004C78_0652	txt_4994e4ab_004C78_0652	param	param/jyutu_data.dat	0x4C78	652	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004C7C_0653	txt_4994e4ab_004C7C_0653	param	param/jyutu_data.dat	0x4C7C	653	82 b5 82 b5 82 bb 82 a4 82 b5 82 f1 82 cc 8f 70	ししそうしんの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004CA4_0654	txt_4994e4ab_004CA4_0654	param	param/jyutu_data.dat	0x4CA4	654	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004CA8_0655	txt_4994e4ab_004CA8_0655	param	param/jyutu_data.dat	0x4CA8	655	82 dc 82 b0 82 f1 81 45 82 c6 82 a4 82 b0 82 f1 82 ab 82 e5 82 a4 82 cc 8f 70	まげん・とうげんきょうの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004CD0_0656	txt_4994e4ab_004CD0_0656	param	param/jyutu_data.dat	0x4CD0	656	fb ac 79	譿y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004CD4_0657	txt_4994e4ab_004CD4_0657	param	param/jyutu_data.dat	0x4CD4	657	82 de 82 cc 82 dc 82 a2	むのまい			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004CFC_0658	txt_4994e4ab_004CFC_0658	param	param/jyutu_data.dat	0x4CFC	658	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004D00_0659	txt_4994e4ab_004D00_0659	param	param/jyutu_data.dat	0x4D00	659	8c fb 82 e6 82 b9 83 79 83 62 83 67 81 45 83 67 83 93 83 67 83 93	口よせペット・トントン			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004D28_0660	txt_4994e4ab_004D28_0660	param	param/jyutu_data.dat	0x4D28	660	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004D2C_0661	txt_4994e4ab_004D2C_0661	param	param/jyutu_data.dat	0x4D2C	661	8c fb 82 e6 82 b9 83 79 83 62 83 67 81 45 83 4b 83 7d 8b 67	口よせペット・ガマ吉			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004D54_0662	txt_4994e4ab_004D54_0662	param	param/jyutu_data.dat	0x4D54	662	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004D58_0663	txt_4994e4ab_004D58_0663	param	param/jyutu_data.dat	0x4D58	663	8c fb 82 e6 82 b9 83 79 83 62 83 67 81 45 83 4b 83 7d 97 b3	口よせペット・ガマ竜			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004D80_0664	txt_4994e4ab_004D80_0664	param	param/jyutu_data.dat	0x4D80	664	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004D84_0665	txt_4994e4ab_004D84_0665	param	param/jyutu_data.dat	0x4D84	665	8c fb 82 e6 82 b9 83 79 83 62 83 67 81 45 83 7e 83 6a 83 4a 83 63 83 86	口よせペット・ミニカツユ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004DAC_0666	txt_4994e4ab_004DAC_0666	param	param/jyutu_data.dat	0x4DAC	666	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004DB0_0667	txt_4994e4ab_004DB0_0667	param	param/jyutu_data.dat	0x4DB0	667	8c fb 82 e6 82 b9 83 79 83 62 83 67 81 45 83 70 83 62 83 4e 83 93	口よせペット・パックン			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004DD8_0668	txt_4994e4ab_004DD8_0668	param	param/jyutu_data.dat	0x4DD8	668	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004DDC_0669	txt_4994e4ab_004DDC_0669	param	param/jyutu_data.dat	0x4DDC	669	82 a9 82 b0 95 aa 90 67 82 cc 8f 70	かげ分身の術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004E04_0670	txt_4994e4ab_004E04_0670	param	param/jyutu_data.dat	0x4E04	670	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004E08_0671	txt_4994e4ab_004E08_0671	param	param/jyutu_data.dat	0x4E08	671	89 ce 82 c6 82 f1 81 45 82 a6 82 f1 82 b1 82 ce 82 ad 82 b3 82 c2	火とん・えんこばくさつ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004E34_0672	txt_4994e4ab_004E34_0672	param	param/jyutu_data.dat	0x4E34	672	82 dc 82 b0 82 f1 81 45 82 c6 82 a4 82 b0 82 f1 82 ab 82 e5 82 a4 82 cc 8f 70	まげん・とうげんきょうの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004E60_0673	txt_4994e4ab_004E60_0673	param	param/jyutu_data.dat	0x4E60	673	83 4b 83 7d 82 cc 82 d9 82 cc 82 a8	ガマのほのお			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004E88_0674	txt_4994e4ab_004E88_0674	param	param/jyutu_data.dat	0x4E88	674	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004E8C_0675	txt_4994e4ab_004E8C_0675	param	param/jyutu_data.dat	0x4E8C	675	83 4b 83 7d 82 cc 82 a9 82 a6 82 f1	ガマのかえん			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004EB4_0676	txt_4994e4ab_004EB4_0676	param	param/jyutu_data.dat	0x4EB4	676	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004EB8_0677	txt_4994e4ab_004EB8_0677	param	param/jyutu_data.dat	0x4EB8	677	82 de 82 b5 82 e6 82 b9	むしよせ			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004EE0_0678	txt_4994e4ab_004EE0_0678	param	param/jyutu_data.dat	0x4EE0	678	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004EE4_0679	txt_4994e4ab_004EE4_0679	param	param/jyutu_data.dat	0x4EE4	679	82 b3 82 ce 82 ad 82 ab 82 e3 82 a4	さばくきゅう			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004F0C_0680	txt_4994e4ab_004F0C_0680	param	param/jyutu_data.dat	0x4F0C	680	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004F10_0681	txt_4994e4ab_004F10_0681	param	param/jyutu_data.dat	0x4F10	681	82 b0 82 ab 82 e8 82 e3 82 a4 82 b5 82 e5 82 a4	げきりゅうしょう			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004F3C_0682	txt_4994e4ab_004F3C_0682	param	param/jyutu_data.dat	0x4F3C	682	89 ce 82 c6 82 f1 81 45 82 a6 82 f1 82 b1 82 ce 82 ad 82 b3 82 c2	火とん・えんこばくさつ			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004F68_0683	txt_4994e4ab_004F68_0683	param	param/jyutu_data.dat	0x4F68	683	89 ce 82 c6 82 f1 81 45 82 b2 82 a4 82 a9 82 ab 82 e3 82 a4 82 cc 8f 70	火とん・ごうかきゅうの術			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004F94_0684	txt_4994e4ab_004F94_0684	param	param/jyutu_data.dat	0x4F94	684	8c fb 82 e6 82 b9 82 cc 8f 70	口よせの術			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004FBC_0685	txt_4994e4ab_004FBC_0685	param	param/jyutu_data.dat	0x4FBC	685	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004FC0_0686	txt_4994e4ab_004FC0_0686	param	param/jyutu_data.dat	0x4FC0	686	90 85 82 c6 82 f1 81 45 90 85 82 e8 82 e3 82 a4 92 65	水とん・水りゅう弾			pending_translation	unknown	yes		
-zh_txt_4994e4ab_004FE8_0687	txt_4994e4ab_004FE8_0687	param	param/jyutu_data.dat	0x4FE8	687	fb b8 79	鄕y			pending_translation	unknown	yes		
 zh_txt_4994e4ab_004FEC_0688	txt_4994e4ab_004FEC_0688	param	param/jyutu_data.dat	0x4FEC	688	90 85 82 c6 82 f1 81 45 91 e5 82 ce 82 ad 82 d3	水とん・大ばくふ			pending_translation	unknown	yes		
 zh_txt_c79bed54_000014_0000	txt_c79bed54_000014_0000	param	param/map_data_tbl.dat	0x14	0	82 b1 82 cc 82 cd 82 aa 82 ad 82 ea 82 cc 82 b3 82 c6	このはがくれのさと			pending_translation	unknown	yes		
 zh_txt_c79bed54_000040_0001	txt_c79bed54_000040_0001	param	param/map_data_tbl.dat	0x40	1	82 b1 82 cc 82 cd 82 aa 82 ad 82 ea 82 cc 82 b3 82 c6	このはがくれのさと			pending_translation	unknown	yes		

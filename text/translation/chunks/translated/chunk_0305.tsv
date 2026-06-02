@@ -1,5 +1,5 @@
 id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
-zh_txt_4994e4ab_000790_0080	txt_4994e4ab_000790_0080	param	param/jyutu_data.dat	0x790	80	82 a4 82 b8 82 dc 82 ab 83 69 83 8b 83 67 93 f1 90 e7 98 41 92 65	うずまきナルト二千連弾	鸣人二千连弹    		translated_aligned	ok	yes			22	0	鄕y	四方八方しゅりけんの術
+zh_txt_4994e4ab_000790_0080	txt_4994e4ab_000790_0080	param	param/jyutu_data.dat	0x790	80	82 a4 82 b8 82 dc 82 ab 83 69 83 8b 83 67 93 f1 90 e7 98 41 92 65	うずまきナルト二千連弾	鸣人二千连弹    		translated_aligned	ok	yes			22	0		四方八方しゅりけんの術
 zh_txt_4994e4ab_0007BC_0081	txt_4994e4ab_0007BC_0081	param	param/jyutu_data.dat	0x7BC	81	8e 6c 95 fb 94 aa 95 fb 82 b5 82 e3 82 e8 82 af 82 f1 82 cc 8f 70	四方八方しゅりけんの術	八方手里剑之术 		translated_aligned	tight	yes			22	1	うずまきナルト二千連弾	口よせ・ガマ吉
 zh_txt_4994e4ab_0007E8_0082	txt_4994e4ab_0007E8_0082	param	param/jyutu_data.dat	0x7E8	82	8c fb 82 e6 82 b9 81 45 83 4b 83 7d 8b 67	口よせ・ガマ吉	蛤蟆吉     		translated_aligned	ok	yes			14	2	四方八方しゅりけんの術	口よせ・ガマ吉
 zh_txt_4994e4ab_000814_0083	txt_4994e4ab_000814_0083	param	param/jyutu_data.dat	0x814	83	8c fb 82 e6 82 b9 81 45 83 4b 83 7d 8b 67	口よせ・ガマ吉	蛤蟆吉     		translated_aligned	ok	yes			14	3	口よせ・ガマ吉	口よせ・ガマ吉
@@ -46,36 +46,23 @@ zh_txt_4994e4ab_000EF4_0123	txt_4994e4ab_000EF4_0123	param	param/jyutu_data.dat	
 zh_txt_4994e4ab_000F20_0124	txt_4994e4ab_000F20_0124	param	param/jyutu_data.dat	0xF20	124	89 ce 82 c6 82 f1 81 45 82 e8 82 e3 82 a4 82 a9 82 cc 8f 70	火とん・りゅうかの術	火遁·龙火      		translated_aligned	ok	yes			20	44	火とん・ほうせんかの術	火とん・りゅうかの術
 zh_txt_4994e4ab_000F4C_0125	txt_4994e4ab_000F4C_0125	param	param/jyutu_data.dat	0xF4C	125	89 ce 82 c6 82 f1 81 45 82 e8 82 e3 82 a4 82 a9 82 cc 8f 70	火とん・りゅうかの術	火遁·龙火      		translated_aligned	ok	yes			20	45	火とん・りゅうかの術	そうふうしゃ三のたち
 zh_txt_4994e4ab_000F78_0126	txt_4994e4ab_000F78_0126	param	param/jyutu_data.dat	0xF78	126	82 bb 82 a4 82 d3 82 a4 82 b5 82 e1 8e 4f 82 cc 82 bd 82 bf	そうふうしゃ三のたち	操风车三太刀  		translated_aligned	tight	yes			20	46	火とん・りゅうかの術	かげしゅりけんの術
-zh_txt_4994e4ab_000FA4_0127	txt_4994e4ab_000FA4_0127	param	param/jyutu_data.dat	0xFA4	127	82 a9 82 b0 82 b5 82 e3 82 e8 82 af 82 f1 82 cc 8f 70	かげしゅりけんの術	影手里剑之术		translated_aligned	tight	yes			18	47	そうふうしゃ三のたち	鄕y
-zh_txt_4994e4ab_000FCC_0128	txt_4994e4ab_000FCC_0128	param	param/jyutu_data.dat	0xFCC	128	fb b8 79	鄕y	无		translated_aligned	tight	yes			3	48	かげしゅりけんの術	ちどり
-zh_txt_4994e4ab_000FD0_0129	txt_4994e4ab_000FD0_0129	param	param/jyutu_data.dat	0xFD0	129	82 bf 82 c7 82 e8	ちどり	千鸟		translated_aligned	tight	yes			6	49	鄕y	ちどり
-zh_txt_4994e4ab_000FFC_0130	txt_4994e4ab_000FFC_0130	param	param/jyutu_data.dat	0xFFC	130	82 bf 82 c7 82 e8	ちどり	千鸟		translated_aligned	tight	yes			6	50	ちどり	ちどり
-zh_txt_4994e4ab_001028_0131	txt_4994e4ab_001028_0131	param	param/jyutu_data.dat	0x1028	131	82 bf 82 c7 82 e8	ちどり	千鸟		translated_aligned	tight	yes			6	51	ちどり	暗黒ちどり
-zh_txt_4994e4ab_001054_0132	txt_4994e4ab_001054_0132	param	param/jyutu_data.dat	0x1054	132	88 c3 8d 95 82 bf 82 c7 82 e8	暗黒ちどり	暗千鸟 		translated_aligned	tight	yes			10	52	ちどり	はるかすみの術
-zh_txt_4994e4ab_001080_0133	txt_4994e4ab_001080_0133	param	param/jyutu_data.dat	0x1080	133	82 cd 82 e9 82 a9 82 b7 82 dd 82 cc 8f 70	はるかすみの術	春霞之术  		translated_aligned	tight	yes			14	53	暗黒ちどり	鄕y
-zh_txt_4994e4ab_0010A8_0134	txt_4994e4ab_0010A8_0134	param	param/jyutu_data.dat	0x10A8	134	fb b8 79	鄕y	无		translated_aligned	tight	yes			3	54	はるかすみの術	とうこんちゅうにゅう
-zh_txt_4994e4ab_0010AC_0135	txt_4994e4ab_0010AC_0135	param	param/jyutu_data.dat	0x10AC	135	82 c6 82 a4 82 b1 82 f1 82 bf 82 e3 82 a4 82 c9 82 e3 82 a4	とうこんちゅうにゅう	斗魂注入        		translated_aligned	ok	yes			20	55	鄕y	鄕y
-zh_txt_4994e4ab_0010D4_0136	txt_4994e4ab_0010D4_0136	param	param/jyutu_data.dat	0x10D4	136	fb b8 79	鄕y	无		translated_aligned	tight	yes			3	56	とうこんちゅうにゅう	はるいちばんの術
-zh_txt_4994e4ab_0010D8_0137	txt_4994e4ab_0010D8_0137	param	param/jyutu_data.dat	0x10D8	137	82 cd 82 e9 82 a2 82 bf 82 ce 82 f1 82 cc 8f 70	はるいちばんの術	春一番之术 		translated_aligned	tight	yes			16	57	鄕y	鄕y
-zh_txt_4994e4ab_001100_0138	txt_4994e4ab_001100_0138	param	param/jyutu_data.dat	0x1100	138	fb b8 79	鄕y	无		translated_aligned	tight	yes			3	58	はるいちばんの術	しょうせん術・壱の巻
-zh_txt_4994e4ab_001104_0139	txt_4994e4ab_001104_0139	param	param/jyutu_data.dat	0x1104	139	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 88 eb 82 cc 8a aa	しょうせん術・壱の巻	掌仙术·壱卷   		translated_aligned	ok	yes			20	59	鄕y	鄕y
-zh_txt_4994e4ab_00112C_0140	txt_4994e4ab_00112C_0140	param	param/jyutu_data.dat	0x112C	140	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	60	しょうせん術・壱の巻	しょうせん術・弐の巻
-zh_txt_4994e4ab_001130_0141	txt_4994e4ab_001130_0141	param	param/jyutu_data.dat	0x1130	141	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 93 f3 82 cc 8a aa	しょうせん術・弐の巻	掌仙术·贰卷   		translated_aligned	ok	yes			20	61	鄕y	鄕y
-zh_txt_4994e4ab_001158_0142	txt_4994e4ab_001158_0142	param	param/jyutu_data.dat	0x1158	142	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	62	しょうせん術・弐の巻	しょうせん術・参の巻
-zh_txt_4994e4ab_00115C_0143	txt_4994e4ab_00115C_0143	param	param/jyutu_data.dat	0x115C	143	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 8e 51 82 cc 8a aa	しょうせん術・参の巻	掌仙术·参卷   		translated_aligned	ok	yes			20	63	鄕y	鄕y
-zh_txt_4994e4ab_001184_0144	txt_4994e4ab_001184_0144	param	param/jyutu_data.dat	0x1184	144	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	64	しょうせん術・参の巻	しょうせん術・四の巻
-zh_txt_4994e4ab_001188_0145	txt_4994e4ab_001188_0145	param	param/jyutu_data.dat	0x1188	145	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 8e 6c 82 cc 8a aa	しょうせん術・四の巻	掌仙术·肆卷   		translated_aligned	ok	yes			20	65	鄕y	鄕y
-zh_txt_4994e4ab_0011B0_0146	txt_4994e4ab_0011B0_0146	param	param/jyutu_data.dat	0x11B0	146	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	66	しょうせん術・四の巻	しょうせんりん術・壱の巻
-zh_txt_4994e4ab_0011B4_0147	txt_4994e4ab_0011B4_0147	param	param/jyutu_data.dat	0x11B4	147	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 88 eb 82 cc 8a aa	しょうせんりん術・壱の巻	掌仙轮术·壹卷    		translated_aligned	ok	yes			24	67	鄕y	鄕y
-zh_txt_4994e4ab_0011DC_0148	txt_4994e4ab_0011DC_0148	param	param/jyutu_data.dat	0x11DC	148	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	68	しょうせんりん術・壱の巻	しょうせんりん術・弐の巻
-zh_txt_4994e4ab_0011E0_0149	txt_4994e4ab_0011E0_0149	param	param/jyutu_data.dat	0x11E0	149	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 93 f3 82 cc 8a aa	しょうせんりん術・弐の巻	掌仙轮术·贰卷    		translated_aligned	ok	yes			24	69	鄕y	鄕y
-zh_txt_4994e4ab_001208_0150	txt_4994e4ab_001208_0150	param	param/jyutu_data.dat	0x1208	150	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	70	しょうせんりん術・弐の巻	しょうせんりん術・参の巻
-zh_txt_4994e4ab_00120C_0151	txt_4994e4ab_00120C_0151	param	param/jyutu_data.dat	0x120C	151	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 8e 51 82 cc 8a aa	しょうせんりん術・参の巻	掌仙轮术·参卷    		translated_aligned	ok	yes			24	71	鄕y	鄕y
-zh_txt_4994e4ab_001234_0152	txt_4994e4ab_001234_0152	param	param/jyutu_data.dat	0x1234	152	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	72	しょうせんりん術・参の巻	しょうせんりん術・四の巻
-zh_txt_4994e4ab_001238_0153	txt_4994e4ab_001238_0153	param	param/jyutu_data.dat	0x1238	153	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 8e 6c 82 cc 8a aa	しょうせんりん術・四の巻	小仙轮术·卷四    		translated_aligned	ok	yes			24	73	鄕y	鄕y
-zh_txt_4994e4ab_001260_0154	txt_4994e4ab_001260_0154	param	param/jyutu_data.dat	0x1260	154	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	74	しょうせんりん術・四の巻	ブービートラップ
-zh_txt_4994e4ab_001264_0155	txt_4994e4ab_001264_0155	param	param/jyutu_data.dat	0x1264	155	83 75 81 5b 83 72 81 5b 83 67 83 89 83 62 83 76	ブービートラップ	陷阱          		translated_aligned	ok	yes			16	75	鄕y	鄕y
-zh_txt_4994e4ab_00128C_0156	txt_4994e4ab_00128C_0156	param	param/jyutu_data.dat	0x128C	156	fb b8 79	鄕y	   		translated_aligned	ok	yes			3	76	ブービートラップ	うちなるサクラ
-zh_txt_4994e4ab_001290_0157	txt_4994e4ab_001290_0157	param	param/jyutu_data.dat	0x1290	157	82 a4 82 bf 82 c8 82 e9 83 54 83 4e 83 89	うちなるサクラ	内心的樱  		translated_aligned	tight	yes			14	77	鄕y	しゃーんなろーコンボ
-zh_txt_4994e4ab_0012BC_0158	txt_4994e4ab_0012BC_0158	param	param/jyutu_data.dat	0x12BC	158	82 b5 82 e1 81 5b 82 f1 82 c8 82 eb 81 5b 83 52 83 93 83 7b	しゃーんなろーコンボ	接招连击        		translated_aligned	ok	yes			20	78	うちなるサクラ	おおいなるサクラ
-zh_txt_4994e4ab_0012E8_0159	txt_4994e4ab_0012E8_0159	param	param/jyutu_data.dat	0x12E8	159	82 a8 82 a8 82 a2 82 c8 82 e9 83 54 83 4e 83 89	おおいなるサクラ	伟大的樱    		translated_aligned	ok	yes			16	79	しゃーんなろーコンボ	サクラふぶきの術
+zh_txt_4994e4ab_000FA4_0127	txt_4994e4ab_000FA4_0127	param	param/jyutu_data.dat	0xFA4	127	82 a9 82 b0 82 b5 82 e3 82 e8 82 af 82 f1 82 cc 8f 70	かげしゅりけんの術	影手里剑之术		translated_aligned	tight	yes			18	47	そうふうしゃ三のたち	ちどり
+zh_txt_4994e4ab_000FD0_0129	txt_4994e4ab_000FD0_0129	param	param/jyutu_data.dat	0xFD0	129	82 bf 82 c7 82 e8	ちどり	千鸟		translated_aligned	tight	yes			6	48	かげしゅりけんの術	ちどり
+zh_txt_4994e4ab_000FFC_0130	txt_4994e4ab_000FFC_0130	param	param/jyutu_data.dat	0xFFC	130	82 bf 82 c7 82 e8	ちどり	千鸟		translated_aligned	tight	yes			6	49	ちどり	ちどり
+zh_txt_4994e4ab_001028_0131	txt_4994e4ab_001028_0131	param	param/jyutu_data.dat	0x1028	131	82 bf 82 c7 82 e8	ちどり	千鸟		translated_aligned	tight	yes			6	50	ちどり	暗黒ちどり
+zh_txt_4994e4ab_001054_0132	txt_4994e4ab_001054_0132	param	param/jyutu_data.dat	0x1054	132	88 c3 8d 95 82 bf 82 c7 82 e8	暗黒ちどり	暗千鸟 		translated_aligned	tight	yes			10	51	ちどり	はるかすみの術
+zh_txt_4994e4ab_001080_0133	txt_4994e4ab_001080_0133	param	param/jyutu_data.dat	0x1080	133	82 cd 82 e9 82 a9 82 b7 82 dd 82 cc 8f 70	はるかすみの術	春霞之术  		translated_aligned	tight	yes			14	52	暗黒ちどり	とうこんちゅうにゅう
+zh_txt_4994e4ab_0010AC_0135	txt_4994e4ab_0010AC_0135	param	param/jyutu_data.dat	0x10AC	135	82 c6 82 a4 82 b1 82 f1 82 bf 82 e3 82 a4 82 c9 82 e3 82 a4	とうこんちゅうにゅう	斗魂注入        		translated_aligned	ok	yes			20	53	はるかすみの術	はるいちばんの術
+zh_txt_4994e4ab_0010D8_0137	txt_4994e4ab_0010D8_0137	param	param/jyutu_data.dat	0x10D8	137	82 cd 82 e9 82 a2 82 bf 82 ce 82 f1 82 cc 8f 70	はるいちばんの術	春一番之术 		translated_aligned	tight	yes			16	54	とうこんちゅうにゅう	しょうせん術・壱の巻
+zh_txt_4994e4ab_001104_0139	txt_4994e4ab_001104_0139	param	param/jyutu_data.dat	0x1104	139	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 88 eb 82 cc 8a aa	しょうせん術・壱の巻	掌仙术·壱卷   		translated_aligned	ok	yes			20	55	はるいちばんの術	しょうせん術・弐の巻
+zh_txt_4994e4ab_001130_0141	txt_4994e4ab_001130_0141	param	param/jyutu_data.dat	0x1130	141	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 93 f3 82 cc 8a aa	しょうせん術・弐の巻	掌仙术·贰卷   		translated_aligned	ok	yes			20	56	しょうせん術・壱の巻	しょうせん術・参の巻
+zh_txt_4994e4ab_00115C_0143	txt_4994e4ab_00115C_0143	param	param/jyutu_data.dat	0x115C	143	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 8e 51 82 cc 8a aa	しょうせん術・参の巻	掌仙术·参卷   		translated_aligned	ok	yes			20	57	しょうせん術・弐の巻	しょうせん術・四の巻
+zh_txt_4994e4ab_001188_0145	txt_4994e4ab_001188_0145	param	param/jyutu_data.dat	0x1188	145	82 b5 82 e5 82 a4 82 b9 82 f1 8f 70 81 45 8e 6c 82 cc 8a aa	しょうせん術・四の巻	掌仙术·肆卷   		translated_aligned	ok	yes			20	58	しょうせん術・参の巻	しょうせんりん術・壱の巻
+zh_txt_4994e4ab_0011B4_0147	txt_4994e4ab_0011B4_0147	param	param/jyutu_data.dat	0x11B4	147	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 88 eb 82 cc 8a aa	しょうせんりん術・壱の巻	掌仙轮术·壹卷    		translated_aligned	ok	yes			24	59	しょうせん術・四の巻	しょうせんりん術・弐の巻
+zh_txt_4994e4ab_0011E0_0149	txt_4994e4ab_0011E0_0149	param	param/jyutu_data.dat	0x11E0	149	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 93 f3 82 cc 8a aa	しょうせんりん術・弐の巻	掌仙轮术·贰卷    		translated_aligned	ok	yes			24	60	しょうせんりん術・壱の巻	しょうせんりん術・参の巻
+zh_txt_4994e4ab_00120C_0151	txt_4994e4ab_00120C_0151	param	param/jyutu_data.dat	0x120C	151	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 8e 51 82 cc 8a aa	しょうせんりん術・参の巻	掌仙轮术·参卷    		translated_aligned	ok	yes			24	61	しょうせんりん術・弐の巻	しょうせんりん術・四の巻
+zh_txt_4994e4ab_001238_0153	txt_4994e4ab_001238_0153	param	param/jyutu_data.dat	0x1238	153	82 b5 82 e5 82 a4 82 b9 82 f1 82 e8 82 f1 8f 70 81 45 8e 6c 82 cc 8a aa	しょうせんりん術・四の巻	小仙轮术·卷四    		translated_aligned	ok	yes			24	62	しょうせんりん術・参の巻	ブービートラップ
+zh_txt_4994e4ab_001264_0155	txt_4994e4ab_001264_0155	param	param/jyutu_data.dat	0x1264	155	83 75 81 5b 83 72 81 5b 83 67 83 89 83 62 83 76	ブービートラップ	陷阱          		translated_aligned	ok	yes			16	63	しょうせんりん術・四の巻	うちなるサクラ
+zh_txt_4994e4ab_001290_0157	txt_4994e4ab_001290_0157	param	param/jyutu_data.dat	0x1290	157	82 a4 82 bf 82 c8 82 e9 83 54 83 4e 83 89	うちなるサクラ	内心的樱  		translated_aligned	tight	yes			14	64	ブービートラップ	しゃーんなろーコンボ
+zh_txt_4994e4ab_0012BC_0158	txt_4994e4ab_0012BC_0158	param	param/jyutu_data.dat	0x12BC	158	82 b5 82 e1 81 5b 82 f1 82 c8 82 eb 81 5b 83 52 83 93 83 7b	しゃーんなろーコンボ	接招连击        		translated_aligned	ok	yes			20	65	うちなるサクラ	おおいなるサクラ
+zh_txt_4994e4ab_0012E8_0159	txt_4994e4ab_0012E8_0159	param	param/jyutu_data.dat	0x12E8	159	82 a8 82 a8 82 a2 82 c8 82 e9 83 54 83 4e 83 89	おおいなるサクラ	伟大的樱    		translated_aligned	ok	yes			16	66	しゃーんなろーコンボ	

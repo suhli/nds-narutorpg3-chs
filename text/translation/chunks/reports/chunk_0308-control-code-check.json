@@ -1,61 +1,11 @@
 {
-  "rows": 80,
-  "checked_translated_rows": 80,
-  "issue_count": 7,
+  "rows": 59,
+  "checked_translated_rows": 59,
+  "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
-  "text_quality_issue_count": 7,
+  "text_quality_issue_count": 0,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [
-    {
-      "id": "zh_txt_4994e4ab_002E0C_0368",
-      "jp_id_ref": "txt_4994e4ab_002E0C_0368",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x2E0C",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_002E90_0372",
-      "jp_id_ref": "txt_4994e4ab_002E90_0372",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x2E90",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_002F6C_0378",
-      "jp_id_ref": "txt_4994e4ab_002F6C_0378",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x2F6C",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_00301C_0383",
-      "jp_id_ref": "txt_4994e4ab_00301C_0383",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x301C",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003048_0385",
-      "jp_id_ref": "txt_4994e4ab_003048_0385",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3048",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_003074_0387",
-      "jp_id_ref": "txt_4994e4ab_003074_0387",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x3074",
-      "reason": "translated_text_has_no_cjk"
-    },
-    {
-      "id": "zh_txt_4994e4ab_0030CC_0390",
-      "jp_id_ref": "txt_4994e4ab_0030CC_0390",
-      "source_file": "param/jyutu_data.dat",
-      "offset": "0x30CC",
-      "reason": "translated_text_has_no_cjk"
-    }
-  ]
+  "text_quality_issues": []
 }

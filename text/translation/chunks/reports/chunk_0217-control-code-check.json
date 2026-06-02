@@ -1,19 +1,11 @@
 {
   "rows": 12,
   "checked_translated_rows": 12,
-  "issue_count": 1,
+  "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
-  "text_quality_issue_count": 1,
+  "text_quality_issue_count": 0,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [
-    {
-      "id": "zh_txt_de1658ac_00025C_0011",
-      "jp_id_ref": "txt_de1658ac_00025C_0011",
-      "source_file": "msg/fld/evt/061.m",
-      "offset": "0x25C",
-      "reason": "translated_text_has_no_cjk"
-    }
-  ]
+  "text_quality_issues": []
 }

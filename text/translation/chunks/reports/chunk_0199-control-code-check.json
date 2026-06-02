@@ -1,32 +1,11 @@
 {
   "rows": 11,
-  "checked_translated_rows": 0,
-  "issue_count": 1,
+  "checked_translated_rows": 11,
+  "issue_count": 0,
   "control_issue_count": 0,
   "byte_length_issue_count": 0,
   "text_quality_issue_count": 0,
-  "translation_failure_count": 1,
   "control_issues": [],
   "byte_length_issues": [],
-  "text_quality_issues": [],
-  "translation_failures": [
-    {
-      "chunk_id": "chunk_0199",
-      "translated_path": "text/translation/chunks/translated/chunk_0199.tsv",
-      "row_ids": [
-        "zh_txt_216e2a08_00001A_0000",
-        "zh_txt_216e2a08_000044_0001",
-        "zh_txt_216e2a08_000090_0002",
-        "zh_txt_216e2a08_0000CE_0003",
-        "zh_txt_216e2a08_00011E_0004",
-        "zh_txt_216e2a08_000144_0005",
-        "zh_txt_216e2a08_000168_0006",
-        "zh_txt_216e2a08_00019C_0007",
-        "zh_txt_216e2a08_0001C2_0008",
-        "zh_txt_216e2a08_00022A_0009",
-        "zh_txt_216e2a08_000266_0010"
-      ],
-      "error": "translation failed after retries:\nzh_txt_216e2a08_0000CE_0003: visible control prefix residue"
-    }
-  ]
+  "text_quality_issues": []
 }
