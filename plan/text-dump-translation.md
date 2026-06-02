@@ -252,7 +252,7 @@ plan/cache/text-dump-translation/dump-results.md
 
 ### 4. 翻译表建立与控制符校验
 
-状态：进行中。已建立 chunk 分块、翻译 worker 规则和本地增强校验；先按 chunk 产出译文，再合并回正式翻译表。
+状态：已完成并交接。已完成 chunk 分块译文和本地增强校验；当前可用译文在 `text/translation/chunks/translated/*.tsv`，主表 `text/translation/zh_translation.tsv` 的 `zh_text` 仍为空，不作为后续码表输入。
 
 目标：
 
@@ -293,7 +293,7 @@ plan/cache/text-dump-translation/translation-baseline.md
 
 ### 5. 冻结 handoff 给后续码表/回写计划
 
-状态：待开始。
+状态：已完成并交接到 `plan/code-table-extraction.md`。
 
 目标：
 
@@ -311,7 +311,7 @@ plan/cache/text-dump-translation/handoff-to-code-table-writeback.md
 
 - `jp_dump.tsv` 和 `zh_translation.tsv` 字段稳定。
 - 控制符说明和文本边界说明完整。
-- 后续 plan 可以直接消费翻译表生成字符集、编码分配表和 font-dir manifest。
+- 后续 plan 以 `text/translation/chunks/index.json` 和 `text/translation/chunks/translated/*.tsv` 冻结合并后的译文为输入，生成字符集、编码分配表和 font-dir manifest。
 
 ## 决策
 
@@ -332,6 +332,9 @@ plan/cache/text-dump-translation/handoff-to-code-table-writeback.md
 
 ## 当前入口
 
-从“文本来源盘点”开始。
+本计划已交接完成。后续入口为：
 
-第一步只读检查 ROM 解包内容、overlay 和已知 `hack/` 资料，建立 `text-source-inventory.md`。不要先写回 ROM，不要生成码表，不要替换字体或原文码表。
+```text
+plan/code-table-extraction.md
+plan/cache/text-dump-translation/handoff-to-code-table-writeback.md
+```

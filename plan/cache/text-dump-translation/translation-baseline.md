@@ -299,3 +299,30 @@ chunk_0010
 2. 从 `chunk_0001` 开始运行 `tools/batch_translate_chunks_openai.py` 批量翻译；建议先小批量跑 `--start chunk_0001 --limit-chunks 1`。
 3. 每个 chunk 写出后默认运行 `tools/check_translation_table.py` 校验，并由脚本调用 `tools/summarize_translation_chunks.py` 更新 `progress.json`。
 4. 当前脚本化流程稳定后，再合并回 `text/translation/zh_translation.tsv`。
+
+## 2026-06-02 交接口径
+
+用户确认翻译已完成。当前后续码表计划使用的事实口径如下：
+
+```text
+text/translation/chunks/index.json:
+chunks=322
+rows=5863
+```
+
+```text
+text/translation/chunks/progress.json:
+translated_chunks=322
+validated_chunks=322
+translated_rows=5863
+aligned_rows=5863
+issue_count=0
+```
+
+当前 `text/translation/zh_translation.tsv` 仍有 5863 行，但 `zh_text` 全为空；它不能作为码表输入。实际已完成译文在 `text/translation/chunks/translated/*.tsv`，后续必须先按 `index.json` 冻结合并，排除旧空文件 `chunk_0292.tsv`、`chunk_0293.tsv`、`chunk_0294.tsv`。
+
+交接文件：
+
+```text
+plan/cache/text-dump-translation/handoff-to-code-table-writeback.md
+```

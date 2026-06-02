@@ -1,25 +1,32 @@
 current_plan:
-  id: text-dump-translation
-  title: 文本 dump 与翻译基线
-  document: plan/text-dump-translation.md
-  status: in_progress
+  id: code-table-extraction
+  title: 中文码表提取计划
+  document: plan/code-table-extraction.md
+  status: done
 current_stage:
-  id: translation-baseline
-  name: 翻译表分块与基线翻译
-  status: in_progress
+  id: handoff-to-text-writeback
+  name: 汇总与回写 handoff
+  status: done
 stage_cache:
-  dir: plan/cache/text-dump-translation
+  dir: plan/cache/code-table-extraction
   documents:
-    - plan/cache/text-dump-translation/text-source-inventory.md
-    - plan/cache/text-dump-translation/encoding-control-codes.md
-    - plan/cache/text-dump-translation/dump-results.md
-    - plan/cache/text-dump-translation/translation-baseline.md
-updated_at: "2026-05-30"
+    - plan/cache/text-dump-translation/handoff-to-code-table-writeback.md
+    - plan/cache/code-table-extraction/translation-input-freeze.md
+    - plan/cache/code-table-extraction/charset-extraction.md
+    - plan/cache/code-table-extraction/code-table-allocation.md
+    - plan/cache/code-table-extraction/font-manifest-generation.md
+    - plan/cache/code-table-extraction/font-build-smoke.md
+    - plan/cache/code-table-extraction/verification.md
+    - plan/cache/code-table-extraction/handoff-to-text-writeback.md
+updated_at: "2026-06-02"
+previous_plan:
+  id: text-dump-translation
+  document: plan/text-dump-translation.md
+  status: done
+  handoff: plan/cache/text-dump-translation/handoff-to-code-table-writeback.md
 notes:
-  - 字体 v0 作为本计划前置完成条件保留：TTF -> font-dir -> ROM -> 模拟器冒烟闭环已通过，证据见 plan/cache/vram-font-bypass/generated-font-build.md 和 plan/cache/vram-font-bypass/integrated-build-and-smoke.md。
-  - 本计划只处理文本 dump、编码/控制符/边界识别和翻译表建立；码表生成、字模生成、原文码表替换、文本回写和 ROM 验证留给后续独立 plan。
-  - 第一阶段从 rom/unpacked/origin/data/text 的 msg/script/param/cutin2script 盘点开始，未确认边界和控制符的来源不进入正式翻译基线。
-  - 初始候选 dump 已生成：text/original/jp_dump.tsv 与 text/translation/zh_translation.tsv；当前 6174 条候选，需继续收敛控制符和 param 边界后冻结翻译基线。
-  - 当前已进入分块翻译：text/translation/chunks/index.json 将 6174 条候选切为 325 个 chunk；先翻译、校验并复核分块产物，再合并回正式翻译表。
-  - 既有 chunk 译文已按用户要求全部废弃并清空；text/translation/chunks/progress.json 当前为 chunks=325、translated=0、validated=0、issues=0。
-  - 新增 OpenAI 兼容接口批量翻译脚本 tools/batch_translate_chunks_openai.py；下一步从 chunk_0001 开始用脚本小批量翻译并自动校验。
+  - 翻译已完成，但 text/translation/zh_translation.tsv 的 zh_text 当前仍为空，禁止作为码表输入。
+  - 码表提取输入必须先从 text/translation/chunks/index.json 指向的 translated chunk 冻结合并。
+  - 当前有效 chunk 为 322 个、5863 行；旧空 chunk_0292.tsv、chunk_0293.tsv、chunk_0294.tsv 不得参与统计。
+  - 本计划只处理冻结译文、字符集、编码表、font manifest 和 font-dir 冒烟；不回写 ROM，不修改 rom/origin.nds。
+  - 本计划已完成：冻结译文 5863 行，码表 1986 项，编码范围 0xF000..0xF7C1，冲突 0。
