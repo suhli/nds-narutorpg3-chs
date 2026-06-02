@@ -19,7 +19,7 @@ start_code=0xE000
 
 因此没有冻结 `0xE000` 方案。
 
-## 最终分配
+## 中间分配
 
 改用：
 
@@ -34,6 +34,30 @@ entry_count=1986
 start_code=0xF000
 end_code=0xF7C1
 collision_count=0
+```
+
+文本回写预检发现 `0xF000..0xF7C1` 连续分配中有 541 个码点不符合 SJIS 双字节形状，且 8 个码点低字节为 `00`。该方案不再作为最终冻结方案。
+
+## 最终分配
+
+改用 SJIS 形状分配：
+
+```text
+start_code=0xF040
+code_shape=sjis
+```
+
+结果：
+
+```text
+entry_count=1986
+start_code=0xF040
+end_code=0xFAAB
+collision_count=0
+skipped_code_count=1
+skipped_code=0xFA40 raw_text_word
+sjis_shape_invalid=0
+low_byte_zero=0
 ```
 
 码表字段：

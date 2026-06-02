@@ -5,7 +5,7 @@
 ## 命令
 
 ```text
-.\.venv\Scripts\python.exe -B tools\extract_translation_charset.py --start-code 0xF000
+.\.venv\Scripts\python.exe -B tools\extract_translation_charset.py --start-code 0xF040 --code-shape sjis
 ```
 
 ## 过滤规则

@@ -44,13 +44,16 @@ text/reports/code-table-summary.json
 ## 编码范围
 
 ```text
-start_code=0xF000
-end_code=0xF7C1
+start_code=0xF040
+end_code=0xFAAB
+code_shape=sjis
 entry_count=1986
 collision_count=0
+skipped_code_count=1
+skipped_code=0xFA40 raw_text_word
 ```
 
-`0xE000` 初始方案发现 raw text word 冲突，已废弃。
+`0xE000` 初始方案发现 raw text word 冲突，已废弃。`0xF000` 连续分配在文本回写预检中发现非法 SJIS trail 和低字节 `00` 风险，也已废弃。
 
 ## 后续回写必须遵守
 

@@ -1,0 +1,202 @@
+# 文本回写冒烟计划
+
+## 背景
+
+`plan/code-table-extraction.md` 已完成译文冻结、字符集提取、中文码表分配和字体 manifest 生成。当前可用输入为：
+
+```text
+text/code_table/frozen_translation.tsv
+text/code_table/zh_code_table.tsv
+text/code_table/font_manifest.json
+plan/cache/code-table-extraction/handoff-to-text-writeback.md
+```
+
+本计划承接码表阶段，进入最小文本回写闭环。第一步只生成编码预览和容量风险报告，不修改 ROM，不打包 ROM。
+
+## 必要上下文
+
+- 原版 ROM `rom/origin.nds` 只能作为输入读取，不能覆盖、原地 patch 或作为打包输出。
+- `frozen_translation.tsv` 是当前回写输入，包含来源文件、偏移、原始字节、日文、译文、控制 token 和原槽位长度。
+- `zh_code_table.tsv` 当前冻结编码范围为 `0xF040..0xFAAB`，共 1986 项，按 SJIS 形状分配；`0xFA40` 因 raw word 冲突被跳过。
+- 前一阶段的长度校验不是最终回写模型；它主要用于翻译 chunk 对齐，不能直接等同于 ROM 写回字节长度。
+- 行尾 ASCII padding 是翻译对齐产物，不得静默当作普通可见文本编码，也不得在 Stage 1 作为已确定写回策略。
+- 普通 ASCII 是否沿用原编码、加入扩展码表或按来源路径特殊处理，仍需单独决策。
+- `{CTRL_xxxx}` 必须恢复为控制字节候选，并用原始 `raw_hex` 或 dump 边界验证后才允许进入写回样本。
+- 中文码点写回端序不得默认。编码预览必须保留 `raw_hex`、原文 token、候选编码 bytes 和端序判断依据；无法判断的行必须标记风险，不能进入 Stage 2 样本。
+
+## 目标
+
+- 建立 `zh_text + 控制 token -> 候选写回 bytes` 的可复现编码预览。
+- 生成固定槽容量风险报告，区分可尝试样本和必须后续处理的文本。
+- 隔离 ASCII、padding、控制符验证和中文码点端序风险。
+- 选出少量低风险 Stage 2 写回候选，但 Stage 1 不实际写回。
+- 后续在独立 ROM 中验证最小文本替换闭环。
+
+## 非目标
+
+- 不全量回写文本。
+- Stage 1 不修改 NitroFS 文件，不打包 ROM，不运行模拟器。
+- 不覆盖 `rom/origin.nds` 或任何已知基准 ROM。
+- 不在控制符、端序或 ASCII 策略未确认时做批量替换。
+
+## 产物
+
+### 工具
+
+```text
+tools/encode_translation_text.py
+```
+
+### 数据与报告
+
+```text
+text/writeback/encoded_preview.tsv
+text/reports/writeback-capacity-report.json
+```
+
+### 计划缓存
+
+```text
+plan/cache/text-writeback-smoke/stage0-plan-setup.md
+plan/cache/text-writeback-smoke/stage1-encoder-and-capacity.md
+plan/cache/text-writeback-smoke/stage2-sample-writeback.md
+plan/cache/text-writeback-smoke/stage3-rom-packaging.md
+plan/cache/text-writeback-smoke/stage4-desmume-validation.md
+plan/cache/text-writeback-smoke/handoff-to-full-writeback.md
+```
+
+## 硬性进入条件
+
+Stage 2 样本必须同时满足：
+
+- 固定槽容量不超限。
+- 控制符已由原始 `raw_hex` 或既有 dump 边界验证。
+- 无普通 ASCII 策略风险。
+- 无 padding 歧义。
+- 无中文码点端序不确定风险。
+- 来源文件、偏移、记录号可定位。
+- 不涉及 `rom/origin.nds` 输出或覆盖。
+
+不满足任一条件的行只能作为报告项，不能进入样本写回。
+
+## 阶段
+
+### Stage 0: 计划接续与输入确认
+
+状态：已完成。
+
+目标：
+
+- 读取 `plan/state.yaml` 和码表阶段 handoff。
+- 使用计划生成与评审 subagent 生成并评审本计划。
+- 把当前统一入口切换到本计划。
+
+缓存：
+
+```text
+plan/cache/text-writeback-smoke/stage0-plan-setup.md
+```
+
+### Stage 1: 编码预览与容量风险扫描
+
+状态：已完成。
+
+目标：
+
+- 实现 `tools/encode_translation_text.py`。
+- 从 `frozen_translation.tsv` 和 `zh_code_table.tsv` 生成候选写回 bytes。
+- 对控制符恢复、中文码点端序、普通 ASCII、尾部 padding、码表缺失和固定槽容量分别打标签。
+- 输出编码预览和容量报告。
+- 记录可进入 Stage 2 的候选条件与剩余风险。
+
+缓存：
+
+```text
+plan/cache/text-writeback-smoke/stage1-encoder-and-capacity.md
+```
+
+### Stage 2: 低风险固定槽样本回写
+
+状态：已完成。
+
+目标：
+
+- 先完成中文扩展码端序验证；未验证前不选择写回样本。
+- 只选择 Stage 1 判定可进入样本的少量文本。
+- 在解包资源的副本中做固定槽替换。
+- 不覆盖 `rom/origin.nds`。
+- 记录样本来源文件、偏移、原始 bytes、候选写回 bytes 和恢复方式。
+
+缓存：
+
+```text
+plan/cache/text-writeback-smoke/stage2-sample-writeback.md
+```
+
+### Stage 3: 字体资源集成与独立 ROM 打包
+
+状态：已完成。
+
+目标：
+
+- 集成 font-dir 和样本文本资源。
+- 使用独立输出 ROM，例如：
+
+```text
+rom/text_writeback_smoke.nds
+```
+
+- 不覆盖 `rom/origin.nds` 或任何已知基准 ROM。
+- 记录解包目录、回包命令摘要、输出 ROM 和校验结果。
+
+缓存：
+
+```text
+plan/cache/text-writeback-smoke/stage3-rom-packaging.md
+```
+
+### Stage 4: DeSmuME MCP 显示冒烟
+
+状态：待开始。
+
+目标：
+
+- 加载 Stage 3 的独立 ROM。
+- 记录验证入口、截图或内存观察摘要、失败现象和复现路径。
+- 如果得到新的逆向发现，同步写入 `hack/`。
+
+缓存：
+
+```text
+plan/cache/text-writeback-smoke/stage4-desmume-validation.md
+```
+
+### Stage 5: 交接到完整回写或扩容方案
+
+状态：待开始。
+
+目标：
+
+- 汇总固定槽样本验证结果。
+- 给出全量回写、文本池迁移、指针扩容或脚本重排的后续建议。
+- 回写最终 handoff。
+
+缓存：
+
+```text
+plan/cache/text-writeback-smoke/handoff-to-full-writeback.md
+```
+
+## 当前决策
+
+- Stage 1 只做预览和报告，不写 ROM。
+- 中文码点端序、控制符恢复和 ASCII 策略是 Stage 2 的硬门槛。
+- Stage 3 输出必须是独立 ROM，默认候选为 `rom/text_writeback_smoke.nds`。
+
+## 待验证风险
+
+- 中文扩展码 `0xF040..0xFAAB` 在实际文本读取链路中的字节端序。
+- `{CTRL_xxxx}` 与原始字节之间的边界对齐。
+- 普通 ASCII 在不同文本类别中的显示路径。
+- 尾部 padding 是否仅为翻译阶段产物，回写时是否需要保留或重算。
+- 固定槽超长文本的扩容策略。

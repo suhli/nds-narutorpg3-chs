@@ -1,0 +1,815 @@
+{
+  "inputs": {
+    "translation": "text/code_table/frozen_translation.tsv",
+    "translation_sha1": "a1520723f04c352489e962f338916657ca4de2d3",
+    "code_table": "text/code_table/zh_code_table.tsv",
+    "code_table_sha1": "bde955e3339f695f38066d66e0aea5a5c0bac088"
+  },
+  "outputs": {
+    "preview": "text/writeback/encoded_preview.tsv",
+    "report": "text/reports/writeback-capacity-report.json"
+  },
+  "candidate_code_endian": "big",
+  "code_endian_verdict": "unverified_candidate",
+  "code_endian_evidence": [
+    "Original CP932 two-byte visible characters are stored in file byte order.",
+    "New Chinese code-table runtime consumption has not yet been verified.",
+    "Rows with mapped Chinese/fullwidth chars keep endian_unverified and are not Stage 2 eligible."
+  ],
+  "code_byte_shape": {
+    "entry_count": 1986,
+    "range": [
+      "0xF040",
+      "0xFAAB"
+    ],
+    "candidate_code_endian": "big",
+    "sjis_shape_invalid_count": 0,
+    "zero_byte_count": 0,
+    "first_invalid": [],
+    "first_zero_byte": [],
+    "verdict": "sjis_shape_ok"
+  },
+  "control_decode_verdict": "candidate_little_endian_checked_by_raw_hex_occurrence",
+  "code_table_entries": 1986,
+  "row_count": 5863,
+  "encoded_complete_count": 5863,
+  "capacity_known_count": 5863,
+  "overflow_count": 0,
+  "stage2_eligible_count": 0,
+  "pre_endian_candidate_count": 414,
+  "risk_counts": {
+    "endian_unverified": 5852,
+    "needs_ascii_policy": 590,
+    "padding_ambiguous": 5432
+  },
+  "fixed_slot_status_counts": {
+    "blocked_ascii_policy": 590,
+    "blocked_padding_policy": 4859,
+    "candidate_fixed_slot_pending_endian": 414
+  },
+  "control_raw_verdict_counts": {
+    "candidate_little_endian_raw_hex_supported": 1998,
+    "not_applicable": 3865
+  },
+  "category_counts": {
+    "message": 3976,
+    "param": 1887
+  },
+  "examples": {
+    "pre_endian_candidates": [
+      {
+        "id": "zh_txt_d81b9b2a_000250_0008",
+        "source_file": "msg/eiga/015.m",
+        "offset": "0x250",
+        "encoded_len_candidate": 8,
+        "source_byte_len": 12,
+        "payload_capacity": 10,
+        "capacity_delta": 2,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_a4f81ff0_0001A6_0006",
+        "source_file": "msg/eiga/022.m",
+        "offset": "0x1A6",
+        "encoded_len_candidate": 20,
+        "source_byte_len": 30,
+        "payload_capacity": 28,
+        "capacity_delta": 8,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_c36688a6_00001A_0000",
+        "source_file": "msg/eiga/024.m",
+        "offset": "0x1A",
+        "encoded_len_candidate": 24,
+        "source_byte_len": 36,
+        "payload_capacity": 34,
+        "capacity_delta": 10,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_811a3fee_000166_0004",
+        "source_file": "msg/eiga/027.m",
+        "offset": "0x166",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 18,
+        "payload_capacity": 16,
+        "capacity_delta": 4,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_8e6f34f1_00001A_0000",
+        "source_file": "msg/eiga/039.m",
+        "offset": "0x1A",
+        "encoded_len_candidate": 20,
+        "source_byte_len": 30,
+        "payload_capacity": 28,
+        "capacity_delta": 8,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_bcf87b63_00032C_0011",
+        "source_file": "msg/eiga/043.m",
+        "offset": "0x32C",
+        "encoded_len_candidate": 8,
+        "source_byte_len": 12,
+        "payload_capacity": 10,
+        "capacity_delta": 2,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_eec11121_000112_0004",
+        "source_file": "msg/eiga/046.m",
+        "offset": "0x112",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 18,
+        "payload_capacity": 16,
+        "capacity_delta": 4,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_de5a4c84_000346_0011",
+        "source_file": "msg/eiga/057.m",
+        "offset": "0x346",
+        "encoded_len_candidate": 16,
+        "source_byte_len": 24,
+        "payload_capacity": 22,
+        "capacity_delta": 6,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_de5a4c84_00040E_0015",
+        "source_file": "msg/eiga/057.m",
+        "offset": "0x40E",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 18,
+        "payload_capacity": 16,
+        "capacity_delta": 4,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_6143c31c_000082_0002",
+        "source_file": "msg/eiga/067.m",
+        "offset": "0x82",
+        "encoded_len_candidate": 16,
+        "source_byte_len": 24,
+        "payload_capacity": 22,
+        "capacity_delta": 6,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_7532c24d_0000B6_0003",
+        "source_file": "msg/eiga/069.m",
+        "offset": "0xB6",
+        "encoded_len_candidate": 20,
+        "source_byte_len": 30,
+        "payload_capacity": 28,
+        "capacity_delta": 8,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_7532c24d_000176_0006",
+        "source_file": "msg/eiga/069.m",
+        "offset": "0x176",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 18,
+        "payload_capacity": 16,
+        "capacity_delta": 4,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_94d17cb1_00001A_0000",
+        "source_file": "msg/eiga/085.m",
+        "offset": "0x1A",
+        "encoded_len_candidate": 28,
+        "source_byte_len": 42,
+        "payload_capacity": 40,
+        "capacity_delta": 12,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_dc3bb413_00020C_0007",
+        "source_file": "msg/eiga/086.m",
+        "offset": "0x20C",
+        "encoded_len_candidate": 16,
+        "source_byte_len": 24,
+        "payload_capacity": 22,
+        "capacity_delta": 6,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_44ecd431_00001A_0000",
+        "source_file": "msg/eiga/089.m",
+        "offset": "0x1A",
+        "encoded_len_candidate": 24,
+        "source_byte_len": 36,
+        "payload_capacity": 34,
+        "capacity_delta": 10,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_44ecd431_0004DA_0017",
+        "source_file": "msg/eiga/089.m",
+        "offset": "0x4DA",
+        "encoded_len_candidate": 20,
+        "source_byte_len": 30,
+        "payload_capacity": 28,
+        "capacity_delta": 8,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_2f7be4b8_000260_0023",
+        "source_file": "msg/equip_msg.msg",
+        "offset": "0x260",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 18,
+        "payload_capacity": 18,
+        "capacity_delta": 6,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_2f7be4b8_000494_0044",
+        "source_file": "msg/equip_msg.msg",
+        "offset": "0x494",
+        "encoded_len_candidate": 16,
+        "source_byte_len": 24,
+        "payload_capacity": 24,
+        "capacity_delta": 8,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_62d09d91_000278_0008",
+        "source_file": "msg/fld/003.m",
+        "offset": "0x278",
+        "encoded_len_candidate": 24,
+        "source_byte_len": 36,
+        "payload_capacity": 34,
+        "capacity_delta": 10,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_869691fa_0000AE_0003",
+        "source_file": "msg/fld/013.m",
+        "offset": "0xAE",
+        "encoded_len_candidate": 32,
+        "source_byte_len": 48,
+        "payload_capacity": 46,
+        "capacity_delta": 14,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_869691fa_000288_0010",
+        "source_file": "msg/fld/013.m",
+        "offset": "0x288",
+        "encoded_len_candidate": 32,
+        "source_byte_len": 48,
+        "payload_capacity": 46,
+        "capacity_delta": 14,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_b61005a9_0005C6_0027",
+        "source_file": "msg/fld/018.m",
+        "offset": "0x5C6",
+        "encoded_len_candidate": 30,
+        "source_byte_len": 44,
+        "payload_capacity": 42,
+        "capacity_delta": 12,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_f6ebe60b_000548_0015",
+        "source_file": "msg/fld/021.m",
+        "offset": "0x548",
+        "encoded_len_candidate": 46,
+        "source_byte_len": 68,
+        "payload_capacity": 66,
+        "capacity_delta": 20,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_dc122c8a_000008_0000",
+        "source_file": "msg/fld/029.m",
+        "offset": "0x8",
+        "encoded_len_candidate": 50,
+        "source_byte_len": 74,
+        "payload_capacity": 72,
+        "capacity_delta": 22,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_cb0286ca_0000A8_0002",
+        "source_file": "msg/fld/031.m",
+        "offset": "0xA8",
+        "encoded_len_candidate": 32,
+        "source_byte_len": 48,
+        "payload_capacity": 46,
+        "capacity_delta": 14,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_cb0286ca_00012A_0004",
+        "source_file": "msg/fld/031.m",
+        "offset": "0x12A",
+        "encoded_len_candidate": 46,
+        "source_byte_len": 68,
+        "payload_capacity": 66,
+        "capacity_delta": 20,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_cb0286ca_0006E0_0021",
+        "source_file": "msg/fld/031.m",
+        "offset": "0x6E0",
+        "encoded_len_candidate": 28,
+        "source_byte_len": 42,
+        "payload_capacity": 40,
+        "capacity_delta": 12,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_f3b3bfac_0006A0_0026",
+        "source_file": "msg/fld/033.m",
+        "offset": "0x6A0",
+        "encoded_len_candidate": 46,
+        "source_byte_len": 68,
+        "payload_capacity": 66,
+        "capacity_delta": 20,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_f3b3bfac_0009E8_0030",
+        "source_file": "msg/fld/033.m",
+        "offset": "0x9E8",
+        "encoded_len_candidate": 16,
+        "source_byte_len": 24,
+        "payload_capacity": 22,
+        "capacity_delta": 6,
+        "risk_flags": "endian_unverified"
+      },
+      {
+        "id": "zh_txt_a346a806_000EA6_0046",
+        "source_file": "msg/fld/034.m",
+        "offset": "0xEA6",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 18,
+        "payload_capacity": 16,
+        "capacity_delta": 4,
+        "risk_flags": "endian_unverified"
+      }
+    ],
+    "overflow": [],
+    "needs_ascii_policy": [
+      {
+        "id": "zh_txt_1ef20901_0000FA_0001",
+        "source_file": "msg/btl/002.m",
+        "offset": "0xFA",
+        "encoded_len_candidate": 34,
+        "source_byte_len": 60,
+        "payload_capacity": 58,
+        "capacity_delta": 24,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "<@"
+      },
+      {
+        "id": "zh_txt_8f76d3bc_00008A_0003",
+        "source_file": "msg/btl/015.m",
+        "offset": "0x8A",
+        "encoded_len_candidate": 15,
+        "source_byte_len": 22,
+        "payload_capacity": 20,
+        "capacity_delta": 5,
+        "risk_flags": "needs_ascii_policy endian_unverified",
+        "visible_ascii_chars": " "
+      },
+      {
+        "id": "zh_txt_304f89b4_000014_0000",
+        "source_file": "msg/btl/026.m",
+        "offset": "0x14",
+        "encoded_len_candidate": 54,
+        "source_byte_len": 116,
+        "payload_capacity": 116,
+        "capacity_delta": 62,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "Jump"
+      },
+      {
+        "id": "zh_txt_304f89b4_0013BC_0031",
+        "source_file": "msg/btl/026.m",
+        "offset": "0x13BC",
+        "encoded_len_candidate": 75,
+        "source_byte_len": 162,
+        "payload_capacity": 162,
+        "capacity_delta": 87,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": " "
+      },
+      {
+        "id": "zh_txt_304f89b4_00146A_0032",
+        "source_file": "msg/btl/026.m",
+        "offset": "0x146A",
+        "encoded_len_candidate": 142,
+        "source_byte_len": 276,
+        "payload_capacity": 276,
+        "capacity_delta": 134,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "JUMP"
+      },
+      {
+        "id": "zh_txt_304f89b4_001654_0034",
+        "source_file": "msg/btl/026.m",
+        "offset": "0x1654",
+        "encoded_len_candidate": 58,
+        "source_byte_len": 78,
+        "payload_capacity": 78,
+        "capacity_delta": 20,
+        "risk_flags": "needs_ascii_policy endian_unverified",
+        "visible_ascii_chars": "/206"
+      },
+      {
+        "id": "zh_txt_4f4c4f52_000008_0000",
+        "source_file": "msg/btl/027.m",
+        "offset": "0x8",
+        "encoded_len_candidate": 101,
+        "source_byte_len": 182,
+        "payload_capacity": 180,
+        "capacity_delta": 79,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "Wi-F"
+      },
+      {
+        "id": "zh_txt_4f4c4f52_000122_0002",
+        "source_file": "msg/btl/027.m",
+        "offset": "0x122",
+        "encoded_len_candidate": 21,
+        "source_byte_len": 56,
+        "payload_capacity": 54,
+        "capacity_delta": 33,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "A"
+      },
+      {
+        "id": "zh_txt_a2cc37d6_000200_0008",
+        "source_file": "msg/eiga/009.m",
+        "offset": "0x200",
+        "encoded_len_candidate": 21,
+        "source_byte_len": 25,
+        "payload_capacity": 25,
+        "capacity_delta": 4,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "."
+      },
+      {
+        "id": "zh_txt_bd7bd758_0001F0_0007",
+        "source_file": "msg/eiga/011.m",
+        "offset": "0x1F0",
+        "encoded_len_candidate": 45,
+        "source_byte_len": 90,
+        "payload_capacity": 88,
+        "capacity_delta": 43,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "10"
+      },
+      {
+        "id": "zh_txt_d81b9b2a_00001A_0000",
+        "source_file": "msg/eiga/015.m",
+        "offset": "0x1A",
+        "encoded_len_candidate": 33,
+        "source_byte_len": 58,
+        "payload_capacity": 56,
+        "capacity_delta": 23,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": " "
+      },
+      {
+        "id": "zh_txt_0768e9e8_000048_0001",
+        "source_file": "msg/eiga/018.m",
+        "offset": "0x48",
+        "encoded_len_candidate": 9,
+        "source_byte_len": 18,
+        "payload_capacity": 16,
+        "capacity_delta": 7,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "Z"
+      },
+      {
+        "id": "zh_txt_0768e9e8_0000A0_0003",
+        "source_file": "msg/eiga/018.m",
+        "offset": "0xA0",
+        "encoded_len_candidate": 15,
+        "source_byte_len": 32,
+        "payload_capacity": 30,
+        "capacity_delta": 15,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "Z "
+      },
+      {
+        "id": "zh_txt_e2e8a762_000232_0008",
+        "source_file": "msg/eiga/020.m",
+        "offset": "0x232",
+        "encoded_len_candidate": 13,
+        "source_byte_len": 16,
+        "payload_capacity": 16,
+        "capacity_delta": 3,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "."
+      },
+      {
+        "id": "zh_txt_e2e8a762_000372_0013",
+        "source_file": "msg/eiga/020.m",
+        "offset": "0x372",
+        "encoded_len_candidate": 13,
+        "source_byte_len": 16,
+        "payload_capacity": 16,
+        "capacity_delta": 3,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "."
+      },
+      {
+        "id": "zh_txt_f241e742_00021E_0007",
+        "source_file": "msg/eiga/023.m",
+        "offset": "0x21E",
+        "encoded_len_candidate": 51,
+        "source_byte_len": 64,
+        "payload_capacity": 62,
+        "capacity_delta": 11,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "."
+      },
+      {
+        "id": "zh_txt_c36688a6_0000D4_0003",
+        "source_file": "msg/eiga/024.m",
+        "offset": "0xD4",
+        "encoded_len_candidate": 44,
+        "source_byte_len": 90,
+        "payload_capacity": 88,
+        "capacity_delta": 44,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "10"
+      },
+      {
+        "id": "zh_txt_17560ae1_0000E4_0003",
+        "source_file": "msg/eiga/035.m",
+        "offset": "0xE4",
+        "encoded_len_candidate": 43,
+        "source_byte_len": 66,
+        "payload_capacity": 64,
+        "capacity_delta": 21,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": " "
+      },
+      {
+        "id": "zh_txt_e30d1b75_0000AE_0002",
+        "source_file": "msg/eiga/036.m",
+        "offset": "0xAE",
+        "encoded_len_candidate": 60,
+        "source_byte_len": 74,
+        "payload_capacity": 72,
+        "capacity_delta": 12,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "."
+      },
+      {
+        "id": "zh_txt_705f6fb1_00001A_0000",
+        "source_file": "msg/eiga/047.m",
+        "offset": "0x1A",
+        "encoded_len_candidate": 27,
+        "source_byte_len": 44,
+        "payload_capacity": 42,
+        "capacity_delta": 15,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "visible_ascii_chars": "10 234"
+      }
+    ],
+    "padding_ambiguous": [
+      {
+        "id": "zh_txt_59bb03cb_00000E_0000",
+        "source_file": "msg/btl/000.m",
+        "offset": "0xE",
+        "encoded_len_candidate": 278,
+        "source_byte_len": 512,
+        "payload_capacity": 510,
+        "capacity_delta": 232,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 108
+      },
+      {
+        "id": "zh_txt_59bb03cb_000218_0001",
+        "source_file": "msg/btl/000.m",
+        "offset": "0x218",
+        "encoded_len_candidate": 186,
+        "source_byte_len": 306,
+        "payload_capacity": 304,
+        "capacity_delta": 118,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 40
+      },
+      {
+        "id": "zh_txt_59bb03cb_000354_0002",
+        "source_file": "msg/btl/000.m",
+        "offset": "0x354",
+        "encoded_len_candidate": 34,
+        "source_byte_len": 60,
+        "payload_capacity": 58,
+        "capacity_delta": 24,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 13
+      },
+      {
+        "id": "zh_txt_59bb03cb_00039A_0003",
+        "source_file": "msg/btl/000.m",
+        "offset": "0x39A",
+        "encoded_len_candidate": 34,
+        "source_byte_len": 60,
+        "payload_capacity": 58,
+        "capacity_delta": 24,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 13
+      },
+      {
+        "id": "zh_txt_59bb03cb_0003E0_0004",
+        "source_file": "msg/btl/000.m",
+        "offset": "0x3E0",
+        "encoded_len_candidate": 274,
+        "source_byte_len": 488,
+        "payload_capacity": 486,
+        "capacity_delta": 212,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 90
+      },
+      {
+        "id": "zh_txt_59bb03cb_0005D2_0005",
+        "source_file": "msg/btl/000.m",
+        "offset": "0x5D2",
+        "encoded_len_candidate": 210,
+        "source_byte_len": 380,
+        "payload_capacity": 378,
+        "capacity_delta": 168,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 80
+      },
+      {
+        "id": "zh_txt_fa5876d6_00000E_0000",
+        "source_file": "msg/btl/001.m",
+        "offset": "0xE",
+        "encoded_len_candidate": 108,
+        "source_byte_len": 198,
+        "payload_capacity": 196,
+        "capacity_delta": 88,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 47
+      },
+      {
+        "id": "zh_txt_fa5876d6_0000DE_0001",
+        "source_file": "msg/btl/001.m",
+        "offset": "0xDE",
+        "encoded_len_candidate": 58,
+        "source_byte_len": 116,
+        "payload_capacity": 114,
+        "capacity_delta": 56,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 38
+      },
+      {
+        "id": "zh_txt_fa5876d6_00015C_0002",
+        "source_file": "msg/btl/001.m",
+        "offset": "0x15C",
+        "encoded_len_candidate": 242,
+        "source_byte_len": 476,
+        "payload_capacity": 474,
+        "capacity_delta": 232,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 137
+      },
+      {
+        "id": "zh_txt_1ef20901_00000E_0000",
+        "source_file": "msg/btl/002.m",
+        "offset": "0xE",
+        "encoded_len_candidate": 118,
+        "source_byte_len": 228,
+        "payload_capacity": 226,
+        "capacity_delta": 108,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 63
+      },
+      {
+        "id": "zh_txt_1ef20901_0000FA_0001",
+        "source_file": "msg/btl/002.m",
+        "offset": "0xFA",
+        "encoded_len_candidate": 34,
+        "source_byte_len": 60,
+        "payload_capacity": 58,
+        "capacity_delta": 24,
+        "risk_flags": "needs_ascii_policy padding_ambiguous endian_unverified",
+        "padding_spaces": 12
+      },
+      {
+        "id": "zh_txt_1ef20901_000140_0002",
+        "source_file": "msg/btl/002.m",
+        "offset": "0x140",
+        "encoded_len_candidate": 70,
+        "source_byte_len": 142,
+        "payload_capacity": 140,
+        "capacity_delta": 70,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 39
+      },
+      {
+        "id": "zh_txt_1ef20901_0001D8_0003",
+        "source_file": "msg/btl/002.m",
+        "offset": "0x1D8",
+        "encoded_len_candidate": 114,
+        "source_byte_len": 238,
+        "payload_capacity": 236,
+        "capacity_delta": 122,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 71
+      },
+      {
+        "id": "zh_txt_565c7df8_00000C_0000",
+        "source_file": "msg/btl/003.m",
+        "offset": "0xC",
+        "encoded_len_candidate": 42,
+        "source_byte_len": 76,
+        "payload_capacity": 74,
+        "capacity_delta": 32,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 15
+      },
+      {
+        "id": "zh_txt_565c7df8_000062_0001",
+        "source_file": "msg/btl/003.m",
+        "offset": "0x62",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 20,
+        "payload_capacity": 18,
+        "capacity_delta": 6,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 2
+      },
+      {
+        "id": "zh_txt_565c7df8_000080_0002",
+        "source_file": "msg/btl/003.m",
+        "offset": "0x80",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 20,
+        "payload_capacity": 18,
+        "capacity_delta": 6,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 2
+      },
+      {
+        "id": "zh_txt_565c7df8_00009E_0003",
+        "source_file": "msg/btl/003.m",
+        "offset": "0x9E",
+        "encoded_len_candidate": 8,
+        "source_byte_len": 14,
+        "payload_capacity": 12,
+        "capacity_delta": 4,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 2
+      },
+      {
+        "id": "zh_txt_565c7df8_0000B6_0004",
+        "source_file": "msg/btl/003.m",
+        "offset": "0xB6",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 20,
+        "payload_capacity": 18,
+        "capacity_delta": 6,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 2
+      },
+      {
+        "id": "zh_txt_565c7df8_0000D4_0005",
+        "source_file": "msg/btl/003.m",
+        "offset": "0xD4",
+        "encoded_len_candidate": 12,
+        "source_byte_len": 20,
+        "payload_capacity": 18,
+        "capacity_delta": 6,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 2
+      },
+      {
+        "id": "zh_txt_f831441d_00000C_0000",
+        "source_file": "msg/btl/008.m",
+        "offset": "0xC",
+        "encoded_len_candidate": 42,
+        "source_byte_len": 74,
+        "payload_capacity": 72,
+        "capacity_delta": 30,
+        "risk_flags": "padding_ambiguous endian_unverified",
+        "padding_spaces": 13
+      }
+    ],
+    "missing_code_table": [],
+    "control_decode_or_token_issues": []
+  },
+  "next_actions": [
+    "Verify new-code byte order before selecting Stage 2 samples.",
+    "Decide ordinary ASCII handling before rows with needs_ascii_policy can be written.",
+    "Decide padding handling before rows with padding_ambiguous can be written.",
+    "Use only rows with stage2_eligible=yes after all hard gates are satisfied."
+  ]
+}

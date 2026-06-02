@@ -3340,11 +3340,21 @@
     ]
   },
   "allocation": {
-    "start_code": "0xF000",
-    "end_code": "0xF7C1",
+    "start_code": "0xF040",
+    "end_code": "0xFAAB",
+    "code_shape": "sjis",
     "entry_count": 1986,
     "collision_count": 0,
-    "collisions": []
+    "collisions": [],
+    "skipped_code_count": 1,
+    "skipped_code_examples": [
+      {
+        "code_hex": "0xFA40",
+        "reasons": [
+          "raw_text_word"
+        ]
+      }
+    ]
   },
   "manifest": {
     "entry_count": 1986,

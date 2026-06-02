@@ -41,7 +41,7 @@ chunks=322 translated=322 validated=322 issues=0
 ## 冻结命令
 
 ```text
-.\.venv\Scripts\python.exe -B tools\extract_translation_charset.py --start-code 0xF000
+.\.venv\Scripts\python.exe -B tools\extract_translation_charset.py --start-code 0xF040 --code-shape sjis
 ```
 
 ## 冻结结果

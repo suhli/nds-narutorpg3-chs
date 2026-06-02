@@ -16,8 +16,12 @@ freeze_issues=0
 
 ```text
 entries=1986
-range=0xF000..0xF7C1
+range=0xF040..0xFAAB
+superseded_contiguous_range=0xF000..0xF7C1
 collisions=0
+code_shape=sjis
+sjis_shape_invalid=0
+low_byte_zero=0
 ```
 
 manifest：

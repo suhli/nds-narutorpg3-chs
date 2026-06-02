@@ -21,7 +21,7 @@ JSON manifest 使用 `tools/build_vram_font_files.py` 支持的字段：
 {
   "entries": [
     {
-      "code": "0xF000",
+      "code": "0xF040",
       "char": "「",
       "modes": ["1x1", "1x2"]
     }
@@ -32,7 +32,7 @@ JSON manifest 使用 `tools/build_vram_font_files.py` 支持的字段：
 文本 manifest 格式：
 
 ```text
-0xF000 「 1x1,1x2
+0xF040 「 1x1,1x2
 ```
 
 ## 注意事项

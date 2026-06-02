@@ -23,7 +23,7 @@
 - 冻结一份可复现的已校验译文输入。
 - 从冻结译文中提取中文字符集和实际可见符号。
 - 忽略控制 token、结构字段和尾部 ASCII padding。
-- 为字符集分配内部编码；初始假设 `0xE000` 已经冲突扫描否决，最终冻结为 `0xF000..0xF7C1`。
+- 为字符集分配内部编码；初始假设 `0xE000` 已经冲突扫描否决。文本回写预检发现 `0xF000` 连续分配存在非法 SJIS trail 风险，最终修正为 SJIS 形状分配 `0xF040..0xFAAB`。
 - 生成后续字体构建可消费的 manifest。
 - 用现有字体工具完成 font-dir 构建冒烟。
 - 产出后续文本回写计划可直接消费的 handoff。
@@ -168,8 +168,10 @@ plan/cache/code-table-extraction/charset-extraction.md
 
 - 起始编码初始尝试 `0xE000`。
 - `0xE000` 方案发现 raw text word 冲突：`暴 -> 0xE34A`、`蛙 -> 0xE5B3`。
-- 最终起始编码改为 `0xF000`。
-- 最终编码范围为 `0xF000..0xF7C1`。
+- 最终起始编码改为 `0xF040`。
+- 最终编码范围为 `0xF040..0xFAAB`。
+- 最终分配规则为 SJIS 形状双字节码点，跳过非法 trail 和 raw text word 冲突。
+- `0xFA40` 因 raw text word 冲突被跳过。
 - 每个字符分配唯一编码。
 - 编码按字符首次出现顺序连续分配。
 - 若冲突扫描发现风险，允许调整 `start-code` 后重新分配。
@@ -226,7 +228,7 @@ JSON manifest 格式：
 {
   "entries": [
     {
-      "code": "0xF000",
+      "code": "0xF040",
       "char": "字",
       "modes": ["1x1", "1x2"]
     }
@@ -237,7 +239,7 @@ JSON manifest 格式：
 文本 manifest 格式：
 
 ```text
-0xF000 字 1x1,1x2
+0xF040 字 1x1,1x2
 ```
 
 产物：
@@ -308,7 +310,7 @@ plan/cache/code-table-extraction/handoff-to-text-writeback.md
 - 先补上一计划 handoff，再进入新计划执行。
 - 冻结合并 TSV 是码表提取的唯一输入。
 - `zh_translation.tsv` 当前为空，禁止作为码表输入。
-- 初始 `0xE000` 编码方案因 raw text word 冲突废弃；最终编码范围冻结为 `0xF000..0xF7C1`。
+- 初始 `0xE000` 编码方案因 raw text word 冲突废弃；`0xF000` 连续分配又在文本回写预检中发现非法 SJIS trail 风险；最终编码范围修正为 `0xF040..0xFAAB`，按 SJIS 形状分配。
 - 默认所有扩展字符先生成 `1x1,1x2` 两套字模，模式标记为 provisional。
 - 本计划只到 font-dir 冒烟，不回写 ROM。
 

@@ -1,0 +1,37 @@
+{
+  "work": "D:/repos/nds-narutorpg3-chs/rom/unpacked/text_writeback_smoke_build_20260602_180705",
+  "output_rom": "D:/repos/nds-narutorpg3-chs/rom/text_writeback_smoke.nds",
+  "sample_count": 2,
+  "samples": [
+    {
+      "id": "zh_txt_869691fa_0000AE_0003",
+      "source_file": "msg/fld/013.m",
+      "work_file": "D:/repos/nds-narutorpg3-chs/rom/unpacked/text_writeback_smoke_build_20260602_180705/data/text/msg/fld/013.m",
+      "offset": "0xAE",
+      "source_byte_len": 48,
+      "payload_capacity": 46,
+      "jp_text": "「こちらは　びょうしつです　おみまいですか？」",
+      "zh_text": "「这里是病房，您是来探病的吗？」",
+      "encoded_hex_candidate": "F0 40 F0 6D F0 6E F0 8C F6 61 F2 7C F0 5B F4 AF F0 8C F0 49 F6 62 F6 61 F0 69 F1 62 F1 5E F0 4C",
+      "terminator_hex": "03 00",
+      "original_hex": "81 75 82 B1 82 BF 82 E7 82 CD 81 40 82 D1 82 E5 82 A4 82 B5 82 C2 82 C5 82 B7 81 40 82 A8 82 DD 82 DC 82 A2 82 C5 82 B7 82 A9 81 48 81 76 03 00",
+      "replacement_hex": "F0 40 F0 6D F0 6E F0 8C F6 61 F2 7C F0 5B F4 AF F0 8C F0 49 F6 62 F6 61 F0 69 F1 62 F1 5E F0 4C 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+      "fill_zero_count": 14
+    },
+    {
+      "id": "zh_txt_876c4bf1_003C60_0367",
+      "source_file": "param/item_data.dat",
+      "work_file": "D:/repos/nds-narutorpg3-chs/rom/unpacked/text_writeback_smoke_build_20260602_180705/data/text/param/item_data.dat",
+      "offset": "0x3C60",
+      "source_byte_len": 12,
+      "payload_capacity": 12,
+      "jp_text": "ナルトカード",
+      "zh_text": "鸣人卡片",
+      "encoded_hex_candidate": "F0 41 F0 42 F1 E0 F6 44",
+      "terminator_hex": "",
+      "original_hex": "83 69 83 8B 83 67 83 4A 81 5B 83 68",
+      "replacement_hex": "F0 41 F0 42 F1 E0 F6 44 00 00 00 00",
+      "fill_zero_count": 4
+    }
+  ]
+}
