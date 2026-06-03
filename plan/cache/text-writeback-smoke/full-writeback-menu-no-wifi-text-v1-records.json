@@ -1,0 +1,37 @@
+{
+  "work": "D:/repos/nds-narutorpg3-chs/rom/unpacked/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1",
+  "output_rom": "D:/repos/nds-narutorpg3-chs/rom/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1.nds",
+  "font_dir": "D:/repos/nds-narutorpg3-chs/plan/cache/text-writeback-smoke/font-build-smoke-sjis-code-table",
+  "font_cache_strategy": {
+    "name": "immediate_copy_on_1x2_miss_probe",
+    "copy_hook": "0x02073D64",
+    "copy_hook_size": 268,
+    "note": "1x2 title/menu first-draw probe; 1x1 immediate path still pending formalization"
+  },
+  "text_writeback": {
+    "preview": "text/writeback/encoded_preview.tsv",
+    "row_count": 5789,
+    "excluded_source_files": {
+      "msg/wifi/btlres_msg.msg": 2,
+      "msg/wifi/connect_msg.msg": 22,
+      "msg/wifi/error_msg.msg": 12,
+      "msg/wifi/friend_msg.msg": 19,
+      "msg/wifi/kinshi_msg.msg": 1,
+      "msg/wifi/rule_msg.msg": 11,
+      "msg/wifi/taisen_msg.msg": 1,
+      "msg/wifi/vs_msg.msg": 6
+    },
+    "validation": {
+      "file_count": 280,
+      "row_count": 5789
+    }
+  },
+  "menu_writeback": {
+    "translations": "text/menu/overlay_menu_translations.tsv",
+    "row_count": 278
+  },
+  "records": {
+    "text_samples": [],
+    "menu_samples": []
+  }
+}

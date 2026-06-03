@@ -1,0 +1,3675 @@
+{
+  "inputs": {
+    "index": "text/translation/chunks/index.json",
+    "translated_dir": "text/translation/chunks/translated",
+    "reports_dir": "text/translation/chunks/reports",
+    "index_chunks": 322,
+    "index_rows": 5863
+  },
+  "outputs": {
+    "frozen_translation": "plan/cache/text-writeback-smoke/code-table-safe-9040/frozen_translation.tsv",
+    "zh_charset": "plan/cache/text-writeback-smoke/code-table-safe-9040/zh_charset.txt",
+    "zh_code_table": "plan/cache/text-writeback-smoke/code-table-safe-9040/zh_code_table.tsv",
+    "font_manifest_json": "plan/cache/text-writeback-smoke/code-table-safe-9040/font_manifest.json",
+    "font_manifest_txt": "plan/cache/text-writeback-smoke/code-table-safe-9040/font_manifest.txt",
+    "ignored_ascii": "plan/cache/text-writeback-smoke/code-table-safe-9040/ignored_ascii.txt"
+  },
+  "freeze": {
+    "chunks": 322,
+    "rows": 5863,
+    "issue_count": 0,
+    "issues": [],
+    "chunks_detail": [
+      {
+        "chunk_id": "chunk_0001",
+        "path": "text/translation/chunks/translated/chunk_0001.tsv",
+        "sha1": "a04a94e157363b87737c19d5e8a64eb1a9acba94",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0001-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0002",
+        "path": "text/translation/chunks/translated/chunk_0002.tsv",
+        "sha1": "c9ab47c29db7cc2aa8ff192889bef20964be8a72",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0002-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0003",
+        "path": "text/translation/chunks/translated/chunk_0003.tsv",
+        "sha1": "ff045072949266133a73b2ec8b948c8719c408ee",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0003-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0004",
+        "path": "text/translation/chunks/translated/chunk_0004.tsv",
+        "sha1": "fecd7250d059d61ad9f983a4b7ec940884737088",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0004-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0005",
+        "path": "text/translation/chunks/translated/chunk_0005.tsv",
+        "sha1": "4b93a05c06ad8e8246bda117f009640631bd9678",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0005-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0006",
+        "path": "text/translation/chunks/translated/chunk_0006.tsv",
+        "sha1": "f74121f34e6a3169df36c72b3de7c34ec6690af9",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0006-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0007",
+        "path": "text/translation/chunks/translated/chunk_0007.tsv",
+        "sha1": "0d6454b10024fcd126a868295e7aee454ecc4210",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0007-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0008",
+        "path": "text/translation/chunks/translated/chunk_0008.tsv",
+        "sha1": "1c1dc434c5a8c89e8ad7f0ed56fc426883eef62e",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0008-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0009",
+        "path": "text/translation/chunks/translated/chunk_0009.tsv",
+        "sha1": "14a77f077f3ff1ce2d167a414ea2e3a29f1e7e5a",
+        "rows": 36,
+        "translated_rows": 36,
+        "aligned_rows": 36,
+        "report_path": "text/translation/chunks/reports/chunk_0009-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0010",
+        "path": "text/translation/chunks/translated/chunk_0010.tsv",
+        "sha1": "28a0650a3e11e805a7e5422d8505fb69cc633c6f",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0010-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0011",
+        "path": "text/translation/chunks/translated/chunk_0011.tsv",
+        "sha1": "b32ea93969e483553d117cfb9af61505352cd68f",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0011-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0012",
+        "path": "text/translation/chunks/translated/chunk_0012.tsv",
+        "sha1": "534cb65bf7ec90a4335fe1ee58617ebb143c2ce9",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0012-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0013",
+        "path": "text/translation/chunks/translated/chunk_0013.tsv",
+        "sha1": "93a50f7297c662bf3497c35c32b12c173fe5d445",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0013-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0014",
+        "path": "text/translation/chunks/translated/chunk_0014.tsv",
+        "sha1": "52fefdf2932c42fbfa291e2efec6b124d321709f",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0014-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0015",
+        "path": "text/translation/chunks/translated/chunk_0015.tsv",
+        "sha1": "ff917116711fc4c8a11ccde5bfbcd8c50be2fcbf",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0015-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0016",
+        "path": "text/translation/chunks/translated/chunk_0016.tsv",
+        "sha1": "33b3a59669e4f20789e1f86581eeac1d51188f84",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0016-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0017",
+        "path": "text/translation/chunks/translated/chunk_0017.tsv",
+        "sha1": "48e6b25c77e39de5d2b06fa70332417d48317d96",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0017-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0018",
+        "path": "text/translation/chunks/translated/chunk_0018.tsv",
+        "sha1": "c378869e7e791814e2cc2b3e68cde8bc889f9dea",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0018-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0019",
+        "path": "text/translation/chunks/translated/chunk_0019.tsv",
+        "sha1": "dab4873847f538e112a3b2bcfaabcde91b8fb880",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0019-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0020",
+        "path": "text/translation/chunks/translated/chunk_0020.tsv",
+        "sha1": "c1bcd3b978997bb1a391f06ead0acdaaa62b555b",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0020-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0021",
+        "path": "text/translation/chunks/translated/chunk_0021.tsv",
+        "sha1": "53ec66706c8e67b0591735e13994666e7dea40bc",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0021-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0022",
+        "path": "text/translation/chunks/translated/chunk_0022.tsv",
+        "sha1": "f70dc9b20025e3da1e2619924cd0f38636e7006a",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0022-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0023",
+        "path": "text/translation/chunks/translated/chunk_0023.tsv",
+        "sha1": "4f7553a9328b71fe70caacc91fef228096f23e2f",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0023-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0024",
+        "path": "text/translation/chunks/translated/chunk_0024.tsv",
+        "sha1": "4d710ed6d5e4bcd7d93e4764fe51ec07ef492341",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0024-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0025",
+        "path": "text/translation/chunks/translated/chunk_0025.tsv",
+        "sha1": "8f090d06cc5b3f8d4f7399136a7daa7db3f081a3",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0025-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0026",
+        "path": "text/translation/chunks/translated/chunk_0026.tsv",
+        "sha1": "7619341a18e3e52785ea331426e4bb860d9ab634",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0026-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0027",
+        "path": "text/translation/chunks/translated/chunk_0027.tsv",
+        "sha1": "8682ec6b94b8d87ec88458633006754956c5ecd5",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0027-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0028",
+        "path": "text/translation/chunks/translated/chunk_0028.tsv",
+        "sha1": "e15de35bc0c3b33e6438f7e7eab33579abc99ff3",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0028-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0029",
+        "path": "text/translation/chunks/translated/chunk_0029.tsv",
+        "sha1": "922ebf50ecc4c9a847038fc13286a5f677fa165f",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0029-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0030",
+        "path": "text/translation/chunks/translated/chunk_0030.tsv",
+        "sha1": "b1a4ee6252cd7c18026bc0ffb5fa13a82aa42864",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0030-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0031",
+        "path": "text/translation/chunks/translated/chunk_0031.tsv",
+        "sha1": "f06042153140dc2f49176457bb58ab91bdb707b3",
+        "rows": 16,
+        "translated_rows": 16,
+        "aligned_rows": 16,
+        "report_path": "text/translation/chunks/reports/chunk_0031-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0032",
+        "path": "text/translation/chunks/translated/chunk_0032.tsv",
+        "sha1": "134e4a5711ad0fdfabc9660298e9694e4ebf1ea6",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0032-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0033",
+        "path": "text/translation/chunks/translated/chunk_0033.tsv",
+        "sha1": "7560a585e533f89a23666f5cb450f008d9a406e1",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0033-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0034",
+        "path": "text/translation/chunks/translated/chunk_0034.tsv",
+        "sha1": "050246346f0ad38cfbda736533ee1edea1a6d024",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0034-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0035",
+        "path": "text/translation/chunks/translated/chunk_0035.tsv",
+        "sha1": "e25a10fdc7bfbc8ef080a3e0078a1e67ffd23fa0",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0035-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0036",
+        "path": "text/translation/chunks/translated/chunk_0036.tsv",
+        "sha1": "bc54752ea75d444c621797f450c5f3c4fb7d680a",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0036-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0037",
+        "path": "text/translation/chunks/translated/chunk_0037.tsv",
+        "sha1": "689aa44a84b3904027741f6039e3a0bb535187a2",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0037-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0038",
+        "path": "text/translation/chunks/translated/chunk_0038.tsv",
+        "sha1": "04e830f960e697ca2656de4009a6229dc344aeb4",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0038-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0039",
+        "path": "text/translation/chunks/translated/chunk_0039.tsv",
+        "sha1": "dd2045d5b9ceefe3a6ef5ff5da2061d64186c1f9",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0039-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0040",
+        "path": "text/translation/chunks/translated/chunk_0040.tsv",
+        "sha1": "267e888cfea0b7b2478172b8ae3b9d2d7a467de6",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0040-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0041",
+        "path": "text/translation/chunks/translated/chunk_0041.tsv",
+        "sha1": "547f6b7afc07673b786412b2c4553334c62f4f01",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0041-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0042",
+        "path": "text/translation/chunks/translated/chunk_0042.tsv",
+        "sha1": "ba89a7dc0b59527c5c6d8954a5c0dfabf1f640eb",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0042-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0043",
+        "path": "text/translation/chunks/translated/chunk_0043.tsv",
+        "sha1": "d8352017b8109e847331f7e1a15e23532fed5a60",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0043-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0044",
+        "path": "text/translation/chunks/translated/chunk_0044.tsv",
+        "sha1": "bb29c01d11bbfdea5ea5a6e54458f515e1e96d90",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0044-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0045",
+        "path": "text/translation/chunks/translated/chunk_0045.tsv",
+        "sha1": "5cf7eb0e112e1a9315c044429a19d2f2e8e59166",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0045-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0046",
+        "path": "text/translation/chunks/translated/chunk_0046.tsv",
+        "sha1": "8d0cbc1bcbf4770ca38f22e359c7e8465a0a3e04",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0046-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0047",
+        "path": "text/translation/chunks/translated/chunk_0047.tsv",
+        "sha1": "4f7877f50635d3d50c5627b07c190eb90c5aa4d6",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0047-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0048",
+        "path": "text/translation/chunks/translated/chunk_0048.tsv",
+        "sha1": "ff3d933b7c2b02b297c85089f41b2949c4c6873d",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0048-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0049",
+        "path": "text/translation/chunks/translated/chunk_0049.tsv",
+        "sha1": "f32fa0d30351f5e6702498c6c9f02a8b4d118b81",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0049-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0050",
+        "path": "text/translation/chunks/translated/chunk_0050.tsv",
+        "sha1": "33bad7bfa63ed2eb0d3045f843694fb1124d3d36",
+        "rows": 21,
+        "translated_rows": 21,
+        "aligned_rows": 21,
+        "report_path": "text/translation/chunks/reports/chunk_0050-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0051",
+        "path": "text/translation/chunks/translated/chunk_0051.tsv",
+        "sha1": "280b572964d7f038683d4d36461a764bd4393459",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0051-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0052",
+        "path": "text/translation/chunks/translated/chunk_0052.tsv",
+        "sha1": "37d3250aa29d5a044636d26e6d87c98ab75a5ec2",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0052-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0053",
+        "path": "text/translation/chunks/translated/chunk_0053.tsv",
+        "sha1": "ac664dbc39370abc5376c5fb4ad387de003c00d1",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0053-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0054",
+        "path": "text/translation/chunks/translated/chunk_0054.tsv",
+        "sha1": "3eac2c57c1cc6ebd3ca467068d6833b24526095e",
+        "rows": 14,
+        "translated_rows": 14,
+        "aligned_rows": 14,
+        "report_path": "text/translation/chunks/reports/chunk_0054-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0055",
+        "path": "text/translation/chunks/translated/chunk_0055.tsv",
+        "sha1": "b11432c00b8a5acc1f7801c635a8d5e2650bfecd",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0055-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0056",
+        "path": "text/translation/chunks/translated/chunk_0056.tsv",
+        "sha1": "4fafa143d0f32112fb095c22ea17da4a18df6d79",
+        "rows": 14,
+        "translated_rows": 14,
+        "aligned_rows": 14,
+        "report_path": "text/translation/chunks/reports/chunk_0056-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0057",
+        "path": "text/translation/chunks/translated/chunk_0057.tsv",
+        "sha1": "fc51c455aad3450a1408f2efb16c823cd9d8b672",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0057-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0058",
+        "path": "text/translation/chunks/translated/chunk_0058.tsv",
+        "sha1": "866e4a4faa011887623ebceabb29e6f31a9e5bb6",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0058-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0059",
+        "path": "text/translation/chunks/translated/chunk_0059.tsv",
+        "sha1": "b0300b6e0c07b602f63ba8dc89dc28bb064d5265",
+        "rows": 18,
+        "translated_rows": 18,
+        "aligned_rows": 18,
+        "report_path": "text/translation/chunks/reports/chunk_0059-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0060",
+        "path": "text/translation/chunks/translated/chunk_0060.tsv",
+        "sha1": "b5d525539486b015339a09932408cd9c0d282523",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0060-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0061",
+        "path": "text/translation/chunks/translated/chunk_0061.tsv",
+        "sha1": "30f538916f7897ecf1a6230908353be731d4a5f2",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0061-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0062",
+        "path": "text/translation/chunks/translated/chunk_0062.tsv",
+        "sha1": "c653c390bbcebedabe641366137f741985ab7c3c",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0062-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0063",
+        "path": "text/translation/chunks/translated/chunk_0063.tsv",
+        "sha1": "87a2f07219143562fc22cad2675a87586a8bcaea",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0063-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0064",
+        "path": "text/translation/chunks/translated/chunk_0064.tsv",
+        "sha1": "a8d10dfecdb2087f7f00e3ac628219de5409800c",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0064-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0065",
+        "path": "text/translation/chunks/translated/chunk_0065.tsv",
+        "sha1": "3bc4767d989ddfd960af0fc8c1a92e071f2d41a7",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0065-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0066",
+        "path": "text/translation/chunks/translated/chunk_0066.tsv",
+        "sha1": "e170b96d06b74ffdaddce4ed40050c0fe1dc5df7",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0066-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0067",
+        "path": "text/translation/chunks/translated/chunk_0067.tsv",
+        "sha1": "f7b4f0ea611a760e0ef25663f7164e4d55fc20a7",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0067-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0068",
+        "path": "text/translation/chunks/translated/chunk_0068.tsv",
+        "sha1": "eb40309430b8b57d43856a4cee6b8c7264b38d43",
+        "rows": 16,
+        "translated_rows": 16,
+        "aligned_rows": 16,
+        "report_path": "text/translation/chunks/reports/chunk_0068-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0069",
+        "path": "text/translation/chunks/translated/chunk_0069.tsv",
+        "sha1": "2fdb101032c310347640d54f8bf8b4f175179485",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0069-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0070",
+        "path": "text/translation/chunks/translated/chunk_0070.tsv",
+        "sha1": "4fa5c43c7a2a8b6b7ca9c3837e51835d53baf081",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0070-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0071",
+        "path": "text/translation/chunks/translated/chunk_0071.tsv",
+        "sha1": "24edcbb2feb7555f1aac5abfdd02aefff097fcfd",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0071-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0072",
+        "path": "text/translation/chunks/translated/chunk_0072.tsv",
+        "sha1": "08ee95643a794b2dd44a5dfd2bce09b2c704c40a",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0072-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0073",
+        "path": "text/translation/chunks/translated/chunk_0073.tsv",
+        "sha1": "c521ccada916119b58e63a6693ce754d703ecd9e",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0073-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0074",
+        "path": "text/translation/chunks/translated/chunk_0074.tsv",
+        "sha1": "ff055ac00a2820005aac2309092c2822e1e8e56c",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0074-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0075",
+        "path": "text/translation/chunks/translated/chunk_0075.tsv",
+        "sha1": "c68211d577b068925d8a49b2f73418e7acd2e46c",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0075-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0076",
+        "path": "text/translation/chunks/translated/chunk_0076.tsv",
+        "sha1": "db4f85726043c36d4d65e9266e444fa541c8ce2e",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0076-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0077",
+        "path": "text/translation/chunks/translated/chunk_0077.tsv",
+        "sha1": "12da0632e8f43445412b19301ebb627698f2b39f",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0077-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0078",
+        "path": "text/translation/chunks/translated/chunk_0078.tsv",
+        "sha1": "e92d3520c56b0f14617bcf1c676a945f3ae3d87d",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0078-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0079",
+        "path": "text/translation/chunks/translated/chunk_0079.tsv",
+        "sha1": "d910df542b27e810ea970338481720729174fa17",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0079-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0080",
+        "path": "text/translation/chunks/translated/chunk_0080.tsv",
+        "sha1": "cc26889c56d7019135cd8ab59670d958696a54a3",
+        "rows": 15,
+        "translated_rows": 15,
+        "aligned_rows": 15,
+        "report_path": "text/translation/chunks/reports/chunk_0080-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0081",
+        "path": "text/translation/chunks/translated/chunk_0081.tsv",
+        "sha1": "3b257059fab07e053545b86dbfce78716031bea4",
+        "rows": 15,
+        "translated_rows": 15,
+        "aligned_rows": 15,
+        "report_path": "text/translation/chunks/reports/chunk_0081-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0082",
+        "path": "text/translation/chunks/translated/chunk_0082.tsv",
+        "sha1": "b27c0f5270346136ee1dfa21904124a90f12769f",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0082-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0083",
+        "path": "text/translation/chunks/translated/chunk_0083.tsv",
+        "sha1": "c1d4f337e66ba629d9de75f9738c7fe18dd90cbb",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0083-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0084",
+        "path": "text/translation/chunks/translated/chunk_0084.tsv",
+        "sha1": "e1194fdc0694a33c9a5623ab4804cd3000401884",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0084-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0085",
+        "path": "text/translation/chunks/translated/chunk_0085.tsv",
+        "sha1": "7865822b46da5b9e745bd60b33c9a8ef75c4e88c",
+        "rows": 18,
+        "translated_rows": 18,
+        "aligned_rows": 18,
+        "report_path": "text/translation/chunks/reports/chunk_0085-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0086",
+        "path": "text/translation/chunks/translated/chunk_0086.tsv",
+        "sha1": "655331872246c73ed070a3ea11f7b330b09fbf4a",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0086-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0087",
+        "path": "text/translation/chunks/translated/chunk_0087.tsv",
+        "sha1": "e253c9871f6e3d54026b111caac32154522041bc",
+        "rows": 14,
+        "translated_rows": 14,
+        "aligned_rows": 14,
+        "report_path": "text/translation/chunks/reports/chunk_0087-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0088",
+        "path": "text/translation/chunks/translated/chunk_0088.tsv",
+        "sha1": "c9d939e48808ce0ab0a4b06c1836bb66fe1b3136",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0088-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0089",
+        "path": "text/translation/chunks/translated/chunk_0089.tsv",
+        "sha1": "d17c7949a4f84e2f4fa43c6f2b8b41020e414d5a",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0089-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0090",
+        "path": "text/translation/chunks/translated/chunk_0090.tsv",
+        "sha1": "8339cb0ce5a5d247b5df0887310f808418d7c0f8",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0090-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0091",
+        "path": "text/translation/chunks/translated/chunk_0091.tsv",
+        "sha1": "21b38381f5c74e640d5a7e07c67b7ea250740ca7",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0091-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0092",
+        "path": "text/translation/chunks/translated/chunk_0092.tsv",
+        "sha1": "d9131f9c9f160d09c2684230969f4701f3bdc61a",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0092-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0093",
+        "path": "text/translation/chunks/translated/chunk_0093.tsv",
+        "sha1": "95c8b0f27ad5fdffb7d40f747a58c957633ca206",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0093-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0094",
+        "path": "text/translation/chunks/translated/chunk_0094.tsv",
+        "sha1": "154323a4b39cc8ed39721bcd1754f220f0a52a1b",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0094-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0095",
+        "path": "text/translation/chunks/translated/chunk_0095.tsv",
+        "sha1": "706e1a0b088e16fc3df0ec1876035afae40a035f",
+        "rows": 15,
+        "translated_rows": 15,
+        "aligned_rows": 15,
+        "report_path": "text/translation/chunks/reports/chunk_0095-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0096",
+        "path": "text/translation/chunks/translated/chunk_0096.tsv",
+        "sha1": "fd9671fccb8ae7935d2f4d8fa74d231b1cc8a7d5",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0096-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0097",
+        "path": "text/translation/chunks/translated/chunk_0097.tsv",
+        "sha1": "53ea646b6f1746b824fb238749331600c21f0765",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0097-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0098",
+        "path": "text/translation/chunks/translated/chunk_0098.tsv",
+        "sha1": "aceb560061f9350b7873f524fabf5f3ce9589d28",
+        "rows": 23,
+        "translated_rows": 23,
+        "aligned_rows": 23,
+        "report_path": "text/translation/chunks/reports/chunk_0098-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0099",
+        "path": "text/translation/chunks/translated/chunk_0099.tsv",
+        "sha1": "dfb8c3c2572d3755d187175b991445a073d72a85",
+        "rows": 40,
+        "translated_rows": 40,
+        "aligned_rows": 40,
+        "report_path": "text/translation/chunks/reports/chunk_0099-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0100",
+        "path": "text/translation/chunks/translated/chunk_0100.tsv",
+        "sha1": "cfb30c4bf2c28f6537fbea2b9a644614227483a9",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0100-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0101",
+        "path": "text/translation/chunks/translated/chunk_0101.tsv",
+        "sha1": "5e5f6809c2f99cd543e9f118738fe8039bf4193f",
+        "rows": 57,
+        "translated_rows": 57,
+        "aligned_rows": 57,
+        "report_path": "text/translation/chunks/reports/chunk_0101-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0102",
+        "path": "text/translation/chunks/translated/chunk_0102.tsv",
+        "sha1": "998ddcb0882253db55c8df6888bb28ea569f3b57",
+        "rows": 18,
+        "translated_rows": 18,
+        "aligned_rows": 18,
+        "report_path": "text/translation/chunks/reports/chunk_0102-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0103",
+        "path": "text/translation/chunks/translated/chunk_0103.tsv",
+        "sha1": "0550544df7dc2e68103e7cf3cd6038cb07750cec",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0103-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0104",
+        "path": "text/translation/chunks/translated/chunk_0104.tsv",
+        "sha1": "2f8506bc8fd68dcb21e1673e8de462820ad15a59",
+        "rows": 18,
+        "translated_rows": 18,
+        "aligned_rows": 18,
+        "report_path": "text/translation/chunks/reports/chunk_0104-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0105",
+        "path": "text/translation/chunks/translated/chunk_0105.tsv",
+        "sha1": "8b1c2cf8d3e4f71445518e0ca8019bd7857ffdcb",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0105-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0106",
+        "path": "text/translation/chunks/translated/chunk_0106.tsv",
+        "sha1": "631e75b0b19aa58ccf2bbd6151226fb6fd623448",
+        "rows": 17,
+        "translated_rows": 17,
+        "aligned_rows": 17,
+        "report_path": "text/translation/chunks/reports/chunk_0106-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0107",
+        "path": "text/translation/chunks/translated/chunk_0107.tsv",
+        "sha1": "aabc59996cd9c3118ea26403cd6c486cb0282dac",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0107-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0108",
+        "path": "text/translation/chunks/translated/chunk_0108.tsv",
+        "sha1": "8daad6a1d41ccecc85b4086f2ff2a790098b97ef",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0108-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0109",
+        "path": "text/translation/chunks/translated/chunk_0109.tsv",
+        "sha1": "a6b2752f1795d5d1f99019326fbcbcdb53d08f9a",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0109-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0110",
+        "path": "text/translation/chunks/translated/chunk_0110.tsv",
+        "sha1": "5632d2040dac72b0c34e0fbe38c271f48a19b5f0",
+        "rows": 26,
+        "translated_rows": 26,
+        "aligned_rows": 26,
+        "report_path": "text/translation/chunks/reports/chunk_0110-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0111",
+        "path": "text/translation/chunks/translated/chunk_0111.tsv",
+        "sha1": "2212da0a4ceaa4f69d74d49e1c4ceeacaa25cc2a",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0111-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0112",
+        "path": "text/translation/chunks/translated/chunk_0112.tsv",
+        "sha1": "8fba40e9e06f5f7c6730f6e841f39a64f591dd34",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0112-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0113",
+        "path": "text/translation/chunks/translated/chunk_0113.tsv",
+        "sha1": "b2a6f9fa6792794c45654bceaac525e7d03df1ac",
+        "rows": 35,
+        "translated_rows": 35,
+        "aligned_rows": 35,
+        "report_path": "text/translation/chunks/reports/chunk_0113-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0114",
+        "path": "text/translation/chunks/translated/chunk_0114.tsv",
+        "sha1": "1085054977ed6cbafc0b8bd6a2302b18e0ff1d93",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0114-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0115",
+        "path": "text/translation/chunks/translated/chunk_0115.tsv",
+        "sha1": "70c95617aa9095c9563e9ac358e22fa5e43d8a4a",
+        "rows": 15,
+        "translated_rows": 15,
+        "aligned_rows": 15,
+        "report_path": "text/translation/chunks/reports/chunk_0115-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0116",
+        "path": "text/translation/chunks/translated/chunk_0116.tsv",
+        "sha1": "3a20ac93e3b836af28e7230ec2bc678755f20179",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0116-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0117",
+        "path": "text/translation/chunks/translated/chunk_0117.tsv",
+        "sha1": "f42271a592165979461873db0ca13171039db749",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0117-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0118",
+        "path": "text/translation/chunks/translated/chunk_0118.tsv",
+        "sha1": "77274988f45a95c4230ada23175dbd4f1de65e81",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0118-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0119",
+        "path": "text/translation/chunks/translated/chunk_0119.tsv",
+        "sha1": "da3c393f339d0aeaf8ae561f9523e5caa6d9c1cd",
+        "rows": 37,
+        "translated_rows": 37,
+        "aligned_rows": 37,
+        "report_path": "text/translation/chunks/reports/chunk_0119-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0120",
+        "path": "text/translation/chunks/translated/chunk_0120.tsv",
+        "sha1": "2abb53cf0adf63dd2d89966fa7d07a8b756b5438",
+        "rows": 30,
+        "translated_rows": 30,
+        "aligned_rows": 30,
+        "report_path": "text/translation/chunks/reports/chunk_0120-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0121",
+        "path": "text/translation/chunks/translated/chunk_0121.tsv",
+        "sha1": "0eb2bb555ba116b3d294c6a5681597fa0d63fe4f",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0121-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0122",
+        "path": "text/translation/chunks/translated/chunk_0122.tsv",
+        "sha1": "1f24c3aa53268ed43ac1c9722f39ecc29e0dad42",
+        "rows": 22,
+        "translated_rows": 22,
+        "aligned_rows": 22,
+        "report_path": "text/translation/chunks/reports/chunk_0122-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0123",
+        "path": "text/translation/chunks/translated/chunk_0123.tsv",
+        "sha1": "f3404dfd4b6e131b049f4b701a0714c4d9423446",
+        "rows": 46,
+        "translated_rows": 46,
+        "aligned_rows": 46,
+        "report_path": "text/translation/chunks/reports/chunk_0123-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0124",
+        "path": "text/translation/chunks/translated/chunk_0124.tsv",
+        "sha1": "7854b81aaeafab7e44ef8e329e5f1440f438f180",
+        "rows": 27,
+        "translated_rows": 27,
+        "aligned_rows": 27,
+        "report_path": "text/translation/chunks/reports/chunk_0124-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0125",
+        "path": "text/translation/chunks/translated/chunk_0125.tsv",
+        "sha1": "532b0f75bed88385ed471e485e918b0c641102d0",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0125-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0126",
+        "path": "text/translation/chunks/translated/chunk_0126.tsv",
+        "sha1": "05eab3e8f0d4ff8f428ca1aacb2aa1dcf2103864",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0126-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0127",
+        "path": "text/translation/chunks/translated/chunk_0127.tsv",
+        "sha1": "2a9196027e5fea3bf2fa034d882efcbc56cdfe22",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0127-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0128",
+        "path": "text/translation/chunks/translated/chunk_0128.tsv",
+        "sha1": "41e950ecb3bebfdce77a2222d3c7551ed58dcd4c",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0128-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0129",
+        "path": "text/translation/chunks/translated/chunk_0129.tsv",
+        "sha1": "49fda9bbe7cd931cca4ab916c56e77ca753398ec",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0129-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0130",
+        "path": "text/translation/chunks/translated/chunk_0130.tsv",
+        "sha1": "21cf4b8f7de58a754f2835d08346be49963ef6fb",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0130-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0131",
+        "path": "text/translation/chunks/translated/chunk_0131.tsv",
+        "sha1": "ef09f3e573056a61168c8d5e7ab597f17ed9a19a",
+        "rows": 16,
+        "translated_rows": 16,
+        "aligned_rows": 16,
+        "report_path": "text/translation/chunks/reports/chunk_0131-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0132",
+        "path": "text/translation/chunks/translated/chunk_0132.tsv",
+        "sha1": "7b232f8d50fc00d5bfd4d966a0d01d8b4c3a9538",
+        "rows": 66,
+        "translated_rows": 66,
+        "aligned_rows": 66,
+        "report_path": "text/translation/chunks/reports/chunk_0132-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0133",
+        "path": "text/translation/chunks/translated/chunk_0133.tsv",
+        "sha1": "45a5fbc6f465b0464f5cc53e15d102800d6c6e3d",
+        "rows": 44,
+        "translated_rows": 44,
+        "aligned_rows": 44,
+        "report_path": "text/translation/chunks/reports/chunk_0133-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0134",
+        "path": "text/translation/chunks/translated/chunk_0134.tsv",
+        "sha1": "33644825f6a2ec9493512e0ace6b1ab9705faaa2",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0134-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0135",
+        "path": "text/translation/chunks/translated/chunk_0135.tsv",
+        "sha1": "ad98d2e7680daa819c1b8e45020bd204ead2700f",
+        "rows": 31,
+        "translated_rows": 31,
+        "aligned_rows": 31,
+        "report_path": "text/translation/chunks/reports/chunk_0135-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0136",
+        "path": "text/translation/chunks/translated/chunk_0136.tsv",
+        "sha1": "7823868f3a52f3ebf83eb6c7c3cdb76111431ce1",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0136-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0137",
+        "path": "text/translation/chunks/translated/chunk_0137.tsv",
+        "sha1": "df4a13ff7d1b2a65de843f20669c2f451cdab5c6",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0137-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0138",
+        "path": "text/translation/chunks/translated/chunk_0138.tsv",
+        "sha1": "ce3be7764a4a22757941180c6d8720b65e20b2cf",
+        "rows": 21,
+        "translated_rows": 21,
+        "aligned_rows": 21,
+        "report_path": "text/translation/chunks/reports/chunk_0138-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0139",
+        "path": "text/translation/chunks/translated/chunk_0139.tsv",
+        "sha1": "48d3a5e9042b8804a9a0dd3702a05bf0bb8a20c7",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0139-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0140",
+        "path": "text/translation/chunks/translated/chunk_0140.tsv",
+        "sha1": "7b3375c3e70c28f3c3ab4bd02c7cea395585caa6",
+        "rows": 28,
+        "translated_rows": 28,
+        "aligned_rows": 28,
+        "report_path": "text/translation/chunks/reports/chunk_0140-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0141",
+        "path": "text/translation/chunks/translated/chunk_0141.tsv",
+        "sha1": "6f1dbd9b8c80c1c976c2c1af39d9f1f7e694c339",
+        "rows": 28,
+        "translated_rows": 28,
+        "aligned_rows": 28,
+        "report_path": "text/translation/chunks/reports/chunk_0141-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0142",
+        "path": "text/translation/chunks/translated/chunk_0142.tsv",
+        "sha1": "48a9c30e7afff9f1becb15ca65e2a3f1b7e4f405",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0142-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0143",
+        "path": "text/translation/chunks/translated/chunk_0143.tsv",
+        "sha1": "ee907fffe699fdf5f20ca5d671f400f75bb6cece",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0143-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0144",
+        "path": "text/translation/chunks/translated/chunk_0144.tsv",
+        "sha1": "e718f6475103e1aec5d8dc022a0571261a535e1c",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0144-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0145",
+        "path": "text/translation/chunks/translated/chunk_0145.tsv",
+        "sha1": "f98bdb1ad9a541d6bc9b0830cb7bc64e909de7c9",
+        "rows": 19,
+        "translated_rows": 19,
+        "aligned_rows": 19,
+        "report_path": "text/translation/chunks/reports/chunk_0145-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0146",
+        "path": "text/translation/chunks/translated/chunk_0146.tsv",
+        "sha1": "2593108f0a5f4e2811bb39fb5082d0a1ef0e7cb3",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0146-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0147",
+        "path": "text/translation/chunks/translated/chunk_0147.tsv",
+        "sha1": "25fb1cf68783f3fed722d1b6923e549a6810854f",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0147-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0148",
+        "path": "text/translation/chunks/translated/chunk_0148.tsv",
+        "sha1": "428bcb5f626e4aa1ea092db2f9ce9a3d72a474de",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0148-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0149",
+        "path": "text/translation/chunks/translated/chunk_0149.tsv",
+        "sha1": "201ce8f665d1b2ce4d704a9eff9dc3292a0eb4e8",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0149-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0150",
+        "path": "text/translation/chunks/translated/chunk_0150.tsv",
+        "sha1": "56fdf2c3878cfa6ad63ebaac97447d252c100115",
+        "rows": 26,
+        "translated_rows": 26,
+        "aligned_rows": 26,
+        "report_path": "text/translation/chunks/reports/chunk_0150-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0151",
+        "path": "text/translation/chunks/translated/chunk_0151.tsv",
+        "sha1": "66a3f24e29f9563347fb994bd8002e521605ed3d",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0151-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0152",
+        "path": "text/translation/chunks/translated/chunk_0152.tsv",
+        "sha1": "7ba83596dbe950108da1b6ff1a4bc43240eb3ab7",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0152-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0153",
+        "path": "text/translation/chunks/translated/chunk_0153.tsv",
+        "sha1": "28aea9351e8364367694a7f5203a15eda5620bac",
+        "rows": 16,
+        "translated_rows": 16,
+        "aligned_rows": 16,
+        "report_path": "text/translation/chunks/reports/chunk_0153-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0154",
+        "path": "text/translation/chunks/translated/chunk_0154.tsv",
+        "sha1": "bfb3b690ebad405f176a2f3ff1c22ca70b894ee4",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0154-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0155",
+        "path": "text/translation/chunks/translated/chunk_0155.tsv",
+        "sha1": "f44ca2f42fa7455e353c83557d2308c4ca59ddf8",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0155-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0156",
+        "path": "text/translation/chunks/translated/chunk_0156.tsv",
+        "sha1": "12a48b28bdf9566108183272820ae468560a23a5",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0156-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0157",
+        "path": "text/translation/chunks/translated/chunk_0157.tsv",
+        "sha1": "508afec73aabc723eb5c632e7861ea8b869344f2",
+        "rows": 20,
+        "translated_rows": 20,
+        "aligned_rows": 20,
+        "report_path": "text/translation/chunks/reports/chunk_0157-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0158",
+        "path": "text/translation/chunks/translated/chunk_0158.tsv",
+        "sha1": "8928ee47ba0ee65a0e8f37b138983675850a82e8",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0158-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0159",
+        "path": "text/translation/chunks/translated/chunk_0159.tsv",
+        "sha1": "aef7d6031990d3b1d58833b1479425247c0968d5",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0159-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0160",
+        "path": "text/translation/chunks/translated/chunk_0160.tsv",
+        "sha1": "71770fc0865046dadd8af58e5c720258ce0716e0",
+        "rows": 36,
+        "translated_rows": 36,
+        "aligned_rows": 36,
+        "report_path": "text/translation/chunks/reports/chunk_0160-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0161",
+        "path": "text/translation/chunks/translated/chunk_0161.tsv",
+        "sha1": "c3553ddc1d1a00509701725e4f4a04fa196c824d",
+        "rows": 36,
+        "translated_rows": 36,
+        "aligned_rows": 36,
+        "report_path": "text/translation/chunks/reports/chunk_0161-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0162",
+        "path": "text/translation/chunks/translated/chunk_0162.tsv",
+        "sha1": "d8e4333df2cb41b2b778e7b6fb9c8b23170082d3",
+        "rows": 25,
+        "translated_rows": 25,
+        "aligned_rows": 25,
+        "report_path": "text/translation/chunks/reports/chunk_0162-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0163",
+        "path": "text/translation/chunks/translated/chunk_0163.tsv",
+        "sha1": "31788c2b67e35aa2b758594c57198c90f6af19b8",
+        "rows": 63,
+        "translated_rows": 63,
+        "aligned_rows": 63,
+        "report_path": "text/translation/chunks/reports/chunk_0163-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0164",
+        "path": "text/translation/chunks/translated/chunk_0164.tsv",
+        "sha1": "a0d98509e39fb86be9464bc2b06df334f44d675e",
+        "rows": 31,
+        "translated_rows": 31,
+        "aligned_rows": 31,
+        "report_path": "text/translation/chunks/reports/chunk_0164-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0165",
+        "path": "text/translation/chunks/translated/chunk_0165.tsv",
+        "sha1": "e56f2880803fb737f13b597a98b047d6254d5031",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0165-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0166",
+        "path": "text/translation/chunks/translated/chunk_0166.tsv",
+        "sha1": "0f3cd40932203a96f189905ebef8840c2561491b",
+        "rows": 30,
+        "translated_rows": 30,
+        "aligned_rows": 30,
+        "report_path": "text/translation/chunks/reports/chunk_0166-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0167",
+        "path": "text/translation/chunks/translated/chunk_0167.tsv",
+        "sha1": "27f47f3d3cb2a04a4a66ce8f1dade74ee050de63",
+        "rows": 36,
+        "translated_rows": 36,
+        "aligned_rows": 36,
+        "report_path": "text/translation/chunks/reports/chunk_0167-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0168",
+        "path": "text/translation/chunks/translated/chunk_0168.tsv",
+        "sha1": "dea7118ed0410ccbccd6944c11e6e9a3ca2b047e",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0168-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0169",
+        "path": "text/translation/chunks/translated/chunk_0169.tsv",
+        "sha1": "18d03f46a5685576103483e94f029506e18a9900",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0169-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0170",
+        "path": "text/translation/chunks/translated/chunk_0170.tsv",
+        "sha1": "1b131b09209e7d5aac4ae819c3cbb1455dba5f88",
+        "rows": 20,
+        "translated_rows": 20,
+        "aligned_rows": 20,
+        "report_path": "text/translation/chunks/reports/chunk_0170-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0171",
+        "path": "text/translation/chunks/translated/chunk_0171.tsv",
+        "sha1": "8c4a1a39c05e2dbbfebe7e08084433b3e9326e24",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0171-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0172",
+        "path": "text/translation/chunks/translated/chunk_0172.tsv",
+        "sha1": "316fedabe3a7301b043c9e9dae4d460b9f9c917e",
+        "rows": 14,
+        "translated_rows": 14,
+        "aligned_rows": 14,
+        "report_path": "text/translation/chunks/reports/chunk_0172-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0173",
+        "path": "text/translation/chunks/translated/chunk_0173.tsv",
+        "sha1": "73ef552f973a00f35b9bdb409f02f573207c9bdc",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0173-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0174",
+        "path": "text/translation/chunks/translated/chunk_0174.tsv",
+        "sha1": "8b328c0c5faeed0b9960edfc4c3d239f8ece34e4",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0174-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0175",
+        "path": "text/translation/chunks/translated/chunk_0175.tsv",
+        "sha1": "17e048d46ce37f345f6ba4b694fc2fce149b0e15",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0175-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0176",
+        "path": "text/translation/chunks/translated/chunk_0176.tsv",
+        "sha1": "0c1a88b2370a516be6b04147d9dcc9c2baed8c1a",
+        "rows": 18,
+        "translated_rows": 18,
+        "aligned_rows": 18,
+        "report_path": "text/translation/chunks/reports/chunk_0176-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0177",
+        "path": "text/translation/chunks/translated/chunk_0177.tsv",
+        "sha1": "edf16dc4207f3797d0fc66a5fca82f1e224f22b7",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0177-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0178",
+        "path": "text/translation/chunks/translated/chunk_0178.tsv",
+        "sha1": "9d82bc123828617ff6dc134f2c4d826c833b429a",
+        "rows": 41,
+        "translated_rows": 41,
+        "aligned_rows": 41,
+        "report_path": "text/translation/chunks/reports/chunk_0178-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0179",
+        "path": "text/translation/chunks/translated/chunk_0179.tsv",
+        "sha1": "97810b2c65c48c7e5196cd4392d843e0ac78344b",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0179-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0180",
+        "path": "text/translation/chunks/translated/chunk_0180.tsv",
+        "sha1": "85f4d5fc397feeb98a21909c36ddec5f4647c654",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0180-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0181",
+        "path": "text/translation/chunks/translated/chunk_0181.tsv",
+        "sha1": "9f83d8b724b8c5700c030347ba85f041dc9f692b",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0181-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0182",
+        "path": "text/translation/chunks/translated/chunk_0182.tsv",
+        "sha1": "79db5d16b39df8ebd003559cc05d3c3164b810bd",
+        "rows": 15,
+        "translated_rows": 15,
+        "aligned_rows": 15,
+        "report_path": "text/translation/chunks/reports/chunk_0182-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0183",
+        "path": "text/translation/chunks/translated/chunk_0183.tsv",
+        "sha1": "674dc69bfdcc3c59db7863237a8945460a07d56c",
+        "rows": 16,
+        "translated_rows": 16,
+        "aligned_rows": 16,
+        "report_path": "text/translation/chunks/reports/chunk_0183-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0184",
+        "path": "text/translation/chunks/translated/chunk_0184.tsv",
+        "sha1": "6546ea5667469236ecf2cb253c4542c082c2cbb7",
+        "rows": 14,
+        "translated_rows": 14,
+        "aligned_rows": 14,
+        "report_path": "text/translation/chunks/reports/chunk_0184-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0185",
+        "path": "text/translation/chunks/translated/chunk_0185.tsv",
+        "sha1": "77e7b97f7cd8799bc5edd6512f1c531988253d57",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0185-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0186",
+        "path": "text/translation/chunks/translated/chunk_0186.tsv",
+        "sha1": "0d846eae8c02be7f9e722691663adb3532df471a",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0186-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0187",
+        "path": "text/translation/chunks/translated/chunk_0187.tsv",
+        "sha1": "461f641254c524f33bf1a4daa47155b5823b395c",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0187-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0188",
+        "path": "text/translation/chunks/translated/chunk_0188.tsv",
+        "sha1": "9908fafc2cbede70b16d670c595884c78859b43f",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0188-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0189",
+        "path": "text/translation/chunks/translated/chunk_0189.tsv",
+        "sha1": "a982a6b88aae219a53c4f0aef1fc4c62299946d8",
+        "rows": 14,
+        "translated_rows": 14,
+        "aligned_rows": 14,
+        "report_path": "text/translation/chunks/reports/chunk_0189-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0190",
+        "path": "text/translation/chunks/translated/chunk_0190.tsv",
+        "sha1": "c5786225d7b215460bee3ad65ded6536db5216f1",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0190-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0191",
+        "path": "text/translation/chunks/translated/chunk_0191.tsv",
+        "sha1": "ad40ba88e1ff7f33f26a2715fceaf3c2ac6f75a1",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0191-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0192",
+        "path": "text/translation/chunks/translated/chunk_0192.tsv",
+        "sha1": "ba9974175a8094c52659407d77c62e8d8a73bd28",
+        "rows": 48,
+        "translated_rows": 48,
+        "aligned_rows": 48,
+        "report_path": "text/translation/chunks/reports/chunk_0192-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0193",
+        "path": "text/translation/chunks/translated/chunk_0193.tsv",
+        "sha1": "5a8acab7703c7c1a01e76cdc85799a8f1bcd3641",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0193-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0194",
+        "path": "text/translation/chunks/translated/chunk_0194.tsv",
+        "sha1": "a1ddaa0657ed8eb7af28e088af0586aec1df8969",
+        "rows": 27,
+        "translated_rows": 27,
+        "aligned_rows": 27,
+        "report_path": "text/translation/chunks/reports/chunk_0194-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0195",
+        "path": "text/translation/chunks/translated/chunk_0195.tsv",
+        "sha1": "431d0cdb3062e810b2feb499aa7d5bf9f43c9c5b",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0195-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0196",
+        "path": "text/translation/chunks/translated/chunk_0196.tsv",
+        "sha1": "2fac1515d98341b19a599fb8b58f4dc26a09db3f",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0196-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0197",
+        "path": "text/translation/chunks/translated/chunk_0197.tsv",
+        "sha1": "529c6c1c653351c889d57ea34d7548eec7e4b8bf",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0197-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0198",
+        "path": "text/translation/chunks/translated/chunk_0198.tsv",
+        "sha1": "554ab39c477086f7cb147f31930419b5c9e5c337",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0198-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0199",
+        "path": "text/translation/chunks/translated/chunk_0199.tsv",
+        "sha1": "eac51bbdd3adffe5b0561c67785ded2d3f1e541a",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0199-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0200",
+        "path": "text/translation/chunks/translated/chunk_0200.tsv",
+        "sha1": "e25c38ab6232444969b5dea92bcdfbc33610cb9a",
+        "rows": 14,
+        "translated_rows": 14,
+        "aligned_rows": 14,
+        "report_path": "text/translation/chunks/reports/chunk_0200-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0201",
+        "path": "text/translation/chunks/translated/chunk_0201.tsv",
+        "sha1": "37a0826a961b72ece66d5c2a3dd14d1b14cf8062",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0201-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0202",
+        "path": "text/translation/chunks/translated/chunk_0202.tsv",
+        "sha1": "ce2f445e4f9f5692f9214600cad92a3f09b0822a",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0202-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0203",
+        "path": "text/translation/chunks/translated/chunk_0203.tsv",
+        "sha1": "4c9996962d9b5e014bbe475c208ae4fb9c2ef81c",
+        "rows": 23,
+        "translated_rows": 23,
+        "aligned_rows": 23,
+        "report_path": "text/translation/chunks/reports/chunk_0203-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0204",
+        "path": "text/translation/chunks/translated/chunk_0204.tsv",
+        "sha1": "e9d0a14d2a7e60d439dccb84dc70f6ba4a9762f1",
+        "rows": 28,
+        "translated_rows": 28,
+        "aligned_rows": 28,
+        "report_path": "text/translation/chunks/reports/chunk_0204-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0205",
+        "path": "text/translation/chunks/translated/chunk_0205.tsv",
+        "sha1": "a56fe7bc5c08956bc8352331a4a9876363c81683",
+        "rows": 29,
+        "translated_rows": 29,
+        "aligned_rows": 29,
+        "report_path": "text/translation/chunks/reports/chunk_0205-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0206",
+        "path": "text/translation/chunks/translated/chunk_0206.tsv",
+        "sha1": "736fa79ed10836cfd7752ad539047dd2ca74289a",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0206-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0207",
+        "path": "text/translation/chunks/translated/chunk_0207.tsv",
+        "sha1": "ff07a17614ed4c7c0f97d25c749d27ac5a31b2b9",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0207-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0208",
+        "path": "text/translation/chunks/translated/chunk_0208.tsv",
+        "sha1": "49809a9ad7b6f014100ea55c0dd032dce9550e8a",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0208-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0209",
+        "path": "text/translation/chunks/translated/chunk_0209.tsv",
+        "sha1": "7ece0e3d64fdee774ebdfb860556367faf519ce1",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0209-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0210",
+        "path": "text/translation/chunks/translated/chunk_0210.tsv",
+        "sha1": "b568ca61c90b63a4a655b5445d51d82e1eeab7f2",
+        "rows": 13,
+        "translated_rows": 13,
+        "aligned_rows": 13,
+        "report_path": "text/translation/chunks/reports/chunk_0210-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0211",
+        "path": "text/translation/chunks/translated/chunk_0211.tsv",
+        "sha1": "6939f4f8243eaaa03bc92bab3822e8a6917a2e77",
+        "rows": 34,
+        "translated_rows": 34,
+        "aligned_rows": 34,
+        "report_path": "text/translation/chunks/reports/chunk_0211-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0212",
+        "path": "text/translation/chunks/translated/chunk_0212.tsv",
+        "sha1": "6b4c4f35704cc2fdf798eef5b3d75249a17ae655",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0212-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0213",
+        "path": "text/translation/chunks/translated/chunk_0213.tsv",
+        "sha1": "4f4f61d5d9d8829d14f848337c2ee1f9838a385a",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0213-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0214",
+        "path": "text/translation/chunks/translated/chunk_0214.tsv",
+        "sha1": "8646fe9ad81164f5cf208b51fc4bbc72e99b7718",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0214-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0215",
+        "path": "text/translation/chunks/translated/chunk_0215.tsv",
+        "sha1": "2941ad8338cccfb86db7ce7368f99b9be069b405",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0215-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0216",
+        "path": "text/translation/chunks/translated/chunk_0216.tsv",
+        "sha1": "c49040b439b6fb6bcba1f1589c349f4e654eb7bd",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0216-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0217",
+        "path": "text/translation/chunks/translated/chunk_0217.tsv",
+        "sha1": "785760e9be83ca06953b2d082ac5922b057ae9ec",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0217-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0218",
+        "path": "text/translation/chunks/translated/chunk_0218.tsv",
+        "sha1": "33557d43a3044b0e7388ef5d4f2ec9b6b8595c14",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0218-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0219",
+        "path": "text/translation/chunks/translated/chunk_0219.tsv",
+        "sha1": "5a1e678f4e0a1baf4e40723a136721764f9365a4",
+        "rows": 22,
+        "translated_rows": 22,
+        "aligned_rows": 22,
+        "report_path": "text/translation/chunks/reports/chunk_0219-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0220",
+        "path": "text/translation/chunks/translated/chunk_0220.tsv",
+        "sha1": "1dd6d886047234fc6982430d0e5b8acd2e24eaa3",
+        "rows": 17,
+        "translated_rows": 17,
+        "aligned_rows": 17,
+        "report_path": "text/translation/chunks/reports/chunk_0220-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0221",
+        "path": "text/translation/chunks/translated/chunk_0221.tsv",
+        "sha1": "6176c3fa10b18f3b24f76afe9ac00e2706290ced",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0221-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0222",
+        "path": "text/translation/chunks/translated/chunk_0222.tsv",
+        "sha1": "c82d02b624757acc890b8200f0a7ab53eafbdf86",
+        "rows": 38,
+        "translated_rows": 38,
+        "aligned_rows": 38,
+        "report_path": "text/translation/chunks/reports/chunk_0222-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0223",
+        "path": "text/translation/chunks/translated/chunk_0223.tsv",
+        "sha1": "ae77f9adf36df0c07b29665f658f10c826a60a22",
+        "rows": 19,
+        "translated_rows": 19,
+        "aligned_rows": 19,
+        "report_path": "text/translation/chunks/reports/chunk_0223-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0224",
+        "path": "text/translation/chunks/translated/chunk_0224.tsv",
+        "sha1": "4c1c13af7ec557e2a0084f17e4cf3ea6772ae1d4",
+        "rows": 53,
+        "translated_rows": 53,
+        "aligned_rows": 53,
+        "report_path": "text/translation/chunks/reports/chunk_0224-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0225",
+        "path": "text/translation/chunks/translated/chunk_0225.tsv",
+        "sha1": "97cd429eba21efe6e5afc8f96a7e29bc405e96ae",
+        "rows": 35,
+        "translated_rows": 35,
+        "aligned_rows": 35,
+        "report_path": "text/translation/chunks/reports/chunk_0225-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0226",
+        "path": "text/translation/chunks/translated/chunk_0226.tsv",
+        "sha1": "dfbb6b239a51b1b4507151c43b20fb3a7c294a52",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0226-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0227",
+        "path": "text/translation/chunks/translated/chunk_0227.tsv",
+        "sha1": "6edff5f806ca8b6017abbf4fc2eef7f10ea9ba88",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0227-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0228",
+        "path": "text/translation/chunks/translated/chunk_0228.tsv",
+        "sha1": "3038c29f0b87ef24ab22e6be60e40b45af6767d0",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0228-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0229",
+        "path": "text/translation/chunks/translated/chunk_0229.tsv",
+        "sha1": "460f63d5d4d0c029bfcbab3a592c14c0f4071741",
+        "rows": 18,
+        "translated_rows": 18,
+        "aligned_rows": 18,
+        "report_path": "text/translation/chunks/reports/chunk_0229-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0230",
+        "path": "text/translation/chunks/translated/chunk_0230.tsv",
+        "sha1": "c7a965590947a7fb0fb6916b1ddc977c3220a7b9",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0230-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0231",
+        "path": "text/translation/chunks/translated/chunk_0231.tsv",
+        "sha1": "e87d6447839164ca1fa345eabbee10db55a8d4bd",
+        "rows": 27,
+        "translated_rows": 27,
+        "aligned_rows": 27,
+        "report_path": "text/translation/chunks/reports/chunk_0231-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0232",
+        "path": "text/translation/chunks/translated/chunk_0232.tsv",
+        "sha1": "f839e369d3f7b68fb8cea1ca543b63ff2bc9f023",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0232-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0233",
+        "path": "text/translation/chunks/translated/chunk_0233.tsv",
+        "sha1": "de89b1c963fd63fde574c4c32b5942aaed9fd92d",
+        "rows": 4,
+        "translated_rows": 4,
+        "aligned_rows": 4,
+        "report_path": "text/translation/chunks/reports/chunk_0233-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0234",
+        "path": "text/translation/chunks/translated/chunk_0234.tsv",
+        "sha1": "9bae2ea876b526d9949e004c938fc22cef22d503",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0234-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0235",
+        "path": "text/translation/chunks/translated/chunk_0235.tsv",
+        "sha1": "7b2554c4472dcbae8cae28511f0fecaf612d8315",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0235-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0236",
+        "path": "text/translation/chunks/translated/chunk_0236.tsv",
+        "sha1": "e6b4514365fb9fd3d6ffed7be5f92259519f3619",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0236-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0237",
+        "path": "text/translation/chunks/translated/chunk_0237.tsv",
+        "sha1": "277e52fb943ec53c0faa3492a9589a01955a20e3",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0237-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0238",
+        "path": "text/translation/chunks/translated/chunk_0238.tsv",
+        "sha1": "02fff9140fc960cf5e3aaf6f68959616bc5b5a25",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0238-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0239",
+        "path": "text/translation/chunks/translated/chunk_0239.tsv",
+        "sha1": "ffb1cf8a764a83a65aca04dcef691f7c6aea586e",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0239-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0240",
+        "path": "text/translation/chunks/translated/chunk_0240.tsv",
+        "sha1": "250026f02494870559e0c49ae303cba813bd4e50",
+        "rows": 25,
+        "translated_rows": 25,
+        "aligned_rows": 25,
+        "report_path": "text/translation/chunks/reports/chunk_0240-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0241",
+        "path": "text/translation/chunks/translated/chunk_0241.tsv",
+        "sha1": "137f192edc9787caa84278a4bd1c3bedb1b5c232",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0241-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0242",
+        "path": "text/translation/chunks/translated/chunk_0242.tsv",
+        "sha1": "216dd7c1942fc0a27a5f632b5461026e900c6c73",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0242-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0243",
+        "path": "text/translation/chunks/translated/chunk_0243.tsv",
+        "sha1": "4430732121bd8ba694c130f841946269958e15e3",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0243-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0244",
+        "path": "text/translation/chunks/translated/chunk_0244.tsv",
+        "sha1": "5a1682994446979d44d9ac87a01d71310e0c5253",
+        "rows": 9,
+        "translated_rows": 9,
+        "aligned_rows": 9,
+        "report_path": "text/translation/chunks/reports/chunk_0244-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0245",
+        "path": "text/translation/chunks/translated/chunk_0245.tsv",
+        "sha1": "84bc83afa6881ec7203d5e8d79fb025b9312842b",
+        "rows": 14,
+        "translated_rows": 14,
+        "aligned_rows": 14,
+        "report_path": "text/translation/chunks/reports/chunk_0245-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0246",
+        "path": "text/translation/chunks/translated/chunk_0246.tsv",
+        "sha1": "a0f497aa0fedf9e9d4ea4c6bf94f56ce92891aed",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0246-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0247",
+        "path": "text/translation/chunks/translated/chunk_0247.tsv",
+        "sha1": "3657987aa0d3a391ac937b8232a2d93e23600a69",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0247-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0248",
+        "path": "text/translation/chunks/translated/chunk_0248.tsv",
+        "sha1": "f9f636f1554ccb908804c656a9672a4044015ed6",
+        "rows": 35,
+        "translated_rows": 35,
+        "aligned_rows": 35,
+        "report_path": "text/translation/chunks/reports/chunk_0248-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0249",
+        "path": "text/translation/chunks/translated/chunk_0249.tsv",
+        "sha1": "b0aa80e83d52253d2194544bd4af428d1c62cf16",
+        "rows": 35,
+        "translated_rows": 35,
+        "aligned_rows": 35,
+        "report_path": "text/translation/chunks/reports/chunk_0249-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0250",
+        "path": "text/translation/chunks/translated/chunk_0250.tsv",
+        "sha1": "ccce11ccbebd015ae7a3015c6b29c60f13550f87",
+        "rows": 16,
+        "translated_rows": 16,
+        "aligned_rows": 16,
+        "report_path": "text/translation/chunks/reports/chunk_0250-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0251",
+        "path": "text/translation/chunks/translated/chunk_0251.tsv",
+        "sha1": "e2b6938ba7836ea60e38f4b52b73c7a0817f803e",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0251-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0252",
+        "path": "text/translation/chunks/translated/chunk_0252.tsv",
+        "sha1": "4c2559787e8ebbe816c7956e9e91f149dbcb8cb2",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0252-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0253",
+        "path": "text/translation/chunks/translated/chunk_0253.tsv",
+        "sha1": "e4ea759484d52771350913b30ca1eb99c69c9071",
+        "rows": 22,
+        "translated_rows": 22,
+        "aligned_rows": 22,
+        "report_path": "text/translation/chunks/reports/chunk_0253-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0254",
+        "path": "text/translation/chunks/translated/chunk_0254.tsv",
+        "sha1": "7ad84f5879ca5c36009054ffe1b8f69e5e52c831",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0254-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0255",
+        "path": "text/translation/chunks/translated/chunk_0255.tsv",
+        "sha1": "194cc472e86bc571d984ab219e3e4bfe68c5b68a",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0255-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0256",
+        "path": "text/translation/chunks/translated/chunk_0256.tsv",
+        "sha1": "c2b0ee3683322448d4d808b9459d81b5407f4c86",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0256-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0257",
+        "path": "text/translation/chunks/translated/chunk_0257.tsv",
+        "sha1": "f131a2e91ff8ddb44129023772ff0aee0383118d",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0257-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0258",
+        "path": "text/translation/chunks/translated/chunk_0258.tsv",
+        "sha1": "0af799e6ac003e352aa7b80bd65f2ee1ef1f94eb",
+        "rows": 24,
+        "translated_rows": 24,
+        "aligned_rows": 24,
+        "report_path": "text/translation/chunks/reports/chunk_0258-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0259",
+        "path": "text/translation/chunks/translated/chunk_0259.tsv",
+        "sha1": "68ffa98f77ccda40a9f8a185252601540b4d4f3d",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0259-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0260",
+        "path": "text/translation/chunks/translated/chunk_0260.tsv",
+        "sha1": "ec60a58b4422537313497365d96e1f5015e40002",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0260-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0261",
+        "path": "text/translation/chunks/translated/chunk_0261.tsv",
+        "sha1": "7359f303a589f54dab45ddba15e4c2358cbf738f",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0261-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0262",
+        "path": "text/translation/chunks/translated/chunk_0262.tsv",
+        "sha1": "4c751ffa782eec5b6c9a3f2c2bb691736b798630",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0262-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0263",
+        "path": "text/translation/chunks/translated/chunk_0263.tsv",
+        "sha1": "4690c95c4028b7b5e921e2673e8bb7defc548320",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0263-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0264",
+        "path": "text/translation/chunks/translated/chunk_0264.tsv",
+        "sha1": "67c0d03ab40cd56eb036d4723663f3f409eeccfe",
+        "rows": 24,
+        "translated_rows": 24,
+        "aligned_rows": 24,
+        "report_path": "text/translation/chunks/reports/chunk_0264-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0265",
+        "path": "text/translation/chunks/translated/chunk_0265.tsv",
+        "sha1": "1bce555ca17b1ce8fe80628329ca723bccc35c9f",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0265-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0266",
+        "path": "text/translation/chunks/translated/chunk_0266.tsv",
+        "sha1": "d0af00af6ed738193027323a5010357d51bb2688",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0266-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0267",
+        "path": "text/translation/chunks/translated/chunk_0267.tsv",
+        "sha1": "6021d01425494bf04906e6cf3009ca9d847f29b1",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0267-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0268",
+        "path": "text/translation/chunks/translated/chunk_0268.tsv",
+        "sha1": "4ee26d4c1d0947207259fee4ed60e159a7b213de",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0268-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0269",
+        "path": "text/translation/chunks/translated/chunk_0269.tsv",
+        "sha1": "f154a352898a3c9ef5a4525e0722304aaf8977d3",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0269-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0270",
+        "path": "text/translation/chunks/translated/chunk_0270.tsv",
+        "sha1": "d6e2d76dd24c1340c4e7470b202939c2a7855c5a",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0270-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0271",
+        "path": "text/translation/chunks/translated/chunk_0271.tsv",
+        "sha1": "4142af329c31a8b726165bfce9ab1a0d984eb9c3",
+        "rows": 8,
+        "translated_rows": 8,
+        "aligned_rows": 8,
+        "report_path": "text/translation/chunks/reports/chunk_0271-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0272",
+        "path": "text/translation/chunks/translated/chunk_0272.tsv",
+        "sha1": "f04a35e4b9d0e679911906b53faa0f408392c126",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0272-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0273",
+        "path": "text/translation/chunks/translated/chunk_0273.tsv",
+        "sha1": "6bed1fbad2d9968e7deb0e6d3ef7027094c93f80",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0273-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0274",
+        "path": "text/translation/chunks/translated/chunk_0274.tsv",
+        "sha1": "733cd455b77fff93a7fc6443c5dcb71d342d8304",
+        "rows": 10,
+        "translated_rows": 10,
+        "aligned_rows": 10,
+        "report_path": "text/translation/chunks/reports/chunk_0274-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0275",
+        "path": "text/translation/chunks/translated/chunk_0275.tsv",
+        "sha1": "b34383b7a6aee84458d417ff5165e92fb8eae4e5",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0275-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0276",
+        "path": "text/translation/chunks/translated/chunk_0276.tsv",
+        "sha1": "0943e6eb41159a5d85202b6837e9cc69aa3a5748",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0276-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0277",
+        "path": "text/translation/chunks/translated/chunk_0277.tsv",
+        "sha1": "fa6b32f3f6c93264197c5a47226177b32a30af97",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0277-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0278",
+        "path": "text/translation/chunks/translated/chunk_0278.tsv",
+        "sha1": "7c56f8247668b97242756a2fe60a31b592584c89",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0278-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0279",
+        "path": "text/translation/chunks/translated/chunk_0279.tsv",
+        "sha1": "97abe5490f8b6bde6ee69be80d96cf7666e10d84",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0279-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0280",
+        "path": "text/translation/chunks/translated/chunk_0280.tsv",
+        "sha1": "f4bad801436b0ac137f9a4fb46129b897e6edde9",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0280-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0281",
+        "path": "text/translation/chunks/translated/chunk_0281.tsv",
+        "sha1": "3127da1a6d7a8d98dd23eb0e46e4b7a9c8cc7e04",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0281-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0282",
+        "path": "text/translation/chunks/translated/chunk_0282.tsv",
+        "sha1": "4b67c15c536937dc2ff3b7085ae83d12320c891b",
+        "rows": 3,
+        "translated_rows": 3,
+        "aligned_rows": 3,
+        "report_path": "text/translation/chunks/reports/chunk_0282-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0283",
+        "path": "text/translation/chunks/translated/chunk_0283.tsv",
+        "sha1": "efda66512f748e3746d0b0d9c64de1ea4a841b33",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0283-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0284",
+        "path": "text/translation/chunks/translated/chunk_0284.tsv",
+        "sha1": "0e6e5cdb4f22828bb5990c3decff45cf30dbc041",
+        "rows": 2,
+        "translated_rows": 2,
+        "aligned_rows": 2,
+        "report_path": "text/translation/chunks/reports/chunk_0284-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0285",
+        "path": "text/translation/chunks/translated/chunk_0285.tsv",
+        "sha1": "8ffbfe86db51bf2b39b7935c45811d733cc8e14f",
+        "rows": 22,
+        "translated_rows": 22,
+        "aligned_rows": 22,
+        "report_path": "text/translation/chunks/reports/chunk_0285-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0286",
+        "path": "text/translation/chunks/translated/chunk_0286.tsv",
+        "sha1": "471daa633bc653372bd75cb301f4910dae6f2971",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0286-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0287",
+        "path": "text/translation/chunks/translated/chunk_0287.tsv",
+        "sha1": "224bbc661d95103181031e1ab3f9f20b887bdb2e",
+        "rows": 19,
+        "translated_rows": 19,
+        "aligned_rows": 19,
+        "report_path": "text/translation/chunks/reports/chunk_0287-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0288",
+        "path": "text/translation/chunks/translated/chunk_0288.tsv",
+        "sha1": "c62ae354be0c21983036c732e7e7533690133a5e",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0288-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0289",
+        "path": "text/translation/chunks/translated/chunk_0289.tsv",
+        "sha1": "1d31d6b962babbbdcebd00a6ec19dec981a2ead7",
+        "rows": 11,
+        "translated_rows": 11,
+        "aligned_rows": 11,
+        "report_path": "text/translation/chunks/reports/chunk_0289-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0290",
+        "path": "text/translation/chunks/translated/chunk_0290.tsv",
+        "sha1": "c63b0eea98edb5d38c824af5870e1d18200f80fa",
+        "rows": 1,
+        "translated_rows": 1,
+        "aligned_rows": 1,
+        "report_path": "text/translation/chunks/reports/chunk_0290-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0291",
+        "path": "text/translation/chunks/translated/chunk_0291.tsv",
+        "sha1": "ee83c69ab4153c38295da5e596c11b5318a7d0c4",
+        "rows": 6,
+        "translated_rows": 6,
+        "aligned_rows": 6,
+        "report_path": "text/translation/chunks/reports/chunk_0291-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0295",
+        "path": "text/translation/chunks/translated/chunk_0295.tsv",
+        "sha1": "10943075a51301a7a97f74fd3cba2477e2ffd2db",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0295-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0296",
+        "path": "text/translation/chunks/translated/chunk_0296.tsv",
+        "sha1": "cbd5174a6bf9d4d6731eac81e3f8ea5cfd2276d6",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0296-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0297",
+        "path": "text/translation/chunks/translated/chunk_0297.tsv",
+        "sha1": "1081110c76d0e655204d5dffbe7dcaef7b3e7a58",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0297-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0298",
+        "path": "text/translation/chunks/translated/chunk_0298.tsv",
+        "sha1": "98dfb2256ce910ef5f27c960a254e5e95785870e",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0298-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0299",
+        "path": "text/translation/chunks/translated/chunk_0299.tsv",
+        "sha1": "86fc3b3fc56a63175ab55edb57d08710edb282f3",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0299-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0300",
+        "path": "text/translation/chunks/translated/chunk_0300.tsv",
+        "sha1": "38b5ff95e896f45b8217b2381f322534abd62c9e",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0300-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0301",
+        "path": "text/translation/chunks/translated/chunk_0301.tsv",
+        "sha1": "092ba803b470a216f9189c21b7fb77756e3c8474",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0301-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0302",
+        "path": "text/translation/chunks/translated/chunk_0302.tsv",
+        "sha1": "56534c92ab9f49cb5aaae48f1ad65c1442fc8bcf",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0302-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0303",
+        "path": "text/translation/chunks/translated/chunk_0303.tsv",
+        "sha1": "8883ef7f81c24c495671d97b12f2340b29d7803c",
+        "rows": 19,
+        "translated_rows": 19,
+        "aligned_rows": 19,
+        "report_path": "text/translation/chunks/reports/chunk_0303-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0304",
+        "path": "text/translation/chunks/translated/chunk_0304.tsv",
+        "sha1": "4d7c856181706dffb59e7d64f4e138882af3337e",
+        "rows": 44,
+        "translated_rows": 44,
+        "aligned_rows": 44,
+        "report_path": "text/translation/chunks/reports/chunk_0304-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0305",
+        "path": "text/translation/chunks/translated/chunk_0305.tsv",
+        "sha1": "1a9e6524c756a5e2552f8f1697785a730acbb73d",
+        "rows": 67,
+        "translated_rows": 67,
+        "aligned_rows": 67,
+        "report_path": "text/translation/chunks/reports/chunk_0305-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0306",
+        "path": "text/translation/chunks/translated/chunk_0306.tsv",
+        "sha1": "b55136fe431ef7edcdd8a258f00e87dfe3fcecc1",
+        "rows": 57,
+        "translated_rows": 57,
+        "aligned_rows": 57,
+        "report_path": "text/translation/chunks/reports/chunk_0306-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0307",
+        "path": "text/translation/chunks/translated/chunk_0307.tsv",
+        "sha1": "112c942d9fdc8cff6206bada8daec36ee80c2b1d",
+        "rows": 64,
+        "translated_rows": 64,
+        "aligned_rows": 64,
+        "report_path": "text/translation/chunks/reports/chunk_0307-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0308",
+        "path": "text/translation/chunks/translated/chunk_0308.tsv",
+        "sha1": "ee7be3017663628f383942ae8282ea845316d513",
+        "rows": 59,
+        "translated_rows": 59,
+        "aligned_rows": 59,
+        "report_path": "text/translation/chunks/reports/chunk_0308-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0309",
+        "path": "text/translation/chunks/translated/chunk_0309.tsv",
+        "sha1": "8de3bfd88147fa496106b72af00d4d49aeea8c82",
+        "rows": 47,
+        "translated_rows": 47,
+        "aligned_rows": 47,
+        "report_path": "text/translation/chunks/reports/chunk_0309-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0310",
+        "path": "text/translation/chunks/translated/chunk_0310.tsv",
+        "sha1": "80603698d8fa92cfce85ed354747c66eed8b26ae",
+        "rows": 40,
+        "translated_rows": 40,
+        "aligned_rows": 40,
+        "report_path": "text/translation/chunks/reports/chunk_0310-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0311",
+        "path": "text/translation/chunks/translated/chunk_0311.tsv",
+        "sha1": "cb60234d76dc29b337828bc2a4caea4e52ceab42",
+        "rows": 58,
+        "translated_rows": 58,
+        "aligned_rows": 58,
+        "report_path": "text/translation/chunks/reports/chunk_0311-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0312",
+        "path": "text/translation/chunks/translated/chunk_0312.tsv",
+        "sha1": "808446c4d9c9709bc105703c6eb3646123585320",
+        "rows": 30,
+        "translated_rows": 30,
+        "aligned_rows": 30,
+        "report_path": "text/translation/chunks/reports/chunk_0312-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0313",
+        "path": "text/translation/chunks/translated/chunk_0313.tsv",
+        "sha1": "2f8f9207a8f48b22a3e28b1df3d0ba9032579207",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0313-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0314",
+        "path": "text/translation/chunks/translated/chunk_0314.tsv",
+        "sha1": "37331f32505b175606184b766b789dd3209ba745",
+        "rows": 7,
+        "translated_rows": 7,
+        "aligned_rows": 7,
+        "report_path": "text/translation/chunks/reports/chunk_0314-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0315",
+        "path": "text/translation/chunks/translated/chunk_0315.tsv",
+        "sha1": "d8cf08f31d4ef607e062709e1c3ad47b36dba017",
+        "rows": 18,
+        "translated_rows": 18,
+        "aligned_rows": 18,
+        "report_path": "text/translation/chunks/reports/chunk_0315-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0316",
+        "path": "text/translation/chunks/translated/chunk_0316.tsv",
+        "sha1": "3fd113b6c68016117cd422d381e173ca74899512",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0316-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0317",
+        "path": "text/translation/chunks/translated/chunk_0317.tsv",
+        "sha1": "c8f1ecbdbb3c47f958a1e57e4ee285a526d11802",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0317-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0318",
+        "path": "text/translation/chunks/translated/chunk_0318.tsv",
+        "sha1": "3e40ac74a0965b263620c0744f7b7b0c7f35c3bb",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0318-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0319",
+        "path": "text/translation/chunks/translated/chunk_0319.tsv",
+        "sha1": "215e4f39d10960dc47b368698c8a85b4a2aece4f",
+        "rows": 12,
+        "translated_rows": 12,
+        "aligned_rows": 12,
+        "report_path": "text/translation/chunks/reports/chunk_0319-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0320",
+        "path": "text/translation/chunks/translated/chunk_0320.tsv",
+        "sha1": "c34a74d0237757bda13aa8ace5e410a2c297d3df",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0320-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0321",
+        "path": "text/translation/chunks/translated/chunk_0321.tsv",
+        "sha1": "92ea111ae66e39aba2a610399d2caf1ccab2024f",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0321-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0322",
+        "path": "text/translation/chunks/translated/chunk_0322.tsv",
+        "sha1": "46e4d9c0f7f00e3bbe95af4e1a2689d5438fedb5",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0322-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0323",
+        "path": "text/translation/chunks/translated/chunk_0323.tsv",
+        "sha1": "ec091b6337055bec75d233e0e8427706554d2927",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0323-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0324",
+        "path": "text/translation/chunks/translated/chunk_0324.tsv",
+        "sha1": "900a2f8379182dd03e6865ddc36974438f9a9f32",
+        "rows": 80,
+        "translated_rows": 80,
+        "aligned_rows": 80,
+        "report_path": "text/translation/chunks/reports/chunk_0324-control-code-check.json",
+        "report_issue_count": 0
+      },
+      {
+        "chunk_id": "chunk_0325",
+        "path": "text/translation/chunks/translated/chunk_0325.tsv",
+        "sha1": "2a56afed4379cbaa5410d0d0e9bdb426f284a65a",
+        "rows": 5,
+        "translated_rows": 5,
+        "aligned_rows": 5,
+        "report_path": "text/translation/chunks/reports/chunk_0325-control-code-check.json",
+        "report_issue_count": 0
+      }
+    ]
+  },
+  "charset": {
+    "visible_non_ascii_chars": 66804,
+    "unique_non_ascii_chars": 1986,
+    "ignored_ascii_chars": 1877,
+    "control_tokens": 8175,
+    "ignored_padding_spaces": 62261
+  },
+  "ascii": {
+    "unique_ignored_ascii_chars": 77,
+    "ignored_ascii_counts": {
+      " ": 209,
+      "!": 25,
+      "\"": 14,
+      "#": 9,
+      "$": 12,
+      "%": 7,
+      "&": 5,
+      "'": 4,
+      "(": 8,
+      ")": 4,
+      "*": 7,
+      "+": 21,
+      ",": 36,
+      "-": 79,
+      ".": 328,
+      "/": 10,
+      "0": 80,
+      "1": 286,
+      "2": 41,
+      "3": 29,
+      "4": 20,
+      "5": 28,
+      "6": 16,
+      "7": 4,
+      "8": 12,
+      "9": 6,
+      ":": 6,
+      ";": 1,
+      "<": 14,
+      ">": 4,
+      "@": 9,
+      "A": 14,
+      "B": 7,
+      "D": 26,
+      "E": 2,
+      "F": 77,
+      "H": 2,
+      "I": 5,
+      "J": 3,
+      "L": 9,
+      "M": 3,
+      "N": 5,
+      "O": 1,
+      "P": 15,
+      "Q": 4,
+      "R": 3,
+      "S": 28,
+      "T": 4,
+      "U": 14,
+      "V": 5,
+      "W": 71,
+      "X": 3,
+      "Y": 1,
+      "Z": 18,
+      "\\": 6,
+      "^": 4,
+      "`": 3,
+      "b": 2,
+      "d": 2,
+      "e": 2,
+      "f": 3,
+      "h": 5,
+      "i": 143,
+      "j": 3,
+      "l": 3,
+      "m": 1,
+      "n": 3,
+      "o": 1,
+      "p": 4,
+      "r": 3,
+      "t": 1,
+      "u": 4,
+      "v": 4,
+      "x": 7,
+      "z": 8,
+      "|": 6,
+      "~": 5
+    }
+  },
+  "conflict_scan": {
+    "reserved_or_control_values_count": 417,
+    "raw_text_word_values_count": 705,
+    "existing_font_codes_count": 4,
+    "existing_font_scan_paths": [
+      "plan/cache/vram-font-bypass/generated-font-smoke"
+    ]
+  },
+  "allocation": {
+    "start_code": "0x9040",
+    "end_code": "0x9B76",
+    "code_shape": "sjis",
+    "entry_count": 1986,
+    "collision_count": 0,
+    "collisions": [],
+    "skipped_code_count": 137,
+    "skipped_code_examples": [
+      {
+        "code_hex": "0x9046",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9053",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9058",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x905E",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x905F",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9067",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x906A",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x906C",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x906E",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9085",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90A2",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90B6",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90C2",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90C4",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90CE",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90D4",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90D8",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90E3",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90E5",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90E6",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90E7",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90ED",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90EE",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x90F9",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9149",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x914F",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9153",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9166",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x916F",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9180",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x91BA",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x91BE",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x91CC",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x91CE",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x91E3",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x91E5",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x91E6",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x924A",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9253",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x925A",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9265",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x926E",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9286",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x9289",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x928E",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x92B9",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x92CA",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x92CB",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x92DC",
+        "reasons": [
+          "raw_text_word"
+        ]
+      },
+      {
+        "code_hex": "0x92ED",
+        "reasons": [
+          "raw_text_word"
+        ]
+      }
+    ]
+  },
+  "manifest": {
+    "entry_count": 1986,
+    "modes": [
+      "1x1",
+      "1x2"
+    ],
+    "format": {
+      "json": {
+        "entries": [
+          {
+            "code": "0xE000",
+            "char": "字",
+            "modes": [
+              "1x1",
+              "1x2"
+            ]
+          }
+        ]
+      },
+      "text": "<code> <char> [modes]"
+    }
+  }
+}
