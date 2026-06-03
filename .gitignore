@@ -9,6 +9,7 @@ patcher/work/
 !patcher/tools/
 !patcher/tools/**
 !patcher/resources/fonts/
-!patcher/resources/fonts/*.ttf
+patcher/resources/fonts/*.ttf
 patcher/tools/__pycache__/
 patcher/tools/**/*.pyc*
+

@@ -105,8 +105,17 @@ def entries_from_chars(chars: str, start_code: int) -> list[FontEntry]:
     ]
 
 
-def render_mono(face: freetype.Face, char: str, *, px_size: int) -> list[list[int]]:
-    face.set_pixel_sizes(0, px_size)
+def render_mono(
+    face: freetype.Face,
+    char: str,
+    *,
+    px_size: int,
+    width_px: int | None = None,
+) -> list[list[int]]:
+    if width_px is None:
+        face.set_pixel_sizes(0, px_size)
+    else:
+        face.set_pixel_sizes(width_px, px_size)
     face.load_char(char, freetype.FT_LOAD_RENDER | freetype.FT_LOAD_TARGET_MONO)
     bmp = face.glyph.bitmap
     pixels = [[0] * bmp.width for _ in range(bmp.rows)]
@@ -161,8 +170,7 @@ def render_1x1(face: freetype.Face, char: str, *, ink: int, bg: int) -> bytes:
 
 
 def render_1x2(face: freetype.Face, char: str, *, ink: int, bg: int) -> bytes:
-    canvas16 = blit_center(render_mono(face, char, px_size=16), width=16, height=16)
-    glyph = compress_16w_to_8w(canvas16)
+    glyph = blit_center(render_mono(face, char, px_size=12, width_px=8), width=8, height=16)
     return tile8_to_4bpp(glyph[:8], ink=ink, bg=bg) + tile8_to_4bpp(glyph[8:], ink=ink, bg=bg)
 
 

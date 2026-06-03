@@ -53,6 +53,8 @@ Default output command:
 - Bundled-tools build produced `rom/narutorpg3_chs_patcher_bundled_tools_test.nds`; logs show calls to `patcher/tools/build_vram_font_files.py`, `patcher/tools/build_full_writeback_menu_overlay_rom.py`, and `patcher/tools/ndstool.exe`. Header CRC and Banner CRC were OK.
 - Missing characters are now warnings, not build blockers. Verified with `rom/narutorpg3_chs_patcher_missing_report_test_build_20260603_163222.nds`: build completed, Header CRC and Banner CRC were OK, and `patcher/work/build_20260603_163222/missing-chars-report.json` listed 418 missing TTF glyphs.
 - Console missing-character output is now grouped by text/menu/font, and font misses are grouped by 1x1/1x2 with the missing TTF path. Verified with `rom/narutorpg3_chs_patcher_short_font_missing_console_test.nds`; `patcher/work/build_20260603_165100/missing-chars.tsv` includes `source`, `mode`, `char`, `unicode_hex`, `code`, and `font`.
+- 1x2 rendering now uses an 8x12 target grid centered into 8x16 instead of compressing a 16x16 glyph to 8x16. Visual preview is `plan/cache/text-writeback-smoke/font-render-probe/1x2_candidate_fonts_compare.png`.
+- `patcher/resources/fonts/1x2.ttf` now uses the `MZPXorig.ttf` candidate by default. Verified default MZPX build as `rom/narutorpg3_chs_patcher_mzpx_1x2_8x12_test.nds`; comparison build with `fusion-pixel-12px-monospaced-zh_hans.ttf` is `rom/narutorpg3_chs_patcher_fusion12_1x2_8x12_test.nds`. Both had Header CRC OK / Banner CRC OK and only `U+E0FD` missing.
 
 ## ROM safety
 
