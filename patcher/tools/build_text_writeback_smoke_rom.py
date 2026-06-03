@@ -22,6 +22,11 @@ DEFAULT_EXCLUDED_SOURCE_FILES = {
     "msg/wifi/kinshi_msg.msg",
 }
 
+DEFAULT_INCLUDED_ROW_IDS_WHEN_SOURCE_EXCLUDED = {
+    "zh_txt_64f689a6_0006A2_0015",
+    "zh_txt_64f689a6_0006F6_0016",
+}
+
 SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
     "msg/equip_msg.msg",
     "msg/item_msg.msg",
@@ -60,14 +65,16 @@ def parse_source_file_set(value: str) -> set[str]:
 def filter_excluded_source_files(
     rows: list[dict[str, str]],
     excluded_source_files: set[str],
+    included_row_ids: set[str] | None = None,
 ) -> tuple[list[dict[str, str]], dict[str, int]]:
     if not excluded_source_files:
         return rows, {}
+    included_row_ids = included_row_ids or set()
     selected: list[dict[str, str]] = []
     excluded: dict[str, int] = {}
     for row in rows:
         source_file = normalize_source_file(row.get("source_file", ""))
-        if source_file in excluded_source_files:
+        if source_file in excluded_source_files and row.get("id", "") not in included_row_ids:
             excluded[source_file] = excluded.get(source_file, 0) + 1
             continue
         selected.append(row)
@@ -140,7 +147,11 @@ def load_all_rows(preview_path: Path, excluded_source_files: set[str] | None = N
         selected.append(row)
     if blocked:
         raise ValueError(f"{len(blocked)} rows cannot be written by fixed-slot full-writeback mode")
-    return filter_excluded_source_files(selected, excluded_source_files or set())
+    return filter_excluded_source_files(
+        selected,
+        excluded_source_files or set(),
+        DEFAULT_INCLUDED_ROW_IDS_WHEN_SOURCE_EXCLUDED,
+    )
 
 
 def encode_text(text: str, code_table: dict[str, int], *, candidate_code_endian: str) -> bytes:
@@ -443,6 +454,7 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], d
             "fixed_slot_without_terminator": "space_pad_known_ui_text_tables_else_zero_fill",
             "rom_origin": "read_only_not_modified",
             "excluded_source_files": excluded_counts,
+            "included_row_ids_when_source_excluded": sorted(DEFAULT_INCLUDED_ROW_IDS_WHEN_SOURCE_EXCLUDED),
         },
     }
     return work, output_rom, records, metadata

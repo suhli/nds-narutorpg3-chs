@@ -4,9 +4,9 @@ current_plan:
   document: plan/text-writeback-smoke.md
   status: in_progress
 current_stage:
-  id: patcher-build
-  name: patcher packaging
-  status: done
+  id: v5-regression-triage
+  name: v5 regression triage
+  status: in_progress
 stage_cache:
   dir: plan/cache/text-writeback-smoke
   documents:
@@ -22,6 +22,7 @@ stage_cache:
     - plan/cache/text-writeback-smoke/story-autoskip-safe-code-probe.md
     - plan/cache/text-writeback-smoke/translation-struct-audit.md
     - plan/cache/text-writeback-smoke/patcher-build.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/todo.md
 stage_outputs:
   expected:
     - rom/narutorpg3_chs_full_writeback_test.nds
@@ -159,6 +160,8 @@ stage_outputs:
     - patcher/work/build_20260603_184433/patcher-build-summary.json
     - patcher/work/build_20260603_184433/missing-chars-report.json
     - patcher/work/build_20260603_184433/missing-chars.tsv
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/todo.md
     - rom/narutorpg3_chs_full_writeback_menu_v2.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_friend_kinshi_v1.nds
@@ -178,7 +181,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-03T18:52:41+08:00"
+updated_at: "2026-06-03T20:18:17+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -211,6 +214,7 @@ notes:
   - Fixed no-terminator UI text table padding for item/equip/jyutu description tables: short translations now pad with full-width spaces instead of 00, while embedded CTRL_0000 separators remain 00 00.
   - Built rom/narutorpg3_chs_patcher_v5_menu_itempad_fusion12.nds; ndstool Header CRC OK / Banner CRC OK, text_rows=5843, menu_rows=285, and missing chars remain only U+E0FD for both 1x1.ttf and 1x2.ttf.
   - Final v5 recheck passed: patcher script AST syntax_ok, ndstool Header CRC OK / Banner CRC OK, item_msg first short description uses 81 40 padding, and overlay_0003 0x43D64 preserves following %s strings.
+  - Started v5 regression triage for rom/narutorpg3_chs_patcher_v5_menu_itempad_fusion12.nds. Recorded 10 user-reported issues and 11 screenshots in plan/cache/text-writeback-smoke/v5-regression-20260603/todo.md.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。
