@@ -5,21 +5,23 @@
     "msg/wifi/friend_msg.msg": 19,
     "msg/wifi/kinshi_msg.msg": 1
   },
-  "issue_rows": 299,
-  "auto_adjusted_rows": 993,
-  "structure_prefix_rows": 295,
-  "before_control_mismatch_rows": 290,
-  "after_control_mismatch_rows": 22,
+  "issue_rows": 302,
+  "auto_adjusted_rows": 1009,
+  "structure_prefix_rows": 310,
+  "before_control_mismatch_rows": 288,
+  "after_control_mismatch_rows": 0,
   "missing_char_rows": 0,
   "overflow_rows": 0,
+  "manual_override_rows": 5,
   "issue_counts": {
-    "auto_adjusted_structure_residue": 286,
-    "control_tokens_before_mismatch": 290,
-    "control_tokens_after_mismatch": 22
+    "auto_adjusted_structure_residue": 302,
+    "control_tokens_before_mismatch": 288,
+    "auto_adjusted_extra_control_tokens": 20
   },
   "preview": "text/writeback/encoded_preview.tsv",
   "code_table": "text/code_table/zh_code_table.tsv",
   "candidate_code_endian": "big",
   "issues_tsv": "plan/cache/text-writeback-smoke/translation-struct-mismatches.tsv",
-  "adjusted_preview": "plan/cache/text-writeback-smoke/encoded-preview-struct-adjusted.tsv"
+  "adjusted_preview": "plan/cache/text-writeback-smoke/encoded-preview-struct-adjusted.tsv",
+  "manual_overrides": "plan/cache/text-writeback-smoke/translation-struct-manual-overrides.tsv"
 }
