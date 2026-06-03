@@ -34,6 +34,19 @@ def display_path(path: Path) -> str:
         return path.resolve().as_posix()
 
 
+def unique_output_path(path: Path, tag: str) -> Path:
+    if not path.exists():
+        return path
+    candidate = path.with_name(f"{path.stem}_{tag}{path.suffix}")
+    if not candidate.exists():
+        return candidate
+    for index in range(2, 100):
+        indexed = path.with_name(f"{path.stem}_{tag}_{index}{path.suffix}")
+        if not indexed.exists():
+            return indexed
+    raise FileExistsError(f"could not find an unused output path near {path}")
+
+
 def python_exe() -> Path:
     local = REPO / ".venv" / "Scripts" / "python.exe"
     return local if local.is_file() else Path(sys.executable)
@@ -194,6 +207,21 @@ def build_code_assets_from_frozen(
     }
 
 
+def validate_menu_report(report_path: Path) -> None:
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    status_counts = report.get("status_counts", {})
+    blocked = {
+        status: count
+        for status, count in status_counts.items()
+        if status != "ready" and count
+    }
+    if blocked:
+        raise ValueError(f"menu translation report has blocked statuses: {blocked}")
+    missing = report.get("missing_font_chars", "")
+    if missing:
+        raise ValueError(f"menu translation report has missing font chars: {missing}")
+
+
 def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path, log_path: Path) -> dict[str, Path]:
     text_resources = resources / "text"
     menu_resources = resources / "menu"
@@ -278,6 +306,7 @@ def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path
             log_path=log_path,
         )
         menu_translations = generated / "overlay_menu_translations.tsv"
+        menu_report = generated / "overlay_menu_translation_report.json"
         run_cmd(
             [
                 python_exe(),
@@ -291,10 +320,11 @@ def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path
                 "--out",
                 menu_translations,
                 "--report-out",
-                generated / "overlay_menu_translation_report.json",
+                menu_report,
             ],
             log_path=log_path,
         )
+        validate_menu_report(menu_report)
         return {
             "code_table": assets["code_table"],
             "font_manifest": assets["font_manifest"],
@@ -342,9 +372,10 @@ def build_font_assets(args: argparse.Namespace, run_dir: Path, resources: Path, 
 
 
 def build_rom(args: argparse.Namespace, run_dir: Path, origin_work: Path, text_assets: dict[str, Path], font_dir: Path, log_path: Path) -> Path:
-    output = repo_path(args.output)
-    if output.resolve() == (REPO / "rom" / "origin.nds").resolve():
+    requested_output = repo_path(args.output)
+    if requested_output.resolve() == (REPO / "rom" / "origin.nds").resolve():
         raise ValueError("refusing to overwrite rom/origin.nds")
+    output = unique_output_path(requested_output, run_dir.name)
 
     records_out = repo_path(args.records_out) if args.records_out else run_dir / "build-records.json"
     cmd: list[str | Path] = [

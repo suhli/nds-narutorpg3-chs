@@ -18,6 +18,8 @@ The default build uses:
 
 It unpacks `rom/origin.nds` to `patcher/work/origin_unpacked` when needed, generates font payloads, patches text/menu/font payloads, repacks a new ROM, then runs `ndstool -i` on the output.
 
+If the requested output ROM already exists, the patcher writes to a timestamped sibling path instead of overwriting it.
+
 ## Replace Font
 
 Use one TTF for both font modes:
@@ -55,3 +57,5 @@ If an adjusted encoded preview TSV is already prepared:
 ```
 
 Every run writes a timestamped folder under `patcher/work/build_*` with `patcher.log`, generated text/font assets, the ROM work directory, and `patcher-build-summary.json`.
+
+When rebuilding from translations, structure audit failures, missing font characters, fixed-slot overflow, or non-ready menu translation rows stop the build.

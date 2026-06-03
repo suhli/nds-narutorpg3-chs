@@ -37,6 +37,14 @@ Default output command:
 - Translation replacement: pass `--translation-table`, or edit bundled `patcher/resources/text/frozen_translation.tsv` and pass `--rebuild-text-assets`.
 - Direct preview replacement: pass `--translation-preview`.
 
+## Verification
+
+- Default build produced `rom/narutorpg3_chs_patcher_default_test.nds`; `tools/ndstool.exe -i` reported Header CRC OK and Banner CRC OK.
+- Rebuild from bundled frozen translation produced `rom/narutorpg3_chs_patcher_rebuild_text_test.nds`; text audit reported `after_control_mismatch_rows=0`, `missing_char_rows=0`, and `overflow_rows=0`.
+- Explicit `--font-1x1`/`--font-1x2` build produced `rom/narutorpg3_chs_patcher_font_arg_test.nds`; `tools/ndstool.exe -i` reported Header CRC OK and Banner CRC OK.
+- Repeated-output rebuild test produced `rom/narutorpg3_chs_patcher_rebuild_text_test_build_20260603_151144.nds`, proving the patcher now selects an unused output path before invoking the lower-level builder.
+- Menu rebuild report for the repeated-output test had `ready=278`, no pending keys, and no missing font chars.
+
 ## ROM safety
 
 - `rom/origin.nds` remains read-only.
