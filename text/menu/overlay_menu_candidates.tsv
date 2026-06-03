@@ -1,0 +1,347 @@
+id	component	source_file	offset	raw_len	slot_len	raw_hex	jp_text	jp_text_stripped	zh_text	status	notes
+menu_arm9_000E96	arm9	arm9.bin	0xE96	6	8	91 E5 94 C4 E3 E0	大汎聰	大汎聰		candidate	
+menu_arm9_0098A6	arm9	arm9.bin	0x98A6	6	7	9F E5 98 B0 9F E5	溷于溷	溷于溷		candidate	
+menu_arm9_011E72	arm9	arm9.bin	0x11E72	6	8	95 E5 88 D0 8D E2	募威坂	募威坂		candidate	
+menu_arm9_011EAE	arm9	arm9.bin	0x11EAE	6	8	95 E5 88 D0 8D E2	募威坂	募威坂		candidate	
+menu_arm9_011F4A	arm9	arm9.bin	0x11F4A	6	8	9C E5 88 D0 8D E2	懷威坂	懷威坂		candidate	
+menu_arm9_01F3B2	arm9	arm9.bin	0x1F3B2	6	8	9D E5 8C 50 8D E2	晏訓坂	晏訓坂		candidate	
+menu_arm9_02B4F6	arm9	arm9.bin	0x2B4F6	6	7	9D E5 E0 77 9F E5	晏烱溷	晏烱溷		candidate	
+menu_arm9_02FCDA	arm9	arm9.bin	0x2FCDA	4	5	9D E5 94 EC	晏肥	晏肥		candidate	
+menu_arm9_03079A	arm9	arm9.bin	0x3079A	4	5	97 E5 E4 E9	怜蓚	怜蓚		candidate	
+menu_arm9_035CE2	arm9	arm9.bin	0x35CE2	4	5	94 E5 92 D4	泌綴	泌綴		candidate	
+menu_arm9_03DF76	arm9	arm9.bin	0x3DF76	4	5	9D E5 ED B3	晏昕	晏昕		candidate	
+menu_arm9_03F412	arm9	arm9.bin	0x3F412	3	4	82 E8 54	りT	りT		candidate	
+menu_arm9_04D142	arm9	arm9.bin	0x4D142	6	8	82 E2 7C 20 92 E5	や| 貞	や| 貞		candidate	
+menu_arm9_05982E	arm9	arm9.bin	0x5982E	4	5	8D E2 E0 4B	坂潭	坂潭		candidate	
+menu_arm9_05995A	arm9	arm9.bin	0x5995A	4	5	8D E2 95 4B	坂必	坂必		candidate	
+menu_arm9_078286	arm9	arm9.bin	0x78286	3	4	82 E0 50	もP	もP		candidate	
+menu_overlay_0000_001976	overlay_0000	overlay/overlay_0000.bin	0x1976	6	8	9B E5 89 A1 90 E7	帛横千	帛横千		candidate	
+menu_overlay_0000_001A06	overlay_0000	overlay/overlay_0000.bin	0x1A06	6	8	9B E5 89 81 90 E7	帛堰千	帛堰千		candidate	
+menu_overlay_0000_00A9E6	overlay_0000	overlay/overlay_0000.bin	0xA9E6	4	5	9D E5 EE 6D	晏絈	晏絈		candidate	
+menu_overlay_0000_00BD0A	overlay_0000	overlay/overlay_0000.bin	0xBD0A	3	4	82 E0 2C	も,	も,		candidate	
+menu_overlay_0000_00BDC6	overlay_0000	overlay/overlay_0000.bin	0xBDC6	3	4	82 E0 2C	も,	も,		candidate	
+menu_overlay_0000_018122	overlay_0000	overlay/overlay_0000.bin	0x18122	4	5	82 E0 26 50	も&P	も&P		candidate	
+menu_overlay_0000_02093E	overlay_0000	overlay/overlay_0000.bin	0x2093E	3	4	82 E5 30	ょ0	ょ0		candidate	
+menu_overlay_0000_02F038	overlay_0000	overlay/overlay_0000.bin	0x2F038	3	4	83 44 22	"ゥ"""	"ゥ"""		candidate	
+menu_overlay_0000_02F6AC	overlay_0000	overlay/overlay_0000.bin	0x2F6AC	14	16	83 47 83 89 81 5B 83 52 81 5B 83 68 81 40	エラーコード　	エラーコード		candidate	
+menu_overlay_0000_02FC94	overlay_0000	overlay/overlay_0000.bin	0x2FC94	14	16	82 BD 82 A2 82 B9 82 F1 83 6C 81 5B 83 80	たいせんネーム	たいせんネーム		candidate	
+menu_overlay_0000_02FCA4	overlay_0000	overlay/overlay_0000.bin	0x2FCA4	6	8	82 A0 82 F1 82 D4	あんぶ	あんぶ		candidate	
+menu_overlay_0000_02FCAC	overlay_0000	overlay/overlay_0000.bin	0x2FCAC	4	8	83 6C 83 57	ネジ	ネジ		candidate	
+menu_overlay_0000_02FCB4	overlay_0000	overlay/overlay_0000.bin	0x2FCB4	4	8	83 4C 83 6F	キバ	キバ		candidate	
+menu_overlay_0000_02FCBC	overlay_0000	overlay/overlay_0000.bin	0x2FCBC	4	8	89 8E 96 82	猿魔	猿魔		candidate	
+menu_overlay_0000_02FCC4	overlay_0000	overlay/overlay_0000.bin	0x2FCC4	4	8	8E E7 92 DF	守鶴	守鶴		candidate	
+menu_overlay_0000_02FCCC	overlay_0000	overlay/overlay_0000.bin	0x2FCCC	4	8	83 4B 83 43	ガイ	ガイ		candidate	
+menu_overlay_0000_02FCD4	overlay_0000	overlay/overlay_0000.bin	0x2FCD4	4	8	83 8A 81 5B	リー	リー		candidate	
+menu_overlay_0000_02FCDC	overlay_0000	overlay/overlay_0000.bin	0x2FCDC	4	8	83 6E 83 4E	ハク	ハク		candidate	
+menu_overlay_0000_02FCE4	overlay_0000	overlay/overlay_0000.bin	0x2FCE4	4	8	83 56 83 6D	シノ	シノ		candidate	
+menu_overlay_0000_02FCEC	overlay_0000	overlay/overlay_0000.bin	0x2FCEC	4	8	82 A2 82 CC	いの	いの		candidate	
+menu_overlay_0000_02FCF4	overlay_0000	overlay/overlay_0000.bin	0x2FCF4	6	8	83 4B 83 41 83 89	ガアラ	ガアラ		candidate	
+menu_overlay_0000_02FCFC	overlay_0000	overlay/overlay_0000.bin	0x2FCFC	6	8	83 55 83 75 83 55	ザブザ	ザブザ		candidate	
+menu_overlay_0000_02FD04	overlay_0000	overlay/overlay_0000.bin	0x2FD04	6	8	82 BD 82 A9 82 A2	たかい	たかい		candidate	
+menu_overlay_0000_02FD0C	overlay_0000	overlay/overlay_0000.bin	0x2FD0C	6	8	83 43 83 8B 83 4A	イルカ	イルカ		candidate	
+menu_overlay_0000_02FD14	overlay_0000	overlay/overlay_0000.bin	0x2FD14	6	8	83 54 83 4E 83 89	サクラ	サクラ		candidate	
+menu_overlay_0000_02FD1C	overlay_0000	overlay/overlay_0000.bin	0x2FD1C	6	8	82 D3 82 C2 82 A4	ふつう	ふつう		candidate	
+menu_overlay_0000_02FD24	overlay_0000	overlay/overlay_0000.bin	0x2FD24	6	8	83 4B 83 7D 92 89	ガマ忠	ガマ忠		candidate	
+menu_overlay_0000_02FD2C	overlay_0000	overlay/overlay_0000.bin	0x2FD2C	6	8	83 4B 83 7D 97 B3	ガマ竜	ガマ竜		candidate	
+menu_overlay_0000_02FD34	overlay_0000	overlay/overlay_0000.bin	0x2FD34	6	8	8E 4F 91 E3 96 DA	三代目	三代目		candidate	
+menu_overlay_0000_02FD3C	overlay_0000	overlay/overlay_0000.bin	0x2FD3C	6	8	83 65 83 7D 83 8A	テマリ	テマリ		candidate	
+menu_overlay_0000_02FD44	overlay_0000	overlay/overlay_0000.bin	0x2FD44	6	8	83 69 83 8B 83 67	ナルト	ナルト		candidate	
+menu_overlay_0000_02FD4C	overlay_0000	overlay/overlay_0000.bin	0x2FD4C	6	8	83 4B 83 7D 8B 67	ガマ吉	ガマ吉		candidate	
+menu_overlay_0000_02FD54	overlay_0000	overlay/overlay_0000.bin	0x2FD54	6	8	83 71 83 69 83 5E	ヒナタ	ヒナタ		candidate	
+menu_overlay_0000_02FD5C	overlay_0000	overlay/overlay_0000.bin	0x2FD5C	6	8	82 BD 82 A9 82 A2	たかい	たかい		candidate	
+menu_overlay_0000_02FD64	overlay_0000	overlay/overlay_0000.bin	0x2FD64	6	8	83 4A 83 63 83 86	カツユ	カツユ		candidate	
+menu_overlay_0000_02FD6C	overlay_0000	overlay/overlay_0000.bin	0x2FD6C	6	8	94 AA 94 45 8C A2	八忍犬	八忍犬		candidate	
+menu_overlay_0000_02FD74	overlay_0000	overlay/overlay_0000.bin	0x2FD74	6	8	82 D0 82 AD 82 A2	ひくい	ひくい		candidate	
+menu_overlay_0000_02FD7C	overlay_0000	overlay/overlay_0000.bin	0x2FD7C	6	8	83 43 83 5E 83 60	イタチ	イタチ		candidate	
+menu_overlay_0000_02FD84	overlay_0000	overlay/overlay_0000.bin	0x2FD84	6	8	82 A0 82 F1 82 D4	あんぶ	あんぶ		candidate	
+menu_overlay_0000_02FD8C	overlay_0000	overlay/overlay_0000.bin	0x2FD8C	6	8	82 D0 82 AD 82 A2	ひくい	ひくい		candidate	
+menu_overlay_0000_02FD94	overlay_0000	overlay/overlay_0000.bin	0x2FD94	6	8	82 A0 82 F1 82 D4	あんぶ	あんぶ		candidate	
+menu_overlay_0000_02FD9C	overlay_0000	overlay/overlay_0000.bin	0x2FD9C	6	8	83 69 83 8B 83 67	ナルト	ナルト		candidate	
+menu_overlay_0000_02FDA4	overlay_0000	overlay/overlay_0000.bin	0x2FDA4	6	8	83 7D 83 93 83 5F	マンダ	マンダ		candidate	
+menu_overlay_0000_02FDAC	overlay_0000	overlay/overlay_0000.bin	0x2FDAC	6	8	83 54 83 58 83 50	サスケ	サスケ		candidate	
+menu_overlay_0000_02FDB4	overlay_0000	overlay/overlay_0000.bin	0x2FDB4	6	8	83 4A 83 4A 83 56	カカシ	カカシ		candidate	
+menu_overlay_0000_02FDBC	overlay_0000	overlay/overlay_0000.bin	0x2FDBC	6	8	83 4C 83 54 83 81	キサメ	キサメ		candidate	
+menu_overlay_0000_02FDC4	overlay_0000	overlay/overlay_0000.bin	0x2FDC4	6	8	83 63 83 69 83 66	ツナデ	ツナデ		candidate	
+menu_overlay_0000_02FDCC	overlay_0000	overlay/overlay_0000.bin	0x2FDCC	6	8	82 D3 82 C2 82 A4	ふつう	ふつう		candidate	
+menu_overlay_0000_02FDD4	overlay_0000	overlay/overlay_0000.bin	0x2FDD4	6	8	83 54 83 58 83 50	サスケ	サスケ		candidate	
+menu_overlay_0000_02FDDC	overlay_0000	overlay/overlay_0000.bin	0x2FDDC	8	12	83 70 83 62 83 4E 83 93	パックン	パックン		candidate	
+menu_overlay_0000_02FDE8	overlay_0000	overlay/overlay_0000.bin	0x2FDE8	8	12	82 B3 82 A2 82 C4 82 A2	さいてい	さいてい		candidate	
+menu_overlay_0000_02FDF4	overlay_0000	overlay/overlay_0000.bin	0x2FDF4	8	12	83 56 83 4A 83 7D 83 8B	シカマル	シカマル		candidate	
+menu_overlay_0000_02FE00	overlay_0000	overlay/overlay_0000.bin	0x2FE00	8	12	83 60 83 87 83 45 83 57	チョウジ	チョウジ		candidate	
+menu_overlay_0000_02FE0C	overlay_0000	overlay/overlay_0000.bin	0x2FE0C	8	12	83 65 83 93 83 65 83 93	テンテン	テンテン		candidate	
+menu_overlay_0000_02FE18	overlay_0000	overlay/overlay_0000.bin	0x2FE18	8	12	82 B6 82 E7 82 A2 82 E2	じらいや	じらいや		candidate	
+menu_overlay_0000_02FE24	overlay_0000	overlay/overlay_0000.bin	0x2FE24	8	12	82 B3 82 A2 82 C4 82 A2	さいてい	さいてい		candidate	
+menu_overlay_0000_02FE30	overlay_0000	overlay/overlay_0000.bin	0x2FE30	8	12	83 4A 83 7D 83 5E 83 8A	カマタリ	カマタリ		candidate	
+menu_overlay_0000_02FE3C	overlay_0000	overlay/overlay_0000.bin	0x2FE3C	10	12	82 B3 82 A2 82 B1 82 A4 81 49	さいこう！	さいこう！		candidate	
+menu_overlay_0000_02FE48	overlay_0000	overlay/overlay_0000.bin	0x2FE48	10	12	82 B3 82 A2 82 B1 82 A4 81 49	さいこう！	さいこう！		candidate	
+menu_overlay_0000_02FE54	overlay_0000	overlay/overlay_0000.bin	0x2FE54	10	12	83 4A 83 93 83 4E 83 8D 83 45	カンクロウ	カンクロウ		candidate	
+menu_overlay_0000_02FE60	overlay_0000	overlay/overlay_0000.bin	0x2FE60	10	12	83 4B 83 43 82 CC 94 45 8B 54	ガイの忍亀	ガイの忍亀		candidate	
+menu_overlay_0000_02FE6C	overlay_0000	overlay/overlay_0000.bin	0x2FE6C	10	12	83 4A 83 93 83 4E 83 8D 83 45	カンクロウ	カンクロウ		candidate	
+menu_overlay_0000_02FE78	overlay_0000	overlay/overlay_0000.bin	0x2FE78	10	12	83 4B 83 7D 83 75 83 93 91 BE	ガマブン太	ガマブン太		candidate	
+menu_overlay_0000_02FE84	overlay_0000	overlay/overlay_0000.bin	0x2FE84	10	12	83 7E 83 6A 83 4A 83 63 83 86	ミニカツユ	ミニカツユ		candidate	
+menu_overlay_0000_02FE90	overlay_0000	overlay/overlay_0000.bin	0x2FE90	10	12	83 49 83 8D 83 60 82 DC 82 E9	オロチまる	オロチまる		candidate	
+menu_overlay_0000_03006C	overlay_0000	overlay/overlay_0000.bin	0x3006C	10	12	82 BD 82 A2 82 BF 82 E5 82 A4	たいちょう	たいちょう		candidate	
+menu_overlay_0000_0300E8	overlay_0000	overlay/overlay_0000.bin	0x300E8	20	24	81 40 81 40 81 40 82 BB 82 A4 82 D1 82 BF 82 E3 82 A4 81 40	　　　そうびちゅう　	そうびちゅう		candidate	
+menu_overlay_0000_030100	overlay_0000	overlay/overlay_0000.bin	0x30100	66	68	81 40 81 40 81 40 82 A0 82 AA 82 E9 81 40 81 40 81 40 82 A8 82 C8 82 B6 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 B3 82 AA 82 E9 81 40 81 40 81 40 82 BB 82 A4 82 D1 82 BF 82 E3 82 A4 81 40	　　　あがる　　　おなじ　　　　　　　　さがる　　　そうびちゅう　	あがる　　　おなじ　　　　　　　　さがる　　　そうびちゅう		candidate	
+menu_overlay_0000_030144	overlay_0000	overlay/overlay_0000.bin	0x30144	24	28	83 5A 83 62 83 67 82 C5 82 AB 82 E9 83 4C 83 83 83 89 83 4E 83 5E 81 5B	セットできるキャラクター	セットできるキャラクター		candidate	
+menu_overlay_0000_030160	overlay_0000	overlay/overlay_0000.bin	0x30160	16	20	82 BB 82 A4 82 D1 82 B6 82 E5 82 A4 82 BD 82 A2	そうびじょうたい	そうびじょうたい		candidate	
+menu_overlay_0000_030178	overlay_0000	overlay/overlay_0000.bin	0x30178	16	24	82 BD 82 A2 82 BF 82 E5 82 A4 82 B1 82 A4 82 A9	たいちょうこうか	たいちょうこうか		candidate	
+menu_overlay_0000_030190	overlay_0000	overlay/overlay_0000.bin	0x30190	6	8	82 E2 82 E9 82 AB	やるき	やるき		candidate	
+menu_overlay_0000_0301F8	overlay_0000	overlay/overlay_0000.bin	0x301F8	26	28	82 B0 82 F1 82 B4 82 A2 82 CC 82 AF 82 A2 82 AF 82 F1 82 BF 81 40 81 40 81 40	げんざいのけいけんち　　　	げんざいのけいけんち		candidate	
+menu_overlay_0000_030214	overlay_0000	overlay/overlay_0000.bin	0x30214	26	28	82 C2 82 AC 82 CC 83 8C 83 78 83 8B 82 DC 82 C5 81 40 82 A0 82 C6 81 40 81 40	つぎのレベルまで　あと　　	つぎのレベルまで　あと		candidate	
+menu_overlay_0000_030230	overlay_0000	overlay/overlay_0000.bin	0x30230	6	8	25 73 81 5E 25 73	%s／%s	%s／%s		candidate	
+menu_overlay_0000_030244	overlay_0000	overlay/overlay_0000.bin	0x30244	14	16	25 73 81 5E 25 73 81 40 25 73 81 5E 25 73	%s／%s　%s／%s	%s／%s　%s／%s		candidate	
+menu_overlay_0000_030434	overlay_0000	overlay/overlay_0000.bin	0x30434	4	8	82 CD 82 A2	はい	はい		candidate	
+menu_overlay_0000_03043C	overlay_0000	overlay/overlay_0000.bin	0x3043C	6	8	82 A2 82 A2 82 A6	いいえ	いいえ		candidate	
+menu_overlay_0001_0018E2	overlay_0001	overlay/overlay_0001.bin	0x18E2	3	4	82 E1 28	ゃ(	ゃ(		candidate	
+menu_overlay_0001_001BDE	overlay_0001	overlay/overlay_0001.bin	0x1BDE	3	4	82 E5 3F	ょ?	ょ?		candidate	
+menu_overlay_0001_009A86	overlay_0001	overlay/overlay_0001.bin	0x9A86	3	4	82 E1 6C	ゃl	ゃl		candidate	
+menu_overlay_0001_009AE2	overlay_0001	overlay/overlay_0001.bin	0x9AE2	3	4	82 E1 6C	ゃl	ゃl		candidate	
+menu_overlay_0001_0167C2	overlay_0001	overlay/overlay_0001.bin	0x167C2	3	4	82 E5 24	ょ$	ょ$		candidate	
+menu_overlay_0001_0167EA	overlay_0001	overlay/overlay_0001.bin	0x167EA	3	4	82 E5 24	ょ$	ょ$		candidate	
+menu_overlay_0001_01681E	overlay_0001	overlay/overlay_0001.bin	0x1681E	3	4	82 E5 28	ょ(	ょ(		candidate	
+menu_overlay_0001_01EC60	overlay_0001	overlay/overlay_0001.bin	0x1EC60	34	36	82 C2 82 A4 82 B5 82 F1 83 47 83 89 81 5B 82 AA 81 40 82 CD 82 C1 82 B9 82 A2 82 B5 82 DC 82 B5 82 BD	つうしんエラーが　はっせいしました	つうしんエラーが　はっせいしました		candidate	
+menu_overlay_0001_01EC84	overlay_0001	overlay/overlay_0001.bin	0x1EC84	36	40	82 C2 82 A4 82 B5 82 F1 83 47 83 89 81 5B 82 AA 81 40 82 CD 82 C1 82 B9 82 A2 82 B5 82 DC 82 B5 82 BD 81 49	つうしんエラーが　はっせいしました！	つうしんエラーが　はっせいしました！		candidate	
+menu_overlay_0001_01ECC4	overlay_0001	overlay/overlay_0001.bin	0x1ECC4	20	24	83 60 83 83 83 4E 83 89 82 AA 82 BD 82 E8 82 C8 82 A2 81 49	チャクラがたりない！	チャクラがたりない！		candidate	
+menu_overlay_0001_01ECDC	overlay_0001	overlay/overlay_0001.bin	0x1ECDC	22	24	8F 70 82 AA 82 D3 82 A4 82 B6 82 E7 82 EA 82 C4 82 A2 82 E9 81 49	術がふうじられている！	術がふうじられている！		candidate	
+menu_overlay_0001_01ECF4	overlay_0001	overlay/overlay_0001.bin	0x1ECF4	22	24	82 C9 82 B0 82 E7 82 EA 82 C8 82 A9 82 C1 82 BD 81 45 81 45 81 45	にげられなかった・・・	にげられなかった・・・		candidate	
+menu_overlay_0001_01ED0C	overlay_0001	overlay/overlay_0001.bin	0x1ED0C	14	16	82 C9 82 B0 82 E7 82 EA 82 C8 82 A2 81 49	にげられない！	にげられない！		candidate	
+menu_overlay_0001_01ED1C	overlay_0001	overlay/overlay_0001.bin	0x1ED1C	24	28	82 CD 81 40 82 A8 82 BF 82 B1 82 F1 82 C5 82 A2 82 E9 81 45 81 45 81 45	は　おちこんでいる・・・	は　おちこんでいる・・・		candidate	
+menu_overlay_0001_01ED38	overlay_0001	overlay/overlay_0001.bin	0x1ED38	20	24	82 CD 81 40 95 40 8C 8C 82 F0 82 D3 82 A2 82 BD 81 49 81 49	は　鼻血をふいた！！	は　鼻血をふいた！！		candidate	
+menu_overlay_0001_01ED50	overlay_0001	overlay/overlay_0001.bin	0x1ED50	36	40	82 B5 82 E3 82 C1 82 AF 82 C2 82 BD 82 E8 82 E5 82 A4 82 C5 81 40 93 AE 82 AF 82 C8 82 A2 81 45 81 45 81 45	しゅっけつたりょうで　動けない・・・	しゅっけつたりょうで　動けない・・・		candidate	
+menu_overlay_0001_01ED78	overlay_0001	overlay/overlay_0001.bin	0x1ED78	20	24	82 CD 81 40 82 B1 82 C1 82 BB 82 E8 82 DD 82 C4 82 A2 82 E9	は　こっそりみている	は　こっそりみている		candidate	
+menu_overlay_0001_01ED90	overlay_0001	overlay/overlay_0001.bin	0x1ED90	22	24	82 CD 81 40 95 40 82 CC 89 BA 82 AA 82 CC 82 D1 82 C4 82 A2 82 E9	は　鼻の下がのびている	は　鼻の下がのびている		candidate	
+menu_overlay_0001_01EE3C	overlay_0001	overlay/overlay_0001.bin	0x1EE3C	6	8	82 A2 82 C7 82 A4	いどう	いどう		candidate	
+menu_overlay_0001_01EE44	overlay_0001	overlay/overlay_0001.bin	0x1EE44	8	12	82 B1 82 A4 82 BD 82 A2	こうたい	こうたい		candidate	
+menu_overlay_0001_01EE50	overlay_0001	overlay/overlay_0001.bin	0x1EE50	6	8	82 E0 82 C7 82 E9	もどる	もどる		candidate	
+menu_overlay_0001_01EE58	overlay_0001	overlay/overlay_0001.bin	0x1EE58	8	12	82 DA 82 A4 82 AC 82 E5	ぼうぎょ	ぼうぎょ		candidate	
+menu_overlay_0001_01EE64	overlay_0001	overlay/overlay_0001.bin	0x1EE64	6	8	82 C9 82 B0 82 E9	にげる	にげる		candidate	
+menu_overlay_0001_01EE6C	overlay_0001	overlay/overlay_0001.bin	0x1EE6C	8	12	82 BA 82 F1 82 BD 82 A2	ぜんたい	ぜんたい		candidate	
+menu_overlay_0001_01EE78	overlay_0001	overlay/overlay_0001.bin	0x1EE78	10	12	83 60 83 83 83 4E 83 89 81 40	チャクラ　	チャクラ		candidate	
+menu_overlay_0001_01EE84	overlay_0001	overlay/overlay_0001.bin	0x1EE84	10	12	82 B1 82 B7 82 A4 81 40 81 40	こすう　　	こすう		candidate	
+menu_overlay_0001_01EE90	overlay_0001	overlay/overlay_0001.bin	0x1EE90	26	28	8F 70 82 AA 81 40 82 D3 82 A4 82 B6 82 E7 82 EA 82 C4 82 A2 82 DC 82 B7 81 49	術が　ふうじられています！	術が　ふうじられています！		candidate	
+menu_overlay_0001_01EEAC	overlay_0001	overlay/overlay_0001.bin	0x1EEAC	24	28	83 60 83 83 83 4E 83 89 82 AA 81 40 82 BD 82 E8 82 DC 82 B9 82 F1 81 49	チャクラが　たりません！	チャクラが　たりません！		candidate	
+menu_overlay_0001_01EEC8	overlay_0001	overlay/overlay_0001.bin	0x1EEC8	36	40	82 BB 82 A4 82 D1 82 C5 81 40 8F 70 82 AA 81 40 82 D3 82 A4 82 B6 82 E7 82 EA 82 C4 82 A2 82 DC 82 B7 81 49	そうびで　術が　ふうじられています！	そうびで　術が　ふうじられています！		candidate	
+menu_overlay_0001_01EEF0	overlay_0001	overlay/overlay_0001.bin	0x1EEF0	26	28	82 BD 82 A2 82 B9 82 F1 82 C5 82 CD 81 40 82 C2 82 A9 82 A6 82 DC 82 B9 82 F1	たいせんでは　つかえません	たいせんでは　つかえません		candidate	
+menu_overlay_0001_01EF0C	overlay_0001	overlay/overlay_0001.bin	0x1EF0C	26	28	82 AB 82 F1 82 B6 82 E3 82 C2 82 CD 81 40 82 C2 82 A9 82 A6 82 DC 82 B9 82 F1	きんじゅつは　つかえません	きんじゅつは　つかえません		candidate	
+menu_overlay_0001_01EF28	overlay_0001	overlay/overlay_0001.bin	0x1EF28	20	24	82 A2 82 DC 82 CD 81 40 82 C2 82 A9 82 A6 82 DC 82 B9 82 F1	いまは　つかえません	いまは　つかえません		candidate	
+menu_overlay_0001_01EF40	overlay_0001	overlay/overlay_0001.bin	0x1EF40	8	12	82 A9 82 B0 95 AA 90 67	かげ分身	かげ分身		candidate	
+menu_overlay_0001_01EF4C	overlay_0001	overlay/overlay_0001.bin	0x1EF4C	12	16	82 B5 82 E1 82 E8 82 F1 82 AA 82 F1	しゃりんがん	しゃりんがん		candidate	
+menu_overlay_0001_01EF5C	overlay_0001	overlay/overlay_0001.bin	0x1EF5C	10	12	82 D1 82 E1 82 AD 82 AA 82 F1	びゃくがん	びゃくがん		candidate	
+menu_overlay_0001_01EF68	overlay_0001	overlay/overlay_0001.bin	0x1EF68	12	16	94 AA 96 E5 82 C6 82 F1 82 B1 82 A4	八門とんこう	八門とんこう		candidate	
+menu_overlay_0001_01EF78	overlay_0001	overlay/overlay_0001.bin	0x1EF78	14	16	82 A4 82 BF 82 C8 82 E9 83 54 83 4E 83 89	うちなるサクラ	うちなるサクラ		candidate	
+menu_overlay_0001_01EF88	overlay_0001	overlay/overlay_0001.bin	0x1EF88	24	28	82 B6 82 E5 82 A4 82 BD 82 A2 82 C5 81 40 82 C2 82 A9 82 A6 82 DC 82 B7	じょうたいで　つかえます	じょうたいで　つかえます		candidate	
+menu_overlay_0001_01EFA4	overlay_0001	overlay/overlay_0001.bin	0x1EFA4	18	20	83 60 83 83 83 4E 83 89 82 CB 82 E8 81 40 82 C8 82 B5	チャクラねり　なし	チャクラねり　なし		candidate	
+menu_overlay_0001_01EFB8	overlay_0001	overlay/overlay_0001.bin	0x1EFB8	18	20	83 60 83 83 83 4E 83 89 82 CB 82 E8 81 40 82 A0 82 E8	チャクラねり　あり	チャクラねり　あり		candidate	
+menu_overlay_0001_01EFCC	overlay_0001	overlay/overlay_0001.bin	0x1EFCC	8	12	82 B1 82 A4 82 B0 82 AB	こうげき	こうげき		candidate	
+menu_overlay_0001_01EFD8	overlay_0001	overlay/overlay_0001.bin	0x1EFD8	6	8	82 B6 82 E3 82 C2	じゅつ	じゅつ		candidate	
+menu_overlay_0001_01EFE0	overlay_0001	overlay/overlay_0001.bin	0x1EFE0	6	8	82 C7 82 A4 82 AE	どうぐ	どうぐ		candidate	
+menu_overlay_0001_01EFE8	overlay_0001	overlay/overlay_0001.bin	0x1EFE8	8	12	82 B1 82 A4 82 BD 82 A2	こうたい	こうたい		candidate	
+menu_overlay_0001_01EFF4	overlay_0001	overlay/overlay_0001.bin	0x1EFF4	6	8	82 C9 82 B0 82 E9	にげる	にげる		candidate	
+menu_overlay_0001_01EFFC	overlay_0001	overlay/overlay_0001.bin	0x1EFFC	8	12	82 DA 82 A4 82 AC 82 E5	ぼうぎょ	ぼうぎょ		candidate	
+menu_overlay_0001_01F008	overlay_0001	overlay/overlay_0001.bin	0x1F008	6	8	82 A2 82 C7 82 A4	いどう	いどう		candidate	
+menu_overlay_0001_01F010	overlay_0001	overlay/overlay_0001.bin	0x1F010	6	8	82 E0 82 C7 82 B7	もどす	もどす		candidate	
+menu_overlay_0002_0128B8	overlay_0002	overlay/overlay_0002.bin	0x128B8	38	132	81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 F0 81 40 82 C4 82 C9 82 A2 82 EA 82 BD 81 49	　　　　　　　　　　　を　てにいれた！	を　てにいれた！		candidate	
+menu_overlay_0002_01293C	overlay_0002	overlay/overlay_0002.bin	0x1293C	36	100	81 40 83 4B 83 7D 82 BF 82 E1 82 F1 82 F0 82 B7 82 D7 82 C4 82 A0 82 C2 82 DF 82 DC 82 B5 82 BD 81 49 81 49	　ガマちゃんをすべてあつめました！！	ガマちゃんをすべてあつめました！！		candidate	
+menu_overlay_0002_012C12	overlay_0002	overlay/overlay_0002.bin	0x12C12	6	10	82 A2 82 A2 82 A6	いいえ	いいえ		candidate	
+menu_overlay_0002_012C42	overlay_0002	overlay/overlay_0002.bin	0x12C42	6	10	82 E2 82 DF 82 E9	やめる	やめる		candidate	
+menu_overlay_0002_012C78	overlay_0002	overlay/overlay_0002.bin	0x12C78	6	12	82 E2 82 DF 82 E9	やめる	やめる		candidate	
+menu_overlay_0003_000436	overlay_0003	overlay/overlay_0003.bin	0x436	4	5	E0 E3 8C D1	璢袴	璢袴		candidate	
+menu_overlay_0003_00784E	overlay_0003	overlay/overlay_0003.bin	0x784E	3	4	82 E5 24	ょ$	ょ$		candidate	
+menu_overlay_0003_007876	overlay_0003	overlay/overlay_0003.bin	0x7876	3	4	82 E5 24	ょ$	ょ$		candidate	
+menu_overlay_0003_0078AA	overlay_0003	overlay/overlay_0003.bin	0x78AA	3	4	82 E5 28	ょ(	ょ(		candidate	
+menu_overlay_0003_00E4BE	overlay_0003	overlay/overlay_0003.bin	0xE4BE	3	5	82 E5 2F	ょ/	ょ/		candidate	
+menu_overlay_0003_017746	overlay_0003	overlay/overlay_0003.bin	0x17746	3	4	40 82 BA	@ぜ	@ぜ		candidate	
+menu_overlay_0003_01A6B6	overlay_0003	overlay/overlay_0003.bin	0x1A6B6	6	8	82 E5 40 20 97 E5	ょ@ 怜	ょ@ 怜		candidate	
+menu_overlay_0003_01A87E	overlay_0003	overlay/overlay_0003.bin	0x1A87E	3	4	82 E5 40	ょ@	ょ@		candidate	
+menu_overlay_0003_01A9F6	overlay_0003	overlay/overlay_0003.bin	0x1A9F6	3	4	82 E5 40	ょ@	ょ@		candidate	
+menu_overlay_0003_01AC0A	overlay_0003	overlay/overlay_0003.bin	0x1AC0A	3	4	82 E5 40	ょ@	ょ@		candidate	
+menu_overlay_0003_01B4CE	overlay_0003	overlay/overlay_0003.bin	0x1B4CE	6	8	82 E5 34 20 91 E5	ょ4 大	ょ4 大		candidate	
+menu_overlay_0003_02088E	overlay_0003	overlay/overlay_0003.bin	0x2088E	3	4	82 E5 4C	ょL	ょL		candidate	
+menu_overlay_0003_0220EE	overlay_0003	overlay/overlay_0003.bin	0x220EE	3	4	82 E5 4C	ょL	ょL		candidate	
+menu_overlay_0003_0233DE	overlay_0003	overlay/overlay_0003.bin	0x233DE	3	4	82 E5 4C	ょL	ょL		candidate	
+menu_overlay_0003_025A2E	overlay_0003	overlay/overlay_0003.bin	0x25A2E	3	4	82 E5 60	ょ`	ょ`		candidate	
+menu_overlay_0003_02621E	overlay_0003	overlay/overlay_0003.bin	0x2621E	3	4	82 E5 48	ょH	ょH		candidate	
+menu_overlay_0003_027F12	overlay_0003	overlay/overlay_0003.bin	0x27F12	3	4	82 E5 4C	ょL	ょL		candidate	
+menu_overlay_0003_0303A6	overlay_0003	overlay/overlay_0003.bin	0x303A6	3	4	82 B5 5C	し\	し\		candidate	
+menu_overlay_0003_030556	overlay_0003	overlay/overlay_0003.bin	0x30556	3	5	82 A5 40	ぇ@	ぇ@		candidate	
+menu_overlay_0003_033966	overlay_0003	overlay/overlay_0003.bin	0x33966	3	4	82 E5 40	ょ@	ょ@		candidate	
+menu_overlay_0003_042A60	overlay_0003	overlay/overlay_0003.bin	0x42A60	24	28	82 4F 82 50 82 51 82 52 82 53 82 54 82 55 82 56 82 57 82 58 81 48 81 5B	０１２３４５６７８９？ー	０１２３４５６７８９？ー		candidate	
+menu_overlay_0003_042A9C	overlay_0003	overlay/overlay_0003.bin	0x42A9C	24	28	82 4F 82 50 82 51 82 52 82 53 82 54 82 55 82 56 82 57 82 58 81 48 81 5B	０１２３４５６７８９？ー	０１２３４５６７８９？ー		candidate	
+menu_overlay_0003_043D48	overlay_0003	overlay/overlay_0003.bin	0x43D48	4	8	82 DD 82 E9	みる	みる		candidate	
+menu_overlay_0003_043D50	overlay_0003	overlay/overlay_0003.bin	0x43D50	6	8	82 C2 82 A9 82 A4	つかう	つかう		candidate	
+menu_overlay_0003_043D7C	overlay_0003	overlay/overlay_0003.bin	0x43D7C	6	8	25 73 82 CC 81 40	%sの　	%sの		candidate	
+menu_overlay_0003_043D84	overlay_0003	overlay/overlay_0003.bin	0x43D84	8	12	91 53 91 CC 82 CC 81 40	全体の　	全体の		candidate	
+menu_overlay_0003_043D90	overlay_0003	overlay/overlay_0003.bin	0x43D90	40	44	25 73 83 58 83 5E 83 7E 83 69 82 C6 81 40 83 60 83 83 83 4E 83 89 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sスタミナと　チャクラが　かいふくした！	%sスタミナと　チャクラが　かいふくした！		candidate	
+menu_overlay_0003_043DBC	overlay_0003	overlay/overlay_0003.bin	0x43DBC	28	32	25 73 83 58 83 5E 83 7E 83 69 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sスタミナが　かいふくした！	%sスタミナが　かいふくした！		candidate	
+menu_overlay_0003_043DDC	overlay_0003	overlay/overlay_0003.bin	0x43DDC	28	32	25 73 83 60 83 83 83 4E 83 89 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sチャクラが　かいふくした！	%sチャクラが　かいふくした！		candidate	
+menu_overlay_0003_043DFC	overlay_0003	overlay/overlay_0003.bin	0x43DFC	32	36	25 73 82 B3 82 A2 82 BE 82 A2 83 58 83 5E 83 7E 83 69 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sさいだいスタミナが　%sふえた！	%sさいだいスタミナが　%sふえた！		candidate	
+menu_overlay_0003_043E20	overlay_0003	overlay/overlay_0003.bin	0x43E20	32	36	25 73 82 B3 82 A2 82 BE 82 A2 83 60 83 83 83 4E 83 89 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sさいだいチャクラが　%sふえた！	%sさいだいチャクラが　%sふえた！		candidate	
+menu_overlay_0003_043E44	overlay_0003	overlay/overlay_0003.bin	0x43E44	26	28	25 73 82 B1 82 A4 82 B0 82 AB 97 CD 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sこうげき力が　%sふえた！	%sこうげき力が　%sふえた！		candidate	
+menu_overlay_0003_043E60	overlay_0003	overlay/overlay_0003.bin	0x43E60	26	28	25 73 82 DA 82 A4 82 AC 82 E5 97 CD 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sぼうぎょ力が　%sふえた！	%sぼうぎょ力が　%sふえた！		candidate	
+menu_overlay_0003_043E7C	overlay_0003	overlay/overlay_0003.bin	0x43E7C	24	28	25 73 82 B7 82 CE 82 E2 82 B3 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sすばやさが　%sふえた！	%sすばやさが　%sふえた！		candidate	
+menu_overlay_0003_043E98	overlay_0003	overlay/overlay_0003.bin	0x43E98	26	28	25 73 82 C9 82 F1 82 E8 82 E5 82 AD 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sにんりょくが　%sふえた！	%sにんりょくが　%sふえた！		candidate	
+menu_overlay_0003_043EB4	overlay_0003	overlay/overlay_0003.bin	0x43EB4	22	24	25 73 82 E2 82 E9 82 AB 82 AA 81 40 82 A0 82 AA 82 C1 82 BD 81 49	%sやるきが　あがった！	%sやるきが　あがった！		candidate	
+menu_overlay_0003_043ECC	overlay_0003	overlay/overlay_0003.bin	0x43ECC	22	24	25 73 82 E2 82 E9 82 AB 82 AA 81 40 82 B3 82 AA 82 C1 82 BD 81 49	%sやるきが　さがった！	%sやるきが　さがった！		candidate	
+menu_overlay_0003_043F20	overlay_0003	overlay/overlay_0003.bin	0x43F20	6	8	82 B1 82 B7 82 A4	こすう	こすう		candidate	
+menu_overlay_0003_043F4C	overlay_0003	overlay/overlay_0003.bin	0x43F4C	6	8	25 73 82 F0 81 40	%sを　	%sを		candidate	
+menu_overlay_0003_043F54	overlay_0003	overlay/overlay_0003.bin	0x43F54	8	12	83 67 83 93 83 67 83 93	トントン	トントン		candidate	
+menu_overlay_0003_043F60	overlay_0003	overlay/overlay_0003.bin	0x43F60	6	8	25 73 82 F0 81 40	%sを　	%sを		candidate	
+menu_overlay_0003_043F68	overlay_0003	overlay/overlay_0003.bin	0x43F68	6	8	83 4B 83 7D 8B 67	ガマ吉	ガマ吉		candidate	
+menu_overlay_0003_043F70	overlay_0003	overlay/overlay_0003.bin	0x43F70	6	8	25 73 82 F0 81 40	%sを　	%sを		candidate	
+menu_overlay_0003_043F78	overlay_0003	overlay/overlay_0003.bin	0x43F78	6	8	83 4B 83 7D 97 B3	ガマ竜	ガマ竜		candidate	
+menu_overlay_0003_043F80	overlay_0003	overlay/overlay_0003.bin	0x43F80	6	8	25 73 82 F0 81 40	%sを　	%sを		candidate	
+menu_overlay_0003_043F88	overlay_0003	overlay/overlay_0003.bin	0x43F88	6	8	83 4A 83 63 83 86	カツユ	カツユ		candidate	
+menu_overlay_0003_043F90	overlay_0003	overlay/overlay_0003.bin	0x43F90	6	8	25 73 82 F0 81 40	%sを　	%sを		candidate	
+menu_overlay_0003_043F98	overlay_0003	overlay/overlay_0003.bin	0x43F98	8	12	83 70 83 62 83 4E 83 93	パックン	パックン		candidate	
+menu_overlay_0003_043FA4	overlay_0003	overlay/overlay_0003.bin	0x43FA4	14	16	25 73 8C FB 82 E6 82 B9 82 B5 82 BD 81 49	%s口よせした！	%s口よせした！		candidate	
+menu_overlay_0003_043FB4	overlay_0003	overlay/overlay_0003.bin	0x43FB4	6	8	25 73 82 CC 81 40	%sの　	%sの		candidate	
+menu_overlay_0003_043FBC	overlay_0003	overlay/overlay_0003.bin	0x43FBC	8	12	91 53 91 CC 82 CC 81 40	全体の　	全体の		candidate	
+menu_overlay_0003_043FC8	overlay_0003	overlay/overlay_0003.bin	0x43FC8	28	48	25 73 83 58 83 5E 83 7E 83 69 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sスタミナが　かいふくした！	%sスタミナが　かいふくした！		candidate	
+menu_overlay_0003_043FF8	overlay_0003	overlay/overlay_0003.bin	0x43FF8	8	12	82 B5 82 E5 82 A4 82 D0	しょうひ	しょうひ		candidate	
+menu_overlay_0003_044004	overlay_0003	overlay/overlay_0003.bin	0x44004	14	16	81 40 81 40 81 40 81 40 25 73 81 5E 25 73	　　　　%s／%s	%s／%s		candidate	
+menu_overlay_0003_044014	overlay_0003	overlay/overlay_0003.bin	0x44014	16	20	81 40 81 40 81 40 81 40 81 40 25 73 81 5E 25 73	　　　　　%s／%s	%s／%s		candidate	
+menu_overlay_0003_044028	overlay_0003	overlay/overlay_0003.bin	0x44028	12	16	82 C9 82 F1 82 E8 82 E5 82 AD 81 46	にんりょく：	にんりょく：		candidate	
+menu_overlay_0003_044074	overlay_0003	overlay/overlay_0003.bin	0x44074	4	8	91 4F 81 46	前：	前：		candidate	
+menu_overlay_0003_04407C	overlay_0003	overlay/overlay_0003.bin	0x4407C	6	8	81 40 92 86 81 46	　中：	中：		candidate	
+menu_overlay_0003_044084	overlay_0003	overlay/overlay_0003.bin	0x44084	6	8	81 40 8C E3 81 46	　後：	後：		candidate	
+menu_overlay_0003_0440C0	overlay_0003	overlay/overlay_0003.bin	0x440C0	10	12	82 B7 82 CE 82 E2 82 B3 25 73	すばやさ%s	すばやさ%s		candidate	
+menu_overlay_0003_0441A4	overlay_0003	overlay/overlay_0003.bin	0x441A4	6	8	82 B1 82 B7 82 A4	こすう	こすう		candidate	
+menu_overlay_0003_0441D8	overlay_0003	overlay/overlay_0003.bin	0x441D8	8	12	8F 70 82 F0 82 DD 82 E9	術をみる	術をみる		candidate	
+menu_overlay_0003_044200	overlay_0003	overlay/overlay_0003.bin	0x44200	14	16	82 B5 82 CC 82 D1 8E 44 82 F0 82 DD 82 E9	しのび札をみる	しのび札をみる		candidate	
+menu_overlay_0003_04423C	overlay_0003	overlay/overlay_0003.bin	0x4423C	6	8	82 B1 82 B7 82 A4	こすう	こすう		candidate	
+menu_overlay_0003_044244	overlay_0003	overlay/overlay_0003.bin	0x44244	6	8	82 B1 82 B7 82 A4	こすう	こすう		candidate	
+menu_overlay_0003_04424C	overlay_0003	overlay/overlay_0003.bin	0x4424C	8	12	82 B5 82 E5 82 A4 82 D0	しょうひ	しょうひ		candidate	
+menu_overlay_0003_044258	overlay_0003	overlay/overlay_0003.bin	0x44258	8	12	82 B5 82 E5 82 A4 82 D0	しょうひ	しょうひ		candidate	
+menu_overlay_0003_044264	overlay_0003	overlay/overlay_0003.bin	0x44264	6	8	82 B1 82 B7 82 A4	こすう	こすう		candidate	
+menu_overlay_0003_04426C	overlay_0003	overlay/overlay_0003.bin	0x4426C	6	8	82 B1 82 B7 82 A4	こすう	こすう		candidate	
+menu_overlay_0003_044274	overlay_0003	overlay/overlay_0003.bin	0x44274	8	16	82 B5 82 E5 82 A4 82 D0	しょうひ	しょうひ		candidate	
+menu_overlay_0003_0442A0	overlay_0003	overlay/overlay_0003.bin	0x442A0	28	32	82 B1 82 A4 82 B0 82 AB 81 40 82 DA 82 A4 82 AC 82 E5 81 40 82 B7 82 CE 82 E2 82 B3	こうげき　ぼうぎょ　すばやさ	こうげき　ぼうぎょ　すばやさ		candidate	
+menu_overlay_0003_0442C0	overlay_0003	overlay/overlay_0003.bin	0x442C0	8	12	81 40 25 73 81 5E 25 73	　%s／%s	%s／%s		candidate	
+menu_overlay_0003_0442CC	overlay_0003	overlay/overlay_0003.bin	0x442CC	8	16	81 40 25 73 81 5E 25 73	　%s／%s	%s／%s		candidate	
+menu_overlay_0003_0442F4	overlay_0003	overlay/overlay_0003.bin	0x442F4	10	12	83 82 83 93 83 58 83 5E 81 5B	モンスター	モンスター		candidate	
+menu_overlay_0003_044300	overlay_0003	overlay/overlay_0003.bin	0x44300	10	12	82 BB 82 A4 82 D1 82 C8 82 B5	そうびなし	そうびなし		candidate	
+menu_overlay_0003_04430C	overlay_0003	overlay/overlay_0003.bin	0x4430C	98	108	82 D4 82 AB 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 DA 82 A4 82 AE 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 AB 82 E1 82 CD 82 F1 81 40 81 40 81 40	ぶき　　　　　　　　　　　　　　　　　　　ぼうぐ　　　　　　　　　　　　　　　　　　きゃはん　　　	ぶき　　　　　　　　　　　　　　　　　　　ぼうぐ　　　　　　　　　　　　　　　　　　きゃはん		candidate	
+menu_overlay_0003_044390	overlay_0003	overlay/overlay_0003.bin	0x44390	16	20	81 40 81 40 81 40 81 40 81 40 82 C7 82 A4 82 AE	　　　　　どうぐ	どうぐ		candidate	
+menu_overlay_0003_0443A4	overlay_0003	overlay/overlay_0003.bin	0x443A4	16	20	81 40 81 40 81 40 81 40 81 40 82 BB 82 A4 82 D1	　　　　　そうび	そうび		candidate	
+menu_overlay_0003_0443B8	overlay_0003	overlay/overlay_0003.bin	0x443B8	16	20	81 40 81 40 81 40 81 40 81 40 82 B6 82 E3 82 C2	　　　　　じゅつ	じゅつ		candidate	
+menu_overlay_0003_0443CC	overlay_0003	overlay/overlay_0003.bin	0x443CC	18	20	81 40 81 40 81 40 81 40 81 40 83 81 83 93 83 6F 81 5B	　　　　　メンバー	メンバー		candidate	
+menu_overlay_0003_0443E0	overlay_0003	overlay/overlay_0003.bin	0x443E0	18	20	81 40 81 40 81 40 81 40 81 40 82 B6 82 F1 82 AF 82 A2	　　　　　じんけい	じんけい		candidate	
+menu_overlay_0003_0443F4	overlay_0003	overlay/overlay_0003.bin	0x443F4	18	20	81 40 81 40 81 40 81 40 81 40 83 86 81 5B 83 55 81 5B	　　　　　ユーザー	ユーザー		candidate	
+menu_overlay_0003_044408	overlay_0003	overlay/overlay_0003.bin	0x44408	18	20	81 40 81 40 81 40 81 40 81 40 82 B5 82 CC 82 D1 8E 44	　　　　　しのび札	しのび札		candidate	
+menu_overlay_0003_04441C	overlay_0003	overlay/overlay_0003.bin	0x4441C	20	24	81 40 81 40 81 40 81 40 81 40 83 58 83 65 81 5B 83 5E 83 58	　　　　　ステータス	ステータス		candidate	
+menu_overlay_0003_044478	overlay_0003	overlay/overlay_0003.bin	0x44478	26	28	81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48	？？？？？？？？？？？？？	？？？？？？？？？？？？？		candidate	
+menu_overlay_0003_04449C	overlay_0003	overlay/overlay_0003.bin	0x4449C	6	8	82 CD 82 B8 82 B7	はずす	はずす		candidate	
+menu_overlay_0003_0444A4	overlay_0003	overlay/overlay_0003.bin	0x444A4	20	24	82 BD 82 A2 82 B9 82 A2 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	たいせいけいしのび札	たいせいけいしのび札		candidate	
+menu_overlay_0003_0444BC	overlay_0003	overlay/overlay_0003.bin	0x444BC	20	24	82 C6 82 AD 82 B5 82 E3 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	とくしゅけいしのび札	とくしゅけいしのび札		candidate	
+menu_overlay_0003_0444D4	overlay_0003	overlay/overlay_0003.bin	0x444D4	22	24	83 58 83 65 81 5B 83 5E 83 58 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	ステータスけいしのび札	ステータスけいしのび札		candidate	
+menu_overlay_0003_0444EC	overlay_0003	overlay/overlay_0003.bin	0x444EC	22	44	82 C9 82 F1 82 B6 82 E3 82 C2 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	にんじゅつけいしのび札	にんじゅつけいしのび札		candidate	
+menu_overlay_0003_04454C	overlay_0003	overlay/overlay_0003.bin	0x4454C	6	12	82 B1 82 B7 82 A4	こすう	こすう		candidate	
+menu_overlay_0003_04457C	overlay_0003	overlay/overlay_0003.bin	0x4457C	4	8	81 5E 25 73	／%s	／%s		candidate	
+menu_overlay_0003_044584	overlay_0003	overlay/overlay_0003.bin	0x44584	100	104	81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 83 58 83 5E 83 7E 83 69 81 40 83 60 83 83 83 4E 83 89 81 40 81 40 81 40 81 40 81 40 81 40 82 B1 82 A4 82 B0 82 AB 81 40 82 DA 82 A4 82 AC 82 E5 81 40 82 B7 82 CE 82 E2 82 B3 81 40 81 40 81 40 81 40 81 40 81 40 82 C9 82 F1 82 E8 82 E5 82 AD	　　　　　　　　　　スタミナ　チャクラ　　　　　　こうげき　ぼうぎょ　すばやさ　　　　　　にんりょく	スタミナ　チャクラ　　　　　　こうげき　ぼうぎょ　すばやさ　　　　　　にんりょく		candidate	
+menu_overlay_0003_04462C	overlay_0003	overlay/overlay_0003.bin	0x4462C	18	28	82 BD 82 A2 82 BF 82 E5 82 A4 82 B9 82 C1 82 C4 82 A2	たいちょうせってい	たいちょうせってい		candidate	
+menu_overlay_0003_0446A0	overlay_0003	overlay/overlay_0003.bin	0x446A0	6	8	82 CD 82 A2 81 40	はい　	はい		candidate	
+menu_overlay_0003_0446A8	overlay_0003	overlay/overlay_0003.bin	0x446A8	6	8	82 A2 82 A2 82 A6	いいえ	いいえ		candidate	
+menu_overlay_0003_0446EC	overlay_0003	overlay/overlay_0003.bin	0x446EC	4	8	82 B3 82 C6	さと	さと		candidate	
+menu_overlay_0003_0446F4	overlay_0003	overlay/overlay_0003.bin	0x446F4	6	8	82 C8 82 DC 82 A6	なまえ	なまえ		candidate	
+menu_overlay_0003_0446FC	overlay_0003	overlay/overlay_0003.bin	0x446FC	8	12	82 D0 82 C6 82 B1 82 C6	ひとこと	ひとこと		candidate	
+menu_overlay_0003_044708	overlay_0003	overlay/overlay_0003.bin	0x44708	12	16	97 A2 82 CC 82 B9 82 C1 82 C4 82 A2	里のせってい	里のせってい		candidate	
+menu_overlay_0003_044718	overlay_0003	overlay/overlay_0003.bin	0x44718	12	16	83 8A 83 58 83 67 82 F0 82 DD 82 E9	リストをみる	リストをみる		candidate	
+menu_overlay_0003_044728	overlay_0003	overlay/overlay_0003.bin	0x44728	14	16	82 C6 82 E0 82 BE 82 BF 83 8A 83 58 83 67	ともだちリスト	ともだちリスト		candidate	
+menu_overlay_0003_044738	overlay_0003	overlay/overlay_0003.bin	0x44738	16	20	82 C8 82 DC 82 A6 82 CC 82 B9 82 C1 82 C4 82 A2	なまえのせってい	なまえのせってい		candidate	
+menu_overlay_0003_04474C	overlay_0003	overlay/overlay_0003.bin	0x4474C	16	20	82 BD 82 A2 82 B9 82 F1 82 B9 82 A2 82 B9 82 AB	たいせんせいせき	たいせんせいせき		candidate	
+menu_overlay_0003_044760	overlay_0003	overlay/overlay_0003.bin	0x44760	16	20	82 C8 82 DC 82 A6 82 CC 82 D6 82 F1 82 B1 82 A4	なまえのへんこう	なまえのへんこう		candidate	
+menu_overlay_0003_044774	overlay_0003	overlay/overlay_0003.bin	0x44774	16	20	83 8A 83 58 83 67 82 A9 82 E7 82 CD 82 B8 82 B7	リストからはずす	リストからはずす		candidate	
+menu_overlay_0003_044788	overlay_0003	overlay/overlay_0003.bin	0x44788	16	20	82 BD 82 A2 82 B9 82 F1 82 B9 82 C1 82 C4 82 A2	たいせんせってい	たいせんせってい		candidate	
+menu_overlay_0003_04479C	overlay_0003	overlay/overlay_0003.bin	0x4479C	16	20	82 B9 82 A2 82 B9 82 AB 82 A9 82 AD 82 C9 82 F1	せいせきかくにん	せいせきかくにん		candidate	
+menu_overlay_0003_0447B0	overlay_0003	overlay/overlay_0003.bin	0x447B0	18	20	82 D0 82 C6 82 B1 82 C6 82 CC 82 B9 82 C1 82 C4 82 A2	ひとことのせってい	ひとことのせってい		candidate	
+menu_overlay_0003_0447C4	overlay_0003	overlay/overlay_0003.bin	0x447C4	18	20	82 76 82 89 81 5B 82 65 82 89 83 7C 83 43 83 93 83 67	ＷｉーＦｉポイント	ＷｉーＦｉポイント		candidate	
+menu_overlay_0003_0447D8	overlay_0003	overlay/overlay_0003.bin	0x447D8	22	24	82 A0 82 C8 82 BD 82 CC 82 C6 82 E0 82 BE 82 BF 83 52 81 5B 83 68	あなたのともだちコード	あなたのともだちコード		candidate	
+menu_overlay_0003_0447F0	overlay_0003	overlay/overlay_0003.bin	0x447F0	22	24	82 C6 82 E0 82 BE 82 BF 83 52 81 5B 83 68 82 C6 82 A4 82 EB 82 AD	ともだちコードとうろく	ともだちコードとうろく		candidate	
+menu_overlay_0003_044808	overlay_0003	overlay/overlay_0003.bin	0x44808	22	24	82 C6 82 E0 82 BE 82 BF 83 52 81 5B 83 68 82 A9 82 AD 82 C9 82 F1	ともだちコードかくにん	ともだちコードかくにん		candidate	
+menu_overlay_0003_0449A8	overlay_0003	overlay/overlay_0003.bin	0x449A8	6	8	82 CB 82 BE 82 F1	ねだん	ねだん		candidate	
+menu_overlay_0003_0449C8	overlay_0003	overlay/overlay_0003.bin	0x449C8	8	12	82 B2 82 A4 82 AF 82 A2	ごうけい	ごうけい		candidate	
+menu_overlay_0003_0449D4	overlay_0003	overlay/overlay_0003.bin	0x449D4	8	12	82 B4 82 F1 82 AB 82 F1	ざんきん	ざんきん		candidate	
+menu_overlay_0003_0449E0	overlay_0003	overlay/overlay_0003.bin	0x449E0	18	20	82 B1 82 A4 82 C9 82 E3 82 A4 82 B7 82 E9 82 A9 82 B8	こうにゅうするかず	こうにゅうするかず		candidate	
+menu_overlay_0003_044A58	overlay_0003	overlay/overlay_0003.bin	0x44A58	6	8	82 CB 82 BE 82 F1	ねだん	ねだん		candidate	
+menu_overlay_0003_044A78	overlay_0003	overlay/overlay_0003.bin	0x44A78	8	12	82 B2 82 A4 82 AF 82 A2	ごうけい	ごうけい		candidate	
+menu_overlay_0003_044A84	overlay_0003	overlay/overlay_0003.bin	0x44A84	8	12	82 B4 82 F1 82 AB 82 F1	ざんきん	ざんきん		candidate	
+menu_overlay_0003_044AB4	overlay_0003	overlay/overlay_0003.bin	0x44AB4	20	24	82 BD 82 A2 82 B9 82 A2 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	たいせいけいしのび札	たいせいけいしのび札		candidate	
+menu_overlay_0003_044ACC	overlay_0003	overlay/overlay_0003.bin	0x44ACC	20	24	82 C6 82 AD 82 B5 82 E3 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	とくしゅけいしのび札	とくしゅけいしのび札		candidate	
+menu_overlay_0003_044AE4	overlay_0003	overlay/overlay_0003.bin	0x44AE4	22	24	82 C9 82 F1 82 B6 82 E3 82 C2 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	にんじゅつけいしのび札	にんじゅつけいしのび札		candidate	
+menu_overlay_0003_044AFC	overlay_0003	overlay/overlay_0003.bin	0x44AFC	22	24	83 58 83 65 81 5B 83 5E 83 58 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	ステータスけいしのび札	ステータスけいしのび札		candidate	
+menu_overlay_0003_044B84	overlay_0003	overlay/overlay_0003.bin	0x44B84	6	8	82 CB 82 BE 82 F1	ねだん	ねだん		candidate	
+menu_overlay_0003_044BA4	overlay_0003	overlay/overlay_0003.bin	0x44BA4	8	12	82 B2 82 A4 82 AF 82 A2	ごうけい	ごうけい		candidate	
+menu_overlay_0003_044BB0	overlay_0003	overlay/overlay_0003.bin	0x44BB0	8	12	82 B4 82 F1 82 AB 82 F1	ざんきん	ざんきん		candidate	
+menu_overlay_0003_044BBC	overlay_0003	overlay/overlay_0003.bin	0x44BBC	18	20	82 B1 82 A4 82 C9 82 E3 82 A4 82 B7 82 E9 82 A9 82 B8	こうにゅうするかず	こうにゅうするかず		candidate	
+menu_overlay_0003_044C2C	overlay_0003	overlay/overlay_0003.bin	0x44C2C	12	16	82 C9 82 F1 82 E8 82 E5 82 AD 81 46	にんりょく：	にんりょく：		candidate	
+menu_overlay_0003_044C54	overlay_0003	overlay/overlay_0003.bin	0x44C54	10	16	82 C4 82 C9 82 A2 82 EA 82 BD	てにいれた	てにいれた		candidate	
+menu_overlay_0003_044C84	overlay_0003	overlay/overlay_0003.bin	0x44C84	8	12	82 D3 82 BD 82 E8 82 DF	ふたりめ	ふたりめ		candidate	
+menu_overlay_0003_044C90	overlay_0003	overlay/overlay_0003.bin	0x44C90	8	12	82 E6 82 C9 82 F1 82 DF	よにんめ	よにんめ		candidate	
+menu_overlay_0003_044C9C	overlay_0003	overlay/overlay_0003.bin	0x44C9C	8	12	82 D0 82 C6 82 E8 82 DF	ひとりめ	ひとりめ		candidate	
+menu_overlay_0003_044CA8	overlay_0003	overlay/overlay_0003.bin	0x44CA8	10	12	82 B3 82 F1 82 C9 82 F1 82 DF	さんにんめ	さんにんめ		candidate	
+menu_overlay_0003_044D2C	overlay_0003	overlay/overlay_0003.bin	0x44D2C	14	20	82 E0 82 C1 82 C4 82 A2 82 E9 82 A9 82 B8	もっているかず	もっているかず		candidate	
+menu_overlay_0003_044D64	overlay_0003	overlay/overlay_0003.bin	0x44D64	6	8	82 CB 82 BE 82 F1	ねだん	ねだん		candidate	
+menu_overlay_0003_044D74	overlay_0003	overlay/overlay_0003.bin	0x44D74	8	12	82 A4 82 E9 82 A9 82 B8	うるかず	うるかず		candidate	
+menu_overlay_0003_044D80	overlay_0003	overlay/overlay_0003.bin	0x44D80	8	12	82 B2 82 A4 82 AF 82 A2	ごうけい	ごうけい		candidate	
+menu_overlay_0003_044D8C	overlay_0003	overlay/overlay_0003.bin	0x44D8C	8	12	82 B4 82 F1 82 AB 82 F1	ざんきん	ざんきん		candidate	
+menu_overlay_0003_044FE8	overlay_0003	overlay/overlay_0003.bin	0x44FE8	14	16	82 6B 82 75 83 41 83 62 83 76 82 DC 82 C5	ＬＶアップまで	ＬＶアップまで		candidate	
+menu_overlay_0003_044FF8	overlay_0003	overlay/overlay_0003.bin	0x44FF8	10	12	82 BB 82 EA 82 BC 82 EA 25 73	それぞれ%s	それぞれ%s		candidate	
+menu_overlay_0003_045004	overlay_0003	overlay/overlay_0003.bin	0x45004	6	12	25 73 82 CD 25 73	%sは%s	%sは%s		candidate	
+menu_overlay_0003_045020	overlay_0003	overlay/overlay_0003.bin	0x45020	22	24	82 CD 81 40 83 8C 83 78 83 8B 82 AA 82 A0 82 AA 82 C1 82 BD 81 49	は　レベルがあがった！	は　レベルがあがった！		candidate	
+menu_overlay_0003_045180	overlay_0003	overlay/overlay_0003.bin	0x45180	14	20	82 CC 81 40 82 E2 82 E9 82 AB 82 AA 81 40	の　やるきが　	の　やるきが		candidate	
+menu_overlay_0003_0451A8	overlay_0003	overlay/overlay_0003.bin	0x451A8	6	16	82 E2 82 E9 82 AB	やるき	やるき		candidate	
+menu_overlay_0003_0451C0	overlay_0003	overlay/overlay_0003.bin	0x451C0	18	20	81 40 81 40 81 40 81 40 81 40 25 73 81 5E 25 73 81 40	　　　　　%s／%s　	%s／%s		candidate	
+menu_overlay_0003_045228	overlay_0003	overlay/overlay_0003.bin	0x45228	70	76	81 40 81 40 82 AD 82 BF 82 E6 82 B9 83 56 81 5B 83 67 82 F0 81 40 82 A8 82 A2 82 C4 81 40 81 40 81 40 81 40 81 40 81 40 82 A0 82 F1 82 B2 82 A4 82 F0 81 40 82 C9 82 E3 82 A4 82 E8 82 E5 82 AD 82 B9 82 E6 81 49	　　くちよせシートを　おいて　　　　　　あんごうを　にゅうりょくせよ！	くちよせシートを　おいて　　　　　　あんごうを　にゅうりょくせよ！		candidate	
+menu_overlay_0003_0452A4	overlay_0003	overlay/overlay_0003.bin	0x452A4	6	8	82 B5 82 E5 82 A4	しょう	しょう		candidate	
+menu_overlay_0003_0452AC	overlay_0003	overlay/overlay_0003.bin	0x452AC	8	12	83 7C 83 43 83 93 83 67	ポイント	ポイント		candidate	
+menu_overlay_0003_0452B8	overlay_0003	overlay/overlay_0003.bin	0x452B8	28	32	81 40 83 5A 81 5B 83 75 83 74 83 40 83 43 83 8B 81 45 97 D5 81 40 81 40 81 40 81 40	　セーブファイル・臨　　　　	セーブファイル・臨		candidate	
+menu_overlay_0003_0452D8	overlay_0003	overlay/overlay_0003.bin	0x452D8	28	32	81 40 83 5A 81 5B 83 75 83 74 83 40 83 43 83 8B 81 45 95 BA 81 40 81 40 81 40 81 40	　セーブファイル・兵　　　　	セーブファイル・兵		candidate	
+menu_overlay_0003_045404	overlay_0003	overlay/overlay_0003.bin	0x45404	18	20	83 5A 81 5B 83 75 83 74 83 40 83 43 83 8B 81 45 97 D5	セーブファイル・臨	セーブファイル・臨		candidate	
+menu_overlay_0003_045418	overlay_0003	overlay/overlay_0003.bin	0x45418	18	24	83 5A 81 5B 83 75 83 74 83 40 83 43 83 8B 81 45 95 BA	セーブファイル・兵	セーブファイル・兵		candidate	
+menu_overlay_0003_045430	overlay_0003	overlay/overlay_0003.bin	0x45430	14	16	25 73 81 40 25 73 81 46 25 73 81 46 25 73	%s　%s：%s：%s	%s　%s：%s：%s		candidate	
+menu_overlay_0003_045448	overlay_0003	overlay/overlay_0003.bin	0x45448	20	24	83 66 81 5B 83 5E 82 AA 81 40 82 A0 82 E8 82 DC 82 B9 82 F1	データが　ありません	データが　ありません		candidate	
+menu_overlay_0003_045460	overlay_0003	overlay/overlay_0003.bin	0x45460	24	28	83 66 81 5B 83 5E 82 AA 81 40 82 B1 82 ED 82 EA 82 C4 82 A2 82 DC 82 B7	データが　こわれています	データが　こわれています		candidate	
+menu_overlay_0003_04547C	overlay_0003	overlay/overlay_0003.bin	0x4547C	20	24	25 73 81 40 82 4F 82 4F 81 46 82 4F 82 4F 81 46 82 4F 82 4F	%s　００：００：００	%s　００：００：００		candidate	
+menu_overlay_0003_0454B8	overlay_0003	overlay/overlay_0003.bin	0x454B8	10	12	83 66 81 5B 83 5E 82 C8 82 B5	データなし	データなし		candidate	
+menu_overlay_0003_0454CC	overlay_0003	overlay/overlay_0003.bin	0x454CC	20	32	82 CD 82 BB 82 F1 83 66 81 5B 83 5E 83 74 83 40 83 43 83 8B	はそんデータファイル	はそんデータファイル		candidate	
+menu_overlay_0003_045614	overlay_0003	overlay/overlay_0003.bin	0x45614	4	8	81 5B 81 5B	ーー	ーー		candidate	
+menu_overlay_0003_04561C	overlay_0003	overlay/overlay_0003.bin	0x4561C	4	8	92 86 94 45	中忍	中忍		candidate	
+menu_overlay_0003_045624	overlay_0003	overlay/overlay_0003.bin	0x45624	4	8	89 BA 94 45	下忍	下忍		candidate	
+menu_overlay_0003_04562C	overlay_0003	overlay/overlay_0003.bin	0x4562C	4	8	8F E3 94 45	上忍	上忍		candidate	
+menu_overlay_0003_045688	overlay_0003	overlay/overlay_0003.bin	0x45688	4	8	81 5B 81 5B	ーー	ーー		candidate	
+menu_overlay_0003_0456A4	overlay_0003	overlay/overlay_0003.bin	0x456A4	6	8	82 A2 82 A2 82 A6	いいえ	いいえ		candidate	
+menu_overlay_0003_0456AC	overlay_0003	overlay/overlay_0003.bin	0x456AC	6	8	82 CD 82 A2 81 40	はい　	はい		candidate	
+menu_overlay_0003_045704	overlay_0003	overlay/overlay_0003.bin	0x45704	8	12	81 5B 81 5B 81 5B 81 5B	ーーーー	ーーーー		candidate	
+menu_overlay_0004_00293A	overlay_0004	overlay/overlay_0004.bin	0x293A	3	4	82 E5 48	ょH	ょH		candidate	
+menu_overlay_0004_002952	overlay_0004	overlay/overlay_0004.bin	0x2952	3	4	82 E5 34	ょ4	ょ4		candidate	
+menu_overlay_0004_005270	overlay_0004	overlay/overlay_0004.bin	0x5270	12	16	81 40 82 CD 82 B6 82 DF 82 A9 82 E7	　はじめから	はじめから		candidate	
+menu_overlay_0004_005280	overlay_0004	overlay/overlay_0004.bin	0x5280	20	24	81 40 82 76 82 89 81 5B 82 65 82 89 82 B9 82 C1 82 C4 82 A2	　ＷｉーＦｉせってい	ＷｉーＦｉせってい		candidate	
+menu_overlay_0004_005298	overlay_0004	overlay/overlay_0004.bin	0x5298	18	20	81 40 82 C6 82 E0 82 BE 82 BF 82 C9 82 AD 82 CE 82 E9	　ともだちにくばる	ともだちにくばる		candidate	
+menu_overlay_0004_0052AC	overlay_0004	overlay/overlay_0004.bin	0x52AC	12	16	81 40 82 C2 82 C3 82 AB 82 A9 82 E7	　つづきから	つづきから		candidate	
+menu_overlay_0004_0052BC	overlay_0004	overlay/overlay_0004.bin	0x52BC	12	16	81 40 82 CD 82 B6 82 DF 82 A9 82 E7	　はじめから	はじめから		candidate	
+menu_overlay_0004_0052CC	overlay_0004	overlay/overlay_0004.bin	0x52CC	18	20	81 40 83 74 83 40 83 43 83 8B 82 B3 82 AD 82 B6 82 E5	　ファイルさくじょ	ファイルさくじょ		candidate	
+menu_overlay_0004_0052E0	overlay_0004	overlay/overlay_0004.bin	0x52E0	20	24	81 40 82 76 82 89 81 5B 82 65 82 89 82 B9 82 C1 82 C4 82 A2	　ＷｉーＦｉせってい	ＷｉーＦｉせってい		candidate	
+menu_overlay_0004_0052F8	overlay_0004	overlay/overlay_0004.bin	0x52F8	18	20	81 40 82 C6 82 E0 82 BE 82 BF 82 C9 82 AD 82 CE 82 E9	　ともだちにくばる	ともだちにくばる		candidate	
+menu_overlay_0004_00530C	overlay_0004	overlay/overlay_0004.bin	0x530C	16	20	81 40 83 54 83 45 83 93 83 68 83 65 83 58 83 67	　サウンドテスト	サウンドテスト		candidate	
+menu_overlay_0004_005320	overlay_0004	overlay/overlay_0004.bin	0x5320	12	16	82 61 82 66 82 6C 81 40 81 40 81 40	ＢＧＭ　　　	ＢＧＭ		candidate	
+menu_overlay_0004_005330	overlay_0004	overlay/overlay_0004.bin	0x5330	12	16	83 4C 83 83 83 89 83 4E 83 5E 81 5B	キャラクター	キャラクター		candidate	
+menu_overlay_0004_005340	overlay_0004	overlay/overlay_0004.bin	0x5340	12	16	83 7B 83 43 83 58 81 40 81 40 81 40	ボイス　　　	ボイス		candidate	
+menu_overlay_0004_005350	overlay_0004	overlay/overlay_0004.bin	0x5350	12	16	81 40 82 C4 82 A2 82 B5 81 40 81 40	　ていし　　	ていし		candidate	
+menu_overlay_0004_005360	overlay_0004	overlay/overlay_0004.bin	0x5360	12	16	81 40 82 B3 82 A2 82 B9 82 A2 81 40	　さいせい　	さいせい		candidate	
+menu_overlay_0004_005370	overlay_0004	overlay/overlay_0004.bin	0x5370	16	21	81 40 83 54 83 45 83 93 83 68 83 65 83 58 83 67	　サウンドテスト	サウンドテスト		candidate	
+menu_overlay_0005_009F8A	overlay_0005	overlay/overlay_0005.bin	0x9F8A	3	4	82 E5 54	ょT	ょT		candidate	
+menu_overlay_0005_00A0F6	overlay_0005	overlay/overlay_0005.bin	0xA0F6	4	5	90 E5 8F 70	仙術	仙術		candidate	
+menu_overlay_0005_00A25E	overlay_0005	overlay/overlay_0005.bin	0xA25E	4	5	90 E5 92 68	仙檀	仙檀		candidate	
+menu_overlay_0005_00C0B6	overlay_0005	overlay/overlay_0005.bin	0xC0B6	4	5	90 E5 9F 68	仙殄	仙殄		candidate	
+menu_overlay_0005_00C0DA	overlay_0005	overlay/overlay_0005.bin	0xC0DA	4	5	90 E5 96 68	仙防	仙防		candidate	
+menu_overlay_0005_00E31A	overlay_0005	overlay/overlay_0005.bin	0xE31A	4	5	9F E5 8D 5D	溷江	溷江		candidate	
+menu_overlay_0005_00EB22	overlay_0005	overlay/overlay_0005.bin	0xEB22	4	5	90 E5 8E 54	仙撒	仙撒		candidate	
+menu_overlay_0005_012D6A	overlay_0005	overlay/overlay_0005.bin	0x12D6A	4	5	82 E5 59 4F	ょYO	ょYO		candidate	
+menu_overlay_0005_012E42	overlay_0005	overlay/overlay_0005.bin	0x12E42	4	5	82 E5 23 4F	ょ#O	ょ#O		candidate	
+menu_overlay_0005_01307E	overlay_0005	overlay/overlay_0005.bin	0x1307E	4	5	90 E5 9A 47	仙哦	仙哦		candidate	
+menu_overlay_0005_01448A	overlay_0005	overlay/overlay_0005.bin	0x1448A	4	5	90 E5 83 42	仙ィ	仙ィ		candidate	
+menu_overlay_0005_01EC86	overlay_0005	overlay/overlay_0005.bin	0x1EC86	3	4	82 E5 68	ょh	ょh		candidate	
+menu_overlay_0005_025ECE	overlay_0005	overlay/overlay_0005.bin	0x25ECE	3	4	82 E1 38	ゃ8	ゃ8		candidate	
+menu_overlay_0005_0267EE	overlay_0005	overlay/overlay_0005.bin	0x267EE	6	8	9F E5 E7 ED FB EB	溷鈿隝	溷鈿隝		candidate	
+menu_overlay_0005_026916	overlay_0005	overlay/overlay_0005.bin	0x26916	6	7	90 E5 9D ED FB EB	仙晨隝	仙晨隝		candidate	

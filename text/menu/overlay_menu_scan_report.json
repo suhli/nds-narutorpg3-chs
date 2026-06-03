@@ -1,0 +1,26 @@
+{
+  "input_root": "rom/unpacked/origin",
+  "outputs": {
+    "candidates": "text/menu/overlay_menu_candidates.tsv",
+    "report": "text/menu/overlay_menu_scan_report.json"
+  },
+  "candidate_count": 346,
+  "component_counts": {
+    "arm9": 16,
+    "overlay_0000": 78,
+    "overlay_0001": 48,
+    "overlay_0002": 5,
+    "overlay_0003": 167,
+    "overlay_0004": 17,
+    "overlay_0005": 15
+  },
+  "targets": [
+    "arm9.bin",
+    "overlay/overlay_0000.bin",
+    "overlay/overlay_0001.bin",
+    "overlay/overlay_0002.bin",
+    "overlay/overlay_0003.bin",
+    "overlay/overlay_0004.bin",
+    "overlay/overlay_0005.bin"
+  ]
+}

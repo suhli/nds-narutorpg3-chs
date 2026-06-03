@@ -4,9 +4,9 @@ current_plan:
   document: plan/text-writeback-smoke.md
   status: in_progress
 current_stage:
-  id: stage4-desmume-validation
-  name: DeSmuME MCP 显示冒烟
-  status: in_progress
+  id: full-writeback-test
+  name: 全量写回测试成品
+  status: validating
 stage_cache:
   dir: plan/cache/text-writeback-smoke
   documents:
@@ -16,11 +16,11 @@ stage_cache:
     - plan/cache/text-writeback-smoke/stage2-sample-writeback.md
     - plan/cache/text-writeback-smoke/stage3-rom-packaging.md
     - plan/cache/text-writeback-smoke/stage4-desmume-validation.md
+    - plan/cache/text-writeback-smoke/full-writeback-test.md
 stage_outputs:
   expected:
-    - rom/text_writeback_smoke.nds
-    - plan/cache/text-writeback-smoke/sample-writeback-records.json
-    - plan/cache/text-writeback-smoke/stage4-desmume-validation.md
+    - rom/narutorpg3_chs_full_writeback_test.nds
+    - plan/cache/text-writeback-smoke/full-writeback-records.json
   produced:
     - tools/encode_translation_text.py
     - tools/extract_translation_charset.py
@@ -33,12 +33,13 @@ stage_outputs:
     - text/reports/writeback-capacity-report.json
     - plan/cache/code-table-extraction/font-build-smoke/
     - plan/cache/text-writeback-smoke/font-build-smoke-sjis-code-table/
-    - plan/cache/text-writeback-smoke/sample-writeback-records.json
-    - plan/cache/text-writeback-smoke/desmume-after-start-a.png
-    - plan/cache/text-writeback-smoke/desmume-after-title-inputs.png
-    - plan/cache/text-writeback-smoke/desmume-after-extra-inputs.png
-    - rom/text_writeback_smoke.nds
+    - plan/cache/text-writeback-smoke/full-writeback-records.json
+    - plan/cache/text-writeback-smoke/desmume-full-writeback-boot.png
+    - rom/narutorpg3_chs_full_writeback_test.nds
+    - rom/narutorpg3_chs_full_writeback_menu_overlay_probe.nds
+    - plan/cache/text-writeback-smoke/menu-overlay-probe-records.json
     - hack/文本回写编码观察.md
+    - hack/标题菜单文本来源.md
 updated_at: "2026-06-02"
 previous_plan:
   id: code-table-extraction
@@ -46,10 +47,12 @@ previous_plan:
   status: done
   handoff: plan/cache/code-table-extraction/handoff-to-text-writeback.md
 notes:
-  - Stage 1 已完成：5863 行全部生成候选编码，容量超限 0，缺码表 0。
-  - 当前码表已修正为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。
-  - Stage 2 已完成 2 条样本固定槽写入：msg/fld/013.m offset 0xAE；param/item_data.dat offset 0x3C60。
-  - Stage 3 已完成独立 ROM 打包：rom/text_writeback_smoke.nds，ndstool Header CRC OK / Banner CRC OK。
-  - Stage 4 已确认样本 ROM 可通过 DeSmuME MCP 加载并到标题画面；样本文本尚未显示，中文端序仍未完成运行时确认。
-  - 下一步优先用更可达样本或断点/内存观察确认 F0 40 等扩展码是否进入 0208913C 的 R1/current_char。
-  - 普通 ASCII 风险 590 行，padding 风险 5432 行，进入后续全量样本前仍需要策略决策。
+  - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
+  - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
+  - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。
+  - 全量测试策略：中文/全角符号 big-endian 候选；ASCII 单字节候选；尾部 padding 剥离后 00 填充；原终止符保留。
+  - ndstool 验证 rom/narutorpg3_chs_full_writeback_test.nds：Header CRC OK / Banner CRC OK。
+  - DeSmuME MCP 已确认全量测试 ROM 可加载并运行到初始画面，截图见 plan/cache/text-writeback-smoke/desmume-full-writeback-boot.png。
+  - 下一步优先加载全量测试 ROM 做 DeSmuME 流程测试；端序、ASCII 和 padding 策略仍以游戏内显示结果为准。
+  - MCP 截图曾连接到非用户可见实例；当前已改用 Windows 窗口截图记录可见菜单，见 plan/cache/text-writeback-smoke/windows-desmume-menu.png。
+  - 标题菜单选项位于 overlay/overlay_0004.bin，不在本次 5863 条 data/text 全量写回范围内；已构建菜单 overlay 探针 ROM：rom/narutorpg3_chs_full_writeback_menu_overlay_probe.nds。
