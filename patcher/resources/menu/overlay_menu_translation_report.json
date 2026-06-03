@@ -8,13 +8,13 @@
     "translations": "patcher\\resources\\menu\\overlay_menu_translations.tsv",
     "report": "patcher\\resources\\menu\\overlay_menu_translation_report.json"
   },
-  "selected_rows": 284,
-  "unique_keys": 209,
+  "selected_rows": 285,
+  "unique_keys": 210,
   "status_counts": {
-    "ready": 284
+    "ready": 285
   },
   "translation_source_counts": {
-    "local_menu_dictionary": 283,
+    "local_menu_dictionary": 284,
     "row_menu_override": 1
   },
   "pending_keys": [],

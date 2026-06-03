@@ -151,6 +151,14 @@ stage_outputs:
     - patcher/work/build_20260603_182539/patcher-build-summary.json
     - patcher/work/build_20260603_182539/missing-chars-report.json
     - patcher/work/build_20260603_182539/missing-chars.tsv
+    - rom/narutorpg3_chs_patcher_v4_menu_fusion12.nds
+    - patcher/work/build_20260603_182958/patcher-build-summary.json
+    - patcher/work/build_20260603_182958/missing-chars-report.json
+    - patcher/work/build_20260603_182958/missing-chars.tsv
+    - rom/narutorpg3_chs_patcher_v5_menu_itempad_fusion12.nds
+    - patcher/work/build_20260603_184433/patcher-build-summary.json
+    - patcher/work/build_20260603_184433/missing-chars-report.json
+    - patcher/work/build_20260603_184433/missing-chars.tsv
     - rom/narutorpg3_chs_full_writeback_menu_v2.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_friend_kinshi_v1.nds
@@ -170,7 +178,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-03T18:26:41+08:00"
+updated_at: "2026-06-03T18:52:41+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -197,7 +205,12 @@ notes:
   - Compared 1x2 candidates fusion-pixel-12px-monospaced-zh_hans.ttf and MZPXorig.ttf in plan/cache/text-writeback-smoke/font-render-probe/1x2_candidate_fonts_compare.png; default 1x2.ttf is now fusion-pixel-12px-monospaced-zh_hans.ttf per user request, while MZPXorig.ttf remains as a comparison candidate.
   - Built rom/narutorpg3_chs_patcher_mzpx_1x2_8x12_test.nds and rom/narutorpg3_chs_patcher_fusion12_1x2_8x12_test.nds; both passed Header CRC OK / Banner CRC OK and both missing reports are down to only U+E0FD.
   - Added manual overlay_0002 control-delimited menu entries at 0x12C0C, 0x12C34, 0x12C3C, 0x12C64, 0x12C6A, and 0x12C72; the rows patch only visible bytes and preserve following 01 00 separators.
-  - Built rom/narutorpg3_chs_patcher_v3_menu_fusion12.nds from fusion12 default font and 284 ready menu rows; Header CRC OK / Banner CRC OK, missing chars remain only U+E0FD for both 1x1.ttf and 1x2.ttf.
+  - Added a row-level override for menu_overlay_0002_0128B8 so the item-acquisition suffix keeps the original 11 full-width placeholder spaces before 获得了！.
+  - Built rom/narutorpg3_chs_patcher_v4_menu_fusion12.nds from fusion12 default font and 284 ready menu rows; Header CRC OK / Banner CRC OK, missing chars remain only U+E0FD for both 1x1.ttf and 1x2.ttf.
+  - Added manual overlay_0003 menu entry at 0x43D64 for だいじなもの -> 重要物; menu rows are now 285 ready rows.
+  - Fixed no-terminator UI text table padding for item/equip/jyutu description tables: short translations now pad with full-width spaces instead of 00, while embedded CTRL_0000 separators remain 00 00.
+  - Built rom/narutorpg3_chs_patcher_v5_menu_itempad_fusion12.nds; ndstool Header CRC OK / Banner CRC OK, text_rows=5843, menu_rows=285, and missing chars remain only U+E0FD for both 1x1.ttf and 1x2.ttf.
+  - Final v5 recheck passed: patcher script AST syntax_ok, ndstool Header CRC OK / Banner CRC OK, item_msg first short description uses 81 40 padding, and overlay_0003 0x43D64 preserves following %s strings.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

@@ -22,6 +22,15 @@ DEFAULT_EXCLUDED_SOURCE_FILES = {
     "msg/wifi/kinshi_msg.msg",
 }
 
+SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
+    "msg/equip_msg.msg",
+    "msg/item_msg.msg",
+    "msg/jyutu_msg.msg",
+    "msg/menu/item_menu_msg.msg",
+    "msg/skill_msg.msg",
+    "msg/taityou_kouka.msg",
+}
+
 CTRL_RE = re.compile(r"\{CTRL_([0-9A-Fa-f]{4})\}")
 LEADING_CTRL_RUN_RE = re.compile(r"^((?:\{CTRL_[0-9A-Fa-f]{4}\})+)(.*)$", re.S)
 OPEN_QUOTES = ("「", "『", "“", '"')
@@ -208,6 +217,15 @@ def message_padding(length: int) -> bytes:
     return b"\x81\x40" * (length // 2) + (b"\x20" if length % 2 else b"")
 
 
+def fixed_slot_padding(row: dict[str, str], length: int) -> tuple[bytes, str]:
+    if length < 0:
+        raise ValueError("negative fixed slot padding")
+    source_file = normalize_source_file(row.get("source_file", ""))
+    if source_file in SPACE_PADDED_FIXED_SLOT_SOURCE_FILES:
+        return message_padding(length), "fullwidth_space_fixed_slot"
+    return bytes(length), "zero_fixed_slot"
+
+
 def make_message_stream_replacement(
     row: dict[str, str],
     *,
@@ -269,10 +287,13 @@ def make_replacement(
         if used_len > source_len:
             raise ValueError(f"{row['id']} replacement exceeds original record length")
         replacement = encoded + terminator + bytes(source_len - used_len)
+        extra["padding_strategy"] = "zero_after_terminator"
     else:
         if len(encoded) > source_len:
             raise ValueError(f"{row['id']} replacement exceeds fixed field length")
-        replacement = encoded + bytes(source_len - len(encoded))
+        padding, strategy = fixed_slot_padding(row, source_len - len(encoded))
+        replacement = encoded + padding
+        extra["padding_strategy"] = strategy
     return encoded, terminator, replacement, extra
 
 
@@ -419,6 +440,7 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], d
             "trailing_padding": "strip_and_zero_fill",
             "terminator": "preserve_raw_terminator_when_present",
             "message_stream": "preserve_prefix_and_original_terminator_position_with_space_padding",
+            "fixed_slot_without_terminator": "space_pad_known_ui_text_tables_else_zero_fill",
             "rom_origin": "read_only_not_modified",
             "excluded_source_files": excluded_counts,
         },

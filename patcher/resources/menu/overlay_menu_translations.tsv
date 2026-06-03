@@ -125,6 +125,7 @@ menu_overlay_0003_042A60	overlay_0003	overlay/overlay_0003.bin	0x42A60	24	28	82 
 menu_overlay_0003_042A9C	overlay_0003	overlay/overlay_0003.bin	0x42A9C	24	28	82 4F 82 50 82 51 82 52 82 53 82 54 82 55 82 56 82 57 82 58 81 48 81 5B	０１２３４５６７８９？ー	０１２３４５６７８９？ー	０１２３４５６７８９？ー	local_menu_dictionary	82 4F F7 CC F7 CE F5 D3 F5 CC F7 D1 F7 D2 82 56 82 57 82 58 F1 5E 81 5B	24	4		ready	
 menu_overlay_0003_043D48	overlay_0003	overlay/overlay_0003.bin	0x43D48	4	8	82 DD 82 E9	みる	みる	查看	local_menu_dictionary	F0 D0 F0 81	4	4		ready	
 menu_overlay_0003_043D50	overlay_0003	overlay/overlay_0003.bin	0x43D50	6	8	82 C2 82 A9 82 A4	つかう	つかう	使用	local_menu_dictionary	F0 BD F0 61	4	4		ready	
+menu_overlay_0003_043D64	overlay_0003	overlay/overlay_0003.bin	0x43D64	12	16	82 BE 82 A2 82 B6 82 C8 82 E0 82 CC	だいじなもの	だいじなもの	重要物	local_menu_dictionary	F4 AE F0 AC F5 75	6	10		ready	manual_null_delimited
 menu_overlay_0003_043D7C	overlay_0003	overlay/overlay_0003.bin	0x43D7C	6	8	25 73 82 CC 81 40	%sの　	%sの	%s的	local_menu_dictionary	25 73 F0 69	4	4		ready	
 menu_overlay_0003_043D84	overlay_0003	overlay/overlay_0003.bin	0x43D84	8	12	91 53 91 CC 82 CC 81 40	全体の　	全体の	全体的	local_menu_dictionary	F0 C5 F2 EE F0 69	6	6		ready	
 menu_overlay_0003_043D90	overlay_0003	overlay/overlay_0003.bin	0x43D90	40	44	25 73 83 58 83 5E 83 7E 83 69 82 C6 81 40 83 60 83 83 83 4E 83 89 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sスタミナと　チャクラが　かいふくした！	%sスタミナと　チャクラが　かいふくした！	%s体力和查克拉恢复了！	local_menu_dictionary	25 73 F2 EE F0 DC F0 6F F0 D0 F0 D1 F0 D2 F5 CB F5 C8 F0 CC F0 43	22	22		ready	
