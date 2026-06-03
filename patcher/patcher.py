@@ -522,8 +522,8 @@ def build_font_assets(
             "missing_by_mode_counts": {},
         }
 
-    font_1x1 = repo_path(args.font_1x1) if args.font_1x1 else resources / "fonts" / "fusion-pixel-8px-monospaced-zh_hans.ttf"
-    font_1x2 = repo_path(args.font_1x2) if args.font_1x2 else resources / "fonts" / "FashionBitmap16_0.092.ttf"
+    font_1x1 = repo_path(args.font_1x1) if args.font_1x1 else resources / "fonts" / "1x1.ttf"
+    font_1x2 = repo_path(args.font_1x2) if args.font_1x2 else resources / "fonts" / "1x2.ttf"
     if args.font:
         font_1x1 = repo_path(args.font)
         font_1x2 = repo_path(args.font)
@@ -632,9 +632,38 @@ def write_missing_report(run_dir: Path, missing_summary: dict[str, Any]) -> dict
     menu_chars = missing_summary.get("menu", {}).get("chars", "")
     font_chars = missing_summary.get("font", {}).get("missing_chars", "")
     all_missing = unique_chars(text_chars + menu_chars + font_chars)
+    rows: list[dict[str, str]] = []
+    for source, chars in (("text", text_chars), ("menu", menu_chars)):
+        for char in unique_chars(chars):
+            rows.append(
+                {
+                    "source": source,
+                    "mode": "",
+                    "char": char,
+                    "unicode_hex": f"U+{ord(char):04X}",
+                    "code": "",
+                    "font": "",
+                }
+            )
+    for values in missing_summary.get("font", {}).get("missing_by_mode", {}).values():
+        for entry in values:
+            char = str(entry.get("char", ""))
+            if not char:
+                continue
+            rows.append(
+                {
+                    "source": "font",
+                    "mode": str(entry.get("mode", "")),
+                    "char": char,
+                    "unicode_hex": str(entry.get("unicode_hex", f"U+{ord(char):04X}")),
+                    "code": str(entry.get("code", "")),
+                    "font": str(entry.get("font", "")),
+                }
+            )
     report = {
         "all_missing_chars": all_missing,
         "all_missing_char_count": len(all_missing),
+        "missing_entries": rows,
         "text": missing_summary.get("text", {}),
         "menu": {
             **missing_summary.get("menu", {}),
@@ -651,12 +680,8 @@ def write_missing_report(run_dir: Path, missing_summary: dict[str, Any]) -> dict
         "preview_filter": missing_summary.get("preview_filter", {}),
     }
     write_text(run_dir / "missing-chars-report.json", json.dumps(report, ensure_ascii=False, indent=2) + "\n")
-    rows: list[dict[str, str]] = []
-    for source, chars in (("text", text_chars), ("menu", menu_chars), ("font", font_chars)):
-        for char in unique_chars(chars):
-            rows.append({"source": source, "char": char, "unicode_hex": f"U+{ord(char):04X}"})
     if rows:
-        write_tsv(run_dir / "missing-chars.tsv", rows, ["source", "char", "unicode_hex"])
+        write_tsv(run_dir / "missing-chars.tsv", rows, ["source", "mode", "char", "unicode_hex", "code", "font"])
     report["report"] = display_path(run_dir / "missing-chars-report.json")
     report["tsv"] = display_path(run_dir / "missing-chars.tsv") if rows else ""
     return report
@@ -674,8 +699,36 @@ def print_missing_report(report: dict[str, Any]) -> None:
     if not chars:
         safe_print("missing_chars=NONE")
         return
-    safe_print(f"missing_chars={chars}")
     safe_print(f"missing_char_count={report.get('all_missing_char_count', len(chars))}")
+
+    text = report.get("text", {})
+    text_chars = text.get("chars", "")
+    safe_print(f"missing_chars_text_count={len(text_chars)}")
+    if text_chars:
+        safe_print(f"missing_chars_text={text_chars}")
+        if text.get("rows"):
+            safe_print(f"missing_chars_text_rows={text['rows']}")
+
+    menu = report.get("menu", {})
+    menu_chars = menu.get("chars", "")
+    safe_print(f"missing_chars_menu_count={len(menu_chars)}")
+    if menu_chars:
+        safe_print(f"missing_chars_menu={menu_chars}")
+
+    font = report.get("font", {})
+    font_by_mode = font.get("missing_by_mode", {})
+    safe_print(f"missing_chars_font_count={font.get('missing_char_count', 0)}")
+    for mode in sorted(font_by_mode):
+        entries = font_by_mode.get(mode, [])
+        mode_chars = unique_chars(str(entry.get("char", "")) for entry in entries)
+        font_paths = sorted({str(entry.get("font", "")) for entry in entries if entry.get("font")})
+        safe_print(f"missing_chars_font_{mode}_count={len(entries)}")
+        if font_paths:
+            safe_print(f"missing_chars_font_{mode}_ttf={','.join(font_paths)}")
+        if mode_chars:
+            safe_print(f"missing_chars_font_{mode}={mode_chars}")
+
+    safe_print(f"missing_chars_all={chars}")
     if report.get("tsv"):
         safe_print(f"missing_chars_tsv={report['tsv']}")
     if report.get("report"):

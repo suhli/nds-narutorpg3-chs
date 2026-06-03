@@ -16,7 +16,7 @@ Static resources copied into `patcher/resources/`:
 - frozen translation TSV, code table, charset, font manifest
 - structure-adjusted encoded preview and manual structure overrides
 - menu candidates and ready menu translations
-- default 1x1 and 1x2 TTF files
+- default 1x1 and 1x2 TTF files, named `patcher/resources/fonts/1x1.ttf` and `patcher/resources/fonts/1x2.ttf`
 
 Bundled build tools copied into `patcher/tools/`:
 
@@ -52,6 +52,7 @@ Default output command:
 - Menu rebuild report for the repeated-output test had `ready=278`, no pending keys, and no missing font chars.
 - Bundled-tools build produced `rom/narutorpg3_chs_patcher_bundled_tools_test.nds`; logs show calls to `patcher/tools/build_vram_font_files.py`, `patcher/tools/build_full_writeback_menu_overlay_rom.py`, and `patcher/tools/ndstool.exe`. Header CRC and Banner CRC were OK.
 - Missing characters are now warnings, not build blockers. Verified with `rom/narutorpg3_chs_patcher_missing_report_test_build_20260603_163222.nds`: build completed, Header CRC and Banner CRC were OK, and `patcher/work/build_20260603_163222/missing-chars-report.json` listed 418 missing TTF glyphs.
+- Console missing-character output is now grouped by text/menu/font, and font misses are grouped by 1x1/1x2 with the missing TTF path. Verified with `rom/narutorpg3_chs_patcher_short_font_missing_console_test.nds`; `patcher/work/build_20260603_165100/missing-chars.tsv` includes `source`, `mode`, `char`, `unicode_hex`, `code`, and `font`.
 
 ## ROM safety
 

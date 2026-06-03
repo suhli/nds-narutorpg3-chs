@@ -17,8 +17,8 @@
     "translation_report": "menu/overlay_menu_translation_report.json"
   },
   "fonts": {
-    "default_1x1_ttf": "fonts/fusion-pixel-8px-monospaced-zh_hans.ttf",
-    "default_1x2_ttf": "fonts/FashionBitmap16_0.092.ttf"
+    "default_1x1_ttf": "fonts/1x1.ttf",
+    "default_1x2_ttf": "fonts/1x2.ttf"
   },
   "build": {
     "candidate_code_endian": "big",

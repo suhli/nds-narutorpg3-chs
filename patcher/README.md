@@ -14,7 +14,7 @@
 - `patcher/resources/text/zh_code_table.tsv`
 - `patcher/resources/text/font_manifest.json`
 - `patcher/resources/menu/overlay_menu_translations.tsv`
-- `patcher/resources/fonts/` 下内置的默认 TTF 字体
+- `patcher/resources/fonts/1x1.ttf` 和 `patcher/resources/fonts/1x2.ttf`
 - `patcher/tools/` 下内置的构建脚本和 `ndstool.exe`
 
 构建时会在需要时把 `rom/origin.nds` 解包到 `patcher/work/origin_unpacked`，然后生成字体 payload、写回文本和菜单、修改字体 hook、重打包新 ROM，并对输出 ROM 执行 `ndstool -i` 校验。
@@ -67,8 +67,8 @@
 - `rom_work/`：本次 ROM 解包和修改工作目录。
 - `patcher-build-summary.json`：本次构建摘要。
 - `missing-chars-report.json`：缺字汇总报告。
-- `missing-chars.tsv`：按来源列出的缺字清单。
-- `font-missing-chars.tsv`：按字体模式列出的 TTF 缺字清单。
+- `missing-chars.tsv`：按来源列出的缺字总表；字体缺字会同时列出 `mode`、`code` 和实际缺字的 TTF 路径。
+- `font-missing-chars.tsv`：按字体模式列出的 TTF 缺字清单，同样包含实际 TTF 路径。
 
 ## 缺字处理
 
@@ -76,9 +76,9 @@
 
 - 文本编码缺字：记录到缺字报告，并跳过对应文本写回行，让原始内容保留在 ROM 中。
 - 菜单编码缺字：记录到缺字报告，对应菜单行不会写回。
-- TTF 字形缺失：记录到缺字报告，字体 payload 仍继续生成。
+- TTF 字形缺失：记录到缺字报告，标明是 1x1 还是 1x2 字体以及对应 TTF 路径，字体 payload 仍继续生成。
 
-构建结束时，终端会打印 `missing_chars`、`missing_char_count`、`missing_chars_tsv` 和 `missing_chars_report`。
+构建结束时，终端会打印总缺字数、文本缺字数、菜单缺字数和字体缺字数。字体缺字会继续拆成 `missing_chars_font_1x1_*`、`missing_chars_font_1x2_*`，并打印对应的 TTF 路径。
 
 ## 失败条件
 

@@ -86,8 +86,8 @@ stage_outputs:
     - patcher/resources/menu/overlay_menu_candidates.tsv
     - patcher/resources/menu/overlay_menu_translations.tsv
     - patcher/resources/menu/overlay_menu_translation_report.json
-    - patcher/resources/fonts/fusion-pixel-8px-monospaced-zh_hans.ttf
-    - patcher/resources/fonts/FashionBitmap16_0.092.ttf
+    - patcher/resources/fonts/1x1.ttf
+    - patcher/resources/fonts/1x2.ttf
     - patcher/tools/audit_structsafe_translations.py
     - patcher/tools/build_full_writeback_menu_overlay_rom.py
     - patcher/tools/build_text_writeback_smoke_rom.py
@@ -118,12 +118,17 @@ stage_outputs:
     - patcher/work/build_20260603_163222/missing-chars-report.json
     - patcher/work/build_20260603_163222/missing-chars.tsv
     - patcher/work/build_20260603_163222/font-missing-chars.tsv
+    - patcher/work/build_20260603_164519/patcher-build-summary.json
+    - patcher/work/build_20260603_164519/missing-chars-report.json
+    - patcher/work/build_20260603_164519/missing-chars.tsv
+    - patcher/work/build_20260603_164519/font-missing-chars.tsv
     - rom/narutorpg3_chs_patcher_default_test.nds
     - rom/narutorpg3_chs_patcher_rebuild_text_test.nds
     - rom/narutorpg3_chs_patcher_rebuild_text_test_build_20260603_151144.nds
     - rom/narutorpg3_chs_patcher_font_arg_test.nds
     - rom/narutorpg3_chs_patcher_bundled_tools_test.nds
     - rom/narutorpg3_chs_patcher_missing_report_test_build_20260603_163222.nds
+    - rom/narutorpg3_chs_patcher_missing_console_test.nds
     - rom/narutorpg3_chs_full_writeback_menu_v2.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_friend_kinshi_v1.nds
@@ -142,7 +147,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-03T16:36:09+08:00"
+updated_at: "2026-06-03T16:45:58+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -163,6 +168,8 @@ notes:
   - Rewrote patcher/README.md in Chinese for patcher usage.
   - Patcher missing characters are now warnings rather than build blockers. Text/menu/font missing chars are collected into patcher/work/build_20260603_163222/missing-chars-report.json and patcher/work/build_20260603_163222/missing-chars.tsv; verified build rom/narutorpg3_chs_patcher_missing_report_test_build_20260603_163222.nds completed with Header CRC OK / Banner CRC OK.
   - Latest missing-char report: 418 total missing TTF glyphs, text encoding missing rows=0, menu missing chars=0, font missing counts 1x1=1 and 1x2=417.
+  - Renamed default patcher fonts to patcher/resources/fonts/1x1.ttf and patcher/resources/fonts/1x2.ttf.
+  - Patcher console missing-character output now reports text/menu/font counts separately and prints missing_chars_font_1x1_ttf plus missing_chars_font_1x2_ttf; verified with rom/narutorpg3_chs_patcher_missing_console_test.nds and patcher/work/build_20260603_164519/missing-chars.tsv.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。
