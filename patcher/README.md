@@ -15,6 +15,7 @@ The default build uses:
 - `patcher/resources/text/font_manifest.json`
 - `patcher/resources/menu/overlay_menu_translations.tsv`
 - the bundled default TTF files under `patcher/resources/fonts/`
+- the bundled build scripts and `ndstool.exe` under `patcher/tools/`
 
 It unpacks `rom/origin.nds` to `patcher/work/origin_unpacked` when needed, generates font payloads, patches text/menu/font payloads, repacks a new ROM, then runs `ndstool -i` on the output.
 

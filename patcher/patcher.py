@@ -11,8 +11,12 @@ from pathlib import Path
 from typing import Any
 
 
-REPO = Path(__file__).resolve().parents[1]
-TOOLS = REPO / "tools"
+PATCHER_DIR = Path(__file__).resolve().parent
+REPO = PATCHER_DIR.parents[0]
+PATCHER_TOOLS = PATCHER_DIR / "tools"
+REPO_TOOLS = REPO / "tools"
+TOOLS = PATCHER_TOOLS if (PATCHER_TOOLS / "extract_translation_charset.py").is_file() else REPO_TOOLS
+NDSTOOL = TOOLS / "ndstool.exe" if (TOOLS / "ndstool.exe").is_file() else REPO_TOOLS / "ndstool.exe"
 if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
@@ -118,7 +122,7 @@ def ensure_origin_unpacked(args: argparse.Namespace, run_dir: Path, log_path: Pa
 
     run_cmd(
         [
-            TOOLS / "ndstool.exe",
+            NDSTOOL,
             "-x",
             origin_rom,
             "-9",
@@ -406,7 +410,7 @@ def build_rom(args: argparse.Namespace, run_dir: Path, origin_work: Path, text_a
         cmd.append("--compact-records")
     run_cmd(cmd, log_path=log_path)
 
-    run_cmd([TOOLS / "ndstool.exe", "-i", output], log_path=log_path)
+    run_cmd([NDSTOOL, "-i", output], log_path=log_path)
     return output
 
 
@@ -428,6 +432,8 @@ def write_build_summary(
         "text_assets": {key: display_path(value) for key, value in text_assets.items()},
         "font_dir": display_path(font_dir),
         "log": display_path(log_path),
+        "tools_dir": display_path(TOOLS),
+        "ndstool": display_path(NDSTOOL),
         "options": {
             "translation_table": args.translation_table,
             "translation_preview": args.translation_preview,

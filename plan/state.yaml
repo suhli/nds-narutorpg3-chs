@@ -27,6 +27,7 @@ stage_outputs:
     - rom/narutorpg3_chs_full_writeback_test.nds
     - plan/cache/text-writeback-smoke/full-writeback-records.json
   produced:
+    - .gitignore
     - tools/encode_translation_text.py
     - tools/extract_translation_charset.py
     - tools/build_text_writeback_smoke_rom.py
@@ -87,14 +88,37 @@ stage_outputs:
     - patcher/resources/menu/overlay_menu_translation_report.json
     - patcher/resources/fonts/fusion-pixel-8px-monospaced-zh_hans.ttf
     - patcher/resources/fonts/FashionBitmap16_0.092.ttf
+    - patcher/tools/audit_structsafe_translations.py
+    - patcher/tools/build_full_writeback_menu_overlay_rom.py
+    - patcher/tools/build_text_writeback_smoke_rom.py
+    - patcher/tools/build_vram_font_dynamic_cache_rom.py
+    - patcher/tools/build_vram_font_files.py
+    - patcher/tools/encode_translation_text.py
+    - patcher/tools/extract_translation_charset.py
+    - patcher/tools/patch_vram_font_chunk_table_dual_mode_1x1_copy_probe.py
+    - patcher/tools/patch_vram_font_chunk_table_dual_mode_probe.py
+    - patcher/tools/patch_vram_font_chunk_table_dual_slot_probe.py
+    - patcher/tools/patch_vram_font_chunk_table_immediate_cache_probe.py
+    - patcher/tools/patch_vram_font_chunk_table_miss_consumer_probe.py
+    - patcher/tools/patch_vram_font_chunk_table_miss_flag_probe.py
+    - patcher/tools/patch_vram_font_chunk_table_probe.py
+    - patcher/tools/patch_vram_font_chunk_table_resident_copy_probe.py
+    - patcher/tools/patch_vram_font_chunk_table_slim_moved_probe.py
+    - patcher/tools/patch_vram_font_file_preload_probe.py
+    - patcher/tools/patch_vram_font_formal_format_probe.py
+    - patcher/tools/patch_vram_font_split_map_probe.py
+    - patcher/tools/prepare_overlay_menu_translations.py
+    - patcher/tools/ndstool.exe
     - patcher/work/build_20260603_142313/patcher-build-summary.json
     - patcher/work/build_20260603_142414/patcher-build-summary.json
     - patcher/work/build_20260603_142520/patcher-build-summary.json
     - patcher/work/build_20260603_151144/patcher-build-summary.json
+    - patcher/work/build_20260603_160433/patcher-build-summary.json
     - rom/narutorpg3_chs_patcher_default_test.nds
     - rom/narutorpg3_chs_patcher_rebuild_text_test.nds
     - rom/narutorpg3_chs_patcher_rebuild_text_test_build_20260603_151144.nds
     - rom/narutorpg3_chs_patcher_font_arg_test.nds
+    - rom/narutorpg3_chs_patcher_bundled_tools_test.nds
     - rom/narutorpg3_chs_full_writeback_menu_v2.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_friend_kinshi_v1.nds
@@ -113,7 +137,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-03T15:12:25+08:00"
+updated_at: "2026-06-03T16:08:36+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -128,6 +152,8 @@ notes:
   - Added patcher/patcher.py and frozen patcher/resources; default, rebuild-text-assets, and explicit TTF-argument builds all repack successfully with ndstool Header CRC OK / Banner CRC OK.
   - Patcher default ROM: rom/narutorpg3_chs_patcher_default_test.nds; rebuild-from-translation ROM: rom/narutorpg3_chs_patcher_rebuild_text_test.nds; explicit-font-args ROM: rom/narutorpg3_chs_patcher_font_arg_test.nds.
   - Hardened patcher output selection for repeated output names and made menu pending_font_chars a build blocker; verified rebuild-text-assets again as rom/narutorpg3_chs_patcher_rebuild_text_test_build_20260603_151144.nds.
+  - Copied the patcher Python tool dependency closure plus ndstool.exe into patcher/tools; verified patcher now calls patcher/tools and produced rom/narutorpg3_chs_patcher_bundled_tools_test.nds with Header CRC OK / Banner CRC OK.
+  - Updated .gitignore so patcher/tools/** and patcher/resources/fonts/*.ttf are trackable, while patcher/tools/__pycache__/ remains ignored.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

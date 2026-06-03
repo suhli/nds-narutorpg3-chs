@@ -1,0 +1,478 @@
+from __future__ import annotations
+
+import argparse
+import csv
+from datetime import datetime
+import json
+import re
+import shutil
+from pathlib import Path
+from typing import Any
+
+import build_vram_font_dynamic_cache_rom as font_rom
+
+
+DEFAULT_SAMPLE_IDS = [
+    "zh_txt_869691fa_0000AE_0003",
+    "zh_txt_876c4bf1_003C60_0367",
+]
+
+DEFAULT_EXCLUDED_SOURCE_FILES = {
+    "msg/wifi/friend_msg.msg",
+    "msg/wifi/kinshi_msg.msg",
+}
+
+CTRL_RE = re.compile(r"\{CTRL_([0-9A-Fa-f]{4})\}")
+LEADING_CTRL_RUN_RE = re.compile(r"^((?:\{CTRL_[0-9A-Fa-f]{4}\})+)(.*)$", re.S)
+OPEN_QUOTES = ("「", "『", "“", '"')
+
+
+def is_sjis_lead(byte: int) -> bool:
+    return 0x81 <= byte <= 0x9F or 0xE0 <= byte <= 0xFC
+
+
+def is_sjis_trail(byte: int) -> bool:
+    return (0x40 <= byte <= 0x7E) or (0x80 <= byte <= 0xFC)
+
+
+def read_tsv(path: Path) -> list[dict[str, str]]:
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
+
+
+def normalize_source_file(value: str) -> str:
+    return value.replace("\\", "/").lower()
+
+
+def parse_source_file_set(value: str) -> set[str]:
+    return {normalize_source_file(part.strip()) for part in value.split(",") if part.strip()}
+
+
+def filter_excluded_source_files(
+    rows: list[dict[str, str]],
+    excluded_source_files: set[str],
+) -> tuple[list[dict[str, str]], dict[str, int]]:
+    if not excluded_source_files:
+        return rows, {}
+    selected: list[dict[str, str]] = []
+    excluded: dict[str, int] = {}
+    for row in rows:
+        source_file = normalize_source_file(row.get("source_file", ""))
+        if source_file in excluded_source_files:
+            excluded[source_file] = excluded.get(source_file, 0) + 1
+            continue
+        selected.append(row)
+    return selected, excluded
+
+
+def parse_hex_bytes(value: str) -> bytes:
+    value = (value or "").strip()
+    if not value:
+        return b""
+    return bytes(int(part, 16) for part in value.split())
+
+
+def load_code_table(path: Path) -> dict[str, int]:
+    out: dict[str, int] = {}
+    for row in read_tsv(path):
+        char = row.get("char", "")
+        code_hex = row.get("code_hex", "")
+        if char and code_hex:
+            out[char] = int(code_hex, 16)
+    return out
+
+
+def unique_path(path: Path) -> Path:
+    if not path.exists():
+        return path
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    candidate = path.with_name(f"{path.stem}_build_{stamp}{path.suffix}")
+    if not candidate.exists():
+        return candidate
+    for index in range(2, 100):
+        indexed = path.with_name(f"{path.stem}_build_{stamp}_{index}{path.suffix}")
+        if not indexed.exists():
+            return indexed
+    raise FileExistsError(f"could not find unused path near {path}")
+
+
+def load_samples(preview_path: Path, sample_ids: list[str]) -> list[dict[str, str]]:
+    rows = read_tsv(preview_path)
+    by_id = {row["id"]: row for row in rows}
+    missing = [sample_id for sample_id in sample_ids if sample_id not in by_id]
+    if missing:
+        raise KeyError(f"missing sample ids in preview: {missing}")
+    samples = [by_id[sample_id] for sample_id in sample_ids]
+    for row in samples:
+        risks = set((row.get("risk_flags") or "").split())
+        allowed = {"endian_unverified"}
+        if risks - allowed:
+            raise ValueError(f"{row['id']} is not a low-risk sample: {sorted(risks)}")
+        if row.get("pre_endian_candidate") != "yes":
+            raise ValueError(f"{row['id']} is not marked pre_endian_candidate=yes")
+    return samples
+
+
+def load_all_rows(preview_path: Path, excluded_source_files: set[str] | None = None) -> tuple[list[dict[str, str]], dict[str, int]]:
+    rows = read_tsv(preview_path)
+    selected: list[dict[str, str]] = []
+    blocked: list[dict[str, str]] = []
+    for row in rows:
+        if row.get("encoded_complete") != "yes":
+            blocked.append(row)
+            continue
+        if not row.get("encoded_hex_candidate", "").strip():
+            blocked.append(row)
+            continue
+        capacity_delta = row.get("capacity_delta", "").strip()
+        if capacity_delta and int(capacity_delta) < 0:
+            blocked.append(row)
+            continue
+        selected.append(row)
+    if blocked:
+        raise ValueError(f"{len(blocked)} rows cannot be written by fixed-slot full-writeback mode")
+    return filter_excluded_source_files(selected, excluded_source_files or set())
+
+
+def encode_text(text: str, code_table: dict[str, int], *, candidate_code_endian: str) -> bytes:
+    encoded = bytearray()
+    pos = 0
+    for match in CTRL_RE.finditer(text):
+        encoded.extend(encode_plain_text(text[pos : match.start()], code_table, candidate_code_endian=candidate_code_endian))
+        encoded.extend(int(match.group(1), 16).to_bytes(2, "little"))
+        pos = match.end()
+    encoded.extend(encode_plain_text(text[pos:], code_table, candidate_code_endian=candidate_code_endian))
+    return bytes(encoded)
+
+
+def encode_plain_text(text: str, code_table: dict[str, int], *, candidate_code_endian: str) -> bytes:
+    encoded = bytearray()
+    for char in text:
+        if char in code_table:
+            encoded.extend(code_table[char].to_bytes(2, candidate_code_endian))
+            continue
+        if 0x20 <= ord(char) <= 0x7E:
+            encoded.append(ord(char))
+            continue
+        try:
+            encoded.extend(char.encode("cp932"))
+        except UnicodeEncodeError as exc:
+            raise ValueError(f"missing code table entry for {char!r}") from exc
+    return bytes(encoded)
+
+
+def strip_leading_structure_text(text: str) -> str:
+    out = (text or "").strip()
+    changed = True
+    while changed:
+        changed = False
+        match = LEADING_CTRL_RUN_RE.match(out)
+        if match:
+            out = match.group(2)
+            changed = True
+        while out and ord(out[0]) < 0x80 and out[0] not in "{「『“\"":
+            out = out[1:]
+            changed = True
+    return out
+
+
+def message_stream_prefix_and_text(row: dict[str, str], raw: bytes) -> tuple[bytes, str, str]:
+    zh_text = row.get("zh_text_candidate_payload", "")
+    jp_text = row.get("jp_text", "")
+    terminator = b"\x03\x00" if raw.endswith(b"\x03\x00") else b""
+    payload = raw[: -len(terminator)] if terminator else raw
+    quote_pos = payload.find(b"\x81\x75")
+    if quote_pos > 0 and not jp_text.startswith("「"):
+        clean = strip_leading_structure_text(zh_text)
+        if not clean.startswith(OPEN_QUOTES):
+            clean = "「" + clean
+        return raw[:quote_pos], clean, "preserve_prefix_before_open_quote"
+    if raw.startswith(b"\x81\x75"):
+        clean = strip_leading_structure_text(zh_text)
+        if jp_text.startswith("「") and not clean.startswith(OPEN_QUOTES):
+            clean = "「" + clean
+        return b"", clean, "open_quote_text"
+    if (
+        len(payload) >= 4
+        and payload[1] == 0
+        and is_sjis_lead(payload[2])
+        and is_sjis_trail(payload[3])
+    ):
+        return payload[:2], zh_text, "preserve_prefix_before_sjis_text"
+    return b"", zh_text, "plain_message_text"
+
+
+def message_padding(length: int) -> bytes:
+    if length < 0:
+        raise ValueError("negative message padding")
+    return b"\x81\x40" * (length // 2) + (b"\x20" if length % 2 else b"")
+
+
+def make_message_stream_replacement(
+    row: dict[str, str],
+    *,
+    raw: bytes,
+    source_len: int,
+    terminator: bytes,
+    code_table: dict[str, int],
+    candidate_code_endian: str,
+) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
+    prefix, text, strategy = message_stream_prefix_and_text(row, raw)
+    encoded = encode_text(text, code_table, candidate_code_endian=candidate_code_endian)
+    payload_capacity = source_len - len(prefix) - len(terminator)
+    if payload_capacity < 0:
+        raise ValueError(f"{row['id']} message prefix exceeds source length")
+    if len(encoded) > payload_capacity:
+        raise ValueError(f"{row['id']} encoded message length exceeds payload capacity")
+    replacement = prefix + encoded + message_padding(payload_capacity - len(encoded)) + terminator
+    if len(replacement) != source_len:
+        raise ValueError(f"{row['id']} message replacement length mismatch")
+    return encoded, terminator, replacement, {
+        "message_stream_strategy": strategy,
+        "message_prefix_len": len(prefix),
+        "message_terminator_position": "preserved_original_end",
+        "message_padding_len": payload_capacity - len(encoded),
+    }
+
+
+def make_replacement(
+    row: dict[str, str],
+    *,
+    code_table: dict[str, int] | None = None,
+    candidate_code_endian: str = "big",
+) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
+    raw = parse_hex_bytes(row.get("raw_hex", ""))
+    encoded = parse_hex_bytes(row.get("encoded_hex_candidate", ""))
+    terminator = parse_hex_bytes(row.get("raw_terminator_hex", ""))
+    source_len = int(row["source_byte_len"])
+    payload_capacity = int(row["payload_capacity"])
+    extra: dict[str, Any] = {}
+    if (
+        row.get("category") == "message"
+        and terminator == b"\x03\x00"
+        and code_table is not None
+    ):
+        return make_message_stream_replacement(
+            row,
+            raw=raw,
+            source_len=source_len,
+            terminator=terminator,
+            code_table=code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+
+    if len(encoded) > payload_capacity:
+        raise ValueError(f"{row['id']} encoded length exceeds payload capacity")
+
+    if terminator:
+        used_len = len(encoded) + len(terminator)
+        if used_len > source_len:
+            raise ValueError(f"{row['id']} replacement exceeds original record length")
+        replacement = encoded + terminator + bytes(source_len - used_len)
+    else:
+        if len(encoded) > source_len:
+            raise ValueError(f"{row['id']} replacement exceeds fixed field length")
+        replacement = encoded + bytes(source_len - len(encoded))
+    return encoded, terminator, replacement, extra
+
+
+def target_for_row(work: Path, row: dict[str, str]) -> Path:
+    rel = Path(*Path(row["source_file"]).parts)
+    target = work / "data" / rel
+    if not target.is_file():
+        target = work / "data" / "text" / rel
+    if not target.is_file():
+        raise FileNotFoundError(target)
+    return target
+
+
+def validate_no_overlaps(work: Path, samples: list[dict[str, str]]) -> dict[str, Any]:
+    by_file: dict[Path, list[tuple[int, int, str]]] = {}
+    for row in samples:
+        target = target_for_row(work, row)
+        offset = int(row["offset"], 0)
+        source_len = int(row["source_byte_len"])
+        by_file.setdefault(target, []).append((offset, offset + source_len, row["id"]))
+
+    overlaps: list[dict[str, Any]] = []
+    for target, ranges in by_file.items():
+        ranges.sort()
+        previous: tuple[int, int, str] | None = None
+        for current in ranges:
+            if previous and current[0] < previous[1]:
+                overlaps.append(
+                    {
+                        "file": target.as_posix(),
+                        "previous_id": previous[2],
+                        "previous_range": [previous[0], previous[1]],
+                        "current_id": current[2],
+                        "current_range": [current[0], current[1]],
+                    }
+                )
+            previous = current
+    if overlaps:
+        raise ValueError(f"full writeback ranges overlap: {overlaps[:20]}")
+    return {
+        "file_count": len(by_file),
+        "row_count": len(samples),
+    }
+
+
+def patch_samples(
+    work: Path,
+    samples: list[dict[str, str]],
+    *,
+    keep_sample_text: bool,
+    code_table: dict[str, int] | None = None,
+    candidate_code_endian: str = "big",
+) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    for row in samples:
+        target = target_for_row(work, row)
+        offset = int(row["offset"], 0)
+        source_len = int(row["source_byte_len"])
+        encoded, terminator, replacement, extra = make_replacement(
+            row,
+            code_table=code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+
+        data = bytearray(target.read_bytes())
+        original = bytes(data[offset : offset + source_len])
+        if len(original) != source_len:
+            raise ValueError(f"{row['id']} original slice is truncated")
+        data[offset : offset + source_len] = replacement
+        target.write_bytes(data)
+
+        record: dict[str, Any] = {
+            "id": row["id"],
+            "source_file": row["source_file"],
+            "work_file": target.as_posix(),
+            "offset": row["offset"],
+            "source_byte_len": source_len,
+            "payload_capacity": int(row["payload_capacity"]),
+            "encoded_len_candidate": len(encoded),
+            "terminator_hex": row.get("raw_terminator_hex", ""),
+            "fill_zero_count": len(replacement) - len(encoded) - len(terminator),
+            "risk_flags": row.get("risk_flags", ""),
+            **extra,
+        }
+        if keep_sample_text:
+            record.update(
+                {
+                    "jp_text": row.get("jp_text", ""),
+                    "zh_text": row.get("zh_text_candidate_payload", ""),
+                    "encoded_hex_candidate": row.get("encoded_hex_candidate", ""),
+                    "original_hex": original.hex(" ").upper(),
+                    "replacement_hex": replacement.hex(" ").upper(),
+                }
+            )
+        records.append(record)
+    return records
+
+
+def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], dict[str, Any]]:
+    repo = Path(__file__).resolve().parents[1]
+    origin_work = repo / "rom" / "unpacked" / "origin"
+    if not origin_work.is_dir():
+        raise FileNotFoundError(f"missing unpacked origin: {origin_work}")
+
+    requested_work = (repo / args.work).resolve()
+    requested_output = (repo / args.output).resolve()
+    if requested_output.name.lower() == "origin.nds":
+        raise ValueError("refusing to overwrite rom/origin.nds")
+    work = unique_path(requested_work)
+    output_rom = unique_path(requested_output)
+
+    shutil.copytree(origin_work, work)
+    files = font_rom.copy_font_files((repo / args.font_dir).resolve(), work)
+    font_rom.validate_font_files(files)
+
+    if args.all:
+        excluded_source_files = parse_source_file_set(args.exclude_source_files)
+        samples, excluded_counts = load_all_rows(repo / args.preview, excluded_source_files)
+        mode = "all_fixed_slot"
+    else:
+        sample_ids = [part.strip() for part in args.sample_ids.split(",") if part.strip()]
+        samples = load_samples(repo / args.preview, sample_ids)
+        excluded_counts = {}
+        mode = "sample"
+    validation = validate_no_overlaps(work, samples)
+    code_table = load_code_table(repo / args.code_table)
+    records = patch_samples(
+        work,
+        samples,
+        keep_sample_text=not args.compact_records,
+        code_table=code_table,
+        candidate_code_endian=args.candidate_code_endian,
+    )
+
+    font_rom.cache.patch_arm9(work / "arm9.bin")
+    font_rom.cache.patch_overlay(work / "overlay" / "overlay_0000.bin")
+    font_rom.split.repack(repo, work, output_rom)
+    metadata = {
+        "mode": mode,
+        "validation": validation,
+        "writeback_policy": {
+            "chinese_code_endian": "big_candidate",
+            "ascii": "single_byte_candidate",
+            "trailing_padding": "strip_and_zero_fill",
+            "terminator": "preserve_raw_terminator_when_present",
+            "message_stream": "preserve_prefix_and_original_terminator_position_with_space_padding",
+            "rom_origin": "read_only_not_modified",
+            "excluded_source_files": excluded_counts,
+        },
+    }
+    return work, output_rom, records, metadata
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Build a small text writeback smoke ROM.")
+    parser.add_argument("--preview", default="text/writeback/encoded_preview.tsv")
+    parser.add_argument("--font-dir", default="plan/cache/text-writeback-smoke/font-build-smoke-sjis-code-table")
+    parser.add_argument("--work", default="rom/unpacked/text_writeback_smoke")
+    parser.add_argument("--output", default="rom/text_writeback_smoke.nds")
+    parser.add_argument("--sample-ids", default=",".join(DEFAULT_SAMPLE_IDS))
+    parser.add_argument("--records-out", default="plan/cache/text-writeback-smoke/sample-writeback-records.json")
+    parser.add_argument("--all", action="store_true", help="Write every fixed-slot encoded preview row.")
+    parser.add_argument("--code-table", default="text/code_table/zh_code_table.tsv")
+    parser.add_argument("--candidate-code-endian", choices=("big", "little"), default="big")
+    parser.add_argument(
+        "--exclude-source-files",
+        default=",".join(sorted(DEFAULT_EXCLUDED_SOURCE_FILES)),
+        help="Comma-separated source_file values to leave unmodified in full writeback mode.",
+    )
+    parser.add_argument("--compact-records", action="store_true", help="Keep per-row records compact for full writeback.")
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    work, output_rom, records, metadata = build(args)
+    records_path = Path(args.records_out)
+    records_path.parent.mkdir(parents=True, exist_ok=True)
+    records_path.write_text(
+        json.dumps(
+            {
+                "work": work.as_posix(),
+                "output_rom": output_rom.as_posix(),
+                **metadata,
+                "sample_count": len(records),
+                "samples": records,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    print(f"work={work}")
+    print(f"output={output_rom}")
+    print(f"records={records_path}")
+    print(f"samples={len(records)}")
+    print(f"mode={metadata['mode']}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
