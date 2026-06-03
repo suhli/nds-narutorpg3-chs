@@ -137,7 +137,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-03T16:12:44+08:00"
+updated_at: "2026-06-03T16:15:54+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -155,6 +155,7 @@ notes:
   - Copied the patcher Python tool dependency closure plus ndstool.exe into patcher/tools; verified patcher now calls patcher/tools and produced rom/narutorpg3_chs_patcher_bundled_tools_test.nds with Header CRC OK / Banner CRC OK.
   - Updated .gitignore so patcher/tools/** and patcher/resources/fonts/*.ttf are trackable, while patcher/tools/__pycache__/ remains ignored.
   - Rewrote hack/汉化补丁打包器流程.md in Chinese for the patcher packaging workflow.
+  - Rewrote patcher/README.md in Chinese for patcher usage.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。
