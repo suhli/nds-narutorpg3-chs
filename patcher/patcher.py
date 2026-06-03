@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import shutil
 import subprocess
@@ -61,7 +62,13 @@ def write_text(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def run_cmd(args: Iterable[str | Path], *, log_path: Path) -> subprocess.CompletedProcess[str]:
+def run_cmd(
+    args: Iterable[str | Path],
+    *,
+    log_path: Path,
+    allowed_returncodes: set[int] | None = None,
+) -> subprocess.CompletedProcess[str]:
+    allowed = {0} if allowed_returncodes is None else allowed_returncodes
     cmd = [str(arg) for arg in args]
     result = subprocess.run(
         cmd,
@@ -83,9 +90,26 @@ def run_cmd(args: Iterable[str | Path], *, log_path: Path) -> subprocess.Complet
             if not result.stderr.endswith("\n"):
                 handle.write("\n")
         handle.write(f"[exit] {result.returncode}\n\n")
-    if result.returncode:
+    if result.returncode not in allowed:
         raise RuntimeError(f"command failed with exit={result.returncode}: {' '.join(cmd)}")
     return result
+
+
+def read_tsv(path: Path) -> list[dict[str, str]]:
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
+
+
+def write_tsv(path: Path, rows: list[dict[str, str]], fieldnames: list[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def unique_chars(chars: Iterable[str]) -> str:
+    return "".join(sorted(set(chars), key=lambda char: (ord(char), char)))
 
 
 def required_unpack_files(work: Path) -> list[Path]:
@@ -211,32 +235,86 @@ def build_code_assets_from_frozen(
     }
 
 
-def validate_menu_report(report_path: Path) -> None:
+def collect_missing_from_issues(issues_path: Path) -> dict[str, Any]:
+    if not issues_path.is_file():
+        return {"chars": "", "rows": 0, "ids": []}
+    chars: list[str] = []
+    ids: list[str] = []
+    rows = 0
+    for row in read_tsv(issues_path):
+        missing = row.get("missing_chars", "")
+        if not missing:
+            continue
+        rows += 1
+        ids.append(row.get("id", ""))
+        chars.extend(missing)
+    return {"chars": unique_chars(chars), "rows": rows, "ids": [row_id for row_id in ids if row_id]}
+
+
+def filter_unencodable_preview(preview: Path, out_path: Path) -> dict[str, Any]:
+    rows = read_tsv(preview)
+    if not rows:
+        return {"path": preview, "dropped_rows": 0, "kept_rows": 0}
+    fieldnames = list(rows[0].keys())
+    kept = [row for row in rows if row.get("encoded_complete") == "yes"]
+    dropped = len(rows) - len(kept)
+    if not dropped:
+        return {"path": preview, "dropped_rows": 0, "kept_rows": len(kept)}
+    write_tsv(out_path, kept, fieldnames)
+    return {"path": out_path, "dropped_rows": dropped, "kept_rows": len(kept)}
+
+
+def validate_audit_report(report_path: Path) -> None:
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    hard_failures = {
+        "after_control_mismatch_rows": int(report.get("after_control_mismatch_rows", 0)),
+        "overflow_rows": int(report.get("overflow_rows", 0)),
+    }
+    hard_failures = {key: value for key, value in hard_failures.items() if value}
+    if hard_failures:
+        raise ValueError(f"translation structure audit has hard failures: {hard_failures}")
+
+
+def collect_menu_report(report_path: Path) -> dict[str, Any]:
     report = json.loads(report_path.read_text(encoding="utf-8"))
     status_counts = report.get("status_counts", {})
     blocked = {
         status: count
         for status, count in status_counts.items()
-        if status != "ready" and count
+        if status not in {"ready", "pending_font_chars"} and count
     }
     if blocked:
         raise ValueError(f"menu translation report has blocked statuses: {blocked}")
-    missing = report.get("missing_font_chars", "")
-    if missing:
-        raise ValueError(f"menu translation report has missing font chars: {missing}")
+    return {
+        "chars": unique_chars(report.get("missing_font_chars", "")),
+        "status_counts": status_counts,
+        "report": report_path,
+    }
 
 
-def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path, log_path: Path) -> dict[str, Path]:
+def prepare_text_assets(
+    args: argparse.Namespace,
+    run_dir: Path,
+    resources: Path,
+    log_path: Path,
+) -> tuple[dict[str, Path], dict[str, Any]]:
     text_resources = resources / "text"
     menu_resources = resources / "menu"
     generated = run_dir / "text_assets"
     manual_overrides = repo_path(args.manual_overrides) if args.manual_overrides else text_resources / "translation-struct-manual-overrides.tsv"
+    missing_summary: dict[str, Any] = {
+        "text": {"chars": "", "rows": 0, "ids": []},
+        "menu": {"chars": "", "status_counts": {}, "report": ""},
+        "preview_filter": {"dropped_rows": 0, "kept_rows": 0},
+    }
 
     if args.translation_preview:
         code_table = repo_path(args.code_table) if args.code_table else text_resources / "zh_code_table.tsv"
         font_manifest = repo_path(args.font_manifest) if args.font_manifest else text_resources / "font_manifest.json"
         preview = repo_path(args.translation_preview)
         adjusted_preview = generated / "encoded-preview-struct-adjusted.tsv"
+        issues_tsv = generated / "translation-struct-mismatches.tsv"
+        report_json = generated / "translation-struct-audit-report.json"
         run_cmd(
             [
                 python_exe(),
@@ -250,21 +328,32 @@ def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path
                 "--manual-overrides",
                 manual_overrides,
                 "--report-json",
-                generated / "translation-struct-audit-report.json",
+                report_json,
                 "--issues-tsv",
-                generated / "translation-struct-mismatches.tsv",
+                issues_tsv,
                 "--adjusted-preview",
                 adjusted_preview,
             ],
             log_path=log_path,
+            allowed_returncodes={0, 1},
         )
+        validate_audit_report(report_json)
+        missing_summary["text"] = collect_missing_from_issues(issues_tsv)
+        filter_info = filter_unencodable_preview(
+            adjusted_preview,
+            generated / "encoded-preview-struct-adjusted-encodable.tsv",
+        )
+        missing_summary["preview_filter"] = {
+            **filter_info,
+            "path": display_path(Path(filter_info["path"])),
+        }
         return {
             "code_table": code_table,
             "font_manifest": font_manifest,
             "frozen_translation": text_resources / "frozen_translation.tsv",
-            "preview": adjusted_preview,
+            "preview": Path(filter_info["path"]),
             "menu_translations": repo_path(args.menu_translations) if args.menu_translations else menu_resources / "overlay_menu_translations.tsv",
-        }
+        }, missing_summary
 
     if args.translation_table or args.rebuild_text_assets:
         frozen = repo_path(args.translation_table) if args.translation_table else text_resources / "frozen_translation.tsv"
@@ -288,6 +377,8 @@ def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path
             log_path=log_path,
         )
         adjusted_preview = generated / "encoded-preview-struct-adjusted.tsv"
+        issues_tsv = generated / "translation-struct-mismatches.tsv"
+        report_json = generated / "translation-struct-audit-report.json"
         run_cmd(
             [
                 python_exe(),
@@ -301,14 +392,25 @@ def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path
                 "--manual-overrides",
                 manual_overrides,
                 "--report-json",
-                generated / "translation-struct-audit-report.json",
+                report_json,
                 "--issues-tsv",
-                generated / "translation-struct-mismatches.tsv",
+                issues_tsv,
                 "--adjusted-preview",
                 adjusted_preview,
             ],
             log_path=log_path,
+            allowed_returncodes={0, 1},
         )
+        validate_audit_report(report_json)
+        missing_summary["text"] = collect_missing_from_issues(issues_tsv)
+        filter_info = filter_unencodable_preview(
+            adjusted_preview,
+            generated / "encoded-preview-struct-adjusted-encodable.tsv",
+        )
+        missing_summary["preview_filter"] = {
+            **filter_info,
+            "path": display_path(Path(filter_info["path"])),
+        }
         menu_translations = generated / "overlay_menu_translations.tsv"
         menu_report = generated / "overlay_menu_translation_report.json"
         run_cmd(
@@ -327,15 +429,16 @@ def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path
                 menu_report,
             ],
             log_path=log_path,
+            allowed_returncodes={0, 1},
         )
-        validate_menu_report(menu_report)
+        missing_summary["menu"] = collect_menu_report(menu_report)
         return {
             "code_table": assets["code_table"],
             "font_manifest": assets["font_manifest"],
             "frozen_translation": assets["frozen_translation"],
-            "preview": adjusted_preview,
+            "preview": Path(filter_info["path"]),
             "menu_translations": menu_translations,
-        }
+        }, missing_summary
 
     return {
         "code_table": repo_path(args.code_table) if args.code_table else text_resources / "zh_code_table.tsv",
@@ -343,12 +446,81 @@ def prepare_text_assets(args: argparse.Namespace, run_dir: Path, resources: Path
         "frozen_translation": text_resources / "frozen_translation.tsv",
         "preview": text_resources / "encoded-preview-struct-adjusted.tsv",
         "menu_translations": repo_path(args.menu_translations) if args.menu_translations else menu_resources / "overlay_menu_translations.tsv",
+    }, missing_summary
+
+
+def decode_manifest_char(value: str) -> str:
+    text = str(value)
+    if text.startswith("\\u") and len(text) == 6:
+        return chr(int(text[2:], 16))
+    if text.startswith("U+") and len(text) >= 6:
+        return chr(int(text[2:], 16))
+    return text[0] if text else ""
+
+
+def audit_ttf_coverage(manifest: Path, font_1x1: Path, font_1x2: Path, out_dir: Path) -> dict[str, Any]:
+    import freetype
+
+    payload = json.loads(manifest.read_text(encoding="utf-8"))
+    entries = payload.get("entries", payload if isinstance(payload, list) else [])
+    faces = {"1x1": freetype.Face(str(font_1x1)), "1x2": freetype.Face(str(font_1x2))}
+    font_paths = {"1x1": font_1x1, "1x2": font_1x2}
+    missing_by_mode: dict[str, list[dict[str, str]]] = {"1x1": [], "1x2": []}
+
+    for item in entries:
+        if not isinstance(item, dict):
+            continue
+        char = decode_manifest_char(str(item.get("char", "")))
+        if not char:
+            continue
+        modes = item.get("modes") or ["1x1", "1x2"]
+        for mode in modes:
+            if mode not in faces:
+                continue
+            if faces[mode].get_char_index(ord(char)):
+                continue
+            missing_by_mode[mode].append(
+                {
+                    "mode": mode,
+                    "char": char,
+                    "unicode_hex": f"U+{ord(char):04X}",
+                    "code": str(item.get("code", "")),
+                    "font": display_path(font_paths[mode]),
+                }
+            )
+
+    all_missing_chars = unique_chars(entry["char"] for values in missing_by_mode.values() for entry in values)
+    report = {
+        "manifest": display_path(manifest),
+        "fonts": {mode: display_path(path) for mode, path in font_paths.items()},
+        "missing_chars": all_missing_chars,
+        "missing_char_count": len(all_missing_chars),
+        "missing_by_mode_counts": {mode: len(values) for mode, values in missing_by_mode.items()},
+        "missing_by_mode": missing_by_mode,
     }
+    report_path = out_dir / "font-missing-chars.json"
+    write_text(report_path, json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+    rows = [entry for values in missing_by_mode.values() for entry in values]
+    if rows:
+        write_tsv(out_dir / "font-missing-chars.tsv", rows, ["mode", "char", "unicode_hex", "code", "font"])
+    report["report"] = report_path
+    return report
 
 
-def build_font_assets(args: argparse.Namespace, run_dir: Path, resources: Path, text_assets: dict[str, Path], log_path: Path) -> Path:
+def build_font_assets(
+    args: argparse.Namespace,
+    run_dir: Path,
+    resources: Path,
+    text_assets: dict[str, Path],
+    log_path: Path,
+) -> tuple[Path, dict[str, Any]]:
     if args.font_dir:
-        return repo_path(args.font_dir)
+        return repo_path(args.font_dir), {
+            "status": "skipped_existing_font_dir",
+            "missing_chars": "",
+            "missing_char_count": 0,
+            "missing_by_mode_counts": {},
+        }
 
     font_1x1 = repo_path(args.font_1x1) if args.font_1x1 else resources / "fonts" / "fusion-pixel-8px-monospaced-zh_hans.ttf"
     font_1x2 = repo_path(args.font_1x2) if args.font_1x2 else resources / "fonts" / "FashionBitmap16_0.092.ttf"
@@ -357,6 +529,7 @@ def build_font_assets(args: argparse.Namespace, run_dir: Path, resources: Path, 
         font_1x2 = repo_path(args.font)
 
     font_dir = run_dir / "font_build"
+    font_missing = audit_ttf_coverage(text_assets["font_manifest"], font_1x1, font_1x2, run_dir)
     run_cmd(
         [
             python_exe(),
@@ -372,7 +545,7 @@ def build_font_assets(args: argparse.Namespace, run_dir: Path, resources: Path, 
         ],
         log_path=log_path,
     )
-    return font_dir
+    return font_dir, font_missing
 
 
 def build_rom(args: argparse.Namespace, run_dir: Path, origin_work: Path, text_assets: dict[str, Path], font_dir: Path, log_path: Path) -> Path:
@@ -423,7 +596,9 @@ def write_build_summary(
     font_dir: Path,
     output: Path,
     log_path: Path,
+    missing_summary: dict[str, Any],
 ) -> Path:
+    missing_report = write_missing_report(run_dir, missing_summary)
     summary = {
         "run_dir": display_path(run_dir),
         "origin_rom": display_path(repo_path(args.origin_rom)),
@@ -434,6 +609,7 @@ def write_build_summary(
         "log": display_path(log_path),
         "tools_dir": display_path(TOOLS),
         "ndstool": display_path(NDSTOOL),
+        "missing_chars": missing_report,
         "options": {
             "translation_table": args.translation_table,
             "translation_preview": args.translation_preview,
@@ -449,6 +625,61 @@ def write_build_summary(
     summary_path = run_dir / "patcher-build-summary.json"
     write_text(summary_path, json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
     return summary_path
+
+
+def write_missing_report(run_dir: Path, missing_summary: dict[str, Any]) -> dict[str, Any]:
+    text_chars = missing_summary.get("text", {}).get("chars", "")
+    menu_chars = missing_summary.get("menu", {}).get("chars", "")
+    font_chars = missing_summary.get("font", {}).get("missing_chars", "")
+    all_missing = unique_chars(text_chars + menu_chars + font_chars)
+    report = {
+        "all_missing_chars": all_missing,
+        "all_missing_char_count": len(all_missing),
+        "text": missing_summary.get("text", {}),
+        "menu": {
+            **missing_summary.get("menu", {}),
+            "report": display_path(Path(missing_summary.get("menu", {}).get("report", "")))
+            if missing_summary.get("menu", {}).get("report")
+            else "",
+        },
+        "font": {
+            **missing_summary.get("font", {}),
+            "report": display_path(Path(missing_summary.get("font", {}).get("report", "")))
+            if missing_summary.get("font", {}).get("report")
+            else "",
+        },
+        "preview_filter": missing_summary.get("preview_filter", {}),
+    }
+    write_text(run_dir / "missing-chars-report.json", json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+    rows: list[dict[str, str]] = []
+    for source, chars in (("text", text_chars), ("menu", menu_chars), ("font", font_chars)):
+        for char in unique_chars(chars):
+            rows.append({"source": source, "char": char, "unicode_hex": f"U+{ord(char):04X}"})
+    if rows:
+        write_tsv(run_dir / "missing-chars.tsv", rows, ["source", "char", "unicode_hex"])
+    report["report"] = display_path(run_dir / "missing-chars-report.json")
+    report["tsv"] = display_path(run_dir / "missing-chars.tsv") if rows else ""
+    return report
+
+
+def print_missing_report(report: dict[str, Any]) -> None:
+    def safe_print(text: str) -> None:
+        encoding = sys.stdout.encoding or "utf-8"
+        try:
+            sys.stdout.buffer.write((text + "\n").encode(encoding, errors="backslashreplace"))
+        except AttributeError:
+            print(text.encode(encoding, errors="backslashreplace").decode(encoding))
+
+    chars = report.get("all_missing_chars", "")
+    if not chars:
+        safe_print("missing_chars=NONE")
+        return
+    safe_print(f"missing_chars={chars}")
+    safe_print(f"missing_char_count={report.get('all_missing_char_count', len(chars))}")
+    if report.get("tsv"):
+        safe_print(f"missing_chars_tsv={report['tsv']}")
+    if report.get("report"):
+        safe_print(f"missing_chars_report={report['report']}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -497,8 +728,9 @@ def main() -> int:
     log_path = run_dir / "patcher.log"
 
     origin_work = ensure_origin_unpacked(args, run_dir, log_path)
-    text_assets = prepare_text_assets(args, run_dir, resources, log_path)
-    font_dir = build_font_assets(args, run_dir, resources, text_assets, log_path)
+    text_assets, missing_summary = prepare_text_assets(args, run_dir, resources, log_path)
+    font_dir, font_missing = build_font_assets(args, run_dir, resources, text_assets, log_path)
+    missing_summary["font"] = font_missing
     output = build_rom(args, run_dir, origin_work, text_assets, font_dir, log_path)
     summary = write_build_summary(
         args=args,
@@ -508,12 +740,15 @@ def main() -> int:
         font_dir=font_dir,
         output=output,
         log_path=log_path,
+        missing_summary=missing_summary,
     )
+    summary_payload = json.loads(summary.read_text(encoding="utf-8"))
 
-    print(f"output_rom={output}")
-    print(f"run_dir={run_dir}")
-    print(f"summary={summary}")
-    print(f"log={log_path}")
+    print(f"output_rom={output}", flush=True)
+    print(f"run_dir={run_dir}", flush=True)
+    print(f"summary={summary}", flush=True)
+    print(f"log={log_path}", flush=True)
+    print_missing_report(summary_payload["missing_chars"])
     return 0
 
 

@@ -66,6 +66,19 @@
 - `font_build/`：本次生成的字体 payload。
 - `rom_work/`：本次 ROM 解包和修改工作目录。
 - `patcher-build-summary.json`：本次构建摘要。
+- `missing-chars-report.json`：缺字汇总报告。
+- `missing-chars.tsv`：按来源列出的缺字清单。
+- `font-missing-chars.tsv`：按字体模式列出的 TTF 缺字清单。
+
+## 缺字处理
+
+构建遇到缺字不会直接失败。
+
+- 文本编码缺字：记录到缺字报告，并跳过对应文本写回行，让原始内容保留在 ROM 中。
+- 菜单编码缺字：记录到缺字报告，对应菜单行不会写回。
+- TTF 字形缺失：记录到缺字报告，字体 payload 仍继续生成。
+
+构建结束时，终端会打印 `missing_chars`、`missing_char_count`、`missing_chars_tsv` 和 `missing_chars_report`。
 
 ## 失败条件
 
@@ -73,9 +86,8 @@
 
 - 结构审计失败。
 - 控制符不匹配。
-- 字体缺字。
 - 固定槽容量溢出。
-- 菜单翻译存在非 ready 行。
+- 菜单翻译存在非 ready 且不是缺字导致的行。
 
 ## 安全规则
 

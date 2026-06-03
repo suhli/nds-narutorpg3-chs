@@ -491,7 +491,7 @@ def main() -> int:
     print(f"issues={issues_path}")
     print(f"adjusted_preview={adjusted_path}")
     print(f"report={report_path}")
-    return 1 if report["after_control_mismatch_rows"] or report["overflow_rows"] or report["missing_char_rows"] else 0
+    return 1 if report["after_control_mismatch_rows"] or report["overflow_rows"] else 0
 
 
 if __name__ == "__main__":

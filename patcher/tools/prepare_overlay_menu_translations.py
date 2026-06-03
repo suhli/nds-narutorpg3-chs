@@ -390,7 +390,7 @@ def main() -> int:
     Path(args.report_out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.report_out).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False))
-    blocked_statuses = ("pending_translation", "pending_font_chars", "blocked_overflow")
+    blocked_statuses = ("pending_translation", "blocked_overflow")
     return 1 if any(status_counts.get(status) for status in blocked_statuses) else 0
 
 

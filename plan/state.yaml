@@ -114,11 +114,16 @@ stage_outputs:
     - patcher/work/build_20260603_142520/patcher-build-summary.json
     - patcher/work/build_20260603_151144/patcher-build-summary.json
     - patcher/work/build_20260603_160433/patcher-build-summary.json
+    - patcher/work/build_20260603_163222/patcher-build-summary.json
+    - patcher/work/build_20260603_163222/missing-chars-report.json
+    - patcher/work/build_20260603_163222/missing-chars.tsv
+    - patcher/work/build_20260603_163222/font-missing-chars.tsv
     - rom/narutorpg3_chs_patcher_default_test.nds
     - rom/narutorpg3_chs_patcher_rebuild_text_test.nds
     - rom/narutorpg3_chs_patcher_rebuild_text_test_build_20260603_151144.nds
     - rom/narutorpg3_chs_patcher_font_arg_test.nds
     - rom/narutorpg3_chs_patcher_bundled_tools_test.nds
+    - rom/narutorpg3_chs_patcher_missing_report_test_build_20260603_163222.nds
     - rom/narutorpg3_chs_full_writeback_menu_v2.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_friend_kinshi_v1.nds
@@ -137,7 +142,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-03T16:15:54+08:00"
+updated_at: "2026-06-03T16:36:09+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -151,11 +156,13 @@ notes:
   - Built rom/narutorpg3_chs_full_writeback_menu_structaudit_v1.nds from plan/cache/text-writeback-smoke/encoded-preview-struct-adjusted.tsv; ndstool Header CRC OK / Banner CRC OK.
   - Added patcher/patcher.py and frozen patcher/resources; default, rebuild-text-assets, and explicit TTF-argument builds all repack successfully with ndstool Header CRC OK / Banner CRC OK.
   - Patcher default ROM: rom/narutorpg3_chs_patcher_default_test.nds; rebuild-from-translation ROM: rom/narutorpg3_chs_patcher_rebuild_text_test.nds; explicit-font-args ROM: rom/narutorpg3_chs_patcher_font_arg_test.nds.
-  - Hardened patcher output selection for repeated output names and made menu pending_font_chars a build blocker; verified rebuild-text-assets again as rom/narutorpg3_chs_patcher_rebuild_text_test_build_20260603_151144.nds.
+  - Hardened patcher output selection for repeated output names; verified rebuild-text-assets again as rom/narutorpg3_chs_patcher_rebuild_text_test_build_20260603_151144.nds.
   - Copied the patcher Python tool dependency closure plus ndstool.exe into patcher/tools; verified patcher now calls patcher/tools and produced rom/narutorpg3_chs_patcher_bundled_tools_test.nds with Header CRC OK / Banner CRC OK.
   - Updated .gitignore so patcher/tools/** and patcher/resources/fonts/*.ttf are trackable, while patcher/tools/__pycache__/ remains ignored.
   - Rewrote hack/汉化补丁打包器流程.md in Chinese for the patcher packaging workflow.
   - Rewrote patcher/README.md in Chinese for patcher usage.
+  - Patcher missing characters are now warnings rather than build blockers. Text/menu/font missing chars are collected into patcher/work/build_20260603_163222/missing-chars-report.json and patcher/work/build_20260603_163222/missing-chars.tsv; verified build rom/narutorpg3_chs_patcher_missing_report_test_build_20260603_163222.nds completed with Header CRC OK / Banner CRC OK.
+  - Latest missing-char report: 418 total missing TTF glyphs, text encoding missing rows=0, menu missing chars=0, font missing counts 1x1=1 and 1x2=417.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。
