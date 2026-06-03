@@ -20,6 +20,7 @@ stage_cache:
     - plan/cache/text-writeback-smoke/menu-translation-memo.md
     - plan/cache/text-writeback-smoke/save-name-validation-debug.md
     - plan/cache/text-writeback-smoke/story-autoskip-safe-code-probe.md
+    - plan/cache/text-writeback-smoke/translation-struct-audit.md
 stage_outputs:
   expected:
     - rom/narutorpg3_chs_full_writeback_test.nds
@@ -64,6 +65,11 @@ stage_outputs:
     - plan/cache/text-writeback-smoke/full-writeback-menu-safe9040-no-friend-kinshi-v1-records.json
     - plan/cache/text-writeback-smoke/full-writeback-menu-structsafe-v1-records.json
     - plan/cache/text-writeback-smoke/full-writeback-menu-safe9040-structsafe-v1-records.json
+    - plan/cache/text-writeback-smoke/translation-struct-audit-report.json
+    - plan/cache/text-writeback-smoke/translation-struct-mismatches.tsv
+    - plan/cache/text-writeback-smoke/translation-struct-manual-overrides.tsv
+    - plan/cache/text-writeback-smoke/encoded-preview-struct-adjusted.tsv
+    - plan/cache/text-writeback-smoke/full-writeback-menu-structaudit-v1-records.json
     - rom/narutorpg3_chs_full_writeback_menu_v2.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_friend_kinshi_v1.nds
@@ -71,7 +77,10 @@ stage_outputs:
     - rom/narutorpg3_chs_full_writeback_menu_safe9040_no_friend_kinshi_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_structsafe_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_safe9040_structsafe_v1.nds
+    - rom/narutorpg3_chs_full_writeback_menu_structaudit_v1.nds
+    - tools/audit_structsafe_translations.py
     - hack/剧情消息流结构与结束符.md
+    - hack/译文控制符与消息结构审计.md
     - hack/名字输入校验与禁止词表.md
     - hack/剧情消息扩展码段兼容性.md
     - hack/菜单文本批量翻译与回写备忘.md
@@ -86,6 +95,9 @@ previous_plan:
 notes:
   - Story autoskip was narrowed to message stream structure damage: the first msg/fld/evt/000.m line had its 03 00 terminator moved from 0x60 to 0x3A in older full-writeback builds.
   - Built structure-safe candidates that preserve the pre-text message prefix and original terminator position: rom/narutorpg3_chs_full_writeback_menu_structsafe_v1.nds and rom/narutorpg3_chs_full_writeback_menu_safe9040_structsafe_v1.nds.
+  - User manually verified rom/narutorpg3_chs_full_writeback_menu_structsafe_v1.nds can enter story dialogue.
+  - Added tools/audit_structsafe_translations.py; final adjusted preview has after_control_mismatch_rows=0, overflow_rows=0, missing_char_rows=0.
+  - Built rom/narutorpg3_chs_full_writeback_menu_structaudit_v1.nds from plan/cache/text-writeback-smoke/encoded-preview-struct-adjusted.tsv; ndstool Header CRC OK / Banner CRC OK.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

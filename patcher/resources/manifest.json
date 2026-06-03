@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "resource_set": "structaudit_v1",
+  "text": {
+    "frozen_translation": "text/frozen_translation.tsv",
+    "code_table": "text/zh_code_table.tsv",
+    "font_manifest_json": "text/font_manifest.json",
+    "font_manifest_txt": "text/font_manifest.txt",
+    "charset": "text/zh_charset.txt",
+    "struct_adjusted_preview": "text/encoded-preview-struct-adjusted.tsv",
+    "struct_manual_overrides": "text/translation-struct-manual-overrides.tsv",
+    "struct_audit_report": "text/translation-struct-audit-report.json"
+  },
+  "menu": {
+    "candidates": "menu/overlay_menu_candidates.tsv",
+    "translations": "menu/overlay_menu_translations.tsv",
+    "translation_report": "menu/overlay_menu_translation_report.json"
+  },
+  "fonts": {
+    "default_1x1_ttf": "fonts/fusion-pixel-8px-monospaced-zh_hans.ttf",
+    "default_1x2_ttf": "fonts/FashionBitmap16_0.092.ttf"
+  },
+  "build": {
+    "candidate_code_endian": "big",
+    "start_code": "0xF040",
+    "code_shape": "sjis",
+    "modes": "1x1,1x2",
+    "exclude_source_files": "msg/wifi/friend_msg.msg,msg/wifi/kinshi_msg.msg"
+  }
+}

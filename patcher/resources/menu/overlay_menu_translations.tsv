@@ -1,0 +1,279 @@
+id	component	source_file	offset	raw_len	slot_len	raw_hex	jp_text	jp_key	zh_text	translation_source	encoded_hex	encoded_len	capacity_delta	missing_chars	status	notes
+menu_overlay_0000_02F6AC	overlay_0000	overlay/overlay_0000.bin	0x2F6AC	14	16	83 47 83 89 81 5B 83 52 81 5B 83 68 81 40	エラーコード　	エラーコード	错误代码	local_menu_dictionary	F0 72 F7 5C F2 4E F2 FB	8	8		ready	
+menu_overlay_0000_02FC94	overlay_0000	overlay/overlay_0000.bin	0x2FC94	14	16	82 BD 82 A2 82 B9 82 F1 83 6C 81 5B 83 80	たいせんネーム	たいせんネーム	对战名称	local_menu_dictionary	F0 B5 F0 CA F3 D1 F4 ED	8	8		ready	
+menu_overlay_0000_02FCA4	overlay_0000	overlay/overlay_0000.bin	0x2FCA4	6	8	82 A0 82 F1 82 D4	あんぶ	あんぶ	暗部	local_menu_dictionary	F3 DC F2 D1	4	4		ready	
+menu_overlay_0000_02FCAC	overlay_0000	overlay/overlay_0000.bin	0x2FCAC	4	8	83 6C 83 57	ネジ	ネジ	宁次	local_menu_dictionary	F1 CE F0 6C	4	4		ready	
+menu_overlay_0000_02FCB4	overlay_0000	overlay/overlay_0000.bin	0x2FCB4	4	8	83 4C 83 6F	キバ	キバ	牙	local_menu_dictionary	F1 BA	2	6		ready	
+menu_overlay_0000_02FCBC	overlay_0000	overlay/overlay_0000.bin	0x2FCBC	4	8	89 8E 96 82	猿魔	猿魔	猿魔	local_menu_dictionary	F2 52 F8 F1	4	4		ready	
+menu_overlay_0000_02FCC4	overlay_0000	overlay/overlay_0000.bin	0x2FCC4	4	8	8E E7 92 DF	守鶴	守鶴	守鹤	local_menu_dictionary	F4 56 F2 8E	4	4		ready	
+menu_overlay_0000_02FCCC	overlay_0000	overlay/overlay_0000.bin	0x2FCCC	4	8	83 4B 83 43	ガイ	ガイ	阿凯	local_menu_dictionary	F4 C4 F1 E5	4	4		ready	
+menu_overlay_0000_02FCD4	overlay_0000	overlay/overlay_0000.bin	0x2FCD4	4	8	83 8A 81 5B	リー	リー	小李	local_menu_dictionary	F1 75 F1 CC	4	4		ready	
+menu_overlay_0000_02FCDC	overlay_0000	overlay/overlay_0000.bin	0x2FCDC	4	8	83 6E 83 4E	ハク	ハク	白	local_menu_dictionary	F0 EC	2	6		ready	
+menu_overlay_0000_02FCE4	overlay_0000	overlay/overlay_0000.bin	0x2FCE4	4	8	83 56 83 6D	シノ	シノ	志乃	local_menu_dictionary	F1 C5 F1 C6	4	4		ready	
+menu_overlay_0000_02FCEC	overlay_0000	overlay/overlay_0000.bin	0x2FCEC	4	8	82 A2 82 CC	いの	いの	井野	local_menu_dictionary	F1 B2 F1 B3	4	4		ready	
+menu_overlay_0000_02FCF4	overlay_0000	overlay/overlay_0000.bin	0x2FCF4	6	8	83 4B 83 41 83 89	ガアラ	ガアラ	我爱罗	local_menu_dictionary	F0 48 F1 D3 F1 D4	6	2		ready	
+menu_overlay_0000_02FCFC	overlay_0000	overlay/overlay_0000.bin	0x2FCFC	6	8	83 55 83 75 83 55	ザブザ	ザブザ	再不斩	local_menu_dictionary	F0 5C F0 F3 F1 EF	6	2		ready	
+menu_overlay_0000_02FD04	overlay_0000	overlay/overlay_0000.bin	0x2FD04	6	8	82 BD 82 A9 82 A2	たかい	たかい	高	local_menu_dictionary	F0 9D	2	6		ready	
+menu_overlay_0000_02FD0C	overlay_0000	overlay/overlay_0000.bin	0x2FD0C	6	8	83 43 83 8B 83 4A	イルカ	イルカ	伊鲁卡	local_menu_dictionary	F1 AE F1 EB F1 E0	6	2		ready	
+menu_overlay_0000_02FD14	overlay_0000	overlay/overlay_0000.bin	0x2FD14	6	8	83 54 83 4E 83 89	サクラ	サクラ	小樱	local_menu_dictionary	F1 75 F1 9F	4	4		ready	
+menu_overlay_0000_02FD1C	overlay_0000	overlay/overlay_0000.bin	0x2FD1C	6	8	82 D3 82 C2 82 A4	ふつう	ふつう	普通	local_menu_dictionary	F7 A6 F0 E4	4	4		ready	
+menu_overlay_0000_02FD24	overlay_0000	overlay/overlay_0000.bin	0x2FD24	6	8	83 4B 83 7D 92 89	ガマ忠	ガマ忠	蛤蟆忠	local_menu_dictionary	F5 5C F5 5D F2 44	6	2		ready	
+menu_overlay_0000_02FD2C	overlay_0000	overlay/overlay_0000.bin	0x2FD2C	6	8	83 4B 83 7D 97 B3	ガマ竜	ガマ竜	蛤蟆龙	local_menu_dictionary	F5 5C F5 5D F1 6D	6	2		ready	
+menu_overlay_0000_02FD34	overlay_0000	overlay/overlay_0000.bin	0x2FD34	6	8	8E 4F 91 E3 96 DA	三代目	三代目	三代目	local_menu_dictionary	F2 4D F2 4E F2 4F	6	2		ready	
+menu_overlay_0000_02FD3C	overlay_0000	overlay/overlay_0000.bin	0x2FD3C	6	8	83 65 83 7D 83 8A	テマリ	テマリ	手鞠	local_menu_dictionary	F1 4B F1 D7	4	4		ready	
+menu_overlay_0000_02FD44	overlay_0000	overlay/overlay_0000.bin	0x2FD44	6	8	83 69 83 8B 83 67	ナルト	ナルト	鸣人	local_menu_dictionary	F0 41 F0 42	4	4		ready	
+menu_overlay_0000_02FD4C	overlay_0000	overlay/overlay_0000.bin	0x2FD4C	6	8	83 4B 83 7D 8B 67	ガマ吉	ガマ吉	蛤蟆吉	local_menu_dictionary	F5 5C F5 5D F2 BC	6	2		ready	
+menu_overlay_0000_02FD54	overlay_0000	overlay/overlay_0000.bin	0x2FD54	6	8	83 71 83 69 83 5E	ヒナタ	ヒナタ	雏田	local_menu_dictionary	F1 C0 F1 C1	4	4		ready	
+menu_overlay_0000_02FD5C	overlay_0000	overlay/overlay_0000.bin	0x2FD5C	6	8	82 BD 82 A9 82 A2	たかい	たかい	高	local_menu_dictionary	F0 9D	2	6		ready	
+menu_overlay_0000_02FD64	overlay_0000	overlay/overlay_0000.bin	0x2FD64	6	8	83 4A 83 63 83 86	カツユ	カツユ	蛞蝓	local_menu_dictionary	F8 79 F5 DB	4	4		ready	
+menu_overlay_0000_02FD6C	overlay_0000	overlay/overlay_0000.bin	0x2FD6C	6	8	94 AA 94 45 8C A2	八忍犬	八忍犬	八忍犬	local_menu_dictionary	F2 92 F0 B8 F1 B8	6	2		ready	
+menu_overlay_0000_02FD74	overlay_0000	overlay/overlay_0000.bin	0x2FD74	6	8	82 D0 82 AD 82 A2	ひくい	ひくい	低	local_menu_dictionary	F0 A3	2	6		ready	
+menu_overlay_0000_02FD7C	overlay_0000	overlay/overlay_0000.bin	0x2FD7C	6	8	83 43 83 5E 83 60	イタチ	イタチ	鼬	local_menu_dictionary	F1 F6	2	6		ready	
+menu_overlay_0000_02FD84	overlay_0000	overlay/overlay_0000.bin	0x2FD84	6	8	82 A0 82 F1 82 D4	あんぶ	あんぶ	暗部	local_menu_dictionary	F3 DC F2 D1	4	4		ready	
+menu_overlay_0000_02FD8C	overlay_0000	overlay/overlay_0000.bin	0x2FD8C	6	8	82 D0 82 AD 82 A2	ひくい	ひくい	低	local_menu_dictionary	F0 A3	2	6		ready	
+menu_overlay_0000_02FD94	overlay_0000	overlay/overlay_0000.bin	0x2FD94	6	8	82 A0 82 F1 82 D4	あんぶ	あんぶ	暗部	local_menu_dictionary	F3 DC F2 D1	4	4		ready	
+menu_overlay_0000_02FD9C	overlay_0000	overlay/overlay_0000.bin	0x2FD9C	6	8	83 69 83 8B 83 67	ナルト	ナルト	鸣人	local_menu_dictionary	F0 41 F0 42	4	4		ready	
+menu_overlay_0000_02FDA4	overlay_0000	overlay/overlay_0000.bin	0x2FDA4	6	8	83 7D 83 93 83 5F	マンダ	マンダ	万蛇	local_menu_dictionary	F3 E9 F2 49	4	4		ready	
+menu_overlay_0000_02FDAC	overlay_0000	overlay/overlay_0000.bin	0x2FDAC	6	8	83 54 83 58 83 50	サスケ	サスケ	佐助	local_menu_dictionary	F1 7D F1 7E	4	4		ready	
+menu_overlay_0000_02FDB4	overlay_0000	overlay/overlay_0000.bin	0x2FDB4	6	8	83 4A 83 4A 83 56	カカシ	カカシ	卡卡西	local_menu_dictionary	F1 E0 F1 E0 F1 E1	6	2		ready	
+menu_overlay_0000_02FDBC	overlay_0000	overlay/overlay_0000.bin	0x2FDBC	6	8	83 4C 83 54 83 81	キサメ	キサメ	鬼鲛	local_menu_dictionary	F1 F9 F1 FA	4	4		ready	
+menu_overlay_0000_02FDC4	overlay_0000	overlay/overlay_0000.bin	0x2FDC4	6	8	83 63 83 69 83 66	ツナデ	ツナデ	纲手	local_menu_dictionary	F2 45 F1 4B	4	4		ready	
+menu_overlay_0000_02FDCC	overlay_0000	overlay/overlay_0000.bin	0x2FDCC	6	8	82 D3 82 C2 82 A4	ふつう	ふつう	普通	local_menu_dictionary	F7 A6 F0 E4	4	4		ready	
+menu_overlay_0000_02FDD4	overlay_0000	overlay/overlay_0000.bin	0x2FDD4	6	8	83 54 83 58 83 50	サスケ	サスケ	佐助	local_menu_dictionary	F1 7D F1 7E	4	4		ready	
+menu_overlay_0000_02FDDC	overlay_0000	overlay/overlay_0000.bin	0x2FDDC	8	12	83 70 83 62 83 4E 83 93	パックン	パックン	帕克	local_menu_dictionary	F5 DC F0 D1	4	8		ready	
+menu_overlay_0000_02FDE8	overlay_0000	overlay/overlay_0000.bin	0x2FDE8	8	12	82 B3 82 A2 82 C4 82 A2	さいてい	さいてい	最低	local_menu_dictionary	F0 C2 F0 A3	4	8		ready	
+menu_overlay_0000_02FDF4	overlay_0000	overlay/overlay_0000.bin	0x2FDF4	8	12	83 56 83 4A 83 7D 83 8B	シカマル	シカマル	鹿丸	local_menu_dictionary	F1 A5 F1 A6	4	8		ready	
+menu_overlay_0000_02FE00	overlay_0000	overlay/overlay_0000.bin	0x2FE00	8	12	83 60 83 87 83 45 83 57	チョウジ	チョウジ	丁次	local_menu_dictionary	F1 54 F0 6C	4	8		ready	
+menu_overlay_0000_02FE0C	overlay_0000	overlay/overlay_0000.bin	0x2FE0C	8	12	83 65 83 93 83 65 83 93	テンテン	テンテン	天天	local_menu_dictionary	F1 D2 F1 D2	4	8		ready	
+menu_overlay_0000_02FE18	overlay_0000	overlay/overlay_0000.bin	0x2FE18	8	12	82 B6 82 E7 82 A2 82 E2	じらいや	じらいや	自来也	local_menu_dictionary	F0 4F F0 49 F0 5F	6	6		ready	
+menu_overlay_0000_02FE24	overlay_0000	overlay/overlay_0000.bin	0x2FE24	8	12	82 B3 82 A2 82 C4 82 A2	さいてい	さいてい	最低	local_menu_dictionary	F0 C2 F0 A3	4	8		ready	
+menu_overlay_0000_02FE30	overlay_0000	overlay/overlay_0000.bin	0x2FE30	8	12	83 4A 83 7D 83 5E 83 8A	カマタリ	カマタリ	镰多利	local_menu_dictionary	F5 81 F1 77 F0 DF	6	6		ready	
+menu_overlay_0000_02FE3C	overlay_0000	overlay/overlay_0000.bin	0x2FE3C	10	12	82 B3 82 A2 82 B1 82 A4 81 49	さいこう！	さいこう！	最高！	local_menu_dictionary	F0 C2 F0 9D F0 43	6	6		ready	
+menu_overlay_0000_02FE48	overlay_0000	overlay/overlay_0000.bin	0x2FE48	10	12	82 B3 82 A2 82 B1 82 A4 81 49	さいこう！	さいこう！	最高！	local_menu_dictionary	F0 C2 F0 9D F0 43	6	6		ready	
+menu_overlay_0000_02FE54	overlay_0000	overlay/overlay_0000.bin	0x2FE54	10	12	83 4A 83 93 83 4E 83 8D 83 45	カンクロウ	カンクロウ	勘九郎	local_menu_dictionary	F1 DB F1 DC F1 AC	6	6		ready	
+menu_overlay_0000_02FE60	overlay_0000	overlay/overlay_0000.bin	0x2FE60	10	12	83 4B 83 43 82 CC 94 45 8B 54	ガイの忍亀	ガイの忍亀	凯的忍龟	local_menu_dictionary	F1 E5 F0 69 F0 B8 F8 F7	8	4		ready	
+menu_overlay_0000_02FE6C	overlay_0000	overlay/overlay_0000.bin	0x2FE6C	10	12	83 4A 83 93 83 4E 83 8D 83 45	カンクロウ	カンクロウ	勘九郎	local_menu_dictionary	F1 DB F1 DC F1 AC	6	6		ready	
+menu_overlay_0000_02FE78	overlay_0000	overlay/overlay_0000.bin	0x2FE78	10	12	83 4B 83 7D 83 75 83 93 91 BE	ガマブン太	ガマブン太	蛤蟆文太	local_menu_dictionary	F5 5C F5 5D F2 76 F1 AB	8	4		ready	
+menu_overlay_0000_02FE84	overlay_0000	overlay/overlay_0000.bin	0x2FE84	10	12	83 7E 83 6A 83 4A 83 63 83 86	ミニカツユ	ミニカツユ	小蛞蝓	local_menu_dictionary	F1 75 F8 79 F5 DB	6	6		ready	
+menu_overlay_0000_02FE90	overlay_0000	overlay/overlay_0000.bin	0x2FE90	10	12	83 49 83 8D 83 60 82 DC 82 E9	オロチまる	オロチまる	大蛇丸	local_menu_dictionary	F2 41 F2 49 F1 A6	6	6		ready	
+menu_overlay_0000_03006C	overlay_0000	overlay/overlay_0000.bin	0x3006C	10	12	82 BD 82 A2 82 BF 82 E5 82 A4	たいちょう	たいちょう	队长	local_menu_dictionary	F4 4C F3 CE	4	8		ready	
+menu_overlay_0000_0300E8	overlay_0000	overlay/overlay_0000.bin	0x300E8	20	24	81 40 81 40 81 40 82 BB 82 A4 82 D1 82 BF 82 E3 82 A4 81 40	　　　そうびちゅう　	そうびちゅう	装备中	local_menu_dictionary	F0 E2 F0 E3 F0 94	6	18		ready	
+menu_overlay_0000_030100	overlay_0000	overlay/overlay_0000.bin	0x30100	66	68	81 40 81 40 81 40 82 A0 82 AA 82 E9 81 40 81 40 81 40 82 A8 82 C8 82 B6 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 B3 82 AA 82 E9 81 40 81 40 81 40 82 BB 82 A4 82 D1 82 BF 82 E3 82 A4 81 40	　　　あがる　　　おなじ　　　　　　　　さがる　　　そうびちゅう　	あがる　　　おなじ　　　　　　　　さがる　　　そうびちゅう	提升　　　相同　　　　　　　　下降　　　装备中	local_menu_dictionary	F0 AA F0 AB F4 42 F4 42 F4 42 F4 63 F4 E1 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F0 84 F5 C3 F4 42 F4 42 F4 42 F0 E2 F0 E3 F0 94	46	22		ready	
+menu_overlay_0000_030144	overlay_0000	overlay/overlay_0000.bin	0x30144	24	28	83 5A 83 62 83 67 82 C5 82 AB 82 E9 83 4C 83 83 83 89 83 4E 83 5E 81 5B	セットできるキャラクター	セットできるキャラクター	可装备角色	local_menu_dictionary	F3 68 F0 E2 F0 E3 F0 75 F1 49	10	18		ready	
+menu_overlay_0000_030160	overlay_0000	overlay/overlay_0000.bin	0x30160	16	20	82 BB 82 A4 82 D1 82 B6 82 E5 82 A4 82 BD 82 A2	そうびじょうたい	そうびじょうたい	装备状态	local_menu_dictionary	F0 E2 F0 E3 F5 7A F5 A4	8	12		ready	
+menu_overlay_0000_030178	overlay_0000	overlay/overlay_0000.bin	0x30178	16	24	82 BD 82 A2 82 BF 82 E5 82 A4 82 B1 82 A4 82 A9	たいちょうこうか	たいちょうこうか	队长效果	local_menu_dictionary	F4 4C F3 CE F0 DD F0 DE	8	16		ready	
+menu_overlay_0000_030190	overlay_0000	overlay/overlay_0000.bin	0x30190	6	8	82 E2 82 E9 82 AB	やるき	やるき	干劲	local_menu_dictionary	F1 F7 F3 5A	4	4		ready	
+menu_overlay_0000_0301F8	overlay_0000	overlay/overlay_0000.bin	0x301F8	26	28	82 B0 82 F1 82 B4 82 A2 82 CC 82 AF 82 A2 82 AF 82 F1 82 BF 81 40 81 40 81 40	げんざいのけいけんち　　　	げんざいのけいけんち	当前经验值	local_menu_dictionary	F3 AF F0 96 F2 5F F2 EF F4 DF	10	18		ready	
+menu_overlay_0000_030214	overlay_0000	overlay/overlay_0000.bin	0x30214	26	28	82 C2 82 AC 82 CC 83 8C 83 78 83 8B 82 DC 82 C5 81 40 82 A0 82 C6 81 40 81 40	つぎのレベルまで　あと　　	つぎのレベルまで　あと	距下一级还差	local_menu_dictionary	F6 F3 F0 84 F0 6B F6 9F F0 F4 F1 76	12	16		ready	
+menu_overlay_0000_030230	overlay_0000	overlay/overlay_0000.bin	0x30230	6	8	25 73 81 5E 25 73	%s／%s	%s／%s	%s／%s	local_menu_dictionary	25 73 81 5E 25 73	6	2		ready	
+menu_overlay_0000_030244	overlay_0000	overlay/overlay_0000.bin	0x30244	14	16	25 73 81 5E 25 73 81 40 25 73 81 5E 25 73	%s／%s　%s／%s	%s／%s　%s／%s	%s／%s　%s／%s	local_menu_dictionary	25 73 81 5E 25 73 F4 42 25 73 81 5E 25 73	14	2		ready	
+menu_overlay_0000_030434	overlay_0000	overlay/overlay_0000.bin	0x30434	4	8	82 CD 82 A2	はい	はい	是	local_menu_dictionary	F0 8C	2	6		ready	
+menu_overlay_0000_03043C	overlay_0000	overlay/overlay_0000.bin	0x3043C	6	8	82 A2 82 A2 82 A6	いいえ	いいえ	否	local_menu_dictionary	F5 C7	2	6		ready	
+menu_overlay_0001_01EC60	overlay_0001	overlay/overlay_0001.bin	0x1EC60	34	36	82 C2 82 A4 82 B5 82 F1 83 47 83 89 81 5B 82 AA 81 40 82 CD 82 C1 82 B9 82 A2 82 B5 82 DC 82 B5 82 BD	つうしんエラーが　はっせいしました	つうしんエラーが　はっせいしました	发生通信错误	local_menu_dictionary	F3 5C F2 47 F0 E4 F2 F4 F0 72 F7 5C	12	24		ready	
+menu_overlay_0001_01EC84	overlay_0001	overlay/overlay_0001.bin	0x1EC84	36	40	82 C2 82 A4 82 B5 82 F1 83 47 83 89 81 5B 82 AA 81 40 82 CD 82 C1 82 B9 82 A2 82 B5 82 DC 82 B5 82 BD 81 49	つうしんエラーが　はっせいしました！	つうしんエラーが　はっせいしました！	发生通信错误！	local_menu_dictionary	F3 5C F2 47 F0 E4 F2 F4 F0 72 F7 5C F0 43	14	26		ready	
+menu_overlay_0001_01ECC4	overlay_0001	overlay/overlay_0001.bin	0x1ECC4	20	24	83 60 83 83 83 4E 83 89 82 AA 82 BD 82 E8 82 C8 82 A2 81 49	チャクラがたりない！	チャクラがたりない！	查克拉不足！	local_menu_dictionary	F0 D0 F0 D1 F0 D2 F0 F3 F6 BD F0 43	12	12		ready	
+menu_overlay_0001_01ECDC	overlay_0001	overlay/overlay_0001.bin	0x1ECDC	22	24	8F 70 82 AA 82 D3 82 A4 82 B6 82 E7 82 EA 82 C4 82 A2 82 E9 81 49	術がふうじられている！	術がふうじられている！	术被封印！	local_menu_dictionary	F0 B9 F4 84 F5 9F F6 BE F0 43	10	14		ready	
+menu_overlay_0001_01ECF4	overlay_0001	overlay/overlay_0001.bin	0x1ECF4	22	24	82 C9 82 B0 82 E7 82 EA 82 C8 82 A9 82 C1 82 BD 81 45 81 45 81 45	にげられなかった・・・	にげられなかった・・・	没能逃走…	local_menu_dictionary	F1 72 F0 60 F6 CE F4 F4 F1 53	10	14		ready	
+menu_overlay_0001_01ED0C	overlay_0001	overlay/overlay_0001.bin	0x1ED0C	14	16	82 C9 82 B0 82 E7 82 EA 82 C8 82 A2 81 49	にげられない！	にげられない！	无法逃走！	local_menu_dictionary	F0 F0 F0 CD F6 CE F4 F4 F0 43	10	6		ready	
+menu_overlay_0001_01ED1C	overlay_0001	overlay/overlay_0001.bin	0x1ED1C	24	28	82 CD 81 40 82 A8 82 BF 82 B1 82 F1 82 C5 82 A2 82 E9 81 45 81 45 81 45	は　おちこんでいる・・・	は　おちこんでいる・・・	正在沮丧…	local_menu_dictionary	F0 A9 F0 F1 F4 C6 F4 C3 F1 53	10	18		ready	
+menu_overlay_0001_01ED38	overlay_0001	overlay/overlay_0001.bin	0x1ED38	20	24	82 CD 81 40 95 40 8C 8C 82 F0 82 D3 82 A2 82 BD 81 49 81 49	は　鼻血をふいた！！	は　鼻血をふいた！！	流鼻血了！！	local_menu_dictionary	F3 B6 F4 EF F4 F0 F0 CC F0 43 F0 43	12	12		ready	
+menu_overlay_0001_01ED50	overlay_0001	overlay/overlay_0001.bin	0x1ED50	36	40	82 B5 82 E3 82 C1 82 AF 82 C2 82 BD 82 E8 82 E5 82 A4 82 C5 81 40 93 AE 82 AF 82 C8 82 A2 81 45 81 45 81 45	しゅっけつたりょうで　動けない・・・	しゅっけつたりょうで　動けない・・・	出血过多，无法动弹…	local_menu_dictionary	F0 D5 F4 F0 F0 BC F1 77 F0 5B F0 F0 F0 CD F0 86 F4 40 F1 53	20	20		ready	
+menu_overlay_0001_01ED78	overlay_0001	overlay/overlay_0001.bin	0x1ED78	20	24	82 CD 81 40 82 B1 82 C1 82 BB 82 E8 82 DD 82 C4 82 A2 82 E9	は　こっそりみている	は　こっそりみている	正在偷偷看	local_menu_dictionary	F0 A9 F0 F1 F4 BF F4 BF F0 81	10	14		ready	
+menu_overlay_0001_01ED90	overlay_0001	overlay/overlay_0001.bin	0x1ED90	22	24	82 CD 81 40 95 40 82 CC 89 BA 82 AA 82 CC 82 D1 82 C4 82 A2 82 E9	は　鼻の下がのびている	は　鼻の下がのびている	正在偷看	local_menu_dictionary	F0 A9 F0 F1 F4 BF F0 81	8	16		ready	
+menu_overlay_0001_01EE3C	overlay_0001	overlay/overlay_0001.bin	0x1EE3C	6	8	82 A2 82 C7 82 A4	いどう	いどう	移动	local_menu_dictionary	F0 85 F0 86	4	4		ready	
+menu_overlay_0001_01EE44	overlay_0001	overlay/overlay_0001.bin	0x1EE44	8	12	82 B1 82 A4 82 BD 82 A2	こうたい	こうたい	替换	local_menu_dictionary	F0 EB F1 46	4	8		ready	
+menu_overlay_0001_01EE50	overlay_0001	overlay/overlay_0001.bin	0x1EE50	6	8	82 E0 82 C7 82 E9	もどる	もどる	返回	local_menu_dictionary	F6 A4 F0 EE	4	4		ready	
+menu_overlay_0001_01EE58	overlay_0001	overlay/overlay_0001.bin	0x1EE58	8	12	82 DA 82 A4 82 AC 82 E5	ぼうぎょ	ぼうぎょ	防御	local_menu_dictionary	F4 71 F5 A5	4	8		ready	
+menu_overlay_0001_01EE64	overlay_0001	overlay/overlay_0001.bin	0x1EE64	6	8	82 C9 82 B0 82 E9	にげる	にげる	逃跑	local_menu_dictionary	F6 CE F3 5F	4	4		ready	
+menu_overlay_0001_01EE6C	overlay_0001	overlay/overlay_0001.bin	0x1EE6C	8	12	82 BA 82 F1 82 BD 82 A2	ぜんたい	ぜんたい	全体	local_menu_dictionary	F0 C5 F2 EE	4	8		ready	
+menu_overlay_0001_01EE78	overlay_0001	overlay/overlay_0001.bin	0x1EE78	10	12	83 60 83 83 83 4E 83 89 81 40	チャクラ　	チャクラ	查克拉	local_menu_dictionary	F0 D0 F0 D1 F0 D2	6	6		ready	
+menu_overlay_0001_01EE84	overlay_0001	overlay/overlay_0001.bin	0x1EE84	10	12	82 B1 82 B7 82 A4 81 40 81 40	こすう　　	こすう	数量	local_menu_dictionary	F5 C2 F1 84	4	8		ready	
+menu_overlay_0001_01EE90	overlay_0001	overlay/overlay_0001.bin	0x1EE90	26	28	8F 70 82 AA 81 40 82 D3 82 A4 82 B6 82 E7 82 EA 82 C4 82 A2 82 DC 82 B7 81 49	術が　ふうじられています！	術が　ふうじられています！	术已被封印！	local_menu_dictionary	F0 B9 F3 CD F4 84 F5 9F F6 BE F0 43	12	16		ready	
+menu_overlay_0001_01EEAC	overlay_0001	overlay/overlay_0001.bin	0x1EEAC	24	28	83 60 83 83 83 4E 83 89 82 AA 81 40 82 BD 82 E8 82 DC 82 B9 82 F1 81 49	チャクラが　たりません！	チャクラが　たりません！	查克拉不足！	local_menu_dictionary	F0 D0 F0 D1 F0 D2 F0 F3 F6 BD F0 43	12	16		ready	
+menu_overlay_0001_01EEC8	overlay_0001	overlay/overlay_0001.bin	0x1EEC8	36	40	82 BB 82 A4 82 D1 82 C5 81 40 8F 70 82 AA 81 40 82 D3 82 A4 82 B6 82 E7 82 EA 82 C4 82 A2 82 DC 82 B7 81 49	そうびで　術が　ふうじられています！	そうびで　術が　ふうじられています！	装备使术被封印！	local_menu_dictionary	F0 E2 F0 E3 F0 BD F0 B9 F4 84 F5 9F F6 BE F0 43	16	24		ready	
+menu_overlay_0001_01EEF0	overlay_0001	overlay/overlay_0001.bin	0x1EEF0	26	28	82 BD 82 A2 82 B9 82 F1 82 C5 82 CD 81 40 82 C2 82 A9 82 A6 82 DC 82 B9 82 F1	たいせんでは　つかえません	たいせんでは　つかえません	对战中不能使用	local_menu_dictionary	F0 B5 F0 CA F0 94 F0 F3 F0 60 F0 BD F0 61	14	14		ready	
+menu_overlay_0001_01EF0C	overlay_0001	overlay/overlay_0001.bin	0x1EF0C	26	28	82 AB 82 F1 82 B6 82 E3 82 C2 82 CD 81 40 82 C2 82 A9 82 A6 82 DC 82 B9 82 F1	きんじゅつは　つかえません	きんじゅつは　つかえません	禁术不能使用	local_menu_dictionary	F4 88 F0 B9 F0 F3 F0 60 F0 BD F0 61	12	16		ready	
+menu_overlay_0001_01EF28	overlay_0001	overlay/overlay_0001.bin	0x1EF28	20	24	82 A2 82 DC 82 CD 81 40 82 C2 82 A9 82 A6 82 DC 82 B9 82 F1	いまは　つかえません	いまは　つかえません	现在不能使用	local_menu_dictionary	F0 D6 F0 F1 F0 F3 F0 60 F0 BD F0 61	12	12		ready	
+menu_overlay_0001_01EF40	overlay_0001	overlay/overlay_0001.bin	0x1EF40	8	12	82 A9 82 B0 95 AA 90 67	かげ分身	かげ分身	影分身	local_menu_dictionary	F2 51 F3 E3 F3 AA	6	6		ready	
+menu_overlay_0001_01EF4C	overlay_0001	overlay/overlay_0001.bin	0x1EF4C	12	16	82 B5 82 E1 82 E8 82 F1 82 AA 82 F1	しゃりんがん	しゃりんがん	写轮眼	local_menu_dictionary	F4 E2 F0 4D F3 AC	6	10		ready	
+menu_overlay_0001_01EF5C	overlay_0001	overlay/overlay_0001.bin	0x1EF5C	10	12	82 D1 82 E1 82 AD 82 AA 82 F1	びゃくがん	びゃくがん	白眼	local_menu_dictionary	F0 EC F3 AC	4	8		ready	
+menu_overlay_0001_01EF68	overlay_0001	overlay/overlay_0001.bin	0x1EF68	12	16	94 AA 96 E5 82 C6 82 F1 82 B1 82 A4	八門とんこう	八門とんこう	八门遁甲	local_menu_dictionary	F2 92 F4 6E F5 CF F5 76	8	8		ready	
+menu_overlay_0001_01EF78	overlay_0001	overlay/overlay_0001.bin	0x1EF78	14	16	82 A4 82 BF 82 C8 82 E9 83 54 83 4E 83 89	うちなるサクラ	うちなるサクラ	内在小樱	local_menu_dictionary	F1 9D F0 F1 F1 75 F1 9F	8	8		ready	
+menu_overlay_0001_01EF88	overlay_0001	overlay/overlay_0001.bin	0x1EF88	24	28	82 B6 82 E5 82 A4 82 BD 82 A2 82 C5 81 40 82 C2 82 A9 82 A6 82 DC 82 B7	じょうたいで　つかえます	じょうたいで　つかえます	该状态下可用	local_menu_dictionary	F1 78 F5 7A F5 A4 F0 84 F3 68 F0 61	12	16		ready	
+menu_overlay_0001_01EFA4	overlay_0001	overlay/overlay_0001.bin	0x1EFA4	18	20	83 60 83 83 83 4E 83 89 82 CB 82 E8 81 40 82 C8 82 B5	チャクラねり　なし	チャクラねり　なし	无查克拉凝聚	local_menu_dictionary	F0 F0 F0 D0 F0 D1 F0 D2 F0 CE F0 CF	12	8		ready	
+menu_overlay_0001_01EFB8	overlay_0001	overlay/overlay_0001.bin	0x1EFB8	18	20	83 60 83 83 83 4E 83 89 82 CB 82 E8 81 40 82 A0 82 E8	チャクラねり　あり	チャクラねり　あり	有查克拉凝聚	local_menu_dictionary	F0 D3 F0 D0 F0 D1 F0 D2 F0 CE F0 CF	12	8		ready	
+menu_overlay_0001_01EFCC	overlay_0001	overlay/overlay_0001.bin	0x1EFCC	8	12	82 B1 82 A4 82 B0 82 AB	こうげき	こうげき	攻击	local_menu_dictionary	F0 44 F0 45	4	8		ready	
+menu_overlay_0001_01EFD8	overlay_0001	overlay/overlay_0001.bin	0x1EFD8	6	8	82 B6 82 E3 82 C2	じゅつ	じゅつ	忍术	local_menu_dictionary	F0 B8 F0 B9	4	4		ready	
+menu_overlay_0001_01EFE0	overlay_0001	overlay/overlay_0001.bin	0x1EFE0	6	8	82 C7 82 A4 82 AE	どうぐ	どうぐ	道具	local_menu_dictionary	F0 C0 F0 C1	4	4		ready	
+menu_overlay_0001_01EFE8	overlay_0001	overlay/overlay_0001.bin	0x1EFE8	8	12	82 B1 82 A4 82 BD 82 A2	こうたい	こうたい	替换	local_menu_dictionary	F0 EB F1 46	4	8		ready	
+menu_overlay_0001_01EFF4	overlay_0001	overlay/overlay_0001.bin	0x1EFF4	6	8	82 C9 82 B0 82 E9	にげる	にげる	逃跑	local_menu_dictionary	F6 CE F3 5F	4	4		ready	
+menu_overlay_0001_01EFFC	overlay_0001	overlay/overlay_0001.bin	0x1EFFC	8	12	82 DA 82 A4 82 AC 82 E5	ぼうぎょ	ぼうぎょ	防御	local_menu_dictionary	F4 71 F5 A5	4	8		ready	
+menu_overlay_0001_01F008	overlay_0001	overlay/overlay_0001.bin	0x1F008	6	8	82 A2 82 C7 82 A4	いどう	いどう	移动	local_menu_dictionary	F0 85 F0 86	4	4		ready	
+menu_overlay_0001_01F010	overlay_0001	overlay/overlay_0001.bin	0x1F010	6	8	82 E0 82 C7 82 B7	もどす	もどす	放回	local_menu_dictionary	F4 61 F0 EE	4	4		ready	
+menu_overlay_0002_0128B8	overlay_0002	overlay/overlay_0002.bin	0x128B8	38	132	81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 F0 81 40 82 C4 82 C9 82 A2 82 EA 82 BD 81 49	　　　　　　　　　　　を　てにいれた！	を　てにいれた！	获得了！	local_menu_dictionary	F6 7E F3 46 F0 CC F0 43	8	124		ready	
+menu_overlay_0002_01293C	overlay_0002	overlay/overlay_0002.bin	0x1293C	36	100	81 40 83 4B 83 7D 82 BF 82 E1 82 F1 82 F0 82 B7 82 D7 82 C4 82 A0 82 C2 82 DF 82 DC 82 B5 82 BD 81 49 81 49	　ガマちゃんをすべてあつめました！！	ガマちゃんをすべてあつめました！！	蛤蟆全收集！！	local_menu_dictionary	F5 5C F5 5D F0 C5 F0 ED F1 90 F0 43 F0 43	14	86		ready	
+menu_overlay_0002_012C12	overlay_0002	overlay/overlay_0002.bin	0x12C12	6	10	82 A2 82 A2 82 A6	いいえ	いいえ	否	local_menu_dictionary	F5 C7	2	8		ready	
+menu_overlay_0002_012C42	overlay_0002	overlay/overlay_0002.bin	0x12C42	6	10	82 E2 82 DF 82 E9	やめる	やめる	退出	local_menu_dictionary	F0 A2 F0 D5	4	6		ready	
+menu_overlay_0002_012C78	overlay_0002	overlay/overlay_0002.bin	0x12C78	6	12	82 E2 82 DF 82 E9	やめる	やめる	退出	local_menu_dictionary	F0 A2 F0 D5	4	8		ready	
+menu_overlay_0003_042A60	overlay_0003	overlay/overlay_0003.bin	0x42A60	24	28	82 4F 82 50 82 51 82 52 82 53 82 54 82 55 82 56 82 57 82 58 81 48 81 5B	０１２３４５６７８９？ー	０１２３４５６７８９？ー	０１２３４５６７８９？ー	local_menu_dictionary	82 4F F7 CC F7 CE F5 D3 F5 CC F7 D1 F7 D2 82 56 82 57 82 58 F1 5E 81 5B	24	4		ready	
+menu_overlay_0003_042A9C	overlay_0003	overlay/overlay_0003.bin	0x42A9C	24	28	82 4F 82 50 82 51 82 52 82 53 82 54 82 55 82 56 82 57 82 58 81 48 81 5B	０１２３４５６７８９？ー	０１２３４５６７８９？ー	０１２３４５６７８９？ー	local_menu_dictionary	82 4F F7 CC F7 CE F5 D3 F5 CC F7 D1 F7 D2 82 56 82 57 82 58 F1 5E 81 5B	24	4		ready	
+menu_overlay_0003_043D48	overlay_0003	overlay/overlay_0003.bin	0x43D48	4	8	82 DD 82 E9	みる	みる	查看	local_menu_dictionary	F0 D0 F0 81	4	4		ready	
+menu_overlay_0003_043D50	overlay_0003	overlay/overlay_0003.bin	0x43D50	6	8	82 C2 82 A9 82 A4	つかう	つかう	使用	local_menu_dictionary	F0 BD F0 61	4	4		ready	
+menu_overlay_0003_043D7C	overlay_0003	overlay/overlay_0003.bin	0x43D7C	6	8	25 73 82 CC 81 40	%sの　	%sの	%s的	local_menu_dictionary	25 73 F0 69	4	4		ready	
+menu_overlay_0003_043D84	overlay_0003	overlay/overlay_0003.bin	0x43D84	8	12	91 53 91 CC 82 CC 81 40	全体の　	全体の	全体的	local_menu_dictionary	F0 C5 F2 EE F0 69	6	6		ready	
+menu_overlay_0003_043D90	overlay_0003	overlay/overlay_0003.bin	0x43D90	40	44	25 73 83 58 83 5E 83 7E 83 69 82 C6 81 40 83 60 83 83 83 4E 83 89 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sスタミナと　チャクラが　かいふくした！	%sスタミナと　チャクラが　かいふくした！	%s体力和查克拉恢复了！	local_menu_dictionary	25 73 F2 EE F0 DC F0 6F F0 D0 F0 D1 F0 D2 F5 CB F5 C8 F0 CC F0 43	22	22		ready	
+menu_overlay_0003_043DBC	overlay_0003	overlay/overlay_0003.bin	0x43DBC	28	32	25 73 83 58 83 5E 83 7E 83 69 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sスタミナが　かいふくした！	%sスタミナが　かいふくした！	%s体力恢复了！	local_menu_dictionary	25 73 F2 EE F0 DC F5 CB F5 C8 F0 CC F0 43	14	18		ready	
+menu_overlay_0003_043DDC	overlay_0003	overlay/overlay_0003.bin	0x43DDC	28	32	25 73 83 60 83 83 83 4E 83 89 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sチャクラが　かいふくした！	%sチャクラが　かいふくした！	%s查克拉恢复了！	local_menu_dictionary	25 73 F0 D0 F0 D1 F0 D2 F5 CB F5 C8 F0 CC F0 43	16	16		ready	
+menu_overlay_0003_043DFC	overlay_0003	overlay/overlay_0003.bin	0x43DFC	32	36	25 73 82 B3 82 A2 82 BE 82 A2 83 58 83 5E 83 7E 83 69 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sさいだいスタミナが　%sふえた！	%sさいだいスタミナが　%sふえた！	%s最大体力增加%s！	local_menu_dictionary	25 73 F0 C2 F2 41 F2 EE F0 DC F0 A0 F0 A1 25 73 F0 43	18	18		ready	
+menu_overlay_0003_043E20	overlay_0003	overlay/overlay_0003.bin	0x43E20	32	36	25 73 82 B3 82 A2 82 BE 82 A2 83 60 83 83 83 4E 83 89 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sさいだいチャクラが　%sふえた！	%sさいだいチャクラが　%sふえた！	%s最大查克拉增加%s！	local_menu_dictionary	25 73 F0 C2 F2 41 F0 D0 F0 D1 F0 D2 F0 A0 F0 A1 25 73 F0 43	20	16		ready	
+menu_overlay_0003_043E44	overlay_0003	overlay/overlay_0003.bin	0x43E44	26	28	25 73 82 B1 82 A4 82 B0 82 AB 97 CD 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sこうげき力が　%sふえた！	%sこうげき力が　%sふえた！	%s攻击力增加%s！	local_menu_dictionary	25 73 F0 44 F0 45 F0 DC F0 A0 F0 A1 25 73 F0 43	16	12		ready	
+menu_overlay_0003_043E60	overlay_0003	overlay/overlay_0003.bin	0x43E60	26	28	25 73 82 DA 82 A4 82 AC 82 E5 97 CD 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sぼうぎょ力が　%sふえた！	%sぼうぎょ力が　%sふえた！	%s防御力增加%s！	local_menu_dictionary	25 73 F4 71 F5 A5 F0 DC F0 A0 F0 A1 25 73 F0 43	16	12		ready	
+menu_overlay_0003_043E7C	overlay_0003	overlay/overlay_0003.bin	0x43E7C	24	28	25 73 82 B7 82 CE 82 E2 82 B3 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sすばやさが　%sふえた！	%sすばやさが　%sふえた！	%s速度增加%s！	local_menu_dictionary	25 73 F5 AE F4 E6 F0 A0 F0 A1 25 73 F0 43	14	14		ready	
+menu_overlay_0003_043E98	overlay_0003	overlay/overlay_0003.bin	0x43E98	26	28	25 73 82 C9 82 F1 82 E8 82 E5 82 AD 82 AA 81 40 25 73 82 D3 82 A6 82 BD 81 49	%sにんりょくが　%sふえた！	%sにんりょくが　%sふえた！	%s忍力增加%s！	local_menu_dictionary	25 73 F0 B8 F0 DC F0 A0 F0 A1 25 73 F0 43	14	14		ready	
+menu_overlay_0003_043EB4	overlay_0003	overlay/overlay_0003.bin	0x43EB4	22	24	25 73 82 E2 82 E9 82 AB 82 AA 81 40 82 A0 82 AA 82 C1 82 BD 81 49	%sやるきが　あがった！	%sやるきが　あがった！	%s干劲提升！	local_menu_dictionary	25 73 F1 F7 F3 5A F0 AA F0 AB F0 43	12	12		ready	
+menu_overlay_0003_043ECC	overlay_0003	overlay/overlay_0003.bin	0x43ECC	22	24	25 73 82 E2 82 E9 82 AB 82 AA 81 40 82 B3 82 AA 82 C1 82 BD 81 49	%sやるきが　さがった！	%sやるきが　さがった！	%s干劲下降！	local_menu_dictionary	25 73 F1 F7 F3 5A F0 84 F5 C3 F0 43	12	12		ready	
+menu_overlay_0003_043F20	overlay_0003	overlay/overlay_0003.bin	0x43F20	6	8	82 B1 82 B7 82 A4	こすう	こすう	数量	local_menu_dictionary	F5 C2 F1 84	4	4		ready	
+menu_overlay_0003_043F4C	overlay_0003	overlay/overlay_0003.bin	0x43F4C	6	8	25 73 82 F0 81 40	%sを　	%sを	%s	local_menu_dictionary	25 73	2	6		ready	
+menu_overlay_0003_043F54	overlay_0003	overlay/overlay_0003.bin	0x43F54	8	12	83 67 83 93 83 67 83 93	トントン	トントン	豚豚	local_menu_dictionary	F5 DD F5 DD	4	8		ready	
+menu_overlay_0003_043F60	overlay_0003	overlay/overlay_0003.bin	0x43F60	6	8	25 73 82 F0 81 40	%sを　	%sを	%s	local_menu_dictionary	25 73	2	6		ready	
+menu_overlay_0003_043F68	overlay_0003	overlay/overlay_0003.bin	0x43F68	6	8	83 4B 83 7D 8B 67	ガマ吉	ガマ吉	蛤蟆吉	local_menu_dictionary	F5 5C F5 5D F2 BC	6	2		ready	
+menu_overlay_0003_043F70	overlay_0003	overlay/overlay_0003.bin	0x43F70	6	8	25 73 82 F0 81 40	%sを　	%sを	%s	local_menu_dictionary	25 73	2	6		ready	
+menu_overlay_0003_043F78	overlay_0003	overlay/overlay_0003.bin	0x43F78	6	8	83 4B 83 7D 97 B3	ガマ竜	ガマ竜	蛤蟆龙	local_menu_dictionary	F5 5C F5 5D F1 6D	6	2		ready	
+menu_overlay_0003_043F80	overlay_0003	overlay/overlay_0003.bin	0x43F80	6	8	25 73 82 F0 81 40	%sを　	%sを	%s	local_menu_dictionary	25 73	2	6		ready	
+menu_overlay_0003_043F88	overlay_0003	overlay/overlay_0003.bin	0x43F88	6	8	83 4A 83 63 83 86	カツユ	カツユ	蛞蝓	local_menu_dictionary	F8 79 F5 DB	4	4		ready	
+menu_overlay_0003_043F90	overlay_0003	overlay/overlay_0003.bin	0x43F90	6	8	25 73 82 F0 81 40	%sを　	%sを	%s	local_menu_dictionary	25 73	2	6		ready	
+menu_overlay_0003_043F98	overlay_0003	overlay/overlay_0003.bin	0x43F98	8	12	83 70 83 62 83 4E 83 93	パックン	パックン	帕克	local_menu_dictionary	F5 DC F0 D1	4	8		ready	
+menu_overlay_0003_043FA4	overlay_0003	overlay/overlay_0003.bin	0x43FA4	14	16	25 73 8C FB 82 E6 82 B9 82 B5 82 BD 81 49	%s口よせした！	%s口よせした！	%s通灵了！	local_menu_dictionary	25 73 F0 E4 F0 B1 F0 CC F0 43	10	6		ready	
+menu_overlay_0003_043FB4	overlay_0003	overlay/overlay_0003.bin	0x43FB4	6	8	25 73 82 CC 81 40	%sの　	%sの	%s的	local_menu_dictionary	25 73 F0 69	4	4		ready	
+menu_overlay_0003_043FBC	overlay_0003	overlay/overlay_0003.bin	0x43FBC	8	12	91 53 91 CC 82 CC 81 40	全体の　	全体の	全体的	local_menu_dictionary	F0 C5 F2 EE F0 69	6	6		ready	
+menu_overlay_0003_043FC8	overlay_0003	overlay/overlay_0003.bin	0x43FC8	28	48	25 73 83 58 83 5E 83 7E 83 69 82 AA 81 40 82 A9 82 A2 82 D3 82 AD 82 B5 82 BD 81 49	%sスタミナが　かいふくした！	%sスタミナが　かいふくした！	%s体力恢复了！	local_menu_dictionary	25 73 F2 EE F0 DC F5 CB F5 C8 F0 CC F0 43	14	34		ready	
+menu_overlay_0003_043FF8	overlay_0003	overlay/overlay_0003.bin	0x43FF8	8	12	82 B5 82 E5 82 A4 82 D0	しょうひ	しょうひ	消耗	local_menu_dictionary	F0 7B F6 B8	4	8		ready	
+menu_overlay_0003_044004	overlay_0003	overlay/overlay_0003.bin	0x44004	14	16	81 40 81 40 81 40 81 40 25 73 81 5E 25 73	　　　　%s／%s	%s／%s	%s／%s	local_menu_dictionary	25 73 81 5E 25 73	6	10		ready	
+menu_overlay_0003_044014	overlay_0003	overlay/overlay_0003.bin	0x44014	16	20	81 40 81 40 81 40 81 40 81 40 25 73 81 5E 25 73	　　　　　%s／%s	%s／%s	%s／%s	local_menu_dictionary	25 73 81 5E 25 73	6	14		ready	
+menu_overlay_0003_044028	overlay_0003	overlay/overlay_0003.bin	0x44028	12	16	82 C9 82 F1 82 E8 82 E5 82 AD 81 46	にんりょく：	にんりょく：	忍力：	local_menu_dictionary	F0 B8 F0 DC F7 C2	6	10		ready	
+menu_overlay_0003_044074	overlay_0003	overlay/overlay_0003.bin	0x44074	4	8	91 4F 81 46	前：	前：	前：	local_menu_dictionary	F0 96 F7 C2	4	4		ready	
+menu_overlay_0003_04407C	overlay_0003	overlay/overlay_0003.bin	0x4407C	6	8	81 40 92 86 81 46	　中：	中：	中：	local_menu_dictionary	F0 94 F7 C2	4	4		ready	
+menu_overlay_0003_044084	overlay_0003	overlay/overlay_0003.bin	0x44084	6	8	81 40 8C E3 81 46	　後：	後：	后：	local_menu_dictionary	F0 67 F7 C2	4	4		ready	
+menu_overlay_0003_0440C0	overlay_0003	overlay/overlay_0003.bin	0x440C0	10	12	82 B7 82 CE 82 E2 82 B3 25 73	すばやさ%s	すばやさ%s	速度%s	local_menu_dictionary	F5 AE F4 E6 25 73	6	6		ready	
+menu_overlay_0003_0441A4	overlay_0003	overlay/overlay_0003.bin	0x441A4	6	8	82 B1 82 B7 82 A4	こすう	こすう	数量	local_menu_dictionary	F5 C2 F1 84	4	4		ready	
+menu_overlay_0003_0441D8	overlay_0003	overlay/overlay_0003.bin	0x441D8	8	12	8F 70 82 F0 82 DD 82 E9	術をみる	術をみる	查看术	local_menu_dictionary	F0 D0 F0 81 F0 B9	6	6		ready	
+menu_overlay_0003_044200	overlay_0003	overlay/overlay_0003.bin	0x44200	14	16	82 B5 82 CC 82 D1 8E 44 82 F0 82 DD 82 E9	しのび札をみる	しのび札をみる	查看忍识卡	local_menu_dictionary	F0 D0 F0 81 F0 B8 F7 AD F1 E0	10	6		ready	
+menu_overlay_0003_04423C	overlay_0003	overlay/overlay_0003.bin	0x4423C	6	8	82 B1 82 B7 82 A4	こすう	こすう	数量	local_menu_dictionary	F5 C2 F1 84	4	4		ready	
+menu_overlay_0003_044244	overlay_0003	overlay/overlay_0003.bin	0x44244	6	8	82 B1 82 B7 82 A4	こすう	こすう	数量	local_menu_dictionary	F5 C2 F1 84	4	4		ready	
+menu_overlay_0003_04424C	overlay_0003	overlay/overlay_0003.bin	0x4424C	8	12	82 B5 82 E5 82 A4 82 D0	しょうひ	しょうひ	消耗	local_menu_dictionary	F0 7B F6 B8	4	8		ready	
+menu_overlay_0003_044258	overlay_0003	overlay/overlay_0003.bin	0x44258	8	12	82 B5 82 E5 82 A4 82 D0	しょうひ	しょうひ	消耗	local_menu_dictionary	F0 7B F6 B8	4	8		ready	
+menu_overlay_0003_044264	overlay_0003	overlay/overlay_0003.bin	0x44264	6	8	82 B1 82 B7 82 A4	こすう	こすう	数量	local_menu_dictionary	F5 C2 F1 84	4	4		ready	
+menu_overlay_0003_04426C	overlay_0003	overlay/overlay_0003.bin	0x4426C	6	8	82 B1 82 B7 82 A4	こすう	こすう	数量	local_menu_dictionary	F5 C2 F1 84	4	4		ready	
+menu_overlay_0003_044274	overlay_0003	overlay/overlay_0003.bin	0x44274	8	16	82 B5 82 E5 82 A4 82 D0	しょうひ	しょうひ	消耗	local_menu_dictionary	F0 7B F6 B8	4	12		ready	
+menu_overlay_0003_0442A0	overlay_0003	overlay/overlay_0003.bin	0x442A0	28	32	82 B1 82 A4 82 B0 82 AB 81 40 82 DA 82 A4 82 AC 82 E5 81 40 82 B7 82 CE 82 E2 82 B3	こうげき　ぼうぎょ　すばやさ	こうげき　ぼうぎょ　すばやさ	攻击　防御　速度	local_menu_dictionary	F0 44 F0 45 F4 42 F4 71 F5 A5 F4 42 F5 AE F4 E6	16	16		ready	
+menu_overlay_0003_0442C0	overlay_0003	overlay/overlay_0003.bin	0x442C0	8	12	81 40 25 73 81 5E 25 73	　%s／%s	%s／%s	%s／%s	local_menu_dictionary	25 73 81 5E 25 73	6	6		ready	
+menu_overlay_0003_0442CC	overlay_0003	overlay/overlay_0003.bin	0x442CC	8	16	81 40 25 73 81 5E 25 73	　%s／%s	%s／%s	%s／%s	local_menu_dictionary	25 73 81 5E 25 73	6	10		ready	
+menu_overlay_0003_0442F4	overlay_0003	overlay/overlay_0003.bin	0x442F4	10	12	83 82 83 93 83 58 83 5E 81 5B	モンスター	モンスター	怪物	local_menu_dictionary	F4 6A F5 75	4	8		ready	
+menu_overlay_0003_044300	overlay_0003	overlay/overlay_0003.bin	0x44300	10	12	82 BB 82 A4 82 D1 82 C8 82 B5	そうびなし	そうびなし	无装备	local_menu_dictionary	F0 F0 F0 E2 F0 E3	6	6		ready	
+menu_overlay_0003_04430C	overlay_0003	overlay/overlay_0003.bin	0x4430C	98	108	82 D4 82 AB 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 DA 82 A4 82 AE 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 AB 82 E1 82 CD 82 F1 81 40 81 40 81 40	ぶき　　　　　　　　　　　　　　　　　　　ぼうぐ　　　　　　　　　　　　　　　　　　きゃはん　　　	ぶき　　　　　　　　　　　　　　　　　　　ぼうぐ　　　　　　　　　　　　　　　　　　きゃはん	武器　　　　　　　　　　　　　　　　　　　防具　　　　　　　　　　　　　　　　　　护腿	local_menu_dictionary	F2 BD F5 66 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 71 F0 C1 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F5 9D F5 AA	86	22		ready	
+menu_overlay_0003_044390	overlay_0003	overlay/overlay_0003.bin	0x44390	16	20	81 40 81 40 81 40 81 40 81 40 82 C7 82 A4 82 AE	　　　　　どうぐ	どうぐ	道具	local_menu_dictionary	F0 C0 F0 C1	4	16		ready	
+menu_overlay_0003_0443A4	overlay_0003	overlay/overlay_0003.bin	0x443A4	16	20	81 40 81 40 81 40 81 40 81 40 82 BB 82 A4 82 D1	　　　　　そうび	そうび	装备	local_menu_dictionary	F0 E2 F0 E3	4	16		ready	
+menu_overlay_0003_0443B8	overlay_0003	overlay/overlay_0003.bin	0x443B8	16	20	81 40 81 40 81 40 81 40 81 40 82 B6 82 E3 82 C2	　　　　　じゅつ	じゅつ	忍术	local_menu_dictionary	F0 B8 F0 B9	4	16		ready	
+menu_overlay_0003_0443CC	overlay_0003	overlay/overlay_0003.bin	0x443CC	18	20	81 40 81 40 81 40 81 40 81 40 83 81 83 93 83 6F 81 5B	　　　　　メンバー	メンバー	成员	local_menu_dictionary	F0 99 F1 9B	4	16		ready	
+menu_overlay_0003_0443E0	overlay_0003	overlay/overlay_0003.bin	0x443E0	18	20	81 40 81 40 81 40 81 40 81 40 82 B6 82 F1 82 AF 82 A2	　　　　　じんけい	じんけい	阵型	local_menu_dictionary	F0 8E F5 87	4	16		ready	
+menu_overlay_0003_0443F4	overlay_0003	overlay/overlay_0003.bin	0x443F4	18	20	81 40 81 40 81 40 81 40 81 40 83 86 81 5B 83 55 81 5B	　　　　　ユーザー	ユーザー	用户	local_menu_dictionary	F0 61 F6 73	4	16		ready	
+menu_overlay_0003_044408	overlay_0003	overlay/overlay_0003.bin	0x44408	18	20	81 40 81 40 81 40 81 40 81 40 82 B5 82 CC 82 D1 8E 44	　　　　　しのび札	しのび札	忍识卡	local_menu_dictionary	F0 B8 F7 AD F1 E0	6	14		ready	
+menu_overlay_0003_04441C	overlay_0003	overlay/overlay_0003.bin	0x4441C	20	24	81 40 81 40 81 40 81 40 81 40 83 58 83 65 81 5B 83 5E 83 58	　　　　　ステータス	ステータス	状态	local_menu_dictionary	F5 7A F5 A4	4	20		ready	
+menu_overlay_0003_044478	overlay_0003	overlay/overlay_0003.bin	0x44478	26	28	81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48 81 48	？？？？？？？？？？？？？	？？？？？？？？？？？？？	？？？？？？？？？？？？？	local_menu_dictionary	F1 5E F1 5E F1 5E F1 5E F1 5E F1 5E F1 5E F1 5E F1 5E F1 5E F1 5E F1 5E F1 5E	26	2		ready	
+menu_overlay_0003_04449C	overlay_0003	overlay/overlay_0003.bin	0x4449C	6	8	82 CD 82 B8 82 B7	はずす	はずす	卸下	local_menu_dictionary	F9 6F F0 84	4	4		ready	
+menu_overlay_0003_0444A4	overlay_0003	overlay/overlay_0003.bin	0x444A4	20	24	82 BD 82 A2 82 B9 82 A2 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	たいせいけいしのび札	たいせいけいしのび札	体术系忍识卡	local_menu_dictionary	F2 EE F0 B9 F0 B7 F0 B8 F7 AD F1 E0	12	12		ready	
+menu_overlay_0003_0444BC	overlay_0003	overlay/overlay_0003.bin	0x444BC	20	24	82 C6 82 AD 82 B5 82 E3 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	とくしゅけいしのび札	とくしゅけいしのび札	特殊系忍识卡	local_menu_dictionary	F1 E4 F5 6C F0 B7 F0 B8 F7 AD F1 E0	12	12		ready	
+menu_overlay_0003_0444D4	overlay_0003	overlay/overlay_0003.bin	0x444D4	22	24	83 58 83 65 81 5B 83 5E 83 58 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	ステータスけいしのび札	ステータスけいしのび札	状态系忍识卡	local_menu_dictionary	F5 7A F5 A4 F0 B7 F0 B8 F7 AD F1 E0	12	12		ready	
+menu_overlay_0003_0444EC	overlay_0003	overlay/overlay_0003.bin	0x444EC	22	44	82 C9 82 F1 82 B6 82 E3 82 C2 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	にんじゅつけいしのび札	にんじゅつけいしのび札	忍术系忍识卡	local_menu_dictionary	F0 B8 F0 B9 F0 B7 F0 B8 F7 AD F1 E0	12	32		ready	
+menu_overlay_0003_04454C	overlay_0003	overlay/overlay_0003.bin	0x4454C	6	12	82 B1 82 B7 82 A4	こすう	こすう	数量	local_menu_dictionary	F5 C2 F1 84	4	8		ready	
+menu_overlay_0003_04457C	overlay_0003	overlay/overlay_0003.bin	0x4457C	4	8	81 5E 25 73	／%s	／%s	／%s	local_menu_dictionary	81 5E 25 73	4	4		ready	
+menu_overlay_0003_044584	overlay_0003	overlay/overlay_0003.bin	0x44584	100	104	81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 83 58 83 5E 83 7E 83 69 81 40 83 60 83 83 83 4E 83 89 81 40 81 40 81 40 81 40 81 40 81 40 82 B1 82 A4 82 B0 82 AB 81 40 82 DA 82 A4 82 AC 82 E5 81 40 82 B7 82 CE 82 E2 82 B3 81 40 81 40 81 40 81 40 81 40 81 40 82 C9 82 F1 82 E8 82 E5 82 AD	　　　　　　　　　　スタミナ　チャクラ　　　　　　こうげき　ぼうぎょ　すばやさ　　　　　　にんりょく	スタミナ　チャクラ　　　　　　こうげき　ぼうぎょ　すばやさ　　　　　　にんりょく	体力　查克拉　　　　　　攻击　防御　速度　　　　　　忍力	local_menu_dictionary	F2 EE F0 DC F4 42 F0 D0 F0 D1 F0 D2 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F0 44 F0 45 F4 42 F4 71 F5 A5 F4 42 F5 AE F4 E6 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F0 B8 F0 DC	56	48		ready	
+menu_overlay_0003_04462C	overlay_0003	overlay/overlay_0003.bin	0x4462C	18	28	82 BD 82 A2 82 BF 82 E5 82 A4 82 B9 82 C1 82 C4 82 A2	たいちょうせってい	たいちょうせってい	队长设置	local_menu_dictionary	F4 4C F3 CE F2 97 F0 93	8	20		ready	
+menu_overlay_0003_0446A0	overlay_0003	overlay/overlay_0003.bin	0x446A0	6	8	82 CD 82 A2 81 40	はい　	はい	是	local_menu_dictionary	F0 8C	2	6		ready	
+menu_overlay_0003_0446A8	overlay_0003	overlay/overlay_0003.bin	0x446A8	6	8	82 A2 82 A2 82 A6	いいえ	いいえ	否	local_menu_dictionary	F5 C7	2	6		ready	
+menu_overlay_0003_0446EC	overlay_0003	overlay/overlay_0003.bin	0x446EC	4	8	82 B3 82 C6	さと	さと	村子	local_menu_dictionary	F1 A0 F1 9E	4	4		ready	
+menu_overlay_0003_0446F4	overlay_0003	overlay/overlay_0003.bin	0x446F4	6	8	82 C8 82 DC 82 A6	なまえ	なまえ	名字	local_menu_dictionary	F3 D1 F0 63	4	4		ready	
+menu_overlay_0003_0446FC	overlay_0003	overlay/overlay_0003.bin	0x446FC	8	12	82 D0 82 C6 82 B1 82 C6	ひとこと	ひとこと	一句话	local_menu_dictionary	F0 6B F3 44 F0 DA	6	6		ready	
+menu_overlay_0003_044708	overlay_0003	overlay/overlay_0003.bin	0x44708	12	16	97 A2 82 CC 82 B9 82 C1 82 C4 82 A2	里のせってい	里のせってい	村子设置	local_menu_dictionary	F1 A0 F1 9E F2 97 F0 93	8	8		ready	
+menu_overlay_0003_044718	overlay_0003	overlay/overlay_0003.bin	0x44718	12	16	83 8A 83 58 83 67 82 F0 82 DD 82 E9	リストをみる	リストをみる	查看列表	local_menu_dictionary	F0 D0 F0 81 F6 49 F4 D9	8	8		ready	
+menu_overlay_0003_044728	overlay_0003	overlay/overlay_0003.bin	0x44728	14	16	82 C6 82 E0 82 BE 82 BF 83 8A 83 58 83 67	ともだちリスト	ともだちリスト	好友列表	local_menu_dictionary	F0 C3 F5 EC F6 49 F4 D9	8	8		ready	
+menu_overlay_0003_044738	overlay_0003	overlay/overlay_0003.bin	0x44738	16	20	82 C8 82 DC 82 A6 82 CC 82 B9 82 C1 82 C4 82 A2	なまえのせってい	なまえのせってい	名字设置	local_menu_dictionary	F3 D1 F0 63 F2 97 F0 93	8	12		ready	
+menu_overlay_0003_04474C	overlay_0003	overlay/overlay_0003.bin	0x4474C	16	20	82 BD 82 A2 82 B9 82 F1 82 B9 82 A2 82 B9 82 AB	たいせんせいせき	たいせんせいせき	对战成绩	local_menu_dictionary	F0 B5 F0 CA F0 99 F6 A3	8	12		ready	
+menu_overlay_0003_044760	overlay_0003	overlay/overlay_0003.bin	0x44760	16	20	82 C8 82 DC 82 A6 82 CC 82 D6 82 F1 82 B1 82 A4	なまえのへんこう	なまえのへんこう	更改名字	local_menu_dictionary	F1 63 F8 AB F3 D1 F0 63	8	12		ready	
+menu_overlay_0003_044774	overlay_0003	overlay/overlay_0003.bin	0x44774	16	20	83 8A 83 58 83 67 82 A9 82 E7 82 CD 82 B8 82 B7	リストからはずす	リストからはずす	从列表移除	local_menu_dictionary	F0 A8 F6 49 F4 D9 F0 85 F7 9B	10	10		ready	
+menu_overlay_0003_044788	overlay_0003	overlay/overlay_0003.bin	0x44788	16	20	82 BD 82 A2 82 B9 82 F1 82 B9 82 C1 82 C4 82 A2	たいせんせってい	たいせんせってい	对战设置	local_menu_dictionary	F0 B5 F0 CA F2 97 F0 93	8	12		ready	
+menu_overlay_0003_04479C	overlay_0003	overlay/overlay_0003.bin	0x4479C	16	20	82 B9 82 A2 82 B9 82 AB 82 A9 82 AD 82 C9 82 F1	せいせきかくにん	せいせきかくにん	确认成绩	local_menu_dictionary	F0 5D F1 79 F0 99 F6 A3	8	12		ready	
+menu_overlay_0003_0447B0	overlay_0003	overlay/overlay_0003.bin	0x447B0	18	20	82 D0 82 C6 82 B1 82 C6 82 CC 82 B9 82 C1 82 C4 82 A2	ひとことのせってい	ひとことのせってい	一句话设置	local_menu_dictionary	F0 6B F3 44 F0 DA F2 97 F0 93	10	10		ready	
+menu_overlay_0003_0447C4	overlay_0003	overlay/overlay_0003.bin	0x447C4	18	20	82 76 82 89 81 5B 82 65 82 89 83 7C 83 43 83 93 83 67	ＷｉーＦｉポイント	ＷｉーＦｉポイント	Wi-Fi点数	local_menu_dictionary	57 69 2D 46 69 F1 74 F5 C2	9	11		ready	
+menu_overlay_0003_0447D8	overlay_0003	overlay/overlay_0003.bin	0x447D8	22	24	82 A0 82 C8 82 BD 82 CC 82 C6 82 E0 82 BE 82 BF 83 52 81 5B 83 68	あなたのともだちコード	あなたのともだちコード	你的好友代码	local_menu_dictionary	F0 4B F0 69 F0 C3 F5 EC F2 4E F2 FB	12	12		ready	
+menu_overlay_0003_0447F0	overlay_0003	overlay/overlay_0003.bin	0x447F0	22	24	82 C6 82 E0 82 BE 82 BF 83 52 81 5B 83 68 82 C6 82 A4 82 EB 82 AD	ともだちコードとうろく	ともだちコードとうろく	登记好友代码	local_menu_dictionary	F2 E4 F6 A7 F0 C3 F5 EC F2 4E F2 FB	12	12		ready	
+menu_overlay_0003_044808	overlay_0003	overlay/overlay_0003.bin	0x44808	22	24	82 C6 82 E0 82 BE 82 BF 83 52 81 5B 83 68 82 A9 82 AD 82 C9 82 F1	ともだちコードかくにん	ともだちコードかくにん	确认好友代码	local_menu_dictionary	F0 5D F1 79 F0 C3 F5 EC F2 4E F2 FB	12	12		ready	
+menu_overlay_0003_0449A8	overlay_0003	overlay/overlay_0003.bin	0x449A8	6	8	82 CB 82 BE 82 F1	ねだん	ねだん	价格	local_menu_dictionary	F4 DE F4 70	4	4		ready	
+menu_overlay_0003_0449C8	overlay_0003	overlay/overlay_0003.bin	0x449C8	8	12	82 B2 82 A4 82 AF 82 A2	ごうけい	ごうけい	合计	local_menu_dictionary	F1 58 F2 98	4	8		ready	
+menu_overlay_0003_0449D4	overlay_0003	overlay/overlay_0003.bin	0x449D4	8	12	82 B4 82 F1 82 AB 82 F1	ざんきん	ざんきん	余额	local_menu_dictionary	97 5D F3 8C	4	8		ready	
+menu_overlay_0003_0449E0	overlay_0003	overlay/overlay_0003.bin	0x449E0	18	20	82 B1 82 A4 82 C9 82 E3 82 A4 82 B7 82 E9 82 A9 82 B8	こうにゅうするかず	こうにゅうするかず	购买数量	local_menu_dictionary	F2 EA F2 EB F5 C2 F1 84	8	12		ready	
+menu_overlay_0003_044A58	overlay_0003	overlay/overlay_0003.bin	0x44A58	6	8	82 CB 82 BE 82 F1	ねだん	ねだん	价格	local_menu_dictionary	F4 DE F4 70	4	4		ready	
+menu_overlay_0003_044A78	overlay_0003	overlay/overlay_0003.bin	0x44A78	8	12	82 B2 82 A4 82 AF 82 A2	ごうけい	ごうけい	合计	local_menu_dictionary	F1 58 F2 98	4	8		ready	
+menu_overlay_0003_044A84	overlay_0003	overlay/overlay_0003.bin	0x44A84	8	12	82 B4 82 F1 82 AB 82 F1	ざんきん	ざんきん	余额	local_menu_dictionary	97 5D F3 8C	4	8		ready	
+menu_overlay_0003_044AB4	overlay_0003	overlay/overlay_0003.bin	0x44AB4	20	24	82 BD 82 A2 82 B9 82 A2 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	たいせいけいしのび札	たいせいけいしのび札	体术系忍识卡	local_menu_dictionary	F2 EE F0 B9 F0 B7 F0 B8 F7 AD F1 E0	12	12		ready	
+menu_overlay_0003_044ACC	overlay_0003	overlay/overlay_0003.bin	0x44ACC	20	24	82 C6 82 AD 82 B5 82 E3 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	とくしゅけいしのび札	とくしゅけいしのび札	特殊系忍识卡	local_menu_dictionary	F1 E4 F5 6C F0 B7 F0 B8 F7 AD F1 E0	12	12		ready	
+menu_overlay_0003_044AE4	overlay_0003	overlay/overlay_0003.bin	0x44AE4	22	24	82 C9 82 F1 82 B6 82 E3 82 C2 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	にんじゅつけいしのび札	にんじゅつけいしのび札	忍术系忍识卡	local_menu_dictionary	F0 B8 F0 B9 F0 B7 F0 B8 F7 AD F1 E0	12	12		ready	
+menu_overlay_0003_044AFC	overlay_0003	overlay/overlay_0003.bin	0x44AFC	22	24	83 58 83 65 81 5B 83 5E 83 58 82 AF 82 A2 82 B5 82 CC 82 D1 8E 44	ステータスけいしのび札	ステータスけいしのび札	状态系忍识卡	local_menu_dictionary	F5 7A F5 A4 F0 B7 F0 B8 F7 AD F1 E0	12	12		ready	
+menu_overlay_0003_044B84	overlay_0003	overlay/overlay_0003.bin	0x44B84	6	8	82 CB 82 BE 82 F1	ねだん	ねだん	价格	local_menu_dictionary	F4 DE F4 70	4	4		ready	
+menu_overlay_0003_044BA4	overlay_0003	overlay/overlay_0003.bin	0x44BA4	8	12	82 B2 82 A4 82 AF 82 A2	ごうけい	ごうけい	合计	local_menu_dictionary	F1 58 F2 98	4	8		ready	
+menu_overlay_0003_044BB0	overlay_0003	overlay/overlay_0003.bin	0x44BB0	8	12	82 B4 82 F1 82 AB 82 F1	ざんきん	ざんきん	余额	local_menu_dictionary	97 5D F3 8C	4	8		ready	
+menu_overlay_0003_044BBC	overlay_0003	overlay/overlay_0003.bin	0x44BBC	18	20	82 B1 82 A4 82 C9 82 E3 82 A4 82 B7 82 E9 82 A9 82 B8	こうにゅうするかず	こうにゅうするかず	购买数量	local_menu_dictionary	F2 EA F2 EB F5 C2 F1 84	8	12		ready	
+menu_overlay_0003_044C2C	overlay_0003	overlay/overlay_0003.bin	0x44C2C	12	16	82 C9 82 F1 82 E8 82 E5 82 AD 81 46	にんりょく：	にんりょく：	忍力：	local_menu_dictionary	F0 B8 F0 DC F7 C2	6	10		ready	
+menu_overlay_0003_044C54	overlay_0003	overlay/overlay_0003.bin	0x44C54	10	16	82 C4 82 C9 82 A2 82 EA 82 BD	てにいれた	てにいれた	获得了	local_menu_dictionary	F6 7E F3 46 F0 CC	6	10		ready	
+menu_overlay_0003_044C84	overlay_0003	overlay/overlay_0003.bin	0x44C84	8	12	82 D3 82 BD 82 E8 82 DF	ふたりめ	ふたりめ	第二人	local_menu_dictionary	F5 F3 F2 B3 F0 42	6	6		ready	
+menu_overlay_0003_044C90	overlay_0003	overlay/overlay_0003.bin	0x44C90	8	12	82 E6 82 C9 82 F1 82 DF	よにんめ	よにんめ	第四人	local_menu_dictionary	F5 F3 F4 A2 F0 42	6	6		ready	
+menu_overlay_0003_044C9C	overlay_0003	overlay/overlay_0003.bin	0x44C9C	8	12	82 D0 82 C6 82 E8 82 DF	ひとりめ	ひとりめ	第一人	local_menu_dictionary	F5 F3 F0 6B F0 42	6	6		ready	
+menu_overlay_0003_044CA8	overlay_0003	overlay/overlay_0003.bin	0x44CA8	10	12	82 B3 82 F1 82 C9 82 F1 82 DF	さんにんめ	さんにんめ	第三人	local_menu_dictionary	F5 F3 F2 4D F0 42	6	6		ready	
+menu_overlay_0003_044D2C	overlay_0003	overlay/overlay_0003.bin	0x44D2C	14	20	82 E0 82 C1 82 C4 82 A2 82 E9 82 A9 82 B8	もっているかず	もっているかず	持有数量	local_menu_dictionary	F6 5F F0 D3 F5 C2 F1 84	8	12		ready	
+menu_overlay_0003_044D64	overlay_0003	overlay/overlay_0003.bin	0x44D64	6	8	82 CB 82 BE 82 F1	ねだん	ねだん	价格	local_menu_dictionary	F4 DE F4 70	4	4		ready	
+menu_overlay_0003_044D74	overlay_0003	overlay/overlay_0003.bin	0x44D74	8	12	82 A4 82 E9 82 A9 82 B8	うるかず	うるかず	出售数量	local_menu_dictionary	F0 D5 F2 6D F5 C2 F1 84	8	4		ready	
+menu_overlay_0003_044D80	overlay_0003	overlay/overlay_0003.bin	0x44D80	8	12	82 B2 82 A4 82 AF 82 A2	ごうけい	ごうけい	合计	local_menu_dictionary	F1 58 F2 98	4	8		ready	
+menu_overlay_0003_044D8C	overlay_0003	overlay/overlay_0003.bin	0x44D8C	8	12	82 B4 82 F1 82 AB 82 F1	ざんきん	ざんきん	余额	local_menu_dictionary	97 5D F3 8C	4	8		ready	
+menu_overlay_0003_044FE8	overlay_0003	overlay/overlay_0003.bin	0x44FE8	14	16	82 6B 82 75 83 41 83 62 83 76 82 DC 82 C5	ＬＶアップまで	ＬＶアップまで	距LV提升	local_menu_dictionary	F6 F3 4C 56 F0 AA F0 AB	8	8		ready	
+menu_overlay_0003_044FF8	overlay_0003	overlay/overlay_0003.bin	0x44FF8	10	12	82 BB 82 EA 82 BC 82 EA 25 73	それぞれ%s	それぞれ%s	各自%s	local_menu_dictionary	F3 BF F0 4F 25 73	6	6		ready	
+menu_overlay_0003_045004	overlay_0003	overlay/overlay_0003.bin	0x45004	6	12	25 73 82 CD 25 73	%sは%s	%sは%s	%s是%s	local_menu_dictionary	25 73 F0 8C 25 73	6	6		ready	
+menu_overlay_0003_045020	overlay_0003	overlay/overlay_0003.bin	0x45020	22	24	82 CD 81 40 83 8C 83 78 83 8B 82 AA 82 A0 82 AA 82 C1 82 BD 81 49	は　レベルがあがった！	は　レベルがあがった！	升级了！	local_menu_dictionary	F0 AB F6 9F F0 CC F0 43	8	16		ready	
+menu_overlay_0003_045180	overlay_0003	overlay/overlay_0003.bin	0x45180	14	20	82 CC 81 40 82 E2 82 E9 82 AB 82 AA 81 40	の　やるきが　	の　やるきが	的干劲	local_menu_dictionary	F0 69 F1 F7 F3 5A	6	14		ready	
+menu_overlay_0003_0451A8	overlay_0003	overlay/overlay_0003.bin	0x451A8	6	16	82 E2 82 E9 82 AB	やるき	やるき	干劲	local_menu_dictionary	F1 F7 F3 5A	4	12		ready	
+menu_overlay_0003_0451C0	overlay_0003	overlay/overlay_0003.bin	0x451C0	18	20	81 40 81 40 81 40 81 40 81 40 25 73 81 5E 25 73 81 40	　　　　　%s／%s　	%s／%s	%s／%s	local_menu_dictionary	25 73 81 5E 25 73	6	14		ready	
+menu_overlay_0003_045228	overlay_0003	overlay/overlay_0003.bin	0x45228	70	76	81 40 81 40 82 AD 82 BF 82 E6 82 B9 83 56 81 5B 83 67 82 F0 81 40 82 A8 82 A2 82 C4 81 40 81 40 81 40 81 40 81 40 81 40 82 A0 82 F1 82 B2 82 A4 82 F0 81 40 82 C9 82 E3 82 A4 82 E8 82 E5 82 AD 82 B9 82 E6 81 49	　　くちよせシートを　おいて　　　　　　あんごうを　にゅうりょくせよ！	くちよせシートを　おいて　　　　　　あんごうを　にゅうりょくせよ！	放置通灵纸，输入暗号！	local_menu_dictionary	F4 61 F0 93 F0 E4 F0 B1 F7 54 F0 5B F3 AD F3 84 F3 DC F6 93 F0 43	22	54		ready	
+menu_overlay_0003_0452A4	overlay_0003	overlay/overlay_0003.bin	0x452A4	6	8	82 B5 82 E5 82 A4	しょう	しょう	奖	local_menu_dictionary	F6 E1	2	6		ready	
+menu_overlay_0003_0452AC	overlay_0003	overlay/overlay_0003.bin	0x452AC	8	12	83 7C 83 43 83 93 83 67	ポイント	ポイント	点数	local_menu_dictionary	F1 74 F5 C2	4	8		ready	
+menu_overlay_0003_0452B8	overlay_0003	overlay/overlay_0003.bin	0x452B8	28	32	81 40 83 5A 81 5B 83 75 83 74 83 40 83 43 83 8B 81 45 97 D5 81 40 81 40 81 40 81 40	　セーブファイル・臨　　　　	セーブファイル・臨	存档文件・临	local_menu_dictionary	F6 A0 F8 46 F2 76 F6 EA 81 45 F5 B5	12	20		ready	
+menu_overlay_0003_0452D8	overlay_0003	overlay/overlay_0003.bin	0x452D8	28	32	81 40 83 5A 81 5B 83 75 83 74 83 40 83 43 83 8B 81 45 95 BA 81 40 81 40 81 40 81 40	　セーブファイル・兵　　　　	セーブファイル・兵	存档文件・兵	local_menu_dictionary	F6 A0 F8 46 F2 76 F6 EA 81 45 F5 C9	12	20		ready	
+menu_overlay_0003_045404	overlay_0003	overlay/overlay_0003.bin	0x45404	18	20	83 5A 81 5B 83 75 83 74 83 40 83 43 83 8B 81 45 97 D5	セーブファイル・臨	セーブファイル・臨	存档文件・临	local_menu_dictionary	F6 A0 F8 46 F2 76 F6 EA 81 45 F5 B5	12	8		ready	
+menu_overlay_0003_045418	overlay_0003	overlay/overlay_0003.bin	0x45418	18	24	83 5A 81 5B 83 75 83 74 83 40 83 43 83 8B 81 45 95 BA	セーブファイル・兵	セーブファイル・兵	存档文件・兵	local_menu_dictionary	F6 A0 F8 46 F2 76 F6 EA 81 45 F5 C9	12	12		ready	
+menu_overlay_0003_045430	overlay_0003	overlay/overlay_0003.bin	0x45430	14	16	25 73 81 40 25 73 81 46 25 73 81 46 25 73	%s　%s：%s：%s	%s　%s：%s：%s	%s　%s：%s：%s	local_menu_dictionary	25 73 F4 42 25 73 F7 C2 25 73 F7 C2 25 73	14	2		ready	
+menu_overlay_0003_045448	overlay_0003	overlay/overlay_0003.bin	0x45448	20	24	83 66 81 5B 83 5E 82 AA 81 40 82 A0 82 E8 82 DC 82 B9 82 F1	データが　ありません	データが　ありません	没有数据	local_menu_dictionary	F1 72 F0 D3 F5 C2 F0 AE	8	16		ready	
+menu_overlay_0003_045460	overlay_0003	overlay/overlay_0003.bin	0x45460	24	28	83 66 81 5B 83 5E 82 AA 81 40 82 B1 82 ED 82 EA 82 C4 82 A2 82 DC 82 B7	データが　こわれています	データが　こわれています	数据损坏	local_menu_dictionary	F5 C2 F0 AE F7 ED F4 8A	8	20		ready	
+menu_overlay_0003_04547C	overlay_0003	overlay/overlay_0003.bin	0x4547C	20	24	25 73 81 40 82 4F 82 4F 81 46 82 4F 82 4F 81 46 82 4F 82 4F	%s　００：００：００	%s　００：００：００	%s　００：００：００	local_menu_dictionary	25 73 F4 42 82 4F 82 4F F7 C2 82 4F 82 4F F7 C2 82 4F 82 4F	20	4		ready	
+menu_overlay_0003_0454B8	overlay_0003	overlay/overlay_0003.bin	0x454B8	10	12	83 66 81 5B 83 5E 82 C8 82 B5	データなし	データなし	无数据	local_menu_dictionary	F0 F0 F5 C2 F0 AE	6	6		ready	
+menu_overlay_0003_0454CC	overlay_0003	overlay/overlay_0003.bin	0x454CC	20	32	82 CD 82 BB 82 F1 83 66 81 5B 83 5E 83 74 83 40 83 43 83 8B	はそんデータファイル	はそんデータファイル	损坏的存档	local_menu_dictionary	F7 ED F4 8A F0 69 F6 A0 F8 46	10	22		ready	
+menu_overlay_0003_045614	overlay_0003	overlay/overlay_0003.bin	0x45614	4	8	81 5B 81 5B	ーー	ーー	－－	local_menu_dictionary	81 7C 81 7C	4	4		ready	
+menu_overlay_0003_04561C	overlay_0003	overlay/overlay_0003.bin	0x4561C	4	8	92 86 94 45	中忍	中忍	中忍	local_menu_dictionary	F0 94 F0 B8	4	4		ready	
+menu_overlay_0003_045624	overlay_0003	overlay/overlay_0003.bin	0x45624	4	8	89 BA 94 45	下忍	下忍	下忍	local_menu_dictionary	F0 84 F0 B8	4	4		ready	
+menu_overlay_0003_04562C	overlay_0003	overlay/overlay_0003.bin	0x4562C	4	8	8F E3 94 45	上忍	上忍	上忍	local_menu_dictionary	F0 74 F0 B8	4	4		ready	
+menu_overlay_0003_045688	overlay_0003	overlay/overlay_0003.bin	0x45688	4	8	81 5B 81 5B	ーー	ーー	－－	local_menu_dictionary	81 7C 81 7C	4	4		ready	
+menu_overlay_0003_0456A4	overlay_0003	overlay/overlay_0003.bin	0x456A4	6	8	82 A2 82 A2 82 A6	いいえ	いいえ	否	local_menu_dictionary	F5 C7	2	6		ready	
+menu_overlay_0003_0456AC	overlay_0003	overlay/overlay_0003.bin	0x456AC	6	8	82 CD 82 A2 81 40	はい　	はい	是	local_menu_dictionary	F0 8C	2	6		ready	
+menu_overlay_0003_045704	overlay_0003	overlay/overlay_0003.bin	0x45704	8	12	81 5B 81 5B 81 5B 81 5B	ーーーー	ーーーー	－－－－	local_menu_dictionary	81 7C 81 7C 81 7C 81 7C	8	4		ready	
+menu_overlay_0004_005270	overlay_0004	overlay/overlay_0004.bin	0x5270	12	16	81 40 82 CD 82 B6 82 DF 82 A9 82 E7	　はじめから	はじめから	开始	local_menu_dictionary	F2 F7 F3 42	4	12		ready	
+menu_overlay_0004_005280	overlay_0004	overlay/overlay_0004.bin	0x5280	20	24	81 40 82 76 82 89 81 5B 82 65 82 89 82 B9 82 C1 82 C4 82 A2	　ＷｉーＦｉせってい	ＷｉーＦｉせってい	通信设置	local_menu_dictionary	F0 E4 F2 F4 F2 97 F0 93	8	16		ready	
+menu_overlay_0004_005298	overlay_0004	overlay/overlay_0004.bin	0x5298	18	20	81 40 82 C6 82 E0 82 BE 82 BF 82 C9 82 AD 82 CE 82 E9	　ともだちにくばる	ともだちにくばる	分发好友	local_menu_dictionary	F3 E3 F3 5C F0 C3 F5 EC	8	12		ready	
+menu_overlay_0004_0052AC	overlay_0004	overlay/overlay_0004.bin	0x52AC	12	16	81 40 82 C2 82 C3 82 AB 82 A9 82 E7	　つづきから	つづきから	继续	local_menu_dictionary	F6 4B F2 E8	4	12		ready	
+menu_overlay_0004_0052BC	overlay_0004	overlay/overlay_0004.bin	0x52BC	12	16	81 40 82 CD 82 B6 82 DF 82 A9 82 E7	　はじめから	はじめから	开始	local_menu_dictionary	F2 F7 F3 42	4	12		ready	
+menu_overlay_0004_0052CC	overlay_0004	overlay/overlay_0004.bin	0x52CC	18	20	81 40 83 74 83 40 83 43 83 8B 82 B3 82 AD 82 B6 82 E5	　ファイルさくじょ	ファイルさくじょ	删除存档	local_menu_dictionary	F9 73 F7 9B F6 A0 F8 46	8	12		ready	
+menu_overlay_0004_0052E0	overlay_0004	overlay/overlay_0004.bin	0x52E0	20	24	81 40 82 76 82 89 81 5B 82 65 82 89 82 B9 82 C1 82 C4 82 A2	　ＷｉーＦｉせってい	ＷｉーＦｉせってい	通信设置	local_menu_dictionary	F0 E4 F2 F4 F2 97 F0 93	8	16		ready	
+menu_overlay_0004_0052F8	overlay_0004	overlay/overlay_0004.bin	0x52F8	18	20	81 40 82 C6 82 E0 82 BE 82 BF 82 C9 82 AD 82 CE 82 E9	　ともだちにくばる	ともだちにくばる	分发好友	local_menu_dictionary	F3 E3 F3 5C F0 C3 F5 EC	8	12		ready	
+menu_overlay_0004_00530C	overlay_0004	overlay/overlay_0004.bin	0x530C	16	20	81 40 83 54 83 45 83 93 83 68 83 65 83 58 83 67	　サウンドテスト	サウンドテスト	声音测试	local_menu_dictionary	F4 A9 F1 F2 F9 7B F0 80	8	12		ready	
+menu_overlay_0004_005320	overlay_0004	overlay/overlay_0004.bin	0x5320	12	16	82 61 82 66 82 6C 81 40 81 40 81 40	ＢＧＭ　　　	ＢＧＭ	ＢＧＭ	local_menu_dictionary	F0 79 82 66 82 6C	6	10		ready	
+menu_overlay_0004_005330	overlay_0004	overlay/overlay_0004.bin	0x5330	12	16	83 4C 83 83 83 89 83 4E 83 5E 81 5B	キャラクター	キャラクター	角色	local_menu_dictionary	F0 75 F1 49	4	12		ready	
+menu_overlay_0004_005340	overlay_0004	overlay/overlay_0004.bin	0x5340	12	16	83 7B 83 43 83 58 81 40 81 40 81 40	ボイス　　　	ボイス	语音	local_menu_dictionary	F4 9D F1 F2	4	12		ready	
+menu_overlay_0004_005350	overlay_0004	overlay/overlay_0004.bin	0x5350	12	16	81 40 82 C4 82 A2 82 B5 81 40 81 40	　ていし　　	ていし	停止	local_menu_dictionary	F5 E8 F1 8A	4	12		ready	
+menu_overlay_0004_005360	overlay_0004	overlay/overlay_0004.bin	0x5360	12	16	81 40 82 B3 82 A2 82 B9 82 A2 81 40	　さいせい　	さいせい	播放	local_menu_dictionary	94 64 F4 61	4	12		ready	
+menu_overlay_0004_005370	overlay_0004	overlay/overlay_0004.bin	0x5370	16	21	81 40 83 54 83 45 83 93 83 68 83 65 83 58 83 67	　サウンドテスト	サウンドテスト	声音测试	local_menu_dictionary	F4 A9 F1 F2 F9 7B F0 80	8	13		ready	
