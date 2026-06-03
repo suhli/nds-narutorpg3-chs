@@ -1,20 +1,21 @@
 {
   "inputs": {
-    "candidates": "text/menu/overlay_menu_candidates.tsv",
-    "reuse": "text/code_table/frozen_translation.tsv",
-    "code_table": "text/code_table/zh_code_table.tsv"
+    "candidates": "text\\menu\\overlay_menu_candidates.tsv",
+    "reuse": "text\\translation\\frozen_translation.tsv",
+    "code_table": "text\\code_table\\zh_code_table.tsv"
   },
   "outputs": {
-    "translations": "text/menu/overlay_menu_translations.tsv",
-    "report": "text/menu/overlay_menu_translation_report.json"
+    "translations": "text\\menu\\overlay_menu_translations.tsv",
+    "report": "text\\menu\\overlay_menu_translation_report.json"
   },
-  "selected_rows": 278,
-  "unique_keys": 206,
+  "selected_rows": 284,
+  "unique_keys": 209,
   "status_counts": {
-    "ready": 278
+    "ready": 284
   },
   "translation_source_counts": {
-    "local_menu_dictionary": 278
+    "local_menu_dictionary": 283,
+    "row_menu_override": 1
   },
   "pending_keys": [],
   "missing_font_chars": ""

@@ -147,6 +147,10 @@ stage_outputs:
     - rom/narutorpg3_chs_patcher_short_font_missing_console_test.nds
     - rom/narutorpg3_chs_patcher_mzpx_1x2_8x12_test.nds
     - rom/narutorpg3_chs_patcher_fusion12_1x2_8x12_test.nds
+    - rom/narutorpg3_chs_patcher_v3_menu_fusion12.nds
+    - patcher/work/build_20260603_182539/patcher-build-summary.json
+    - patcher/work/build_20260603_182539/missing-chars-report.json
+    - patcher/work/build_20260603_182539/missing-chars.tsv
     - rom/narutorpg3_chs_full_writeback_menu_v2.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_wifi_text_v1.nds
     - rom/narutorpg3_chs_full_writeback_menu_no_friend_kinshi_v1.nds
@@ -166,7 +170,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-03T17:29:32+08:00"
+updated_at: "2026-06-03T18:26:41+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -190,8 +194,10 @@ notes:
   - Renamed default patcher fonts to patcher/resources/fonts/1x1.ttf and patcher/resources/fonts/1x2.ttf.
   - Patcher console missing-character output now reports text/menu/font counts separately and prints missing_chars_font_1x1_ttf plus missing_chars_font_1x2_ttf; verified after short font renaming with rom/narutorpg3_chs_patcher_short_font_missing_console_test.nds and patcher/work/build_20260603_165100/missing-chars.tsv.
   - Changed 1x2 glyph rendering from 16x16 horizontal compression to direct 8x12 target-grid rendering centered into 8x16; synced patcher/tools/build_vram_font_files.py and tools/build_vram_font_files.py.
-  - Compared 1x2 candidates fusion-pixel-12px-monospaced-zh_hans.ttf and MZPXorig.ttf in plan/cache/text-writeback-smoke/font-render-probe/1x2_candidate_fonts_compare.png; chose MZPXorig.ttf as the default 1x2.ttf because it is less cramped.
+  - Compared 1x2 candidates fusion-pixel-12px-monospaced-zh_hans.ttf and MZPXorig.ttf in plan/cache/text-writeback-smoke/font-render-probe/1x2_candidate_fonts_compare.png; default 1x2.ttf is now fusion-pixel-12px-monospaced-zh_hans.ttf per user request, while MZPXorig.ttf remains as a comparison candidate.
   - Built rom/narutorpg3_chs_patcher_mzpx_1x2_8x12_test.nds and rom/narutorpg3_chs_patcher_fusion12_1x2_8x12_test.nds; both passed Header CRC OK / Banner CRC OK and both missing reports are down to only U+E0FD.
+  - Added manual overlay_0002 control-delimited menu entries at 0x12C0C, 0x12C34, 0x12C3C, 0x12C64, 0x12C6A, and 0x12C72; the rows patch only visible bytes and preserve following 01 00 separators.
+  - Built rom/narutorpg3_chs_patcher_v3_menu_fusion12.nds from fusion12 default font and 284 ready menu rows; Header CRC OK / Banner CRC OK, missing chars remain only U+E0FD for both 1x1.ttf and 1x2.ttf.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

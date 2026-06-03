@@ -110,10 +110,16 @@ menu_overlay_0001_01EFF4	overlay_0001	overlay/overlay_0001.bin	0x1EFF4	6	8	82 C9
 menu_overlay_0001_01EFFC	overlay_0001	overlay/overlay_0001.bin	0x1EFFC	8	12	82 DA 82 A4 82 AC 82 E5	ぼうぎょ	ぼうぎょ	防御	local_menu_dictionary	F4 71 F5 A5	4	8		ready	
 menu_overlay_0001_01F008	overlay_0001	overlay/overlay_0001.bin	0x1F008	6	8	82 A2 82 C7 82 A4	いどう	いどう	移动	local_menu_dictionary	F0 85 F0 86	4	4		ready	
 menu_overlay_0001_01F010	overlay_0001	overlay/overlay_0001.bin	0x1F010	6	8	82 E0 82 C7 82 B7	もどす	もどす	放回	local_menu_dictionary	F4 61 F0 EE	4	4		ready	
-menu_overlay_0002_0128B8	overlay_0002	overlay/overlay_0002.bin	0x128B8	38	132	81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 F0 81 40 82 C4 82 C9 82 A2 82 EA 82 BD 81 49	　　　　　　　　　　　を　てにいれた！	を　てにいれた！	获得了！	local_menu_dictionary	F6 7E F3 46 F0 CC F0 43	8	124		ready	
+menu_overlay_0002_0128B8	overlay_0002	overlay/overlay_0002.bin	0x128B8	38	132	81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 82 F0 81 40 82 C4 82 C9 82 A2 82 EA 82 BD 81 49	　　　　　　　　　　　を　てにいれた！	を　てにいれた！	　　　　　　　　　　　获得了！	row_menu_override	F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F4 42 F6 7E F3 46 F0 CC F0 43	30	102		ready	
 menu_overlay_0002_01293C	overlay_0002	overlay/overlay_0002.bin	0x1293C	36	100	81 40 83 4B 83 7D 82 BF 82 E1 82 F1 82 F0 82 B7 82 D7 82 C4 82 A0 82 C2 82 DF 82 DC 82 B5 82 BD 81 49 81 49	　ガマちゃんをすべてあつめました！！	ガマちゃんをすべてあつめました！！	蛤蟆全收集！！	local_menu_dictionary	F5 5C F5 5D F0 C5 F0 ED F1 90 F0 43 F0 43	14	86		ready	
+menu_overlay_0002_012C0C	overlay_0002	overlay/overlay_0002.bin	0x12C0C	4	4	82 CD 82 A2	はい	はい	是	local_menu_dictionary	F0 8C	2	2		ready	manual_0100_delimited
 menu_overlay_0002_012C12	overlay_0002	overlay/overlay_0002.bin	0x12C12	6	10	82 A2 82 A2 82 A6	いいえ	いいえ	否	local_menu_dictionary	F5 C7	2	8		ready	
+menu_overlay_0002_012C34	overlay_0002	overlay/overlay_0002.bin	0x12C34	6	6	82 C7 82 A4 82 AE	どうぐ	どうぐ	道具	local_menu_dictionary	F0 C0 F0 C1	4	2		ready	manual_0100_delimited
+menu_overlay_0002_012C3C	overlay_0002	overlay/overlay_0002.bin	0x12C3C	4	4	82 A4 82 E9	うる	うる	出售	local_menu_dictionary	F0 D5 F2 6D	4	0		ready	manual_0100_delimited
 menu_overlay_0002_012C42	overlay_0002	overlay/overlay_0002.bin	0x12C42	6	10	82 E2 82 DF 82 E9	やめる	やめる	退出	local_menu_dictionary	F0 A2 F0 D5	4	6		ready	
+menu_overlay_0002_012C64	overlay_0002	overlay/overlay_0002.bin	0x12C64	4	4	82 D4 82 AB	ぶき	ぶき	武器	local_menu_dictionary	F2 BD F5 66	4	0		ready	manual_0100_delimited
+menu_overlay_0002_012C6A	overlay_0002	overlay/overlay_0002.bin	0x12C6A	6	6	82 DA 82 A4 82 AE	ぼうぐ	ぼうぐ	防具	local_menu_dictionary	F4 71 F0 C1	4	2		ready	manual_0100_delimited
+menu_overlay_0002_012C72	overlay_0002	overlay/overlay_0002.bin	0x12C72	4	4	82 A4 82 E9	うる	うる	出售	local_menu_dictionary	F0 D5 F2 6D	4	0		ready	manual_0100_delimited
 menu_overlay_0002_012C78	overlay_0002	overlay/overlay_0002.bin	0x12C78	6	12	82 E2 82 DF 82 E9	やめる	やめる	退出	local_menu_dictionary	F0 A2 F0 D5	4	8		ready	
 menu_overlay_0003_042A60	overlay_0003	overlay/overlay_0003.bin	0x42A60	24	28	82 4F 82 50 82 51 82 52 82 53 82 54 82 55 82 56 82 57 82 58 81 48 81 5B	０１２３４５６７８９？ー	０１２３４５６７８９？ー	０１２３４５６７８９？ー	local_menu_dictionary	82 4F F7 CC F7 CE F5 D3 F5 CC F7 D1 F7 D2 82 56 82 57 82 58 F1 5E 81 5B	24	4		ready	
 menu_overlay_0003_042A9C	overlay_0003	overlay/overlay_0003.bin	0x42A9C	24	28	82 4F 82 50 82 51 82 52 82 53 82 54 82 55 82 56 82 57 82 58 81 48 81 5B	０１２３４５６７８９？ー	０１２３４５６７８９？ー	０１２３４５６７８９？ー	local_menu_dictionary	82 4F F7 CC F7 CE F5 D3 F5 CC F7 D1 F7 D2 82 56 82 57 82 58 F1 5E 81 5B	24	4		ready	

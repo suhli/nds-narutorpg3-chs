@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "frozen": {
+      "rows": 5863,
+      "repeat_garbage": 0,
+      "jp_residue": 0,
+      "long_padding": 2660,
+      "empty_visible": 0,
+      "literal_percent": 0
+    },
+    "preview": {
+      "rows": 5863,
+      "repeat_garbage": 0,
+      "jp_residue": 0,
+      "long_padding": 0,
+      "empty_visible": 0,
+      "literal_percent": 0
+    },
+    "menu": {
+      "rows": 278,
+      "repeat_garbage": 0,
+      "jp_residue": 6,
+      "long_padding": 0,
+      "empty_visible": 0,
+      "literal_percent": 33
+    }
+  },
+  "issue_count": 2699
+}

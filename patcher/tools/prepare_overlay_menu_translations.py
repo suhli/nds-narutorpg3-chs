@@ -133,7 +133,9 @@ LOCAL_TRANSLATIONS = {
     "こうげき": "攻击",
     "じゅつ": "忍术",
     "どうぐ": "道具",
+    "ぼうぐ": "防具",
     "もどす": "放回",
+    "うる": "出售",
     "を　てにいれた！": "获得了！",
     "ガマちゃんをすべてあつめました！！": "蛤蟆全收集！！",
     "やめる": "退出",
@@ -167,6 +169,7 @@ LOCAL_TRANSLATIONS = {
     "こうげき　ぼうぎょ　すばやさ": "攻击　防御　速度",
     "モンスター": "怪物",
     "そうびなし": "无装备",
+    "ぶき": "武器",
     "ぶき　　　　　　　　　　　　　　　　　　　ぼうぐ　　　　　　　　　　　　　　　　　　きゃはん": "武器　　　　　　　　　　　　　　　　　　　防具　　　　　　　　　　　　　　　　　　护腿",
     "そうび": "装备",
     "メンバー": "成员",
@@ -243,6 +246,10 @@ LOCAL_TRANSLATIONS = {
     "ボイス": "语音",
     "ていし": "停止",
     "さいせい": "播放",
+}
+
+ROW_TRANSLATION_OVERRIDES = {
+    "menu_overlay_0002_0128B8": "　　　　　　　　　　　获得了！",
 }
 
 
@@ -341,7 +348,11 @@ def main() -> int:
 
     for row in candidates:
         key = normalize(row["jp_text"])
-        zh_text, source = choose_translation(key, reuse)
+        row_override = ROW_TRANSLATION_OVERRIDES.get(row.get("id", ""))
+        if row_override:
+            zh_text, source = row_override, "row_menu_override"
+        else:
+            zh_text, source = choose_translation(key, reuse)
         encoded, missing = encode_text(zh_text, code_table) if zh_text else (b"", [])
         slot_len = int(row["slot_len"])
         capacity_delta = slot_len - len(encoded)

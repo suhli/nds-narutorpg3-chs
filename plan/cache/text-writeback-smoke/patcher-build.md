@@ -54,7 +54,8 @@ Default output command:
 - Missing characters are now warnings, not build blockers. Verified with `rom/narutorpg3_chs_patcher_missing_report_test_build_20260603_163222.nds`: build completed, Header CRC and Banner CRC were OK, and `patcher/work/build_20260603_163222/missing-chars-report.json` listed 418 missing TTF glyphs.
 - Console missing-character output is now grouped by text/menu/font, and font misses are grouped by 1x1/1x2 with the missing TTF path. Verified with `rom/narutorpg3_chs_patcher_short_font_missing_console_test.nds`; `patcher/work/build_20260603_165100/missing-chars.tsv` includes `source`, `mode`, `char`, `unicode_hex`, `code`, and `font`.
 - 1x2 rendering now uses an 8x12 target grid centered into 8x16 instead of compressing a 16x16 glyph to 8x16. Visual preview is `plan/cache/text-writeback-smoke/font-render-probe/1x2_candidate_fonts_compare.png`.
-- `patcher/resources/fonts/1x2.ttf` now uses the `MZPXorig.ttf` candidate by default. Verified default MZPX build as `rom/narutorpg3_chs_patcher_mzpx_1x2_8x12_test.nds`; comparison build with `fusion-pixel-12px-monospaced-zh_hans.ttf` is `rom/narutorpg3_chs_patcher_fusion12_1x2_8x12_test.nds`. Both had Header CRC OK / Banner CRC OK and only `U+E0FD` missing.
+- `patcher/resources/fonts/1x2.ttf` now uses `fusion-pixel-12px-monospaced-zh_hans.ttf` by default per user request. `MZPXorig.ttf` remains as a comparison candidate. Verified builds `rom/narutorpg3_chs_patcher_mzpx_1x2_8x12_test.nds` and `rom/narutorpg3_chs_patcher_fusion12_1x2_8x12_test.nds`; both had Header CRC OK / Banner CRC OK and only `U+E0FD` missing.
+- Added five manually delimited `overlay_0002` menu entries around `0x12C0C..0x12C72` for the item/equipment shop prompt. These rows patch only visible text bytes and intentionally leave the following `01 00` separators in place.
 
 ## ROM safety
 
