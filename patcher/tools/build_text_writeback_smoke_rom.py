@@ -55,6 +55,8 @@ OPEN_QUOTES = ("「", "『", "“", '"')
 YES_BYTES = b"\x82\xCD\x82\xA2"
 NO_BYTES = b"\x82\xA2\x82\xA2\x82\xA6"
 YES_NO_OPTION_PREFIX = YES_BYTES + b"\x01\x00" + NO_BYTES
+SCENE_TAIL_CTRL = "{CTRL_0101}"
+SCENE_TAIL_WITH_BREAK_CTRL = "{CTRL_0001}{CTRL_0101}"
 GENERIC_ITEM_GET_JP_PREFIX = "\u3092{CTRL_0001}\u3066\u306b"
 GENERIC_ITEM_GET_TEXT = "{CTRL_0001}\u83b7\u5f97\u4e86\uff01"
 MESSAGE_TEXT_OVERRIDES = {
@@ -326,6 +328,26 @@ def message_stream_prefix_and_text(row: dict[str, str], raw: bytes) -> tuple[byt
     return b"", zh_text, "plain_message_text"
 
 
+def message_scene_tail(raw: bytes) -> bytes:
+    if len(raw) < 3 or raw[-3:-1] != b"\x01\x01":
+        return b""
+    if not 0x20 <= raw[-1] <= 0x7E:
+        return b""
+    if len(raw) >= 5 and raw[-5:-3] == b"\x01\x00":
+        return raw[-5:]
+    return raw[-3:]
+
+
+def text_without_scene_tail(text: str, scene_tail: bytes) -> str:
+    marker = SCENE_TAIL_WITH_BREAK_CTRL if scene_tail.startswith(b"\x01\x00") else SCENE_TAIL_CTRL
+    marker_pos = text.rfind(marker)
+    if marker_pos < 0 and marker != SCENE_TAIL_CTRL:
+        marker_pos = text.rfind(SCENE_TAIL_CTRL)
+    if marker_pos < 0:
+        return text
+    return text[:marker_pos].rstrip()
+
+
 def message_padding(length: int) -> bytes:
     if length < 0:
         raise ValueError("negative message padding")
@@ -357,6 +379,10 @@ def make_message_stream_replacement(
     candidate_code_endian: str,
 ) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
     prefix, text, strategy = message_stream_prefix_and_text(row, raw)
+    is_scene_tail = terminator != b"\x03\x00"
+    if is_scene_tail:
+        text = text_without_scene_tail(text, terminator)
+        strategy += "_preserve_scene_tail"
     if prefix.startswith(YES_NO_OPTION_PREFIX):
         prefix = translate_yes_no_option_prefix(
             prefix,
@@ -378,6 +404,7 @@ def make_message_stream_replacement(
         "message_stream_strategy": strategy,
         "message_prefix_len": len(prefix),
         "message_terminator_position": "preserved_original_end",
+        "message_terminator_kind": "scene_tail" if is_scene_tail else "03_00",
         "message_padding_len": payload_capacity - len(encoded),
         "message_padding_strategy": "fullwidth_space_fill_before_original_terminator",
     }
@@ -414,18 +441,18 @@ def make_replacement(
             }
     if (
         row.get("category") == "message"
-        and terminator == b"\x03\x00"
         and code_table is not None
+        and (terminator == b"\x03\x00" or message_scene_tail(raw))
     ):
+        message_terminator = terminator or message_scene_tail(raw)
         return make_message_stream_replacement(
             row,
             raw=raw,
             source_len=source_len,
-            terminator=terminator,
+            terminator=message_terminator,
             code_table=code_table,
             candidate_code_endian=candidate_code_endian,
         )
-
     if len(encoded) > payload_capacity:
         raise ValueError(f"{row['id']} encoded length exceeds payload capacity")
 
@@ -520,7 +547,7 @@ def patch_samples(
             "source_byte_len": source_len,
             "payload_capacity": int(row["payload_capacity"]),
             "encoded_len_candidate": len(encoded),
-            "terminator_hex": row.get("raw_terminator_hex", ""),
+            "terminator_hex": terminator.hex(" ").upper(),
             "fill_zero_count": len(replacement) - len(encoded) - len(terminator),
             "risk_flags": row.get("risk_flags", ""),
             **extra,
@@ -586,7 +613,7 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], d
             "ascii": "single_byte_candidate",
             "trailing_padding": "strip_and_zero_fill",
             "terminator": "preserve_raw_terminator_when_present",
-            "message_stream": "preserve_prefix_and_original_terminator_position_with_zero_control_fill",
+            "message_stream": "preserve_prefix_and_original_terminator_or_scene_tail_with_fullwidth_space_fill",
             "fixed_slot_without_terminator": "space_pad_known_ui_text_tables_else_zero_fill",
             "rom_origin": "read_only_not_modified",
             "excluded_source_files": excluded_counts,

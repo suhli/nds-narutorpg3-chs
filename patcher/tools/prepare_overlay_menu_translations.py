@@ -256,6 +256,27 @@ ROW_TRANSLATION_OVERRIDES = {
     "menu_overlay_0002_0128B8": "　　　　　　　　　　　获得了！",
 }
 
+FIXED_WIDTH_ROW_REPLACEMENTS = {
+    "menu_overlay_0000_030270": (
+        ("スタミナ", "体力　　"),
+        ("チャクラ", "查克拉　"),
+        ("こうげき", "攻击　　"),
+        ("ぼうぎょ", "防御　　"),
+        ("すばやさ", "速度　　"),
+        ("にんりょく", "忍力　　　"),
+    ),
+    "menu_overlay_0003_0450A0": (
+        ("レベル", "等级　"),
+        ("スタミナ", "体力　　"),
+        ("チャクラ", "查克拉　"),
+        ("こうげき", "攻击　　"),
+        ("ぼうぎょ", "防御　　"),
+        ("すばやさ", "速度　　"),
+        ("にんりょく", "忍力　　　"),
+        ("おぼえたじゅつ", "习得忍术　　　"),
+    ),
+}
+
 
 def read_rows(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8", newline="") as handle:
@@ -273,6 +294,21 @@ def write_rows(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) ->
 
 def normalize(text: str) -> str:
     return (text or "").strip(" \u3000")
+
+
+def fixed_width_row_translation(row: dict[str, str]) -> str | None:
+    replacements = FIXED_WIDTH_ROW_REPLACEMENTS.get(row.get("id", ""))
+    if not replacements:
+        return None
+
+    text = bytes.fromhex(row["raw_hex"]).decode("cp932")
+    for source, target in replacements:
+        if len(source) != len(target):
+            raise ValueError(f"fixed-width replacement length mismatch: {source!r} -> {target!r}")
+        if source not in text:
+            raise ValueError(f"fixed-width source label not found in {row['id']}: {source!r}")
+        text = text.replace(source, target, 1)
+    return text
 
 
 def selected_candidate(row: dict[str, str]) -> bool:
@@ -352,8 +388,11 @@ def main() -> int:
 
     for row in candidates:
         key = normalize(row["jp_text"])
+        fixed_width_override = fixed_width_row_translation(row)
         row_override = ROW_TRANSLATION_OVERRIDES.get(row.get("id", ""))
-        if row_override:
+        if fixed_width_override is not None:
+            zh_text, source = fixed_width_override, "row_fixed_width_override"
+        elif row_override:
             zh_text, source = row_override, "row_menu_override"
         else:
             zh_text, source = choose_translation(key, reuse)

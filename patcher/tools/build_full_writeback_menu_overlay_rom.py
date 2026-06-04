@@ -9,7 +9,7 @@ from typing import Any
 
 import build_text_writeback_smoke_rom as text_rom
 import build_vram_font_dynamic_cache_rom as font_rom
-import patch_vram_font_chunk_table_immediate_cache_probe as immediate_cache
+import patch_vram_font_chunk_table_dual_mode_1x1_copy_probe as cache
 import patch_vram_font_split_map_probe as split
 
 
@@ -95,8 +95,8 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
         candidate_code_endian=args.candidate_code_endian,
     )
 
-    immediate_cache.patch_arm9(work / "arm9.bin")
-    immediate_cache.patch_overlay(work / "overlay" / "overlay_0000.bin")
+    cache.patch_arm9(work / "arm9.bin")
+    cache.patch_overlay(work / "overlay" / "overlay_0000.bin")
 
     menu_rows = read_rows(repo / args.menu_translations)
     menu_records = patch_menu_rows(work, menu_rows)
@@ -108,10 +108,12 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
         "origin_work": origin_work.as_posix(),
         "font_dir": (repo / args.font_dir).resolve().as_posix(),
         "font_cache_strategy": {
-            "name": "immediate_copy_on_1x2_miss_probe",
-            "copy_hook": f"0x{immediate_cache.EXT_COPY_HOOK_ADDR:08X}",
-            "copy_hook_size": len(immediate_cache.build_copy_hook()),
-            "note": "1x2 title/menu first-draw probe; 1x1 immediate path still pending formalization",
+            "name": "dual_mode_1x1_1x2_page_cache",
+            "copy_hook": f"0x{cache.EXT_COPY_HOOK_ADDR:08X}",
+            "copy_hook_size": len(cache.build_copy_hook()),
+            "consume_hook": f"0x{cache.CONSUME_BODY_ADDR:08X}",
+            "consume_hook_size": len(cache.build_consume_body()),
+            "note": "Integrated 1x1 page-copy consumer and 1x2 dual-slot cache.",
         },
         "text_writeback": {
             "preview": args.preview,

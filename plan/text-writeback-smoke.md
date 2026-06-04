@@ -200,3 +200,24 @@ plan/cache/text-writeback-smoke/handoff-to-full-writeback.md
 - 普通 ASCII 在不同文本类别中的显示路径。
 - 尾部 padding 是否仅为翻译阶段产物，回写时是否需要保留或重算。
 - 固定槽超长文本的扩容策略。
+
+## 2026-06-04 v19 合并修复候选
+
+已构建 `rom/narutorpg3_chs_patcher_v19_allfix_rebuild_fusion12.nds`，该候选通过 `--rebuild-text-assets` 从冻结译文完整重建。
+
+本轮合并：
+
+- 全量写回切换为 1x1/1x2 双模式字体缓存；
+- 状态与升级组合字段按原字符宽度翻译，避免固定 UI 坐标错位；
+- 保留 10 条场景专用 message 尾控制序列，避免句末符号和自动跳过；
+- 保留普通 message 原始 `03 00` 位置和 `81 40` 安全填充策略。
+
+静态验证：
+
+- 写回文本 5835 条逐条匹配，差异 0；
+- 菜单 287 条全部 `ready`，关键 1x1 菜单槽位逐字节匹配；
+- `after_control_mismatch_rows=0`、`overflow_rows=0`、`missing_char_rows=0`；
+- Header CRC OK / Banner CRC OK；
+- 文本与菜单缺字为 0，仅 TTF 保留占位字符 `U+E0FD` 缺失。
+
+当前阶段仍为运行时回归验证，未标记完成。
