@@ -31,13 +31,6 @@ DEFAULT_EXCLUDED_ROW_IDS = {
     "zh_txt_a346a806_0031E1_0180",
     "zh_txt_579f0fbf_0029AD_0181",
     "zh_txt_c741b6bc_003795_0263",
-    "zh_txt_08033e0a_00072C_0017",
-    "zh_txt_fd9564ad_0005B8_0017",
-    "zh_txt_b346cea7_00028C_0015",
-    "zh_txt_0d5c73a4_000BA4_0033",
-    "zh_txt_f6ebe60b_000718_0021",
-    "zh_txt_a7682d54_00084E_0027",
-    "zh_txt_17122d2a_000788_0025",
 }
 
 SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
@@ -47,6 +40,27 @@ SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
     "msg/menu/item_menu_msg.msg",
     "msg/skill_msg.msg",
     "msg/taityou_kouka.msg",
+}
+
+FIXED_SUBSLOT_SOURCE_FILES = {
+    "msg/jyutu_msg.msg",
+    "msg/menu/status_menu_msg.msg",
+    "msg/menu/top_menu_msg.msg",
+}
+
+LOCAL_FIXED_TEXT_SPAN_REPLACEMENTS = {
+    "zh_txt_2191d3e9_00005A_0002": (
+        (0, "\u3053\u3046\u304b", "\u6548\u679c"),
+    ),
+}
+
+TRANSLATABLE_MESSAGE_PREFIX_ROW_IDS = {
+    "zh_txt_08033e0a_0005CC_0016",
+    "zh_txt_4dc3cb5a_000126_0004",
+    "zh_txt_fd9564ad_00049C_0014",
+    "zh_txt_6fae3ea4_00015E_0005",
+    "zh_txt_df1b8d0f_000110_0003",
+    "zh_txt_f3b3bfac_0006E8_0027",
 }
 
 CTRL_RE = re.compile(r"\{CTRL_([0-9A-Fa-f]{4})\}")
@@ -209,6 +223,80 @@ def encode_plain_text(text: str, code_table: dict[str, int], *, candidate_code_e
     return bytes(encoded)
 
 
+def split_text_controls(text: str) -> tuple[list[str], list[int]]:
+    segments: list[str] = []
+    controls: list[int] = []
+    pos = 0
+    for match in CTRL_RE.finditer(text or ""):
+        segments.append(text[pos : match.start()])
+        controls.append(int(match.group(1), 16))
+        pos = match.end()
+    segments.append((text or "")[pos:])
+    return segments, controls
+
+
+def join_text_controls(segments: list[str], controls: list[int]) -> str:
+    if len(segments) != len(controls) + 1:
+        raise ValueError("text control segments do not match control count")
+    out = [segments[0]]
+    for control, segment in zip(controls, segments[1:]):
+        out.append(f"{{CTRL_{control:04X}}}")
+        out.append(segment)
+    return "".join(out)
+
+
+def split_raw_controls(raw: bytes) -> tuple[list[bytes], list[int]]:
+    segments: list[bytes] = []
+    controls: list[int] = []
+    start = 0
+    index = 0
+    while index < len(raw):
+        byte = raw[index]
+        if byte < 0x20:
+            if index + 1 >= len(raw):
+                raise ValueError("truncated raw control word")
+            segments.append(raw[start:index])
+            controls.append(int.from_bytes(raw[index : index + 2], "little"))
+            index += 2
+            start = index
+            continue
+        if is_sjis_lead(byte) and index + 1 < len(raw) and is_sjis_trail(raw[index + 1]):
+            index += 2
+            continue
+        index += 1
+    segments.append(raw[start:])
+    return segments, controls
+
+
+def split_raw_ctrl_0000_subslots(raw: bytes) -> tuple[list[bytes], list[bytes], list[int]]:
+    slots: list[bytes] = []
+    separators: list[bytes] = []
+    separator_offsets: list[int] = []
+    start = 0
+    index = 0
+    while index < len(raw):
+        byte = raw[index]
+        if byte < 0x20:
+            if index + 1 >= len(raw):
+                raise ValueError("truncated raw control word")
+            value = int.from_bytes(raw[index : index + 2], "little")
+            if value == 0:
+                slots.append(raw[start:index])
+                separators.append(raw[index : index + 2])
+                separator_offsets.append(index)
+                index += 2
+                start = index
+                continue
+            index += 2
+            continue
+        if is_sjis_lead(byte) and index + 1 < len(raw) and is_sjis_trail(raw[index + 1]):
+            index += 2
+            continue
+        index += 1
+    slots.append(raw[start:])
+    return slots, separators, separator_offsets
+
+
 def strip_leading_structure_text(text: str) -> str:
     out = (text or "").strip()
     changed = True
@@ -262,6 +350,155 @@ def normalized_message_text(row: dict[str, str]) -> str:
         return override
     text = row.get("zh_text_candidate_payload", "")
     return text
+
+
+def translate_fixed_message_prefix(
+    row: dict[str, str],
+    prefix: bytes,
+    code_table: dict[str, int],
+    *,
+    candidate_code_endian: str,
+) -> tuple[bytes, str, dict[str, Any]]:
+    raw_segments, raw_controls = split_raw_controls(prefix)
+    if not raw_controls or raw_segments[-1]:
+        raise ValueError(f"{row['id']} fixed message prefix is not control-terminated")
+
+    translated = normalized_message_text(row).strip()
+    if translated.startswith(OPEN_QUOTES):
+        translated = translated[1:]
+    translated_segments, translated_controls = split_text_controls(translated)
+    control_count = len(raw_controls)
+    if translated_controls[:control_count] != raw_controls:
+        raise ValueError(f"{row['id']} translated message prefix controls do not match original prefix")
+
+    prefix_segments = translated_segments[:control_count] + [""]
+    replacement = bytearray()
+    translated_lengths: list[int] = []
+    for index, (raw_segment, translated_segment) in enumerate(zip(raw_segments, prefix_segments)):
+        encoded = encode_text(
+            translated_segment,
+            code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+        if len(encoded) > len(raw_segment):
+            raise ValueError(f"{row['id']} translated message prefix segment {index} exceeds original width")
+        replacement.extend(encoded)
+        replacement.extend(message_padding(len(raw_segment) - len(encoded)))
+        translated_lengths.append(len(encoded))
+        if index < control_count:
+            replacement.extend(raw_controls[index].to_bytes(2, "little"))
+
+    body = join_text_controls(translated_segments[control_count:], translated_controls[control_count:]).lstrip()
+    if body and not body.startswith(OPEN_QUOTES):
+        body = "「" + body
+    return bytes(replacement), body, {
+        "message_prefix_segment_count": len(prefix_segments) - 1,
+        "message_prefix_translated_lengths": translated_lengths[:-1],
+        "message_prefix_controls_preserved": [f"0x{value:04X}" for value in raw_controls],
+    }
+
+
+def make_local_fixed_text_span_replacement(
+    row: dict[str, str],
+    *,
+    raw: bytes,
+    terminator: bytes,
+    code_table: dict[str, int],
+    candidate_code_endian: str,
+) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
+    replacements = LOCAL_FIXED_TEXT_SPAN_REPLACEMENTS[row["id"]]
+    replacement = bytearray(raw)
+    encoded_parts: list[bytes] = []
+    spans: list[dict[str, Any]] = []
+    for offset, source_text, translated_text in replacements:
+        source = source_text.encode("cp932")
+        original = raw[offset : offset + len(source)]
+        if original != source:
+            raise ValueError(f"{row['id']} local fixed text span source mismatch at 0x{offset:X}")
+        encoded = encode_text(
+            translated_text,
+            code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+        if len(encoded) > len(source):
+            raise ValueError(f"{row['id']} local fixed text span exceeds original width")
+        replacement[offset : offset + len(source)] = encoded + message_padding(len(source) - len(encoded))
+        encoded_parts.append(encoded)
+        spans.append(
+            {
+                "offset": offset,
+                "source_len": len(source),
+                "translated_len": len(encoded),
+            }
+        )
+    return b"".join(encoded_parts), terminator, bytes(replacement), {
+        "fixed_slot_strategy": "local_text_span_preserve_binary",
+        "local_text_spans": spans,
+    }
+
+
+def make_fixed_subslot_replacement(
+    row: dict[str, str],
+    *,
+    raw: bytes,
+    terminator: bytes,
+    code_table: dict[str, int],
+    candidate_code_endian: str,
+) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
+    jp_slots = row.get("jp_text", "").split("{CTRL_0000}")
+    translated_slots = normalized_message_text(row).split("{CTRL_0000}")
+    if len(jp_slots) != len(translated_slots):
+        raise ValueError(f"{row['id']} translated fixed subslot count does not match original text")
+
+    payload = raw[: -len(terminator)] if terminator else raw
+    raw_slots, separators, separator_offsets = split_raw_ctrl_0000_subslots(payload)
+    if len(raw_slots) < len(translated_slots):
+        raise ValueError(f"{row['id']} raw fixed subslot count is smaller than translated slot count")
+
+    replacement = bytearray(raw)
+    encoded_parts: list[bytes] = []
+    slot_records: list[dict[str, Any]] = []
+    for index, translated_slot in enumerate(translated_slots):
+        _, jp_controls = split_text_controls(jp_slots[index])
+        _, translated_controls = split_text_controls(translated_slot)
+        if jp_controls != translated_controls:
+            raise ValueError(f"{row['id']} translated fixed subslot {index} controls do not match original")
+        encoded = encode_text(
+            translated_slot,
+            code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+        raw_slot = raw_slots[index]
+        if len(encoded) > len(raw_slot):
+            raise ValueError(f"{row['id']} translated fixed subslot {index} exceeds original width")
+        slot_start = 0 if index == 0 else separator_offsets[index - 1] + len(separators[index - 1])
+        slot_end = slot_start + len(raw_slot)
+        replacement[slot_start:slot_end] = encoded + message_padding(len(raw_slot) - len(encoded))
+        encoded_parts.append(encoded)
+        slot_records.append(
+            {
+                "index": index,
+                "offset": slot_start,
+                "source_len": len(raw_slot),
+                "translated_len": len(encoded),
+                "control_count": len(translated_controls),
+            }
+        )
+
+    if len(replacement) != len(raw):
+        raise ValueError(f"{row['id']} fixed subslot replacement length mismatch")
+    for offset, separator in zip(separator_offsets, separators):
+        if replacement[offset : offset + len(separator)] != separator:
+            raise ValueError(f"{row['id']} fixed subslot separator moved at 0x{offset:X}")
+    if terminator and not replacement.endswith(terminator):
+        raise ValueError(f"{row['id']} fixed subslot terminator moved")
+    encoded_joined = b"\x00\x00".join(encoded_parts)
+    return encoded_joined, terminator, bytes(replacement), {
+        "fixed_slot_strategy": "preserve_ctrl_0000_subslot_offsets",
+        "fixed_subslots": slot_records,
+        "ctrl_0000_separator_offsets": separator_offsets,
+        "preserved_trailing_subslot_count": len(raw_slots) - len(translated_slots),
+    }
 
 
 def encode_padded_label(
@@ -383,6 +620,15 @@ def make_message_stream_replacement(
     if is_scene_tail:
         text = text_without_scene_tail(text, terminator)
         strategy += "_preserve_scene_tail"
+    prefix_extra: dict[str, Any] = {}
+    if row.get("id", "") in TRANSLATABLE_MESSAGE_PREFIX_ROW_IDS:
+        prefix, text, prefix_extra = translate_fixed_message_prefix(
+            row,
+            prefix,
+            code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+        strategy = "translate_fixed_prefix_before_open_quote"
     if prefix.startswith(YES_NO_OPTION_PREFIX):
         prefix = translate_yes_no_option_prefix(
             prefix,
@@ -407,6 +653,7 @@ def make_message_stream_replacement(
         "message_terminator_kind": "scene_tail" if is_scene_tail else "03_00",
         "message_padding_len": payload_capacity - len(encoded),
         "message_padding_strategy": "fullwidth_space_fill_before_original_terminator",
+        **prefix_extra,
     }
 
 
@@ -426,6 +673,27 @@ def make_replacement(
     if text_override is not None and code_table is not None:
         encoded = encode_text(text_override, code_table, candidate_code_endian=candidate_code_endian)
         extra["text_override"] = "yes"
+    if row.get("id", "") in LOCAL_FIXED_TEXT_SPAN_REPLACEMENTS and code_table is not None:
+        return make_local_fixed_text_span_replacement(
+            row,
+            raw=raw,
+            terminator=terminator,
+            code_table=code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+    if (
+        row.get("category") == "message"
+        and normalize_source_file(row.get("source_file", "")) in FIXED_SUBSLOT_SOURCE_FILES
+        and "{CTRL_0000}" in row.get("jp_text", "")
+        and code_table is not None
+    ):
+        return make_fixed_subslot_replacement(
+            row,
+            raw=raw,
+            terminator=terminator,
+            code_table=code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
     if row.get("category") == "message" and raw.startswith(YES_NO_OPTION_PREFIX) and code_table is not None:
         quote_pos = raw.find(b"\x81\x75")
         if quote_pos < 0:

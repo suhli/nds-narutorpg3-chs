@@ -107,3 +107,42 @@
 - `ndstool -i`：Header CRC OK / Banner CRC OK。
 - 文本缺字 0，菜单缺字 0；仅两个 TTF 均缺少保留占位字符 `U+E0FD`。
 - 尚未启动模拟器做运行时复测。优先验证：状态/升级字段、商店菜单、保存“否”、此前出现句末符号并自动跳过的少量对话。
+
+## 2026-06-04 v19 运行反馈与 v20 修复
+
+- v19 运行反馈：标题菜单等 1x2 文本全部显示为占位方框。
+- 截图：`v19-issue-1x2-font-missing.jpg`。
+- v19 判定为无效候选。根因是双模式补丁对 1x2 使用延迟换页，标题菜单没有有效重绘。
+- v20 候选：`rom/narutorpg3_chs_patcher_v20_dual_immediate_fusion12.nds`。
+- v20 改为同步双模式：1x2 完整保留 v15 已运行显示正常的即时双槽 hook；1x1 使用独立同步换页助手；不再修改绘制入口。
+- v20 实际 1x2 hook 与 v15 逐字节一致；实际分流入口、1x1 助手、1x2 hook 均与生成结果一致。
+- v20 文本写回 5835 条，逐条差异 0；菜单 287 条全部 `ready`；Header CRC OK / Banner CRC OK。
+- 文本和菜单缺字均为 0，仅两个 TTF 缺少保留占位字符 `U+E0FD`。
+- v20 运行时优先同时验证：
+  - 标题菜单和剧情对话等 1x2 文本；
+  - 状态、升级、商店和保存“是/否”等 1x1 文本；
+  - 先进入 1x2 页面再进入 1x1 页面，并返回 1x2 页面，确认模式切换后仍能显示。
+
+## 2026-06-04 v20 运行反馈与结构排查
+
+- 1x1/1x2 同步双模式已经运行确认可同时显示；剩余六项问题不再归因于字体模式。
+- v20 剩余问题：
+  1. 商店菜单仍未汉化；
+  2. 读取存档页存档名称多出一个字，右下角字段未汉化；
+  3. 技能描述占位符或控制字段被破坏；
+  4. 暂停菜单说明消失，进入“阵型”卡死；
+  5. 保存确认仍缺少“否”；
+  6. 状态页仍有一个条目未汉化。
+- 相关截图已保存为：
+  - `v20-issue-shop-menu-untranslated.jpg`
+  - `v20-issue-load-save-name-footer.jpg`
+  - `v20-issue-jutsu-description-placeholders.jpg`
+  - `v20-issue-pause-menu-description-formation-freeze.jpg`
+  - `v20-issue-save-no-missing.jpg`
+  - `v20-issue-status-entry-untranslated.jpg`
+- 已确认状态页漏译的 `そうびをみる` 没有进入当前菜单翻译表。
+- 已确认商店弹窗使用各场景消息中的购买、出售、退出选项，不只使用当前已写回的 overlay 菜单副本。
+- 已确认 `msg/menu/top_menu_msg.msg`、`msg/menu/status_menu_msg.msg`、`msg/jyutu_msg.msg` 存在多个固定子槽位合并成一条抽取记录的格式。当前写回只保留分隔符数量，没有保持每个子槽位和分隔符的原始绝对偏移，对应暂停说明、技能描述和状态说明错位。
+- 已确认 `msg/menu/jinkei_menu_msg.msg` 包含文本与二进制混合记录，不能作为普通纯文本整体重编码；该结构破坏可能对应进入“阵型”后卡死。
+- 保存“否”不可见和存档名称多字也需要按固定槽位宽度、分隔符和尾部参数原位核对，不能只检查译文字节是否存在。
+- 详细排查与下一步验证门槛见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v20-structure-triage.md`。
