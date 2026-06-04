@@ -146,3 +146,12 @@
 - 已确认 `msg/menu/jinkei_menu_msg.msg` 包含文本与二进制混合记录，不能作为普通纯文本整体重编码；该结构破坏可能对应进入“阵型”后卡死。
 - 保存“否”不可见和存档名称多字也需要按固定槽位宽度、分隔符和尾部参数原位核对，不能只检查译文字节是否存在。
 - 详细排查与下一步验证门槛见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v20-structure-triage.md`。
+
+## 2026-06-04 v21 结构安全写回候选
+
+- 候选 ROM：`rom/narutorpg3_chs_patcher_v21_structslot_overlayfix_fusion12.nds`。
+- 已修复合并固定子槽位写回、阵型混合记录局部替换、商店场景消息前缀、7 条定宽“是/否”记录和状态页 `そうびをみる` overlay 槽位。
+- 静态核对通过：文本 5842 条、菜单 288 条实际写入差异 0；合并记录分隔符偏移、阵型二进制尾部和纯“是/否”二进制尾部均保持原版。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 等待用户手动复测 v20 剩余六项问题；除非用户明确提出，不使用 DeSmuME MCP 调试。
+- 详细静态验证记录：`plan/cache/text-writeback-smoke/v5-regression-20260603/v21-static-validation.md`。

@@ -82,6 +82,13 @@ Python 环境已经使用 `uv venv` 初始化。
 
 相关流程已经做成项目 skill：`.codex/skills/desmume-mcp-workflow/SKILL.md`。需要启动模拟器、加载 ROM、读取内存/寄存器、设置断点或通过 MCP 验证汉化 ROM 时，优先按这个 skill 的流程执行。
 
+硬性约束：
+
+- 默认不启动、操作或通过 MCP 控制 DeSmuME，也不使用模拟器代替用户做运行时验证。
+- ROM 的运行时流程、显示效果和回归测试默认由用户手动验证。
+- 只有用户在当前请求中明确提出使用 DeSmuME 或 MCP 调试时，才可以启动或操作模拟器。
+- 未经用户明确要求时，执行者应完成静态字节核对、结构检查、回包和 `ndstool` 验证，然后将候选 ROM 交给用户手动测试。
+
 关键约定：
 
 - DeSmuME MCP 是 HTTP JSON-RPC 服务，地址为 `http://127.0.0.1:8765/`。
