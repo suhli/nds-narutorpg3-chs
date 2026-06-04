@@ -5,23 +5,21 @@
     "msg/wifi/friend_msg.msg": 19,
     "msg/wifi/kinshi_msg.msg": 1
   },
-  "issue_rows": 302,
-  "auto_adjusted_rows": 1009,
+  "issue_rows": 6,
+  "auto_adjusted_rows": 6,
   "structure_prefix_rows": 310,
-  "before_control_mismatch_rows": 288,
+  "before_control_mismatch_rows": 0,
   "after_control_mismatch_rows": 0,
   "missing_char_rows": 0,
   "overflow_rows": 0,
-  "manual_override_rows": 5,
+  "manual_override_rows": 6,
   "issue_counts": {
-    "auto_adjusted_structure_residue": 302,
-    "control_tokens_before_mismatch": 288,
-    "auto_adjusted_extra_control_tokens": 20
+    "auto_adjusted_structure_residue": 6
   },
-  "preview": "text/writeback/encoded_preview.tsv",
-  "code_table": "text/code_table/zh_code_table.tsv",
+  "preview": "patcher\\resources\\text\\encoded-preview-struct-adjusted.tsv",
+  "code_table": "patcher\\resources\\text\\zh_code_table.tsv",
   "candidate_code_endian": "big",
-  "issues_tsv": "plan/cache/text-writeback-smoke/translation-struct-mismatches.tsv",
-  "adjusted_preview": "plan/cache/text-writeback-smoke/encoded-preview-struct-adjusted.tsv",
-  "manual_overrides": "plan/cache/text-writeback-smoke/translation-struct-manual-overrides.tsv"
+  "issues_tsv": "patcher\\resources\\text\\translation-struct-mismatches.tsv",
+  "adjusted_preview": "patcher\\resources\\text\\encoded-preview-struct-adjusted.tsv",
+  "manual_overrides": "patcher\\resources\\text\\translation-struct-manual-overrides.tsv"
 }

@@ -160,6 +160,23 @@ stage_outputs:
     - patcher/work/build_20260603_184433/patcher-build-summary.json
     - patcher/work/build_20260603_184433/missing-chars-report.json
     - patcher/work/build_20260603_184433/missing-chars.tsv
+    - rom/narutorpg3_chs_patcher_v6_regression_staticfix.nds
+    - patcher/work/build_20260603_203336/patcher-build-summary.json
+    - rom/narutorpg3_chs_patcher_v7_msg_zerofill_fusion12.nds
+    - patcher/work/build_20260603_211540/patcher-build-summary.json
+    - rom/narutorpg3_chs_patcher_v8_msg_zerofill_dialogfix_fusion12.nds
+    - patcher/work/build_20260603_212844/patcher-build-summary.json
+    - rom/narutorpg3_chs_patcher_v9_yesno_structsafe_fusion12.nds
+    - patcher/work/build_20260603_220409/patcher-build-summary.json
+    - rom/narutorpg3_chs_patcher_v10_yesno_binfragfix_fusion12.nds
+    - patcher/work/build_20260603_220805/patcher-build-summary.json
+    - rom/narutorpg3_chs_patcher_v13_itemget_emptylinefix_fusion12.nds
+    - patcher/work/build_20260603_223946/patcher-build-summary.json
+    - rom/narutorpg3_chs_patcher_v14_itemget_emptyline_menupunct_fusion12.nds
+    - patcher/work/build_20260603_224857/patcher-build-summary.json
+    - rom/narutorpg3_chs_patcher_v15_runtime_stability_fusion12.nds
+    - patcher/work/build_20260604_095616/patcher-build-summary.json
+    - hack/字段消息选项结构与二进制碎片.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/
     - plan/cache/text-writeback-smoke/v5-regression-20260603/todo.md
     - rom/narutorpg3_chs_full_writeback_menu_v2.nds
@@ -181,7 +198,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-03T20:18:17+08:00"
+updated_at: "2026-06-04T10:03:12+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -215,6 +232,18 @@ notes:
   - Built rom/narutorpg3_chs_patcher_v5_menu_itempad_fusion12.nds; ndstool Header CRC OK / Banner CRC OK, text_rows=5843, menu_rows=285, and missing chars remain only U+E0FD for both 1x1.ttf and 1x2.ttf.
   - Final v5 recheck passed: patcher script AST syntax_ok, ndstool Header CRC OK / Banner CRC OK, item_msg first short description uses 81 40 padding, and overlay_0003 0x43D64 preserves following %s strings.
   - Started v5 regression triage for rom/narutorpg3_chs_patcher_v5_menu_itempad_fusion12.nds. Recorded 10 user-reported issues and 11 screenshots in plan/cache/text-writeback-smoke/v5-regression-20260603/todo.md.
+  - Built rom/narutorpg3_chs_patcher_v6_regression_staticfix.nds for static UI/string fixes; ndstool Header CRC OK / Banner CRC OK, missing chars remain only U+E0FD in 1x1.ttf and 1x2.ttf.
+  - Built rom/narutorpg3_chs_patcher_v8_msg_zerofill_dialogfix_fusion12.nds after changing message padding before the original 03 00 terminator to 00 fill and fixing msg/fld/evt/001.m:0x6CE control parsing; ndstool Header CRC OK / Banner CRC OK.
+  - v8 static audit passed with checked=5843, excluded=20, after_control_mismatch=0, overflow=0, missing=0; remaining unresolved v5 regression items are tracked in plan/cache/text-writeback-smoke/v5-regression-20260603/todo.md.
+  - Built rom/narutorpg3_chs_patcher_v9_yesno_structsafe_fusion12.nds after preserving embedded はい/いいえ option-field byte widths as 是　/否　　; pure option row tails after byte 12 match origin, and ndstool Header CRC OK / Banner CRC OK.
+  - Built rom/narutorpg3_chs_patcher_v10_yesno_binfragfix_fusion12.nds after excluding three obvious binary-fragment rows from writeback; those source byte ranges now match origin exactly, text_rows=5842, menu_rows=287, and ndstool Header CRC OK / Banner CRC OK.
+  - Added hack/字段消息选项结构与二进制碎片.md to record the embedded yes/no option prefix structure, the seven affected row ids, and the three binary fragment exclusions.
+  - Built rom/narutorpg3_chs_patcher_v13_itemget_emptylinefix_fusion12.nds after normalizing 13 generic item-acquisition suffix rows and fixing 4 trailing-CTRL_0001 blank-page-risk rows; 17 override rows matched writeback output byte-for-byte, and ndstool Header CRC OK / Banner CRC OK.
+  - Built rom/narutorpg3_chs_patcher_v14_itemget_emptyline_menupunct_fusion12.nds after replacing four save-file menu Japanese middle dots with Chinese middle dots; 17 text overrides and 4 menu punctuation overrides matched rebuilt bytes, and ndstool Header CRC OK / Banner CRC OK.
+  - User runtime testing invalidated v14: all story dialogue auto-advanced, save points froze after interaction, and status/level-up attributes rendered as repeated fallback glyphs.
+  - Built rom/narutorpg3_chs_patcher_v15_runtime_stability_fusion12.nds after restoring full-width-space message padding, excluding all seven embedded yes/no records, and blocking two broken combined status-field menu rows; text_rows=5835, menu_rows=285, and ndstool Header CRC OK / Banner CRC OK.
+  - v15 static checks confirmed all seven yes/no ranges and both blocked status-field ranges match origin exactly; the first story message keeps its original terminator position and has only 81 40 padding in its final 32 pre-terminator bytes.
+  - CP932 scan for visible battle/HUD keywords found origin hits for common text terms such as こうげき, ぼうぎょ, チャクラ, かくとくきんがく, and こうどうかいすう, but v14 workdir has zero hits for the scanned terms; unresolved large HUD strings such as せんとうけっか and じゅつこうかさいだい did not hit origin CP932 and likely need graphics or special HUD-table analysis.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

@@ -27,6 +27,19 @@ DEFAULT_INCLUDED_ROW_IDS_WHEN_SOURCE_EXCLUDED = {
     "zh_txt_64f689a6_0006F6_0016",
 }
 
+DEFAULT_EXCLUDED_ROW_IDS = {
+    "zh_txt_a346a806_0031E1_0180",
+    "zh_txt_579f0fbf_0029AD_0181",
+    "zh_txt_c741b6bc_003795_0263",
+    "zh_txt_08033e0a_00072C_0017",
+    "zh_txt_fd9564ad_0005B8_0017",
+    "zh_txt_b346cea7_00028C_0015",
+    "zh_txt_0d5c73a4_000BA4_0033",
+    "zh_txt_f6ebe60b_000718_0021",
+    "zh_txt_a7682d54_00084E_0027",
+    "zh_txt_17122d2a_000788_0025",
+}
+
 SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
     "msg/equip_msg.msg",
     "msg/item_msg.msg",
@@ -39,6 +52,17 @@ SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
 CTRL_RE = re.compile(r"\{CTRL_([0-9A-Fa-f]{4})\}")
 LEADING_CTRL_RUN_RE = re.compile(r"^((?:\{CTRL_[0-9A-Fa-f]{4}\})+)(.*)$", re.S)
 OPEN_QUOTES = ("「", "『", "“", '"')
+YES_BYTES = b"\x82\xCD\x82\xA2"
+NO_BYTES = b"\x82\xA2\x82\xA2\x82\xA6"
+YES_NO_OPTION_PREFIX = YES_BYTES + b"\x01\x00" + NO_BYTES
+GENERIC_ITEM_GET_JP_PREFIX = "\u3092{CTRL_0001}\u3066\u306b"
+GENERIC_ITEM_GET_TEXT = "{CTRL_0001}\u83b7\u5f97\u4e86\uff01"
+MESSAGE_TEXT_OVERRIDES = {
+    "zh_txt_ea2a6c3d_00019E_0004": "\u300c\u563b\u563b\u563b\u2026\u2026\u6211\u4e0d\u4f1a\u8ba9\u4f60\u4eec{CTRL_0001}\u518d\u5f80\u524d\u8d70\u4e86\u300d",
+    "zh_txt_36cf8fef_000316_0010": "\u8bf7\u5173\u95ed\u7535\u6e90{CTRL_0001}\u91cd\u65b0\u63d2\u5165\u8bb0\u5fc6\u5361",
+    "zh_txt_805b124c_0002CE_0004": "\u627e\u5230\u5bf9\u6218\u5bf9\u624b\u4e86\uff01{CTRL_0000}\u65e0\u6cd5\u5f00\u59cb\u5bf9\u6218{CTRL_0001}\u8bf7\u91cd\u65b0\u5c1d\u8bd5{CTRL_0000}\u901a\u4fe1\u5bf9\u6218\u51c6\u5907\u4e2d\u2026\u2026{CTRL_0000}\u51c6\u5907\u5b8c\u6bd5\uff01{CTRL_0000}{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}\u65ad\u5f00\u5e76\u7ed3\u675fWi-Fi\u901a\u4fe1\u5417\uff1f{CTRL_0000}{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}\u6b63\u5728\u65ad\u5f00{CTRL_0001}\u2026\u2026{CTRL_0000}{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}{CTRL_0001}\u5df2\u65ad\u5f00",
+    "zh_txt_28e72e7e_0004A2_0008": "\u8bf7\u7a0d\u540e\u518d\u8bd5\u3002{CTRL_0000}\u7531\u4e8e\u901a\u4fe1\u9519\u8bef\uff0c\u5df2\u4ece{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}{CTRL_0001}\u65ad\u5f00\u3002{CTRL_0000}\u5bf9\u65b9\u6ca1\u6709\u54cd\u5e94\u3002{CTRL_0001}\u5bf9\u65b9\u53ef\u80fd\u5c1a\u672a\u8fde\u63a5\u5230{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}{CTRL_0001}\u3002",
+}
 
 
 def is_sjis_lead(byte: int) -> bool:
@@ -134,6 +158,8 @@ def load_all_rows(preview_path: Path, excluded_source_files: set[str] | None = N
     selected: list[dict[str, str]] = []
     blocked: list[dict[str, str]] = []
     for row in rows:
+        if row.get("id", "") in DEFAULT_EXCLUDED_ROW_IDS:
+            continue
         if row.get("encoded_complete") != "yes":
             blocked.append(row)
             continue
@@ -196,8 +222,86 @@ def strip_leading_structure_text(text: str) -> str:
     return out
 
 
+def text_from_first_open_quote(text: str) -> str:
+    clean = strip_leading_structure_text(text)
+    quote_positions = [clean.find(quote) for quote in OPEN_QUOTES if clean.find(quote) >= 0]
+    if quote_positions:
+        return clean[min(quote_positions) :]
+    return clean
+
+
+def text_after_translated_yes_no_prefix(text: str) -> str:
+    clean = strip_leading_structure_text(text)
+    if len(clean) >= 2 and clean[0] in OPEN_QUOTES and clean[1] == "\u662f":
+        clean = clean[1:]
+    option_text = "\u662f{CTRL_0001}\u5426"
+    if clean.startswith(option_text):
+        clean = clean[len(option_text) :]
+        control_prefix = "{CTRL_0006}{CTRL_0000}"
+        if clean.startswith(control_prefix):
+            clean = clean[len(control_prefix) :]
+        clean = clean.lstrip()
+    return text_from_first_open_quote(clean)
+
+
+def text_override_for_row(row: dict[str, str]) -> str | None:
+    row_id = row.get("id", "")
+    if row_id in MESSAGE_TEXT_OVERRIDES:
+        return MESSAGE_TEXT_OVERRIDES[row_id]
+    jp_text = row.get("jp_text", "")
+    if jp_text.startswith(GENERIC_ITEM_GET_JP_PREFIX):
+        return GENERIC_ITEM_GET_TEXT
+    return None
+
+
+def normalized_message_text(row: dict[str, str]) -> str:
+    override = text_override_for_row(row)
+    if override is not None:
+        return override
+    text = row.get("zh_text_candidate_payload", "")
+    return text
+
+
+def encode_padded_label(
+    text: str,
+    width: int,
+    code_table: dict[str, int],
+    *,
+    candidate_code_endian: str,
+) -> bytes:
+    encoded = encode_text(text, code_table, candidate_code_endian=candidate_code_endian)
+    if len(encoded) > width:
+        raise ValueError(f"option label {text!r} exceeds original width {width}")
+    return encoded + message_padding(width - len(encoded))
+
+
+def translate_yes_no_option_prefix(
+    raw: bytes,
+    code_table: dict[str, int],
+    *,
+    candidate_code_endian: str,
+) -> bytes:
+    if not raw.startswith(YES_NO_OPTION_PREFIX):
+        return raw
+    translated = bytearray(raw)
+    translated[0 : len(YES_BYTES)] = encode_padded_label(
+        "\u662f",
+        len(YES_BYTES),
+        code_table,
+        candidate_code_endian=candidate_code_endian,
+    )
+    no_start = len(YES_BYTES) + 2
+    translated[no_start : no_start + len(NO_BYTES)] = encode_padded_label(
+        "\u5426",
+        len(NO_BYTES),
+        code_table,
+        candidate_code_endian=candidate_code_endian,
+    )
+    return bytes(translated)
+
+
 def message_stream_prefix_and_text(row: dict[str, str], raw: bytes) -> tuple[bytes, str, str]:
-    zh_text = row.get("zh_text_candidate_payload", "")
+    zh_text = normalized_message_text(row)
     jp_text = row.get("jp_text", "")
     terminator = b"\x03\x00" if raw.endswith(b"\x03\x00") else b""
     payload = raw[: -len(terminator)] if terminator else raw
@@ -228,6 +332,12 @@ def message_padding(length: int) -> bytes:
     return b"\x81\x40" * (length // 2) + (b"\x20" if length % 2 else b"")
 
 
+def message_control_padding(length: int) -> bytes:
+    if length < 0:
+        raise ValueError("negative message control padding")
+    return message_padding(length)
+
+
 def fixed_slot_padding(row: dict[str, str], length: int) -> tuple[bytes, str]:
     if length < 0:
         raise ValueError("negative fixed slot padding")
@@ -247,13 +357,21 @@ def make_message_stream_replacement(
     candidate_code_endian: str,
 ) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
     prefix, text, strategy = message_stream_prefix_and_text(row, raw)
+    if prefix.startswith(YES_NO_OPTION_PREFIX):
+        prefix = translate_yes_no_option_prefix(
+            prefix,
+            code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+        text = text_after_translated_yes_no_prefix(row.get("zh_text_candidate_payload", ""))
+        strategy = "preserve_translated_yes_no_option_prefix_before_open_quote"
     encoded = encode_text(text, code_table, candidate_code_endian=candidate_code_endian)
     payload_capacity = source_len - len(prefix) - len(terminator)
     if payload_capacity < 0:
         raise ValueError(f"{row['id']} message prefix exceeds source length")
     if len(encoded) > payload_capacity:
         raise ValueError(f"{row['id']} encoded message length exceeds payload capacity")
-    replacement = prefix + encoded + message_padding(payload_capacity - len(encoded)) + terminator
+    replacement = prefix + encoded + message_control_padding(payload_capacity - len(encoded)) + terminator
     if len(replacement) != source_len:
         raise ValueError(f"{row['id']} message replacement length mismatch")
     return encoded, terminator, replacement, {
@@ -261,6 +379,7 @@ def make_message_stream_replacement(
         "message_prefix_len": len(prefix),
         "message_terminator_position": "preserved_original_end",
         "message_padding_len": payload_capacity - len(encoded),
+        "message_padding_strategy": "fullwidth_space_fill_before_original_terminator",
     }
 
 
@@ -276,6 +395,23 @@ def make_replacement(
     source_len = int(row["source_byte_len"])
     payload_capacity = int(row["payload_capacity"])
     extra: dict[str, Any] = {}
+    text_override = text_override_for_row(row)
+    if text_override is not None and code_table is not None:
+        encoded = encode_text(text_override, code_table, candidate_code_endian=candidate_code_endian)
+        extra["text_override"] = "yes"
+    if row.get("category") == "message" and raw.startswith(YES_NO_OPTION_PREFIX) and code_table is not None:
+        quote_pos = raw.find(b"\x81\x75")
+        if quote_pos < 0:
+            replacement = translate_yes_no_option_prefix(
+                raw,
+                code_table,
+                candidate_code_endian=candidate_code_endian,
+            )
+            return b"", terminator, replacement, {
+                "message_stream_strategy": "preserve_binary_tail_translate_yes_no_options",
+                "message_padding_len": 0,
+                "message_padding_strategy": "preserve_original_tail",
+            }
     if (
         row.get("category") == "message"
         and terminator == b"\x03\x00"
@@ -450,7 +586,7 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], d
             "ascii": "single_byte_candidate",
             "trailing_padding": "strip_and_zero_fill",
             "terminator": "preserve_raw_terminator_when_present",
-            "message_stream": "preserve_prefix_and_original_terminator_position_with_space_padding",
+            "message_stream": "preserve_prefix_and_original_terminator_position_with_zero_control_fill",
             "fixed_slot_without_terminator": "space_pad_known_ui_text_tables_else_zero_fill",
             "rom_origin": "read_only_not_modified",
             "excluded_source_files": excluded_counts,
