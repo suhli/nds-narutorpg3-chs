@@ -25,6 +25,7 @@ stage_cache:
     - plan/cache/text-writeback-smoke/v5-regression-20260603/todo.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v20-structure-triage.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v21-static-validation.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v22-control-slot-triage.md
 stage_outputs:
   expected:
     - rom/narutorpg3_chs_full_writeback_test.nds
@@ -218,7 +219,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-04T17:13:00+08:00"
+updated_at: "2026-06-04T17:36:00+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -279,6 +280,8 @@ notes:
   - Built rom/narutorpg3_chs_patcher_v21_structslot_overlayfix_fusion12.nds with original-offset fixed subslots, local mixed-record replacement, translated shop message prefixes, restored fixed-width yes/no records, and the missing status overlay entry.
   - v21 static verification passed: text_rows=5842 and menu_rows=288 match expected bytes, combined-record separator offsets and binary tails are preserved, Header CRC OK, Banner CRC OK.
   - Runtime verification is pending user manual testing. Do not use DeSmuME MCP unless the user explicitly requests it.
+  - User manual testing confirmed the previous v5/v20 regression todo is fully cleared by v21.
+  - Started v22 triage for one dialogue with a skipped second half and item/menu descriptions that show an empty first page before the real description.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

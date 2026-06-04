@@ -43,9 +43,13 @@ SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
 }
 
 FIXED_SUBSLOT_SOURCE_FILES = {
+    "msg/item_msg.msg",
     "msg/jyutu_msg.msg",
+    "msg/menu/item_menu_msg.msg",
     "msg/menu/status_menu_msg.msg",
     "msg/menu/top_menu_msg.msg",
+    "msg/skill_msg.msg",
+    "msg/taityou_kouka.msg",
 }
 
 LOCAL_FIXED_TEXT_SPAN_REPLACEMENTS = {
@@ -70,6 +74,7 @@ LEADING_STRUCTURE_EXEMPT_CHARS = "{\u300c\u300e\u201c\""
 YES_BYTES = b"\x82\xCD\x82\xA2"
 NO_BYTES = b"\x82\xA2\x82\xA2\x82\xA6"
 YES_NO_OPTION_PREFIX = YES_BYTES + b"\x01\x00" + NO_BYTES
+NUL4_TERMINATOR = b"\x00\x00\x00\x00"
 SCENE_TAIL_CTRL = "{CTRL_0101}"
 SCENE_TAIL_WITH_BREAK_CTRL = "{CTRL_0001}{CTRL_0101}"
 GENERIC_ITEM_GET_JP_PREFIX = "\u3092{CTRL_0001}\u3066\u306b"
@@ -669,6 +674,9 @@ def make_replacement(
     terminator = parse_hex_bytes(row.get("raw_terminator_hex", ""))
     source_len = int(row["source_byte_len"])
     payload_capacity = int(row["payload_capacity"])
+    if row.get("category") == "message" and raw.endswith(NUL4_TERMINATOR):
+        terminator = NUL4_TERMINATOR
+        payload_capacity = source_len - len(terminator)
     extra: dict[str, Any] = {}
     text_override = text_override_for_row(row)
     if text_override is not None and code_table is not None:
@@ -725,7 +733,14 @@ def make_replacement(
     if len(encoded) > payload_capacity:
         raise ValueError(f"{row['id']} encoded length exceeds payload capacity")
 
-    if terminator:
+    if terminator == NUL4_TERMINATOR:
+        used_len = len(encoded) + len(terminator)
+        if used_len > source_len:
+            raise ValueError(f"{row['id']} replacement exceeds original NUL4 message length")
+        replacement = encoded + message_padding(source_len - used_len) + terminator
+        extra["padding_strategy"] = "fullwidth_space_before_original_nul4_terminator"
+        extra["fixed_slot_terminator"] = "nul4_preserved_original_end"
+    elif terminator:
         used_len = len(encoded) + len(terminator)
         if used_len > source_len:
             raise ValueError(f"{row['id']} replacement exceeds original record length")

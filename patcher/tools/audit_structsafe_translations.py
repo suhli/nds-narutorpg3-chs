@@ -111,6 +111,15 @@ def adjusted_source(row: dict[str, str]) -> dict[str, Any]:
         adjusted_jp_text = strip_leading_structure_text(adjusted_jp_text)
         if adjusted_jp_text and not adjusted_jp_text.startswith(OPEN_QUOTES):
             adjusted_jp_text = "\u300c" + adjusted_jp_text
+        exact_jp_text = decode_payload(payload)
+        translated_text = strip_leading_structure_text(
+            row.get("zh_text_candidate_payload", "") or row.get("zh_text_raw", "")
+        )
+        if exact_jp_text.startswith("\u300c") and translated_text and not translated_text.startswith(OPEN_QUOTES):
+            translated_text = "\u300c" + translated_text
+        if tokens_from_text(translated_text) == tokens_from_text(exact_jp_text):
+            adjusted_jp_text = exact_jp_text
+            strategy = "strip_prefix_before_open_quote_exact_body_controls"
     elif (
         row.get("category") == "message"
         and terminator == b"\x03\x00"
@@ -158,7 +167,7 @@ def adjusted_translation(row: dict[str, str], source_info: dict[str, Any]) -> tu
     before = row.get("zh_text_candidate_payload", "") or row.get("zh_text_raw", "")
     after = before
     changes: list[str] = []
-    if source_info["strategy"] == "strip_prefix_before_open_quote":
+    if source_info["strategy"].startswith("strip_prefix_before_open_quote"):
         stripped = strip_leading_structure_text(after)
         if stripped != after:
             after = stripped

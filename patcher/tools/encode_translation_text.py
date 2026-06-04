@@ -272,6 +272,8 @@ def raw_lengths(raw: bytes, source_len: int | None) -> tuple[int, str, int]:
         return source_len, "03 00", 2
     if raw.endswith(b"\x03\x00"):
         return len(raw) - 2, "03 00", 2
+    if raw.endswith(b"\x00\x00\x00\x00"):
+        return len(raw) - 4, "00 00 00 00", 4
     return len(raw), "", 0
 
 
