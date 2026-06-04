@@ -252,6 +252,25 @@ LOCAL_TRANSLATIONS = {
     "さいせい": "播放",
 }
 
+LOCAL_TRANSLATIONS["\u305d\u3046\u3073\u3092\u307f\u308b"] = "\u67e5\u770b\u88c5\u5907"
+
+MANUAL_CANDIDATES = (
+    {
+        "id": "menu_overlay_0003_0441F0",
+        "component": "overlay_0003",
+        "source_file": "overlay/overlay_0003.bin",
+        "offset": "0x441F0",
+        "raw_len": "12",
+        "slot_len": "16",
+        "raw_hex": "82 BB 82 A4 82 D1 82 F0 82 DD 82 E9",
+        "jp_text": "\u305d\u3046\u3073\u3092\u307f\u308b",
+        "jp_text_stripped": "\u305d\u3046\u3073\u3092\u307f\u308b",
+        "zh_text": "",
+        "status": "candidate",
+        "notes": "manual fixed-slot entry omitted by scanner",
+    },
+)
+
 ROW_TRANSLATION_OVERRIDES = {
     "menu_overlay_0002_0128B8": "　　　　　　　　　　　获得了！",
 }
@@ -378,6 +397,8 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     candidates = [row for row in read_rows(Path(args.candidates)) if selected_candidate(row)]
+    candidate_ids = {row["id"] for row in candidates}
+    candidates.extend(row.copy() for row in MANUAL_CANDIDATES if row["id"] not in candidate_ids)
     reuse = load_reuse_translations(Path(args.reuse))
     code_table = load_code_table(Path(args.code_table))
     rows: list[dict[str, Any]] = []

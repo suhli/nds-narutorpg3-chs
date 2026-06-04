@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "candidates": "patcher\\resources\\menu\\overlay_menu_candidates.tsv",
+    "reuse": "patcher\\resources\\text\\frozen_translation.tsv",
+    "code_table": "patcher\\resources\\text\\zh_code_table.tsv"
+  },
+  "outputs": {
+    "translations": "plan\\cache\\text-writeback-smoke\\v5-regression-20260603\\v21-menu-preview.tsv",
+    "report": "plan\\cache\\text-writeback-smoke\\v5-regression-20260603\\v21-menu-preview-report.json"
+  },
+  "selected_rows": 288,
+  "unique_keys": 213,
+  "status_counts": {
+    "ready": 288
+  },
+  "translation_source_counts": {
+    "local_menu_dictionary": 285,
+    "row_fixed_width_override": 2,
+    "row_menu_override": 1
+  },
+  "pending_keys": [],
+  "missing_font_chars": ""
+}

@@ -65,7 +65,8 @@ TRANSLATABLE_MESSAGE_PREFIX_ROW_IDS = {
 
 CTRL_RE = re.compile(r"\{CTRL_([0-9A-Fa-f]{4})\}")
 LEADING_CTRL_RUN_RE = re.compile(r"^((?:\{CTRL_[0-9A-Fa-f]{4}\})+)(.*)$", re.S)
-OPEN_QUOTES = ("「", "『", "“", '"')
+OPEN_QUOTES = ("\u300c", "\u300e", "\u201c", '"')
+LEADING_STRUCTURE_EXEMPT_CHARS = "{\u300c\u300e\u201c\""
 YES_BYTES = b"\x82\xCD\x82\xA2"
 NO_BYTES = b"\x82\xA2\x82\xA2\x82\xA6"
 YES_NO_OPTION_PREFIX = YES_BYTES + b"\x01\x00" + NO_BYTES
@@ -306,7 +307,7 @@ def strip_leading_structure_text(text: str) -> str:
         if match:
             out = match.group(2)
             changed = True
-        while out and ord(out[0]) < 0x80 and out[0] not in "{「『“\"":
+        while out and ord(out[0]) < 0x80 and out[0] not in LEADING_STRUCTURE_EXEMPT_CHARS:
             out = out[1:]
             changed = True
     return out
@@ -390,7 +391,7 @@ def translate_fixed_message_prefix(
 
     body = join_text_controls(translated_segments[control_count:], translated_controls[control_count:]).lstrip()
     if body and not body.startswith(OPEN_QUOTES):
-        body = "「" + body
+        body = OPEN_QUOTES[0] + body
     return bytes(replacement), body, {
         "message_prefix_segment_count": len(prefix_segments) - 1,
         "message_prefix_translated_lengths": translated_lengths[:-1],
@@ -545,15 +546,15 @@ def message_stream_prefix_and_text(row: dict[str, str], raw: bytes) -> tuple[byt
     terminator = b"\x03\x00" if raw.endswith(b"\x03\x00") else b""
     payload = raw[: -len(terminator)] if terminator else raw
     quote_pos = payload.find(b"\x81\x75")
-    if quote_pos > 0 and not jp_text.startswith("「"):
+    if quote_pos > 0 and not jp_text.startswith(OPEN_QUOTES[0]):
         clean = strip_leading_structure_text(zh_text)
         if not clean.startswith(OPEN_QUOTES):
-            clean = "「" + clean
+            clean = OPEN_QUOTES[0] + clean
         return raw[:quote_pos], clean, "preserve_prefix_before_open_quote"
     if raw.startswith(b"\x81\x75"):
         clean = strip_leading_structure_text(zh_text)
-        if jp_text.startswith("「") and not clean.startswith(OPEN_QUOTES):
-            clean = "「" + clean
+        if jp_text.startswith(OPEN_QUOTES[0]) and not clean.startswith(OPEN_QUOTES):
+            clean = OPEN_QUOTES[0] + clean
         return b"", clean, "open_quote_text"
     if (
         len(payload) >= 4
