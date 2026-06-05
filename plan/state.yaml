@@ -28,6 +28,8 @@ stage_cache:
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v22-control-slot-triage.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v23-menu-dialog-description-triage.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v25-full-structural-audit.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout.md
 stage_outputs:
   expected:
     - rom/narutorpg3_chs_full_writeback_test.nds
@@ -210,6 +212,29 @@ stage_outputs:
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim-records.json
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-rebuild-resource-check-records.json
+    - tools/audit_v24_structural_risks.py
+    - patcher/tools/audit_v24_structural_risks.py
+    - rom/narutorpg3_chs_patcher_v25_full_struct_audit_fusion12.nds
+    - rom/narutorpg3_chs_patcher_v25_rebuild_resource_check.nds
+    - patcher/work/build_20260605_142912/patcher-build-summary.json
+    - patcher/work/build_20260605_142944/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v25-full-structural-audit.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v25-structural-risk-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v25-structural-risk-audit.tsv
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v25-full-struct-audit-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v25-rebuild-resource-check-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v25-writeback-byte-compare.json
+    - rom/narutorpg3_chs_patcher_v26_control_placeholder_layout.nds
+    - rom/narutorpg3_chs_patcher_v26_rebuild_resource_check2.nds
+    - patcher/work/build_20260605_164206/patcher-build-summary.json
+    - patcher/work/build_20260605_170106/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout-audit.tsv
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-rebuild-resource-check2-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-writeback-byte-compare.json
+    - hack/v26控制符占位符与固定布局规则.md
     - patcher/work/build_20260604_120709/text_assets/overlay_menu_translation_report.json
     - patcher/work/build_20260604_120709/text_assets/translation-struct-audit-report.json
     - plan/cache/text-writeback-smoke/v5-regression-20260603/menu-regenerated-v18.tsv
@@ -236,7 +261,8 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-05T12:20:00+08:00"
+    - hack/v26控制符占位符与固定布局规则.md
+updated_at: "2026-06-05T17:02:49+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -309,6 +335,13 @@ notes:
   - Built rom/narutorpg3_chs_patcher_v24_save_equip_trim_fusion12.nds after fixing overlay_0002 save yes/no visible-span padding, zero-fill inside fixed CTRL_0000 subslots, early 03 terminators for menu/friend descriptions, and fixed-width equipment category/effect labels.
   - v24 static verification passed: checked=5862, excluded=1, after_control_mismatch=0, overflow=0, missing=0; text_rows=5859 and menu_rows=289 both have byte-diff 0; Header CRC OK / Banner CRC OK.
   - Default resource build rom/narutorpg3_chs_patcher_v24_save_equip_trim_fusion12.nds matches rebuild-text-assets ROM rom/narutorpg3_chs_patcher_v24_rebuild_resource_check.nds SHA256 71B648ADA7B5F0D869B10A30B6C448DDB3EBDD48EBCB3F33D7E0A9B9CC173451. No DeSmuME or MCP operation was used.
+  - Added tools/audit_v24_structural_risks.py and patcher/tools/audit_v24_structural_risks.py to scan v24-style structural risks across all selected text and overlay rows.
+  - Built rom/narutorpg3_chs_patcher_v25_full_struct_audit_fusion12.nds after expanding fixed CTRL_0000 subslot writeback to msg/wifi/btlres/connect/error/rule/taisen/vs, trimming msg/wifi/connect and msg/wifi/error 03-terminated UI prompts, and trimming the msg/menu/battle_result_msg NUL4 prompt.
+  - v25 static verification passed: text_rows=5859 and menu_rows=289 both have byte-diff 0; fixed_subslot_rows=75; early_nul4_rows=572; Header CRC OK / Banner CRC OK.
+  - Default resource build rom/narutorpg3_chs_patcher_v25_full_struct_audit_fusion12.nds matches rebuild-text-assets ROM rom/narutorpg3_chs_patcher_v25_rebuild_resource_check.nds SHA256 93043824CD5247B98CEF499B0232682191D30076AE82E457DB061F82FE2ADDAD. No DeSmuME or MCP operation was used.
+  - Built rom/narutorpg3_chs_patcher_v26_control_placeholder_layout.nds after normalizing visible ASCII outside controls, preserving two structural ASCII suffixes, fixing zh_txt_dc122c8a_000BD4_0040 fixed control slots, and adding eight fixed-width overlay layout overrides.
+  - v26 static verification passed: text_rows=5858 and menu_rows=289 both have byte-diff 0; visible_ascii_risk_count=0; overlay structural risk_rows=0; Header CRC OK / Banner CRC OK.
+  - v26 candidate SHA256 is 367E608BC643640F72E108E83554974F9F12CC87D6BF3FC9B62B3FF71D25F1CD. Rebuild-text-assets check completed as rom/narutorpg3_chs_patcher_v26_rebuild_resource_check2.nds with the same SHA256 after the fixed-width overlay rules were added to the menu generation script. No DeSmuME or MCP operation was used.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

@@ -382,3 +382,64 @@ SHA256 71B648ADA7B5F0D869B10A30B6C448DDB3EBDD48EBCB3F33D7E0A9B9CC173451
 - 文本和菜单缺字为 0，仅字体保留占位字符 `U+E0FD` 告警。
 
 详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim.md`。运行时验证继续由用户手动完成。
+
+## 2026-06-05 v25 同类结构全量审计候选
+
+按用户要求，对 v24 之前发现的同类结构问题做全量静态扫描。本轮未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v25_full_struct_audit_fusion12.nds
+SHA256 93043824CD5247B98CEF499B0232682191D30076AE82E457DB061F82FE2ADDAD
+```
+
+资源重建校验 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v25_rebuild_resource_check.nds
+SHA256 93043824CD5247B98CEF499B0232682191D30076AE82E457DB061F82FE2ADDAD
+```
+
+本轮新增：
+
+- 新增结构风险审计脚本 `tools/audit_v24_structural_risks.py`，并同步到 `patcher/tools/`。
+- Wi-Fi 六类消息源加入固定 `CTRL_0000` 子槽位原位写回，新增覆盖 39 条，固定子槽位总覆盖 75 条。
+- `msg/wifi/connect_msg.msg`、`msg/wifi/error_msg.msg` 加入普通 `03 00` 提前结束规则，覆盖 6 条 UI 提示。
+- `msg/menu/battle_result_msg.msg` 加入 NUL4 提前结束规则，覆盖 1 条战斗结果菜单提示。
+
+最终审计：
+
+- 文本侧同类结构风险为 0。
+- 剩余 7 条 overlay 间距观察项暂不自动修；它们无结构分隔符破坏，且当前译文已保留必要可见空格或属于单标签尾部 padding。
+- 实际 ROM 写回逐字节核对：`text_mismatches=0`、`menu_mismatches=0`。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 文本和菜单缺字为 0，仅字体保留占位字符 `U+E0FD` 告警。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v25-full-structural-audit.md`。运行时验证继续由用户手动完成。
+
+## 2026-06-05 v26 控制符、占位符与固定布局候选
+
+用户手动测试 v25 后反馈：`zh_txt_dc122c8a_000BD4_0040` 与 `zh_txt_dc122c8a_000C2C_0041` 之间多出空行，后一条在“「按下”后乱码并导致后续对白颜色异常；道具和对战设置说明在半句后乱码；一个“攻击 / 防御 / 速度”布局仍错位。本轮按静态规则修复，未使用 DeSmuME/MCP。
+
+候选 ROM：
+```text
+rom/narutorpg3_chs_patcher_v26_control_placeholder_layout.nds
+SHA256 367E608BC643640F72E108E83554974F9F12CC87D6BF3FC9B62B3FF71D25F1CD
+```
+
+修复内容：
+- 控制符外可见 ASCII 统一转全角；已确认结构尾部的 `N`/`4` 单字节参数单独保留。
+- `zh_txt_dc122c8a_000BD4_0040` 改为固定控制位原位写回；`zh_txt_dc122c8a_000C2C_0041`、道具说明、好友/对战设置说明中的半角 `Y`、`1`、`/` 等不再以单字节写入。
+- 修复错误半角标点行 `zh_txt_de7d406d_000124_0004`，并清理两条 ASCII 省略号风险。
+- 将 `攻击 / 防御 / 速度` 等 8 条 overlay 固定间距文本改为固定宽度覆盖。
+
+静态验证：
+- 文本替换检查 5858 条，控制符外可见 ASCII 风险 0，保留结构尾部 ASCII 参数 2 条。
+- overlay 结构和固定间距风险 0。
+- 实际工作目录逐字节核对：文本 5858 条、菜单 289 条，mismatch=0。
+- 默认冻结资源构建与 `--rebuild-text-assets` 构建 SHA256 一致。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 文本和菜单缺字为 0，仅字体保留占位字符 `U+E0FD` 告警。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout.md`。运行时验证继续由用户手动完成。

@@ -1,0 +1,8 @@
+risk_type	severity	id	source_file	offset	source_kind	strategy	encoded_len	raw_len	slot_len	padding_len	details
+overlay_fixed_width_spacing_candidate	medium	menu_overlay_0000_030100	overlay/overlay_0000.bin	0x30100	overlay	zero_fill_after_encoded	46	66	68	22	overlay row has 18 fullwidth spaces and may encode a fixed layout
+overlay_fixed_width_spacing_candidate	medium	menu_overlay_0000_0301F8	overlay/overlay_0000.bin	0x301F8	overlay	zero_fill_after_encoded	10	26	28	18	overlay row has 3 fullwidth spaces and may encode a fixed layout
+overlay_fixed_width_spacing_candidate	medium	menu_overlay_0000_030214	overlay/overlay_0000.bin	0x30214	overlay	zero_fill_after_encoded	12	26	28	16	overlay row has 3 fullwidth spaces and may encode a fixed layout
+overlay_fixed_width_spacing_candidate	medium	menu_overlay_0002_0128B8	overlay/overlay_0002.bin	0x128B8	overlay	zero_fill_after_encoded	30	38	132	102	overlay row has 12 fullwidth spaces and may encode a fixed layout
+overlay_fixed_width_spacing_candidate	medium	menu_overlay_0003_045228	overlay/overlay_0003.bin	0x45228	overlay	zero_fill_after_encoded	22	70	76	54	overlay row has 10 fullwidth spaces and may encode a fixed layout
+overlay_fixed_width_spacing_candidate	medium	menu_overlay_0003_0452B8	overlay/overlay_0003.bin	0x452B8	overlay	zero_fill_after_encoded	12	28	32	20	overlay row has 5 fullwidth spaces and may encode a fixed layout
+overlay_fixed_width_spacing_candidate	medium	menu_overlay_0003_0452D8	overlay/overlay_0003.bin	0x452D8	overlay	zero_fill_after_encoded	12	28	32	20	overlay row has 5 fullwidth spaces and may encode a fixed layout

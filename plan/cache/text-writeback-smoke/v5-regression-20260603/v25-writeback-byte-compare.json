@@ -1,0 +1,28 @@
+{
+  "work": "D:/repos/nds-narutorpg3-chs/patcher/work/build_20260605_142912/rom_work",
+  "output_rom": "D:/repos/nds-narutorpg3-chs/rom/narutorpg3_chs_patcher_v25_full_struct_audit_fusion12.nds",
+  "text_rows": 5859,
+  "menu_rows": 289,
+  "text_mismatches": 0,
+  "menu_mismatches": 0,
+  "strategy_counts": {
+    "open_quote_text": 2455,
+    "preserve_prefix_before_open_quote": 287,
+    "zero_fixed_slot": 2003,
+    "plain_message_text": 416,
+    "open_quote_text_preserve_scene_tail": 10,
+    "early_nul4_zero_fill": 572,
+    "translate_fixed_prefix_before_open_quote": 6,
+    "preserve_binary_tail_translate_yes_no_options": 6,
+    "preserve_prefix_before_sjis_text": 15,
+    "preserve_translated_yes_no_option_prefix_before_open_quote": 1,
+    "fullwidth_space_before_original_nul4_terminator": 9,
+    "preserve_fixed_control_slot_offsets": 3,
+    "preserve_ctrl_0000_subslot_offsets": 75,
+    "local_text_span_preserve_binary": 1
+  },
+  "sample_mismatches": {
+    "text": [],
+    "menu": []
+  }
+}

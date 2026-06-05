@@ -30,6 +30,7 @@ DEFAULT_INCLUDED_ROW_IDS_WHEN_SOURCE_EXCLUDED = {
 DEFAULT_EXCLUDED_ROW_IDS = {
     "zh_txt_a346a806_0031E1_0180",
     "zh_txt_579f0fbf_0029AD_0181",
+    "zh_txt_b91ed4cf_0024B1_0001",
     "zh_txt_c741b6bc_003795_0263",
 }
 
@@ -63,18 +64,27 @@ FIXED_SUBSLOT_SOURCE_FILES = {
     "msg/skill_msg.msg",
     "msg/taityou_kouka.msg",
     "msg/wifi/friend_msg.msg",
+    "msg/wifi/btlres_msg.msg",
+    "msg/wifi/connect_msg.msg",
+    "msg/wifi/error_msg.msg",
+    "msg/wifi/rule_msg.msg",
+    "msg/wifi/taisen_msg.msg",
+    "msg/wifi/vs_msg.msg",
 }
 
 EARLY_NUL4_TERMINATOR_SOURCE_FILES = {
     "msg/equip_msg.msg",
     "msg/item_msg.msg",
     "msg/jyutu_msg.msg",
+    "msg/menu/battle_result_msg.msg",
     "msg/menu/item_menu_msg.msg",
     "msg/skill_msg.msg",
     "msg/taityou_kouka.msg",
 }
 
 EARLY_MESSAGE_TERMINATOR_SOURCE_FILES = {
+    "msg/wifi/connect_msg.msg",
+    "msg/wifi/error_msg.msg",
     "msg/wifi/friend_msg.msg",
 }
 
@@ -86,6 +96,7 @@ FIXED_CONTROL_SLOT_ROW_IDS = {
     "zh_txt_2ef7aa25_000758_0027",
     "zh_txt_6b929156_0001A6_0005",
     "zh_txt_6b929156_0001FA_0006",
+    "zh_txt_dc122c8a_000BD4_0040",
 }
 
 LOCAL_FIXED_TEXT_SPAN_REPLACEMENTS = {
@@ -123,7 +134,19 @@ MESSAGE_TEXT_OVERRIDES = {
     "zh_txt_2ef7aa25_000758_0027": "\u300c{CTRL_0103}{CTRL_0002}\u6728\u53f6\u9690\u6751{CTRL_0103}{CTRL_0000}\u53bb\u5427{CTRL_0001}\u90a3\u91cc\u4e00\u5b9a\u4f1a\u5e2e\u4f60\u7684\u300d",
     "zh_txt_6b929156_0001A6_0005": "\uff08\u90fd\u662f\u7b2c\u4e03\u73ed\u4e00\u8d77\u6267\u884c\u4efb\u52a1\u7684{CTRL_0001}\u4f19\u4f34\u554a\uff01\uff09",
     "zh_txt_6b929156_0001FA_0006": "\u300c\u5361\u5361\u897f\u8001\u5e08\u2026\u2026\u4f60\u8bf4\u8bf4\u9e23\u4eba\u90a3\u5bb6\u4f19{CTRL_0001}\u51e0\u53e5\u5427\uff01\u300d",
+    "zh_txt_de7d406d_000124_0004": "\u300c\uff01\u300d",
+    "zh_txt_6405d86e_000088_0003": "\u300c\u545c\u545c\u2026\u300d",
+    "zh_txt_301f6085_0000BC_0002": "\u201c\u5440\u2026\u2026\u201d",
+    "zh_txt_805b124c_000526_0007": "\u8fd9\u4e2a{CTRL_0103}{CTRL_0002}\u4e3b\u673a{CTRL_0103}{CTRL_0000}\u7684{CTRL_0103}{CTRL_0002}{CTRL_0001}\u65e0\u7ebf\u7528\u6237\u4fe1\u606f{CTRL_0103}{CTRL_0000}\u5df2\u4fdd\u5b58\u5230{CTRL_0001}{CTRL_0103}{CTRL_0002}\u5361\u5e26{CTRL_0103}{CTRL_0000}\u4e2d",
 }
+
+ASCII_PRESERVE_SUFFIXES = {
+    "zh_txt_bb92057e_000008_0000": "{CTRL_0008}{CTRL_0000}N",
+    "zh_txt_b91ed4cf_000008_0000": "{CTRL_0008}{CTRL_0000}4{CTRL_0000}{CTRL_5400}{CTRL_0000}{CTRL_7C00}",
+}
+
+ASCII_FULLWIDTH_MAP = {chr(value): chr(value + 0xFEE0) for value in range(0x21, 0x7F)}
+ASCII_FULLWIDTH_MAP[" "] = "\u3000"
 
 
 def is_sjis_lead(byte: int) -> bool:
@@ -389,12 +412,28 @@ def text_override_for_row(row: dict[str, str]) -> str | None:
     return None
 
 
+def fullwidth_visible_ascii(text: str) -> str:
+    parts: list[str] = []
+    pos = 0
+    for match in CTRL_RE.finditer(text or ""):
+        parts.append("".join(ASCII_FULLWIDTH_MAP.get(char, char) for char in text[pos : match.start()]))
+        parts.append(match.group(0))
+        pos = match.end()
+    parts.append("".join(ASCII_FULLWIDTH_MAP.get(char, char) for char in (text or "")[pos:]))
+    return "".join(parts)
+
+
+def normalize_visible_ascii_for_row(row: dict[str, str], text: str) -> str:
+    suffix = ASCII_PRESERVE_SUFFIXES.get(row.get("id", ""))
+    if suffix and text.endswith(suffix):
+        return fullwidth_visible_ascii(text[: -len(suffix)]) + suffix
+    return fullwidth_visible_ascii(text)
+
+
 def normalized_message_text(row: dict[str, str]) -> str:
     override = text_override_for_row(row)
-    if override is not None:
-        return override
-    text = row.get("zh_text_candidate_payload", "")
-    return text
+    text = override if override is not None else row.get("zh_text_candidate_payload", "")
+    return normalize_visible_ascii_for_row(row, text)
 
 
 def translate_fixed_message_prefix(

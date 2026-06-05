@@ -292,6 +292,25 @@ ROW_TRANSLATION_OVERRIDES = {
     "menu_overlay_0002_0128B8": "　　　　　　　　　　　获得了！",
 }
 
+FIXED_WIDTH_ROW_TEXT_OVERRIDES = {
+    "menu_overlay_0000_030100": "\u3000" * 3
+    + "\u63d0\u5347"
+    + "\u3000" * 4
+    + "\u76f8\u540c"
+    + "\u3000" * 9
+    + "\u4e0b\u964d"
+    + "\u3000" * 4
+    + "\u88c5\u5907\u4e2d"
+    + "\u3000" * 4,
+    "menu_overlay_0000_0301F8": "\u5f53\u524d\u7ecf\u9a8c\u503c" + "\u3000" * 8,
+    "menu_overlay_0000_030214": "\u8ddd\u4e0b\u4e00\u7ea7\u8fd8\u5dee" + "\u3000" * 7,
+    "menu_overlay_0002_0128B8": "\u3000" * 11 + "\u83b7\u5f97\u4e86\uff01" + "\u3000" * 4,
+    "menu_overlay_0003_0442A0": "\u653b\u51fb" + "\u3000" * 3 + "\u9632\u5fa1" + "\u3000" * 3 + "\u901f\u5ea6" + "\u3000" * 2,
+    "menu_overlay_0003_045228": "\u3000" * 2 + "\u653e\u7f6e\u901a\u7075\u7eb8\uff0c\u8f93\u5165\u6697\u53f7\uff01" + "\u3000" * 22,
+    "menu_overlay_0003_0452B8": "\u3000" + "\u5b58\u6863\u6587\u4ef6\u00b7\u4e34" + "\u3000" * 7,
+    "menu_overlay_0003_0452D8": "\u3000" + "\u5b58\u6863\u6587\u4ef6\u00b7\u5175" + "\u3000" * 7,
+}
+
 FIXED_WIDTH_ROW_REPLACEMENTS = {
     "menu_overlay_0000_030270": (
         ("スタミナ", "体力　　"),
@@ -327,8 +346,16 @@ FIXED_WIDTH_ROW_REPLACEMENTS = {
 }
 
 FIXED_WIDTH_ROW_NOTES = {
+    "menu_overlay_0000_030100": "manual fixed-width overlay spacing",
+    "menu_overlay_0000_0301F8": "manual fixed-width overlay spacing",
+    "menu_overlay_0000_030214": "manual fixed-width overlay spacing",
+    "menu_overlay_0002_0128B8": "manual fixed-width overlay spacing",
+    "menu_overlay_0003_0442A0": "manual fixed-width three-stat labels",
     "menu_overlay_0003_04430C": "manual fixed-width equipment category labels",
     "menu_overlay_0003_044584": "manual fixed-width status left panel",
+    "menu_overlay_0003_045228": "manual fixed-width overlay spacing",
+    "menu_overlay_0003_0452B8": "manual fixed-width overlay spacing",
+    "menu_overlay_0003_0452D8": "manual fixed-width overlay spacing",
 }
 
 
@@ -351,6 +378,10 @@ def normalize(text: str) -> str:
 
 
 def fixed_width_row_translation(row: dict[str, str]) -> str | None:
+    exact_text = FIXED_WIDTH_ROW_TEXT_OVERRIDES.get(row.get("id", ""))
+    if exact_text is not None:
+        return exact_text
+
     replacements = FIXED_WIDTH_ROW_REPLACEMENTS.get(row.get("id", ""))
     if not replacements:
         return None

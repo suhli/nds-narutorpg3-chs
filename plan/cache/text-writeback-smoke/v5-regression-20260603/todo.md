@@ -180,3 +180,23 @@
   - 装备属性效果与装备分类 overlay 改为固定宽度短译；护腿类物品名和说明加入短译覆盖，避免装备页错位。
 - 静态验证：文本 5859 条、菜单 289 条，实际写回字节差异均为 0；`ndstool -i` Header CRC OK / Banner CRC OK；默认资源构建与 `--rebuild-text-assets` 构建 SHA256 一致。
 - 本轮未使用 DeSmuME/MCP；运行时显示效果继续由用户手动验证。
+
+## 2026-06-05 v25 同类结构全量审计
+
+- 新增 `tools/audit_v24_structural_risks.py` 和 `patcher/tools/audit_v24_structural_risks.py`，用于全量扫描 v24 相关结构风险。
+- 审计确认文本侧还有同类可修项：`msg/wifi/btlres/connect/error/rule/taisen/vs` 共 39 条合并 `CTRL_0000` 记录，已全部加入固定子槽位原位写回。
+- `msg/wifi/connect_msg.msg` 与 `msg/wifi/error_msg.msg` 的 6 条普通 UI 说明加入提前 `03 00` 结束；`msg/menu/battle_result_msg.msg` 的 1 条 NUL4 菜单提示加入提前 NUL4 结束。
+- v25 候选：`rom/narutorpg3_chs_patcher_v25_full_struct_audit_fusion12.nds`，SHA256 `93043824CD5247B98CEF499B0232682191D30076AE82E457DB061F82FE2ADDAD`。
+- 静态验证：文本 5859 条、菜单 289 条，实际写回字节差异均为 0；`ndstool -i` Header CRC OK / Banner CRC OK；默认资源构建与 `--rebuild-text-assets` 构建 SHA256 一致。
+- 审计剩余 7 条 overlay 间距观察项均未发现明确结构分隔符破坏，暂不自动修，等待手测截图确认。
+- 本轮未使用 DeSmuME/MCP。
+
+## 2026-06-05 v26 控制符/占位符与 overlay 固定布局
+
+- v25 后新反馈的三个乱码点定位为控制符外可见 ASCII：`Y`、`1`、`/` 等单字节进入文本流后会破坏渲染或高亮复位。
+- 写回器已统一把控制符外可见 ASCII 转全角，并保留 2 条已确认的结构尾部 `N`/`4` 单字节参数。
+- `zh_txt_dc122c8a_000BD4_0040` 加入固定控制位原位写回，清理该对白后的额外空行风险。
+- v25 剩余 7 条 overlay 间距观察项已全部改为固定宽度覆盖；连同本轮截图中的 `攻击 / 防御 / 速度`，固定宽度覆盖共新增 8 条。
+- v26 候选：`rom/narutorpg3_chs_patcher_v26_control_placeholder_layout.nds`，SHA256 `367E608BC643640F72E108E83554974F9F12CC87D6BF3FC9B62B3FF71D25F1CD`。
+- 静态验证：文本 5858 条、菜单 289 条逐字节核对 mismatch=0；控制符外可见 ASCII 风险 0；overlay 风险 0；默认冻结资源构建与 `--rebuild-text-assets` 构建 SHA256 一致；`ndstool -i` Header CRC OK / Banner CRC OK。
+- 本轮未使用 DeSmuME/MCP。
