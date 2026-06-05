@@ -13,6 +13,40 @@ import patch_vram_font_chunk_table_dual_immediate_cache_probe as cache
 import patch_vram_font_split_map_probe as split
 
 
+OVERLAY_0002_TEMPLATE_RANGE = (0x12C80, 0x12DB0)
+
+OVERLAY_0002_VISIBLE_TEXT_PATCHES = (
+    (
+        "item_get_haitteita_suffix",
+        "\u306f\u3044\u3063\u3066\u3044\u305f\uff01",
+        "\u83b7\u5f97\u4e86\uff01",
+    ),
+    (
+        "item_get_tenireta_suffix",
+        "\u3066\u306b\u3044\u308c\u305f\uff01",
+        "\u83b7\u5f97\u4e86\uff01",
+    ),
+    (
+        "item_full_warning",
+        "\u3082\u3061\u3082\u306e\u304c\u3000\u3044\u3063\u3071\u3044\u3067\u3059\uff01",
+        "\u9053\u5177\u5df2\u6ee1\uff01",
+    ),
+)
+
+OVERLAY_0002_RAW_PATCHES = (
+    (
+        "item_get_particle_ga_after_percent_s",
+        bytes.fromhex("25 73 82 AA"),
+        bytes.fromhex("25 73 81 40"),
+    ),
+    (
+        "item_get_particle_wo_after_percent_s",
+        bytes.fromhex("25 73 82 F0"),
+        bytes.fromhex("25 73 81 40"),
+    ),
+)
+
+
 def read_rows(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8", newline="") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
@@ -50,6 +84,89 @@ def overlay_replacement(row: dict[str, str], encoded: bytes, slot_len: int) -> t
         "visible_padding_count": 0,
         "fill_zero_count": slot_len - len(encoded),
     }
+
+
+def replace_all_in_range(data: bytearray, start: int, end: int, source: bytes, replacement: bytes) -> int:
+    if len(source) != len(replacement):
+        raise ValueError("overlay template patch must preserve byte length")
+    count = 0
+    pos = start
+    while True:
+        index = data.find(source, pos, end)
+        if index < 0:
+            return count
+        data[index : index + len(source)] = replacement
+        count += 1
+        pos = index + len(replacement)
+
+
+def fixed_visible_overlay_text(
+    text: str,
+    width: int,
+    code_table: dict[str, int],
+    *,
+    candidate_code_endian: str,
+) -> bytes:
+    encoded = text_rom.encode_text(text, code_table, candidate_code_endian=candidate_code_endian)
+    if len(encoded) > width:
+        raise ValueError(f"overlay template text {text!r} exceeds width {width}")
+    return encoded + text_rom.message_padding(width - len(encoded))
+
+
+def patch_overlay_message_templates(
+    work: Path,
+    code_table: dict[str, int],
+    *,
+    candidate_code_endian: str,
+) -> list[dict[str, Any]]:
+    target = work / "overlay" / "overlay_0002.bin"
+    if not target.is_file():
+        raise FileNotFoundError(target)
+    data = bytearray(target.read_bytes())
+    start, end = OVERLAY_0002_TEMPLATE_RANGE
+    records: list[dict[str, Any]] = []
+
+    for patch_id, source, replacement in OVERLAY_0002_RAW_PATCHES:
+        count = replace_all_in_range(data, start, end, source, replacement)
+        records.append(
+            {
+                "id": patch_id,
+                "source_file": "overlay/overlay_0002.bin",
+                "range": [f"0x{start:X}", f"0x{end:X}"],
+                "replacement_count": count,
+                "strategy": "fixed_binary_template_raw_replace",
+                "source_hex": source.hex(" ").upper(),
+                "replacement_hex": replacement.hex(" ").upper(),
+            }
+        )
+
+    for patch_id, source_text, zh_text in OVERLAY_0002_VISIBLE_TEXT_PATCHES:
+        source = source_text.encode("cp932")
+        replacement = fixed_visible_overlay_text(
+            zh_text,
+            len(source),
+            code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+        count = replace_all_in_range(data, start, end, source, replacement)
+        records.append(
+            {
+                "id": patch_id,
+                "source_file": "overlay/overlay_0002.bin",
+                "range": [f"0x{start:X}", f"0x{end:X}"],
+                "jp_text": source_text,
+                "zh_text": zh_text,
+                "replacement_count": count,
+                "strategy": "fixed_binary_template_visible_text_replace",
+                "source_hex": source.hex(" ").upper(),
+                "replacement_hex": replacement.hex(" ").upper(),
+            }
+        )
+
+    if sum(record["replacement_count"] for record in records) == 0:
+        raise ValueError("overlay_0002 item-get template patch did not match any bytes")
+    target.write_bytes(data)
+    return records
 
 
 def patch_menu_rows(work: Path, rows: list[dict[str, str]]) -> list[dict[str, Any]]:
@@ -127,6 +244,11 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
 
     menu_rows = read_rows(repo / args.menu_translations)
     menu_records = patch_menu_rows(work, menu_rows)
+    overlay_template_records = patch_overlay_message_templates(
+        work,
+        code_table,
+        candidate_code_endian=args.candidate_code_endian,
+    )
     split.repack(repo, work, output_rom)
 
     metadata = {
@@ -155,9 +277,14 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
             "translations": args.menu_translations,
             "row_count": len(menu_records),
         },
+        "overlay_template_writeback": {
+            "row_count": len(overlay_template_records),
+            "replacement_count": sum(record["replacement_count"] for record in overlay_template_records),
+        },
         "records": {
             "text_samples": text_records if not args.compact_records else [],
             "menu_samples": menu_records if not args.compact_records else [],
+            "overlay_template_samples": overlay_template_records if not args.compact_records else [],
         },
     }
     return work, output_rom, metadata

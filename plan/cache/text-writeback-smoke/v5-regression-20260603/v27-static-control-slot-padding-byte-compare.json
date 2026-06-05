@@ -1,0 +1,11 @@
+{
+  "text_checked": 5858,
+  "text_mismatch_count": 0,
+  "menu_checked": 289,
+  "menu_mismatch_count": 0,
+  "excluded_source_files": {
+    "msg/wifi/kinshi_msg.msg": 1
+  },
+  "text_mismatches": [],
+  "menu_mismatches": []
+}

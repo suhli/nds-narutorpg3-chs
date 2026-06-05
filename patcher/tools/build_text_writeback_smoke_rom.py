@@ -43,6 +43,10 @@ SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
     "msg/taityou_kouka.msg",
 }
 
+SPACE_PADDED_FIXED_SLOT_SOURCE_PREFIXES = (
+    "param/",
+)
+
 FIXED_SUBSLOT_SOURCE_FILES = {
     "msg/item_msg.msg",
     "msg/jyutu_msg.msg",
@@ -73,13 +77,8 @@ FIXED_SUBSLOT_SOURCE_FILES = {
 }
 
 EARLY_NUL4_TERMINATOR_SOURCE_FILES = {
-    "msg/equip_msg.msg",
-    "msg/item_msg.msg",
-    "msg/jyutu_msg.msg",
     "msg/menu/battle_result_msg.msg",
     "msg/menu/item_menu_msg.msg",
-    "msg/skill_msg.msg",
-    "msg/taityou_kouka.msg",
 }
 
 EARLY_MESSAGE_TERMINATOR_SOURCE_FILES = {
@@ -557,7 +556,7 @@ def make_fixed_subslot_replacement(
             raise ValueError(f"{row['id']} translated fixed subslot {index} exceeds original width")
         slot_start = 0 if index == 0 else separator_offsets[index - 1] + len(separators[index - 1])
         slot_end = slot_start + len(raw_slot)
-        padding = bytes(len(raw_slot) - len(encoded))
+        padding, padding_strategy = fixed_slot_padding(row, len(raw_slot) - len(encoded))
         replacement[slot_start:slot_end] = encoded + padding
         encoded_parts.append(encoded)
         slot_records.append(
@@ -567,7 +566,7 @@ def make_fixed_subslot_replacement(
                 "source_len": len(raw_slot),
                 "translated_len": len(encoded),
                 "padding_len": len(padding),
-                "padding_strategy": "zero_fill_after_translated_subslot_text",
+                "padding_strategy": padding_strategy,
                 "control_count": len(translated_controls),
             }
         )
@@ -582,7 +581,7 @@ def make_fixed_subslot_replacement(
     encoded_joined = b"\x00\x00".join(encoded_parts)
     return encoded_joined, terminator, bytes(replacement), {
         "fixed_slot_strategy": "preserve_ctrl_0000_subslot_offsets",
-        "fixed_subslot_padding_strategy": "zero_fill_after_translated_subslot_text",
+        "fixed_subslot_padding_strategy": "per_source_fixed_slot_padding",
         "fixed_subslots": slot_records,
         "ctrl_0000_separator_offsets": separator_offsets,
         "preserved_trailing_subslot_count": len(raw_slots) - len(translated_slots),
@@ -753,7 +752,11 @@ def fixed_slot_padding(row: dict[str, str], length: int) -> tuple[bytes, str]:
     if length < 0:
         raise ValueError("negative fixed slot padding")
     source_file = normalize_source_file(row.get("source_file", ""))
+    if row.get("category") == "message":
+        return message_padding(length), "fullwidth_space_fixed_slot"
     if source_file in SPACE_PADDED_FIXED_SLOT_SOURCE_FILES:
+        return message_padding(length), "fullwidth_space_fixed_slot"
+    if any(source_file.startswith(prefix) for prefix in SPACE_PADDED_FIXED_SLOT_SOURCE_PREFIXES):
         return message_padding(length), "fullwidth_space_fixed_slot"
     return bytes(length), "zero_fixed_slot"
 
@@ -855,6 +858,13 @@ def make_replacement(
     if text_override is not None and code_table is not None:
         encoded = encode_text(text_override, code_table, candidate_code_endian=candidate_code_endian)
         extra["text_override"] = "yes"
+    elif row.get("category") == "message" and code_table is not None:
+        encoded = encode_text(
+            normalized_message_text(row),
+            code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+        extra["message_text_normalized"] = "yes"
     if row.get("id", "") in LOCAL_FIXED_TEXT_SPAN_REPLACEMENTS and code_table is not None:
         return make_local_fixed_text_span_replacement(
             row,
