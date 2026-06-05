@@ -289,3 +289,33 @@ rom/narutorpg3_chs_patcher_v21_structslot_overlayfix_fusion12.nds
 - `ndstool -i` Header CRC OK / Banner CRC OK。
 
 按项目约定，运行时验证等待用户手动完成；除非用户明确提出，不使用 DeSmuME MCP 调试。详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v21-static-validation.md`。
+
+## 2026-06-04 v22 控制结构与说明结束符候选
+
+用户手动测试确认 v21 已清除此前回归 todo。v22 针对一条对白后半句跳过和说明页
+首次进入为空的问题完成修复，并扫描同类结构。
+
+最终候选：
+
+```text
+rom/narutorpg3_chs_patcher_v22_final_controlslot_nul4_fusion12.nds
+```
+
+本轮修复：
+
+- 恢复目标对白及 10 条同类记录中被审计器误删的正文控制符，不改可见译文。
+- 把 600 条说明消息末尾的 `00 00 00 00` 识别为真实 `NUL4` 结束符并原位保留。
+- 将原始子槽位写回扩展到 7 类说明表，覆盖 16 条合并固定子槽位记录。
+- 菜单资源重建继续保留“查看装备”和四条中文存档文件名间隔点。
+
+静态验证：
+
+- 文本 5842 条、菜单 288 条实际写回差异为 0。
+- 600 条 `NUL4` 结束符和 16 条合并记录子槽位分隔符位置差异均为 0。
+- 重建资源与默认冻结资源构建结果逐文件一致，最终 ROM SHA256 相同。
+- 文本和菜单缺字为 0，仅字体保留占位字符 `U+E0FD` 告警。
+- `ndstool -i` Header CRC OK / Banner CRC OK。
+
+当前阶段继续等待用户手动验证目标对白、说明首屏和其他同类说明；本轮未使用
+DeSmuME/MCP。详细记录见
+`plan/cache/text-writeback-smoke/v5-regression-20260603/v22-control-slot-triage.md`。

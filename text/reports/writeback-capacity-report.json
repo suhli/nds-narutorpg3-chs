@@ -1,13 +1,13 @@
 {
   "inputs": {
-    "translation": "text/code_table/frozen_translation.tsv",
+    "translation": "D:/repos/nds-narutorpg3-chs/patcher/work/build_20260604_175216/text_assets/frozen_translation.tsv",
     "translation_sha1": "a1520723f04c352489e962f338916657ca4de2d3",
-    "code_table": "text/code_table/zh_code_table.tsv",
+    "code_table": "D:/repos/nds-narutorpg3-chs/patcher/work/build_20260604_175216/text_assets/zh_code_table.tsv",
     "code_table_sha1": "bde955e3339f695f38066d66e0aea5a5c0bac088"
   },
   "outputs": {
-    "preview": "text/writeback/encoded_preview.tsv",
-    "report": "text/reports/writeback-capacity-report.json"
+    "preview": "D:/repos/nds-narutorpg3-chs/patcher/work/build_20260604_175216/text_assets/encoded_preview.tsv",
+    "report": "D:/repos/nds-narutorpg3-chs/patcher/work/build_20260604_175216/text_assets/writeback-capacity-report.json"
   },
   "candidate_code_endian": "big",
   "code_endian_verdict": "unverified_candidate",
@@ -223,8 +223,8 @@
         "offset": "0x260",
         "encoded_len_candidate": 12,
         "source_byte_len": 18,
-        "payload_capacity": 18,
-        "capacity_delta": 6,
+        "payload_capacity": 14,
+        "capacity_delta": 2,
         "risk_flags": "endian_unverified"
       },
       {
@@ -233,8 +233,8 @@
         "offset": "0x494",
         "encoded_len_candidate": 16,
         "source_byte_len": 24,
-        "payload_capacity": 24,
-        "capacity_delta": 8,
+        "payload_capacity": 20,
+        "capacity_delta": 4,
         "risk_flags": "endian_unverified"
       },
       {

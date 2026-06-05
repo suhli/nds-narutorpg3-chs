@@ -1,20 +1,21 @@
 {
   "inputs": {
-    "candidates": "patcher\\resources\\menu\\overlay_menu_candidates.tsv",
-    "reuse": "patcher\\resources\\menu\\overlay_menu_translations.tsv",
-    "code_table": "patcher\\resources\\text\\zh_code_table.tsv"
+    "candidates": "D:\\repos\\nds-narutorpg3-chs\\patcher\\resources\\menu\\overlay_menu_candidates.tsv",
+    "reuse": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260604_175850\\text_assets\\frozen_translation.tsv",
+    "code_table": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260604_175850\\text_assets\\zh_code_table.tsv"
   },
   "outputs": {
-    "translations": "patcher\\resources\\menu\\overlay_menu_translations.tsv",
-    "report": "patcher\\resources\\menu\\overlay_menu_translation_report.json"
+    "translations": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260604_175850\\text_assets\\overlay_menu_translations.tsv",
+    "report": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260604_175850\\text_assets\\overlay_menu_translation_report.json"
   },
-  "selected_rows": 287,
-  "unique_keys": 212,
+  "selected_rows": 288,
+  "unique_keys": 213,
   "status_counts": {
-    "ready": 287
+    "ready": 288
   },
   "translation_source_counts": {
-    "local_menu_dictionary": 286,
+    "local_menu_dictionary": 285,
+    "row_fixed_width_override": 2,
     "row_menu_override": 1
   },
   "pending_keys": [],

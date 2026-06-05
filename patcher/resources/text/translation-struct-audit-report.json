@@ -16,10 +16,10 @@
   "issue_counts": {
     "auto_adjusted_structure_residue": 6
   },
-  "preview": "patcher\\resources\\text\\encoded-preview-struct-adjusted.tsv",
-  "code_table": "patcher\\resources\\text\\zh_code_table.tsv",
+  "preview": "patcher\\work\\build_20260604_175216\\text_assets\\encoded-preview-struct-adjusted.tsv",
+  "code_table": "patcher\\work\\build_20260604_175216\\text_assets\\zh_code_table.tsv",
   "candidate_code_endian": "big",
-  "issues_tsv": "patcher\\resources\\text\\translation-struct-mismatches.tsv",
-  "adjusted_preview": "patcher\\resources\\text\\encoded-preview-struct-adjusted.tsv",
+  "issues_tsv": "patcher\\work\\build_20260604_175216\\text_assets\\translation-struct-final-mismatches.tsv",
+  "adjusted_preview": "patcher\\work\\build_20260604_175216\\text_assets\\encoded-preview-struct-final.tsv",
   "manual_overrides": "patcher\\resources\\text\\translation-struct-manual-overrides.tsv"
 }

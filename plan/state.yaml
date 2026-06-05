@@ -193,6 +193,9 @@ stage_outputs:
     - rom/narutorpg3_chs_patcher_v21_structslot_overlayfix_fusion12.nds
     - patcher/work/build_20260604_165750/patcher-build-summary.json
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v21-static-validation.md
+    - rom/narutorpg3_chs_patcher_v22_final_controlslot_nul4_fusion12.nds
+    - patcher/work/build_20260604_175850/patcher-build-summary.json
+    - patcher/work/build_20260604_180015/patcher-build-summary.json
     - patcher/work/build_20260604_120709/text_assets/overlay_menu_translation_report.json
     - patcher/work/build_20260604_120709/text_assets/translation-struct-audit-report.json
     - plan/cache/text-writeback-smoke/v5-regression-20260603/menu-regenerated-v18.tsv
@@ -219,7 +222,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-04T17:36:00+08:00"
+updated_at: "2026-06-04T18:05:00+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -282,6 +285,10 @@ notes:
   - Runtime verification is pending user manual testing. Do not use DeSmuME MCP unless the user explicitly requests it.
   - User manual testing confirmed the previous v5/v20 regression todo is fully cleared by v21.
   - Started v22 triage for one dialogue with a skipped second half and item/menu descriptions that show an empty first page before the real description.
+  - Built rom/narutorpg3_chs_patcher_v22_final_controlslot_nul4_fusion12.nds after restoring 11 rows of exact quote-body controls, preserving 600 message-stream NUL4 terminators, and extending original-offset subslot writeback to 16 combined description records.
+  - v22 static verification passed: text_rows=5842 and menu_rows=288 match expected bytes, all 600 NUL4 end markers and all combined-record separator offsets are preserved, Header CRC OK, Banner CRC OK.
+  - Rebuild-text-assets and default frozen-resource v22 worktrees contain 4532 files with zero byte differences, and the two output ROM SHA256 hashes are identical.
+  - v22 runtime verification is pending user manual testing for the target dialogue and description first pages. No DeSmuME or MCP operation was used.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。
