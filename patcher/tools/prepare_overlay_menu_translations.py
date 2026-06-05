@@ -189,6 +189,7 @@ LOCAL_TRANSLATIONS = {
     "スタミナ　　チャクラ　　　　　　　　こうげき　　ぼうぎょ　　すばやさ　　　　　　　　にんりょく": "体力　　查克拉　　　　　　　　攻击　　防御　　速度　　　　　　　　忍力",
     "　　　　　　　　　　　　スタミナ　　チャクラ　　　　　　　　こうげき　　ぼうぎょ　　すばやさ　　　　　　　　にんりょく": "　　　　　　　　　　　　体力　　查克拉　　　　　　　　攻击　　防御　　速度　　　　　　　　忍力",
     "レベル　　　　スタミナ　　　チャクラ　　　こうげき　　　ぼうぎょ　　　すばやさ　　　にんりょく　　　　　　　　　おぼえたじゅつ": "等级　　　　体力　　　查克拉　　　攻击　　　防御　　　速度　　　忍力　　　　　　　　　习得忍术",
+    "メンバーせってい": "成员设置",
     "たいちょうせってい": "队长设置",
     "さと": "村子",
     "なまえ": "名字",
@@ -271,6 +272,20 @@ MANUAL_CANDIDATES = (
         "status": "candidate",
         "notes": "manual fixed-slot entry omitted by scanner",
     },
+    {
+        "id": "menu_overlay_0003_044618",
+        "component": "overlay_0003",
+        "source_file": "overlay/overlay_0003.bin",
+        "offset": "0x44618",
+        "raw_len": "16",
+        "slot_len": "20",
+        "raw_hex": "83 81 83 93 83 6F 81 5B 82 B9 82 C1 82 C4 82 A2",
+        "jp_text": "\u30e1\u30f3\u30d0\u30fc\u305b\u3063\u3066\u3044",
+        "jp_text_stripped": "\u30e1\u30f3\u30d0\u30fc\u305b\u3063\u3066\u3044",
+        "zh_text": "",
+        "status": "candidate",
+        "notes": "manual runtime copy of member settings title",
+    },
 )
 
 ROW_TRANSLATION_OVERRIDES = {
@@ -296,6 +311,24 @@ FIXED_WIDTH_ROW_REPLACEMENTS = {
         ("にんりょく", "忍力　　　"),
         ("おぼえたじゅつ", "习得忍术　　　"),
     ),
+    "menu_overlay_0003_04430C": (
+        ("ぶき", "武器"),
+        ("ぼうぐ", "防具　"),
+        ("きゃはん", "护腿　　"),
+    ),
+    "menu_overlay_0003_044584": (
+        ("スタミナ", "体力　　"),
+        ("チャクラ", "查克拉　"),
+        ("こうげき", "攻击　　"),
+        ("ぼうぎょ", "防御　　"),
+        ("すばやさ", "速度　　"),
+        ("にんりょく", "忍力　　　"),
+    ),
+}
+
+FIXED_WIDTH_ROW_NOTES = {
+    "menu_overlay_0003_04430C": "manual fixed-width equipment category labels",
+    "menu_overlay_0003_044584": "manual fixed-width status left panel",
 }
 
 
@@ -434,6 +467,9 @@ def main() -> int:
             status = "ready"
         status_counts[status] += 1
         source_counts[source] += 1
+        notes = row.get("notes", "")
+        if fixed_width_override is not None:
+            notes = FIXED_WIDTH_ROW_NOTES.get(row.get("id", ""), notes)
         rows.append(
             {
                 **row,
@@ -445,7 +481,7 @@ def main() -> int:
                 "capacity_delta": capacity_delta if zh_text else "",
                 "missing_chars": "".join(missing),
                 "status": status,
-                "notes": row.get("notes", ""),
+                "notes": notes,
             }
         )
 

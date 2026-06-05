@@ -5,3 +5,26 @@ zh_txt_830c5b1a_0001C2_0005	{CTRL_0001}获得了！	dump misread item acquisitio
 zh_txt_26112818_00059E_0022	{CTRL_0001}获得了！	dump misread item acquisition prefix; preserve CTRL_0001
 zh_txt_de1658ac_00025C_0011	{CTRL_0001}获得了！	dump misread item acquisition prefix; preserve CTRL_0001
 zh_txt_6b929156_0006CE_0023	「这与你们无关！{CTRL_0001}{CTRL_0101}{CTRL_0050}退下！」	dump misread 50 00 control plus following Japanese text
+zh_txt_2ef7aa25_000758_0027	「{CTRL_0103}{CTRL_0002}木叶隐村{CTRL_0103}{CTRL_0000}去吧{CTRL_0001}那里一定会帮你的」	preserve original control-slot offsets for mixed message prefix
+zh_txt_6b929156_0001A6_0005	（都是第七班一起执行任务的{CTRL_0001}伙伴啊！）	preserve original CTRL_0001 slot offset
+zh_txt_6b929156_0001FA_0006	「卡卡西老师……你说说鸣人那家伙{CTRL_0001}几句吧！」	preserve original CTRL_0001 slot offset and native quote bytes
+zh_txt_5b857263_000008_0000	攻升　　　　　　{CTRL_0001}　　　　　　　防降{CTRL_0000}攻升，但防降{CTRL_0000}　　　　　　　　　　　　　　{CTRL_0001}　　　　不易遇敌{CTRL_0000}遇敌率降低{CTRL_0000}走路时体力　　　　{CTRL_0001}　　　　　　　　　回复{CTRL_0000}在野外行走时体力回复{CTRL_0000}　　　　　　　　　　　　　　{CTRL_0001}　　　容易从敌人手下逃跑{CTRL_0000}战斗中容易逃跑{CTRL_0000}攻升　　　　　　{CTRL_0001}　　　　　　　防降{CTRL_0000}攻升，但防降{CTRL_0000}道具　　　　　　　　　{CTRL_0001}　　　　　　容易获得{CTRL_0000}战斗中容易获得道具{CTRL_0000}　　　　　　　　　　　　　　{CTRL_0001}　　　　不易遇敌{CTRL_0000}遇敌率降低{CTRL_0000}防升　　　　　　{CTRL_0001}　　　　　　　攻降{CTRL_0000}防升，但攻降{CTRL_0000}敌人攻击　　　　　{CTRL_0001}　　　　　　　　更容易闪避{CTRL_0000}更容易闪避敌人的攻击{CTRL_0000}会心率　　　　　　{CTRL_0001}　　　　　　　　　提高{CTRL_0000}会心率提高{CTRL_0000}速度　　　　　　　　　{CTRL_0001}　　　　　　大幅提升{CTRL_0000}速度大幅提升{CTRL_0000}道具　　　　　　　　　{CTRL_0001}　　　　　　容易获得{CTRL_0000}战斗中容易获得道具{CTRL_0000}防升　　　　　　{CTRL_0001}　　　　　　　攻降{CTRL_0000}防升，但攻降{CTRL_0000}获取金钱　　　　　{CTRL_0001}　　　　　　　　　　增加{CTRL_0000}战斗获得的金钱增加{CTRL_0000}获取金钱　　　　　{CTRL_0001}　　　　　　　　　　增加{CTRL_0000}战斗获得的金钱增加{CTRL_0000}　　　　　　　　　　　　　　{CTRL_0001}　　　　　不会遇敌{CTRL_0000}不会遇敌{CTRL_0000}战斗后　　　　　　　　{CTRL_0001}　　　体力回复{CTRL_0000}战斗后体力回复{CTRL_0000}　　　　　　　　　　　　　　{CTRL_0001}　　　　　不会遇敌{CTRL_0000}不会遇敌{CTRL_0000}火遁和水遁等忍术{CTRL_0001}　　　　　　　　　　威力提升{CTRL_0000}火遁、水遁、风遁、雷遁威力提升{CTRL_0000}火遁和水遁等忍术{CTRL_0001}　　　　　　　　　　威力提升{CTRL_0000}火遁、水遁、风遁、雷遁威力提升{CTRL_0000}走路时查克拉　　　　{CTRL_0001}　　　　　　　　　回复{CTRL_0000}在野外行走时查克拉回复{CTRL_0000}走路时体力　　　　{CTRL_0001}　　　　　　　　　回复{CTRL_0000}在野外行走时体力回复{CTRL_0000}替同伴挡下攻击的几率{CTRL_0001}　　　　　　　　　　　　提升{CTRL_0000}替同伴挡下攻击的几率提升{CTRL_0000}获得经验值　　　　{CTRL_0001}　　　　　　　　　　增加{CTRL_0000}战斗中获得的经验值增加{CTRL_0000}获得经验值　　　　{CTRL_0001}　　　　　　　　　　增加{CTRL_0000}战斗中获得的经验值增加{CTRL_0000}攻击力　防御力　　　{CTRL_0001}　速度小幅提升{CTRL_0000}攻击力、防御力、速升{CTRL_0000}　　　　　　　　　　　　　　{CTRL_0001}　　　　容易遇敌{CTRL_0000}遇敌率升高{CTRL_0000}攻击力　防御力　　　{CTRL_0001}　速度小幅提升{CTRL_0000}攻击力、防御力、速升{CTRL_0000}　　　　　　　　　　　　　　{CTRL_0001}　　　　容易遇敌{CTRL_0000}遇敌率升高{CTRL_0000}速度　　　　　　　　　{CTRL_0001}　　　　　　大幅提升{CTRL_0000}速度大幅提升	short fixed-width taityou effect labels
+zh_txt_2f7be4b8_000C8E_0116	木叶护腿	short equip leg description
+zh_txt_2f7be4b8_000CB0_0117	鞋藏武器	short equip leg description
+zh_txt_2f7be4b8_000CD8_0118	沙漠护腿	short equip leg description
+zh_txt_2f7be4b8_000CFA_0119	中忍护腿	short equip leg description
+zh_txt_2f7be4b8_000D1A_0120	查克拉提速	short equip leg description
+zh_txt_2f7be4b8_000D3A_0121	行家护腿	short equip leg description
+zh_txt_2f7be4b8_000D60_0122	龙鳞护腿	short equip leg description
+zh_txt_2f7be4b8_000D82_0123	上忍护腿	short equip leg description
+zh_txt_2f7be4b8_000DA8_0124	雾隐护腿	short equip leg description
+zh_txt_2f7be4b8_000E14_0127	暗部护腿	short equip leg description
+zh_txt_2f7be4b8_000E66_0129	风影绑腿	short equip leg description
+zh_txt_2f7be4b8_000E84_0130	火影绑腿	short equip leg description
+zh_txt_2f7be4b8_000EA0_0131	极速但封术	short equip leg description
+zh_txt_2f7be4b8_000EEC_0133	三忍绑腿	short equip leg description
+zh_txt_2f7be4b8_000F1A_0135	神速	short equip leg description
+zh_txt_2f7be4b8_000F32_0136	未装护腿	short equip leg description
+zh_txt_876c4bf1_0066B4_0625	查克护腿	short equip item name
+zh_txt_876c4bf1_0066E4_0626	查克护腿	short equip item name
+zh_txt_876c4bf1_006AF8_0651	影叶绑腿	short equip item name

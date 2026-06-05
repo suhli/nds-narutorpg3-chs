@@ -1,25 +1,26 @@
 {
   "input_rows": 5863,
-  "checked_rows": 5843,
+  "checked_rows": 5862,
   "excluded_counts": {
-    "msg/wifi/friend_msg.msg": 19,
     "msg/wifi/kinshi_msg.msg": 1
   },
-  "issue_rows": 6,
-  "auto_adjusted_rows": 6,
+  "issue_rows": 298,
+  "auto_adjusted_rows": 1027,
   "structure_prefix_rows": 310,
-  "before_control_mismatch_rows": 0,
+  "before_control_mismatch_rows": 282,
   "after_control_mismatch_rows": 0,
   "missing_char_rows": 0,
   "overflow_rows": 0,
-  "manual_override_rows": 6,
+  "manual_override_rows": 29,
   "issue_counts": {
-    "auto_adjusted_structure_residue": 6
+    "auto_adjusted_structure_residue": 298,
+    "control_tokens_before_mismatch": 282,
+    "auto_adjusted_extra_control_tokens": 9
   },
-  "preview": "patcher\\work\\build_20260604_175216\\text_assets\\encoded-preview-struct-adjusted.tsv",
-  "code_table": "patcher\\work\\build_20260604_175216\\text_assets\\zh_code_table.tsv",
+  "preview": "text\\writeback\\encoded_preview.tsv",
+  "code_table": "patcher\\resources\\text\\zh_code_table.tsv",
   "candidate_code_endian": "big",
-  "issues_tsv": "patcher\\work\\build_20260604_175216\\text_assets\\translation-struct-final-mismatches.tsv",
-  "adjusted_preview": "patcher\\work\\build_20260604_175216\\text_assets\\encoded-preview-struct-final.tsv",
+  "issues_tsv": "patcher\\resources\\text\\translation-struct-mismatches.tsv",
+  "adjusted_preview": "patcher\\resources\\text\\encoded-preview-struct-adjusted.tsv",
   "manual_overrides": "patcher\\resources\\text\\translation-struct-manual-overrides.tsv"
 }

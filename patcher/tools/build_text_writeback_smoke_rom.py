@@ -18,11 +18,11 @@ DEFAULT_SAMPLE_IDS = [
 ]
 
 DEFAULT_EXCLUDED_SOURCE_FILES = {
-    "msg/wifi/friend_msg.msg",
     "msg/wifi/kinshi_msg.msg",
 }
 
 DEFAULT_INCLUDED_ROW_IDS_WHEN_SOURCE_EXCLUDED = {
+    "zh_txt_64f689a6_000008_0000",
     "zh_txt_64f689a6_0006A2_0015",
     "zh_txt_64f689a6_0006F6_0016",
 }
@@ -45,11 +45,47 @@ SPACE_PADDED_FIXED_SLOT_SOURCE_FILES = {
 FIXED_SUBSLOT_SOURCE_FILES = {
     "msg/item_msg.msg",
     "msg/jyutu_msg.msg",
+    "msg/menu/calling_msg.msg",
+    "msg/menu/equip_menu_msg.msg",
     "msg/menu/item_menu_msg.msg",
+    "msg/menu/jinkei_menu_msg.msg",
+    "msg/menu/kutiyose_msg.msg",
+    "msg/menu/member_menu_msg.msg",
+    "msg/menu/movie_msg.msg",
+    "msg/menu/save_msg.msg",
+    "msg/menu/savecreate_msg.msg",
+    "msg/menu/savedelete_msg.msg",
+    "msg/menu/saveload_msg.msg",
+    "msg/menu/shop_msg.msg",
+    "msg/menu/skill_menu_msg.msg",
     "msg/menu/status_menu_msg.msg",
     "msg/menu/top_menu_msg.msg",
     "msg/skill_msg.msg",
     "msg/taityou_kouka.msg",
+    "msg/wifi/friend_msg.msg",
+}
+
+EARLY_NUL4_TERMINATOR_SOURCE_FILES = {
+    "msg/equip_msg.msg",
+    "msg/item_msg.msg",
+    "msg/jyutu_msg.msg",
+    "msg/menu/item_menu_msg.msg",
+    "msg/skill_msg.msg",
+    "msg/taityou_kouka.msg",
+}
+
+EARLY_MESSAGE_TERMINATOR_SOURCE_FILES = {
+    "msg/wifi/friend_msg.msg",
+}
+
+EARLY_MESSAGE_TERMINATOR_SOURCE_PREFIXES = (
+    "msg/menu/",
+)
+
+FIXED_CONTROL_SLOT_ROW_IDS = {
+    "zh_txt_2ef7aa25_000758_0027",
+    "zh_txt_6b929156_0001A6_0005",
+    "zh_txt_6b929156_0001FA_0006",
 }
 
 LOCAL_FIXED_TEXT_SPAN_REPLACEMENTS = {
@@ -84,6 +120,9 @@ MESSAGE_TEXT_OVERRIDES = {
     "zh_txt_36cf8fef_000316_0010": "\u8bf7\u5173\u95ed\u7535\u6e90{CTRL_0001}\u91cd\u65b0\u63d2\u5165\u8bb0\u5fc6\u5361",
     "zh_txt_805b124c_0002CE_0004": "\u627e\u5230\u5bf9\u6218\u5bf9\u624b\u4e86\uff01{CTRL_0000}\u65e0\u6cd5\u5f00\u59cb\u5bf9\u6218{CTRL_0001}\u8bf7\u91cd\u65b0\u5c1d\u8bd5{CTRL_0000}\u901a\u4fe1\u5bf9\u6218\u51c6\u5907\u4e2d\u2026\u2026{CTRL_0000}\u51c6\u5907\u5b8c\u6bd5\uff01{CTRL_0000}{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}\u65ad\u5f00\u5e76\u7ed3\u675fWi-Fi\u901a\u4fe1\u5417\uff1f{CTRL_0000}{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}\u6b63\u5728\u65ad\u5f00{CTRL_0001}\u2026\u2026{CTRL_0000}{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}{CTRL_0001}\u5df2\u65ad\u5f00",
     "zh_txt_28e72e7e_0004A2_0008": "\u8bf7\u7a0d\u540e\u518d\u8bd5\u3002{CTRL_0000}\u7531\u4e8e\u901a\u4fe1\u9519\u8bef\uff0c\u5df2\u4ece{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}{CTRL_0001}\u65ad\u5f00\u3002{CTRL_0000}\u5bf9\u65b9\u6ca1\u6709\u54cd\u5e94\u3002{CTRL_0001}\u5bf9\u65b9\u53ef\u80fd\u5c1a\u672a\u8fde\u63a5\u5230{CTRL_0103}{CTRL_0002}Wi-Fi\u8fde\u63a5{CTRL_0103}{CTRL_0000}{CTRL_0001}\u3002",
+    "zh_txt_2ef7aa25_000758_0027": "\u300c{CTRL_0103}{CTRL_0002}\u6728\u53f6\u9690\u6751{CTRL_0103}{CTRL_0000}\u53bb\u5427{CTRL_0001}\u90a3\u91cc\u4e00\u5b9a\u4f1a\u5e2e\u4f60\u7684\u300d",
+    "zh_txt_6b929156_0001A6_0005": "\uff08\u90fd\u662f\u7b2c\u4e03\u73ed\u4e00\u8d77\u6267\u884c\u4efb\u52a1\u7684{CTRL_0001}\u4f19\u4f34\u554a\uff01\uff09",
+    "zh_txt_6b929156_0001FA_0006": "\u300c\u5361\u5361\u897f\u8001\u5e08\u2026\u2026\u4f60\u8bf4\u8bf4\u9e23\u4eba\u90a3\u5bb6\u4f19{CTRL_0001}\u51e0\u53e5\u5427\uff01\u300d",
 }
 
 
@@ -479,7 +518,8 @@ def make_fixed_subslot_replacement(
             raise ValueError(f"{row['id']} translated fixed subslot {index} exceeds original width")
         slot_start = 0 if index == 0 else separator_offsets[index - 1] + len(separators[index - 1])
         slot_end = slot_start + len(raw_slot)
-        replacement[slot_start:slot_end] = encoded + message_padding(len(raw_slot) - len(encoded))
+        padding = bytes(len(raw_slot) - len(encoded))
+        replacement[slot_start:slot_end] = encoded + padding
         encoded_parts.append(encoded)
         slot_records.append(
             {
@@ -487,6 +527,8 @@ def make_fixed_subslot_replacement(
                 "offset": slot_start,
                 "source_len": len(raw_slot),
                 "translated_len": len(encoded),
+                "padding_len": len(padding),
+                "padding_strategy": "zero_fill_after_translated_subslot_text",
                 "control_count": len(translated_controls),
             }
         )
@@ -501,9 +543,74 @@ def make_fixed_subslot_replacement(
     encoded_joined = b"\x00\x00".join(encoded_parts)
     return encoded_joined, terminator, bytes(replacement), {
         "fixed_slot_strategy": "preserve_ctrl_0000_subslot_offsets",
+        "fixed_subslot_padding_strategy": "zero_fill_after_translated_subslot_text",
         "fixed_subslots": slot_records,
         "ctrl_0000_separator_offsets": separator_offsets,
         "preserved_trailing_subslot_count": len(raw_slots) - len(translated_slots),
+    }
+
+
+def make_fixed_control_slot_replacement(
+    row: dict[str, str],
+    *,
+    raw: bytes,
+    prefix: bytes,
+    text: str,
+    terminator: bytes,
+    code_table: dict[str, int],
+    candidate_code_endian: str,
+) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
+    if not raw.startswith(prefix):
+        raise ValueError(f"{row['id']} fixed control slot prefix mismatch")
+    payload_end = len(raw) - len(terminator) if terminator else len(raw)
+    payload = raw[len(prefix) : payload_end]
+    raw_segments, raw_controls = split_raw_controls(payload)
+    translated_segments, translated_controls = split_text_controls(text)
+    if raw_controls != translated_controls:
+        raise ValueError(f"{row['id']} translated fixed control slots do not match original")
+    if len(raw_segments) != len(translated_segments):
+        raise ValueError(f"{row['id']} fixed control slot segment count mismatch")
+
+    body = bytearray()
+    encoded_parts: list[bytes] = []
+    slot_records: list[dict[str, Any]] = []
+    offset = len(prefix)
+    for index, (raw_segment, translated_segment) in enumerate(zip(raw_segments, translated_segments)):
+        encoded = encode_text(
+            translated_segment,
+            code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
+        if len(encoded) > len(raw_segment):
+            raise ValueError(f"{row['id']} translated fixed control slot {index} exceeds original width")
+        body.extend(encoded)
+        body.extend(message_padding(len(raw_segment) - len(encoded)))
+        encoded_parts.append(encoded)
+        slot_records.append(
+            {
+                "index": index,
+                "offset": offset,
+                "source_len": len(raw_segment),
+                "translated_len": len(encoded),
+            }
+        )
+        offset += len(raw_segment)
+        if index < len(raw_controls):
+            body.extend(raw_controls[index].to_bytes(2, "little"))
+            offset += 2
+
+    replacement = prefix + bytes(body) + terminator
+    if len(replacement) != len(raw):
+        raise ValueError(f"{row['id']} fixed control slot replacement length mismatch")
+    return b"".join(encoded_parts), terminator, replacement, {
+        "message_stream_strategy": "preserve_fixed_control_slot_offsets",
+        "message_prefix_len": len(prefix),
+        "message_terminator_position": "preserved_original_end",
+        "message_terminator_kind": "03_00" if terminator == b"\x03\x00" else "scene_tail",
+        "message_padding_len": sum(record["source_len"] - record["translated_len"] for record in slot_records),
+        "message_padding_strategy": "fullwidth_space_with_original_control_offsets",
+        "fixed_control_slots": slot_records,
+        "fixed_control_values": [f"0x{value:04X}" for value in raw_controls],
     }
 
 
@@ -612,6 +719,15 @@ def fixed_slot_padding(row: dict[str, str], length: int) -> tuple[bytes, str]:
     return bytes(length), "zero_fixed_slot"
 
 
+def should_end_message_after_text(row: dict[str, str], terminator: bytes) -> bool:
+    if terminator != b"\x03\x00":
+        return False
+    source_file = normalize_source_file(row.get("source_file", ""))
+    if source_file in EARLY_MESSAGE_TERMINATOR_SOURCE_FILES:
+        return True
+    return any(source_file.startswith(prefix) for prefix in EARLY_MESSAGE_TERMINATOR_SOURCE_PREFIXES)
+
+
 def make_message_stream_replacement(
     row: dict[str, str],
     *,
@@ -643,22 +759,40 @@ def make_message_stream_replacement(
         )
         text = text_after_translated_yes_no_prefix(row.get("zh_text_candidate_payload", ""))
         strategy = "preserve_translated_yes_no_option_prefix_before_open_quote"
+    if row.get("id", "") in FIXED_CONTROL_SLOT_ROW_IDS:
+        return make_fixed_control_slot_replacement(
+            row,
+            raw=raw,
+            prefix=prefix,
+            text=text,
+            terminator=terminator,
+            code_table=code_table,
+            candidate_code_endian=candidate_code_endian,
+        )
     encoded = encode_text(text, code_table, candidate_code_endian=candidate_code_endian)
     payload_capacity = source_len - len(prefix) - len(terminator)
     if payload_capacity < 0:
         raise ValueError(f"{row['id']} message prefix exceeds source length")
     if len(encoded) > payload_capacity:
         raise ValueError(f"{row['id']} encoded message length exceeds payload capacity")
-    replacement = prefix + encoded + message_control_padding(payload_capacity - len(encoded)) + terminator
+    padding_len = payload_capacity - len(encoded)
+    if should_end_message_after_text(row, terminator):
+        replacement = prefix + encoded + terminator + bytes(padding_len)
+        terminator_position = "after_translated_text"
+        padding_strategy = "early_03_zero_fill_after_terminator"
+    else:
+        replacement = prefix + encoded + message_control_padding(padding_len) + terminator
+        terminator_position = "preserved_original_end"
+        padding_strategy = "fullwidth_space_fill_before_original_terminator"
     if len(replacement) != source_len:
         raise ValueError(f"{row['id']} message replacement length mismatch")
     return encoded, terminator, replacement, {
         "message_stream_strategy": strategy,
         "message_prefix_len": len(prefix),
-        "message_terminator_position": "preserved_original_end",
+        "message_terminator_position": terminator_position,
         "message_terminator_kind": "scene_tail" if is_scene_tail else "03_00",
-        "message_padding_len": payload_capacity - len(encoded),
-        "message_padding_strategy": "fullwidth_space_fill_before_original_terminator",
+        "message_padding_len": padding_len,
+        "message_padding_strategy": padding_strategy,
         **prefix_extra,
     }
 
@@ -737,9 +871,15 @@ def make_replacement(
         used_len = len(encoded) + len(terminator)
         if used_len > source_len:
             raise ValueError(f"{row['id']} replacement exceeds original NUL4 message length")
-        replacement = encoded + message_padding(source_len - used_len) + terminator
-        extra["padding_strategy"] = "fullwidth_space_before_original_nul4_terminator"
-        extra["fixed_slot_terminator"] = "nul4_preserved_original_end"
+        source_file = normalize_source_file(row.get("source_file", ""))
+        if source_file in EARLY_NUL4_TERMINATOR_SOURCE_FILES:
+            replacement = encoded + terminator + bytes(source_len - used_len)
+            extra["padding_strategy"] = "early_nul4_zero_fill"
+            extra["fixed_slot_terminator"] = "nul4_after_translated_text"
+        else:
+            replacement = encoded + message_padding(source_len - used_len) + terminator
+            extra["padding_strategy"] = "fullwidth_space_before_original_nul4_terminator"
+            extra["fixed_slot_terminator"] = "nul4_preserved_original_end"
     elif terminator:
         used_len = len(encoded) + len(terminator)
         if used_len > source_len:

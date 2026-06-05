@@ -26,6 +26,8 @@ stage_cache:
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v20-structure-triage.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v21-static-validation.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v22-control-slot-triage.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v23-menu-dialog-description-triage.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim.md
 stage_outputs:
   expected:
     - rom/narutorpg3_chs_full_writeback_test.nds
@@ -196,6 +198,18 @@ stage_outputs:
     - rom/narutorpg3_chs_patcher_v22_final_controlslot_nul4_fusion12.nds
     - patcher/work/build_20260604_175850/patcher-build-summary.json
     - patcher/work/build_20260604_180015/patcher-build-summary.json
+    - rom/narutorpg3_chs_patcher_v23_menu_dialog_desc_fusion12_r2.nds
+    - rom/narutorpg3_chs_patcher_v23_default_resource_check.nds
+    - patcher/work/build_20260605_103608/patcher-build-summary.json
+    - patcher/work/build_20260605_103834/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v23-menu-dialog-description-triage.md
+    - rom/narutorpg3_chs_patcher_v24_save_equip_trim_fusion12.nds
+    - rom/narutorpg3_chs_patcher_v24_rebuild_resource_check.nds
+    - patcher/work/build_20260605_120549/patcher-build-summary.json
+    - patcher/work/build_20260605_120748/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-rebuild-resource-check-records.json
     - patcher/work/build_20260604_120709/text_assets/overlay_menu_translation_report.json
     - patcher/work/build_20260604_120709/text_assets/translation-struct-audit-report.json
     - plan/cache/text-writeback-smoke/v5-regression-20260603/menu-regenerated-v18.tsv
@@ -222,7 +236,7 @@ stage_outputs:
     - hack/菜单文本批量翻译与回写备忘.md
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
-updated_at: "2026-06-04T18:05:00+08:00"
+updated_at: "2026-06-05T12:20:00+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -289,6 +303,12 @@ notes:
   - v22 static verification passed: text_rows=5842 and menu_rows=288 match expected bytes, all 600 NUL4 end markers and all combined-record separator offsets are preserved, Header CRC OK, Banner CRC OK.
   - Rebuild-text-assets and default frozen-resource v22 worktrees contain 4532 files with zero byte differences, and the two output ROM SHA256 hashes are identical.
   - v22 runtime verification is pending user manual testing for the target dialogue and description first pages. No DeSmuME or MCP operation was used.
+  - Built rom/narutorpg3_chs_patcher_v23_menu_dialog_desc_fusion12_r2.nds after preserving fixed control slot offsets for three dialogue rows, moving known description-table NUL4 terminators directly after translated text, expanding fixed CTRL_0000 subslot writeback to 36 records, enabling msg/wifi/friend_msg.msg writeback, and adding overlay_0003 fixed-width/status/member runtime copies.
+  - v23 static verification passed: checked=5862, excluded=1, after_control_mismatch=0, overflow=0, missing=0; text_rows=5859 and menu_rows=289 both have byte-diff 0; Header CRC OK / Banner CRC OK.
+  - Default resource build rom/narutorpg3_chs_patcher_v23_default_resource_check.nds matches the v23 rebuild ROM SHA256 9B18A0B4B6DA1BC8B8BC2C337B12421285F46B7C2E6B285C598B1F066118A3CC. No DeSmuME or MCP operation was used.
+  - Built rom/narutorpg3_chs_patcher_v24_save_equip_trim_fusion12.nds after fixing overlay_0002 save yes/no visible-span padding, zero-fill inside fixed CTRL_0000 subslots, early 03 terminators for menu/friend descriptions, and fixed-width equipment category/effect labels.
+  - v24 static verification passed: checked=5862, excluded=1, after_control_mismatch=0, overflow=0, missing=0; text_rows=5859 and menu_rows=289 both have byte-diff 0; Header CRC OK / Banner CRC OK.
+  - Default resource build rom/narutorpg3_chs_patcher_v24_save_equip_trim_fusion12.nds matches rebuild-text-assets ROM rom/narutorpg3_chs_patcher_v24_rebuild_resource_check.nds SHA256 71B648ADA7B5F0D869B10A30B6C448DDB3EBDD48EBCB3F33D7E0A9B9CC173451. No DeSmuME or MCP operation was used.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

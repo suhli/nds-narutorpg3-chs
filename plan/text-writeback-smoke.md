@@ -319,3 +319,66 @@ rom/narutorpg3_chs_patcher_v22_final_controlslot_nul4_fusion12.nds
 当前阶段继续等待用户手动验证目标对白、说明首屏和其他同类说明；本轮未使用
 DeSmuME/MCP。详细记录见
 `plan/cache/text-writeback-smoke/v5-regression-20260603/v22-control-slot-triage.md`。
+
+## 2026-06-05 v23 菜单/对白/说明修复候选
+
+用户手动测试 v22 后报告 6 类新问题：两条对白后半句不显示或跳过、部分菜单仍未翻译、装备/状态页左侧字段错位、道具/忍术说明占位符、菜单说明首屏空白。本轮按静态规则修复，未使用 DeSmuME/MCP。
+
+最终候选：
+
+```text
+rom/narutorpg3_chs_patcher_v23_menu_dialog_desc_fusion12_r2.nds
+```
+
+本轮修复：
+
+- 对 `zh_txt_2ef7aa25_000758_0027`、`zh_txt_6b929156_0001A6_0005`、`zh_txt_6b929156_0001FA_0006` 按原控制位分段写回，避免 `CTRL_0001` 或地点高亮控制提前移动。
+- 已知说明表的 NUL4 记录改为译文后立即终止，避免全角空格 padding 形成空白页或占位符。
+- `CTRL_0000` 固定子槽位写回扩展到 36 条菜单/说明记录，并放开 `msg/wifi/friend_msg.msg` 的 18 条好友/用户菜单文本写回。
+- 补 `overlay_0003:0x44584` 状态页固定宽度行和 `overlay_0003:0x44618` “成员设置”运行时副本。
+
+静态验证：
+
+- 审计 `checked=5862`、`excluded=1`、`after_control_mismatch=0`、`overflow=0`、`missing=0`。
+- 实际写回 `text_rows=5859`、`menu_rows=289`；文本逐条字节比对差异 0，菜单逐条字节比对差异 0。
+- 截图相关 CP932 日文关键字扫描为 0，除 `data/download/n3dl.srl` 内嵌下载包副本的 `忍術` 外。
+- `ndstool -i` Header CRC OK / Banner CRC OK。
+- 默认资源构建 `rom/narutorpg3_chs_patcher_v23_default_resource_check.nds` 与 rebuild-text-assets 候选 SHA256 相同：`9B18A0B4B6DA1BC8B8BC2C337B12421285F46B7C2E6B285C598B1F066118A3CC`。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v23-menu-dialog-description-triage.md`。运行时验证继续由用户手动完成。
+
+## 2026-06-05 v24 存档选项、占位符和装备对齐候选
+
+用户手动测试 v23 后反馈：存档覆盖确认中“否”仍不出现，部分菜单说明存在占位符或首屏空白，装备属性与“护腿”分类错位。本轮按静态规则修复，未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v24_save_equip_trim_fusion12.nds
+SHA256 71B648ADA7B5F0D869B10A30B6C448DDB3EBDD48EBCB3F33D7E0A9B9CC173451
+```
+
+资源重建校验 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v24_rebuild_resource_check.nds
+SHA256 71B648ADA7B5F0D869B10A30B6C448DDB3EBDD48EBCB3F33D7E0A9B9CC173451
+```
+
+修复内容：
+
+- overlay_0002 保存确认选项按原始可见宽度补齐，避免“是”后提前 `00 00` 终止导致“否”不可见。
+- 固定 `CTRL_0000` 子槽位保留原始绝对偏移，译文后剩余空间改为 `00` 填充。
+- `msg/menu/*` 与 `msg/wifi/friend_msg.msg` 的普通 `03 00` 菜单说明改为译文后立即结束，尾部 `00` 填充，用于清理空白说明页。
+- 装备属性效果表改用短译，装备分类 overlay 行按原始宽度写入“武器 / 防具　/ 护腿　　”。
+- 护腿类物品名和说明加入短译覆盖，降低装备页和底部说明溢出风险。
+
+静态验证：
+
+- 结构审计 `checked=5862`、`excluded=1`、`after_control_mismatch=0`、`overflow=0`、`missing=0`。
+- 菜单 overlay `selected_rows=289`、`ready=289`、`missing_font_chars=""`。
+- 实际 ROM 写回逐字节核对：`text_mismatches=0`、`menu_mismatches=0`。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 文本和菜单缺字为 0，仅字体保留占位字符 `U+E0FD` 告警。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim.md`。运行时验证继续由用户手动完成。

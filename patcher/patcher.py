@@ -24,7 +24,7 @@ if str(TOOLS) not in sys.path:
 import extract_translation_charset as charset_tools  # noqa: E402
 
 
-DEFAULT_EXCLUDED_SOURCE_FILES = "msg/wifi/friend_msg.msg,msg/wifi/kinshi_msg.msg"
+DEFAULT_EXCLUDED_SOURCE_FILES = "msg/wifi/kinshi_msg.msg"
 
 
 def repo_path(value: str | Path) -> Path:

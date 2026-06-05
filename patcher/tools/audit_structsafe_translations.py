@@ -17,7 +17,6 @@ SOURCE_TEXT_OVERRIDES = {
     "zh_txt_6b929156_0006CE_0023": "\u300c\u304a\u307e\u3048\u3089\u306b\u306f\u3000\u304b\u3093\u3051\u3044\u3000\u306a\u3044\u3000\u3053\u3068\u3060\uff01{CTRL_0001}{CTRL_0101}{CTRL_0050}\u3072\u3063\u3053\u3093\u3067\u308d\uff01\u300d",
 }
 DEFAULT_EXCLUDED_SOURCE_FILES = {
-    "msg/wifi/friend_msg.msg",
     "msg/wifi/kinshi_msg.msg",
 }
 

@@ -25,6 +25,33 @@ def parse_hex_bytes(value: str) -> bytes:
     return bytes(int(part, 16) for part in value.split())
 
 
+def should_space_pad_visible_overlay_span(row: dict[str, str]) -> bool:
+    notes = row.get("notes", "")
+    if "manual_0100_delimited" in notes:
+        return True
+    if row.get("source_file") != "overlay/overlay_0002.bin":
+        return False
+    offset = int(row["offset"], 0)
+    return 0x12C0C <= offset <= 0x12C80
+
+
+def overlay_replacement(row: dict[str, str], encoded: bytes, slot_len: int) -> tuple[bytes, dict[str, Any]]:
+    raw_len = int(row.get("raw_len") or len(parse_hex_bytes(row.get("raw_hex", ""))))
+    if should_space_pad_visible_overlay_span(row) and len(encoded) <= raw_len <= slot_len:
+        visible_padding = text_rom.message_padding(raw_len - len(encoded))
+        zero_padding = bytes(slot_len - raw_len)
+        return encoded + visible_padding + zero_padding, {
+            "overlay_padding_strategy": "fullwidth_to_original_visible_len_then_zero",
+            "visible_padding_count": len(visible_padding),
+            "fill_zero_count": len(zero_padding),
+        }
+    return encoded + bytes(slot_len - len(encoded)), {
+        "overlay_padding_strategy": "zero_fill_after_encoded",
+        "visible_padding_count": 0,
+        "fill_zero_count": slot_len - len(encoded),
+    }
+
+
 def patch_menu_rows(work: Path, rows: list[dict[str, str]]) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     for row in rows:
@@ -45,7 +72,7 @@ def patch_menu_rows(work: Path, rows: list[dict[str, str]]) -> list[dict[str, An
         expected_prefix = parse_hex_bytes(row["raw_hex"])
         if not original.startswith(expected_prefix):
             raise ValueError(f"{row['id']} original bytes mismatch at {target}:{row['offset']}")
-        replacement = encoded + bytes(slot_len - len(encoded))
+        replacement, padding_info = overlay_replacement(row, encoded, slot_len)
         data[offset : offset + slot_len] = replacement
         target.write_bytes(data)
         records.append(
@@ -58,7 +85,7 @@ def patch_menu_rows(work: Path, rows: list[dict[str, str]]) -> list[dict[str, An
                 "jp_text": row["jp_text"],
                 "zh_text": row["zh_text"],
                 "encoded_len": len(encoded),
-                "fill_zero_count": slot_len - len(encoded),
+                **padding_info,
                 "original_hex": original.hex(" ").upper(),
                 "replacement_hex": replacement.hex(" ").upper(),
             }
