@@ -1,5 +1,7 @@
 # v5 回归问题待办
 
+> 最终状态：已关闭。2026-06-12 用户确认 v36 运行验证无已知问题；本清单及后续 v21-v36 回归链路中的控制符、占位符、空行、overlay、菜单和固定布局问题均已并入最终产物 `patcher/narutorpg3_chs_v36.json` 与 `patcher/patcher.py`。中间阶段保留为历史记录，不再代表当前待办。
+
 ## 基线
 
 - 测试 ROM：`rom/narutorpg3_chs_patcher_v5_menu_itempad_fusion12.nds`

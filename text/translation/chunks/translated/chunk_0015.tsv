@@ -1,2 +1,0 @@
-id	jp_id_ref	category	source_file	offset	record_index	raw_hex	jp_text	zh_text	control_tokens	status	length_risk	context_required	translator_note	qa_note	source_byte_len	chunk_row_index	prev_jp_text	next_jp_text
-zh_txt_d0595a73_000008_0000	txt_d0595a73_000008_0000	message	msg/eiga/004.m	0x8	0	82 b9 82 a2 82 b1 82 a4 03 00	せいこう	成功    		translated_aligned	ok	yes			10	0	せいこう	せいこう
