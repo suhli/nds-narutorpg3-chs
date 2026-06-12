@@ -25,6 +25,34 @@ The CLI validates `rom/origin.nds` against the stored SHA256 before writing the 
 
 If the target output already exists, the CLI writes a timestamped sibling unless `--force` is passed.
 
+## Custom Fonts
+
+The verified ROM embeds two Chinese glyph chunks:
+
+- `font/chs_1x1.chunk`: 8x8 / 1x1 glyphs.
+- `font/chs_1x2.chunk`: 8x16 / 1x2 glyphs.
+
+You can rebuild the ROM with replacement TTF/TTC/OTF fonts while keeping the verified text, code table, maps, hooks, and NitroFS layout unchanged:
+
+```powershell
+.\.venv\Scripts\python.exe -B patcher\patcher.py --font-8x8 path\to\8px.ttf --font-8x16 path\to\12px.ttf --output rom\narutorpg3_chs_font_test.nds
+```
+
+Replace only one mode:
+
+```powershell
+.\.venv\Scripts\python.exe -B patcher\patcher.py --font-8x8 path\to\8px.ttf --output rom\narutorpg3_chs_font_8x8_test.nds
+.\.venv\Scripts\python.exe -B patcher\patcher.py --font-8x16 path\to\12px.ttf --output rom\narutorpg3_chs_font_8x16_test.nds
+```
+
+Use one font for both modes:
+
+```powershell
+.\.venv\Scripts\python.exe -B patcher\patcher.py --font path\to\font.ttf --output rom\narutorpg3_chs_font_test.nds
+```
+
+Font replacement requires Pillow in the active Python environment. Install it with `uv pip install pillow` when setting up a fresh `.venv`. Local `.ttf`, `.ttc`, and `.otf` files are ignored by git.
+
 ## Inspect
 
 ```powershell

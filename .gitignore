@@ -4,7 +4,13 @@ rom/
 __pycache__/
 **/__pycache__/
 *.pyc*
+# local font files used for rebuild tests
 *.ttf
+*.TTF
+*.ttc
+*.TTC
+*.otf
+*.OTF
 .env
 .cache/
 .uv-cache/
