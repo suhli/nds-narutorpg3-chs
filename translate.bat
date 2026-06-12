@@ -1,1 +1,0 @@
-.\.venv\Scripts\python.exe -B tools\batch_translate_chunks_openai.py --start chunk_00111 --limit-chunks 10 --json-mode
