@@ -38,6 +38,8 @@ You can rebuild the ROM with replacement TTF/TTC/OTF fonts while keeping the ver
 .\.venv\Scripts\python.exe -B patcher\patcher.py --font-8x8 path\to\8px.ttf --font-8x16 path\to\12px.ttf --output rom\narutorpg3_chs_font_test.nds
 ```
 
+Font rebuilding is driven by the fixed table at `patcher/resources/text/zh_code_table.tsv`. The CLI validates that this table matches the embedded `CHMP` maps, then rebuilds the `CHP1` / `CHP2` chunks with the original resident/source page layout. Do not rebuild the table from translation order when swapping fonts.
+
 Replace only one mode:
 
 ```powershell

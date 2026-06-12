@@ -90,6 +90,8 @@
 .\.venv\Scripts\python.exe -B patcher\patcher.py --font path\to\font.ttf --output rom\narutorpg3_chs_font_test.nds
 ```
 
+字体替换使用 `patcher/resources/text/zh_code_table.tsv` 中的固定码表，并会校验它和 ROM 内 `CHMP` map 完全一致；不要在替换字体时根据当前译文顺序重新生成码位，否则菜单和对话会出现错字或错位。
+
 前端开发：
 
 ```powershell
