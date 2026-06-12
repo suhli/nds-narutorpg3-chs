@@ -6,20 +6,30 @@ Vue/Vite front end for applying the verified v36 BPS patch in the browser.
 
 ```powershell
 npm install
+New-Item -ItemType Directory -Force -Path public
+Copy-Item ..\dist\narutorpg3_chs_v36.bps public\narutorpg3_chs_v36.bps -Force
 npm run dev
 ```
 
 ## Build
 
 ```powershell
+New-Item -ItemType Directory -Force -Path public
+Copy-Item ..\dist\narutorpg3_chs_v36.bps public\narutorpg3_chs_v36.bps -Force
 npm run build
 ```
 
 The page loads `public/narutorpg3_chs_v36.bps`, asks the user to select the original `.nds` ROM, validates the original ROM SHA256, applies the BPS patch locally, validates the patched ROM SHA256, and downloads `narutorpg3_chs_v36.nds`.
 
+`public/` is intentionally ignored and should not store a committed BPS copy. The release workflow creates it temporarily before building.
+
 No ROM data is uploaded.
 
 Serve the page through `npm run dev`, `npm run preview`, or an HTTPS static host. Opening `index.html` directly through `file://` is not recommended because browser `fetch()` and `crypto.subtle` behavior is restricted there.
+
+## GitHub Pages
+
+`.github/workflows/deploy-web.yml` runs when a tag matching `v*` is pushed. It copies `dist/narutorpg3_chs_v36.bps` into `web/public/`, builds the Vite app, and deploys `web/dist` to GitHub Pages.
 
 ## Expected Hashes
 

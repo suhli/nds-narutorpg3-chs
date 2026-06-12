@@ -32,7 +32,7 @@ summary:
   notes:
     - 最终产物已合并到一个结构化数据文件和一个 CLI。
     - BPS 补丁生成脚本已添加，默认输出 dist/narutorpg3_chs_v36.bps。
-    - Vue 纯前端 web patcher 已添加，浏览器内加载 BPS 并对原版 ROM 打补丁。
+    - Vue 纯前端 web patcher 已添加，浏览器内加载 BPS 并对原版 ROM 打补丁；BPS 不提交到 web/public，由 tag 发布 workflow 临时复制。
     - 历史拆分脚本、生成资源和中间 ROM 可清理；hack/ 与 plan/ 保留历史逆向和执行记录。
     - 默认不使用 DeSmuME/MCP；运行时验证由用户手动完成，除非用户明确要求模拟器调试。
 updated_at: 2026-06-12T17:00:00+08:00
