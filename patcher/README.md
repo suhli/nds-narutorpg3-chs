@@ -32,6 +32,22 @@ If the target output already exists, the CLI writes a timestamped sibling unless
 .\.venv\Scripts\python.exe -B patcher\patcher.py verify-data
 ```
 
+## BPS Patch
+
+Generate a standard BPS patch from `rom/origin.nds` to the verified v36 ROM:
+
+```powershell
+.\.venv\Scripts\python.exe -B patcher\make_bps.py
+```
+
+Default output:
+
+```text
+dist/narutorpg3_chs_v36.bps
+```
+
+The BPS script verifies the patch by applying it back to `rom/origin.nds` in memory and comparing the rebuilt ROM to the verified v36 target. Use `--no-verify` only when you intentionally want to skip that check.
+
 Expected final ROM:
 
 - Version: `v36-no-pre03-spaces`
