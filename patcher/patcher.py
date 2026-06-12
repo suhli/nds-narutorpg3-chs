@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import argparse
 import base64
+import csv
 import hashlib
 import json
-import re
+import math
 import struct
 import sys
 import zlib
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -16,7 +18,12 @@ from typing import Any
 PATCHER_DIR = Path(__file__).resolve().parent
 REPO = PATCHER_DIR.parent
 DEFAULT_DATA = PATCHER_DIR / "narutorpg3_chs_v36.json"
-CTRL_TOKEN_RE = re.compile(r"\{CTRL_[0-9A-Fa-f]{4}\}")
+DEFAULT_CODE_TABLE = PATCHER_DIR / "resources" / "text" / "zh_code_table.tsv"
+MAP_HEADER_SIZE = 0x20
+MAP_ENTRY_SIZE = 0x10
+PACK_HEADER_SIZE = 0x20
+GLYPH_INK = 3
+GLYPH_BG = 1
 
 FONT_FILES = {
     "1x1": {
@@ -24,24 +31,37 @@ FONT_FILES = {
         "chunk": "font/chs_1x1.chunk",
         "map_magic": b"CHMP",
         "chunk_magic": b"CHP1",
+        "page_magic": b"CHG1",
+        "page_size": 0x80,
         "glyph_size": 0x20,
         "canvas": (8, 8),
         "font_size": 8,
         "target": (8, 8),
         "target_y": 0,
+        "resident_source_pages": (0,),
     },
     "1x2": {
         "map": "font/chs_1x2.map",
         "chunk": "font/chs_1x2.chunk",
         "map_magic": b"CHMP",
         "chunk_magic": b"CHP2",
+        "page_magic": b"CHPG",
+        "page_size": 0xE0,
         "glyph_size": 0x40,
         "canvas": (8, 16),
         "font_size": 12,
         "target": (8, 12),
         "target_y": 2,
+        "resident_source_pages": (1, None),
     },
 }
+
+
+@dataclass(frozen=True)
+class FontEntry:
+    code: int
+    char: str
+    modes: frozenset[str]
 
 
 def repo_path(value: str | Path) -> Path:
@@ -73,6 +93,43 @@ def load_project(path: Path) -> dict[str, Any]:
     if data.get("schema") != "narutorpg3-chs-final-project-v1":
         raise ValueError(f"unsupported project data schema: {data.get('schema')!r}")
     return data
+
+
+def parse_font_modes(value: str) -> frozenset[str]:
+    modes = {part.strip() for part in value.split(",") if part.strip()}
+    invalid = modes - {"1x1", "1x2"}
+    if invalid:
+        raise ValueError(f"invalid font modes: {sorted(invalid)}")
+    if not modes:
+        raise ValueError("font code table entry must include at least one mode")
+    return frozenset(modes)
+
+
+def load_code_table(path: Path) -> list[FontEntry]:
+    if not path.is_file():
+        raise FileNotFoundError(path)
+    entries: list[FontEntry] = []
+    seen: set[tuple[int, str]] = set()
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        required = {"char", "code_hex", "modes"}
+        if not reader.fieldnames or not required.issubset(set(reader.fieldnames)):
+            raise ValueError(f"font code table must contain columns: {sorted(required)}")
+        for line_no, row in enumerate(reader, 2):
+            char = row["char"]
+            if not char:
+                raise ValueError(f"{display_path(path)}:{line_no}: empty char")
+            code = int(row["code_hex"], 0)
+            modes = parse_font_modes(row["modes"])
+            for mode in modes:
+                key = (code, mode)
+                if key in seen:
+                    raise ValueError(f"{display_path(path)}:{line_no}: duplicate code 0x{code:04X} for {mode}")
+                seen.add(key)
+            entries.append(FontEntry(code=code, char=char[0], modes=modes))
+    if not entries:
+        raise ValueError(f"font code table is empty: {display_path(path)}")
+    return entries
 
 
 def decode_rom_image(data: dict[str, Any]) -> bytes:
@@ -192,35 +249,88 @@ def parse_chunk_header(data: bytes, *, expected_magic: bytes) -> tuple[int, int,
     return header_size, page_size, source_pages, resident_slots
 
 
-def iter_visible_chars(text: str) -> list[str]:
-    chars: list[str] = []
-    cursor = 0
-    while cursor < len(text):
-        match = CTRL_TOKEN_RE.match(text, cursor)
-        if match:
-            cursor = match.end()
-            continue
-        char = text[cursor]
-        # The final code table intentionally excludes single-byte ASCII because
-        # those bytes can be control parameters in the game's text stream.
-        if not (0x20 <= ord(char) <= 0x7E):
-            chars.append(char)
-        cursor += 1
-    return chars
+def build_font_map(glyph_size: int, entries: list[tuple[int, int, int]]) -> bytes:
+    data = bytearray()
+    data += b"CHMP"
+    data += struct.pack("<HHHH", 1, MAP_HEADER_SIZE, glyph_size, MAP_ENTRY_SIZE)
+    data += struct.pack("<I", len(entries))
+    data += struct.pack("<IIII", 0, 0, 0, 0)
+    for char_code, glyph_offset, chunk_id in entries:
+        data += struct.pack("<IIHHHH", char_code, glyph_offset, 0, 0, chunk_id, 0)
+    return bytes(data)
 
 
-def build_code_to_char(data: dict[str, Any], map_entries: list[tuple[int, int, int]]) -> dict[int, str]:
-    chars: dict[str, None] = {}
-    for row in data["translations"]["text_rows"]:
-        for char in iter_visible_chars(row.get("zh_text", "")):
-            chars.setdefault(char, None)
+def build_font_page(
+    *,
+    magic: bytes,
+    page_size: int,
+    glyph_size: int,
+    fallback: bytes,
+    glyphs: list[bytes],
+) -> bytes:
+    page = bytearray(page_size)
+    page[:4] = magic
+    page[4:8] = page_size.to_bytes(4, "little")
+    page[8:12] = glyph_size.to_bytes(4, "little")
+    page[MAP_HEADER_SIZE : MAP_HEADER_SIZE + glyph_size] = fallback
+    offset = MAP_HEADER_SIZE + glyph_size
+    for glyph in glyphs:
+        page[offset : offset + glyph_size] = glyph
+        offset += glyph_size
+    return bytes(page)
 
-    char_list = list(chars)
-    if len(char_list) != len(map_entries):
-        raise ValueError(
-            f"reconstructed charset count mismatch: got {len(char_list)}, map has {len(map_entries)} entries"
+
+def build_font_pack(
+    entries: list[FontEntry],
+    glyphs: dict[int, bytes],
+    fallback: bytes,
+    *,
+    mode: str,
+    spec: dict[str, Any],
+) -> tuple[bytes, bytes, int]:
+    glyph_size = int(spec["glyph_size"])
+    page_size = int(spec["page_size"])
+    resident_sources = tuple(spec["resident_source_pages"])
+    mode_entries = [entry for entry in entries if mode in entry.modes]
+    slots_per_page = (page_size - (MAP_HEADER_SIZE + glyph_size)) // glyph_size
+    if slots_per_page <= 0:
+        raise ValueError(f"{mode} font page has no room for custom glyphs")
+
+    source_page_count = max(2, math.ceil(len(mode_entries) / slots_per_page))
+    pages: list[bytes] = []
+    map_entries: list[tuple[int, int, int]] = []
+
+    for page_index in range(source_page_count):
+        start = page_index * slots_per_page
+        page_entries = mode_entries[start : start + slots_per_page]
+        page_glyphs = [glyphs[entry.code] for entry in page_entries]
+        pages.append(
+            build_font_page(
+                magic=spec["page_magic"],
+                page_size=page_size,
+                glyph_size=glyph_size,
+                fallback=fallback,
+                glyphs=page_glyphs,
+            )
         )
-    return {entry[0]: char for entry, char in zip(map_entries, char_list)}
+        for slot_index, entry in enumerate(page_entries):
+            glyph_offset = MAP_HEADER_SIZE + glyph_size + slot_index * glyph_size
+            map_entries.append((entry.code, glyph_offset, page_index))
+
+    header = bytearray(PACK_HEADER_SIZE)
+    header[:4] = spec["chunk_magic"]
+    header[4:8] = PACK_HEADER_SIZE.to_bytes(4, "little")
+    header[8:12] = page_size.to_bytes(4, "little")
+    header[12:16] = source_page_count.to_bytes(4, "little")
+    header[16:20] = len(resident_sources).to_bytes(4, "little")
+
+    resident_pages: list[bytes] = []
+    for source_page in resident_sources:
+        if source_page is None:
+            resident_pages.append(bytes(page_size))
+        else:
+            resident_pages.append(pages[int(source_page)])
+    return build_font_map(glyph_size, map_entries), bytes(header) + b"".join(resident_pages) + b"".join(pages), source_page_count
 
 
 def render_font_glyphs(
@@ -231,7 +341,7 @@ def render_font_glyphs(
     font_size: int,
     target: tuple[int, int],
     target_y: int,
-) -> dict[int, bytes]:
+) -> tuple[dict[int, bytes], bytes]:
     try:
         from PIL import Image, ImageDraw, ImageFont
     except ImportError as exc:
@@ -241,11 +351,10 @@ def render_font_glyphs(
         raise FileNotFoundError(font_path)
 
     font = ImageFont.truetype(str(font_path), font_size)
-    output: dict[int, bytes] = {}
     canvas_width, canvas_height = canvas
     target_width, target_height = target
 
-    for code, char in chars.items():
+    def render_char(char: str) -> bytes:
         image = Image.new("L", canvas, 0)
         draw = ImageDraw.Draw(image)
         bbox = draw.textbbox((0, 0), char, font=font)
@@ -254,8 +363,10 @@ def render_font_glyphs(
         x = (target_width - text_width) // 2 - bbox[0]
         y = target_y + (target_height - text_height) // 2 - bbox[1]
         draw.text((x, y), char, fill=255, font=font)
-        output[code] = pack_4bpp_glyph(image, canvas_width, canvas_height)
-    return output
+        return pack_4bpp_glyph(image, canvas_width, canvas_height)
+
+    output = {code: render_char(char) for code, char in chars.items()}
+    return output, render_char("□")
 
 
 def pack_4bpp_glyph(image: Any, width: int, height: int) -> bytes:
@@ -265,58 +376,26 @@ def pack_4bpp_glyph(image: Any, width: int, height: int) -> bytes:
     for tile_y in range(0, height, 8):
         for y in range(8):
             for x in range(0, width, 2):
-                left = 3 if image.getpixel((x, tile_y + y)) >= 128 else 1
-                right = 3 if image.getpixel((x + 1, tile_y + y)) >= 128 else 1
+                left = GLYPH_INK if image.getpixel((x, tile_y + y)) >= 128 else GLYPH_BG
+                right = GLYPH_INK if image.getpixel((x + 1, tile_y + y)) >= 128 else GLYPH_BG
                 packed.append(left | (right << 4))
     return bytes(packed)
 
 
-def patch_font_chunk(
-    chunk_data: bytes,
-    map_entries: list[tuple[int, int, int]],
-    glyphs: dict[int, bytes],
-    *,
-    expected_magic: bytes,
-    glyph_size: int,
-) -> bytes:
-    header_size, page_size, source_pages, resident_slots = parse_chunk_header(
-        chunk_data, expected_magic=expected_magic
-    )
-    patched = bytearray(chunk_data)
-    for char_code, glyph_offset, chunk_id in map_entries:
-        glyph = glyphs[char_code]
-        if len(glyph) != glyph_size:
-            raise ValueError(f"rendered glyph size mismatch for 0x{char_code:04X}")
-        if chunk_id >= source_pages:
-            raise ValueError(f"font map chunk id out of range for 0x{char_code:04X}: {chunk_id}")
-        if glyph_offset < header_size or glyph_offset + glyph_size > page_size:
-            raise ValueError(f"font map glyph offset out of page for 0x{char_code:04X}: 0x{glyph_offset:X}")
-        offset = header_size + chunk_id * page_size + glyph_offset
-        patched[offset : offset + glyph_size] = glyph
-    resident_start = header_size + source_pages * page_size
-    for slot in range(resident_slots):
-        source_page = min(slot, source_pages - 1)
-        source_offset = header_size + source_page * page_size
-        target_offset = resident_start + slot * page_size
-        patched[target_offset : target_offset + page_size] = patched[source_offset : source_offset + page_size]
-    return bytes(patched)
-
-
 def apply_font_replacements(
     rom: bytes,
-    data: dict[str, Any],
     *,
     font_1x1: Path | None,
     font_1x2: Path | None,
+    code_table: Path,
 ) -> tuple[bytes, list[str]]:
     if not font_1x1 and not font_1x2:
         return rom, []
 
     files = parse_nitrofs_files(rom)
+    code_entries = load_code_table(code_table)
     patched = bytearray(rom)
     changes: list[str] = []
-    reference_entries: list[tuple[int, int, int]] | None = None
-    reference_code_to_char: dict[int, str] | None = None
 
     for mode, font_path in (("1x1", font_1x1), ("1x2", font_1x2)):
         if font_path is None:
@@ -332,32 +411,47 @@ def apply_font_replacements(
         map_data = rom[map_start:map_end]
         chunk_data = rom[chunk_start:chunk_end]
         map_entries = parse_font_map(map_data, expected_glyph_size=int(spec["glyph_size"]))
-        if reference_entries is None:
-            reference_entries = map_entries
-            reference_code_to_char = build_code_to_char(data, map_entries)
-        elif [entry[0] for entry in map_entries] != [entry[0] for entry in reference_entries]:
-            raise ValueError("1x1 and 1x2 font maps use different char code order")
+        mode_entries = [entry for entry in code_entries if mode in entry.modes]
+        table_codes = [entry.code for entry in mode_entries]
+        map_codes = [entry[0] for entry in map_entries]
+        if table_codes != map_codes:
+            mismatch_at = next(
+                (index for index, (left, right) in enumerate(zip(table_codes, map_codes)) if left != right),
+                min(len(table_codes), len(map_codes)),
+            )
+            table_code = table_codes[mismatch_at] if mismatch_at < len(table_codes) else None
+            map_code = map_codes[mismatch_at] if mismatch_at < len(map_codes) else None
+            raise ValueError(
+                f"{mode} code table does not match embedded font map at index {mismatch_at}: "
+                f"table={table_code!r}, map={map_code!r}"
+            )
 
-        assert reference_code_to_char is not None
-        glyphs = render_font_glyphs(
+        code_to_char = {entry.code: entry.char for entry in mode_entries}
+        glyphs, fallback = render_font_glyphs(
             font_path,
-            reference_code_to_char,
+            code_to_char,
             canvas=spec["canvas"],  # type: ignore[arg-type]
             font_size=int(spec["font_size"]),
             target=spec["target"],  # type: ignore[arg-type]
             target_y=int(spec["target_y"]),
         )
-        new_chunk = patch_font_chunk(
-            chunk_data,
-            map_entries,
+        new_map, new_chunk, source_pages = build_font_pack(
+            mode_entries,
             glyphs,
-            expected_magic=spec["chunk_magic"],  # type: ignore[arg-type]
-            glyph_size=int(spec["glyph_size"]),
+            fallback,
+            mode=mode,
+            spec=spec,
         )
+        if new_map != map_data:
+            raise ValueError(f"regenerated {map_path} does not match embedded ROM map")
+        parse_chunk_header(new_chunk, expected_magic=spec["chunk_magic"])  # type: ignore[arg-type]
+        if len(new_map) != len(map_data):
+            raise ValueError(f"font replacement changed {map_path} size")
         if len(new_chunk) != len(chunk_data):
             raise ValueError(f"font replacement changed {chunk_path} size")
+        patched[map_start:map_end] = new_map
         patched[chunk_start:chunk_end] = new_chunk
-        changes.append(f"{mode}={display_path(font_path)} -> {chunk_path}")
+        changes.append(f"{mode}={display_path(font_path)} -> {map_path},{chunk_path} source_pages={source_pages}")
 
     return bytes(patched), changes
 
@@ -432,7 +526,12 @@ def command_build(args: argparse.Namespace) -> int:
     rom = decode_rom_image(data)
     font_1x1 = repo_path(args.font_1x1 or args.font) if (args.font_1x1 or args.font) else None
     font_1x2 = repo_path(args.font_1x2 or args.font) if (args.font_1x2 or args.font) else None
-    rom, font_changes = apply_font_replacements(rom, data, font_1x1=font_1x1, font_1x2=font_1x2)
+    rom, font_changes = apply_font_replacements(
+        rom,
+        font_1x1=font_1x1,
+        font_1x2=font_1x2,
+        code_table=repo_path(args.code_table),
+    )
     output = write_rom(output_path, rom, force=args.force)
     print(f"data={display_path(data_path)}")
     print(f"origin={display_path(origin_path)}")
@@ -453,6 +552,11 @@ def make_parser() -> argparse.ArgumentParser:
     build.add_argument("--data", default=DEFAULT_DATA.as_posix())
     build.add_argument("--origin-rom", default="rom/origin.nds")
     build.add_argument("--output", default="rom/narutorpg3_chs.nds")
+    build.add_argument(
+        "--code-table",
+        default=DEFAULT_CODE_TABLE.as_posix(),
+        help="Fixed Chinese char-code table used when rebuilding custom font map/chunk files.",
+    )
     build.add_argument("--font", help="Use one TTF/TTC/OTF font for both 8x8 and 8x16 Chinese glyphs.")
     build.add_argument(
         "--font-1x1",
