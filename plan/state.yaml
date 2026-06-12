@@ -30,6 +30,11 @@ stage_cache:
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v24-save-equip-trim.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v25-full-structural-audit.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-static-control-slot-padding.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-trim.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-ctrl0001-linebreak-reassessment.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-compact-msg-terminators.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill.md
 stage_outputs:
   expected:
     - rom/narutorpg3_chs_full_writeback_test.nds
@@ -234,6 +239,46 @@ stage_outputs:
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout-records.json
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-rebuild-resource-check2-records.json
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v26-writeback-byte-compare.json
+    - rom/narutorpg3_chs_patcher_v27_static_control_slot_padding.nds
+    - patcher/work/build_20260605_174557/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-static-control-slot-padding.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-static-control-slot-padding-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-static-control-slot-padding-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-static-control-slot-padding-audit.tsv
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-static-control-slot-padding-byte-compare.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-system-tile-sheets/
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-system-oam-frames/
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-system-bg-renders/
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v27-bchar-tile-sheets/
+    - hack/v27固定槽位填充与overlay模板规则.md
+    - rom/narutorpg3_chs_patcher_v28_blankline_trim.nds
+    - patcher/work/build_20260611_222831/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-trim.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-trim-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-trim-report.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-trim-report.tsv
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-structural-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-structural-audit.tsv
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-byte-compare.json
+    - hack/v28空白页控制符修复规则.md
+    - rom/narutorpg3_chs_patcher_v29_compact_msg_terminators.nds
+    - patcher/work/build_20260611_230031/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-ctrl0001-linebreak-reassessment.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-compact-msg-terminators.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-compact-msg-terminators-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-compact-msg-terminators-byte-compare.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-compact-msg-terminators-structural-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-compact-msg-terminators-structural-audit.tsv
+    - hack/v29_CTRL0001换行与message尾部填充.md
+    - hack/v29_message变长终止符压缩候选.md
+    - rom/narutorpg3_chs_patcher_v30_early03_fullwidth_fill.nds
+    - patcher/work/build_20260612_101420/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill-byte-compare.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill-structural-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill-structural-audit.tsv
+    - hack/v30_message固定长度早停03全角填充候选.md
     - hack/v26控制符占位符与固定布局规则.md
     - patcher/work/build_20260604_120709/text_assets/overlay_menu_translation_report.json
     - patcher/work/build_20260604_120709/text_assets/translation-struct-audit-report.json
@@ -262,7 +307,7 @@ stage_outputs:
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
     - hack/v26控制符占位符与固定布局规则.md
-updated_at: "2026-06-05T17:02:49+08:00"
+updated_at: "2026-06-12T10:20:22+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -342,6 +387,11 @@ notes:
   - Built rom/narutorpg3_chs_patcher_v26_control_placeholder_layout.nds after normalizing visible ASCII outside controls, preserving two structural ASCII suffixes, fixing zh_txt_dc122c8a_000BD4_0040 fixed control slots, and adding eight fixed-width overlay layout overrides.
   - v26 static verification passed: text_rows=5858 and menu_rows=289 both have byte-diff 0; visible_ascii_risk_count=0; overlay structural risk_rows=0; Header CRC OK / Banner CRC OK.
   - v26 candidate SHA256 is 367E608BC643640F72E108E83554974F9F12CC87D6BF3FC9B62B3FF71D25F1CD. Rebuild-text-assets check completed as rom/narutorpg3_chs_patcher_v26_rebuild_resource_check2.nds with the same SHA256 after the fixed-width overlay rules were added to the menu generation script. No DeSmuME or MCP operation was used.
+  - Built rom/narutorpg3_chs_patcher_v27_static_control_slot_padding.nds after patching overlay_0002 item-get templates, switching item/jyutu/equip/skill/taityou fixed description padding back to fullwidth-space before original NUL4, padding param fixed slots with fullwidth spaces, and normalizing no-terminator message fixed slots.
+  - v27 static verification passed: text_rows=5858 and menu_rows=289 both have byte-diff 0; overlay_template_writeback replacement_count=16; structural audit risk_rows=0; screenshot-related CP932 residual keywords hit_count=0; battle-result big labels still have no CP932 hits after LZ10 decompression and are now classified as baked tiles/tile-index layout/special HUD resources; Header CRC OK / Banner CRC OK. Candidate SHA256 is AD2FD6BD45C9D5C70DDADF4F3C19563BC66AF3555DB8A583A3B924F3792D3B41. No DeSmuME or MCP operation was used.
+  - Built rom/narutorpg3_chs_patcher_v29_compact_msg_terminators.nds with the opt-in --compact-message-terminators strategy after confirming non-empty CTRL_0001 remains a normal line/page control. The candidate compacts 3055 ordinary 03 00 message records across 246 files and removes 70312 bytes of fullwidth padding; text byte-compare mismatch=0, structural audit risk_rows=0, Header CRC OK / Banner CRC OK, SHA256 54187C15CF32A6E872614FB61DA6006D012E870B9622683426E6FC04DE70DEA6. No DeSmuME or MCP operation was used.
+  - User manual testing invalidated v29 because all dialogue froze; do not promote variable-length message compaction to the default writeback path.
+  - Built rom/narutorpg3_chs_patcher_v30_early03_fullwidth_fill.nds with the opt-in --early-message-terminator-fullwidth-fill strategy. It preserves original record/file lengths, moves ordinary 03 00 message terminators after translated text, and fills the remaining slot with fullwidth spaces; early_03_fullwidth_fill_row_count=3072, bytes=70312, text byte-compare mismatch=0, structural audit risk_rows=0, Header CRC OK / Banner CRC OK, SHA256 F5132D5B3482B4BA03F0DB779326C1115E50914F8DCAC98335D8C638A20210A9. No DeSmuME or MCP operation was used.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

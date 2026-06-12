@@ -581,6 +581,10 @@ def build_rom(args: argparse.Namespace, run_dir: Path, origin_work: Path, text_a
     ]
     if not args.keep_record_details:
         cmd.append("--compact-records")
+    if args.compact_message_terminators:
+        cmd.append("--compact-message-terminators")
+    if args.early_message_terminator_fullwidth_fill:
+        cmd.append("--early-message-terminator-fullwidth-fill")
     run_cmd(cmd, log_path=log_path)
 
     run_cmd([NDSTOOL, "-i", output], log_path=log_path)
@@ -620,6 +624,8 @@ def write_build_summary(
             "font_dir": args.font_dir,
             "candidate_code_endian": args.candidate_code_endian,
             "exclude_source_files": args.exclude_source_files,
+            "compact_message_terminators": args.compact_message_terminators,
+            "early_message_terminator_fullwidth_fill": args.early_message_terminator_fullwidth_fill,
         },
     }
     summary_path = run_dir / "patcher-build-summary.json"
@@ -766,6 +772,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--existing-font-scan", action="append", default=[])
     parser.add_argument("--exclude-source-files", default=DEFAULT_EXCLUDED_SOURCE_FILES)
     parser.add_argument("--keep-record-details", action="store_true")
+    parser.add_argument(
+        "--compact-message-terminators",
+        action="store_true",
+        help="Build a variable-length candidate that removes ordinary message padding before 03 00 terminators.",
+    )
+    parser.add_argument(
+        "--early-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="Build a fixed-length candidate that moves ordinary 03 00 terminators after text and fills the original slot with fullwidth spaces.",
+    )
     return parser.parse_args()
 
 

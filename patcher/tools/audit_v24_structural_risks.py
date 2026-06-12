@@ -85,10 +85,33 @@ def visible_ascii_outside_controls(row: dict[str, str], text: str) -> str:
     return "".join(chars)
 
 
+def visible_text_without_controls(text: str) -> str:
+    stripped = text_rom.CTRL_RE.sub("", text or "")
+    return "".join(char for char in stripped if char not in {" ", "\t", "\r", "\n", "\u3000"})
+
+
+def blank_ctrl0001_page_kinds(text: str) -> list[str]:
+    pages = (text or "").split("{CTRL_0001}")
+    if len(pages) <= 1:
+        return []
+    page_visible_lengths = [len(visible_text_without_controls(page)) for page in pages]
+    kinds: list[str] = []
+    if page_visible_lengths[0] == 0 and any(value > 0 for value in page_visible_lengths[1:]):
+        kinds.append("leading_blank_page")
+    if page_visible_lengths[-1] == 0 and any(value > 0 for value in page_visible_lengths[:-1]):
+        kinds.append("trailing_blank_page")
+    if any(value == 0 for value in page_visible_lengths[1:-1]):
+        kinds.append("interior_blank_page")
+    if "{CTRL_0001}{CTRL_0001}" in text:
+        kinds.append("consecutive_ctrl0001")
+    return kinds
+
+
 def audit_text_rows(
     preview_path: Path,
     code_table_path: Path,
     excluded_source_files: set[str],
+    early_message_terminator_fullwidth_fill: bool = False,
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     rows, excluded_counts = text_rom.load_all_rows(preview_path, excluded_source_files)
     code_table = text_rom.load_code_table(code_table_path)
@@ -97,9 +120,11 @@ def audit_text_rows(
     source_strategy_counts: dict[str, Counter[str]] = defaultdict(Counter)
     fixed_subslot_rows: list[dict[str, Any]] = []
     early_03_rows: list[dict[str, Any]] = []
+    early_03_fullwidth_rows: list[dict[str, Any]] = []
     early_nul4_rows: list[dict[str, Any]] = []
     fullwidth_message_padding_rows = 0
     preserved_ascii_suffix_rows = 0
+    blank_ctrl0001_page_rows = 0
 
     for row in rows:
         source_file = text_rom.normalize_source_file(row.get("source_file", ""))
@@ -111,6 +136,15 @@ def audit_text_rows(
                 code_table=code_table,
                 candidate_code_endian=row.get("candidate_code_endian") or "big",
             )
+            if early_message_terminator_fullwidth_fill and text_rom.is_ordinary_fullwidth_message_padding(extra):
+                source_len = int(row["source_byte_len"])
+                prefix_len = int(extra.get("message_prefix_len", 0))
+                prefix = replacement[:prefix_len]
+                padding_len = source_len - len(prefix) - len(encoded) - len(terminator)
+                replacement = prefix + encoded + terminator + text_rom.message_control_padding(padding_len)
+                extra["message_padding_strategy"] = "early_03_fullwidth_fill_after_terminator"
+                extra["message_terminator_position"] = "after_translated_text"
+                extra["message_post_terminator_padding_len"] = padding_len
         except Exception as exc:  # pragma: no cover - report-only path
             add_risk(
                 risks,
@@ -122,7 +156,7 @@ def audit_text_rows(
             )
             continue
 
-        normalized_text = text_rom.normalized_message_text(row)
+        normalized_text = text_rom.normalized_message_text(row, trim_blank_pages=True)
         visible_ascii = visible_ascii_outside_controls(row, normalized_text)
         if visible_ascii:
             add_risk(
@@ -140,6 +174,21 @@ def audit_text_rows(
         suffix = text_rom.ASCII_PRESERVE_SUFFIXES.get(row.get("id", ""))
         if suffix and normalized_text.endswith(suffix):
             preserved_ascii_suffix_rows += 1
+        blank_page_kinds = blank_ctrl0001_page_kinds(normalized_text) if row.get("category") == "message" else []
+        if blank_page_kinds:
+            blank_ctrl0001_page_rows += 1
+            add_risk(
+                risks,
+                risk_type="message_blank_ctrl0001_page_after_trim",
+                severity="high",
+                row=row,
+                source_kind="text",
+                strategy="normalized_message_text",
+                encoded_len=len(encoded),
+                raw_len=len(raw),
+                padding_len=max(0, len(replacement) - len(encoded) - len(terminator)),
+                details=";".join(blank_page_kinds),
+            )
 
         strategy = (
             extra.get("fixed_slot_strategy")
@@ -174,6 +223,9 @@ def audit_text_rows(
         if extra.get("message_padding_strategy") == "early_03_zero_fill_after_terminator":
             early_03_rows.append({"id": row["id"], "source_file": row["source_file"], "offset": row["offset"]})
 
+        if extra.get("message_padding_strategy") == "early_03_fullwidth_fill_after_terminator":
+            early_03_fullwidth_rows.append({"id": row["id"], "source_file": row["source_file"], "offset": row["offset"]})
+
         if extra.get("padding_strategy") == "early_nul4_zero_fill":
             early_nul4_rows.append({"id": row["id"], "source_file": row["source_file"], "offset": row["offset"]})
 
@@ -202,6 +254,7 @@ def audit_text_rows(
             and (source_file.startswith("msg/menu/") or source_file.startswith("msg/wifi/"))
             and extra.get("fixed_slot_strategy") != "preserve_ctrl_0000_subslot_offsets"
             and not text_rom.should_end_message_after_text(row, b"\x03\x00")
+            and extra.get("message_terminator_position") != "after_translated_text"
             and padding_len > 0
         ):
             add_risk(
@@ -247,10 +300,15 @@ def audit_text_rows(
             "fixed_subslot_rows_by_source": dict(Counter(row["source_file"] for row in fixed_subslot_rows)),
             "early_03_row_count": len(early_03_rows),
             "early_03_rows_by_source": dict(Counter(row["source_file"] for row in early_03_rows)),
+            "early_03_fullwidth_fill_row_count": len(early_03_fullwidth_rows),
+            "early_03_fullwidth_fill_rows_by_source": dict(
+                Counter(row["source_file"] for row in early_03_fullwidth_rows)
+            ),
             "early_nul4_row_count": len(early_nul4_rows),
             "early_nul4_rows_by_source": dict(Counter(row["source_file"] for row in early_nul4_rows)),
             "fullwidth_message_padding_row_count": fullwidth_message_padding_rows,
             "preserved_ascii_suffix_row_count": preserved_ascii_suffix_rows,
+            "blank_ctrl0001_page_row_count": blank_ctrl0001_page_rows,
         },
         risks,
     )
@@ -346,6 +404,7 @@ def main() -> None:
     parser.add_argument("--code-table", default="patcher/resources/text/zh_code_table.tsv")
     parser.add_argument("--menu", default="patcher/resources/menu/overlay_menu_translations.tsv")
     parser.add_argument("--exclude-source-files", default="msg/wifi/kinshi_msg.msg")
+    parser.add_argument("--early-message-terminator-fullwidth-fill", action="store_true")
     parser.add_argument("--json-out", required=True)
     parser.add_argument("--tsv-out", required=True)
     args = parser.parse_args()
@@ -354,6 +413,7 @@ def main() -> None:
         Path(args.preview),
         Path(args.code_table),
         text_rom.parse_source_file_set(args.exclude_source_files),
+        early_message_terminator_fullwidth_fill=args.early_message_terminator_fullwidth_fill,
     )
     menu_summary, menu_risks = audit_menu_rows(Path(args.menu))
     risks = text_risks + menu_risks

@@ -1,0 +1,192 @@
+{
+  "records": "plan\\cache\\text-writeback-smoke\\v5-regression-20260603\\v29-compact-msg-terminators-records.json",
+  "work": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260611_230031\\rom_work",
+  "text_checked": 5858,
+  "text_mismatch_count": 0,
+  "text_mismatches": [],
+  "compacted_row_count": 3055,
+  "compacted_removed_bytes": 70312,
+  "affected_file_count": 246,
+  "top_files_by_removed_bytes": [
+    {
+      "source_file": "msg/fld/034.m",
+      "compacted_rows": 152,
+      "removed_bytes": 3822,
+      "final_delta": -3822
+    },
+    {
+      "source_file": "msg/fld/029.m",
+      "compacted_rows": 95,
+      "removed_bytes": 2954,
+      "final_delta": -2954
+    },
+    {
+      "source_file": "msg/fld/030.m",
+      "compacted_rows": 66,
+      "removed_bytes": 1944,
+      "final_delta": -1944
+    },
+    {
+      "source_file": "msg/fld/022.m",
+      "compacted_rows": 46,
+      "removed_bytes": 1782,
+      "final_delta": -1782
+    },
+    {
+      "source_file": "msg/fld/evt/003.m",
+      "compacted_rows": 63,
+      "removed_bytes": 1680,
+      "final_delta": -1680
+    },
+    {
+      "source_file": "msg/fld/031.m",
+      "compacted_rows": 44,
+      "removed_bytes": 1284,
+      "final_delta": -1284
+    },
+    {
+      "source_file": "msg/fld/evt/034.m",
+      "compacted_rows": 48,
+      "removed_bytes": 986,
+      "final_delta": -986
+    },
+    {
+      "source_file": "msg/fld/033.m",
+      "compacted_rows": 31,
+      "removed_bytes": 946,
+      "final_delta": -946
+    },
+    {
+      "source_file": "msg/fld/evt/019.m",
+      "compacted_rows": 41,
+      "removed_bytes": 920,
+      "final_delta": -920
+    },
+    {
+      "source_file": "msg/fld/evt/068.m",
+      "compacted_rows": 53,
+      "removed_bytes": 870,
+      "final_delta": -870
+    },
+    {
+      "source_file": "msg/fld/evt/066.m",
+      "compacted_rows": 38,
+      "removed_bytes": 848,
+      "final_delta": -848
+    },
+    {
+      "source_file": "msg/eiga/msg_eiga_fail.msg",
+      "compacted_rows": 40,
+      "removed_bytes": 838,
+      "final_delta": -838
+    },
+    {
+      "source_file": "msg/fld/036.m",
+      "compacted_rows": 27,
+      "removed_bytes": 828,
+      "final_delta": -828
+    },
+    {
+      "source_file": "msg/fld/evt/007.m",
+      "compacted_rows": 35,
+      "removed_bytes": 824,
+      "final_delta": -824
+    },
+    {
+      "source_file": "msg/fld/019.m",
+      "compacted_rows": 29,
+      "removed_bytes": 808,
+      "final_delta": -808
+    },
+    {
+      "source_file": "msg/fld/000.m",
+      "compacted_rows": 17,
+      "removed_bytes": 786,
+      "final_delta": -786
+    },
+    {
+      "source_file": "msg/fld/011.m",
+      "compacted_rows": 29,
+      "removed_bytes": 780,
+      "final_delta": -780
+    },
+    {
+      "source_file": "msg/btl/000.m",
+      "compacted_rows": 6,
+      "removed_bytes": 778,
+      "final_delta": -778
+    },
+    {
+      "source_file": "msg/fld/023.m",
+      "compacted_rows": 27,
+      "removed_bytes": 776,
+      "final_delta": -776
+    },
+    {
+      "source_file": "msg/fld/037.m",
+      "compacted_rows": 27,
+      "removed_bytes": 772,
+      "final_delta": -772
+    },
+    {
+      "source_file": "msg/fld/008.m",
+      "compacted_rows": 25,
+      "removed_bytes": 718,
+      "final_delta": -718
+    },
+    {
+      "source_file": "msg/fld/evt/000.m",
+      "compacted_rows": 34,
+      "removed_bytes": 704,
+      "final_delta": -704
+    },
+    {
+      "source_file": "msg/fld/evt/004.m",
+      "compacted_rows": 29,
+      "removed_bytes": 696,
+      "final_delta": -696
+    },
+    {
+      "source_file": "msg/fld/evt/006.m",
+      "compacted_rows": 30,
+      "removed_bytes": 692,
+      "final_delta": -692
+    },
+    {
+      "source_file": "msg/fld/018.m",
+      "compacted_rows": 33,
+      "removed_bytes": 680,
+      "final_delta": -680
+    },
+    {
+      "source_file": "msg/fld/evt/001.m",
+      "compacted_rows": 34,
+      "removed_bytes": 678,
+      "final_delta": -678
+    },
+    {
+      "source_file": "msg/fld/evt/094.m",
+      "compacted_rows": 35,
+      "removed_bytes": 678,
+      "final_delta": -678
+    },
+    {
+      "source_file": "msg/fld/evt/069.m",
+      "compacted_rows": 35,
+      "removed_bytes": 674,
+      "final_delta": -674
+    },
+    {
+      "source_file": "msg/fld/evt/055.m",
+      "compacted_rows": 33,
+      "removed_bytes": 660,
+      "final_delta": -660
+    },
+    {
+      "source_file": "msg/fld/002.m",
+      "compacted_rows": 17,
+      "removed_bytes": 648,
+      "final_delta": -648
+    }
+  ]
+}

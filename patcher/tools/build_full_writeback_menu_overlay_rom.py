@@ -237,6 +237,8 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
         keep_sample_text=False,
         code_table=code_table,
         candidate_code_endian=args.candidate_code_endian,
+        compact_message_terminators=args.compact_message_terminators,
+        early_message_terminator_fullwidth_fill=args.early_message_terminator_fullwidth_fill,
     )
 
     cache.patch_arm9(work / "arm9.bin")
@@ -272,6 +274,20 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
             "excluded_source_files": excluded_text_counts,
             "code_table": args.code_table,
             "validation": text_validation,
+            "compact_message_terminators": args.compact_message_terminators,
+            "early_message_terminator_fullwidth_fill": args.early_message_terminator_fullwidth_fill,
+            "compacted_row_count": sum(1 for record in text_records if record.get("message_compacted_removed_len", 0) > 0),
+            "compacted_removed_bytes": sum(record.get("message_compacted_removed_len", 0) for record in text_records),
+            "early_03_fullwidth_fill_row_count": sum(
+                1
+                for record in text_records
+                if record.get("message_padding_strategy") == "early_03_fullwidth_fill_after_terminator"
+            ),
+            "early_03_fullwidth_fill_bytes": sum(
+                record.get("message_post_terminator_padding_len", 0)
+                for record in text_records
+                if record.get("message_padding_strategy") == "early_03_fullwidth_fill_after_terminator"
+            ),
         },
         "menu_writeback": {
             "translations": args.menu_translations,
@@ -307,6 +323,16 @@ def parse_args() -> argparse.Namespace:
         help="Comma-separated text source_file values to leave unmodified.",
     )
     parser.add_argument("--compact-records", action="store_true")
+    parser.add_argument(
+        "--compact-message-terminators",
+        action="store_true",
+        help="Compact ordinary 03 00 message streams by deleting padding before the terminator.",
+    )
+    parser.add_argument(
+        "--early-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="Move ordinary 03 00 message terminators after text and fill the original slot with fullwidth spaces.",
+    )
     return parser.parse_args()
 
 

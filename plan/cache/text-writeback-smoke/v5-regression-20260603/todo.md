@@ -191,6 +191,17 @@
 - 审计剩余 7 条 overlay 间距观察项均未发现明确结构分隔符破坏，暂不自动修，等待手测截图确认。
 - 本轮未使用 DeSmuME/MCP。
 
+## 2026-06-05 v27 固定槽位 padding 与 overlay 模板
+
+- 旧 v5/v20 回归 todo 仍保持关闭；本轮处理 v26 后新反馈的获取道具提示、道具说明 `@`/乱码、电影说明快速结束和对话乱码同类风险。
+- 获取道具提示定位到 `overlay_0002.bin:0x12C80..0x12DB0` 模板区，已保留 `%s/%c`、`01 FF`、`03 FF` 并替换 `はいっていた！`、`てにいれた！`、满背包提示，共 16 处可见替换。
+- 道具、忍术、装备、技能、体调效果说明表改为保留原始 NUL4 边界并全角空格 padding，避免 `00` padding 在说明框渲染为 `@` 或乱码。
+- `param/*.dat` 固定名称槽位改为全角空格 padding；无普通终止符 message 固定槽位也统一做可见文本规范化和全角空格 padding。
+- v27 候选：`rom/narutorpg3_chs_patcher_v27_static_control_slot_padding.nds`，SHA256 `AD2FD6BD45C9D5C70DDADF4F3C19563BC66AF3555DB8A583A3B924F3792D3B41`。
+- 静态验证：文本 5858 条、菜单 289 条逐字节核对 mismatch=0；结构风险审计 `risk_rows=0`；获取道具、满背包、战斗结果、少量恢复、电影等截图关键词在 v27 workdir 中 CP932 残留命中 0；战斗结果大字在原版和 v27 的 LZ10 解压后 CP932 扫描中同样命中 0；`ndstool -i` Header CRC OK / Banner CRC OK。
+- 战斗胜利结果页大字和部分字段未在普通文件或 LZ10 解压数据中命中，暂按 baked 图块、tile-index layout 或特殊 HUD 资源继续排查。
+- 本轮未使用 DeSmuME/MCP。
+
 ## 2026-06-05 v26 控制符/占位符与 overlay 固定布局
 
 - v25 后新反馈的三个乱码点定位为控制符外可见 ASCII：`Y`、`1`、`/` 等单字节进入文本流后会破坏渲染或高亮复位。
@@ -199,4 +210,32 @@
 - v25 剩余 7 条 overlay 间距观察项已全部改为固定宽度覆盖；连同本轮截图中的 `攻击 / 防御 / 速度`，固定宽度覆盖共新增 8 条。
 - v26 候选：`rom/narutorpg3_chs_patcher_v26_control_placeholder_layout.nds`，SHA256 `367E608BC643640F72E108E83554974F9F12CC87D6BF3FC9B62B3FF71D25F1CD`。
 - 静态验证：文本 5858 条、菜单 289 条逐字节核对 mismatch=0；控制符外可见 ASCII 风险 0；overlay 风险 0；默认冻结资源构建与 `--rebuild-text-assets` 构建 SHA256 一致；`ndstool -i` Header CRC OK / Banner CRC OK。
+- 本轮未使用 DeSmuME/MCP。
+
+## 2026-06-11 v28 空白页控制符全量修复
+
+- v27 后用户反馈仍有底部对白框空白；本轮按文本控制符 token 全量审计 `{CTRL_0001}` 空页，不使用裸字节 `01 00` 滑动扫描，避免误判 `{CTRL_0103}{CTRL_0000}`。
+- 写回器新增 `trim_blank_ctrl0001_pages()`：删除前导、尾部和中间无可见字符的 `{CTRL_0001}` 页面；纯控制符空页中的非换页控制符移动到相邻可见页；固定 `CTRL_0000` 子槽位仍保留原始子槽位边界。
+- 全量 trim 76 条 message：前导空页 41、内部空页 28、连续 `{CTRL_0001}` 27、尾部空页 9；修复后空页风险 0。
+- v28 候选：`rom/narutorpg3_chs_patcher_v28_blankline_trim.nds`，SHA256 `26427CFCAC8C1918AC4F3938764B6409F0BBD0B031B307F800C9B5C95DA4B3F6`。
+- 静态验证：结构审计 `risk_rows=0`、`blank_ctrl0001_page_row_count=0`；文本 5858 条、菜单 289 条、overlay 模板 5 组逐字节核对 mismatch=0；`ndstool -i` Header CRC OK / Banner CRC OK。
+- 本轮未使用 DeSmuME/MCP。
+
+## 2026-06-11 v29 message 终止符压缩候选
+
+- 用户确认 `{CTRL_0001}` 示例实际是正常两行显示；空白更可能来自译文后的全角空格填充。
+- 新增显式开关 `--compact-message-terminators`：普通 `03 00` message 记录改为译文后立即写入 `03 00`，删除中间 `81 40` padding。
+- 默认 v28 固定长度写回不变；固定 `CTRL_0000` 子槽位、NUL4 描述表、参数表、overlay 固定布局和特殊尾部 message 不参与压缩。
+- v29 候选：`rom/narutorpg3_chs_patcher_v29_compact_msg_terminators.nds`，SHA256 `54187C15CF32A6E872614FB61DA6006D012E870B9622683426E6FC04DE70DEA6`。
+- 静态验证：覆盖 246 个文件、3055 条记录，删除填充 70312 字节；文本逐字节核对 `text_mismatch_count=0`；结构审计 `risk_rows=0`；`ndstool -i` Header CRC OK / Banner CRC OK。
+- 风险：该候选会改变 message 文件内部后续数据 offset，若脚本存在绝对 offset 引用可能产生新运行时问题；先交给用户手动验证，不使用 DeSmuME/MCP。
+- 手测结果：用户反馈所有对话卡死，变长压缩方向失败，后续不应作为默认策略。
+
+## 2026-06-12 v30 固定长度早停 03 + 全角填充候选
+
+- 针对 v29 卡死，改为固定长度候选：普通 message 提前 `03 00`，后面用全角空格填充到原文长度，不缩短文件。
+- 新增显式开关 `--early-message-terminator-fullwidth-fill`，并与 `--compact-message-terminators` 互斥。
+- v30 候选：`rom/narutorpg3_chs_patcher_v30_early03_fullwidth_fill.nds`，SHA256 `F5132D5B3482B4BA03F0DB779326C1115E50914F8DCAC98335D8C638A20210A9`。
+- 静态验证：覆盖普通 message 3072 条，后置全角填充 70312 字节；文本逐字节核对 `text_mismatch_count=0`；结构审计 `risk_rows=0`；`ndstool -i` Header CRC OK / Banner CRC OK。
+- 示例 `zh_txt_dc122c8a_000DAA_0047` 已确认 `03 00` 位于译文 46 字节后，后面 58 字节均为全角空格。
 - 本轮未使用 DeSmuME/MCP。

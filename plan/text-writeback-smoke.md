@@ -443,3 +443,122 @@ SHA256 367E608BC643640F72E108E83554974F9F12CC87D6BF3FC9B62B3FF71D25F1CD
 - 文本和菜单缺字为 0，仅字体保留占位字符 `U+E0FD` 告警。
 
 详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v26-control-placeholder-layout.md`。运行时验证继续由用户手动完成。
+
+## 2026-06-05 v27 固定槽位 padding 与 overlay 模板候选
+
+用户手测 v26 后继续反馈：获取道具提示未翻译、少量对话乱码、战斗胜利结果页仍有日文、部分道具说明仍显示乱码或 `@`、电影/剧场版说明快速结束。本轮继续只做静态排查、字节核对和回包，未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v27_static_control_slot_padding.nds
+SHA256 AD2FD6BD45C9D5C70DDADF4F3C19563BC66AF3555DB8A583A3B924F3792D3B41
+```
+
+本轮修复内容：
+
+- `overlay_0002.bin:0x12C80..0x12DB0` 的获取道具模板按二进制可见文本替换，保留 `%s/%c`、`01 FF`、`03 FF`，覆盖 `はいっていた！`、`てにいれた！` 和满背包提示。
+- `msg/item_msg.msg`、`msg/jyutu_msg.msg`、`msg/equip_msg.msg`、`msg/skill_msg.msg`、`msg/taityou_kouka.msg` 不再提前 NUL4 零填充，改为保留原始 NUL4 边界并用全角空格补齐。
+- `param/*.dat` 固定名称槽位改为全角空格 padding，避免 `00` 在列表、商店、装备页显示为截断或乱码。
+- 无普通终止符的 message 固定槽位统一走可见文本规范化和全角空格 padding，降低电影说明、特殊事件提示提前结束风险。
+
+静态验证：
+
+- 文本 5858 条、菜单 289 条逐字节核对 mismatch=0。
+- overlay 模板写回 5 组、实际替换 16 处。
+- 结构风险审计 `risk_rows=0`。
+- 获取道具、满背包、战斗结果、少量恢复、电影等已知截图关键词在 v27 workdir 中 CP932 残留命中 0；战斗结果大字在原版和 v27 的 LZ10 解压后 CP932 扫描中同样命中 0。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 文本和菜单缺字为 0，字体仅保留预期占位字符 `U+E0FD`。
+
+战斗胜利结果页的大字标题和部分日文字段在普通文件和 LZ10 解压数据中都没有 CP932 命中，暂按 baked 图块、tile-index layout 或特殊 HUD 资源继续排查，不并入本轮普通文本控制符修复范围。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v27-static-control-slot-padding.md`。运行时验证继续由用户手动完成。
+
+## 2026-06-11 v28 空白页控制符全量修复候选
+
+用户手测 v27 后反馈仍有底部对白框空白。本轮继续只做静态排查、字节核对和回包，未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v28_blankline_trim.nds
+SHA256 26427CFCAC8C1918AC4F3938764B6409F0BBD0B031B307F800C9B5C95DA4B3F6
+```
+
+本轮修复：
+
+- 写回器新增按文本 token 解析的 `{CTRL_0001}` 空页 trim，覆盖前导空页、尾部空页、连续换页和纯控制符空页。
+- 纯控制符空页中的非换页控制符会移动到相邻可见页，避免丢失颜色、样式或场景尾控制。
+- 固定 `CTRL_0000` 子槽位继续保留原始子槽位边界；子槽内允许去掉空白 `{CTRL_0001}` 页，但仍核对非换页控制符序列。
+- 审计脚本同步增加 trim 后空白页检查，后续作为回归门槛。
+
+静态验证：
+
+- 全量 trim 76 条 message；trim 后空白 `{CTRL_0001}` 页风险 0。
+- 结构审计 `risk_rows=0`，`blank_ctrl0001_page_row_count=0`。
+- 实际工作目录逐字节核对：文本 5858 条、菜单 289 条、overlay 模板 5 组，mismatch=0。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 文本和菜单缺字为 0，字体仅保留既有占位符 `U+E0FD`。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v28-blankline-trim.md`。运行时验证继续由用户手动完成。
+
+## 2026-06-11 v29 message 终止符压缩候选
+
+用户进一步提出：如果不再强制对齐原文长度，只保留一个 `03 00` 终止符，是否可以解决全角空格填充造成的空白。本轮将该方向实现为显式开关 `--compact-message-terminators`，默认 v28 固定长度策略不变，未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v29_compact_msg_terminators.nds
+SHA256 54187C15CF32A6E872614FB61DA6006D012E870B9622683426E6FC04DE70DEA6
+```
+
+本轮修复：
+
+- 普通 `03 00` message 记录不再把短译文后全角空格填到原始终止符位置。
+- 启用开关后，写回器按文件重建，把符合条件的记录改成 `prefix + encoded_text + 03 00`。
+- 固定 `CTRL_0000` 子槽位、NUL4 描述表、参数表、overlay 固定布局和特殊尾部 message 不参与压缩。
+
+静态验证：
+
+- 压缩覆盖 246 个文件、3055 条记录，删除填充 70312 字节。
+- 实际工作目录逐字节核对：`text_mismatch_count=0`。
+- 结构审计 `risk_rows=0`。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 文本和菜单缺字为 0，字体仅保留既有占位符 `U+E0FD`。
+
+风险：该候选不再保持 message 文件内部原始物理 offset。若运行时代码或脚本依赖同文件内绝对 offset，可能出现新的跳转或流程问题。因此该版先作为手测候选，不直接替代默认 v28。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v29-compact-msg-terminators.md`。
+
+## 2026-06-12 v30 固定长度早停 03 + 全角填充候选
+
+用户手测 v29 后反馈所有对话卡死，说明变长压缩会破坏运行时流程。本轮按用户新方向实现固定长度候选：普通 message 把 `03 00` 提到译文后，后面用全角空格补齐原文长度，不改变文件内后续 offset。未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v30_early03_fullwidth_fill.nds
+SHA256 F5132D5B3482B4BA03F0DB779326C1115E50914F8DCAC98335D8C638A20210A9
+```
+
+本轮修复：
+
+- 新增显式开关 `--early-message-terminator-fullwidth-fill`。
+- 普通 `03 00` message 从 `译文 + 全角空格 + 03 00` 改为 `译文 + 03 00 + 全角空格`。
+- 文件长度、记录槽位长度和后续记录 offset 保持不变。
+- 固定 `CTRL_0000` 子槽位、NUL4 描述表、参数表、overlay 固定布局和特殊 scene-tail message 不参与。
+
+静态验证：
+
+- 覆盖普通 message 3072 条，后置全角填充 70312 字节。
+- 实际工作目录逐字节核对：`text_mismatch_count=0`。
+- 结构审计 `risk_rows=0`。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 示例 `zh_txt_dc122c8a_000DAA_0047` 确认为译文 46 字节后立刻 `03 00`，再接 58 字节全角空格。
+- 文本和菜单缺字为 0，字体仅保留既有占位符 `U+E0FD`。
+
+风险：如果运行时在 `03 00` 后仍顺序解释同槽位剩余字节，v30 可能仍会卡死；若能按固定槽位跳过 padding，则可解决空白等待且不触发 v29 的 offset 风险。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill.md`。

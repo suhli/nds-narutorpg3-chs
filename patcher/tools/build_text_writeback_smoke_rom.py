@@ -429,10 +429,49 @@ def normalize_visible_ascii_for_row(row: dict[str, str], text: str) -> str:
     return fullwidth_visible_ascii(text)
 
 
-def normalized_message_text(row: dict[str, str]) -> str:
+def text_has_visible_chars(text: str) -> bool:
+    stripped = CTRL_RE.sub("", text or "")
+    return any(char not in {" ", "\t", "\r", "\n", "\u3000"} for char in stripped)
+
+
+def control_tokens_in_text(text: str) -> str:
+    return "".join(match.group(0) for match in CTRL_RE.finditer(text or ""))
+
+
+def trim_blank_ctrl0001_pages(text: str) -> str:
+    pages = (text or "").split("{CTRL_0001}")
+    if len(pages) <= 1:
+        return text
+
+    kept: list[str] = []
+    pending_controls = ""
+    for page in pages:
+        if text_has_visible_chars(page):
+            if pending_controls:
+                page = pending_controls + page
+                pending_controls = ""
+            kept.append(page)
+        else:
+            pending_controls += control_tokens_in_text(page)
+
+    if not kept:
+        return pending_controls
+    if pending_controls:
+        kept[-1] += pending_controls
+    return "{CTRL_0001}".join(kept)
+
+
+def normalized_message_text(
+    row: dict[str, str],
+    *,
+    trim_blank_pages: bool = False,
+) -> str:
     override = text_override_for_row(row)
     text = override if override is not None else row.get("zh_text_candidate_payload", "")
-    return normalize_visible_ascii_for_row(row, text)
+    normalized = normalize_visible_ascii_for_row(row, text)
+    if trim_blank_pages:
+        normalized = trim_blank_ctrl0001_pages(normalized)
+    return normalized
 
 
 def translate_fixed_message_prefix(
@@ -529,7 +568,7 @@ def make_fixed_subslot_replacement(
     candidate_code_endian: str,
 ) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
     jp_slots = row.get("jp_text", "").split("{CTRL_0000}")
-    translated_slots = normalized_message_text(row).split("{CTRL_0000}")
+    translated_slots = normalized_message_text(row, trim_blank_pages=True).split("{CTRL_0000}")
     if len(jp_slots) != len(translated_slots):
         raise ValueError(f"{row['id']} translated fixed subslot count does not match original text")
 
@@ -542,9 +581,11 @@ def make_fixed_subslot_replacement(
     encoded_parts: list[bytes] = []
     slot_records: list[dict[str, Any]] = []
     for index, translated_slot in enumerate(translated_slots):
-        _, jp_controls = split_text_controls(jp_slots[index])
+        _, jp_controls = split_text_controls(trim_blank_ctrl0001_pages(jp_slots[index]))
         _, translated_controls = split_text_controls(translated_slot)
-        if jp_controls != translated_controls:
+        jp_non_page_controls = [control for control in jp_controls if control != 0x0001]
+        translated_non_page_controls = [control for control in translated_controls if control != 0x0001]
+        if jp_non_page_controls != translated_non_page_controls:
             raise ValueError(f"{row['id']} translated fixed subslot {index} controls do not match original")
         encoded = encode_text(
             translated_slot,
@@ -691,7 +732,7 @@ def translate_yes_no_option_prefix(
 
 
 def message_stream_prefix_and_text(row: dict[str, str], raw: bytes) -> tuple[bytes, str, str]:
-    zh_text = normalized_message_text(row)
+    zh_text = normalized_message_text(row, trim_blank_pages=True)
     jp_text = row.get("jp_text", "")
     terminator = b"\x03\x00" if raw.endswith(b"\x03\x00") else b""
     payload = raw[: -len(terminator)] if terminator else raw
@@ -860,7 +901,7 @@ def make_replacement(
         extra["text_override"] = "yes"
     elif row.get("category") == "message" and code_table is not None:
         encoded = encode_text(
-            normalized_message_text(row),
+            normalized_message_text(row, trim_blank_pages=True),
             code_table,
             candidate_code_endian=candidate_code_endian,
         )
@@ -944,6 +985,14 @@ def make_replacement(
     return encoded, terminator, replacement, extra
 
 
+def is_ordinary_fullwidth_message_padding(extra: dict[str, Any]) -> bool:
+    return (
+        extra.get("message_padding_strategy") == "fullwidth_space_fill_before_original_terminator"
+        and extra.get("message_terminator_kind") == "03_00"
+        and extra.get("fixed_slot_strategy") is None
+    )
+
+
 def target_for_row(work: Path, row: dict[str, str]) -> Path:
     rel = Path(*Path(row["source_file"]).parts)
     target = work / "data" / rel
@@ -993,8 +1042,13 @@ def patch_samples(
     keep_sample_text: bool,
     code_table: dict[str, int] | None = None,
     candidate_code_endian: str = "big",
+    compact_message_terminators: bool = False,
+    early_message_terminator_fullwidth_fill: bool = False,
 ) -> list[dict[str, Any]]:
+    if compact_message_terminators and early_message_terminator_fullwidth_fill:
+        raise ValueError("compact_message_terminators and early_message_terminator_fullwidth_fill are mutually exclusive")
     records: list[dict[str, Any]] = []
+    replacements_by_target: dict[Path, list[dict[str, Any]]] = {}
     for row in samples:
         target = target_for_row(work, row)
         offset = int(row["offset"], 0)
@@ -1004,20 +1058,33 @@ def patch_samples(
             code_table=code_table,
             candidate_code_endian=candidate_code_endian,
         )
-
-        data = bytearray(target.read_bytes())
-        original = bytes(data[offset : offset + source_len])
-        if len(original) != source_len:
-            raise ValueError(f"{row['id']} original slice is truncated")
-        data[offset : offset + source_len] = replacement
-        target.write_bytes(data)
+        if compact_message_terminators and is_ordinary_fullwidth_message_padding(extra):
+            prefix_len = int(extra.get("message_prefix_len", 0))
+            prefix = replacement[:prefix_len]
+            replacement = prefix + encoded + terminator
+            extra["message_padding_strategy"] = "compact_delete_padding_before_terminator"
+            extra["message_terminator_position"] = "after_translated_text"
+            extra["message_compacted_removed_len"] = source_len - len(replacement)
+        elif early_message_terminator_fullwidth_fill and is_ordinary_fullwidth_message_padding(extra):
+            prefix_len = int(extra.get("message_prefix_len", 0))
+            prefix = replacement[:prefix_len]
+            padding_len = source_len - len(prefix) - len(encoded) - len(terminator)
+            replacement = prefix + encoded + terminator + message_control_padding(padding_len)
+            extra["message_padding_strategy"] = "early_03_fullwidth_fill_after_terminator"
+            extra["message_terminator_position"] = "after_translated_text"
+            extra["message_post_terminator_padding_len"] = padding_len
+            extra["message_compacted_removed_len"] = 0
+        else:
+            extra["message_compacted_removed_len"] = 0
 
         record: dict[str, Any] = {
             "id": row["id"],
             "source_file": row["source_file"],
             "work_file": target.as_posix(),
             "offset": row["offset"],
+            "output_offset": None,
             "source_byte_len": source_len,
+            "replacement_len": len(replacement),
             "payload_capacity": int(row["payload_capacity"]),
             "encoded_len_candidate": len(encoded),
             "terminator_hex": terminator.hex(" ").upper(),
@@ -1031,11 +1098,49 @@ def patch_samples(
                     "jp_text": row.get("jp_text", ""),
                     "zh_text": row.get("zh_text_candidate_payload", ""),
                     "encoded_hex_candidate": row.get("encoded_hex_candidate", ""),
-                    "original_hex": original.hex(" ").upper(),
+                    "original_hex": "",
                     "replacement_hex": replacement.hex(" ").upper(),
                 }
             )
+        replacements_by_target.setdefault(target, []).append(
+            {
+                "row": row,
+                "offset": offset,
+                "source_len": source_len,
+                "replacement": replacement,
+                "record": record,
+            }
+        )
         records.append(record)
+
+    for target, entries in replacements_by_target.items():
+        entries.sort(key=lambda entry: entry["offset"])
+        original_data = target.read_bytes()
+        out = bytearray()
+        cursor = 0
+        delta = 0
+        previous_end = 0
+        for entry in entries:
+            offset = entry["offset"]
+            source_len = entry["source_len"]
+            replacement = entry["replacement"]
+            if offset < previous_end:
+                raise ValueError(f"replacement ranges overlap in {target}: {entry['row']['id']}")
+            original = original_data[offset : offset + source_len]
+            if len(original) != source_len:
+                raise ValueError(f"{entry['row']['id']} original slice is truncated")
+            out.extend(original_data[cursor:offset])
+            output_offset = len(out)
+            out.extend(replacement)
+            cursor = offset + source_len
+            previous_end = cursor
+            delta += len(replacement) - source_len
+            entry["record"]["output_offset"] = f"0x{output_offset:X}"
+            entry["record"]["file_delta_after_row"] = delta
+            if keep_sample_text:
+                entry["record"]["original_hex"] = original.hex(" ").upper()
+        out.extend(original_data[cursor:])
+        target.write_bytes(bytes(out))
     return records
 
 
@@ -1073,6 +1178,8 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], d
         keep_sample_text=not args.compact_records,
         code_table=code_table,
         candidate_code_endian=args.candidate_code_endian,
+        compact_message_terminators=args.compact_message_terminators,
+        early_message_terminator_fullwidth_fill=args.early_message_terminator_fullwidth_fill,
     )
 
     font_rom.cache.patch_arm9(work / "arm9.bin")
@@ -1087,6 +1194,8 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], d
             "trailing_padding": "strip_and_zero_fill",
             "terminator": "preserve_raw_terminator_when_present",
             "message_stream": "preserve_prefix_and_original_terminator_or_scene_tail_with_fullwidth_space_fill",
+            "compact_message_terminators": args.compact_message_terminators,
+            "early_message_terminator_fullwidth_fill": args.early_message_terminator_fullwidth_fill,
             "fixed_slot_without_terminator": "space_pad_known_ui_text_tables_else_zero_fill",
             "rom_origin": "read_only_not_modified",
             "excluded_source_files": excluded_counts,
@@ -1113,6 +1222,16 @@ def parse_args() -> argparse.Namespace:
         help="Comma-separated source_file values to leave unmodified in full writeback mode.",
     )
     parser.add_argument("--compact-records", action="store_true", help="Keep per-row records compact for full writeback.")
+    parser.add_argument(
+        "--compact-message-terminators",
+        action="store_true",
+        help="For ordinary 03 00 message streams, delete padding before the terminator and compact each file.",
+    )
+    parser.add_argument(
+        "--early-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="For ordinary 03 00 message streams, move the terminator after text and fill the original slot with fullwidth spaces.",
+    )
     return parser.parse_args()
 
 

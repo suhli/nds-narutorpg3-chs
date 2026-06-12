@@ -1,0 +1,25 @@
+{
+  "records": "plan\\cache\\text-writeback-smoke\\v5-regression-20260603\\v30-early03-fullwidth-fill-records.json",
+  "work": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260612_101420\\rom_work",
+  "text_checked": 5858,
+  "text_mismatch_count": 0,
+  "text_mismatches": [],
+  "early_03_fullwidth_fill_row_count": 3072,
+  "early_03_fullwidth_fill_bytes": 70312,
+  "excluded_source_file_counts": {
+    "msg/wifi/kinshi_msg.msg": 1
+  },
+  "example": {
+    "id": "zh_txt_dc122c8a_000DAA_0047",
+    "source_file": "msg/fld/029.m",
+    "offset": "0xDAA",
+    "source_len": 106,
+    "encoded_len": 46,
+    "prefix_len": 0,
+    "terminator_expected_offset_in_record": 46,
+    "terminator_actual_offset_in_record": 46,
+    "post_terminator_len": 58,
+    "post_terminator_all_fullwidth_pairs": true,
+    "tail_hex": "81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40 81 40"
+  }
+}

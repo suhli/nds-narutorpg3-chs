@@ -1,0 +1,44 @@
+{
+  "work": "D:/repos/nds-narutorpg3-chs/patcher/work/build_20260611_222831/rom_work",
+  "text_checked": 5858,
+  "text_mismatch_count": 0,
+  "menu_checked": 289,
+  "menu_mismatch_count": 0,
+  "overlay_template_checked": 5,
+  "overlay_template_mismatch_count": 0,
+  "overlay_template_counts": [
+    {
+      "id": "item_get_particle_ga_after_percent_s",
+      "source_count": 0,
+      "replacement_count": 6,
+      "expected_replacement_count": 4
+    },
+    {
+      "id": "item_get_particle_wo_after_percent_s",
+      "source_count": 0,
+      "replacement_count": 6,
+      "expected_replacement_count": 2
+    },
+    {
+      "id": "item_get_haitteita_suffix",
+      "source_count": 0,
+      "replacement_count": 5,
+      "expected_replacement_count": 5
+    },
+    {
+      "id": "item_get_tenireta_suffix",
+      "source_count": 0,
+      "replacement_count": 8,
+      "expected_replacement_count": 3
+    },
+    {
+      "id": "item_full_warning",
+      "source_count": 0,
+      "replacement_count": 2,
+      "expected_replacement_count": 2
+    }
+  ],
+  "text_mismatches": [],
+  "menu_mismatches": [],
+  "overlay_template_mismatches": []
+}
