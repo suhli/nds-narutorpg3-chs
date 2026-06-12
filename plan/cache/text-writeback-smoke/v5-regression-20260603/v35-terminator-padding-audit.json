@@ -1,0 +1,394 @@
+{
+  "records_path": "plan\\cache\\text-writeback-smoke\\v5-regression-20260603\\v35-evt-fixedctrl-tail-records.json",
+  "summary": {
+    "checked": 5858,
+    "message_0300_rows": 3236,
+    "multi_0300_rows": 3,
+    "terminator_then_zero_then_later_0300_rows": 0,
+    "terminator_then_fullwidth_then_later_0300_rows": 0,
+    "terminator_not_at_end_rows": 3165,
+    "terminator_after_text_zero_tail_rows": 1803,
+    "terminator_after_text_fullwidth_tail_rows": 1359,
+    "event_script_terminator_after_text_fullwidth_tail_rows": 1359,
+    "event_script_fixed_control_tail_rows": 3,
+    "fullwidth_padding_before_final_0300_rows": 51,
+    "zero_padding_before_final_0300_rows": 0,
+    "evt_fullwidth_padding_before_final_0300_rows": 0,
+    "evt_zero_tail_after_first_0300_rows": 0,
+    "event_script_strategy_rows": 1363
+  },
+  "by_strategy": {
+    "early_03_zero_fill_after_terminator": 1816,
+    "fullwidth_space_fixed_slot": 2003,
+    "fullwidth_space_fill_before_original_terminator": 10,
+    "fullwidth_space_before_original_nul4_terminator": 580,
+    "preserve_original_tail": 6,
+    "fullwidth_space_with_original_control_offsets": 1,
+    "event_script_early_03_fullwidth_fill_after_terminator": 1363,
+    "event_script_fixed_control_final_03_fullwidth_fill_after_terminator": 3,
+    "": 75,
+    "early_nul4_zero_fill": 1
+  },
+  "sample_rows": [
+    {
+      "id": "zh_txt_0d5c73a4_000484_0016",
+      "source_file": "msg/fld/011.m",
+      "offset": "0x484",
+      "risk_type": "multi_0300",
+      "strategy": "early_03_zero_fill_after_terminator",
+      "positions": "48,96",
+      "details": "between_first_last=mixed; between_len=46; evt=False"
+    },
+    {
+      "id": "zh_txt_0d5c73a4_00058A_0019",
+      "source_file": "msg/fld/011.m",
+      "offset": "0x58A",
+      "risk_type": "multi_0300",
+      "strategy": "early_03_zero_fill_after_terminator",
+      "positions": "46,90",
+      "details": "between_first_last=mixed; between_len=42; evt=False"
+    },
+    {
+      "id": "zh_txt_dc122c8a_000BD4_0040",
+      "source_file": "msg/fld/029.m",
+      "offset": "0xBD4",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "fullwidth_space_with_original_control_offsets",
+      "positions": "84",
+      "details": "fw_padding_len=18; source_len=86; evt=False"
+    },
+    {
+      "id": "zh_txt_31fd479b_001354_0062",
+      "source_file": "msg/fld/030.m",
+      "offset": "0x1354",
+      "risk_type": "multi_0300",
+      "strategy": "early_03_zero_fill_after_terminator",
+      "positions": "70,108",
+      "details": "between_first_last=mixed; between_len=36; evt=False"
+    },
+    {
+      "id": "zh_txt_fdee0fd4_00005A_0002",
+      "source_file": "msg/menu/equip_menu_msg.msg",
+      "offset": "0x5A",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "162",
+      "details": "fw_padding_len=12; source_len=164; evt=False"
+    },
+    {
+      "id": "zh_txt_4be8b1fa_000008_0000",
+      "source_file": "msg/menu/member_menu_msg.msg",
+      "offset": "0x8",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "142",
+      "details": "fw_padding_len=26; source_len=144; evt=False"
+    },
+    {
+      "id": "zh_txt_4be8b1fa_0000F6_0002",
+      "source_file": "msg/menu/member_menu_msg.msg",
+      "offset": "0xF6",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "114",
+      "details": "fw_padding_len=54; source_len=116; evt=False"
+    },
+    {
+      "id": "zh_txt_0b52d284_000072_0001",
+      "source_file": "msg/menu/movie_msg.msg",
+      "offset": "0x72",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "44",
+      "details": "fw_padding_len=4; source_len=46; evt=False"
+    },
+    {
+      "id": "zh_txt_36cf8fef_00016C_0005",
+      "source_file": "msg/menu/save_msg.msg",
+      "offset": "0x16C",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "118",
+      "details": "fw_padding_len=22; source_len=120; evt=False"
+    },
+    {
+      "id": "zh_txt_4aa11e7a_0000F4_0003",
+      "source_file": "msg/menu/savecreate_msg.msg",
+      "offset": "0xF4",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "160",
+      "details": "fw_padding_len=30; source_len=162; evt=False"
+    },
+    {
+      "id": "zh_txt_8d82f7ea_00003E_0001",
+      "source_file": "msg/menu/savedelete_msg.msg",
+      "offset": "0x3E",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "120",
+      "details": "fw_padding_len=16; source_len=122; evt=False"
+    },
+    {
+      "id": "zh_txt_e9a64e6f_0000A2_0003",
+      "source_file": "msg/menu/saveload_msg.msg",
+      "offset": "0xA2",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "114",
+      "details": "fw_padding_len=14; source_len=116; evt=False"
+    },
+    {
+      "id": "zh_txt_64f649ed_000050_0001",
+      "source_file": "msg/menu/shop_msg.msg",
+      "offset": "0x50",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "82",
+      "details": "fw_padding_len=24; source_len=84; evt=False"
+    },
+    {
+      "id": "zh_txt_64f649ed_000162_0006",
+      "source_file": "msg/menu/shop_msg.msg",
+      "offset": "0x162",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "34",
+      "details": "fw_padding_len=8; source_len=36; evt=False"
+    },
+    {
+      "id": "zh_txt_6072cee7_00008E_0003",
+      "source_file": "msg/menu/skill_menu_msg.msg",
+      "offset": "0x8E",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "306",
+      "details": "fw_padding_len=12; source_len=308; evt=False"
+    },
+    {
+      "id": "zh_txt_6072cee7_000240_0007",
+      "source_file": "msg/menu/skill_menu_msg.msg",
+      "offset": "0x240",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "124",
+      "details": "fw_padding_len=44; source_len=126; evt=False"
+    },
+    {
+      "id": "zh_txt_74923e0c_000030_0001",
+      "source_file": "msg/menu/status_menu_msg.msg",
+      "offset": "0x30",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "172",
+      "details": "fw_padding_len=24; source_len=174; evt=False"
+    },
+    {
+      "id": "zh_txt_9f2f522a_00007C_0001",
+      "source_file": "msg/wifi/btlres_msg.msg",
+      "offset": "0x7C",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "508",
+      "details": "fw_padding_len=20; source_len=510; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_00000C_0000",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0xC",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "138",
+      "details": "fw_padding_len=28; source_len=140; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_00009E_0001",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x9E",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "86",
+      "details": "fw_padding_len=32; source_len=88; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_0000FC_0002",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0xFC",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "158",
+      "details": "fw_padding_len=20; source_len=160; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_00019E_0003",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x19E",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "300",
+      "details": "fw_padding_len=46; source_len=302; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_0002CE_0004",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x2CE",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "386",
+      "details": "fw_padding_len=14; source_len=388; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_000458_0005",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x458",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "102",
+      "details": "fw_padding_len=14; source_len=104; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_0004C6_0006",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x4C6",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "92",
+      "details": "fw_padding_len=10; source_len=94; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_000526_0007",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x526",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "104",
+      "details": "fw_padding_len=16; source_len=106; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_000592_0008",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x592",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "98",
+      "details": "fw_padding_len=20; source_len=100; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_0005F8_0009",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x5F8",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "80",
+      "details": "fw_padding_len=22; source_len=82; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_0006AE_0011",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x6AE",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "148",
+      "details": "fw_padding_len=16; source_len=150; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_00074A_0012",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x74A",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "88",
+      "details": "fw_padding_len=24; source_len=90; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_0007D6_0014",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x7D6",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "80",
+      "details": "fw_padding_len=20; source_len=82; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_000872_0016",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x872",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "204",
+      "details": "fw_padding_len=20; source_len=206; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_000946_0017",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x946",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "94",
+      "details": "fw_padding_len=10; source_len=96; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_0009AC_0018",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x9AC",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "50",
+      "details": "fw_padding_len=10; source_len=52; evt=False"
+    },
+    {
+      "id": "zh_txt_805b124c_0009E6_0019",
+      "source_file": "msg/wifi/connect_msg.msg",
+      "offset": "0x9E6",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "94",
+      "details": "fw_padding_len=38; source_len=96; evt=False"
+    },
+    {
+      "id": "zh_txt_28e72e7e_00000C_0000",
+      "source_file": "msg/wifi/error_msg.msg",
+      "offset": "0xC",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "204",
+      "details": "fw_padding_len=36; source_len=206; evt=False"
+    },
+    {
+      "id": "zh_txt_28e72e7e_0000DC_0001",
+      "source_file": "msg/wifi/error_msg.msg",
+      "offset": "0xDC",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "120",
+      "details": "fw_padding_len=16; source_len=122; evt=False"
+    },
+    {
+      "id": "zh_txt_28e72e7e_0001E2_0003",
+      "source_file": "msg/wifi/error_msg.msg",
+      "offset": "0x1E2",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "170",
+      "details": "fw_padding_len=6; source_len=172; evt=False"
+    },
+    {
+      "id": "zh_txt_28e72e7e_000312_0005",
+      "source_file": "msg/wifi/error_msg.msg",
+      "offset": "0x312",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "112",
+      "details": "fw_padding_len=12; source_len=114; evt=False"
+    },
+    {
+      "id": "zh_txt_28e72e7e_00038A_0006",
+      "source_file": "msg/wifi/error_msg.msg",
+      "offset": "0x38A",
+      "risk_type": "fullwidth_padding_before_final_0300",
+      "strategy": "",
+      "positions": "168",
+      "details": "fw_padding_len=42; source_len=170; evt=False"
+    }
+  ]
+}

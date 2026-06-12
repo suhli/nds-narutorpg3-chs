@@ -91,6 +91,10 @@ EARLY_MESSAGE_TERMINATOR_SOURCE_PREFIXES = (
     "msg/menu/",
 )
 
+EVENT_SCRIPT_MESSAGE_SOURCE_PREFIXES = (
+    "msg/fld/evt/",
+)
+
 FIXED_CONTROL_SLOT_ROW_IDS = {
     "zh_txt_2ef7aa25_000758_0027",
     "zh_txt_6b929156_0001A6_0005",
@@ -105,6 +109,8 @@ LOCAL_FIXED_TEXT_SPAN_REPLACEMENTS = {
 }
 
 TRANSLATABLE_MESSAGE_PREFIX_ROW_IDS = {
+    "zh_txt_0d5c73a4_000484_0016",
+    "zh_txt_0d5c73a4_00058A_0019",
     "zh_txt_08033e0a_0005CC_0016",
     "zh_txt_4dc3cb5a_000126_0004",
     "zh_txt_fd9564ad_00049C_0014",
@@ -438,6 +444,43 @@ def control_tokens_in_text(text: str) -> str:
     return "".join(match.group(0) for match in CTRL_RE.finditer(text or ""))
 
 
+def leading_control_tokens_in_text(text: str) -> str:
+    tokens: list[str] = []
+    pos = 0
+    while True:
+        match = CTRL_RE.match(text or "", pos)
+        if not match:
+            break
+        tokens.append(match.group(0))
+        pos = match.end()
+    return "".join(tokens)
+
+
+def control_tokens_to_bytes(text: str) -> bytes:
+    return b"".join(int(match.group(1), 16).to_bytes(2, "little") for match in CTRL_RE.finditer(text or ""))
+
+
+def count_overlapping(data: bytes, needle: bytes) -> int:
+    if not needle:
+        return 0
+    count = 0
+    pos = data.find(needle)
+    while pos >= 0:
+        count += 1
+        pos = data.find(needle, pos + 1)
+    return count
+
+
+def control_join_adds_terminator_bytes(left_controls: str, right_controls: str) -> bool:
+    left = control_tokens_to_bytes(left_controls)
+    right = control_tokens_to_bytes(right_controls)
+    if not left or not right:
+        return False
+    joined = left + right
+    separated = left + b"\x01\x00" + right
+    return count_overlapping(joined, b"\x03\x00") > count_overlapping(separated, b"\x03\x00")
+
+
 def trim_blank_ctrl0001_pages(text: str) -> str:
     pages = (text or "").split("{CTRL_0001}")
     if len(pages) <= 1:
@@ -448,7 +491,11 @@ def trim_blank_ctrl0001_pages(text: str) -> str:
     for page in pages:
         if text_has_visible_chars(page):
             if pending_controls:
-                page = pending_controls + page
+                leading_controls = leading_control_tokens_in_text(page)
+                if control_join_adds_terminator_bytes(pending_controls, leading_controls):
+                    page = pending_controls + "{CTRL_0001}" + page
+                else:
+                    page = pending_controls + page
                 pending_controls = ""
             kept.append(page)
         else:
@@ -993,6 +1040,38 @@ def is_ordinary_fullwidth_message_padding(extra: dict[str, Any]) -> bool:
     )
 
 
+def is_event_script_message_source(row: dict[str, str]) -> bool:
+    source_file = normalize_source_file(row.get("source_file", ""))
+    return any(source_file.startswith(prefix) for prefix in EVENT_SCRIPT_MESSAGE_SOURCE_PREFIXES)
+
+
+def can_rewrite_ordinary_message_terminator(row: dict[str, str], extra: dict[str, Any]) -> bool:
+    return is_ordinary_fullwidth_message_padding(extra) and not is_event_script_message_source(row)
+
+
+def can_rewrite_event_script_message_terminator(row: dict[str, str], extra: dict[str, Any]) -> bool:
+    return is_ordinary_fullwidth_message_padding(extra) and is_event_script_message_source(row)
+
+
+def can_rewrite_fixed_control_final_terminator(extra: dict[str, Any]) -> bool:
+    return (
+        extra.get("message_padding_strategy") == "fullwidth_space_with_original_control_offsets"
+        and extra.get("message_terminator_kind") == "03_00"
+        and extra.get("fixed_control_slots") is not None
+    )
+
+
+def can_rewrite_event_script_fixed_control_final_terminator(row: dict[str, str], extra: dict[str, Any]) -> bool:
+    return can_rewrite_fixed_control_final_terminator(extra) and is_event_script_message_source(row)
+
+
+def can_rewrite_fixed_subslot_final_terminator(extra: dict[str, Any]) -> bool:
+    return (
+        extra.get("fixed_slot_strategy") == "preserve_ctrl_0000_subslot_offsets"
+        and extra.get("fixed_subslots") is not None
+    )
+
+
 def target_for_row(work: Path, row: dict[str, str]) -> Path:
     rel = Path(*Path(row["source_file"]).parts)
     target = work / "data" / rel
@@ -1044,9 +1123,17 @@ def patch_samples(
     candidate_code_endian: str = "big",
     compact_message_terminators: bool = False,
     early_message_terminator_fullwidth_fill: bool = False,
+    early_message_terminator_zero_fill: bool = False,
+    event_script_early_message_terminator_fullwidth_fill: bool = False,
+    control_slot_final_message_terminator_fullwidth_fill: bool = False,
 ) -> list[dict[str, Any]]:
-    if compact_message_terminators and early_message_terminator_fullwidth_fill:
-        raise ValueError("compact_message_terminators and early_message_terminator_fullwidth_fill are mutually exclusive")
+    message_terminator_modes = [
+        compact_message_terminators,
+        early_message_terminator_fullwidth_fill,
+        early_message_terminator_zero_fill,
+    ]
+    if sum(1 for enabled in message_terminator_modes if enabled) > 1:
+        raise ValueError("message terminator rewrite modes are mutually exclusive")
     records: list[dict[str, Any]] = []
     replacements_by_target: dict[Path, list[dict[str, Any]]] = {}
     for row in samples:
@@ -1058,20 +1145,101 @@ def patch_samples(
             code_table=code_table,
             candidate_code_endian=candidate_code_endian,
         )
-        if compact_message_terminators and is_ordinary_fullwidth_message_padding(extra):
+        if compact_message_terminators and can_rewrite_ordinary_message_terminator(row, extra):
             prefix_len = int(extra.get("message_prefix_len", 0))
             prefix = replacement[:prefix_len]
             replacement = prefix + encoded + terminator
             extra["message_padding_strategy"] = "compact_delete_padding_before_terminator"
             extra["message_terminator_position"] = "after_translated_text"
             extra["message_compacted_removed_len"] = source_len - len(replacement)
-        elif early_message_terminator_fullwidth_fill and is_ordinary_fullwidth_message_padding(extra):
+        elif early_message_terminator_fullwidth_fill and can_rewrite_ordinary_message_terminator(row, extra):
             prefix_len = int(extra.get("message_prefix_len", 0))
             prefix = replacement[:prefix_len]
             padding_len = source_len - len(prefix) - len(encoded) - len(terminator)
             replacement = prefix + encoded + terminator + message_control_padding(padding_len)
             extra["message_padding_strategy"] = "early_03_fullwidth_fill_after_terminator"
             extra["message_terminator_position"] = "after_translated_text"
+            extra["message_post_terminator_padding_len"] = padding_len
+        elif early_message_terminator_zero_fill and can_rewrite_ordinary_message_terminator(row, extra):
+            prefix_len = int(extra.get("message_prefix_len", 0))
+            prefix = replacement[:prefix_len]
+            padding_len = source_len - len(prefix) - len(encoded) - len(terminator)
+            replacement = prefix + encoded + terminator + bytes(padding_len)
+            extra["message_padding_strategy"] = "early_03_zero_fill_after_terminator"
+            extra["message_terminator_position"] = "after_translated_text"
+            extra["message_post_terminator_padding_len"] = padding_len
+            extra["message_compacted_removed_len"] = 0
+        elif (
+            event_script_early_message_terminator_fullwidth_fill
+            and can_rewrite_event_script_message_terminator(row, extra)
+        ):
+            prefix_len = int(extra.get("message_prefix_len", 0))
+            prefix = replacement[:prefix_len]
+            padding_len = source_len - len(prefix) - len(encoded) - len(terminator)
+            replacement = prefix + encoded + terminator + message_control_padding(padding_len)
+            extra["message_padding_strategy"] = "event_script_early_03_fullwidth_fill_after_terminator"
+            extra["message_terminator_position"] = "after_translated_text"
+            extra["message_post_terminator_padding_len"] = padding_len
+            extra["message_compacted_removed_len"] = 0
+        elif (
+            event_script_early_message_terminator_fullwidth_fill
+            and can_rewrite_event_script_fixed_control_final_terminator(row, extra)
+        ):
+            slots = list(extra.get("fixed_control_slots") or [])
+            last_slot = slots[-1]
+            text_end = int(last_slot["offset"]) + int(last_slot["translated_len"])
+            slot_end = int(last_slot["offset"]) + int(last_slot["source_len"])
+            if replacement[slot_end : slot_end + len(terminator)] != terminator:
+                raise ValueError(f"{row['id']} fixed control final terminator not at expected slot end")
+            padding_len = slot_end - text_end
+            replacement = (
+                replacement[:text_end]
+                + terminator
+                + message_control_padding(padding_len)
+                + replacement[slot_end + len(terminator) :]
+            )
+            extra["message_padding_strategy"] = "event_script_fixed_control_final_03_fullwidth_fill_after_terminator"
+            extra["message_terminator_position"] = "after_final_fixed_control_slot_text"
+            extra["message_post_terminator_padding_len"] = padding_len
+            extra["message_compacted_removed_len"] = 0
+        elif control_slot_final_message_terminator_fullwidth_fill and can_rewrite_fixed_control_final_terminator(extra):
+            slots = list(extra.get("fixed_control_slots") or [])
+            last_slot = slots[-1]
+            text_end = int(last_slot["offset"]) + int(last_slot["translated_len"])
+            slot_end = int(last_slot["offset"]) + int(last_slot["source_len"])
+            if replacement[slot_end : slot_end + len(terminator)] != terminator:
+                raise ValueError(f"{row['id']} fixed control final terminator not at expected slot end")
+            padding_len = slot_end - text_end
+            replacement = (
+                replacement[:text_end]
+                + terminator
+                + message_control_padding(padding_len)
+                + replacement[slot_end + len(terminator) :]
+            )
+            extra["message_padding_strategy"] = "fixed_control_final_03_fullwidth_fill_after_terminator"
+            extra["message_terminator_position"] = "after_final_fixed_control_slot_text"
+            extra["message_post_terminator_padding_len"] = padding_len
+            extra["message_compacted_removed_len"] = 0
+        elif (
+            control_slot_final_message_terminator_fullwidth_fill
+            and terminator == b"\x03\x00"
+            and can_rewrite_fixed_subslot_final_terminator(extra)
+        ):
+            slots = list(extra.get("fixed_subslots") or [])
+            last_slot = slots[-1]
+            text_end = int(last_slot["offset"]) + int(last_slot["translated_len"])
+            slot_end = int(last_slot["offset"]) + int(last_slot["source_len"])
+            if replacement[slot_end : slot_end + len(terminator)] != terminator:
+                raise ValueError(f"{row['id']} fixed subslot final terminator not at expected slot end")
+            padding_len = slot_end - text_end
+            replacement = (
+                replacement[:text_end]
+                + terminator
+                + message_control_padding(padding_len)
+                + replacement[slot_end + len(terminator) :]
+            )
+            extra["message_padding_strategy"] = "fixed_subslot_final_03_fullwidth_fill_after_terminator"
+            extra["message_terminator_position"] = "after_final_fixed_subslot_text"
             extra["message_post_terminator_padding_len"] = padding_len
             extra["message_compacted_removed_len"] = 0
         else:
@@ -1180,6 +1348,9 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], d
         candidate_code_endian=args.candidate_code_endian,
         compact_message_terminators=args.compact_message_terminators,
         early_message_terminator_fullwidth_fill=args.early_message_terminator_fullwidth_fill,
+        early_message_terminator_zero_fill=args.early_message_terminator_zero_fill,
+        event_script_early_message_terminator_fullwidth_fill=args.event_script_early_message_terminator_fullwidth_fill,
+        control_slot_final_message_terminator_fullwidth_fill=args.control_slot_final_message_terminator_fullwidth_fill,
     )
 
     font_rom.cache.patch_arm9(work / "arm9.bin")
@@ -1196,6 +1367,9 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, list[dict[str, Any]], d
             "message_stream": "preserve_prefix_and_original_terminator_or_scene_tail_with_fullwidth_space_fill",
             "compact_message_terminators": args.compact_message_terminators,
             "early_message_terminator_fullwidth_fill": args.early_message_terminator_fullwidth_fill,
+            "early_message_terminator_zero_fill": args.early_message_terminator_zero_fill,
+            "event_script_early_message_terminator_fullwidth_fill": args.event_script_early_message_terminator_fullwidth_fill,
+            "control_slot_final_message_terminator_fullwidth_fill": args.control_slot_final_message_terminator_fullwidth_fill,
             "fixed_slot_without_terminator": "space_pad_known_ui_text_tables_else_zero_fill",
             "rom_origin": "read_only_not_modified",
             "excluded_source_files": excluded_counts,
@@ -1232,7 +1406,30 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="For ordinary 03 00 message streams, move the terminator after text and fill the original slot with fullwidth spaces.",
     )
-    return parser.parse_args()
+    parser.add_argument(
+        "--early-message-terminator-zero-fill",
+        action="store_true",
+        help="For ordinary 03 00 message streams, move the terminator after text and fill the original slot with 00 bytes.",
+    )
+    parser.add_argument(
+        "--event-script-early-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="For event-script 03 00 message streams, move the terminator after text and keep fixed length with fullwidth-space tail padding.",
+    )
+    parser.add_argument(
+        "--control-slot-final-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="For fixed control/subslot 03 00 message streams, move only the final terminator after the final translated subslot and tail-pad with fullwidth spaces.",
+    )
+    args = parser.parse_args()
+    message_terminator_modes = [
+        args.compact_message_terminators,
+        args.early_message_terminator_fullwidth_fill,
+        args.early_message_terminator_zero_fill,
+    ]
+    if sum(1 for enabled in message_terminator_modes if enabled) > 1:
+        parser.error("message terminator rewrite modes are mutually exclusive")
+    return args
 
 
 def main() -> int:

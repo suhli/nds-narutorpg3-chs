@@ -1,0 +1,151 @@
+{
+  "summary": {
+    "checked": 5858,
+    "ordinary_0300_rows": 3236,
+    "early03_rows": 3179,
+    "scene_tail_rows": 10,
+    "nul4_rows": 600,
+    "no_terminator_rows": 2012,
+    "rows_with_more_than_one_0300": 0,
+    "rows_with_0300_without_terminator": 0,
+    "rows_with_0300_after_first_terminator_nonpadding": 0,
+    "rows_with_encoded_0300": 15
+  },
+  "risks": [
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_0d5c73a4_000484_0016",
+      "source_file": "msg/fld/011.m",
+      "offset": "0x484",
+      "encoded_0300_offsets": [
+        26
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_0d5c73a4_00058A_0019",
+      "source_file": "msg/fld/011.m",
+      "offset": "0x58A",
+      "encoded_0300_offsets": [
+        26
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_31fd479b_001354_0062",
+      "source_file": "msg/fld/030.m",
+      "offset": "0x1354",
+      "encoded_0300_offsets": [
+        70
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_000472_0014",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x472",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_000F76_0050",
+      "source_file": "msg/fld/034.m",
+      "offset": "0xF76",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_00117C_0062",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x117C",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_001532_0082",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x1532",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_0016AE_0090",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x16AE",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_001748_0094",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x1748",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_001884_0100",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x1884",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_0019C0_0105",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x19C0",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_001A52_0108",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x1A52",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_001BC2_0115",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x1BC2",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_001CA2_0119",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x1CA2",
+      "encoded_0300_offsets": [
+        1
+      ]
+    },
+    {
+      "risk": "encoded_contains_0300",
+      "id": "zh_txt_a346a806_001E92_0128",
+      "source_file": "msg/fld/034.m",
+      "offset": "0x1E92",
+      "encoded_0300_offsets": [
+        1
+      ]
+    }
+  ]
+}

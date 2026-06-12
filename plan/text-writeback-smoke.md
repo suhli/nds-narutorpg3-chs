@@ -562,3 +562,91 @@ SHA256 F5132D5B3482B4BA03F0DB779326C1115E50914F8DCAC98335D8C638A20210A9
 风险：如果运行时在 `03 00` 后仍顺序解释同槽位剩余字节，v30 可能仍会卡死；若能按固定槽位跳过 padding，则可解决空白等待且不触发 v29 的 offset 风险。
 
 详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill.md`。
+
+## 2026-06-12 v32 固定长度早停 03 + 00 填充候选
+
+用户提出继续尝试不用全角空格填充，而是在提前 `03 00` 后用 `00` 填充到原始槽位长度。本轮实现为显式候选策略，仍保持 message 文件长度、记录槽位长度和后续 offset 不变；未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v32_early03_zero_fill.nds
+SHA256 EFC2B8A27B1213FA5189BC159C006822BA35D3AA03DB184A543776BA188996EF
+```
+
+本轮修复：
+
+- 新增显式开关 `--early-message-terminator-zero-fill`。
+- 普通 `03 00` message 从 `译文 + 03 00 + 全角空格` 改为 `译文 + 03 00 + 00 padding`。
+- 固定 `CTRL_0000` 子槽位、NUL4 描述表、参数表、overlay 固定布局和特殊 scene-tail message 不参与。
+- 删除空白 `{CTRL_0001}` 前新增控制符拼接检查，避免把相邻控制符拼出新的裸字节 `03 00`。
+- 两条重复携带前缀控制序列的场景记录改为前缀原位翻译，replacement 内部 `03 00` 数量不再超过 raw。
+
+静态验证：
+
+- 覆盖普通 message 3179 条，后置 `00` 填充 70348 字节。
+- 实际工作目录逐字节核对：`risk_count=0`。
+- 结构审计 `risk_rows=0`，`blank_ctrl0001_page_row_count=0`。
+- replacement 内部 `03 00` 行数为 3，raw 原始内部 `03 00` 行数也为 3，没有新增内部结束符。
+- `msg/btl` 教程类记录检查 73 行，其中普通早停零填充 36 行。
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 文本和菜单缺字为 0，字体仅保留既有占位符 `U+E0FD`。
+
+风险：如果运行时在普通 message 的 `03 00` 后仍顺序解释槽位剩余字节，v32 的 `00` padding 可能仍影响流程；如果运行时把 `03 00` 作为真正结束并按固定槽位继续后续记录，则该策略应能避免 v30 的全角空格空行问题，同时不触发 v29 的 offset 风险。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v32-early03-zero-fill.md`。
+
+## 2026-06-12 v33 事件脚本 message 排除零填充早停候选
+
+用户手测 v32 后反馈：`msg/fld/evt/000.m` 中 `"火影大人，糟了！"` 后，本应连续显示的 `0x1DE..0x358` 多条对白全部跳过，直接进入 `txt_2ef7aa25_000392_0014`。本轮将根因收敛为 `msg/fld/evt/*.m` 事件脚本消息不能使用 `03 00` 后 `00` padding；这些 `00` 会影响事件流调度。未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v33_evt_no_zero_fill.nds
+SHA256 33047C77BAF350B393D8156A63571A0DE7D13DFBBED833F7E752E49086B00A38
+```
+
+本轮修复：
+
+- 新增 `EVENT_SCRIPT_MESSAGE_SOURCE_PREFIXES = ("msg/fld/evt/",)`。
+- `--early-message-terminator-zero-fill` 不再作用于事件脚本消息。
+- 事件脚本消息恢复为保留原始 `03 00` 结束符位置。
+- 非事件脚本的普通 message 仍使用 `译文 + 03 00 + 00 padding`。
+
+静态验证：
+
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 全量结构审计 `risk_rows=0`。
+- `early_03_row_count=1816`。
+- `msg/fld/evt` 事件脚本消息共 1389 条，其中早停零填充 0 条。
+- 用户指出的 7 条目标记录均为 `message_terminator_position=preserved_original_end`。
+- 直接二进制核对确认这 7 条每条槽位内只有 1 个 `03 00`，且都位于 `source_byte_len - 2`。
+- 文本和菜单缺字为 0，字体仅保留既有占位符 `U+E0FD`。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v33-evt-no-zero-fill.md`。
+## 2026-06-12 v36 终结符前填充清理候选
+
+用户手测确认 v33 已不再漏掉连续事件对白，但仍有额外空白行。本轮只做静态排查、字节核对和回包，未使用 DeSmuME/MCP。
+
+候选 ROM：
+
+```text
+rom/narutorpg3_chs_patcher_v36_no_pre03_spaces.nds
+SHA256 B29FEA1B5B7BBD5E2010BD5AF1262676B6B71CB1D6E126847BECCB9A71954BB9
+```
+
+本轮修复：
+
+- `msg/fld/evt/` 事件脚本 message 改为 `译文 + 03 00 + 全角空格尾填充`，不再把全角空格放在最终 `03 00` 前，也不使用 v32 证明会跳过事件流的 `00` 尾填充。
+- 非事件普通 message 继续使用 v33 的 `译文 + 03 00 + 00 padding`。
+- 固定控制位和固定 `CTRL_0000` 子槽位记录保留内部控制符/分隔符原位，只把最后一个文本槽后的最终 `03 00` 提前，尾部用全角空格补齐。
+
+静态验证：
+
+- `ndstool -i`：Header CRC OK / Banner CRC OK。
+- 结构审计：`risk_rows=0`。
+- 实际写入字节扫描：`terminator_then_zero_then_later_0300_rows=0`，`terminator_then_fullwidth_then_later_0300_rows=0`，`fullwidth_padding_before_final_0300_rows=0`，`zero_padding_before_final_0300_rows=0`，`evt_zero_tail_after_first_0300_rows=0`。
+- 仍有 3 条 `multi_0300`，均为非事件混合控制序列，不属于“填充后第二终结符”模式，已记录在 `v36-terminator-padding-audit.tsv`。
+
+详细记录见 `plan/cache/text-writeback-smoke/v5-regression-20260603/v36-no-pre03-spaces.md`；逆向规则见 `hack/v36_message终结符前填充清理规则.md`。

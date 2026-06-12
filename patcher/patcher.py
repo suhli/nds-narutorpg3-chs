@@ -585,6 +585,12 @@ def build_rom(args: argparse.Namespace, run_dir: Path, origin_work: Path, text_a
         cmd.append("--compact-message-terminators")
     if args.early_message_terminator_fullwidth_fill:
         cmd.append("--early-message-terminator-fullwidth-fill")
+    if args.early_message_terminator_zero_fill:
+        cmd.append("--early-message-terminator-zero-fill")
+    if args.event_script_early_message_terminator_fullwidth_fill:
+        cmd.append("--event-script-early-message-terminator-fullwidth-fill")
+    if args.control_slot_final_message_terminator_fullwidth_fill:
+        cmd.append("--control-slot-final-message-terminator-fullwidth-fill")
     run_cmd(cmd, log_path=log_path)
 
     run_cmd([NDSTOOL, "-i", output], log_path=log_path)
@@ -626,6 +632,9 @@ def write_build_summary(
             "exclude_source_files": args.exclude_source_files,
             "compact_message_terminators": args.compact_message_terminators,
             "early_message_terminator_fullwidth_fill": args.early_message_terminator_fullwidth_fill,
+            "early_message_terminator_zero_fill": args.early_message_terminator_zero_fill,
+            "event_script_early_message_terminator_fullwidth_fill": args.event_script_early_message_terminator_fullwidth_fill,
+            "control_slot_final_message_terminator_fullwidth_fill": args.control_slot_final_message_terminator_fullwidth_fill,
         },
     }
     summary_path = run_dir / "patcher-build-summary.json"
@@ -782,7 +791,30 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Build a fixed-length candidate that moves ordinary 03 00 terminators after text and fills the original slot with fullwidth spaces.",
     )
-    return parser.parse_args()
+    parser.add_argument(
+        "--early-message-terminator-zero-fill",
+        action="store_true",
+        help="Build a fixed-length candidate that moves ordinary 03 00 terminators after text and fills the original slot with 00 bytes.",
+    )
+    parser.add_argument(
+        "--event-script-early-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="Build a fixed-length candidate that moves event-script 03 00 terminators after text and fills the tail with fullwidth spaces.",
+    )
+    parser.add_argument(
+        "--control-slot-final-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="Build a fixed-length candidate that moves final 03 00 terminators after fixed control/subslot text and fills the tail with fullwidth spaces.",
+    )
+    args = parser.parse_args()
+    message_terminator_modes = [
+        args.compact_message_terminators,
+        args.early_message_terminator_fullwidth_fill,
+        args.early_message_terminator_zero_fill,
+    ]
+    if sum(1 for enabled in message_terminator_modes if enabled) > 1:
+        parser.error("message terminator rewrite modes are mutually exclusive")
+    return args
 
 
 def main() -> int:

@@ -1,0 +1,66 @@
+{
+  "records_path": "plan\\cache\\text-writeback-smoke\\v5-regression-20260603\\v36-no-pre03-spaces-records.json",
+  "summary": {
+    "checked": 5858,
+    "message_0300_rows": 3236,
+    "multi_0300_rows": 3,
+    "terminator_then_zero_then_later_0300_rows": 0,
+    "terminator_then_fullwidth_then_later_0300_rows": 0,
+    "terminator_not_at_end_rows": 3216,
+    "terminator_after_text_zero_tail_rows": 1803,
+    "terminator_after_text_fullwidth_tail_rows": 1410,
+    "event_script_terminator_after_text_fullwidth_tail_rows": 1359,
+    "fixed_control_terminator_after_text_fullwidth_tail_rows": 1,
+    "fixed_subslot_terminator_after_text_fullwidth_tail_rows": 50,
+    "fullwidth_padding_before_final_0300_rows": 0,
+    "zero_padding_before_final_0300_rows": 0,
+    "evt_fullwidth_padding_before_final_0300_rows": 0,
+    "evt_zero_tail_after_first_0300_rows": 0,
+    "event_script_strategy_rows": 1363,
+    "event_script_fixed_control_tail_rows": 3,
+    "fixed_control_tail_rows": 1,
+    "fixed_subslot_tail_rows": 52
+  },
+  "by_strategy": {
+    "early_03_zero_fill_after_terminator": 1816,
+    "fullwidth_space_fixed_slot": 2003,
+    "fullwidth_space_fill_before_original_terminator": 10,
+    "fullwidth_space_before_original_nul4_terminator": 580,
+    "preserve_original_tail": 6,
+    "fixed_control_final_03_fullwidth_fill_after_terminator": 1,
+    "event_script_early_03_fullwidth_fill_after_terminator": 1363,
+    "event_script_fixed_control_final_03_fullwidth_fill_after_terminator": 3,
+    "": 23,
+    "early_nul4_zero_fill": 1,
+    "fixed_subslot_final_03_fullwidth_fill_after_terminator": 52
+  },
+  "sample_rows": [
+    {
+      "id": "zh_txt_0d5c73a4_000484_0016",
+      "source_file": "msg/fld/011.m",
+      "offset": "0x484",
+      "risk_type": "multi_0300",
+      "strategy": "early_03_zero_fill_after_terminator",
+      "positions": "48,96",
+      "details": "between_first_last=mixed; between_len=46; evt=False"
+    },
+    {
+      "id": "zh_txt_0d5c73a4_00058A_0019",
+      "source_file": "msg/fld/011.m",
+      "offset": "0x58A",
+      "risk_type": "multi_0300",
+      "strategy": "early_03_zero_fill_after_terminator",
+      "positions": "46,90",
+      "details": "between_first_last=mixed; between_len=42; evt=False"
+    },
+    {
+      "id": "zh_txt_31fd479b_001354_0062",
+      "source_file": "msg/fld/030.m",
+      "offset": "0x1354",
+      "risk_type": "multi_0300",
+      "strategy": "early_03_zero_fill_after_terminator",
+      "positions": "70,108",
+      "details": "between_first_last=mixed; between_len=36; evt=False"
+    }
+  ]
+}

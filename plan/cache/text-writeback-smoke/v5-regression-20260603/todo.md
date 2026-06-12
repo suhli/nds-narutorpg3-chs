@@ -239,3 +239,23 @@
 - 静态验证：覆盖普通 message 3072 条，后置全角填充 70312 字节；文本逐字节核对 `text_mismatch_count=0`；结构审计 `risk_rows=0`；`ndstool -i` Header CRC OK / Banner CRC OK。
 - 示例 `zh_txt_dc122c8a_000DAA_0047` 已确认 `03 00` 位于译文 46 字节后，后面 58 字节均为全角空格。
 - 本轮未使用 DeSmuME/MCP。
+
+## 2026-06-12 v32 固定长度早停 03 + 00 填充候选
+
+- 用户要求尝试把提前 `03 00` 后的 padding 从全角空格改为 `00`。
+- 新增显式开关 `--early-message-terminator-zero-fill`，并与 v29 变长压缩、v30 全角填充互斥。
+- v32 候选：`rom/narutorpg3_chs_patcher_v32_early03_zero_fill.nds`，SHA256 `EFC2B8A27B1213FA5189BC159C006822BA35D3AA03DB184A543776BA188996EF`。
+- 静态验证：覆盖普通 message 3179 条，后置 `00` 填充 70348 字节；结构审计 `risk_rows=0`；实际字节/终止符审计 `risk_count=0`；`ndstool -i` Header CRC OK / Banner CRC OK。
+- 教程/战斗教程类 `msg/btl` 共检查 73 行，其中 36 行使用普通早停零填充。
+- 本轮同步修复 `{CTRL_0001}` 空白 trim 的结构分隔风险：删除空页如果会拼出新的裸字节 `03 00`，就保留该 `{CTRL_0001}`。
+- 本轮同步把两条重复携带前缀控制序列的场景记录改为前缀原位翻译，确保 replacement 不比 raw 新增内部 `03 00`。
+- 本轮未使用 DeSmuME/MCP。
+
+## 2026-06-12 v33 事件脚本 message 排除零填充早停
+
+- 用户手测 v32 后反馈 `msg/fld/evt/000.m` 中 `"火影大人，糟了！"` 后连续对白被跳过，直接进入 `txt_2ef7aa25_000392_0014`。
+- 静态定位：v32 的 `00` padding 作用到了 `msg/fld/evt/*.m` 事件脚本消息；这些记录不是普通固定槽文本表，`03 00` 后的 `00` 会影响事件流调度。
+- v33 修改：`--early-message-terminator-zero-fill` 排除 `msg/fld/evt/`，事件脚本消息保留原始 `03 00` 位置。
+- v33 候选：`rom/narutorpg3_chs_patcher_v33_evt_no_zero_fill.nds`，SHA256 `33047C77BAF350B393D8156A63571A0DE7D13DFBBED833F7E752E49086B00A38`。
+- 静态验证：`msg/fld/evt` 事件脚本消息 1389 条，早停零填充 0 条；目标 7 条均恢复为 `preserved_original_end`；结构审计 `risk_rows=0`；`ndstool -i` Header CRC OK / Banner CRC OK。
+- 本轮未使用 DeSmuME/MCP。

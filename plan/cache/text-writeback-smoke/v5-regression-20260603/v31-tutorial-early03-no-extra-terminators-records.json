@@ -1,0 +1,47 @@
+{
+  "work": "D:/repos/nds-narutorpg3-chs/patcher/work/build_20260612_112128/rom_work",
+  "output_rom": "D:/repos/nds-narutorpg3-chs/rom/narutorpg3_chs_patcher_v31_tutorial_early03_no_extra_terminators.nds",
+  "origin_work": "D:/repos/nds-narutorpg3-chs/patcher/work/origin_unpacked",
+  "font_dir": "D:/repos/nds-narutorpg3-chs/patcher/work/build_20260612_112128/font_build",
+  "font_cache_strategy": {
+    "name": "dual_immediate_1x1_1x2_page_cache",
+    "copy_hook": "0x02073D64",
+    "copy_hook_size": 268,
+    "copy_dispatch": "0x02074140",
+    "copy_dispatch_size": 12,
+    "sync_1x1_body": "0x020718D8",
+    "sync_1x1_body_size": 160,
+    "note": "Synchronous 1x1 page cache plus runtime-validated synchronous 1x2 dual-slot cache."
+  },
+  "text_writeback": {
+    "preview": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260612_112128\\text_assets\\encoded-preview-struct-adjusted.tsv",
+    "row_count": 5858,
+    "excluded_source_files": {
+      "msg/wifi/kinshi_msg.msg": 1
+    },
+    "code_table": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260612_112128\\text_assets\\zh_code_table.tsv",
+    "validation": {
+      "file_count": 287,
+      "row_count": 5858
+    },
+    "compact_message_terminators": false,
+    "early_message_terminator_fullwidth_fill": true,
+    "compacted_row_count": 0,
+    "compacted_removed_bytes": 0,
+    "early_03_fullwidth_fill_row_count": 3072,
+    "early_03_fullwidth_fill_bytes": 70288
+  },
+  "menu_writeback": {
+    "translations": "D:\\repos\\nds-narutorpg3-chs\\patcher\\work\\build_20260612_112128\\text_assets\\overlay_menu_translations.tsv",
+    "row_count": 289
+  },
+  "overlay_template_writeback": {
+    "row_count": 5,
+    "replacement_count": 16
+  },
+  "records": {
+    "text_samples": [],
+    "menu_samples": [],
+    "overlay_template_samples": []
+  }
+}

@@ -1,0 +1,113 @@
+[
+  {
+    "id": "zh_txt_0d5c73a4_000484_0016",
+    "source_file": "msg/fld/011.m",
+    "encoded_0300_offsets": [
+      26
+    ],
+    "encoded_prefix_hex": "F0 40 F4 EB F2 F8 F4 EB F2 F8 F1 53",
+    "normalized_escaped": "\\u300c\\u4eb2\\u70ed\\u4eb2\\u70ed\\u2026\\u2026\\u4eb2\\u70ed\\u2026\\u2026{CTRL_0103}{CTRL_0000}{CTRL_0003}{CTRL_0002}\\u300c\\u2026\\u2026\\u2026\\u2026\\u2026\\u2026\\u4ec0\\u"
+  },
+  {
+    "id": "zh_txt_0d5c73a4_00058A_0019",
+    "source_file": "msg/fld/011.m",
+    "encoded_0300_offsets": [
+      26
+    ],
+    "encoded_prefix_hex": "F0 40 F4 EB F2 F8 F4 EB F2 F8 F1 53",
+    "normalized_escaped": "\\u300c\\u4eb2\\u70ed\\u4eb2\\u70ed\\u2026\\u2026\\u4eb2\\u70ed\\u2026\\u2026{CTRL_0103}{CTRL_0000}{CTRL_0003}{CTRL_0002}\\u300c\\u2026\\u2026\\u2026\\u2026\\u2026\\u2026\\u4ec0\\u"
+  },
+  {
+    "id": "zh_txt_31fd479b_001354_0062",
+    "source_file": "msg/fld/030.m",
+    "encoded_0300_offsets": [
+      70
+    ],
+    "encoded_prefix_hex": "F4 52 F2 B6 F0 F2 F2 D3 F4 42 82 6D",
+    "normalized_escaped": "\\u201c\\u5267\\u573a\\u7248\\u3000\\uff2e\\uff21\\uff32\\uff35\\uff34\\uff2f\\uff0d\\u9e23\\u4eba\\uff0d{CTRL_0001}\\u5927\\u5174\\u594b\\uff01\\u4e09\\u65e5\\u6708\\u5c9b\\u7684\\u52a"
+  },
+  {
+    "id": "zh_txt_a346a806_000472_0014",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F2 4D",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_000F76_0050",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F0 43",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_00117C_0062",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F3 55",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u54e6\\uff01\\u300d"
+  },
+  {
+    "id": "zh_txt_a346a806_001532_0082",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F2 4D",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_0016AE_0090",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F0 43",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001748_0094",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F2 4D",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001884_0100",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F0 43",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_0019C0_0105",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F2 4D",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001A52_0108",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F2 4D",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001BC2_0115",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F2 4D",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001CA2_0119",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F2 4D",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001E92_0128",
+    "source_file": "msg/fld/034.m",
+    "encoded_0300_offsets": [],
+    "encoded_prefix_hex": "00 03 01 00 00 82 F3 AE F0 4B F2 4D",
+    "normalized_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  }
+]

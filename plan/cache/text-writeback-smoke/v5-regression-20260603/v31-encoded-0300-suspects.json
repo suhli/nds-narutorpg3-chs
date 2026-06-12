@@ -1,0 +1,398 @@
+[
+  {
+    "id": "zh_txt_0d5c73a4_000484_0016",
+    "source_file": "msg/fld/011.m",
+    "offset": "0x484",
+    "source_len": 136,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0103}",
+      "{CTRL_0000}",
+      "{CTRL_0003}",
+      "{CTRL_0002}",
+      "{CTRL_0001}"
+    ],
+    "encoded_len": 74,
+    "encoded_0300_offsets": [
+      26
+    ],
+    "around": [
+      {
+        "pos": 26,
+        "hex": "F4 EB F2 F8 F1 53 F1 53 03 01 00 00 03 00 02 00 F0 40 F1 53 F1 53 F1 53 F1 53",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "\\u300c\\u4eb2\\u70ed\\u4eb2\\u70ed\\u2026\\u2026\\u4eb2\\u70ed\\u2026\\u2026{CTRL_0103}{CTRL_0000}{CTRL_0003}{CTRL_0002}\\u300c\\u2026\\u2026\\u2026\\u2026\\u2026\\u2026\\u4ec0\\u4e48\\u4e8b\\uff1f{CTRL_0001}\\u6ca1\\u4e8b\\u7684\\u8bdd\\u522b\\u6253\\u6270\\u6211\\uff1f\\u300d"
+  },
+  {
+    "id": "zh_txt_0d5c73a4_00058A_0019",
+    "source_file": "msg/fld/011.m",
+    "offset": "0x58A",
+    "source_len": 136,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0103}",
+      "{CTRL_0000}",
+      "{CTRL_0003}",
+      "{CTRL_0002}",
+      "{CTRL_0001}"
+    ],
+    "encoded_len": 70,
+    "encoded_0300_offsets": [
+      26
+    ],
+    "around": [
+      {
+        "pos": 26,
+        "hex": "F4 EB F2 F8 F1 53 F1 53 03 01 00 00 03 00 02 00 F0 40 F1 53 F1 53 F1 53 F1 53",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "\\u300c\\u4eb2\\u70ed\\u4eb2\\u70ed\\u2026\\u2026\\u4eb2\\u70ed\\u2026\\u2026{CTRL_0103}{CTRL_0000}{CTRL_0003}{CTRL_0002}\\u300c\\u2026\\u2026\\u2026\\u2026\\u2026\\u2026\\u4ec0\\u4e48\\u5440\\uff1f{CTRL_0001}\\u80fd\\u522b\\u7ba1\\u6211\\u4eec\\u5417\\uff1f\\u300d"
+  },
+  {
+    "id": "zh_txt_31fd479b_001354_0062",
+    "source_file": "msg/fld/030.m",
+    "offset": "0x1354",
+    "source_len": 160,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0001}",
+      "{CTRL_0103}",
+      "{CTRL_0000}",
+      "{CTRL_0003}",
+      "{CTRL_0002}"
+    ],
+    "encoded_len": 108,
+    "encoded_0300_offsets": [
+      70
+    ],
+    "around": [
+      {
+        "pos": 70,
+        "hex": "F0 69 F0 D7 F0 43 F4 53 03 01 00 00 03 00 02 00 F7 CE 82 4F 82 4F F7 D2 F1 96",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "\\u201c\\u5267\\u573a\\u7248\\u3000NARUTO-\\u9e23\\u4eba-{CTRL_0001}\\u5927\\u5174\\u594b\\uff01\\u4e09\\u65e5\\u6708\\u5c9b\\u7684\\u52a8\\u7269\\u9a9a\\u52a8\\u7684\\u8bf4\\uff01\\u201d{CTRL_0103}{CTRL_0000}{CTRL_0003}{CTRL_0002}2006\\u5e748\\u67085\\u65e5\\u4e0a\\u6620\\u9884\\u5b9a\\uff01\\uff01\\uff01\\uff01"
+  },
+  {
+    "id": "zh_txt_a346a806_000472_0014",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x472",
+    "source_len": 28,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 18,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F2 4D F3 6A F0 82 F0",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_000F76_0050",
+    "source_file": "msg/fld/034.m",
+    "offset": "0xF76",
+    "source_len": 22,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 12,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F0 43 F4 53",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_00117C_0062",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x117C",
+    "source_len": 22,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 14,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F3 55 F0 43 F0 4C",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u54e6\\uff01\\u300d"
+  },
+  {
+    "id": "zh_txt_a346a806_001532_0082",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x1532",
+    "source_len": 28,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 18,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F2 4D F3 6A F0 82 F0",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_0016AE_0090",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x16AE",
+    "source_len": 22,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 12,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F0 43 F4 53",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001748_0094",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x1748",
+    "source_len": 28,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 18,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F2 4D F3 6A F0 82 F0",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001884_0100",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x1884",
+    "source_len": 22,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 12,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F0 43 F4 53",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_0019C0_0105",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x19C0",
+    "source_len": 30,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 18,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F2 4D F3 6A F0 82 F0",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001A52_0108",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x1A52",
+    "source_len": 28,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 18,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F2 4D F3 6A F0 82 F0",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001BC2_0115",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x1BC2",
+    "source_len": 28,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 18,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F2 4D F3 6A F0 82 F0",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001CA2_0119",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x1CA2",
+    "source_len": 30,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 18,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F2 4D F3 6A F0 82 F0",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  },
+  {
+    "id": "zh_txt_a346a806_001E92_0128",
+    "source_file": "msg/fld/034.m",
+    "offset": "0x1E92",
+    "source_len": 28,
+    "strategy": null,
+    "raw_controls": [],
+    "zh_controls": [
+      "{CTRL_0300}",
+      "{CTRL_0001}",
+      "{CTRL_8200}"
+    ],
+    "encoded_len": 18,
+    "encoded_0300_offsets": [
+      1
+    ],
+    "around": [
+      {
+        "pos": 1,
+        "hex": "00 03 00 82 F3 AE F0 4B F2 4D F3 6A F0 82 F0",
+        "bytes_at_pos": "03 00"
+      }
+    ],
+    "raw_text_escaped": "",
+    "zh_text_escaped": "{CTRL_0300}{CTRL_0001}{CTRL_8200}\\u7ed9\\u4f60\\u4e09\\u4e2a\\u5427\\uff01\\u201d"
+  }
+]

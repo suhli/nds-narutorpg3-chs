@@ -1,0 +1,4 @@
+id	source_file	offset	risk_type	strategy	positions	details
+zh_txt_0d5c73a4_000484_0016	msg/fld/011.m	0x484	multi_0300	early_03_zero_fill_after_terminator	48,96	between_first_last=mixed; between_len=46; evt=False
+zh_txt_0d5c73a4_00058A_0019	msg/fld/011.m	0x58A	multi_0300	early_03_zero_fill_after_terminator	46,90	between_first_last=mixed; between_len=42; evt=False
+zh_txt_31fd479b_001354_0062	msg/fld/030.m	0x1354	multi_0300	early_03_zero_fill_after_terminator	70,108	between_first_last=mixed; between_len=36; evt=False

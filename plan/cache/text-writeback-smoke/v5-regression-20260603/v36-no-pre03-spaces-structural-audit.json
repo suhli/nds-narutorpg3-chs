@@ -1,0 +1,1466 @@
+{
+  "text": {
+    "selected_rows": 5858,
+    "excluded_source_file_counts": {
+      "msg/wifi/kinshi_msg.msg": 1
+    },
+    "strategy_counts": {
+      "open_quote_text": 2454,
+      "preserve_prefix_before_open_quote": 285,
+      "fullwidth_space_fixed_slot": 2003,
+      "plain_message_text": 416,
+      "open_quote_text_preserve_scene_tail": 10,
+      "fullwidth_space_before_original_nul4_terminator": 580,
+      "translate_fixed_prefix_before_open_quote": 8,
+      "preserve_binary_tail_translate_yes_no_options": 6,
+      "preserve_prefix_before_sjis_text": 15,
+      "preserve_translated_yes_no_option_prefix_before_open_quote": 1,
+      "preserve_fixed_control_slot_offsets": 4,
+      "preserve_ctrl_0000_subslot_offsets": 74,
+      "early_nul4_zero_fill": 1,
+      "local_text_span_preserve_binary": 1
+    },
+    "source_strategy_counts": {
+      "msg/btl/000.m": {
+        "open_quote_text": 6
+      },
+      "msg/btl/001.m": {
+        "open_quote_text": 3
+      },
+      "msg/btl/002.m": {
+        "open_quote_text": 4
+      },
+      "msg/btl/003.m": {
+        "preserve_prefix_before_open_quote": 1,
+        "open_quote_text": 5
+      },
+      "msg/btl/008.m": {
+        "preserve_prefix_before_open_quote": 3
+      },
+      "msg/btl/010.m": {
+        "preserve_prefix_before_open_quote": 3
+      },
+      "msg/btl/015.m": {
+        "open_quote_text": 8
+      },
+      "msg/btl/023.m": {
+        "preserve_prefix_before_open_quote": 1
+      },
+      "msg/btl/026.m": {
+        "fullwidth_space_fixed_slot": 36
+      },
+      "msg/btl/027.m": {
+        "plain_message_text": 2,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/eiga/000.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/001.m": {
+        "plain_message_text": 1
+      },
+      "msg/eiga/002.m": {
+        "plain_message_text": 1
+      },
+      "msg/eiga/003.m": {
+        "plain_message_text": 1
+      },
+      "msg/eiga/004.m": {
+        "plain_message_text": 1
+      },
+      "msg/eiga/005.m": {
+        "plain_message_text": 1
+      },
+      "msg/eiga/006.m": {
+        "plain_message_text": 1
+      },
+      "msg/eiga/007.m": {
+        "plain_message_text": 1
+      },
+      "msg/eiga/008.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/009.m": {
+        "open_quote_text": 5,
+        "plain_message_text": 5,
+        "open_quote_text_preserve_scene_tail": 1
+      },
+      "msg/eiga/010.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/011.m": {
+        "open_quote_text": 9
+      },
+      "msg/eiga/012.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/013.m": {
+        "open_quote_text": 12,
+        "plain_message_text": 1
+      },
+      "msg/eiga/014.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/015.m": {
+        "open_quote_text": 7,
+        "plain_message_text": 4
+      },
+      "msg/eiga/016.m": {
+        "open_quote_text": 4
+      },
+      "msg/eiga/017.m": {
+        "open_quote_text": 6,
+        "plain_message_text": 1
+      },
+      "msg/eiga/018.m": {
+        "open_quote_text": 8
+      },
+      "msg/eiga/019.m": {
+        "open_quote_text": 5
+      },
+      "msg/eiga/020.m": {
+        "plain_message_text": 5,
+        "open_quote_text": 8,
+        "fullwidth_space_fixed_slot": 2,
+        "open_quote_text_preserve_scene_tail": 1
+      },
+      "msg/eiga/021.m": {
+        "open_quote_text": 3
+      },
+      "msg/eiga/022.m": {
+        "open_quote_text": 6,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 1
+      },
+      "msg/eiga/023.m": {
+        "open_quote_text": 9
+      },
+      "msg/eiga/024.m": {
+        "open_quote_text": 8
+      },
+      "msg/eiga/025.m": {
+        "open_quote_text": 9
+      },
+      "msg/eiga/026.m": {
+        "open_quote_text": 5
+      },
+      "msg/eiga/027.m": {
+        "open_quote_text": 5
+      },
+      "msg/eiga/028.m": {
+        "open_quote_text": 8
+      },
+      "msg/eiga/029.m": {
+        "open_quote_text": 3
+      },
+      "msg/eiga/030.m": {
+        "open_quote_text": 3
+      },
+      "msg/eiga/031.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/032.m": {
+        "open_quote_text": 4
+      },
+      "msg/eiga/033.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/034.m": {
+        "open_quote_text": 9,
+        "plain_message_text": 1
+      },
+      "msg/eiga/035.m": {
+        "open_quote_text": 8
+      },
+      "msg/eiga/036.m": {
+        "open_quote_text": 3
+      },
+      "msg/eiga/037.m": {
+        "open_quote_text": 10,
+        "plain_message_text": 1
+      },
+      "msg/eiga/038.m": {
+        "open_quote_text": 13
+      },
+      "msg/eiga/039.m": {
+        "open_quote_text": 17,
+        "preserve_prefix_before_open_quote": 4
+      },
+      "msg/eiga/040.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/041.m": {
+        "open_quote_text": 5,
+        "open_quote_text_preserve_scene_tail": 1,
+        "plain_message_text": 1
+      },
+      "msg/eiga/042.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/043.m": {
+        "open_quote_text": 14
+      },
+      "msg/eiga/044.m": {
+        "open_quote_text": 10,
+        "plain_message_text": 1
+      },
+      "msg/eiga/045.m": {
+        "open_quote_text": 12,
+        "plain_message_text": 2
+      },
+      "msg/eiga/046.m": {
+        "open_quote_text": 9,
+        "preserve_prefix_before_open_quote": 1
+      },
+      "msg/eiga/047.m": {
+        "open_quote_text": 9
+      },
+      "msg/eiga/048.m": {
+        "open_quote_text": 16,
+        "plain_message_text": 2
+      },
+      "msg/eiga/049.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/050.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/051.m": {
+        "open_quote_text": 2
+      },
+      "msg/eiga/052.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/053.m": {
+        "open_quote_text": 5,
+        "plain_message_text": 1
+      },
+      "msg/eiga/054.m": {
+        "open_quote_text": 11
+      },
+      "msg/eiga/055.m": {
+        "open_quote_text": 12
+      },
+      "msg/eiga/056.m": {
+        "open_quote_text": 8,
+        "plain_message_text": 1
+      },
+      "msg/eiga/057.m": {
+        "open_quote_text": 16
+      },
+      "msg/eiga/058.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/059.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/060.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/061.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/062.m": {
+        "open_quote_text": 6
+      },
+      "msg/eiga/063.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/064.m": {
+        "open_quote_text": 3
+      },
+      "msg/eiga/065.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/066.m": {
+        "plain_message_text": 3
+      },
+      "msg/eiga/067.m": {
+        "open_quote_text": 11
+      },
+      "msg/eiga/068.m": {
+        "open_quote_text": 8,
+        "open_quote_text_preserve_scene_tail": 1,
+        "plain_message_text": 1
+      },
+      "msg/eiga/069.m": {
+        "open_quote_text": 10,
+        "preserve_prefix_before_open_quote": 5
+      },
+      "msg/eiga/071.m": {
+        "plain_message_text": 4,
+        "open_quote_text": 10,
+        "open_quote_text_preserve_scene_tail": 1
+      },
+      "msg/eiga/072.m": {
+        "open_quote_text": 6
+      },
+      "msg/eiga/073.m": {
+        "open_quote_text": 6
+      },
+      "msg/eiga/074.m": {
+        "open_quote_text": 10
+      },
+      "msg/eiga/075.m": {
+        "open_quote_text": 13,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 1,
+        "preserve_prefix_before_open_quote": 3
+      },
+      "msg/eiga/076.m": {
+        "open_quote_text": 6,
+        "preserve_prefix_before_open_quote": 3
+      },
+      "msg/eiga/077.m": {
+        "open_quote_text": 14
+      },
+      "msg/eiga/078.m": {
+        "open_quote_text": 10
+      },
+      "msg/eiga/079.m": {
+        "open_quote_text": 6
+      },
+      "msg/eiga/080.m": {
+        "open_quote_text": 4
+      },
+      "msg/eiga/081.m": {
+        "open_quote_text": 3
+      },
+      "msg/eiga/082.m": {
+        "open_quote_text": 3
+      },
+      "msg/eiga/084.m": {
+        "open_quote_text": 6
+      },
+      "msg/eiga/085.m": {
+        "open_quote_text": 7
+      },
+      "msg/eiga/086.m": {
+        "open_quote_text": 15
+      },
+      "msg/eiga/087.m": {
+        "open_quote_text": 8
+      },
+      "msg/eiga/088.m": {
+        "open_quote_text": 5,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/eiga/089.m": {
+        "open_quote_text": 17,
+        "plain_message_text": 5,
+        "open_quote_text_preserve_scene_tail": 1
+      },
+      "msg/eiga/msg_eiga_fail.msg": {
+        "open_quote_text": 39,
+        "preserve_prefix_before_open_quote": 1
+      },
+      "msg/equip_msg.msg": {
+        "fullwidth_space_before_original_nul4_terminator": 137
+      },
+      "msg/fld/000.m": {
+        "open_quote_text": 14,
+        "plain_message_text": 2,
+        "translate_fixed_prefix_before_open_quote": 1,
+        "preserve_binary_tail_translate_yes_no_options": 1
+      },
+      "msg/fld/001.m": {
+        "open_quote_text": 5,
+        "translate_fixed_prefix_before_open_quote": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/002.m": {
+        "open_quote_text": 15,
+        "translate_fixed_prefix_before_open_quote": 1,
+        "plain_message_text": 1,
+        "preserve_binary_tail_translate_yes_no_options": 1
+      },
+      "msg/fld/003.m": {
+        "open_quote_text": 13
+      },
+      "msg/fld/004.m": {
+        "open_quote_text": 5,
+        "plain_message_text": 11,
+        "preserve_binary_tail_translate_yes_no_options": 1
+      },
+      "msg/fld/005.m": {
+        "plain_message_text": 5,
+        "preserve_prefix_before_sjis_text": 1
+      },
+      "msg/fld/006.m": {
+        "open_quote_text": 9,
+        "translate_fixed_prefix_before_open_quote": 1,
+        "plain_message_text": 2
+      },
+      "msg/fld/007.m": {
+        "open_quote_text": 4,
+        "plain_message_text": 4
+      },
+      "msg/fld/008.m": {
+        "open_quote_text": 24,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/009.m": {
+        "open_quote_text": 6,
+        "plain_message_text": 3
+      },
+      "msg/fld/010.m": {
+        "plain_message_text": 1
+      },
+      "msg/fld/011.m": {
+        "preserve_prefix_before_open_quote": 2,
+        "open_quote_text": 19,
+        "translate_fixed_prefix_before_open_quote": 2,
+        "fullwidth_space_fixed_slot": 6,
+        "plain_message_text": 5,
+        "preserve_translated_yes_no_option_prefix_before_open_quote": 1
+      },
+      "msg/fld/012.m": {
+        "open_quote_text": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/013.m": {
+        "open_quote_text": 15
+      },
+      "msg/fld/014.m": {
+        "open_quote_text": 5
+      },
+      "msg/fld/015.m": {
+        "open_quote_text": 3
+      },
+      "msg/fld/017.m": {
+        "open_quote_text": 4
+      },
+      "msg/fld/018.m": {
+        "open_quote_text": 11,
+        "preserve_prefix_before_open_quote": 9,
+        "plain_message_text": 10,
+        "fullwidth_space_fixed_slot": 4,
+        "preserve_prefix_before_sjis_text": 3
+      },
+      "msg/fld/019.m": {
+        "open_quote_text": 26,
+        "preserve_prefix_before_open_quote": 3,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/020.m": {
+        "open_quote_text": 11
+      },
+      "msg/fld/021.m": {
+        "open_quote_text": 16,
+        "preserve_prefix_before_open_quote": 4,
+        "fullwidth_space_fixed_slot": 1,
+        "preserve_binary_tail_translate_yes_no_options": 1
+      },
+      "msg/fld/022.m": {
+        "open_quote_text": 46
+      },
+      "msg/fld/023.m": {
+        "open_quote_text": 25,
+        "preserve_prefix_before_open_quote": 2
+      },
+      "msg/fld/024.m": {
+        "open_quote_text": 2
+      },
+      "msg/fld/025.m": {
+        "open_quote_text": 6
+      },
+      "msg/fld/026.m": {
+        "open_quote_text": 7
+      },
+      "msg/fld/027.m": {
+        "open_quote_text": 7,
+        "translate_fixed_prefix_before_open_quote": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/028.m": {
+        "open_quote_text": 2
+      },
+      "msg/fld/029.m": {
+        "open_quote_text": 93,
+        "preserve_fixed_control_slot_offsets": 1,
+        "preserve_prefix_before_open_quote": 2
+      },
+      "msg/fld/030.m": {
+        "open_quote_text": 62,
+        "plain_message_text": 4
+      },
+      "msg/fld/031.m": {
+        "open_quote_text": 43,
+        "plain_message_text": 1
+      },
+      "msg/fld/032.m": {
+        "open_quote_text": 12
+      },
+      "msg/fld/033.m": {
+        "open_quote_text": 30,
+        "translate_fixed_prefix_before_open_quote": 1
+      },
+      "msg/fld/034.m": {
+        "open_quote_text": 109,
+        "preserve_prefix_before_open_quote": 5,
+        "fullwidth_space_fixed_slot": 26,
+        "plain_message_text": 32,
+        "preserve_prefix_before_sjis_text": 6,
+        "fullwidth_space_before_original_nul4_terminator": 2
+      },
+      "msg/fld/035.m": {
+        "preserve_prefix_before_open_quote": 1,
+        "open_quote_text": 4
+      },
+      "msg/fld/036.m": {
+        "plain_message_text": 5,
+        "open_quote_text": 22,
+        "preserve_binary_tail_translate_yes_no_options": 1
+      },
+      "msg/fld/037.m": {
+        "open_quote_text": 17,
+        "plain_message_text": 4,
+        "preserve_prefix_before_open_quote": 6,
+        "preserve_binary_tail_translate_yes_no_options": 1
+      },
+      "msg/fld/038.m": {
+        "open_quote_text": 4,
+        "plain_message_text": 6
+      },
+      "msg/fld/039.m": {
+        "plain_message_text": 2,
+        "open_quote_text": 6
+      },
+      "msg/fld/040.m": {
+        "plain_message_text": 10,
+        "open_quote_text": 2
+      },
+      "msg/fld/041.m": {
+        "open_quote_text": 11,
+        "plain_message_text": 8
+      },
+      "msg/fld/042.m": {
+        "open_quote_text": 2
+      },
+      "msg/fld/043.m": {
+        "plain_message_text": 6,
+        "open_quote_text": 2
+      },
+      "msg/fld/045.m": {
+        "open_quote_text": 1
+      },
+      "msg/fld/050.m": {
+        "open_quote_text": 5
+      },
+      "msg/fld/056.m": {
+        "open_quote_text": 23,
+        "plain_message_text": 3
+      },
+      "msg/fld/058.m": {
+        "open_quote_text": 7,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/059.m": {
+        "open_quote_text": 2
+      },
+      "msg/fld/067.m": {
+        "open_quote_text": 10,
+        "plain_message_text": 6
+      },
+      "msg/fld/068.m": {
+        "plain_message_text": 1
+      },
+      "msg/fld/069.m": {
+        "open_quote_text": 1
+      },
+      "msg/fld/070.m": {
+        "open_quote_text": 8,
+        "plain_message_text": 2
+      },
+      "msg/fld/071.m": {
+        "open_quote_text": 19,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/072.m": {
+        "open_quote_text": 2
+      },
+      "msg/fld/073.m": {
+        "preserve_prefix_before_open_quote": 4,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/000.m": {
+        "preserve_prefix_before_open_quote": 28,
+        "open_quote_text": 7,
+        "preserve_fixed_control_slot_offsets": 1
+      },
+      "msg/fld/evt/001.m": {
+        "open_quote_text": 18,
+        "plain_message_text": 5,
+        "preserve_fixed_control_slot_offsets": 2,
+        "preserve_prefix_before_open_quote": 11
+      },
+      "msg/fld/evt/002.m": {
+        "open_quote_text": 19,
+        "preserve_prefix_before_open_quote": 6
+      },
+      "msg/fld/evt/003.m": {
+        "open_quote_text": 48,
+        "preserve_prefix_before_open_quote": 13,
+        "plain_message_text": 1,
+        "preserve_prefix_before_sjis_text": 1
+      },
+      "msg/fld/evt/004.m": {
+        "open_quote_text": 26,
+        "preserve_prefix_before_open_quote": 3,
+        "fullwidth_space_fixed_slot": 2
+      },
+      "msg/fld/evt/005.m": {
+        "open_quote_text": 3,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/006.m": {
+        "open_quote_text": 21,
+        "preserve_prefix_before_open_quote": 9
+      },
+      "msg/fld/evt/007.m": {
+        "open_quote_text": 31,
+        "plain_message_text": 4,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/evt/008.m": {
+        "open_quote_text": 3
+      },
+      "msg/fld/evt/009.m": {
+        "open_quote_text": 13
+      },
+      "msg/fld/evt/010.m": {
+        "open_quote_text": 18,
+        "preserve_prefix_before_open_quote": 1,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/evt/011.m": {
+        "open_quote_text": 5,
+        "preserve_prefix_before_open_quote": 2
+      },
+      "msg/fld/evt/012.m": {
+        "open_quote_text": 10,
+        "preserve_prefix_before_open_quote": 4
+      },
+      "msg/fld/evt/013.m": {
+        "open_quote_text": 4
+      },
+      "msg/fld/evt/014.m": {
+        "open_quote_text": 9
+      },
+      "msg/fld/evt/015.m": {
+        "open_quote_text": 11
+      },
+      "msg/fld/evt/017.m": {
+        "open_quote_text": 15,
+        "open_quote_text_preserve_scene_tail": 1,
+        "plain_message_text": 1,
+        "preserve_prefix_before_sjis_text": 1
+      },
+      "msg/fld/evt/018.m": {
+        "preserve_prefix_before_open_quote": 9,
+        "open_quote_text": 4
+      },
+      "msg/fld/evt/019.m": {
+        "open_quote_text": 38,
+        "preserve_prefix_before_open_quote": 1,
+        "plain_message_text": 2
+      },
+      "msg/fld/evt/020.m": {
+        "open_quote_text": 3
+      },
+      "msg/fld/evt/021.m": {
+        "open_quote_text": 5,
+        "open_quote_text_preserve_scene_tail": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/022.m": {
+        "open_quote_text": 11,
+        "plain_message_text": 2
+      },
+      "msg/fld/evt/023.m": {
+        "open_quote_text": 10,
+        "preserve_prefix_before_open_quote": 3,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/024.m": {
+        "preserve_prefix_before_open_quote": 5,
+        "open_quote_text": 11
+      },
+      "msg/fld/evt/025.m": {
+        "open_quote_text": 7,
+        "preserve_prefix_before_open_quote": 1,
+        "fullwidth_space_fixed_slot": 2,
+        "plain_message_text": 4
+      },
+      "msg/fld/evt/026.m": {
+        "plain_message_text": 2,
+        "open_quote_text": 7
+      },
+      "msg/fld/evt/027.m": {
+        "open_quote_text": 9,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 2
+      },
+      "msg/fld/evt/028.m": {
+        "open_quote_text": 5,
+        "preserve_prefix_before_open_quote": 4
+      },
+      "msg/fld/evt/029.m": {
+        "open_quote_text": 8
+      },
+      "msg/fld/evt/030.m": {
+        "open_quote_text": 13,
+        "preserve_prefix_before_open_quote": 1
+      },
+      "msg/fld/evt/032.m": {
+        "open_quote_text": 5,
+        "preserve_prefix_before_sjis_text": 1
+      },
+      "msg/fld/evt/033.m": {
+        "preserve_prefix_before_open_quote": 7
+      },
+      "msg/fld/evt/034.m": {
+        "open_quote_text": 44,
+        "preserve_prefix_before_open_quote": 2,
+        "plain_message_text": 2
+      },
+      "msg/fld/evt/035.m": {
+        "open_quote_text": 7
+      },
+      "msg/fld/evt/036.m": {
+        "open_quote_text": 26,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/evt/037.m": {
+        "open_quote_text": 10,
+        "plain_message_text": 3
+      },
+      "msg/fld/evt/038.m": {
+        "open_quote_text": 6
+      },
+      "msg/fld/evt/039.m": {
+        "open_quote_text": 12,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/evt/040.m": {
+        "open_quote_text": 6,
+        "preserve_prefix_before_open_quote": 2
+      },
+      "msg/fld/evt/041.m": {
+        "open_quote_text": 10,
+        "preserve_prefix_before_open_quote": 1
+      },
+      "msg/fld/evt/042.m": {
+        "preserve_prefix_before_open_quote": 3,
+        "open_quote_text": 9,
+        "plain_message_text": 2
+      },
+      "msg/fld/evt/043.m": {
+        "open_quote_text": 5
+      },
+      "msg/fld/evt/044.m": {
+        "open_quote_text": 7
+      },
+      "msg/fld/evt/046.m": {
+        "open_quote_text": 22,
+        "preserve_prefix_before_sjis_text": 1
+      },
+      "msg/fld/evt/047.m": {
+        "open_quote_text": 25,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 1,
+        "preserve_prefix_before_open_quote": 1
+      },
+      "msg/fld/evt/048.m": {
+        "open_quote_text": 26,
+        "plain_message_text": 3
+      },
+      "msg/fld/evt/049.m": {
+        "open_quote_text": 10
+      },
+      "msg/fld/evt/050.m": {
+        "open_quote_text": 3
+      },
+      "msg/fld/evt/051.m": {
+        "open_quote_text": 11,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/052.m": {
+        "open_quote_text": 3
+      },
+      "msg/fld/evt/053.m": {
+        "open_quote_text": 13
+      },
+      "msg/fld/evt/055.m": {
+        "open_quote_text": 33,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/evt/056.m": {
+        "preserve_prefix_before_open_quote": 4,
+        "open_quote_text": 3
+      },
+      "msg/fld/evt/057.m": {
+        "open_quote_text": 8,
+        "preserve_prefix_before_open_quote": 3
+      },
+      "msg/fld/evt/058.m": {
+        "open_quote_text": 8
+      },
+      "msg/fld/evt/059.m": {
+        "open_quote_text": 4
+      },
+      "msg/fld/evt/060.m": {
+        "open_quote_text": 9,
+        "open_quote_text_preserve_scene_tail": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/061.m": {
+        "open_quote_text": 11,
+        "preserve_prefix_before_sjis_text": 1
+      },
+      "msg/fld/evt/062.m": {
+        "preserve_prefix_before_open_quote": 7,
+        "open_quote_text": 1
+      },
+      "msg/fld/evt/063.m": {
+        "open_quote_text": 19,
+        "preserve_prefix_before_open_quote": 3
+      },
+      "msg/fld/evt/064.m": {
+        "open_quote_text": 17
+      },
+      "msg/fld/evt/065.m": {
+        "open_quote_text": 1
+      },
+      "msg/fld/evt/066.m": {
+        "open_quote_text": 26,
+        "preserve_prefix_before_open_quote": 12
+      },
+      "msg/fld/evt/067.m": {
+        "preserve_prefix_before_open_quote": 11,
+        "open_quote_text": 8
+      },
+      "msg/fld/evt/068.m": {
+        "preserve_prefix_before_open_quote": 19,
+        "open_quote_text": 34
+      },
+      "msg/fld/evt/069.m": {
+        "preserve_prefix_before_open_quote": 9,
+        "open_quote_text": 26
+      },
+      "msg/fld/evt/070.m": {
+        "preserve_prefix_before_open_quote": 1,
+        "open_quote_text": 1
+      },
+      "msg/fld/evt/071.m": {
+        "open_quote_text": 1
+      },
+      "msg/fld/evt/073.m": {
+        "open_quote_text": 2
+      },
+      "msg/fld/evt/074.m": {
+        "preserve_prefix_before_open_quote": 11,
+        "open_quote_text": 5,
+        "open_quote_text_preserve_scene_tail": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/076.m": {
+        "open_quote_text": 9,
+        "plain_message_text": 3
+      },
+      "msg/fld/evt/077.m": {
+        "open_quote_text": 25,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/078.m": {
+        "open_quote_text": 5,
+        "preserve_prefix_before_open_quote": 2
+      },
+      "msg/fld/evt/079.m": {
+        "preserve_prefix_before_open_quote": 1,
+        "open_quote_text": 3
+      },
+      "msg/fld/evt/080.m": {
+        "open_quote_text": 11,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/081.m": {
+        "preserve_prefix_before_open_quote": 3,
+        "open_quote_text": 4
+      },
+      "msg/fld/evt/082.m": {
+        "open_quote_text": 10,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/evt/083.m": {
+        "open_quote_text": 10,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/evt/084.m": {
+        "open_quote_text": 10,
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/fld/evt/085.m": {
+        "open_quote_text": 1
+      },
+      "msg/fld/evt/086.m": {
+        "open_quote_text": 22,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 2
+      },
+      "msg/fld/evt/087.m": {
+        "open_quote_text": 6
+      },
+      "msg/fld/evt/088.m": {
+        "open_quote_text": 8,
+        "fullwidth_space_fixed_slot": 1,
+        "plain_message_text": 1
+      },
+      "msg/fld/evt/089.m": {
+        "preserve_prefix_before_open_quote": 1,
+        "open_quote_text": 2
+      },
+      "msg/fld/evt/090.m": {
+        "open_quote_text": 9
+      },
+      "msg/fld/evt/091.m": {
+        "open_quote_text": 14
+      },
+      "msg/fld/evt/092.m": {
+        "open_quote_text": 7
+      },
+      "msg/fld/evt/093.m": {
+        "open_quote_text": 11
+      },
+      "msg/fld/evt/094.m": {
+        "preserve_prefix_before_open_quote": 9,
+        "open_quote_text": 26
+      },
+      "msg/fld/evt/095.m": {
+        "preserve_prefix_before_open_quote": 9,
+        "open_quote_text": 26
+      },
+      "msg/help_msg.msg": {
+        "plain_message_text": 16
+      },
+      "msg/item_msg.msg": {
+        "fullwidth_space_before_original_nul4_terminator": 176,
+        "preserve_ctrl_0000_subslot_offsets": 5
+      },
+      "msg/jinkei_msg.msg": {
+        "fullwidth_space_before_original_nul4_terminator": 1
+      },
+      "msg/jyutu_msg.msg": {
+        "fullwidth_space_before_original_nul4_terminator": 258,
+        "preserve_ctrl_0000_subslot_offsets": 5
+      },
+      "msg/kumite/select_msg.msg": {
+        "plain_message_text": 1
+      },
+      "msg/kumite/team_msg.msg": {
+        "fullwidth_space_before_original_nul4_terminator": 1
+      },
+      "msg/menu/battle_result_msg.msg": {
+        "early_nul4_zero_fill": 1,
+        "plain_message_text": 2
+      },
+      "msg/menu/calling_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/equip_menu_msg.msg": {
+        "plain_message_text": 6,
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/item_menu_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 1,
+        "plain_message_text": 23
+      },
+      "msg/menu/jinkei_menu_msg.msg": {
+        "plain_message_text": 1,
+        "fullwidth_space_fixed_slot": 1,
+        "local_text_span_preserve_binary": 1
+      },
+      "msg/menu/jyutu_menu_msg.msg": {
+        "plain_message_text": 6
+      },
+      "msg/menu/kutiyose_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/member_menu_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 2,
+        "plain_message_text": 1
+      },
+      "msg/menu/movie_msg.msg": {
+        "plain_message_text": 2,
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/save_msg.msg": {
+        "plain_message_text": 7,
+        "fullwidth_space_fixed_slot": 3,
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/savecreate_msg.msg": {
+        "plain_message_text": 7,
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/savedelete_msg.msg": {
+        "plain_message_text": 5,
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/saveload_msg.msg": {
+        "plain_message_text": 9,
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/shop_msg.msg": {
+        "plain_message_text": 8,
+        "preserve_ctrl_0000_subslot_offsets": 2
+      },
+      "msg/menu/skill_menu_msg.msg": {
+        "plain_message_text": 10,
+        "preserve_ctrl_0000_subslot_offsets": 2
+      },
+      "msg/menu/status_menu_msg.msg": {
+        "plain_message_text": 1,
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/menu/top_menu_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/skill_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/taityou_kouka.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/testmsg.msg": {
+        "fullwidth_space_before_original_nul4_terminator": 1
+      },
+      "msg/title/download_play_child_msg.msg": {
+        "plain_message_text": 1,
+        "fullwidth_space_before_original_nul4_terminator": 1
+      },
+      "msg/title/download_play_msg.msg": {
+        "fullwidth_space_before_original_nul4_terminator": 3
+      },
+      "msg/title/opening_title_msg.msg": {
+        "fullwidth_space_fixed_slot": 1
+      },
+      "msg/wifi/btlres_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 2
+      },
+      "msg/wifi/connect_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 18,
+        "plain_message_text": 4
+      },
+      "msg/wifi/error_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 10,
+        "plain_message_text": 2
+      },
+      "msg/wifi/friend_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 6,
+        "plain_message_text": 13
+      },
+      "msg/wifi/rule_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 2,
+        "fullwidth_space_fixed_slot": 9
+      },
+      "msg/wifi/taisen_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 1
+      },
+      "msg/wifi/vs_msg.msg": {
+        "preserve_ctrl_0000_subslot_offsets": 6
+      },
+      "param/item_data.dat": {
+        "fullwidth_space_fixed_slot": 659
+      },
+      "param/jyutu_data.dat": {
+        "fullwidth_space_fixed_slot": 466
+      },
+      "param/map_data_tbl.dat": {
+        "fullwidth_space_fixed_slot": 87
+      },
+      "param/mo_l/mo_l_param.dat": {
+        "fullwidth_space_fixed_slot": 18
+      },
+      "param/mo_s/mo_s_param.dat": {
+        "fullwidth_space_fixed_slot": 252
+      },
+      "param/skill_data.dat": {
+        "fullwidth_space_fixed_slot": 405
+      }
+    },
+    "fixed_subslot_row_count": 74,
+    "fixed_subslot_rows_by_source": {
+      "msg/item_msg.msg": 5,
+      "msg/jyutu_msg.msg": 5,
+      "msg/menu/calling_msg.msg": 1,
+      "msg/menu/equip_menu_msg.msg": 1,
+      "msg/menu/item_menu_msg.msg": 1,
+      "msg/menu/kutiyose_msg.msg": 1,
+      "msg/menu/member_menu_msg.msg": 2,
+      "msg/menu/movie_msg.msg": 1,
+      "msg/menu/save_msg.msg": 1,
+      "msg/menu/savecreate_msg.msg": 1,
+      "msg/menu/savedelete_msg.msg": 1,
+      "msg/menu/saveload_msg.msg": 1,
+      "msg/menu/shop_msg.msg": 2,
+      "msg/menu/skill_menu_msg.msg": 2,
+      "msg/menu/status_menu_msg.msg": 1,
+      "msg/menu/top_menu_msg.msg": 1,
+      "msg/skill_msg.msg": 1,
+      "msg/taityou_kouka.msg": 1,
+      "msg/wifi/btlres_msg.msg": 2,
+      "msg/wifi/connect_msg.msg": 18,
+      "msg/wifi/error_msg.msg": 10,
+      "msg/wifi/friend_msg.msg": 6,
+      "msg/wifi/rule_msg.msg": 2,
+      "msg/wifi/taisen_msg.msg": 1,
+      "msg/wifi/vs_msg.msg": 6
+    },
+    "early_03_row_count": 1816,
+    "early_03_rows_by_source": {
+      "msg/btl/000.m": 6,
+      "msg/btl/001.m": 3,
+      "msg/btl/002.m": 4,
+      "msg/btl/003.m": 6,
+      "msg/btl/008.m": 3,
+      "msg/btl/010.m": 3,
+      "msg/btl/015.m": 8,
+      "msg/btl/023.m": 1,
+      "msg/btl/027.m": 2,
+      "msg/eiga/000.m": 3,
+      "msg/eiga/001.m": 1,
+      "msg/eiga/002.m": 1,
+      "msg/eiga/003.m": 1,
+      "msg/eiga/004.m": 1,
+      "msg/eiga/005.m": 1,
+      "msg/eiga/006.m": 1,
+      "msg/eiga/007.m": 1,
+      "msg/eiga/008.m": 3,
+      "msg/eiga/009.m": 10,
+      "msg/eiga/010.m": 3,
+      "msg/eiga/011.m": 9,
+      "msg/eiga/012.m": 3,
+      "msg/eiga/013.m": 13,
+      "msg/eiga/014.m": 3,
+      "msg/eiga/015.m": 11,
+      "msg/eiga/016.m": 4,
+      "msg/eiga/017.m": 7,
+      "msg/eiga/018.m": 8,
+      "msg/eiga/019.m": 5,
+      "msg/eiga/020.m": 13,
+      "msg/eiga/021.m": 3,
+      "msg/eiga/022.m": 7,
+      "msg/eiga/023.m": 9,
+      "msg/eiga/024.m": 8,
+      "msg/eiga/025.m": 9,
+      "msg/eiga/026.m": 5,
+      "msg/eiga/027.m": 5,
+      "msg/eiga/028.m": 8,
+      "msg/eiga/029.m": 3,
+      "msg/eiga/030.m": 3,
+      "msg/eiga/031.m": 3,
+      "msg/eiga/032.m": 4,
+      "msg/eiga/033.m": 3,
+      "msg/eiga/034.m": 10,
+      "msg/eiga/035.m": 8,
+      "msg/eiga/036.m": 3,
+      "msg/eiga/037.m": 11,
+      "msg/eiga/038.m": 13,
+      "msg/eiga/039.m": 21,
+      "msg/eiga/040.m": 3,
+      "msg/eiga/041.m": 6,
+      "msg/eiga/042.m": 3,
+      "msg/eiga/043.m": 14,
+      "msg/eiga/044.m": 11,
+      "msg/eiga/045.m": 14,
+      "msg/eiga/046.m": 10,
+      "msg/eiga/047.m": 9,
+      "msg/eiga/048.m": 18,
+      "msg/eiga/049.m": 3,
+      "msg/eiga/050.m": 3,
+      "msg/eiga/051.m": 2,
+      "msg/eiga/052.m": 3,
+      "msg/eiga/053.m": 6,
+      "msg/eiga/054.m": 11,
+      "msg/eiga/055.m": 12,
+      "msg/eiga/056.m": 9,
+      "msg/eiga/057.m": 16,
+      "msg/eiga/058.m": 3,
+      "msg/eiga/059.m": 3,
+      "msg/eiga/060.m": 3,
+      "msg/eiga/061.m": 3,
+      "msg/eiga/062.m": 6,
+      "msg/eiga/063.m": 3,
+      "msg/eiga/064.m": 3,
+      "msg/eiga/065.m": 3,
+      "msg/eiga/066.m": 3,
+      "msg/eiga/067.m": 11,
+      "msg/eiga/068.m": 9,
+      "msg/eiga/069.m": 15,
+      "msg/eiga/071.m": 14,
+      "msg/eiga/072.m": 6,
+      "msg/eiga/073.m": 6,
+      "msg/eiga/074.m": 10,
+      "msg/eiga/075.m": 17,
+      "msg/eiga/076.m": 9,
+      "msg/eiga/077.m": 14,
+      "msg/eiga/078.m": 10,
+      "msg/eiga/079.m": 6,
+      "msg/eiga/080.m": 4,
+      "msg/eiga/081.m": 3,
+      "msg/eiga/082.m": 3,
+      "msg/eiga/084.m": 6,
+      "msg/eiga/085.m": 7,
+      "msg/eiga/086.m": 15,
+      "msg/eiga/087.m": 8,
+      "msg/eiga/088.m": 5,
+      "msg/eiga/089.m": 22,
+      "msg/eiga/msg_eiga_fail.msg": 40,
+      "msg/fld/000.m": 17,
+      "msg/fld/001.m": 7,
+      "msg/fld/002.m": 17,
+      "msg/fld/003.m": 13,
+      "msg/fld/004.m": 16,
+      "msg/fld/005.m": 6,
+      "msg/fld/006.m": 12,
+      "msg/fld/007.m": 8,
+      "msg/fld/008.m": 25,
+      "msg/fld/009.m": 9,
+      "msg/fld/010.m": 1,
+      "msg/fld/011.m": 29,
+      "msg/fld/012.m": 2,
+      "msg/fld/013.m": 15,
+      "msg/fld/014.m": 5,
+      "msg/fld/015.m": 3,
+      "msg/fld/017.m": 4,
+      "msg/fld/018.m": 33,
+      "msg/fld/019.m": 29,
+      "msg/fld/020.m": 11,
+      "msg/fld/021.m": 20,
+      "msg/fld/022.m": 46,
+      "msg/fld/023.m": 27,
+      "msg/fld/024.m": 2,
+      "msg/fld/025.m": 6,
+      "msg/fld/026.m": 7,
+      "msg/fld/027.m": 9,
+      "msg/fld/028.m": 2,
+      "msg/fld/029.m": 95,
+      "msg/fld/030.m": 66,
+      "msg/fld/031.m": 44,
+      "msg/fld/032.m": 12,
+      "msg/fld/033.m": 31,
+      "msg/fld/034.m": 152,
+      "msg/fld/035.m": 5,
+      "msg/fld/036.m": 27,
+      "msg/fld/037.m": 27,
+      "msg/fld/038.m": 10,
+      "msg/fld/039.m": 8,
+      "msg/fld/040.m": 12,
+      "msg/fld/041.m": 19,
+      "msg/fld/042.m": 2,
+      "msg/fld/043.m": 8,
+      "msg/fld/045.m": 1,
+      "msg/fld/050.m": 5,
+      "msg/fld/056.m": 26,
+      "msg/fld/058.m": 7,
+      "msg/fld/059.m": 2,
+      "msg/fld/067.m": 16,
+      "msg/fld/068.m": 1,
+      "msg/fld/069.m": 1,
+      "msg/fld/070.m": 10,
+      "msg/fld/071.m": 19,
+      "msg/fld/072.m": 2,
+      "msg/fld/073.m": 5,
+      "msg/help_msg.msg": 16,
+      "msg/kumite/select_msg.msg": 1,
+      "msg/menu/battle_result_msg.msg": 2,
+      "msg/menu/equip_menu_msg.msg": 6,
+      "msg/menu/item_menu_msg.msg": 23,
+      "msg/menu/jinkei_menu_msg.msg": 1,
+      "msg/menu/jyutu_menu_msg.msg": 6,
+      "msg/menu/member_menu_msg.msg": 1,
+      "msg/menu/movie_msg.msg": 2,
+      "msg/menu/save_msg.msg": 7,
+      "msg/menu/savecreate_msg.msg": 7,
+      "msg/menu/savedelete_msg.msg": 5,
+      "msg/menu/saveload_msg.msg": 9,
+      "msg/menu/shop_msg.msg": 8,
+      "msg/menu/skill_menu_msg.msg": 10,
+      "msg/menu/status_menu_msg.msg": 1,
+      "msg/title/download_play_child_msg.msg": 1,
+      "msg/wifi/connect_msg.msg": 4,
+      "msg/wifi/error_msg.msg": 2,
+      "msg/wifi/friend_msg.msg": 13
+    },
+    "early_03_fullwidth_fill_row_count": 0,
+    "early_03_fullwidth_fill_rows_by_source": {},
+    "event_script_early_03_fullwidth_fill_row_count": 1363,
+    "event_script_early_03_fullwidth_fill_rows_by_source": {
+      "msg/fld/evt/000.m": 35,
+      "msg/fld/evt/001.m": 34,
+      "msg/fld/evt/002.m": 25,
+      "msg/fld/evt/003.m": 63,
+      "msg/fld/evt/004.m": 29,
+      "msg/fld/evt/005.m": 4,
+      "msg/fld/evt/006.m": 30,
+      "msg/fld/evt/007.m": 35,
+      "msg/fld/evt/008.m": 3,
+      "msg/fld/evt/009.m": 13,
+      "msg/fld/evt/010.m": 19,
+      "msg/fld/evt/011.m": 7,
+      "msg/fld/evt/012.m": 14,
+      "msg/fld/evt/013.m": 4,
+      "msg/fld/evt/014.m": 9,
+      "msg/fld/evt/015.m": 11,
+      "msg/fld/evt/017.m": 17,
+      "msg/fld/evt/018.m": 13,
+      "msg/fld/evt/019.m": 41,
+      "msg/fld/evt/020.m": 3,
+      "msg/fld/evt/021.m": 6,
+      "msg/fld/evt/022.m": 13,
+      "msg/fld/evt/023.m": 14,
+      "msg/fld/evt/024.m": 16,
+      "msg/fld/evt/025.m": 12,
+      "msg/fld/evt/026.m": 9,
+      "msg/fld/evt/027.m": 11,
+      "msg/fld/evt/028.m": 9,
+      "msg/fld/evt/029.m": 8,
+      "msg/fld/evt/030.m": 14,
+      "msg/fld/evt/032.m": 6,
+      "msg/fld/evt/033.m": 7,
+      "msg/fld/evt/034.m": 48,
+      "msg/fld/evt/035.m": 7,
+      "msg/fld/evt/036.m": 26,
+      "msg/fld/evt/037.m": 13,
+      "msg/fld/evt/038.m": 6,
+      "msg/fld/evt/039.m": 12,
+      "msg/fld/evt/040.m": 8,
+      "msg/fld/evt/041.m": 11,
+      "msg/fld/evt/042.m": 14,
+      "msg/fld/evt/043.m": 5,
+      "msg/fld/evt/044.m": 7,
+      "msg/fld/evt/046.m": 23,
+      "msg/fld/evt/047.m": 27,
+      "msg/fld/evt/048.m": 29,
+      "msg/fld/evt/049.m": 10,
+      "msg/fld/evt/050.m": 3,
+      "msg/fld/evt/051.m": 12,
+      "msg/fld/evt/052.m": 3,
+      "msg/fld/evt/053.m": 13,
+      "msg/fld/evt/055.m": 33,
+      "msg/fld/evt/056.m": 7,
+      "msg/fld/evt/057.m": 11,
+      "msg/fld/evt/058.m": 8,
+      "msg/fld/evt/059.m": 4,
+      "msg/fld/evt/060.m": 10,
+      "msg/fld/evt/061.m": 12,
+      "msg/fld/evt/062.m": 8,
+      "msg/fld/evt/063.m": 22,
+      "msg/fld/evt/064.m": 17,
+      "msg/fld/evt/065.m": 1,
+      "msg/fld/evt/066.m": 38,
+      "msg/fld/evt/067.m": 19,
+      "msg/fld/evt/068.m": 53,
+      "msg/fld/evt/069.m": 35,
+      "msg/fld/evt/070.m": 2,
+      "msg/fld/evt/071.m": 1,
+      "msg/fld/evt/073.m": 2,
+      "msg/fld/evt/074.m": 17,
+      "msg/fld/evt/076.m": 12,
+      "msg/fld/evt/077.m": 26,
+      "msg/fld/evt/078.m": 7,
+      "msg/fld/evt/079.m": 4,
+      "msg/fld/evt/080.m": 12,
+      "msg/fld/evt/081.m": 7,
+      "msg/fld/evt/082.m": 10,
+      "msg/fld/evt/083.m": 10,
+      "msg/fld/evt/084.m": 10,
+      "msg/fld/evt/085.m": 1,
+      "msg/fld/evt/086.m": 24,
+      "msg/fld/evt/087.m": 6,
+      "msg/fld/evt/088.m": 9,
+      "msg/fld/evt/089.m": 3,
+      "msg/fld/evt/090.m": 9,
+      "msg/fld/evt/091.m": 14,
+      "msg/fld/evt/092.m": 7,
+      "msg/fld/evt/093.m": 11,
+      "msg/fld/evt/094.m": 35,
+      "msg/fld/evt/095.m": 35
+    },
+    "event_script_fixed_control_final_03_fullwidth_fill_row_count": 3,
+    "event_script_fixed_control_final_03_fullwidth_fill_rows_by_source": {
+      "msg/fld/evt/000.m": 1,
+      "msg/fld/evt/001.m": 2
+    },
+    "fixed_control_final_03_fullwidth_fill_row_count": 1,
+    "fixed_control_final_03_fullwidth_fill_rows_by_source": {
+      "msg/fld/029.m": 1
+    },
+    "fixed_subslot_final_03_fullwidth_fill_row_count": 52,
+    "fixed_subslot_final_03_fullwidth_fill_rows_by_source": {
+      "msg/menu/equip_menu_msg.msg": 1,
+      "msg/menu/member_menu_msg.msg": 2,
+      "msg/menu/movie_msg.msg": 1,
+      "msg/menu/save_msg.msg": 1,
+      "msg/menu/savecreate_msg.msg": 1,
+      "msg/menu/savedelete_msg.msg": 1,
+      "msg/menu/saveload_msg.msg": 1,
+      "msg/menu/shop_msg.msg": 2,
+      "msg/menu/skill_menu_msg.msg": 2,
+      "msg/menu/status_menu_msg.msg": 1,
+      "msg/wifi/btlres_msg.msg": 1,
+      "msg/wifi/connect_msg.msg": 17,
+      "msg/wifi/error_msg.msg": 10,
+      "msg/wifi/friend_msg.msg": 6,
+      "msg/wifi/vs_msg.msg": 5
+    },
+    "early_nul4_row_count": 1,
+    "early_nul4_rows_by_source": {
+      "msg/menu/battle_result_msg.msg": 1
+    },
+    "fullwidth_message_padding_row_count": 10,
+    "preserved_ascii_suffix_row_count": 2,
+    "blank_ctrl0001_page_row_count": 0,
+    "replacement_internal_0300_row_count": 3,
+    "raw_existing_internal_0300_row_count": 3
+  },
+  "menu": {
+    "ready_rows": 289,
+    "strategy_counts": {
+      "row_fixed_width_override": 12,
+      "zero_fill_after_encoded": 268,
+      "fullwidth_to_original_visible_len_then_zero": 9
+    },
+    "source_strategy_counts": {
+      "overlay/overlay_0000.bin": {
+        "row_fixed_width_override": 4,
+        "zero_fill_after_encoded": 67
+      },
+      "overlay/overlay_0001.bin": {
+        "zero_fill_after_encoded": 41
+      },
+      "overlay/overlay_0002.bin": {
+        "row_fixed_width_override": 1,
+        "zero_fill_after_encoded": 1,
+        "fullwidth_to_original_visible_len_then_zero": 9
+      },
+      "overlay/overlay_0003.bin": {
+        "row_fixed_width_override": 7,
+        "zero_fill_after_encoded": 144
+      },
+      "overlay/overlay_0004.bin": {
+        "zero_fill_after_encoded": 15
+      }
+    },
+    "visible_span_padding_rows": 9,
+    "fixed_width_override_rows": 12
+  },
+  "risk_counts": {},
+  "severity_counts": {},
+  "risk_rows": 0
+}

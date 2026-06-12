@@ -239,6 +239,9 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
         candidate_code_endian=args.candidate_code_endian,
         compact_message_terminators=args.compact_message_terminators,
         early_message_terminator_fullwidth_fill=args.early_message_terminator_fullwidth_fill,
+        early_message_terminator_zero_fill=args.early_message_terminator_zero_fill,
+        event_script_early_message_terminator_fullwidth_fill=args.event_script_early_message_terminator_fullwidth_fill,
+        control_slot_final_message_terminator_fullwidth_fill=args.control_slot_final_message_terminator_fullwidth_fill,
     )
 
     cache.patch_arm9(work / "arm9.bin")
@@ -276,6 +279,9 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
             "validation": text_validation,
             "compact_message_terminators": args.compact_message_terminators,
             "early_message_terminator_fullwidth_fill": args.early_message_terminator_fullwidth_fill,
+            "early_message_terminator_zero_fill": args.early_message_terminator_zero_fill,
+            "event_script_early_message_terminator_fullwidth_fill": args.event_script_early_message_terminator_fullwidth_fill,
+            "control_slot_final_message_terminator_fullwidth_fill": args.control_slot_final_message_terminator_fullwidth_fill,
             "compacted_row_count": sum(1 for record in text_records if record.get("message_compacted_removed_len", 0) > 0),
             "compacted_removed_bytes": sum(record.get("message_compacted_removed_len", 0) for record in text_records),
             "early_03_fullwidth_fill_row_count": sum(
@@ -287,6 +293,58 @@ def build(args: argparse.Namespace) -> tuple[Path, Path, dict[str, Any]]:
                 record.get("message_post_terminator_padding_len", 0)
                 for record in text_records
                 if record.get("message_padding_strategy") == "early_03_fullwidth_fill_after_terminator"
+            ),
+            "early_03_zero_fill_row_count": sum(
+                1
+                for record in text_records
+                if record.get("message_padding_strategy") == "early_03_zero_fill_after_terminator"
+            ),
+            "early_03_zero_fill_bytes": sum(
+                record.get("message_post_terminator_padding_len", 0)
+                for record in text_records
+                if record.get("message_padding_strategy") == "early_03_zero_fill_after_terminator"
+            ),
+            "event_script_early_03_fullwidth_fill_row_count": sum(
+                1
+                for record in text_records
+                if record.get("message_padding_strategy") == "event_script_early_03_fullwidth_fill_after_terminator"
+            ),
+            "event_script_early_03_fullwidth_fill_bytes": sum(
+                record.get("message_post_terminator_padding_len", 0)
+                for record in text_records
+                if record.get("message_padding_strategy") == "event_script_early_03_fullwidth_fill_after_terminator"
+            ),
+            "event_script_fixed_control_final_03_fullwidth_fill_row_count": sum(
+                1
+                for record in text_records
+                if record.get("message_padding_strategy")
+                == "event_script_fixed_control_final_03_fullwidth_fill_after_terminator"
+            ),
+            "event_script_fixed_control_final_03_fullwidth_fill_bytes": sum(
+                record.get("message_post_terminator_padding_len", 0)
+                for record in text_records
+                if record.get("message_padding_strategy")
+                == "event_script_fixed_control_final_03_fullwidth_fill_after_terminator"
+            ),
+            "fixed_control_final_03_fullwidth_fill_row_count": sum(
+                1
+                for record in text_records
+                if record.get("message_padding_strategy") == "fixed_control_final_03_fullwidth_fill_after_terminator"
+            ),
+            "fixed_control_final_03_fullwidth_fill_bytes": sum(
+                record.get("message_post_terminator_padding_len", 0)
+                for record in text_records
+                if record.get("message_padding_strategy") == "fixed_control_final_03_fullwidth_fill_after_terminator"
+            ),
+            "fixed_subslot_final_03_fullwidth_fill_row_count": sum(
+                1
+                for record in text_records
+                if record.get("message_padding_strategy") == "fixed_subslot_final_03_fullwidth_fill_after_terminator"
+            ),
+            "fixed_subslot_final_03_fullwidth_fill_bytes": sum(
+                record.get("message_post_terminator_padding_len", 0)
+                for record in text_records
+                if record.get("message_padding_strategy") == "fixed_subslot_final_03_fullwidth_fill_after_terminator"
             ),
         },
         "menu_writeback": {
@@ -333,7 +391,30 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Move ordinary 03 00 message terminators after text and fill the original slot with fullwidth spaces.",
     )
-    return parser.parse_args()
+    parser.add_argument(
+        "--early-message-terminator-zero-fill",
+        action="store_true",
+        help="Move ordinary 03 00 message terminators after text and fill the original slot with 00 bytes.",
+    )
+    parser.add_argument(
+        "--event-script-early-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="Move event-script 03 00 message terminators after text and keep fixed length with fullwidth-space tail padding.",
+    )
+    parser.add_argument(
+        "--control-slot-final-message-terminator-fullwidth-fill",
+        action="store_true",
+        help="Move final 03 00 terminators after final fixed control/subslot text and keep fixed length with fullwidth-space tail padding.",
+    )
+    args = parser.parse_args()
+    message_terminator_modes = [
+        args.compact_message_terminators,
+        args.early_message_terminator_fullwidth_fill,
+        args.early_message_terminator_zero_fill,
+    ]
+    if sum(1 for enabled in message_terminator_modes if enabled) > 1:
+        parser.error("message terminator rewrite modes are mutually exclusive")
+    return args
 
 
 def main() -> int:

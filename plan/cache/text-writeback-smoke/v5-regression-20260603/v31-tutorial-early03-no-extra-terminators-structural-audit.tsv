@@ -1,0 +1,15 @@
+risk_type	severity	id	source_file	offset	source_kind	strategy	encoded_len	raw_len	slot_len	padding_len	details
+introduced_internal_0300_terminator_bytes	high	zh_txt_0d5c73a4_000484_0016	msg/fld/011.m	0x484	text	replacement_control_stream	74	136	0	60	raw_internal=[48]; replacement_internal=[48, 78]; replacement_final=126
+introduced_internal_0300_terminator_bytes	high	zh_txt_0d5c73a4_00058A_0019	msg/fld/011.m	0x58A	text	replacement_control_stream	70	136	0	64	raw_internal=[46]; replacement_internal=[46, 76]; replacement_final=120
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_000472_0014	msg/fld/034.m	0x472	text	normalized_message_text	20	28	0	6	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_000F76_0050	msg/fld/034.m	0xF76	text	normalized_message_text	14	22	0	6	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_00117C_0062	msg/fld/034.m	0x117C	text	normalized_message_text	16	22	0	4	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_001532_0082	msg/fld/034.m	0x1532	text	normalized_message_text	20	28	0	6	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_0016AE_0090	msg/fld/034.m	0x16AE	text	normalized_message_text	14	22	0	6	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_001748_0094	msg/fld/034.m	0x1748	text	normalized_message_text	20	28	0	6	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_001884_0100	msg/fld/034.m	0x1884	text	normalized_message_text	14	22	0	6	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_0019C0_0105	msg/fld/034.m	0x19C0	text	normalized_message_text	20	30	0	8	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_001A52_0108	msg/fld/034.m	0x1A52	text	normalized_message_text	20	28	0	6	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_001BC2_0115	msg/fld/034.m	0x1BC2	text	normalized_message_text	20	28	0	6	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_001CA2_0119	msg/fld/034.m	0x1CA2	text	normalized_message_text	20	30	0	8	leading_blank_page
+message_blank_ctrl0001_page_after_trim	high	zh_txt_a346a806_001E92_0128	msg/fld/034.m	0x1E92	text	normalized_message_text	20	28	0	6	leading_blank_page

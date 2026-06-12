@@ -35,6 +35,9 @@ stage_cache:
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-ctrl0001-linebreak-reassessment.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v29-compact-msg-terminators.md
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v32-early03-zero-fill.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v33-evt-no-zero-fill.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v36-no-pre03-spaces.md
 stage_outputs:
   expected:
     - rom/narutorpg3_chs_full_writeback_test.nds
@@ -279,6 +282,30 @@ stage_outputs:
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill-structural-audit.json
     - plan/cache/text-writeback-smoke/v5-regression-20260603/v30-early03-fullwidth-fill-structural-audit.tsv
     - hack/v30_message固定长度早停03全角填充候选.md
+    - rom/narutorpg3_chs_patcher_v32_early03_zero_fill.nds
+    - patcher/work/build_20260612_113000/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v32-early03-zero-fill.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v32-early03-zero-fill-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v32-early03-zero-fill-byte-terminator-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v32-early03-zero-fill-structural-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v32-early03-zero-fill-structural-audit.tsv
+    - hack/v32_message固定长度早停03零填充候选.md
+    - rom/narutorpg3_chs_patcher_v33_evt_no_zero_fill.nds
+    - patcher/work/build_20260612_120341/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v33-evt-no-zero-fill.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v33-evt-no-zero-fill-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v33-evt-no-zero-fill-structural-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v33-evt-no-zero-fill-structural-audit.tsv
+    - hack/v33_事件脚本message零填充排除规则.md
+    - rom/narutorpg3_chs_patcher_v36_no_pre03_spaces.nds
+    - patcher/work/build_20260612_154954/patcher-build-summary.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v36-no-pre03-spaces.md
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v36-no-pre03-spaces-records.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v36-no-pre03-spaces-structural-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v36-no-pre03-spaces-structural-audit.tsv
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v36-terminator-padding-audit.json
+    - plan/cache/text-writeback-smoke/v5-regression-20260603/v36-terminator-padding-audit.tsv
+    - hack/v36_message终结符前填充清理规则.md
     - hack/v26控制符占位符与固定布局规则.md
     - patcher/work/build_20260604_120709/text_assets/overlay_menu_translation_report.json
     - patcher/work/build_20260604_120709/text_assets/translation-struct-audit-report.json
@@ -307,7 +334,7 @@ stage_outputs:
     - hack/文本回写编码观察.md
     - hack/标题菜单文本来源.md
     - hack/v26控制符占位符与固定布局规则.md
-updated_at: "2026-06-12T10:20:22+08:00"
+updated_at: "2026-06-12T15:55:00+08:00"
 previous_plan:
   id: code-table-extraction
   document: plan/code-table-extraction.md
@@ -392,6 +419,9 @@ notes:
   - Built rom/narutorpg3_chs_patcher_v29_compact_msg_terminators.nds with the opt-in --compact-message-terminators strategy after confirming non-empty CTRL_0001 remains a normal line/page control. The candidate compacts 3055 ordinary 03 00 message records across 246 files and removes 70312 bytes of fullwidth padding; text byte-compare mismatch=0, structural audit risk_rows=0, Header CRC OK / Banner CRC OK, SHA256 54187C15CF32A6E872614FB61DA6006D012E870B9622683426E6FC04DE70DEA6. No DeSmuME or MCP operation was used.
   - User manual testing invalidated v29 because all dialogue froze; do not promote variable-length message compaction to the default writeback path.
   - Built rom/narutorpg3_chs_patcher_v30_early03_fullwidth_fill.nds with the opt-in --early-message-terminator-fullwidth-fill strategy. It preserves original record/file lengths, moves ordinary 03 00 message terminators after translated text, and fills the remaining slot with fullwidth spaces; early_03_fullwidth_fill_row_count=3072, bytes=70312, text byte-compare mismatch=0, structural audit risk_rows=0, Header CRC OK / Banner CRC OK, SHA256 F5132D5B3482B4BA03F0DB779326C1115E50914F8DCAC98335D8C638A20210A9. No DeSmuME or MCP operation was used.
+  - Built rom/narutorpg3_chs_patcher_v32_early03_zero_fill.nds with the opt-in --early-message-terminator-zero-fill strategy. It preserves original record/file lengths, moves ordinary 03 00 message terminators after translated text, and fills the remaining slot with 00 bytes; early_03_zero_fill_row_count=3179, bytes=70348, structural audit risk_rows=0, byte terminator audit risk_count=0, Header CRC OK / Banner CRC OK, SHA256 EFC2B8A27B1213FA5189BC159C006822BA35D3AA03DB184A543776BA188996EF. No DeSmuME or MCP operation was used.
+  - User manual testing invalidated the v32 all-message zero-fill scope for msg/fld/evt event scripts: msg/fld/evt/000.m skipped the continuous dialogue after the line "火影大人，糟了！".
+  - Built rom/narutorpg3_chs_patcher_v33_evt_no_zero_fill.nds after excluding msg/fld/evt/ event-script messages from --early-message-terminator-zero-fill; msg/fld/evt rows=1389, evt zero-fill rows=0, target 0x1DE..0x358 rows preserve original 03 00 end positions, structural audit risk_rows=0, Header CRC OK / Banner CRC OK, SHA256 33047C77BAF350B393D8156A63571A0DE7D13DFBBED833F7E752E49086B00A38. No DeSmuME or MCP operation was used.
   - 已按用户要求构建全量写回测试成品 ROM：rom/narutorpg3_chs_full_writeback_test.nds。
   - 全量写回 5863 条，覆盖 288 个文件，区间重叠检查通过。
   - 当前码表为 SJIS 形状分配：0xF040..0xFAAB，entry_count 1986，collision_count 0，跳过 0xFA40 raw_text_word。

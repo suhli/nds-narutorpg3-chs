@@ -1,0 +1,58 @@
+id	source_file	offset	risk_type	strategy	positions	details
+zh_txt_0d5c73a4_000484_0016	msg/fld/011.m	0x484	multi_0300	early_03_zero_fill_after_terminator	48,96	between_first_last=mixed; between_len=46; evt=False
+zh_txt_0d5c73a4_00058A_0019	msg/fld/011.m	0x58A	multi_0300	early_03_zero_fill_after_terminator	46,90	between_first_last=mixed; between_len=42; evt=False
+zh_txt_dc122c8a_000BD4_0040	msg/fld/029.m	0xBD4	fullwidth_padding_before_final_0300	fullwidth_space_with_original_control_offsets	84	fw_padding_len=18; source_len=86; evt=False
+zh_txt_31fd479b_001354_0062	msg/fld/030.m	0x1354	multi_0300	early_03_zero_fill_after_terminator	70,108	between_first_last=mixed; between_len=36; evt=False
+zh_txt_2ef7aa25_000758_0027	msg/fld/evt/000.m	0x758	fullwidth_padding_before_final_0300	fullwidth_space_with_original_control_offsets	116	fw_padding_len=26; source_len=118; evt=True
+zh_txt_6b929156_0001A6_0005	msg/fld/evt/001.m	0x1A6	fullwidth_padding_before_final_0300	fullwidth_space_with_original_control_offsets	60	fw_padding_len=10; source_len=62; evt=True
+zh_txt_6b929156_0001FA_0006	msg/fld/evt/001.m	0x1FA	fullwidth_padding_before_final_0300	fullwidth_space_with_original_control_offsets	78	fw_padding_len=28; source_len=80; evt=True
+zh_txt_fdee0fd4_00005A_0002	msg/menu/equip_menu_msg.msg	0x5A	fullwidth_padding_before_final_0300		162	fw_padding_len=12; source_len=164; evt=False
+zh_txt_4be8b1fa_000008_0000	msg/menu/member_menu_msg.msg	0x8	fullwidth_padding_before_final_0300		142	fw_padding_len=26; source_len=144; evt=False
+zh_txt_4be8b1fa_0000F6_0002	msg/menu/member_menu_msg.msg	0xF6	fullwidth_padding_before_final_0300		114	fw_padding_len=54; source_len=116; evt=False
+zh_txt_0b52d284_000072_0001	msg/menu/movie_msg.msg	0x72	fullwidth_padding_before_final_0300		44	fw_padding_len=4; source_len=46; evt=False
+zh_txt_36cf8fef_00016C_0005	msg/menu/save_msg.msg	0x16C	fullwidth_padding_before_final_0300		118	fw_padding_len=22; source_len=120; evt=False
+zh_txt_4aa11e7a_0000F4_0003	msg/menu/savecreate_msg.msg	0xF4	fullwidth_padding_before_final_0300		160	fw_padding_len=30; source_len=162; evt=False
+zh_txt_8d82f7ea_00003E_0001	msg/menu/savedelete_msg.msg	0x3E	fullwidth_padding_before_final_0300		120	fw_padding_len=16; source_len=122; evt=False
+zh_txt_e9a64e6f_0000A2_0003	msg/menu/saveload_msg.msg	0xA2	fullwidth_padding_before_final_0300		114	fw_padding_len=14; source_len=116; evt=False
+zh_txt_64f649ed_000050_0001	msg/menu/shop_msg.msg	0x50	fullwidth_padding_before_final_0300		82	fw_padding_len=24; source_len=84; evt=False
+zh_txt_64f649ed_000162_0006	msg/menu/shop_msg.msg	0x162	fullwidth_padding_before_final_0300		34	fw_padding_len=8; source_len=36; evt=False
+zh_txt_6072cee7_00008E_0003	msg/menu/skill_menu_msg.msg	0x8E	fullwidth_padding_before_final_0300		306	fw_padding_len=12; source_len=308; evt=False
+zh_txt_6072cee7_000240_0007	msg/menu/skill_menu_msg.msg	0x240	fullwidth_padding_before_final_0300		124	fw_padding_len=44; source_len=126; evt=False
+zh_txt_74923e0c_000030_0001	msg/menu/status_menu_msg.msg	0x30	fullwidth_padding_before_final_0300		172	fw_padding_len=24; source_len=174; evt=False
+zh_txt_9f2f522a_00007C_0001	msg/wifi/btlres_msg.msg	0x7C	fullwidth_padding_before_final_0300		508	fw_padding_len=20; source_len=510; evt=False
+zh_txt_805b124c_00000C_0000	msg/wifi/connect_msg.msg	0xC	fullwidth_padding_before_final_0300		138	fw_padding_len=28; source_len=140; evt=False
+zh_txt_805b124c_00009E_0001	msg/wifi/connect_msg.msg	0x9E	fullwidth_padding_before_final_0300		86	fw_padding_len=32; source_len=88; evt=False
+zh_txt_805b124c_0000FC_0002	msg/wifi/connect_msg.msg	0xFC	fullwidth_padding_before_final_0300		158	fw_padding_len=20; source_len=160; evt=False
+zh_txt_805b124c_00019E_0003	msg/wifi/connect_msg.msg	0x19E	fullwidth_padding_before_final_0300		300	fw_padding_len=46; source_len=302; evt=False
+zh_txt_805b124c_0002CE_0004	msg/wifi/connect_msg.msg	0x2CE	fullwidth_padding_before_final_0300		386	fw_padding_len=14; source_len=388; evt=False
+zh_txt_805b124c_000458_0005	msg/wifi/connect_msg.msg	0x458	fullwidth_padding_before_final_0300		102	fw_padding_len=14; source_len=104; evt=False
+zh_txt_805b124c_0004C6_0006	msg/wifi/connect_msg.msg	0x4C6	fullwidth_padding_before_final_0300		92	fw_padding_len=10; source_len=94; evt=False
+zh_txt_805b124c_000526_0007	msg/wifi/connect_msg.msg	0x526	fullwidth_padding_before_final_0300		104	fw_padding_len=16; source_len=106; evt=False
+zh_txt_805b124c_000592_0008	msg/wifi/connect_msg.msg	0x592	fullwidth_padding_before_final_0300		98	fw_padding_len=20; source_len=100; evt=False
+zh_txt_805b124c_0005F8_0009	msg/wifi/connect_msg.msg	0x5F8	fullwidth_padding_before_final_0300		80	fw_padding_len=22; source_len=82; evt=False
+zh_txt_805b124c_0006AE_0011	msg/wifi/connect_msg.msg	0x6AE	fullwidth_padding_before_final_0300		148	fw_padding_len=16; source_len=150; evt=False
+zh_txt_805b124c_00074A_0012	msg/wifi/connect_msg.msg	0x74A	fullwidth_padding_before_final_0300		88	fw_padding_len=24; source_len=90; evt=False
+zh_txt_805b124c_0007D6_0014	msg/wifi/connect_msg.msg	0x7D6	fullwidth_padding_before_final_0300		80	fw_padding_len=20; source_len=82; evt=False
+zh_txt_805b124c_000872_0016	msg/wifi/connect_msg.msg	0x872	fullwidth_padding_before_final_0300		204	fw_padding_len=20; source_len=206; evt=False
+zh_txt_805b124c_000946_0017	msg/wifi/connect_msg.msg	0x946	fullwidth_padding_before_final_0300		94	fw_padding_len=10; source_len=96; evt=False
+zh_txt_805b124c_0009AC_0018	msg/wifi/connect_msg.msg	0x9AC	fullwidth_padding_before_final_0300		50	fw_padding_len=10; source_len=52; evt=False
+zh_txt_805b124c_0009E6_0019	msg/wifi/connect_msg.msg	0x9E6	fullwidth_padding_before_final_0300		94	fw_padding_len=38; source_len=96; evt=False
+zh_txt_28e72e7e_00000C_0000	msg/wifi/error_msg.msg	0xC	fullwidth_padding_before_final_0300		204	fw_padding_len=36; source_len=206; evt=False
+zh_txt_28e72e7e_0000DC_0001	msg/wifi/error_msg.msg	0xDC	fullwidth_padding_before_final_0300		120	fw_padding_len=16; source_len=122; evt=False
+zh_txt_28e72e7e_0001E2_0003	msg/wifi/error_msg.msg	0x1E2	fullwidth_padding_before_final_0300		170	fw_padding_len=6; source_len=172; evt=False
+zh_txt_28e72e7e_000312_0005	msg/wifi/error_msg.msg	0x312	fullwidth_padding_before_final_0300		112	fw_padding_len=12; source_len=114; evt=False
+zh_txt_28e72e7e_00038A_0006	msg/wifi/error_msg.msg	0x38A	fullwidth_padding_before_final_0300		168	fw_padding_len=42; source_len=170; evt=False
+zh_txt_28e72e7e_000436_0007	msg/wifi/error_msg.msg	0x436	fullwidth_padding_before_final_0300		104	fw_padding_len=24; source_len=106; evt=False
+zh_txt_28e72e7e_0004A2_0008	msg/wifi/error_msg.msg	0x4A2	fullwidth_padding_before_final_0300		228	fw_padding_len=20; source_len=230; evt=False
+zh_txt_28e72e7e_00058A_0009	msg/wifi/error_msg.msg	0x58A	fullwidth_padding_before_final_0300		208	fw_padding_len=46; source_len=210; evt=False
+zh_txt_64f689a6_000008_0000	msg/wifi/friend_msg.msg	0x8	fullwidth_padding_before_final_0300		502	fw_padding_len=24; source_len=504; evt=False
+zh_txt_64f689a6_00022E_0002	msg/wifi/friend_msg.msg	0x22E	fullwidth_padding_before_final_0300		216	fw_padding_len=30; source_len=218; evt=False
+zh_txt_64f689a6_000342_0004	msg/wifi/friend_msg.msg	0x342	fullwidth_padding_before_final_0300		94	fw_padding_len=20; source_len=96; evt=False
+zh_txt_64f689a6_0005B0_0012	msg/wifi/friend_msg.msg	0x5B0	fullwidth_padding_before_final_0300		106	fw_padding_len=20; source_len=108; evt=False
+zh_txt_64f689a6_0006A2_0015	msg/wifi/friend_msg.msg	0x6A2	fullwidth_padding_before_final_0300		80	fw_padding_len=16; source_len=82; evt=False
+zh_txt_64f689a6_000782_0018	msg/wifi/friend_msg.msg	0x782	fullwidth_padding_before_final_0300		184	fw_padding_len=24; source_len=186; evt=False
+zh_txt_7edda24f_000008_0000	msg/wifi/vs_msg.msg	0x8	fullwidth_padding_before_final_0300		1108	fw_padding_len=22; source_len=1110; evt=False
+zh_txt_7edda24f_000460_0001	msg/wifi/vs_msg.msg	0x460	fullwidth_padding_before_final_0300		132	fw_padding_len=14; source_len=134; evt=False
+zh_txt_7edda24f_0004E8_0002	msg/wifi/vs_msg.msg	0x4E8	fullwidth_padding_before_final_0300		100	fw_padding_len=22; source_len=102; evt=False
+zh_txt_7edda24f_000550_0003	msg/wifi/vs_msg.msg	0x550	fullwidth_padding_before_final_0300		222	fw_padding_len=14; source_len=224; evt=False
+zh_txt_7edda24f_000632_0004	msg/wifi/vs_msg.msg	0x632	fullwidth_padding_before_final_0300		94	fw_padding_len=22; source_len=96; evt=False
