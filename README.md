@@ -50,7 +50,7 @@
 继续开发前，本地需要准备这些工具和文件：
 
 - 原版 ROM：放在 `rom/origin.nds`，只作为输入读取，不提交，不覆盖。
-- Python / uv / `.venv`：用于运行 patcher、BPS 生成、字体替换构建和静态校验；优先使用仓库内 `.venv`。替换 TTF 字体时需要 Pillow，新环境可执行 `uv pip install pillow`。
+- Python / uv / `.venv`：用于运行 patcher、BPS 生成、字体替换构建和静态校验；优先使用仓库内 `.venv`。替换 TTF 字体时需要 `freetype-py`，新环境可执行 `uv pip install freetype-py`。
 - Node.js / npm：用于 `web/` 前端开发和构建。
 - ndstool：用于 NDS ROM 解包、检查和回包；本地放到 `tools/ndstool.exe`，`tools/` 不提交。
 - DeSmuME MCP：只在用户明确要求运行时调试时使用；本地放到 `tools/desmume.exe`，`tools/` 不提交。这个版本是修改过的 fork，可以在 [suhli/desmume](https://github.com/suhli/desmume) 的 GitHub Actions 对应平台 workflow 中，查看 `upload artifact` step 找到下载地址。

@@ -53,7 +53,7 @@ Use one font for both modes:
 .\.venv\Scripts\python.exe -B patcher\patcher.py --font path\to\font.ttf --output rom\narutorpg3_chs_font_test.nds
 ```
 
-Font replacement requires Pillow in the active Python environment. Install it with `uv pip install pillow` when setting up a fresh `.venv`. Local `.ttf`, `.ttc`, and `.otf` files are ignored by git.
+Font replacement requires `freetype-py` in the active Python environment. Install it with `uv pip install freetype-py` when setting up a fresh `.venv`. Local `.ttf`, `.ttc`, and `.otf` files are ignored by git.
 
 ## Inspect
 

@@ -333,6 +333,61 @@ def build_font_pack(
     return build_font_map(glyph_size, map_entries), bytes(header) + b"".join(resident_pages) + b"".join(pages), source_page_count
 
 
+def render_mono_pixels(face: Any, char: str, *, px_size: int, cell_size: tuple[int, int] | None) -> list[list[int]]:
+    if cell_size is None:
+        face.set_pixel_sizes(0, px_size)
+    else:
+        face.set_pixel_sizes(cell_size[0], cell_size[1])
+    import freetype
+
+    face.load_char(char, freetype.FT_LOAD_RENDER | freetype.FT_LOAD_TARGET_MONO)
+    bitmap = face.glyph.bitmap
+    width = bitmap.width
+    height = bitmap.rows
+    pitch = bitmap.pitch
+    stride = abs(pitch)
+    buffer = bytes(bitmap.buffer)
+    pixels = [[0] * width for _ in range(height)]
+    for y in range(height):
+        row_start = y * pitch if pitch >= 0 else (height - 1 - y) * stride
+        row = buffer[row_start : row_start + stride]
+        for x in range(width):
+            pixels[y][x] = (row[x >> 3] >> (7 - (x & 7))) & 1
+    return pixels
+
+
+def blit_center_pixels(src: list[list[int]], *, width: int, height: int, xoff: int = 0, yoff: int = 0) -> list[list[int]]:
+    src_h = len(src)
+    src_w = len(src[0]) if src_h else 0
+    dst = [[0] * width for _ in range(height)]
+    ox = (width - src_w) // 2 + xoff
+    oy = (height - src_h) // 2 + yoff
+    for y, row in enumerate(src):
+        ty = oy + y
+        if not 0 <= ty < height:
+            continue
+        for x, value in enumerate(row):
+            tx = ox + x
+            if 0 <= tx < width:
+                dst[ty][tx] = value
+    return dst
+
+
+def pack_4bpp_pixels(pixels: list[list[int]], *, width: int, height: int) -> bytes:
+    if width != 8 or height not in {8, 16}:
+        raise ValueError(f"unsupported glyph canvas: {width}x{height}")
+    if len(pixels) != height or any(len(row) != width for row in pixels):
+        raise ValueError(f"glyph pixel grid does not match canvas: {width}x{height}")
+    packed = bytearray()
+    for tile_y in range(0, height, 8):
+        for y in range(8):
+            for x in range(0, width, 2):
+                left = GLYPH_INK if pixels[tile_y + y][x] else GLYPH_BG
+                right = GLYPH_INK if pixels[tile_y + y][x + 1] else GLYPH_BG
+                packed.append(left | (right << 4))
+    return bytes(packed)
+
+
 def render_font_glyphs(
     font_path: Path,
     chars: dict[int, str],
@@ -343,43 +398,33 @@ def render_font_glyphs(
     target_y: int,
 ) -> tuple[dict[int, bytes], bytes]:
     try:
-        from PIL import Image, ImageDraw, ImageFont
+        import freetype
     except ImportError as exc:
-        raise RuntimeError("font replacement requires Pillow in the active Python environment") from exc
+        raise RuntimeError("font replacement requires freetype-py in the active Python environment") from exc
 
     if not font_path.is_file():
         raise FileNotFoundError(font_path)
 
-    font = ImageFont.truetype(str(font_path), font_size)
+    face = freetype.Face(str(font_path))
     canvas_width, canvas_height = canvas
     target_width, target_height = target
+    if target_y < 0 or target_y + target_height > canvas_height:
+        raise ValueError(f"target area {target_width}x{target_height}+{target_y} exceeds canvas {canvas_width}x{canvas_height}")
 
     def render_char(char: str) -> bytes:
-        image = Image.new("L", canvas, 0)
-        draw = ImageDraw.Draw(image)
-        bbox = draw.textbbox((0, 0), char, font=font)
-        text_width = bbox[2] - bbox[0]
-        text_height = bbox[3] - bbox[1]
-        x = (target_width - text_width) // 2 - bbox[0]
-        y = target_y + (target_height - text_height) // 2 - bbox[1]
-        draw.text((x, y), char, fill=255, font=font)
-        return pack_4bpp_glyph(image, canvas_width, canvas_height)
+        cell_size = target if target != canvas else None
+        glyph_pixels = render_mono_pixels(face, char, px_size=font_size, cell_size=cell_size)
+        if target == canvas:
+            canvas_pixels = blit_center_pixels(glyph_pixels, width=canvas_width, height=canvas_height)
+        else:
+            target_pixels = blit_center_pixels(glyph_pixels, width=target_width, height=target_height)
+            canvas_pixels = [[0] * canvas_width for _ in range(canvas_height)]
+            for y, row in enumerate(target_pixels):
+                canvas_pixels[target_y + y][:target_width] = row
+        return pack_4bpp_pixels(canvas_pixels, width=canvas_width, height=canvas_height)
 
     output = {code: render_char(char) for code, char in chars.items()}
     return output, render_char("□")
-
-
-def pack_4bpp_glyph(image: Any, width: int, height: int) -> bytes:
-    if width != 8 or height not in {8, 16}:
-        raise ValueError(f"unsupported glyph canvas: {width}x{height}")
-    packed = bytearray()
-    for tile_y in range(0, height, 8):
-        for y in range(8):
-            for x in range(0, width, 2):
-                left = GLYPH_INK if image.getpixel((x, tile_y + y)) >= 128 else GLYPH_BG
-                right = GLYPH_INK if image.getpixel((x + 1, tile_y + y)) >= 128 else GLYPH_BG
-                packed.append(left | (right << 4))
-    return bytes(packed)
 
 
 def apply_font_replacements(
