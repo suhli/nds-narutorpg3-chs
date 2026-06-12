@@ -49,4 +49,13 @@ The generated CLI test ROM matched the final v36 SHA256.
 
 All known runtime issues reported during the v5-v36 regression cycle are closed by the user-verified v36 build. The active text writeback, menu writeback, control-code, placeholder, terminator, padding, and overlay-layout reverse-engineering tasks are marked complete.
 
+## Cleanup Result
+
+The workspace was reduced to the final delivery shape:
+
+- `patcher/` keeps only `patcher.py`, `narutorpg3_chs_v36.json`, and `README.md`.
+- `rom/` keeps only `origin.nds` and `narutorpg3_chs_patcher_v36_no_pre03_spaces.nds`.
+- Historical intermediate directories such as `assets/`, `text/`, `tools/`, `patcher/resources/`, `patcher/tools/`, and `patcher/work/` were removed.
+- Temporary root files and temporary CLI verification ROMs were removed.
+
 No DeSmuME/MCP runtime validation was performed in this consolidation step; runtime validation remains user-driven unless explicitly requested.
