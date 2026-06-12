@@ -18,6 +18,15 @@
 - `rom/`：本地 ROM 输入输出目录，已被忽略，不应提交。
 - `.github/workflows/`：GitHub Pages 构建和发布流程。
 
+## 字体来源
+
+当前汉化字模使用 [Fusion Pixel Font / 缝合像素字体](https://github.com/TakWolf/fusion-pixel-font) 的简体中文等宽版本：
+
+- `fusion-pixel-8px-monospaced-zh_hans.ttf`：用于 1x1 字体路径。
+- `fusion-pixel-12px-monospaced-zh_hans.ttf`：用于 1x2 字体路径。
+
+需要重新构建字模时，从原仓库的 [Releases](https://github.com/TakWolf/fusion-pixel-font/releases) 下载对应版本。字体授权以原项目许可证为准。
+
 ## 开发指引
 
 ### Codex / Claude 继续开发必备入口
